@@ -56,4 +56,4 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y sshpass
       - name: Upload
         run: |
-          sshpass -p "${{ secrets.SFTP_PASSWORD }}" scp -o StrictHostKeyChecking=no -r ./* ${{ secrets.SFTP_USER }}@${{ secrets.SFTP_HOST }}:./mooc.interactivedatascience.courses/
+          sshpass -p "${{ secrets.SFTP_PASSWORD }}" scp -o StrictHostKeyChecking=no -r ./mooc/* ${{ secrets.SFTP_USER }}@${{ secrets.SFTP_HOST }}:./mooc.interactivedatascience.courses/
