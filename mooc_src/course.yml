@@ -16,8 +16,8 @@ sections:
       links:
         - url: https://youtu.be/2CMw4i9DiaM?t=112&feature=shared
           text: Video for the section on data visualization as task
-        - url: https://interactivedatascience.courses
-          text: Sam's teaching homepage
+        - url: https://mooc.interactivedatascience.courses/
+          text: Course Homepage
       citations:
         - >
           G. Aisch, A. Cox, and K. Quealy, "You Draw It: How Family Income Predicts Children's College Chances." The New York Times Company, May 28, 2015. Available: https://www.nytimes.com/interactive/2015/05/28/upshot/you-draw-it-how-family-income-affects-childrens-college-chances.html
