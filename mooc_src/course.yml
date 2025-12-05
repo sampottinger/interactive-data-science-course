@@ -4,6 +4,9 @@ sections:
       name: Hello Visualization
       video: 1047306328
       slides: true
+      materials_pdf: true
+      materials_pptx: true
+      materials_md: true
       text: > 
         An overview of the course, what you will learn, and what we will be doing together. We look at 4 different perspectives on data visualization in order to paint a landscape of ideas that will be revisited and expanded upon throughout the rest of the semester.
       assignment: >
@@ -104,6 +107,9 @@ sections:
       name: Hello Examples
       video: 1047985024
       slides: true
+      materials_pdf: true
+      materials_pptx: true
+      materials_md: true
       text: > 
         We revisit the four perspectives on data visualization from our first lecture and use them to analyze some demonstrative examples. These are the types of things you'll be able to build by the end of the course!
       assignment: >
@@ -212,6 +218,9 @@ sections:
       name: Hello Creative Python
       video: 1049110017
       slides: true
+      materials_pdf: true
+      materials_pptx: true
+      materials_md: true
       text: >
         A hands-on first look at how we can use Python for creative coding. See tutorials at <a href="/labs">Labs</a>.
       assignment: >
@@ -238,6 +247,9 @@ sections:
       name: Hello Creative Objects
       video: 1049130582
       slides: true
+      materials_pdf: true
+      materials_pptx: true
+      materials_md: true
       text: >
         Using object-oriented programming for interactive graphical simulation. See tutorials at <a href="/labs">Labs</a>.
       reading: >
@@ -255,6 +267,9 @@ sections:
       name: Visualization as Design
       video: 1053582417
       slides: true
+      materials_pdf: true
+      materials_pptx: true
+      materials_md: true
       text: >
         A look at some historic figures in data visualization along with a discussion of Tufte. Also, a look at some demonstrative examples to refine our language for discussing information design. All of this sets the stage for glyphs and our transition into cognitive and perception science.
       assignment: >
@@ -312,6 +327,9 @@ sections:
       name: Visualization as Science 1
       video: 1055340727
       slides: true
+      materials_pdf: true
+      materials_pptx: true
+      materials_md: true
       text: >
         A look at the human visual system and the connection between the eyes and brain. Explore how we extract visual information for the environment and what that means for data visualization.
       assignment: >
@@ -349,6 +367,9 @@ sections:
       name: Visualization as Science 2
       video: 1055836472
       slides: true
+      materials_pdf: true
+      materials_pptx: true
+      materials_md: true
       text: >
         Tour the Gestalt Principles and engage in a hands-on activity to put them into practice. Afterwards, explore color vision including color spaces, perceptually consistent color schemes, tools for color, and general guidance.
       assignment: >
@@ -389,6 +410,9 @@ sections:
       name: Sketching in Code 1
       video: 1057751163
       slides: true
+      materials_pdf: true
+      materials_pptx: true
+      materials_md: true
       text: >
         Using code to draw graphics as guided by recent concepts from class including preattentive features. See <a href="/labs">Labs</a>.
       assignment: >
@@ -411,7 +435,10 @@ sections:
           Thanks to https://badriadhikari.github.io/data-viz-workshop-2021/minards/ for imagery.
     - number: 9
       name: Sketching in Code 2
-      url: /lecture9.html 
+      url: /lecture9.html
+      materials_pdf: false
+      materials_pptx: false
+      materials_md: true
       text: >
         Looking at the other elements we can bring into our work... text, images, data, and the user. Please try to complete the remaining tutorials under Skills Lab 3 at <a href="/labs">Labs</a>.
       assignment: >
@@ -423,6 +450,9 @@ sections:
           url: https://editor.sketchingpy.org/
     - number: 10
       name: Sketching with Data
+      materials_pdf: false
+      materials_pptx: false
+      materials_md: true
       text: >
         Continue your exploration in code with Skills Lab 4 which includes the very important <a href="/labs/resources_data.html">Tutorial 11</a>. Please try to complete all remaining tutorials under Skills Lab 4 at <a href="/labs">Labs</a>.
       links:
@@ -436,6 +466,9 @@ sections:
       name: Formalizing Glyphs
       video: 1061901487
       slides: true
+      materials_pdf: true
+      materials_pptx: true
+      materials_md: true
       text: >
         Consider essential empirical evidence regarding encoding devices from Cleveland and McGill. Also, examine important techniques that allow us to re-use high value encoding devices. Specifically, learn more about dual axes, shared axes, and direct labeling.
       assignment: >
@@ -474,6 +507,9 @@ sections:
       name: Patterns
       video: 1062955146
       slides: true
+      materials_pdf: true
+      materials_pptx: true
+      materials_md: true
       text: >
         A tour through common chart types used for different situations as well as common terminology and a brief introductory mention of domains and tasks.
       assignment: >
@@ -506,6 +542,9 @@ sections:
       url: /lecture13.html
       video: 1064101038
       slides: true
+      materials_pdf: true
+      materials_pptx: true
+      materials_md: true
       text: >
         Exploration of how to make new visual representations through the use of visual encoding mappings as well as two new patterns for fitting in more variables... movements and levels. Finally, a look at data formats and a discussion of advice for geospatial visualization.
       assignment: >
@@ -550,6 +589,9 @@ sections:
       url: /lecture14.html
       video: 1064129940
       slides: true
+      materials_pdf: true
+      materials_pptx: true
+      materials_md: true
       text: Expand on the idea of domains and tasks with examples before looking at the What / Why / How framework.
       reading: >
         An overview of what / why / how at <a href="https://www.datarocks.co.nz/post/data-viz-bookshelf_visualization-analysis-design-tamara-munzner">Visualisation Analysis & Design by Tamara Munzner or the What-Why-How of data viz</a>.
@@ -572,6 +614,9 @@ sections:
       url: /lecture15.html
       video: 1066458181
       slides: true
+      materials_pdf: true
+      materials_pptx: true
+      materials_md: true
       text: >
         Learning how to learn from users with a high level look at design research including user interviews, contextual inquiry, and the Think-Aloud Protocol. Note that the lesson was changed after the rehearsal recording. See <a href="#links">links</a>.
       assignment: >
@@ -611,6 +656,9 @@ sections:
       name: The Reader as User
       video: 1067524875
       slides: true
+      materials_pdf: true
+      materials_pptx: true
+      materials_md: true
       text: The four waves of HCI and the ideas of Stuart Hall before briefly discussing how video games might fit into the data visualizations conversation.
       assignment: >
         <p>In this exercise, we will visualize the BART ridership dataset. For this activity, please visualize 4 variables.</p>
@@ -650,6 +698,9 @@ sections:
       name: The Reader as Player
       video: 1071192794
       slides: true
+      materials_pdf: true
+      materials_pptx: true
+      materials_md: true
       text: Go deep into interactivity with affordances, kinesthetic projection, and common patterns in data visualization. This is setting up our final ingredient for data visualizations that you need for the final!
       assignment: >
         <p>
@@ -686,6 +737,9 @@ sections:
       name: Ludonarrative
       video: 1071935515
       slides: true
+      materials_pdf: true
+      materials_pptx: true
+      materials_md: true
       text: Examine the ideas of ludonarrative and environmental storytelling. Please see examples in the <a href="#links">links section</a>. I strongly recommend spending some time with each! Please note that there are multiple content warnings for this lecture.
       reading: Please take a deeper dive into ways to convey narrative without dialogue. Watch <a href="https://youtu.be/Qot5_rMB8Jc">The Last Guardian and the Language of Games</a>.
       links:
@@ -724,6 +778,9 @@ sections:
       name: Architecture
       video: 1073368650
       slides: true
+      materials_pdf: true
+      materials_pptx: true
+      materials_md: true
       text: Look at level design and how it help us teach users about how to use and navigate through our data visualizations. Explore Meeks, Hayashida Level Design, and Triangle Deisgn.
       reading: Please watch this closer look at <a href="https://youtu.be/CZzcVs8tNfE">Triangle Design in Zelda</a>.
       links:
@@ -755,6 +812,9 @@ sections:
       name: Loops and Experience
       video: 1073391515
       slides: true
+      materials_pdf: true
+      materials_pptx: true
+      materials_md: true
       text: A short lecture on player loops followed by exploring <a href="/support/games.pdf">questions specific to your game</a>. In addition to the game-specific questions, please also write 3 sentences on what the player loops are within your game.
       links:
         - text: Game-specific questions. Also, write 3 sentences on the player loops within your games.
@@ -779,6 +839,9 @@ sections:
       name: Thinking Toys and Diegesis
       video: 1075915883
       slides: true
+      materials_pdf: true
+      materials_pptx: true
+      materials_md: true
       text: A deeper look at building explorable explorations and the idea of thinking toys / diegesis.
       reading: Please watch this GDC talk on <a href="https://youtu.be/ontNUxSLhb8">Storytelling with Verbs</a>.
       links:
@@ -813,6 +876,9 @@ sections:
       name: Accessibility
       video: 1075913765
       slides: true
+      materials_pdf: true
+      materials_pptx: true
+      materials_md: true
       text: Learn about the Web Content Accessibility Guidelines. Explore some common steps which you can take within your interactive data visualizations that can help improve access.
       links:
         - text: Video from slides
@@ -859,6 +925,9 @@ sections:
       name: Ethics
       video: 1077298223
       slides: true
+      materials_pdf: true
+      materials_pptx: true
+      materials_md: true
       text: Explore some of the common issues that come up and how bias enters into our work. Critically examine the power we have as designers. Consider how exercising that power can lead to both positive and negative outcomes. Note that this lecture has multiple content warnings.
       reading: Sasha Costanza-Chock (Eyeo 2019) digging deeper into Design Justice at <a href="https://vimeo.com/354276956">https://vimeo.com/354276956</a>.
       links:
@@ -925,6 +994,9 @@ sections:
       name: Inquiry-Based Design
       video: 1077646004
       slides: true
+      materials_pdf: true
+      materials_pptx: true
+      materials_md: true
       text: Consider inquiry-based design which this class is using to refer to a wide range of viewpoints in data visualization that approach visualization through a series of questions. Also, take a look towards the final. Finally, a goodby from Sam with concluding remarks for the class ahead of the skills labs.
       reading: <a href="https://stamen.com/data-visualization-for-education-when-asking-questions-is-the-answer/">Data Visualization for Education</a> from Stamen.
       citations:
@@ -951,6 +1023,9 @@ sections:
   conclusion:
     - number: 25
       name: Skills and Final Project
+      materials_pdf: false
+      materials_pptx: false
+      materials_md: true
       text: > 
         <p>
           First, consider completing <a href="/labs/js.html">tutorial 12</a> which the final optional <a href="/labs">skills lab</a>
