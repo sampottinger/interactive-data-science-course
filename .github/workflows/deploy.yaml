@@ -52,11 +52,8 @@ jobs:
         with:
           name: mooc
           path: ./mooc
-      - name: Install SSH key
-        run: |
-          install -m 600 -D /dev/null ~/.ssh/id_rsa
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          ssh-keyscan -H ${{ secrets.SFTP_HOST }} > ~/.ssh/known_hosts
+      - name: Install sshpass
+        run: sudo apt-get update && sudo apt-get install -y sshpass
       - name: Upload
         run: |
-          scp -r ./* ${{ secrets.SFTP_USER }}@${{ secrets.SFTP_HOST }}:./mooc.interactivedatascience.courses/
+          sshpass -p "${{ secrets.SFTP_PASSWORD }}" scp -o StrictHostKeyChecking=no -r ./* ${{ secrets.SFTP_USER }}@${{ secrets.SFTP_HOST }}:./mooc.interactivedatascience.courses/
