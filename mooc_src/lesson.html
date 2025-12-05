@@ -1,0 +1,241 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>
+            Lesson {{ number }}: Interactive Data Science and Visualization
+        </title>
+        <link href="/mooc/mooc.css" rel="stylesheet" type="text/css" />
+
+        <meta
+            property="og:title"
+            content="Lesson {{ number }} - Interactive Data Science and Visualization"
+        />
+        <meta property="og:type" content="article" />
+        <meta
+            property="og:description"
+            content="Lesson {{ number }} - {{ name }}. Part of a free and open source online course on interactive data science and visualization."
+        />
+        <meta
+            property="og:url"
+            content="https://interactivedatascience.courses/mooc/lesson{{ number }}.html"
+        />
+        <meta
+            property="og:image"
+            content="https://interactivedatascience.courses/card.jpg"
+        />
+
+        <meta
+            name="twitter:title"
+            content="Lesson {{ number }} in Interactive Data Science and Visualization"
+        />
+        <meta
+            name="twitter:description"
+            content="Lesson {{ number }} - {{ name }}. Part of a free and open source online course on interactive data science and visualization."
+        />
+        <meta
+            name="twitter:image"
+            content="https://interactivedatascience.courses/card.jpg"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+    </head>
+    <body>
+        <div class="skip-link">
+            <a href="#main">Skip to content</a>
+        </div>
+        <header>
+            <div class="tag">Lesson {{ number }}</div>
+            <div>
+                {% if previous_url %}<a href="{{ previous_url }}"
+                    >Previous Lesson</a
+                >
+                |{% endif %}
+                <a href="/mooc">Course Home</a>
+                {% if next_url %}| <a href="{{ next_url }}">Next Lesson</a>{%
+                endif %}
+            </div>
+        </header>
+        <main id="main">
+            <div class="intro">
+                <h1>{{ name }}</h1>
+
+                <p class="content">{{ text | safe }}</p>
+
+                <details>
+                    <summary>Lesson Table of Contents</summary>
+                    <ul>
+                        {% if video %}
+                        <li><a href="#video">Video</a></li>
+                        {% endif %} {% if slides %}
+                        <li><a href="#written">Written materials</a></li>
+                        {% endif %} {% if links %}
+                        <li><a href="#links">Links</a></li>
+                        {% endif %} {% if assignment %}
+                        <li><a href="#exercise">Exercise</a></li>
+                        {% endif %} {% if reading %}
+                        <li><a href="#reading">Reading</a></li>
+                        {% endif %} {% if next_url %}
+                        <li><a href="#next">Next</a></li>
+                        {% endif %} {% if citations %}
+                        <li><a href="#citations">Works cited</a></li>
+                        {% endif %}
+                    </ul>
+                </details>
+            </div>
+
+            <div class="video-holder" id="video">
+                <h2>Video</h2>
+                {% if video %}
+                <div id="video-confirm">
+                    <p>
+                        {% if links %} Resources mentioned in the video can be
+                        found in
+                        <a href="#links">links</a>. {% endif %} Videos are
+                        hosted by Vimeo. You can
+                        <a href="#" class="enable-video-embed-link"
+                            >load the video as an embed</a
+                        >
+                        within this page or may
+                        <a href="https://vimeo.com/{{ video }}" target="_blank"
+                            >view the video on Vimeo</a
+                        >
+                        in a separate window / tab. If you enable on-site video,
+                        your preference will be remembered using a cookie.
+                    </p>
+                    <div class="button-holder">
+                        <a href="#" class="enable-video-embed-link"
+                            >Enable Video Embeds</a
+                        >
+
+                        <a
+                            href="https://vimeo.com/{{ video }}"
+                            class="enable-video-embed-link secondary-dark"
+                            target="_blank"
+                            >View on Vimeo</a
+                        >
+                    </div>
+                </div>
+                <div id="video-embed">
+                    <p>
+                        {% if links %} Resources mentioned in the video can be
+                        found in
+                        <a href="#links">links</a>. {% endif %} Videos are
+                        hosted by Vimeo. You may
+                        <a href="#" class="disable-video-embed-link"
+                            >disable Video Embeds</a
+                        >
+                        or
+                        <a href="https://vimeo.com/{{ video }}" target="_blank"
+                            >view the video on Vimeo</a
+                        >.
+                    </p>
+                    <div id="video-embed-target"></div>
+                </div>
+                {% else %}
+                <p>No video for this lesson.</p>
+                {% endif %}
+            </div>
+            {% if links %}
+            <section id="links">
+                <h2>Links</h2>
+                <div>
+                    Links which may be helpful to complete this lesson:
+                    <ul>
+                        {% for link in links %}
+                        <li>
+                            <a href="{{ link['url'] }}">{{ link['text'] }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </section>
+            {% endif %} {% if slides %}
+            <section id="written">
+                <h2>Written materials</h2>
+                <div>
+                    {% if video %} In addition to the video, you may also {%
+                    else %} You may {% endif %}
+                    <a href="/mooc/written/lesson{{ '%02d' % number }}.pdf"
+                        >download slides from this lesson</a
+                    >.
+                </div>
+            </section>
+            {% endif %} {% if assignment %}
+            <section id="exercise">
+                <h2>Exercise</h2>
+                <div>{{ assignment|safe }}</div>
+                <p>
+                    Note that the Zulip community is not available to this MOOC.
+                    Please consider sharing your exercise via social media such
+                    as Bluesky with the tag #OpenDataVizSciCourse.
+                </p>
+            </section>
+            {% endif %} {% if reading %}
+            <section id="reading">
+                <h2>Reading</h2>
+                <div>{{ reading|safe }}</div>
+            </section>
+            {% endif %} {% if next_url %}
+            <section id="next">
+                <h2>Next lecture</h2>
+                <div>
+                    Ready to continue? Go to the
+                    <a href="{{ next_url }}">next lesson</a>.
+                </div>
+            </section>
+            {% endif %} {% if citations|length > 0 %}
+            <section id="citations">
+                <h2>Works cited</h2>
+                <p>
+                    This is the works cited from the lecture. Note that
+                    additional sources may be used in exercises and other
+                    supporting documentation.
+                </p>
+                <ul class="citation-list">
+                    {% for citation in citations %}
+                    <li>{{ citation | safe }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+            {% endif %}
+        </main>
+        <footer>
+            Copyright A Samuel Pottinger, 2025. Materials on this page are
+            available under
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.en"
+                >CC-BY-NC 4.0</a
+            >. Thank you to
+            <a href="https://public-sans.digital.gov">PublicSans</a> under the
+            Open Font License. A small text file called a cookie is used to save
+            video viewing preferences as part of essential website opertaion.
+            For this website itself, analytics limited to standard server
+            logging which may collect IP addresses. These logs are deleted or
+            anonymized within 30 days. Hosting provided by Dreamhost (see
+            <a
+                href="https://www.dreamhost.com/legal/customer-data-processing-addendum/"
+                >Dreamhost DPA</a
+            >). If enabled with your permission, embeds from
+            <a href="https://vimeo.com">Vimeo</a> will be used as dictated by
+            the <a href="https://vimeo.com/privacy">Vimeo Privacy Policy</a>.
+            Though originally taught at UC Berkeley, this MOOC is not affiliated
+            with the University.
+        </footer>
+    </body>
+
+    <script type="text/template" id="video-embed-template">
+        <iframe
+            title="vimeo-player"
+            src="https://player.vimeo.com/video/{{ video }}"
+            width="896"
+            height="504"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+    </script>
+
+    {% if video %}
+    <script type="text/javascript" src="/mooc/lesson.js"></script>
+    {% endif %}
+</html>

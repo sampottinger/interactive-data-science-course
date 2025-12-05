@@ -1,0 +1,259 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <title>Text</title>
+        <link href="/labs/labs.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="skip-link">
+            <a href="#main">Skip to content</a>
+        </div>
+        <header>
+            This tutorial is part of the <a href="/labs">skills labs</a> within
+            <a href="/mooc">Interactive Data Science and Visualization</a>.
+        </header>
+        <main id="main">
+            <h1>Text</h1>
+
+            We've built up the tools we need to draw glyphs, the foundational
+            building blocks of our graphics. However, there are a few more
+            elements we need to add in order to build data visualizations. We
+            start the next leg of our journey by looking at how we can draw text
+            which will be useful for axes, titles, direct labeling, and more!
+            This is the first element of Skills Lab 4 which focuses on how to
+            bring in external resources to aid our drawing code. In this case,
+            we will bring in outside fonts.
+
+            <details>
+                <summary>Contents</summary>
+                <ul>
+                    <li><a href="#font">Font</a></li>
+                    <li><a href="#text">Text</a></li>
+                    <li><a href="#horizontal-align">Horizontal Align</a></li>
+                    <li><a href="#vertical-align">Vertical Align</a></li>
+                    <li><a href="#next">Next</a></li>
+                </ul>
+            </details>
+
+            <section id="font">
+                <h2>Font</h2>
+
+                Before we can draw text, we need a font. Your machine has a
+                number of fonts pre-installed that you can use. Maybe you've
+                installed some of your own! All that said, different machines
+                may have different default fonts so it is often wise to keep a
+                copy of the fonts with a visualization. This is especially
+                important for interactive visualizations you are sending to
+                others. That in mind, some terminology that you might encounter
+                when working with fonts:
+
+                <ul>
+                    <li>
+                        A type has different typefaces like bold or italic. We
+                        will be working with "regular" for this tutorial.
+                    </li>
+                    <li>
+                        A type is a collection of related fonts. For example,
+                        each typeface would be a font within the type.
+                    </li>
+                    <li>
+                        Each letter in a font is a glyph and each shape within
+                        is typically called a stroke.
+                    </li>
+                    <li>
+                        Some fonts have serifs which are small lines at the end
+                        of characters. Fonts without serifs are called
+                        sans-serif fonts.
+                    </li>
+                    <li>
+                        The font can be set to a different size. This size can
+                        be specified using a few different units but we will use
+                        pixels which is often just called px.
+                    </li>
+                    <li>
+                        Font glyphs have ascendors and descenders which are
+                        parts of the letter that extend outside the body of the
+                        character. For example, a descender can be the bottom
+                        part of a "g" character.
+                    </li>
+                    <li>
+                        The width of each character or space is often not the
+                        same. This is called a "variable-width" font. However,
+                        for showing code, it is common to use a "fixed-width" or
+                        "monospace" font which ensures that any two lines of
+                        text with the same number of characters and spaces is
+                        the same visual length.
+                    </li>
+                </ul>
+
+                We will use an open variable-width sans-serif type called
+                <a href="https://github.com/uswds/public-sans">Public Sans</a>
+                which is under the
+                <a
+                    href="https://github.com/uswds/public-sans/blob/develop/LICENSE.md"
+                    >SIL Open Font License</a
+                >. These fonts come in different file formats but we will
+                generally work with Open Type Format or OTF.
+            </section>
+
+            <section id="text">
+                <h2>Text</h2>
+                Go ahead and
+                <a href="/PublicSans-Regular.otf"
+                    >download Public Sans' regular font in OTF format</a
+                >
+                and add it to your
+                <a href="https://editor.sketchingpy.org/">sketchbook</a> by
+                clicking on upload file. Next, let's draw a first piece of 14 px
+                sized text.
+
+                <pre>
+import sketchingpy
+
+sketch = sketchingpy.Sketch2D(500, 500)
+sketch.clear("#FFFFFF")
+
+sketch.set_text_font("PublicSans-Regular", 14)
+sketch.set_fill("#333333")
+sketch.clear_stroke()
+sketch.draw_text(10, 240, "Interactive Data Science and Visualization")
+
+sketch.show()</pre
+                >
+
+                If you are using Sketchingpy outside the browser, you may need
+                to say "PublicSans-Regular.otf" instead. Anyway, try switching
+                the text to say "Stat 198" and change the font size.
+
+                <details>
+                    <summary>Troubleshooting</summary>
+                    <p>
+                        First, make sure that the filename is
+                        PublicSans-Regular.otf as the font name must match what
+                        you write in your code. Second, if the font still isn't
+                        displaying, there was a bug fix recently. Try going to
+                        the sketchbook and refreshing twice. Specifically, try
+                        doing a hard refresh through ctrl + shift + r or cmd +
+                        shift + r depending on your operating system.
+                    </p>
+                </details>
+            </section>
+
+            <section id="horizontal-align">
+                <h2>Horizontal Align</h2>
+                Like other types of drawing, we can specify alignment for text.
+                We will start with horizontal alignment as it is a bit simplier.
+
+                <pre>
+import sketchingpy
+
+sketch = sketchingpy.Sketch2D(500, 500)
+sketch.clear("#FFFFFF")
+
+sketch.set_text_font("PublicSans-Regular", 14)
+sketch.set_fill("#333333")
+sketch.clear_stroke()
+
+sketch.set_text_align('left')
+sketch.draw_text(10, 150, 'Interactive Data Science and Visualization')
+
+sketch.set_text_align('right')
+sketch.draw_text(490, 350, 'Interactive Data Science and Visualization')
+
+sketch.show()</pre
+                >
+
+                There is another option for horizontal alignment called "center"
+                which draws the text such that its geometric center is at the x
+                position specified. Try changing the text above to use center
+                instead.
+            </section>
+
+            <section id="vertical-align">
+                <h2>Vertical Align</h2>
+                Vertical alignment has a few options: top, bottom, center, and
+                baseline. To see what the each does, let's play with some text
+                which as descenders.
+
+                <pre>
+import sketchingpy
+
+sketch = sketchingpy.Sketch2D(500, 500)
+sketch.clear("#FFFFFF")
+
+sketch.set_stroke("#333333")
+sketch.draw_line(10, 250, 490, 250)
+
+sketch.set_text_font("PublicSans-Regular", 14)
+sketch.set_fill("#333333")
+sketch.clear_stroke()
+
+sketch.set_text_align('left', 'top')
+sketch.draw_text(10, 250, 'Going on a journey.')
+
+sketch.show()</pre
+                >
+
+                Try changing top to bottom, center, and baseline to see how the
+                alignment changes. In particular, compare bottom to baseline:
+                the descenders fall below the y position in baseline but the
+                text moves up such that the descenders end at the y position in
+                bottom.
+            </section>
+
+            <section id="next">
+                <h2>Next</h2>
+                There's a lot to say about type that we won't get to in this
+                course. However, if you want to learn more, I strongly recommend
+                <a
+                    href="https://papress.com/products/thinking-with-type-3-edition"
+                    target="_blank"
+                    >Thinking in Type</a
+                >
+                as a short and approachable introduction. When you are ready,
+                continue on to
+                <a href="/labs/resources_images.html">Tutorial 9</a> to learn
+                about images and buffers.
+
+                <details>
+                    <summary>Citations</summary>
+                    <ul>
+                        <li>
+                            A. Pottinger, "Sketchingpy." Sketchingpy Project,
+                            2024. [Online]. Available:
+                            <a href="https://sketchingpy.org/" target="_blank"
+                                >https://sketchingpy.org/</a
+                            >
+                        </li>
+                        <li>E. Lupton, "Thinking in Type," PA Press, 2024.</li>
+                        <li>
+                            USWDS, "Public Sans," General Services
+                            Administration, 2026. [Online]. Available:
+                            <a
+                                href="https://public-sans.digital.gov"
+                                target="_blank"
+                                >https://public-sans.digital.gov</a
+                            >
+                        </li>
+                    </ul>
+                </details>
+            </section>
+        </main>
+        <footer>
+            Materials on this page are available under
+            <a href="https://opensource.org/license/bsd-3-clause"
+                >BSD 3-Clause License</a
+            >
+            for code and
+            <a href="https://creativecommons.org/licenses/by/4.0/"
+                >CC-BY License</a
+            >
+            for all other material. Thank you to
+            <a href="https://public-sans.digital.gov">PublicSans</a> under the
+            Open Font License. No cookies are used. Analytics limited to
+            standard server logging which may collect IP addresses. These logs
+            are deleted or anonymized within 30 days.
+        </footer>
+    </body>
+</html>

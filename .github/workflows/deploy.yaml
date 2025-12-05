@@ -1,0 +1,64 @@
+on:
+  push:
+    branches: ['**']
+
+jobs:
+  build_mooc:
+    runs-on: ubuntu-latest
+    name: Build MOOC
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r mooc_src/requirements.txt
+      - name: Scaffold MOOC
+        run: mkdir mooc
+      - name: Build MOOC
+        run: cd mooc_src; bash render.sh
+      - name: Copy supporting files
+        run: cp -r mooc_src/support mooc/support
+      - name: Copy slides
+        run: cp -r mooc_src/written mooc/written
+      - name: Copy style
+        run: cp mooc_src/mooc.css mooc/mooc.css
+      - name: Copy logic
+        run: cp mooc_src/lesson.js mooc/lesson.js
+      - name: Upload MOOC directory as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mooc
+          path: ./mooc
+  upload_files:
+    runs-on: ubuntu-latest
+    name: Upload
+    environment: deploy
+    if: github.ref == 'refs/heads/main'
+    needs: build_mooc
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Remove git directory
+        run: rm -r .git
+      - name: Remove workflow directory
+        run: rm -r .github
+      - name: Remove mooc_src
+        run: rm -r mooc_src
+      - name: Download mooc artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: mooc
+          path: ./mooc
+      - name: Upload
+        id: uploadStatic
+        uses: Creepios/sftp-action@v1.0.3
+        with:
+          host: ${{ secrets.SFTP_HOST }}
+          port: 22
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          localPath: './'
+          remotePath: './interactivedatascience.courses'
