@@ -77,7 +77,7 @@ Skills Lab 1 provides a practical introduction to Python programming for data vi
 - Both environments are browser-based and require no local setup.
 
 **Access Point**
-- All tutorials available at: https://interactivedatascience.courses/labs.
+- All tutorials available at: https://mooc.interactivedatascience.courses/labs.
 
 ### Learning Objectives
 
@@ -134,7 +134,7 @@ Please write 4 - 8 sentences.
 Optionally review [A Byte of Python](https://python.swaroopch.com) if you want to brush up on (or learn) the fundamentals of Python.
 
 ### Links
-- [Skills Labs](https://interactivedatascience.courses/labs)
+- [Skills Labs](https://mooc.interactivedatascience.courses/labs)
 - [Sketchingpy Online Sketchbook](https://editor.sketchingpy.org/)
 
 ## Citations

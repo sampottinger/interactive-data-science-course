@@ -55,7 +55,7 @@ sections:
         - >
           A. Pottinger, "Income Gaps." 2023. Available: https://incomegaps.com/
         - >
-          A. Pottinger, "Interactive Data Science." 2024. Available: https://interactivedatascience.courses/
+          A. Pottinger, "Interactive Data Science." 2024. Available: https://mooc.interactivedatascience.courses/
         - >
           A. S. Pottinger et al., "Combining Game Design and Data Visualization to Inform Plastics Policy: Fostering Collaboration between Science, Decision-Makers, and Artificial Intelligence," 2023, arXiv. doi: 10.48550/ARXIV.2312.11359.
         - >
@@ -163,7 +163,7 @@ sections:
         - >
           A. Pottinger, "Income Gaps." 2023. Available: https://incomegaps.com/
         - >
-          A. Pottinger, "Interactive Data Science." 2024. Available: https://interactivedatascience.courses/
+          A. Pottinger, "Interactive Data Science." 2024. Available: https://mooc.interactivedatascience.courses/
         - >
           A. S. Pottinger et al., "Combining Game Design and Data Visualization to Inform Plastics Policy: Fostering Collaboration between Science, Decision-Makers, and Artificial Intelligence," 2023, arXiv. doi: 10.48550/ARXIV.2312.11359.
         - >
@@ -316,7 +316,7 @@ sections:
         A look at the human visual system and the connection between the eyes and brain. Explore how we extract visual information for the environment and what that means for data visualization.
       assignment: >
         Plot job satisfaction from the Stack Overflow Developer Survey using your preferred software.
-        This can be done in spreadsheet software if desired! Your plot could be a bar chart, a scatterplot, a heatmap, etc. You don't need to plot all variables but, instead, can focus on a small subset of interest. Please provide 2 - 4 sentences describing how this representation uses pre-attentive features. You may use a <a href="/mooc/support/stackoverflow.xlsx">simplified dataset</a> I prepared for you or the <a href="https://survey.stackoverflow.co">original full dataset from Stack Overflow</a>.
+        This can be done in spreadsheet software if desired! Your plot could be a bar chart, a scatterplot, a heatmap, etc. You don't need to plot all variables but, instead, can focus on a small subset of interest. Please provide 2 - 4 sentences describing how this representation uses pre-attentive features. You may use a <a href="/support/stackoverflow.xlsx">simplified dataset</a> I prepared for you or the <a href="https://survey.stackoverflow.co">original full dataset from Stack Overflow</a>.
       reading: >
         We are getting a look at the Gestalt Principles through <a href="https://youtu.be/c1qdyszaeTU?feature=shared">Gestalt - The Parts and the Whole by Extra Credits</a>.
       links:
@@ -355,7 +355,7 @@ sections:
         <p>Return to your Job Satisfaction exercise. Make a new graphic that displays the same variables but use a different visual representation. For example, if you previously chose a scatter plot, try a heatmap or bar chart. It doesn't necessarily need to be better or worse. It just needs to be different. Finally, write 3 - 4 sentence about how your plot uses pre-attentive variables.</p>
       links:
         - text: Activity as a PowerPoint file
-          url: /mooc/support/lecture7.pptx
+          url: /support/lecture7.pptx
       citations:
         - >
           B. Adhikari, "Marey's train schedule," University of Missouri Saint Louis, 2021. Available: https://badriadhikari.github.io/data-viz-workshop-2021/minards/
@@ -411,7 +411,7 @@ sections:
           Thanks to https://badriadhikari.github.io/data-viz-workshop-2021/minards/ for imagery.
     - number: 9
       name: Sketching in Code 2
-      url: /mooc/lecture9.html 
+      url: /lecture9.html 
       text: >
         Looking at the other elements we can bring into our work... text, images, data, and the user. Please try to complete the remaining tutorials under Skills Lab 3 at <a href="/labs">Labs</a>.
       assignment: >
@@ -503,7 +503,7 @@ sections:
           Y. Holtz and C. Healy, "From Data to Viz," 2018. Available: https://www.data-to-viz.com 
     - number: 13
       name: Building New Languages
-      url: /mooc/lecture13.html
+      url: /lecture13.html
       video: 1064101038
       slides: true
       text: >
@@ -547,7 +547,7 @@ sections:
           A. Pottinger, "TED Visualization," Gleap, 2012. Available: https://gleap.org/content/ted_visualization
     - number: 14
       name: Task / Domain
-      url: /mooc/lecture14.html
+      url: /lecture14.html
       video: 1064129940
       slides: true
       text: Expand on the idea of domains and tasks with examples before looking at the What / Why / How framework.
@@ -569,7 +569,7 @@ sections:
           R. Binx, "Designing for Realtime Spacecraft Operations," OpenVisConf, 2016. Available at: https://youtu.be/HuYKhSHcRSQ?feature=shared
     - number: 15
       name: Measurement and Evaluation
-      url: /mooc/lecture15.html
+      url: /lecture15.html
       video: 1066458181
       slides: true
       text: >
@@ -614,8 +614,8 @@ sections:
       text: The four waves of HCI and the ideas of Stuart Hall before briefly discussing how video games might fit into the data visualizations conversation.
       assignment: >
         <p>In this exercise, we will visualize the BART ridership dataset. For this activity, please visualize 4 variables.</p>
-        <p>Note that this project invites you to do geospatial visualization in that stations have latitudes and longitudes. However, it is not required. If you want to go this route, see the geospatial examples on the <a href="https://sketchingpy.org/examples.html">Sketchingpy examples page</a>. To support you, please see this geojson which has the outline of the Bay Area: <a href="/mooc/support/bayarea.geojson">bayarea.geojson</a>. If you do geospatial visualization, latitude counts for one variable and longitude counts for another. The geojson is under Public Domain.</p>
-        Regardless, please use the BART 2024 <a href="/mooc/support/bart.xlsx">ridership data I preprocessed for you</a> or the <a href="https://www.bart.gov/about/reports/ridership">upstream official dataset</a>.
+        <p>Note that this project invites you to do geospatial visualization in that stations have latitudes and longitudes. However, it is not required. If you want to go this route, see the geospatial examples on the <a href="https://sketchingpy.org/examples.html">Sketchingpy examples page</a>. To support you, please see this geojson which has the outline of the Bay Area: <a href="/support/bayarea.geojson">bayarea.geojson</a>. If you do geospatial visualization, latitude counts for one variable and longitude counts for another. The geojson is under Public Domain.</p>
+        Regardless, please use the BART 2024 <a href="/support/bart.xlsx">ridership data I preprocessed for you</a> or the <a href="https://www.bart.gov/about/reports/ridership">upstream official dataset</a>.
       reading: >
         I have selected a fairly short video for you to review digging deeper into the idea of affordances through <a href="https://www.vox.com/2016/2/26/11120236/bad-doors-human-centered-design">bad doors</a>.
       links:
@@ -653,7 +653,7 @@ sections:
       text: Go deep into interactivity with affordances, kinesthetic projection, and common patterns in data visualization. This is setting up our final ingredient for data visualizations that you need for the final!
       assignment: >
         <p>
-          We will start our interactive experience. There are different video games for you to choose from within the <a href="/Spring2025Manual.pdf">course manual</a>. See "experience" section. After you have selected your choice, lookup the <a href="/mooc/support/games.pdf">game specific instructions</a>. You can space out your game play over the next few lectures. There will be an additional question asked of all games later in <a href="/mooc/lesson20.html">lesson 20</a> when it would be good to be done.
+          We will start our interactive experience. There are different video games for you to choose from within the <a href="/support/Spring2025Manual.pdf">course manual</a>. See "experience" section. After you have selected your choice, lookup the <a href="/support/games.pdf">game specific instructions</a>. You can space out your game play over the next few lectures. There will be an additional question asked of all games later in <a href="/lesson20.html">lesson 20</a> when it would be good to be done.
         </p>
       reading: Please watch a <a href="https://www.youtube.com/watch?v=1XlfeXpiSuQ">fantastic discussion regarding the role of the player</a> from Extra Credits.
       links:
@@ -755,10 +755,10 @@ sections:
       name: Loops and Experience
       video: 1073391515
       slides: true
-      text: A short lecture on player loops followed by exploring <a href="/mooc/support/games.pdf">questions specific to your game</a>. In addition to the game-specific questions, please also write 3 sentences on what the player loops are within your game.
+      text: A short lecture on player loops followed by exploring <a href="/support/games.pdf">questions specific to your game</a>. In addition to the game-specific questions, please also write 3 sentences on what the player loops are within your game.
       links:
         - text: Game-specific questions. Also, write 3 sentences on the player loops within your games.
-          url: /mooc/support/games.pdf
+          url: /support/games.pdf
       assignment: >
         <p>
           You did it - you made it to the last regular assignment before the final!

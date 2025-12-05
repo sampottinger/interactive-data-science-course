@@ -292,7 +292,7 @@ As before, continue what you started in class by reviewing these additional mate
 [Watch Lecture 6: Visualization as Science 1 on Vimeo](https://vimeo.com/1055340727)
 
 ### Assignment
-Plot job satisfaction from the Stack Overflow Developer Survey using your preferred software. This can be done in spreadsheet software if desired! Your plot could be a bar chart, a scatterplot, a heatmap, etc. You don't need to plot all variables but, instead, can focus on a small subset of interest. Please provide 2 - 4 sentences describing how this representation uses pre-attentive features. You may use a [simplified dataset](/mooc/support/stackoverflow.xlsx) prepared for you or the [original full dataset from Stack Overflow](https://survey.stackoverflow.co).
+Plot job satisfaction from the Stack Overflow Developer Survey using your preferred software. This can be done in spreadsheet software if desired! Your plot could be a bar chart, a scatterplot, a heatmap, etc. You don't need to plot all variables but, instead, can focus on a small subset of interest. Please provide 2 - 4 sentences describing how this representation uses pre-attentive features. You may use a [simplified dataset](/support/stackoverflow.xlsx) prepared for you or the [original full dataset from Stack Overflow](https://survey.stackoverflow.co).
 
 ### Reading
 We are getting a look at the Gestalt Principles through [Gestalt - The Parts and the Whole by Extra Credits](https://youtu.be/c1qdyszaeTU?feature=shared).

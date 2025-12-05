@@ -39,7 +39,7 @@ This lecture is structured as a hands-on skills lab session using a flipped clas
 - Connecting concepts from Skills Lab 1 with new techniques
 
 **Tutorial Location:**
-Students access tutorials through the [Skills Labs page](https://interactivedatascience.courses/labs) and can practice using the [Sketchingpy Online Sketchbook](https://editor.sketchingpy.org/).
+Students access tutorials through the [Skills Labs page](https://mooc.interactivedatascience.courses/labs) and can practice using the [Sketchingpy Online Sketchbook](https://editor.sketchingpy.org/).
 
 ## Flipped Classroom Model
 
@@ -66,7 +66,7 @@ Please write 4 - 8 sentences.
 We will take a look at some of the ideas of Edward Tufte that continue to shape data visualization today. Please read [this review of Tufte from LeRoy](https://benjaminleroy.github.io/pages/blog/public/post/2018/05/16/review-of-tufte-s-the-visual-display-of-quantitative-information/).
 
 ### Links
-- [Skills Labs](https://interactivedatascience.courses/labs)
+- [Skills Labs](https://mooc.interactivedatascience.courses/labs)
 - [Sketchingpy Online Sketchbook](https://editor.sketchingpy.org/)
 
 ## Citations

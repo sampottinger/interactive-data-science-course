@@ -128,9 +128,9 @@ I have selected a fairly short video for you to review digging deeper into the i
 
 ### Links
 - [Example linked in slides: How Covid Shook the US](https://www.theguardian.com/us-news/2022/mar/13/how-covid-shook-the-us-charts-graphs)
-- [BART ridership data (preprocessed)](/mooc/support/bart.xlsx)
+- [BART ridership data (preprocessed)](/support/bart.xlsx)
 - [BART official dataset](https://www.bart.gov/about/reports/ridership)
-- [Bay Area GeoJSON](/mooc/support/bayarea.geojson)
+- [Bay Area GeoJSON](/support/bayarea.geojson)
 - [Bad doors video](https://www.vox.com/2016/2/26/11120236/bad-doors-human-centered-design)
 
 ## Citations

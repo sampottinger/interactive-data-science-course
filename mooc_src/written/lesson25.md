@@ -175,7 +175,7 @@ That's the end of our time together. Thank you so much for joining on this journ
 ### Links
 - [Tutorial 12: JavaScript for Interactive Data Visualization](/labs/js.html)
 - [Skills Labs](/labs)
-- [Course Manual (Spring 2025)](/Spring2025Manual.pdf)
+- [Course Manual (Spring 2025)](/support/Spring2025Manual.pdf)
 
 ## Resources
 
@@ -214,7 +214,7 @@ Throughout the course, numerous example visualizations were discussed:
 
 [1] A. Pottinger and Sketchingpy Contributors, "Sketchingpy," Sketchingpy Project, 2025. Available: https://sketchingpy.org/
 
-[2] A. Pottinger, "Interactive Data Science," 2024. Available: https://interactivedatascience.courses/
+[2] A. Pottinger, "Interactive Data Science," 2024. Available: https://mooc.interactivedatascience.courses/
 
 [3] D. Shiffman, *The Nature of Code*, No Starch Press, 2024. Available: https://natureofcode.com/
 

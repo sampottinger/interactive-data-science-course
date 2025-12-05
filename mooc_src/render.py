@@ -62,9 +62,9 @@ def main_lesson():
   lessons_by_number = dict(lessons_by_number_tuple)
 
   has_prior = prior_number in lessons_by_number
-  prior_url = ('/mooc/lesson%d.html' % prior_number) if has_prior else None
+  prior_url = ('/lesson%d.html' % prior_number) if has_prior else None
   has_next = next_number in lessons_by_number
-  next_url = ('/mooc/lesson%d.html' % next_number) if has_next else None
+  next_url = ('/lesson%d.html' % next_number) if has_next else None
 
   lesson = lessons_by_number[lesson_number]
 

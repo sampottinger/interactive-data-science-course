@@ -267,7 +267,7 @@ Return to your Job Satisfaction exercise. Make a new graphic that displays the s
 We are getting a look at the Gestalt Principles through [Gestalt - The Parts and the Whole by Extra Credits](https://youtu.be/c1qdyszaeTU?feature=shared).
 
 ### Links
-- [Activity as a PowerPoint file](/mooc/support/lecture7.pptx)
+- [Activity as a PowerPoint file](/support/lecture7.pptx)
 
 ## Citations
 

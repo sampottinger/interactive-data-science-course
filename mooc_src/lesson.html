@@ -7,7 +7,7 @@
         <title>
             Lesson {{ number }}: Interactive Data Science and Visualization
         </title>
-        <link href="/mooc/mooc.css" rel="stylesheet" type="text/css" />
+        <link href="/mooc.css" rel="stylesheet" type="text/css" />
 
         <meta
             property="og:title"
@@ -20,11 +20,11 @@
         />
         <meta
             property="og:url"
-            content="https://interactivedatascience.courses/mooc/lesson{{ number }}.html"
+            content="https://mooc.interactivedatascience.courses/lesson{{ number }}.html"
         />
         <meta
             property="og:image"
-            content="https://interactivedatascience.courses/card.jpg"
+            content="https://mooc.interactivedatascience.courses/support/card.jpg"
         />
 
         <meta
@@ -37,7 +37,7 @@
         />
         <meta
             name="twitter:image"
-            content="https://interactivedatascience.courses/card.jpg"
+            content="https://mooc.interactivedatascience.courses/support/card.jpg"
         />
         <meta name="twitter:card" content="summary_large_image" />
     </head>
@@ -52,7 +52,7 @@
                     >Previous Lesson</a
                 >
                 |{% endif %}
-                <a href="/mooc">Course Home</a>
+                <a href="/">Course Home</a>
                 {% if next_url %}| <a href="{{ next_url }}">Next Lesson</a>{%
                 endif %}
             </div>
@@ -157,7 +157,7 @@
                 <div>
                     {% if video %} In addition to the video, you may also {%
                     else %} You may {% endif %}
-                    <a href="/mooc/written/lesson{{ '%02d' % number }}.pdf"
+                    <a href="/written/lesson{{ '%02d' % number }}.pdf"
                         >download slides from this lesson</a
                     >.
                 </div>
@@ -236,6 +236,6 @@
     </script>
 
     {% if video %}
-    <script type="text/javascript" src="/mooc/lesson.js"></script>
+    <script type="text/javascript" src="/lesson.js"></script>
     {% endif %}
 </html>

@@ -260,7 +260,7 @@ We will learn more about how tools change the way we think. Please watch the ver
 
 [19] A. Pottinger, "Income Gaps." 2023. Available: https://incomegaps.com/
 
-[20] A. Pottinger, "Interactive Data Science." 2024. Available: https://interactivedatascience.courses/
+[20] A. Pottinger, "Interactive Data Science." 2024. Available: https://mooc.interactivedatascience.courses/
 
 [21] A. S. Pottinger et al., "Combining Game Design and Data Visualization to Inform Plastics Policy: Fostering Collaboration between Science, Decision-Makers, and Artificial Intelligence," 2023, arXiv. doi: 10.48550/ARXIV.2312.11359.
 

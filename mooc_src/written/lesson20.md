@@ -127,7 +127,7 @@ The goal for this exercise is to take one of your prior visualizations from the 
 In addition to the game-specific questions from your interactive experience, please write 3 sentences on what the player loops are within your game.
 
 ### Links
-- [Game-specific questions (PDF)](/mooc/support/games.pdf)
+- [Game-specific questions (PDF)](/support/games.pdf)
 
 ## Citations
 

@@ -110,7 +110,7 @@ Build an artistic graphic drawn using code that explores:
 - Part of ongoing portfolio development
 - Building toward more complex interactive visualizations
 - Sketchingpy Online Sketchbook available at editor.sketchingpy.org
-- Skills Labs documentation at interactivedatascience.courses/labs
+- Skills Labs documentation at mooc.interactivedatascience.courses/labs
 
 ## Activities
 
@@ -133,7 +133,7 @@ Need inspiration? Check out the following:
 I wanted to keep things light so you can focus on the Skills Labs. So, we are going to look at little ahead with a very short preview about why geospatial visualization is so hard. Please watch [All Maps are Wrong](https://youtu.be/kIID5FDi2JQ).
 
 ### Links
-- [Skills Labs](https://interactivedatascience.courses/labs)
+- [Skills Labs](https://mooc.interactivedatascience.courses/labs)
 - [Sketchingpy Online Sketchbook](https://editor.sketchingpy.org/)
 
 ## Citations
