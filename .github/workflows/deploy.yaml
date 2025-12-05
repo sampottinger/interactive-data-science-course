@@ -21,8 +21,12 @@ jobs:
         run: cd mooc_src; bash render.sh
       - name: Copy supporting files
         run: cp -r mooc_src/support mooc/support
-      - name: Copy slides
-        run: cp -r mooc_src/written mooc/written
+      - name: Copy PDF materials
+        run: cp -r mooc_src/pdf mooc/pdf
+      - name: Copy PPTX materials
+        run: cp -r mooc_src/pptx mooc/pptx
+      - name: Copy Markdown materials
+        run: cp -r mooc_src/md mooc/md
       - name: Copy style
         run: cp mooc_src/mooc.css mooc/mooc.css
       - name: Copy logic

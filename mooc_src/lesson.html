@@ -158,15 +158,15 @@
                     {% set material_count = (materials_pdf|default(false) and 1 or 0) + (materials_pptx|default(false) and 1 or 0) + (materials_md|default(false) and 1 or 0) %}
                     {% if material_count == 1 %}
                         {% if video %}In addition to the video, you may also{% else %}You may{% endif %}
-                        {% if materials_pdf %}<a href="/written/lesson{{ '%02d' % number }}.pdf">download slides as PDF</a>.{% endif %}
-                        {% if materials_pptx %}<a href="/written/lesson{{ '%02d' % number }}.pptx">download slides as PPTX</a>.{% endif %}
-                        {% if materials_md %}<a href="/written/lesson{{ '%02d' % number }}.md">download outline as Markdown</a>.{% endif %}
+                        {% if materials_pdf %}<a href="/pdf/lesson{{ '%02d' % number }}.pdf">download slides as PDF</a>.{% endif %}
+                        {% if materials_pptx %}<a href="/pptx/lesson{{ '%02d' % number }}.pptx">download slides as PPTX</a>.{% endif %}
+                        {% if materials_md %}<a href="/md/lesson{{ '%02d' % number }}.md">download outline as Markdown</a>.{% endif %}
                     {% elif material_count > 1 %}
                         {% if video %}In addition to the video, you may also:{% else %}You may:{% endif %}
                         <ul>
-                            {% if materials_pdf %}<li><a href="/written/lesson{{ '%02d' % number }}.pdf">Download Slides as PDF</a></li>{% endif %}
-                            {% if materials_pptx %}<li><a href="/written/lesson{{ '%02d' % number }}.pptx">Download Slides as PPTX</a></li>{% endif %}
-                            {% if materials_md %}<li><a href="/written/lesson{{ '%02d' % number }}.md">Download Outline as Markdown</a></li>{% endif %}
+                            {% if materials_pdf %}<li><a href="/pdf/lesson{{ '%02d' % number }}.pdf">Download Slides as PDF</a></li>{% endif %}
+                            {% if materials_pptx %}<li><a href="/pptx/lesson{{ '%02d' % number }}.pptx">Download Slides as PPTX</a></li>{% endif %}
+                            {% if materials_md %}<li><a href="/md/lesson{{ '%02d' % number }}.md">Download Outline as Markdown</a></li>{% endif %}
                         </ul>
                     {% endif %}
                 </div>
