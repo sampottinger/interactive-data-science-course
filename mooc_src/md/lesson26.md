@@ -1,5 +1,5 @@
 # Lesson 26
-Expanding instruction to AI.
+Briefly expanding instruction to AI.
 
 ## Objective
 Offer a hands-on exploration of using AI in constructing data visualizations through two LLM-focused labs.

@@ -1,5 +1,5 @@
 # Lesson 0
-Setting the stage for the course.
+Briefly setting the stage for the course.
 
 ## Objective
 Provide a short primer on the online version of Interactive Data Science and Visualization with some background and direction on how best to use the online open source resources.
