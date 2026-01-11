@@ -10,7 +10,7 @@ This online-only lecture starts by looking at the purpose and background of the 
 ### Course purpose
 Providing multiple perspectives to mix practical design and technical instruction.
 
-  - The technical and design skills for creating word-class effective static and interactive user experiences with data, both for yourself and others.
+  - The technical and design skills for creating world-class effective static and interactive user experiences with data, both for yourself and others.
   - Specific Python-based exercises with optional discussion of JavaScript.
   - Concrete technical skills for implementation paired with evidence / literature-backed design skills for design.
 
@@ -45,5 +45,12 @@ There are lots of ways into data visualization and it means different things in 
  - This course can be used in different ways to complement your own reading and learning with 4 sections to help you find what is most needed.
  - Start wherever feels right to you and grow, borrow liberally to add to other efforts.
 
-## Works Cited
-Please cite Kim Reas / Periscopic on gun deaths, cite Rachel Binx NASA stuff, cite Pottinger et al plastics tool, cite the cohlera john snow visualization. These can be found in other lectures and copied in.
+## Citations
+
+[1] K. Rees and Periscopic, "U.S. Gun Deaths." Periscopic, 2018. Available: https://guns.periscopic.com/
+
+[2] R. Binx, "Designing for Realtime Spacecraft Operations." OpenVisConf, Apr. 2016. Available: https://www.youtube.com/watch?v=HuYKhSHcRSQ
+
+[3] A. S. Pottinger et al., "Combining Game Design and Data Visualization to Inform Plastics Policy: Fostering Collaboration between Science, Decision-Makers, and Artificial Intelligence," 2023, arXiv. doi: 10.48550/ARXIV.2312.11359.
+
+[4] J. Snow, *On the mode of communication of cholera*. London: John Churchill, 1855. Available: https://archive.org/details/b28985266/page/n57/mode/2up

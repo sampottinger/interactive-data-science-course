@@ -24,7 +24,7 @@ Lesson 26 goes beyond the original material of Stat 198 as an update to prior in
 ### Role of AI
 AI does not provide a silver bullet for understanding or visualizing data.
 
-  - Limitations of language: it can be hard to describe what exactly Is desired.
+  - Limitations of language: it can be hard to describe what exactly is desired.
   - Don’t forget the role of iteration.
     - Avoid offloading responsibility to AI.
     - Consider how AI can afford faster iteration.
@@ -37,5 +37,16 @@ AI can help craft data visualizations but may serve more a role in accelerating 
   - Use tools like LLMs.txt to access libraries.
   - Remain vigilant in iteration and use LLMs to try more ideas faster.
 
-## Works Cited
-Please cite Claude, llms.txt, Sketchingpy (possibly in prior lecture), Matplotlib (possibly in prior lecture), and the Isle Royale citation (likely in prior lecture). Please also cite Eugenics and the Promise of Utopia through Artificial General Intelligence by Timnit Gebru (https://satml.org/2023/videos/).
+## Citations
+
+[1] Anthropic, "Claude," Anthropic, 2024. Available: https://www.anthropic.com/claude
+
+[2] J. Willison, "llms.txt," llmstxt Project, 2024. Available: https://llmstxt.org/
+
+[3] A. Pottinger and Sketchingpy Contributors, "Sketchingpy," Sketchingpy Project, 2025. Available: https://sketchingpy.org/
+
+[4] J. D. Hunter, "Matplotlib: A 2D Graphics Environment," *Computing in Science & Engineering*, vol. 9, no. 3, pp. 90-95, 2007, doi: 10.1109/MCSE.2007.55.
+
+[5] Isle Royale National Park Michigan, "Wolf & Moose Populations." National Parks Service, Mar. 29, 2024. Available: https://www.nps.gov/isro/learn/nature/wolf-moose-populations.htm
+
+[6] T. Gebru, "Eugenics and the Promise of Utopia through Artificial General Intelligence," IEEE Conference on Secure and Trustworthy Machine Learning (SaTML), 2023. Available: https://satml.org/2023/videos/
