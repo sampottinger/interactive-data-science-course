@@ -1,5 +1,5 @@
 # Lesson 8: Skill Lab 3
-Sketching in Code
+Sketching in code.
 
 ## Objective
 Use code to draw graphics as guided by recent concepts from class including preattentive features, introducing Skills Lab 3 with a focus on drawing glyphs through code.

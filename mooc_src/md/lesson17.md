@@ -1,8 +1,8 @@
-# Lesson 17
-Briefly introducing interaction patterns.
+# Lesson 17: The Reader as Player
+Introducing interaction patterns.
 
 ## Objective
-Go deep into interactivity with affordances, kinesthetic projection, and common patterns in data visualization to prepare for creating interactive visualizations in the final project.
+Go deep into interactivity and interaction design. We will look at affordances, kinesthetic projection, and common patterns in data visualization. All of this prepares for creating interactive visualizations in the final project.
 
 ## Outline
 This lecture explores the bridge between user interaction and data visualization, introducing common interaction patterns and formalizing the concept of affordances to create more intuitive and engaging interactive experiences.

@@ -1,5 +1,5 @@
 # Lesson 7: Visualization as Science 2
-Gestalt Principles and Color
+Gestalt principles and color.
 
 ## Objective
 Understand how the visual system groups elements through Gestalt Principles and apply practical guidance for using color effectively in data visualization.
