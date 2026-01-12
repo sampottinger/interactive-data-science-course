@@ -42,7 +42,7 @@ Introduction to interactive programming with event-driven concepts.
 ### Considerations for interactivity
 When designing interaction, focus on one primary user action at a time and ensure interactions respond meaningfully to their context.
 
-  - Single actions: Click, hover, drag, or keypress
+  - Single actions: Click, hover, keys
   - Visual feedback that relates to the interaction
   - State changes that reflect user intent
   - Progressive disclosure of information
@@ -56,13 +56,6 @@ This lecture primarily consists of hands-on tutorials rather than traditional sl
   - Loading and visualizing data
   - Creating basic interactions
   - Sketchingpy Online Editor available at https://editor.sketchingpy.org/
-
-### Assignment
-For this follow-up exercise, add interactivity to your creative coding project from the previous lesson.
-
-  - Add interaction that uses only a single action or verb like hover or click
-  - Action could be contextualized like the rotating color wheels example from Skills Lab 4
-  - Explore how your work can respond to a simple user action
 
 ### Building on previous concepts
 This lecture builds directly on concepts from earlier in the course.
@@ -80,7 +73,7 @@ Adding these elements continues our exploration of multiple perspectives on data
   - Data visualization as dialogue: User interaction begins the transition from passive viewing to active participation in the visualization experience
 
 ## Take Aways
-Text, images, data, and user interaction transform static visualizations into dynamic, engaging experiences that support exploration and storytelling.
+Text, images, data, and user interaction offer engagement, exploration, and storytelling.
 
   - Text provides essential context and can serve as a visual design element
   - Images expand creative possibilities and can be used as data sources
