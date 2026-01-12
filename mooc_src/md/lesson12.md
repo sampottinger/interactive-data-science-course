@@ -1,35 +1,59 @@
-# Lesson 12
+# Lesson 12: Patterns
 Briefly exploring visualization patterns and user tasks.
 
 ## Objective
-Introduce common visualization patterns organized by variable count, establish core data terminology, and explore how user domains and tasks should guide pattern selection.
+Introduce common visualization patterns organized by variable count, establish core data terminology, and explore how user domains and tasks may guide pattern selection.
 
 ## Outline
 This lecture provides a tour through common chart types used for different situations as well as common terminology. It also offers a brief introductory mention of domains and tasks as a way to contextualize visualization patterns by understanding users.
 
 ### Data terminology
-Understanding the language used to describe data structures.
+Understanding the language used to describe data structures. Often:
 
   - Variables are the column names in a dataset.
   - Values are seen inside individual cells.
   - Observations are rows in a table.
   - Dimensions are variables by which observations are divided or segmented.
-  - Measures are numeric values which are encoded in visual channels.
+  - Measures are typically numeric values which are encoded in visual channels.
+
+These terms can be found in a number of software packages.
 
 ### Visualization patterns by variable count
 The lecture systematically explores visualization options as data complexity increases from one variable to seven variables.
 
-  - 1 variable: histogram, pie chart, donut chart, circular graph.
-  - 2 variables: scatter plot, bar chart, treemap, sunburst chart, chord diagram, arc diagram.
-  - 3 variables: bubble chart, grouped bar chart, stacked bar chart, Marimekko chart, Sankey diagram.
-  - 4 variables: parallel coordinates plot.
-  - Beyond 4 variables: shared axes, dual axes, novel representations, interactivity, multiple coordinated views, small multiples.
+  - 1 variable:
+    - Histogram
+    - Pie chart
+    - Donut chart
+    - Circular graph
+  - 2 variables:
+    - Scatter plot
+    - Bar chart
+    - Treemap
+    - Sunburst chart
+    - Chord diagram
+    - Arc diagram
+  - 3 variables:
+    - Bubble chart
+    - Grouped bar chart
+    - Stacked bar chart
+    - Marimekko chart
+    - Sankey diagram
+  - 4 variables:
+    - Parallel coordinates plot
+  - Beyond 4 variables:
+    - Shared axes
+    - Dual axes
+    - Novel representations
+    - Interactivity
+    - Multiple coordinated views
+    - Small multiples
 
 ### The grammar is limited
 For higher density plots, traditional chart types become insufficient.
 
   - Standard visualization patterns struggle with 5 or more variables.
-  - Alternative approaches include shared axes, novel representations, and interactivity.
+  - Alternative approaches include shared axes, novel (bespoke) representations, and interactivity.
   - Multiple coordinated views and small multiples help manage complexity.
 
 ### Re-centering the user
