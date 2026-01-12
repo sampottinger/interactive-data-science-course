@@ -15,7 +15,8 @@ A rapid overview covering one influential figure per century to understand how w
 - Florence Nightingale (1800s): Pioneered data visualization for advocacy and policy change
 - W.E.B. Du Bois (1900s): Transformed data visualization into a tool for social justice messaging
 - Donald Bitzer (Today): Early innovator in interactive media and explorable explanations through PLATO system
-- Important to acknowledge who is remembered and who is left out of traditional historical narratives
+
+Note: It is important to acknowledge who is remembered and who is left out of traditional historical narratives and how that fits into existing power structures.
 
 ### Tufte's design principles
 Edward Tufte brought many people into information design through touring workshops and popular books, fundamentally shaping modern data visualization.
@@ -24,11 +25,14 @@ Edward Tufte brought many people into information design through touring worksho
 - Chartjunk: Remove visual elements that don't convey data or assist comprehension
 - Data-Ink Ratio: Maximize proportion of graphic's ink devoted to displaying data
 - Data Density: Increase amount of data displayed per unit area within reason
+
+Context:
+
 - These are guidelines many follow as standard advice, not absolute rules
 - His ideas are readily applicable even with basic tools like Google Sheets
 
 ### Problematic visualizations
-Analysis of "darts" or problematic graphics identified by Michael Friendly that motivated Tufte's work.
+Analysis of "darts" or problematic graphics catalogued by Michael Friendly that demonstrate Tufte's work.
 
 - Common visualization mistakes and design choices that create confusion
 - Application of Tufte's principles to real-world examples
@@ -36,14 +40,15 @@ Analysis of "darts" or problematic graphics identified by Michael Friendly that 
 - Understanding why certain design choices fail
 
 ### Moving beyond Tufte
-Recognition that aesthetic principles alone are insufficient for effective data visualization.
+Recognition that these principles alone are sometimes insufficient for effective data visualization.
 
 - Many design principles were based on aesthetic judgment rather than controlled studies
 - Some principles lack empirical validation
 - Context, audience, and purpose require different approaches
 - Sometimes "inefficient" designs create stronger emotional impact
 - Need for scientific understanding of cognitive and perception principles
-- Next lectures will explore empirical approaches to encoding devices and channel effectiveness
+
+Next lectures will explore empirical approaches to encoding devices and channel effectiveness before questioning when even those rules aren't complete.
 
 ## Take Aways
 Historical context provides foundation for understanding design principles, but effective visualization requires empirical validation.
