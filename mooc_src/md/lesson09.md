@@ -1,5 +1,5 @@
 # Lesson 9: Skills Lab 4
-Briefly sketching with code continued.
+Sketching with code continued.
 
 ## Objective
 Continue exploration of creative coding with Python by integrating text, images, data, and user interaction into code-based visualizations.

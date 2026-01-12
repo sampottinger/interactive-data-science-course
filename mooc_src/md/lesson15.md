@@ -1,11 +1,11 @@
-# Lesson 15
-Briefly introducing design research methods.
+# Lesson 15: Design Research
+Introducing design research methods or how to gather evidence to drive design. 
 
 ## Objective
-Introduce accessible design research techniques for understanding users and evaluating data visualizations, with focus on practical methods including user interviews, contextual inquiry, the Think-Aloud Protocol, and co-design.
+Introduce design research techniques for understanding users and evaluating data visualizations. Focus on practical methods including user interviews, contextual inquiry, the Think-Aloud Protocol, and co-design.
 
 ## Outline
-This lecture provides an introduction to design research methods for learning from users. It starts with theoretical underpinnings before covering four primary research methods, offering practical guidance for each technique and emphasizing the Think-Aloud Protocol as an accessible tool for visualization measurement and evaluation.
+This lecture provides an introduction to design research methods for learning from users. It starts with theoretical underpinnings before covering four primary research methods, offering practical guidance for each technique and emphasizing the Think-Aloud Protocol as an easy / immediate tool for visualization evaluation.
 
 ### Why design research
 Understanding the user is essential to answering critical design questions.
@@ -13,9 +13,11 @@ Understanding the user is essential to answering critical design questions.
   - What are the right questions to ask within a data visualization?
   - What are the most important variables to include?
   - How should we prioritize encoding devices?
-  - This is not a comprehensive course on user research methods in human-centered design.
+
+Note: This is not a comprehensive course on user research methods in human-centered design.
+
   - The goal is to provide a sense of how design research is done and introduce one specific tool useful for visualization measurement and evaluation.
-  - Employing these techniques may involve ethical considerations and training depending on the circumstance.
+  - Employing these techniques may involve ethical considerations and training depending on the circumstance (we focus on quality assurance tasks but some studies may require human subjects research training).
 
 ### Theoretical underpinnings
 Before evaluating applied methods, consider these theoretical perspectives.
@@ -39,9 +41,26 @@ User interviews may be used in learning about a product, population, system, pro
   - Ask open-ended questions which allow the user to guide you to new topics.
   - Who, what, when, where, and why are all helpful, but why, who, and how can be particularly generative.
   - Ask about specific and, when possible, recent actual events.
-  - Example questions: Why are those goals important? Who works with you on those goals? How did those deadlines get set? Can you describe your day yesterday? What did you feel going through that process?
-  - Interview techniques: echoing, silence, interesting redirect, advice to someone else, advice to past self, end with magic wand.
-  - Things to avoid: dead ends, judgment, leading questions, double-barrel questions.
+  - Example questions:
+    - Why are those goals important?
+    - Who works with you on those goals?
+    - How did those deadlines get set?
+    - Can you describe your day yesterday? 
+    - What did you feel going through that process?
+  - Interview techniques:
+    - Echoing (You said that it was difficult to use, why is that the case?)
+    - Silence
+    - Interesting redirect (That's interesting thank you. I also wonder if you
+could tell me about)
+    - Advice to someone else (What would you tell someone else who is thinking
+of using this software in the future?)
+    - Advice to past self (If you could give your past self advice, what would you say?)
+    - End with magic wand (typically best for last, If you change anything about this, what would it be?)
+  - Things to avoid:
+    - Dead ends (is that your preferred software -> why is that your preferred software)
+    - Judgment (why is this tool is difficult to use -> how does it feel to use this tool)
+    - Leading questions (what have you done to improve this process -> has the process changed over time)
+    - Double-barrel questions (what do you like and dislike about this tool -> what do you like about this tool? what do you dislike about this tool?)
 
 ### Contextual inquiry
 Contextual inquiry is similar to a user interview but conducted in action.
@@ -57,8 +76,8 @@ The Think-Aloud Protocol is one of the easiest methods for observing how users i
   - Provide users with a simple prompt: "Please go through this tutorial and while doing so, please try your best to think aloud."
   - Users verbalize their thought process as they interact with the visualization.
   - Reveals what they notice first, what confuses them, what assumptions they make, where they get stuck, and what they find intuitive or difficult.
-  - Well-established in HCI research through work by Ben Shneiderman and Catherine Plaisant as well as Clayton Lewis and John Rieman.
-  - The multi-dimensional aspect refers to using observations, interviews, surveys, as well as automated logging to assess user performance and interface efficacy and utility.
+  - Clayton Lewis and John Riemans
+  - See also MILC: long term diary study (Ben Shneiderman and Catherine Plaisant)
 
 ### Co-design
 Co-design breaks down the distinction between users and designers.
@@ -75,8 +94,9 @@ Design research provides essential methods for understanding users and improving
   - User interviews use open-ended questions to learn about products, populations, systems, and processes.
   - Contextual inquiry observes users in action during regular activity.
   - The Think-Aloud Protocol is an accessible method for visualization evaluation where users verbalize their thought process.
+  - MILC / diary studies can provide long term view.
   - Co-design invites users as partners to fundamentally guide the design process.
-  - These techniques require approaching users with empathy, a beginner's mind, and without judgment.
+  - These techniques require approaching users with empathy and without judgment.
 
 ## Citations
 

@@ -1,4 +1,4 @@
-# Lesson 18
+# Lesson 18: Ludonarrative
 Mechanics and narrative in interaction.
 
 ## Objective
@@ -28,7 +28,7 @@ Drawing from Extra Credits' "Mechanics as Metaphor" series, exploring how the ru
 How the visual and interactive landscape conveys meaning without explicit text.
 
   - Information arranged in space can tell stories without words.
-  - Users discover narrative by exploring and interacting with the data environment.
+  - Users discover narrative by exploring and interacting with the environment.
   - Invites discovery and exploration while respecting user agency.
   - Creates more memorable experiences through active engagement.
 
@@ -48,14 +48,16 @@ Applying these concepts to create more effective interactive data visualizations
   - Show consequences: interactive feedback demonstrates cause and effect.
   - Respect agency: let users construct their own understanding within your framework.
 
+### Group activity
+We compared the ludonarrative experience of https://guns.periscopic.com/ to https://www.rand.org/research/gun-policy/longitudinal-firearm-mortality.html, trying to answer the question of why they feel different.
+
 ## Take Aways
 The mechanics of interaction themselves can tell stories and create meaning in data visualization, with alignment between mechanics and narrative creating more powerful experiences.
 
   - Ludonarrative describes how gameplay mechanics and message work together in interactive experiences.
-  - When mechanics align with narrative (ludonarrative harmony), visualizations become more cohesive and impactful.
   - Environmental storytelling allows users to discover narrative through spatial arrangement and interaction.
   - Consider what story the interaction pattern itself tells beyond the data being presented.
-  - Interactive friction, constraints, and feedback can all serve as meaningful narrative devices.
+  - Friction and constraints can serve as meaningful narrative devices.
 
 ## Citations
 

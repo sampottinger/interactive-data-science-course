@@ -1,5 +1,5 @@
 # Lesson 4: Skills Lab 2
-Briefly introducing custom objects for creative coding.
+Introducing custom objects for creative coding.
 
 ## Objective
 Apply object-oriented programming to create interactive graphical simulations through hands-on practice with custom objects.

@@ -1,5 +1,5 @@
 # Lesson 3: Skills Lab 1
-Hello Creative Python
+Hello Creative Python!
 
 ## Objective
 Gain foundational Python skills and learn creative coding techniques through browser-based tutorials to prepare for data visualization work.

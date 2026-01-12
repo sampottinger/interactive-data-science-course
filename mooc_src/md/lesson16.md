@@ -1,4 +1,5 @@
 # Lesson 16: The Reader as User
+Re-imagining the role and power of the reader.
 
 ## Objective
 Explore different conceptual frameworks for understanding the role of the user in data visualization, moving from mechanical interaction to co-creation of meaning.
@@ -14,55 +15,61 @@ The relationship between author and audience is mediated by the visualization it
     - Dominant reading: accepting the intended message as presented.
     - Oppositional reading: rejecting the intended message entirely.
     - Negotiated reading: partially accepting and partially rejecting the message.
-  - Students examined "How Covid Shook the US: Eight Charts That Capture the Last Two Years" from The Guardian through these three reading positions.
 
-### Wave 1: Ergonomics
-The user as a robot interpreting through a mechanical system.
+Group examines "How Covid Shook the US: Eight Charts That Capture the Last Two Years" from The Guardian through these three reading positions.
+
+### HCI Waves
+Looking at the evolution of human-computer interaction through a series of waves reflecting different moments of thought.
+
+#### Wave 1: Ergonomics
+The user almost as a robot interpreting through a mechanical system.
 
   - Focus on physical interaction and ergonomic design.
   - Understanding how users mechanically interact with interfaces.
   - Examples include airplane cockpit design and door affordances.
   - Emphasis on making clear how a data visualization should be used.
   - Fine-tuning mechanisms through which a person "mechanically" interacts.
-  - Example: fuel efficiency standards visualization showing data from 1978 to 1985.
 
-### Wave 2: Information and dialogue
+Example: fuel efficiency standards visualization showing data from 1978 to 1985.
+
+#### Wave 2: Information and dialogue
 The user as engaged in conversation with a series of questions completing a task.
 
   - Focus on information exchange and task completion.
   - User flows and supporting series of questions or tasks.
   - Multiple coordinated views and interactive exploration.
-  - Examples include Windows 98 installation interface, Asana project management, and podcast visualization.
   - Think about the flow of a user (user loops).
   - Support a series of questions or tasks.
   - Enable dialogue between user and system.
 
-### Wave 3: Context
+Examples include Windows 98 installation interface, Asana project management, and podcast visualization.
+
+#### Wave 3: Context
 The user as an entity with thought interpreting work through personal and cultural lenses within a social system.
 
   - Recognition that users exist within social and cultural contexts.
   - Understanding how context interacts with the visualization.
-  - Examples include Global Plastics AI Policy Tool.
   - Critically interrogating the context and how it may interact with the graphic.
   - Understanding users as thinking beings embedded in cultural and social systems, not just task-completing entities.
 
-### Media for thought
-Using mathematical notation and visual representations as tools for thinking.
+Examples include Global Plastics AI Policy Tool.
 
-  - Historical example from Arabic mathematics demonstrates how notation itself shapes what we can think about.
-  - Ancient mathematical problem about finding a square shows how mathematical notation (x² + 10x = 39) provides a more efficient medium for mathematical thought than prose description.
-  - Interactive visualizations can serve as dynamic media for thought.
-  - Allow users to explore mathematical and data-driven concepts.
+#### Wave 4: Unknown
+It is still a little unclear what wave 4 will be but let's consider Media for Thought as a possible next step.
+
+### Media for thought
+Visual representations as tools for thinking. Analysis of Bret Victor (https://vimeo.com/67076984?fl=pl&fe=vl).
 
 ### Games: The user as co-creator
 Games represent a co-created experience between the player and the technology or designer.
 
-  - Reference: Jesse Schell's "The Art of Game Design: A Book of Lenses".
   - Users as co-creators of meaning.
   - The work as a way to think new thoughts.
   - Creation of sometimes uniquely individual experiences.
   - Spaces that can be activated by users to see, feel, do, and think new things.
   - Will Wright describes how games enable players to build narratives and experiences that go beyond the designer's original intention.
+
+  Reference: Jesse Schell's "The Art of Game Design: A Book of Lenses".
 
 ## Take Aways
 Understanding these different conceptualizations of the user suggests designers should consider multiple perspectives when creating data visualizations.
@@ -71,7 +78,6 @@ Understanding these different conceptualizations of the user suggests designers 
   - Think about the flow of a user (user loops) and how we support a series of questions or tasks (Wave 2).
   - Critically interrogate the context of this visualization and how it may interact with the graphic (Wave 3).
   - Create spaces that can be activated by the user to see, feel, do, and think new things (Games and Media for Thought).
-  - The user can be conceptualized as: a robot interpreting through a mechanical system, a conversational partner completing tasks, an entity with thought within a social system, or a co-creator of meaning.
 
 ## Citations
 

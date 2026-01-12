@@ -1,8 +1,8 @@
-# Lesson 17
-Briefly introducing interaction patterns.
+# Lesson 17: The Reader as Player
+Introducing interaction patterns.
 
 ## Objective
-Go deep into interactivity with affordances, kinesthetic projection, and common patterns in data visualization to prepare for creating interactive visualizations in the final project.
+Go deep into interactivity and interaction design. We will look at affordances, kinesthetic projection, and common patterns in data visualization. All of this prepares for creating interactive visualizations in the final project.
 
 ## Outline
 This lecture explores the bridge between user interaction and data visualization, introducing common interaction patterns and formalizing the concept of affordances to create more intuitive and engaging interactive experiences.
@@ -10,28 +10,41 @@ This lecture explores the bridge between user interaction and data visualization
 ### Acting through tools
 Understanding how users interact with digital interfaces requires examining the relationship between action and tool.
 
-  - Users act through interfaces rather than on them.
-  - The concept of kinesthetic projection: how physical movement translates to digital action.
+  - Users act through interfaces.
+  - The concept of kinesthetic projection: how digital action becomes an extension of one's self.
   - Tools should feel like extensions of the user's intent.
 
 ### Common interaction patterns
 The lecture introduces fundamental interaction patterns that recur throughout interactive data visualization.
 
-  - Details disclosure: Revealing additional information on demand with progressive disclosure of complexity. Example: Podcast Anthropology visualization showing episode details by year.
-  - Coordinated scrubbing: Synchronized navigation across multiple views with time-based or parameter-based coordination. Example: TED visualization showing coordinated exploration of talks.
-  - Madlibs: Structured query interface using dropdown menus and selections with fill-in-the-blank approach to data exploration.
-  - Coordinated filtering: Filtering in one view affects all linked views enabling multi-faceted data exploration. Example: Global Plastics AI Policy Tool showing end of life outcomes by region.
-  - Configuration panel: Dedicated control interface for simulation or visualization parameters with multiple input types. Example: Hypothetical Rates Simulator showing agricultural subsidy scenarios.
-  - Direct manipulation: Users interact directly with visual elements by clicking, dragging, or tapping on data representations themselves. Example: FoodSim San Francisco allowing users to place buildings directly on map.
+  - Details disclosure
+    - Revealing additional information on demand with progressive disclosure of complexity.
+    - Example: Podcast Anthropology visualization showing episode details by year.
+  - Coordinated scrubbing
+    - Synchronized navigation across multiple views with time-based or parameter-based coordination.
+    - Example: TED visualization showing coordinated exploration of talks.
+  - Madlibs
+    - Structured query interface using dropdown menus and selections with fill-in-the-blank.
+    - Approach to data exploration.
+  - Coordinated filtering
+    - Filtering in one view affects all linked views enabling multi-faceted data exploration.
+    - Example: Global Plastics AI Policy Tool showing end of life outcomes by region.
+  - Configuration panel
+    - Dedicated control interface for simulation or visualization parameters with multiple input types.
+    - Example: Hypothetical Rates Simulator showing agricultural subsidy scenarios.
+  - Direct manipulation
+     - Users interact directly with visual elements by clicking, dragging, or tapping on data representations themselves.
+     - Example: FoodSim San Francisco allowing users to place buildings directly on map.
 
 ### Formalizing affordances
 The lecture introduces a formal way to think about interaction design through an action and target framework.
 
   - Action: What the user does (click, hover, drag, type, etc.).
   - Target: What the user acts upon (data point, axis, filter, button, etc.).
-  - Affordances should be discoverable without instruction.
+  - Affordances ideally should be discoverable without instruction.
   - The design should suggest its own use with immediate and clear feedback.
-  - Interactions should feel natural and intuitive.
+
+Together, this hopes to enable interactions to feel natural and intuitive.
 
 ### Group activity
 The lecture included a group activity where students imagined potential interactions for the Census visualization.
@@ -41,6 +54,8 @@ The lecture included a group activity where students imagined potential interact
   - What filters or configurations would be useful?
   - How can direct manipulation reveal insights?
 
+See https://incomegaps.com/.
+
 ### Road to the final
 These concepts prepare students for their final projects.
 
@@ -49,7 +64,7 @@ These concepts prepare students for their final projects.
   - Balancing guidance with freedom in design.
   - Designing for both exploration and explanation.
 
-### Assignment
+### Interactive Experience
 We will start our interactive experience by selecting a video game from the course manual to play over the next few lectures.
 
   - Choose from games listed in the "experience" section of the course manual.
@@ -57,17 +72,11 @@ We will start our interactive experience by selecting a video game from the cour
   - Space out gameplay over the next few lectures.
   - Be ready to answer additional questions about your game in lesson 20.
 
-### Reading
-Please watch a fantastic discussion regarding the role of the player from Extra Credits.
-
 ### Links
 Additional resources for exploring kinesthetic projection and affordances.
 
-  - Kinect Disconnect: Watch 1:30 to 3:10 for Kinesthetic Projection discussion.
-  - Affordances: How Design Teaches Us Without Words.
-
-### Lecture video
-Watch Lecture 17: The Reader as Player on Vimeo.
+  - Kinect Disconnect: Watch 1:30 to 3:10 for Kinesthetic Projection discussion. See https://www.youtube.com/watch?v=ijcezUy3ZzY&t=99.
+  - Affordances: How Design Teaches Us Without Words. See https://www.youtube.com/watch?v=QCSXEKHL6fc.
 
 ## Take Aways
 This lecture explores interaction patterns and affordances to create more intuitive interactive data visualizations.
