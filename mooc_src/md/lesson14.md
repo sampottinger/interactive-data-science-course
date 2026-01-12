@@ -1,11 +1,11 @@
-# Lesson 14
-Understanding tasks and domain contexts.
+# Lesson 14: Tasks and Domains
+Understanding tasks and domains, drawing information design to user centered design.
 
 ## Objective
 Deepen understanding of how to approach data visualization design through the lens of user tasks and domain contexts, introducing Tamara Munzner's What/Why/How framework as an optional structured approach.
 
 ## Outline
-This lecture expands on the idea of domains and tasks with examples before looking at the What / Why / How framework from Munzner. It builds on the second perspective introduced in Lecture 1, focusing on visualization as task alongside representation, narrative, and dialogue perspectives.
+This lecture expands on the idea of domains and tasks with examples before looking at the What / Why / How framework from Munzner. It provides more information on the second perspective introduced in Lecture 1, focusing on visualization as task alongside representation, narrative, and dialogue perspectives.
 
 ### Understanding domains and contexts
 Understanding the user's context is essential for effective visualization design.
@@ -23,6 +23,8 @@ Three fundamental approaches to understanding users and their needs.
   - Ask them to share their work with you through contextual inquiry.
   - Share prototypes with them for iterative feedback and testing.
 
+There are structured appraoches but these act as general principles.
+
 ### Understanding tasks and questions
 What users need to accomplish is critical for design decisions.
 
@@ -33,11 +35,13 @@ What users need to accomplish is critical for design decisions.
   - Understanding tasks tells you what to encode and with what priority.
 
 ### The What / Why / How framework
-This optional framework from Tamara Munzner provides a structured approach to visualization design through three iterative questions operating in a nested manner.
+This framework from Tamara Munzner provides a structured approach to visualization design through three iterative questions operating in a nested manner.
 
   - What (data abstraction): datasets, attributes, dataset availability.
   - Why (task abstraction): actions (analyze, search, query) and targets (trends, outliers, features).
   - How (visual encoding and interaction): encode, map, manipulate, facet, reduce.
+
+Note that this can be a useful framework but is optional in your projects for the course. 
 
 ### Data abstraction
 Understanding what we are visualizing through data structure and types.
@@ -88,6 +92,9 @@ Effective visualization design requires understanding both the user's domain con
   - Understanding tasks directly informs what to encode and with what priority.
   - The What/Why/How framework provides a nested, iterative approach through data abstraction, task abstraction, and visual encoding.
   - Apply these concepts to familiar examples through analysis of domain, context, and tasks.
+
+## Note
+This outline was expanded after the video was recorded and may include additional details.
 
 ## Citations
 
