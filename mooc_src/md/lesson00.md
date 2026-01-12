@@ -2,33 +2,25 @@
 Briefly setting the stage for the course.
 
 ## Objective
-Short pre-course primer on the online version of Interactive Data Science and Visualization with some background and direction on how best to use the online open source resources.
+Short pre-course primer regarding the online version of Interactive Data Science and Visualization, offering some background and direction on how best to use the online open source resources.
 
 ## Outline
-This online-only lecture serves as a preface to the course. It starts by looking at the purpose and background of the course before outlining its structure and offering ideas for how best to use these open source materials. This offers additional context to the online auidence before the first full lecture about how to take advantage of these resources in the Internet-based format.
-
-### Hello
-I am thankful you, your perspective, and you ideas are here.
-
-  - What is data visualization / information design?
-  - How this course thinks about creating experiences of data.
-  - This is a forward or preface to the online version of the course.
+This online-only lecture serves as a preface to the course. It starts by looking at the purpose and background of the class before outlining its structure. This provides additional context to the online auidence about how to take advantage of these resources in the Internet-based format.
 
 ### Course purpose
-Providing multiple perspectives to mix practical design and technical instruction.
+Providing multiple perspectives to foster practical design and technical skills.
 
-  - The technical and design skills for creating world-class effective static and interactive user experiences with data, both for yourself and others.
-  - Specific Python-based exercises with optional discussion of JavaScript.
-  - Concrete technical skills for implementation paired with evidence / literature-backed design skills for design.
-  - More details in the first lecture about in-depth objectives.
+  - How to create world-class effective static and interactive user experiences with data, both for yourself and others.
+  - Holistic design instruction and human lenses to critically consider pieces.
+  - Hands-on exploration of skills to bring your ideas to life.
+  - Python-based exercises with optional discussion of JavaScript.
 
 ### Course background
 Started at UC Berkeley but growing.
 
   - Originally taught as Stat 198 at UC Berkeley in 2025.
   - Some updates to materials have been made, including to make them more friendly to an online audience.
-  - Designed for those in computer and data science in mind where some programming experience is expected.
-  - Open to all disciplines with ample materials for multiple entrypoints.
+  - Designed with those studying computer and data science in mind but open to all disciplines with ample materials for multiple entrypoints.
 
 ### Course structure
 We take a 4 perspective approach with distinct but connected views into data visualization from the voices of different practitioners.
@@ -36,21 +28,24 @@ We take a 4 perspective approach with distinct but connected views into data vis
   - First lecture provides a more complete overview.
   - Traditional perception science view of information design, the discipline behind data visualization.
   - Bridge into other design disciplines, especially user-centered design.
-  - Arts, semiotics, sociological, media studies perspective on crafting narrative.
+  - Arts, semiotics, sociology, anthropology, media studies perspective on crafting and interpreting narrative.
   - Interaction perspective on creating tools which foster user-generated meaning.
 
 ### How to use the course
 Materials can serve multiple objectives.
 
-  - Take it end to end and gain a full balanced practical perspective on modern data visualization.
+  - Take it cover to cover and gain a full balanced practical perspective on modern data visualization.
   - Borrow elements for your own instruction with different modalities (video, slides, outlines, exercises) available.
   - Deep dive on a specific aspect of data visualization to complement your own prior understanding.
   - Test the waters to determine if you want to take a full course.
 
+### Happy journey
+I am thankful you, your perspective, and you ideas are here.
+
 ## Take Aways
 There are lots of ways into data visualization and it means different things in different contexts with different objectives.
 
- - We provide specific instruction, largely in Python. However, the course is also a deep exploration of design and perception science.
+ - We provide implementation exercises in Python. However, the course is also a deep exploration of design and perception science.
  - This course can be used in different ways to complement your own reading and learning with 4 sections to help you find what is most needed.
  - Start wherever feels right to you and grow, borrow liberally to add to other efforts.
 
