@@ -1,8 +1,8 @@
-# Lesson 13
-Briefly building new visual languages.
+# Lesson 13: New Languages and Complex Types
+Using what we've learend to build new visual languages.
 
 ## Objective
-Explore how to create custom visual representations through encoding mappings, introduce two patterns for managing complexity (movements and levels), examine non-tabular data formats, and provide practical guidance for geospatial visualization design.
+Explore how to create custom visual languages through novel representations and advice for more complex data types which often require some creativity in encoding.
 
 ## Outline
 This lecture moves beyond traditional chart types to explore building custom visual languages through understanding dimensions, measures, and encoding devices. It introduces movements and levels as techniques for managing visual complexity, provides a brief survey of complex data formats, and offers design strategies specifically for geospatial data visualization.
@@ -12,38 +12,51 @@ Think in terms of encodings rather than predefined chart types.
 
   - Instead of selecting from chart wizards, ask what are the dimensions and measures.
   - Map variables to encoding devices directly rather than choosing named chart types.
-  - Historical examples include Marey's train schedule, Felton's annual reports, Minard's Napoleon map, NYT election visualizations, and Fathom's Connected China.
-  - Focus on the fundamental question: how can variables be mapped to available encoding devices?
+  - Focus on the fundamental questions:
+    - How can variables be mapped to available encoding devices?
+    - Whare the most important aspects, what are the most valued encoding devices?
+
+Historical examples include Marey's train schedule, Felton's annual reports, Minard's Napoleon map, NYT election visualizations, and Fathom's Connected China.
 
 ### Two techniques for managing complexity
 Movements and levels offer approaches for handling visual sophistication.
 
-  - Movements: Reuse visual motifs or graphical representations across multiple plots to create a story between them, inspired by Jonathan Harris.
-  - Example of movements: Podcast Anthropology uses consistent visual encoding across different views to create narrative continuity.
-  - Levels: Start with very simple graphics but, as the user spends more time interacting, add in more sophistication, inspired by Ben Fry.
-  - Example of levels: Global Plastics AI Policy Tool reveals progressively more detail as users engage deeper.
-  - Use movements when showing the same data from multiple perspectives or over time, and levels when users have varying expertise or interest in detail.
+  - Movements
+    - Reuse visual motifs or graphical representations across multiple plots to create a story between them
+    - See Jonathan Harris.
+    - Example of movements: Podcast Anthropology uses consistent visual encoding across different views to create narrative continuity.
+  - Levels
+    - Start with very simple graphics but, as the user spends more time interacting, add in more sophistication.
+    - See Ben Fry.
+    - Example of levels: Global Plastics AI Policy Tool reveals progressively more detail as users engage deeper.
+
+Use movements when showing the same data from multiple perspectives or over time, and levels when users have varying expertise or interest in detail.
 
 ### In-class activity
-Dear Data inspired exercise completed during the lecture.
-
-  - Draw by hand (pen, no code) your last five years and your next five years.
-  - Emphasizes the creative and expressive side of data visualization.
-  - Inspired by the Dear Data project.
-  - Assignment 11 can be completed at home.
+Dear Data inspired exercise completed during the lecture. Draw by hand (pen, no code) your last five years and your next five years.
 
 ### Complex data formats
 Brief look at different data formats beyond CSV.
 
   - Text formats: CSV for simple tabular data, JSON for hierarchical data, YAML for human-readable configuration, and GeoJSON for geographic features.
-  - Binary formats: Protobuf for efficient serialization, Avro for row-oriented data, Arrow for columnar in-memory format, Geotiff for raster geospatial data, Geobuf for compact binary GeoJSON, GeoArrow for columnar geospatial data, COG (Cloud Optimized GeoTIFF) for efficient cloud-based raster access, and NetCDF for multidimensional scientific data.
-  - Working with GeoJSON: Standard format for geospatial vector data with JSON structure containing geometry and properties, tools like geojson.io for visualization and editing, and integration with mapping libraries like Mapbox and OpenStreetMap.
+  - Binary formats
+    - Protobuf for efficient serialization
+    - Avro for row-oriented data, Arrow for columnar format
+    - Geotiff for raster geospatial data
+    - Geobuf for compact binary GeoJSON
+    - GeoArrow for columnar geospatial data
+    - COG (Cloud Optimized GeoTIFF) for efficient cloud-based raster access
+    - NetCDF for multidimensional (often scientific) data.
+  - Working with GeoJSON:
+    - Standard format for geospatial vector data with JSON structure containing geometry and properties.
+    - Tools like geojson.io for visualization and editing.
+    - Integration with tools like Mapbox.
 
 ### Geospatial visualization challenges
 Maps present unique technical and design challenges.
 
-  - Technical challenges: Large file sizes often running into many gigabytes, multiple formats to work with, very large basemaps, and critical performance considerations for rendering and interaction.
-  - Design challenge 1: Loss of best encoding device as position (horizontal and vertical) is immediately consumed by geographic coordinates, forcing reliance on secondary encoding channels.
+  - Technical challenges: Large file sizes often running into many gigabytes, multiple formats to work with, very large basemaps, and performance considerations for rendering and interaction.
+  - Design challenge 1: Loss of best encoding device as position (horizontal and vertical). Immediately consumed by geographic coordinates, forcing reliance on secondary encoding channels.
   - Design challenge 2: Visual complexity of basemaps which include substantial visual elements like roads, labels, and terrain that can occlude or interfere with data glyphs.
 
 ### Design strategies for maps
@@ -52,16 +65,16 @@ Apply the first perspective to navigate map design.
   - Focus on preattentive features: Emphasize shape, form, and color that will pop against the background, use high contrast to create clear figure/ground separation.
   - Strategic use of encoding devices: Consider area for depicting small details that might be lost with other encodings, consider color for things where there are very large differences in values.
   - Quantitative color scales: Focus on contrast against background, create strong figure/ground relationships, importance of perceptually uniform color spaces.
-  - Keep visual channels clear: Minimize clutter and overlapping elements, strategic use of simplification and aggregation, consider different zoom levels or detail levels.
-  - Focus on user and task: Not all data may be relevant for specific use cases, filter and focus based on user needs, task-driven design reduces unnecessary complexity.
+  - Keep visual channels clear: Minimize clutter and overlapping elements.
+  - Focus on user and task: Not all data may be relevant for specific use cases, focus based on user needs, task-driven design reduces unnecessary complexity.
 
 ## Take Aways
 Custom visual languages built on encoding principles enable more expressive data visualization, while movements and levels provide systematic approaches to managing complexity.
 
   - Think in encodings (dimensions, measures, and devices) rather than chart names to create novel representations.
   - Use movements to create visual continuity across multiple views and levels to progressively disclose complexity.
-  - Be aware of various data formats beyond CSV including GeoJSON for geospatial work.
-  - When working with maps, focus on preattentive features, strategic encoding choices, clear visual channels, and task-driven design to overcome the challenges of losing position encoding and basemap complexity.
+  - Various data formats beyond CSV include GeoJSON for geospatial work.
+  - When working with maps, focus on preattentive features, clear visual channels, and task-driven design to overcome the challenges of losing position encoding and basemap complexity.
   - For networks and other complex data types, see the assigned reading on "15 Views on a Node-Link Graph."
 
 ## Citations
