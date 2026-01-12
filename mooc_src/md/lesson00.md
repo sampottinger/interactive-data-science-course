@@ -23,7 +23,7 @@ Started at UC Berkeley but growing.
   - Designed with those studying computer and data science in mind but open to all disciplines with ample materials for multiple entrypoints.
 
 ### Course structure
-We take a 4 perspective approach with distinct but connected views into data visualization from the voices of different practitioners.
+We take a 4 perspective approach across 6 sections with distinct but connected views into data visualization from the voices of different practitioners.
 
   - First lecture provides a more complete overview.
   - Traditional perception science view of information design, the discipline behind data visualization.
