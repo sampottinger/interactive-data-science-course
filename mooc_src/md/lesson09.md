@@ -1,4 +1,4 @@
-# Lesson 9
+# Lesson 9: Skills Lab 4
 Briefly sketching with code continued.
 
 ## Objective
