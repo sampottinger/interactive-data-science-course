@@ -1,206 +1,100 @@
-# Lecture 22: Accessibility
+# Lesson 22
+Briefly introducing web accessibility standards.
 
-**Stat 198: Interactive Data Science and Visualization**
-**Instructor:** A Samuel Pottinger
-**Original Instruction Date:** April 15, 2025
+## Objective
+Learn about the Web Content Accessibility Guidelines and explore common steps to improve access within interactive data visualizations.
 
-## Description
+## Outline
+This lecture introduces web accessibility standards and practices specifically tailored for interactive data visualizations, focusing on making visualizations usable by people with various disabilities. Starting with WCAG guidelines and the curb-cut effect, we explore visual accessibility considerations including color deficiency, low vision, and screen reader support before examining motor accessibility concerns like keyboard navigation and timing controls.
 
-Learn about the Web Content Accessibility Guidelines. Explore some common steps which you can take within your interactive data visualizations that can help improve access.
+### Introduction to WCAG
+Web accessibility standards provide clear guidelines for creating inclusive experiences.
 
-## Key Takeaways
+- WCAG provides comprehensive guidelines for making web content accessible to people with disabilities.
+- Standards cover WCAG 2.0, 2.1, and 2.2.
+- Accessibility improvements designed for people with disabilities often benefit everyone through the curb-cut effect.
+- Laws and programs designed to benefit vulnerable groups often end up benefiting all of society.
 
-This lecture introduces web accessibility standards and practices specifically tailored for interactive data visualizations, focusing on making visualizations usable by people with various disabilities.
+### Visual accessibility
+Visual accessibility addresses three categories of visual impairment with specific solutions for each.
 
-### The Curb-Cut Effect
+- Color deficiency: Users may have difficulty distinguishing between certain colors.
+- Low vision: Users may use magnifiers, scaled resolution, or have contrast sensitivity issues.
+- Blind or partially blind: Users may rely on screen readers and keyboard-only navigation.
 
-Accessibility improvements designed for people with disabilities often benefit everyone. This principle, known as the "curb-cut effect," demonstrates that laws and programs designed to benefit vulnerable groups often end up benefiting all of society.
+### Color deficiency solutions
+Double encoding and alternative visualizations help address color blindness.
 
-### Web Content Accessibility Guidelines (WCAG)
+- WCAG 1.4.1: Color should not be the only way elements are visually distinguished from each other.
+- Use additional visual cues like position, shape, patterns, textures, labels, or size differences.
+- Offer alternative visualizations that don't rely solely on color.
+- Be careful with semantic association in color choices like red/green for bad/good.
+- Example: Income Gaps visualization uses both color and position to distinguish gender categories.
+- Example: Global Plastics AI Policy Tool provides colorblind-friendly color scheme options.
 
-WCAG provides clear, comprehensive guidelines for making web content accessible to people with disabilities. The standards cover WCAG 2.0, 2.1, and 2.2, offering a framework for accessible design.
+### Low vision solutions
+Contrast and resize support ensure visualizations remain accessible at different scales.
 
-## Visual Accessibility
-
-For our purposes today, visual accessibility addresses three categories of visual impairment:
-
-### 1. Color Deficiency
-
-**Challenge:** Users may have difficulty distinguishing between certain colors.
-
-**Solutions:**
-- **Double Encoding (WCAG 1.4.1)**: Color should not be the only way elements are visually distinguished from each other. Use additional visual cues like:
-  - Position
-  - Shape
-  - Patterns or textures
-  - Labels
-  - Size differences
-- **Alternative Visualizations**: Offer different visualization modes that don't rely solely on color.
-- **Semantic Association**: Be careful with color choices that have cultural or semantic meanings (e.g., red/green for bad/good).
-
-**Example Applications:**
-- Income Gaps visualization uses both color and position to distinguish gender categories.
-- Global Plastics AI Policy Tool provides colorblind-friendly color scheme options.
-
-### 2. Low Vision
-
-**Challenge:** Users may use magnifiers, scaled resolutions, or have contrast sensitivity issues.
-
-**Solutions:**
-
-**Minimal Contrast (WCAG 1.4.3):**
-- Ensure colors are sufficiently different from their backgrounds to be perceived.
-- Maintain sufficient contrast between visual elements.
-- Use contrast checking tools like WebAIM's Contrast Checker.
-- Meet minimum contrast ratios (4.5:1 for normal text, 3:1 for large text).
-
-**Resize Support (WCAG 1.4.4):**
-- Applications should remain functional when zoomed to 200%.
-- Use responsive design principles.
-- Avoid fixed-size elements that break when magnified.
+- WCAG 1.4.3: Ensure colors are sufficiently different from their backgrounds to be perceived.
+- Maintain sufficient contrast between visual elements using tools like WebAIM's Contrast Checker.
+- Meet minimum contrast ratios of 4.5:1 for normal text and 3:1 for large text.
+- WCAG 1.4.4: Applications should remain functional when zoomed to 200%.
+- Use responsive design principles and avoid fixed-size elements that break when magnified.
 - Test visualizations at different zoom levels.
 
-### 3. Blind or Partially Blind
+### Screen reader support
+Providing non-visual alternatives ensures content is accessible to blind users.
 
-**Challenge:** Users may rely on screen readers and keyboard-only navigation.
-
-**Solutions:**
-
-**Supporting Screen Readers (WCAG 1.1.1):**
-- Provide non-visual alternatives to visualizations:
-  - Data tables with the underlying data
-  - Data download options
-  - Textual descriptions of key findings
-  - Alternative representations of the information
-- Use semantic HTML elements properly.
-- Add appropriate ARIA labels and roles.
+- WCAG 1.1.1: Provide non-visual alternatives to visualizations.
+- Offer data tables with the underlying data.
+- Provide data download options.
+- Include textual descriptions of key findings.
+- Use semantic HTML elements properly with appropriate ARIA labels and roles.
 - Ensure all interactive elements are accessible via keyboard.
 
-## Motor Accessibility
+### Motor accessibility
+Interactive visualizations present unique challenges for users with motor impairments.
 
-Interactive visualizations present unique challenges for users with motor impairments:
+- Fine motor control: Users may have difficulty with precise pointing or clicking.
+- Timed inputs: Some users may require additional time to complete interactions.
+- Keyboard-only navigation: Users may not have access to a pointing device.
 
-### 1. Fine Motor Control
+### Fine motor control solutions
+Making interactive targets large enough helps users with motor impairments.
 
-**Challenge:** Users may have difficulty with precise pointing or clicking.
-
-**Solutions:**
-- Make interactive targets large enough (minimum 44x44 pixels recommended).
+- Make interactive targets large enough with minimum 44x44 pixels recommended.
 - Provide adequate spacing between clickable elements.
 - Support alternative input devices.
 - Avoid interactions requiring precise hovering or dragging.
 
-### 2. Timed Inputs
+### Keyboard navigation
+Providing keyboard alternatives ensures access for users without pointing devices.
 
-**Challenge:** Some users may require additional time to complete interactions.
+- WCAG 2.1.1: Provide keyboard alternatives for all custom drawing interactions.
+- Document keyboard shortcuts clearly and ensure all functionality is accessible via keyboard.
+- Follow logical tab order with visible focus indicators.
+- WCAG 1.3.2: Use proper tab order for navigation and ensure focus is never lost or trapped.
+- Example: Climate maize loss visualization includes keyboard controls for Esc, y, c, v, and u.
+- Example: Global Plastics AI Policy Tool uses standard HTML elements with proper left-to-right tab sequence.
 
-**Solutions:**
+### Timing controls
+Adjustable timing supports users who need more time to interact.
 
-**Adjustable Timing (WCAG 2.2.1):**
-- Allow modification or pausing of timed actions.
+- WCAG 2.2.1: Allow modification or pausing of timed actions.
 - Provide options to extend time limits.
 - Avoid auto-advancing content without user control.
 - Include pause/play controls for animations.
+- Example: Sketchingpy provides pause functionality for auto-shuffling animations.
+- Example: Climate simulation tools allow users to control the pace of exploration.
 
-**Example Applications:**
-- Sketchingpy provides pause functionality for auto-shuffling animations.
-- Climate simulation tools allow users to control the pace of exploration.
+## Take Aways
+Accessibility is good for everyone, and making visualizations accessible requires attention to visual and motor considerations while following established guidelines.
 
-### 3. Keyboard-Only Navigation
-
-**Challenge:** Users may not have access to a pointing device.
-
-**Solutions:**
-
-**Non-Keyboard Controls (WCAG 2.1.1):**
-- Provide keyboard alternatives for all custom drawing interactions.
-- Document keyboard shortcuts clearly.
-- Ensure all functionality is accessible via keyboard.
-- Follow logical tab order.
-
-**Example Applications:**
-- Climate maize loss visualization includes keyboard controls:
-  - Esc: Exit visualization
-  - y: Change year
-  - c: Change coverage
-  - v: Change vs historic or counterfactual
-  - u: Change unit size
-
-**Tab Order and Focus (WCAG 1.3.2):**
-- Use proper tab order for navigation.
-- Provide visible focus indicators.
-- Ensure focus is never lost or trapped.
-- Test keyboard navigation thoroughly.
-
-**Example Applications:**
-- Global Plastics AI Policy Tool uses standard HTML elements with proper tab order.
-- Regional selection buttons follow logical left-to-right tab sequence.
-
-## Group Activity
-
-During the lecture, students explored the accessibility options at the Global Plastics AI Policy Tool (https://global-plastics-tool.org), examining:
-
-### Layout Options
-- Side-by-side vs linear layout
-- Addresses different screen sizes and user preferences
-
-### Color Options
-- Default: Emphasizes color differences between series
-- High contrast: Better for low vision users
-- Helps both colorblind users and those with low vision
-
-### Settings Persistence
-- Settings saved to local file
-- Supports consistent user experience across sessions
-- Demonstrates adaptive technology support
-
-## Case Studies
-Let's look at some examples... 
-
-### Income Gaps Visualization
-- Demonstrates double encoding (color + position)
-- Provides colorblind mode toggle
-- Supports zoom to 200%
-- Includes data download for screen reader users
-
-### Global Plastics AI Policy Tool
-- Comprehensive accessibility settings
-- Multiple layout options
-- High contrast color schemes
-- Keyboard navigation support
-- Detailed documentation of controls
-
-### Climate Maize Loss Probability Tool
-- Keyboard controls for custom visualizations
-- Clear documentation of interaction methods
-- Supports both mouse and keyboard interaction
-
-### Sketchingpy Project
-- Pause/play controls for animations
-- Adjustable timing for auto-shuffle features
-- Demonstrates accessible animation design
-
-## Activities
-To supplement our main content...
-
-### Lecture Video
-[Watch Lecture 22: Accessibility on Vimeo](https://vimeo.com/1075913765)
-
-### Assignment
-Though there is still some material left, this is a good opportunity to start on your final project to be refined over the next few lessons. See the course manual for recommended project ideas and datasets.
-
-### Reading
-Please continue our discussion by considering [motor accessibility](https://youtu.be/Ufe0i26DGiA) and [cognitive disability](https://www.youtube.com/watch?v=ObhvacfIOg0) over at Game Makers Toolkit.
-
-### Additional Resources
-
-Accessibility is a deep topic requiring ongoing learning and practice. Key resources include:
-
-- [Making Games Better for Gamers with Colourblindness & Low Vision (video from slides)](https://youtu.be/xrqdU4cZaLw)
-- [WCAG 2 Checklist](https://webaim.org/standards/wcag/checklist)
-- [Contrast Checker tool](https://webaim.org/resources/contrastchecker/)
-- [WCAG 2 Overview and official documentation](https://www.w3.org/WAI/standards-guidelines/wcag/)
-- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/): Test color contrast ratios
+- Accessibility improvements designed for people with disabilities often benefit all users through the curb-cut effect.
+- WCAG provides clear, actionable guidelines for making interactive visualizations accessible.
+- Visual accessibility requires addressing color deficiency through double encoding, low vision through contrast and resize support, and blindness through screen reader alternatives.
+- Motor accessibility requires keyboard navigation support, appropriately sized interactive targets, and adjustable timing controls.
+- Accessibility is a deep topic requiring ongoing learning and practice with resources like WebAIM and W3C.
 
 ## Citations
 

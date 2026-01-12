@@ -1,178 +1,83 @@
-# Lecture 21: Thinking Toys and Diegesis
+# Lesson 21: Media for Thought
 
-**Stat 198: Interactive Data Science and Visualization**
-**Instructor:** A Samuel Pottinger
-**Original Instruction Date:** April 14, 2025
+## Objective
+Examine how interactive visualizations can serve as media for thought, enabling users to explore data and ideas beyond prescribed narratives through explorable explanations, thinking toys, and diegetic design.
 
-## Description
+## Outline
+This lecture explores the concept of "media for thought" - interactive experiences designed as tools for exploration and discovery rather than just presentation. Drawing from key thinkers in computing, design, and interaction, we examine how to create visualizations that empower users as co-creators of meaning.
 
-A deeper look at building explorable explorations and the idea of thinking toys / diegesis. This lecture examines how interactive visualizations can become media for thought, allowing users to explore data beyond prescribed narratives and create meaning as co-authors.
+### Historical foundations
+Early pioneers established the theoretical groundwork for interactive media as tools for thinking.
 
-## Key Takeaways
+- Donald Bitzer pioneered early interactive educational computing with the PLATO system.
+- Kenneth Iverson argued in "Notation as a Tool of Thought" (1980) that notation shapes what we can think and increases mental power.
+- Mathematical notation provides a well-developed example of language as a tool of thought.
+- These early systems demonstrated how computers could be tools for thinking, not just calculation.
 
-This lecture introduces the concept of "media for thought" - interactive experiences that serve as tools for exploration and discovery rather than just presentation.
+### Bret Victor and explorable explanations
+Victor's work created a manifesto for interactive, dynamic representations.
 
-- **Media for Thought**: Interactive visualizations designed to help users think, explore, and discover insights beyond what the designer explicitly encoded.
-- **Explorable Explanations**: Interactive pieces where readers can manipulate parameters and see results in real-time, becoming active participants in understanding concepts.
-- **Thinking Toys**: Tools that afford exploration and experimentation, allowing users to test hypotheses and build intuition.
-- **Diegetic Elements**: Interface elements that exist within the world of the visualization itself, making controls feel natural and integrated rather than external.
-- **Possibility Space**: The range of actions and explorations available to users within an interactive experience.
+- Created "Explorable Explanations" (2011) and "Stop Drawing Dead Fish" (2012).
+- Active reading allows readers to ask questions, consider alternatives, and test claims.
+- Traditional reading environments display only the author's argument while the reader's thoughts remain internal and invisible.
+- Interactive media can externalize and make concrete the reader's exploration, moving from passive consumption to active investigation.
 
-## Historical Context and Key Thinkers
+### Maggie Appleton on cultural practices
+Appleton focuses on programming as cultural practice rather than computational object.
 
-The lecture traces the intellectual journey of media for thought:
+- Explores programming portals and learnable programming in "Tools for Thought as Cultural Practices, not Computational Objects."
+- Advocates for intertwining graphical representations with programming.
+- Programming systems should be open-ended and flexible.
+- Visual interfaces should not replace syntax entirely but provide the best of both worlds.
 
-### Donald Bitzer and the PLATO System
+### Nicky Case and discovery through play
+Case creates explorable explanations where users discover insights through experimentation.
 
-- Pioneered early interactive educational computing
-- Created systems that allowed dynamic exploration of concepts
-- Demonstrated how computers could be tools for thinking, not just calculation
+- "Parable of the Polygons" explores how small individual biases lead to large collective segregation.
+- "Evolution of Trust" examines game theory through interactive simulation.
+- Users discover insights through play and experimentation rather than being told conclusions.
+- Demonstrates the power of user-driven discovery in understanding complex systems.
 
-### Kenneth Iverson
+### Design principles for media for thought
+Creating effective interactive experiences requires specific approaches.
 
-- Authored "Notation as a Tool of Thought" (1980)
-- Argued that the notation we use shapes what we can think
-- Mathematical notation provides a well-developed example of language as a tool of thought
-- Demonstrated how notation can make advanced problems more tractable and increase mental power
-- "Notation as a tool of thought"
+- Assume the user is a co-creator of meaning rather than prescribing a single interpretation.
+- Create space for exploration outside your narrative, moving beyond "ghost train ride" models toward "open world" experiences.
+- Offer meaningful controls within clear possibility spaces with clear feedback loops.
+- Balance freedom with comprehensibility to support serendipitous discovery.
 
-### Bret Victor
+### Diegetic elements and possibility space
+Two key concepts for designing interactive experiences.
 
-- Created "Explorable Explanations" (2011) manifesto
-- Developed "Stop Drawing Dead Fish" talk (2012)
-- Advocates for dynamic, interactive representations
-- Active Reading: Readers should be able to ask questions, consider alternatives, question assumptions, and test the author's claims
-- Traditional reading environments (books, websites) display only the author's argument
-- The reader's line of thought remains internal, invisible, and speculative
-- Interactive media can externalize and make concrete the reader's exploration
-- Move from passive consumption to active investigation
+- Diegetic elements are interface controls that exist within the world of the visualization itself, feeling natural and integrated rather than external.
+- Possibility space defines the abstract range of what users can do within the experience, establishing boundaries of exploration.
+- The challenge is creating enough freedom for genuine exploration while maintaining coherence and preventing users from getting lost.
+- Clear user loops provide feedback that helps users understand the effects of their actions.
 
-### Maggie Appleton
+### Applications in data visualization
+Media for thought transforms traditional visualization approaches.
 
-- Focuses on "Tools for Thought as Cultural Practices, not Computational Objects"
-- Explores programming portals and learnable programming
-- Advocates for intertwining graphical representations with programming
-- Programming systems should be open-ended and flexible
-- Visual interfaces shouldn't replace syntax entirely
+- Traditional visualizations often function as arguments with designer-driven messages.
+- Media for thought gives users agency over messages derived, making them co-creators with the tool.
+- Policy exploration tools allow stakeholders to test scenarios and see projected outcomes.
+- Examples include the Global Plastics AI Policy Tool, En-ROADS Climate Simulator, Income Gaps explorer, and Parable of the Polygons.
 
-### Nicky Case
+### Group activity: exploring explorables
+Students explore https://explorabl.es to experience diverse approaches.
 
-- Creator of explorable explanations and interactive pieces
-- Parable of the Polygons: Interactive exploration of how small individual biases can lead to large collective segregation
-- Evolution of Trust: Game theory exploration through interactive simulation
-- Creates pieces where users discover insights through play and experimentation rather than being told conclusions.
+- Find an explorable explanation and identify its user loops.
+- Analyze what the user loop adds that a static equivalent would not have.
+- Understand how interactivity transforms comprehension and identify effective design patterns.
+- Consider the value-add of interaction over static presentation.
 
-## Design Principles for Media for Thought
+## Take Aways
+Interactive visualizations can become media for thought when they empower users to explore, discover, and create meaning as co-authors rather than passive consumers.
 
-1. Assume the User is a Co-Creator of Meaning
-
-- Don't prescribe a single interpretation
-- Provide tools for users to explore their own questions
-- Support multiple pathways through the material
-- Enable users to construct their own understanding
-
-2. Create Space for Exploration Outside Your Narrative
-
-- Go beyond the "ghost train ride" model (prescribed path)
-- Move toward "open world" experiences
-- Allow users to test hypotheses you didn't anticipate
-- Support serendipitous discovery
-
-3. Offer Meaningful Controls Within Clear Possibility Spaces
-
-- Define what users can manipulate
-- Ensure controls have meaningful, understandable effects
-- Provide clear feedback loops (user loops)
-- Balance freedom with comprehensibility
-
-## Diegetic Elements vs. Possibility Space
-
-**Diegetic Elements**: Interface elements that exist within the world of the visualization itself. These controls feel natural and integrated because they're part of the visualization's context. For example, in a planetary orbit simulator, a slider labeled "Orbit Speed" that appears as part of the control panel within the simulation interface, styled to match the aesthetic of the space environment.
-
-**Possibility Space**: The abstract range of what users can do within the experience. This defines the boundaries of exploration. Imagine a diagram showing a ball with an arrow indicating it can move freely within a defined rectangular boundary - representing constrained but meaningful freedom. Challenge is to create enough freedom for genuine exploration while maintaining coherence and preventing users from getting lost.
-
-## Group Activity: Exploring Explorables
-
-Students were asked to:
-
-1. Visit https://explorabl.es
-2. Find an explorable explanation
-3. Identify the user loop(s)
-4. Analyze what the user loop adds that a static equivalent would not have
-
-This activity helps students:
-
-- Experience diverse approaches to explorable explanations
-- Understand how interactivity transforms comprehension
-- Identify effective design patterns
-- Consider the value-add of interaction over static presentation
-
-## Connection to Data Visualization
-In reconnecting to traditional information design...
-
-### From Presentation to Exploration
-
-Traditional data visualizations often function as arguments in that the designer has a message to convey. Media for thought approaches visualization differently, giving users agency over messages derived (co-created with tool).
-
-### Applications in Data Visualization
-
-1. **Policy Exploration Tools**: Allow stakeholders to test different scenarios and see projected outcomes
-2. **Data Dashboards**: Enable users to filter, aggregate, and view data from multiple perspectives
-3. **Simulation Tools**: Let users adjust parameters and observe system behavior
-4. **Educational Visualizations**: Help learners build intuition through experimentation
-
-### Examples from Course
-
-Several tools shown throughout the course exemplify this approach:
-- Global Plastics AI Policy Tool
-- En-ROADS Climate Simulator
-- Income Gaps explorer
-- Parable of the Polygons
-
-## Implications for Interactive Design
-In thinking about interaction design...
-
-### User Agency
-
-Media for thought elevates users from consumers to co-authors. This requires:
-
-- Respecting user intelligence and curiosity
-- Providing genuine agency, not just the illusion of control
-- Supporting diverse exploration paths
-- Accepting that users may reach different conclusions
-
-### Mental Models
-
-Users need to understand:
-
-- What they can manipulate
-- What the controls represent
-- How changes affect outcomes
-- The boundaries of the system
-
-### Feedback Loops
-
-Effective media for thought requires tight feedback loops:
-
-- Immediate response to user actions
-- Clear cause-and-effect relationships
-- Visual or textual confirmation of changes
-- Progressive disclosure of complexity
-
-## Additional resources
-Per usual...
-
-### Lecture Video
-
-[Watch Lecture 21: Thinking Toys and Diegesis on Vimeo](https://vimeo.com/1075915883)
-
-### Reading
-
-Please watch this GDC talk on [Storytelling with Verbs](https://youtu.be/ontNUxSLhb8).
-
-### Links
-
-- [Video from slides (recommend watching 4:43 to 13:40)](https://vimeo.com/64895205)
+- Media for thought elevates users from consumers to co-authors of understanding.
+- Effective designs assume users are co-creators, create space for exploration outside prescribed narratives, and offer meaningful controls within clear possibility spaces.
+- Diegetic elements integrate controls naturally within the visualization world, while possibility space defines the boundaries of user exploration.
+- Historical foundations from Bitzer, Iverson, Victor, Appleton, and Case inform modern approaches to explorable explanations and thinking toys.
+- Applications range from policy tools to educational visualizations, all sharing the goal of user-driven discovery.
 
 ## Citations
 

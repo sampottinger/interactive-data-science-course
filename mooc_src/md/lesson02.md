@@ -1,136 +1,39 @@
-# Lecture 2: Hello Examples
+# Lesson 2
+Briefly applying the four perspectives.
 
-**Stat 198: Interactive Data Science and Visualization**
-**Instructor:** A Samuel Pottinger
-**Original Instruction Date:** January 25, 2025
+## Objective
+Apply the four perspectives framework to real-world data visualizations, demonstrating how each lens reveals different aspects of effective design.
 
-## Description
+## Outline
+This lecture revisits the four perspectives on data visualization from the first lecture and uses them to analyze demonstrative examples, the types of things students will be able to build by the end of the course.
 
-We revisit the four perspectives on data visualization from our first lecture and use them to analyze some demonstrative examples. These are the types of things you'll be able to build by the end of the course!
+### The four analytical lenses
+We examine data visualization through four complementary views.
 
-## Key Takeaways
+  - Representation: Understanding data attributes and their visual encodings.
+  - Task: Identifying user workflows and problems being solved.
+  - Message: Recognizing emotional resonance and storytelling techniques.
+  - Dialogue: Evaluating reader agency and opportunities for co-creation.
 
-This lecture applies the four perspectives framework to real-world data visualizations, demonstrating how each lens reveals different aspects of effective design.
-
-### The Four Analytical Lenses
-- **Representation**: Understanding data attributes and their visual encodings.
-- **Task**: Identifying user workflows and problems being solved.
-- **Message**: Recognizing emotional resonance and storytelling techniques.
-- **Dialogue**: Evaluating reader agency and opportunities for co-creation.
-
-### Design Insight
-Effective visualizations can be understood and improved through systematic analysis using multiple complementary perspectives.
-
-## Lecture Overview
-
-This lecture provides a hands-on exploration of the four perspectives introduced in Lecture 1, using real-world data visualization examples to demonstrate how each perspective informs design and analysis.
-
-### Today's Agenda
-- Reminder of the 4 perspectives on data visualization
-- Group activity analyzing visualizations through multiple lenses
-- Introduction to Skills Labs
-
-## The Four Perspectives Revisited
-
-The lecture reinforces the four foundational perspectives that will guide the course:
-
-### 1. Data Visualization as Representation
-**Focus:** What are the data attributes and their encodings?
-- Examines how data is mapped to visual properties
-- Identifies specific encoding devices used in visualizations
-- Evaluates effectiveness of different visual encodings
-
-### 2. Data Visualization as Task
-**Focus:** What task or user journey is being accomplished through the piece?
-- Analyzes the workflow and tasks users complete
-- Identifies the problems the visualization helps solve
-- Considers the broader context of use
-
-### 3. Data Visualization as Message
-**Focus:** Does the piece try to convey an emotion and, if so, how?
-- Explores emotional resonance and storytelling
-- Examines rhetorical strategies (logos and pathos)
-- Identifies techniques for engaging readers emotionally
-
-### 4. Data Visualization as Dialogue
-**Focus:** Does the piece invite the reader to reach their own conclusions about the data and, if so, how?
-- Evaluates reader agency and co-creation
-- Examines interactive elements that enable exploration
-- Considers how visualizations afford multiple interpretations
-
-## Group Activity: Analyzing Visualizations
-
+### Group activity
 Students break into groups of 3-4 to analyze real interactive data visualizations using the four perspectives framework.
 
-### Featured Visualizations
+  - We Feel Fine: Circular visualization showing emotional words from blog posts with color-coded emotions.
+  - En-ROADS Climate Simulator: Interactive climate policy simulator with multiple sliders and graphs showing policy impacts over time.
+  - Parable of the Polygons: Interactive game demonstrating segregation dynamics using triangles and squares.
+  - U.S. Gun Deaths: Visualization showing individual lives lost to gun violence with orange and gray arcs representing stolen and potential years.
+  - Income Gaps: Interactive exploration of income inequality allowing filtering by occupation, gender, race, and age.
+  - FoodSim: San Francisco: Geospatial simulation of food access in San Francisco through an interactive map-based visualization.
 
-**Visualization 1: We Feel Fine**
-- Circular visualization showing emotional words from blog posts
-- Data attributes: feelings (words), age, color-coded emotions
-- Artistic representation of harvested emotional statements from blogs
+### Skills Labs
+Introduction to hands-on tutorials for building interactive visualizations.
 
-**Visualization 2: En-ROADS Climate Simulator**
-- Interactive climate policy simulator
-- URL: [en-roads.climateinteractive.org](https://en-roads.climateinteractive.org/scenario.html?v=25.1.0)
-- Multiple sliders and graphs showing policy impacts over time
-- Enables exploration of different climate scenarios
+## Take Aways
+Effective visualizations can be understood and improved through systematic analysis using multiple complementary perspectives.
 
-**Visualization 3: Parable of the Polygons**
-- Interactive game demonstrating segregation dynamics
-- URL: [ncase.me/polygons](https://ncase.me/polygons/)
-- Uses triangles and squares to illustrate social dynamics
-- Combines game mechanics with data exploration
-
-**Visualization 4: U.S. Gun Deaths**
-- Visualization showing individual lives lost to gun violence
-- URL: [guns.periscopic.com](https://guns.periscopic.com/)
-- Orange arcs represent stolen years
-- Gray arcs show potential years that could have been lived
-- Emphasizes emotional impact of data
-
-**Visualization 5: Income Gaps**
-- Interactive exploration of income inequality
-- URL: [incomegaps.com](https://incomegaps.com/)
-- Displays wage gaps across different demographics
-- Allows filtering by occupation, gender, race, age
-
-**Visualization 6: FoodSim: San Francisco**
-- Geospatial simulation of food access in San Francisco
-- URL: [foodsimsf.com](https://foodsimsf.com/)
-- Interactive map-based visualization
-- Explores food security and accessibility issues
-
-### Analysis Framework
-
-For each visualization, groups consider:
-1. **Representation**: What encoding devices are used? (position, color, size, shape, etc.)
-2. **Task**: What questions can users answer? What journey do they go through?
-3. **Message**: What emotions does it evoke? How does it convey meaning?
-4. **Dialogue**: Can users explore their own questions? Does it enable co-creation?
-
-## Skills Labs Introduction
-
-The lecture concludes with an introduction to the Skills Labs, which provide hands-on tutorials for building interactive visualizations.
-
-## Activities
-As before, continue what you started in class by reviewing these additional materials and activities.
-
-### Lecture Video
-[Watch Lecture 2: Hello Examples on Vimeo](https://vimeo.com/1047985024)
-
-### Assignment
-Find a visualization from your daily life or from the news. What do you think the piece's intended message is? How does the author convey this message? Write 4-8 sentences with your answers.
-
-### Reading
-We will look at open source and licensing. This will be important to understand how to use existing open source tools and how to make new ones. Please review [Winslow 2019](https://youtu.be/KI5qBAWcQv8) followed by [Harris 2013](https://youtu.be/TF3crgcQr28).
-
-### Links
-- [We Feel Fine (recommend watching from 2:40 to 8:04)](https://www.ted.com/talks/jonathan_harris_the_web_s_secret_stories/details)
-- [Income gaps (viz 1)](https://incomegaps.com/)
-- [En-ROADS (viz 2)](https://en-roads.climateinteractive.org/scenario.html?v=25.1.0)
-- [Gun Deaths (viz 3)](https://guns.periscopic.com/)
-- [Food Sim SF (viz 4)](https://foodsimsf.com/)
-- [Parable of the Polygons (viz 5)](https://ncase.me/polygons/)
+  - Each of the four lenses reveals different aspects of effective design.
+  - Real-world examples demonstrate how representation, task, message, and dialogue work together.
+  - Practice applying these frameworks helps develop critical evaluation skills for both analyzing and creating visualizations.
 
 ## Citations
 

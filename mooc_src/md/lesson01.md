@@ -1,224 +1,132 @@
-# Lecture 1: Hello Visualization
+# Lesson 1: Hello Visualization
 
-**Stat 198: Interactive Data Science and Visualization**
-**Instructor:** A Samuel Pottinger
-**Original Instruction Date:** January 22, 2025
+## Objective
+Introduce the four foundational perspectives on data visualization and establish core concepts that guide the course structure and learning outcomes.
 
-## Description
+## Outline
+This lecture provides a broad overview of data visualization through four distinct perspectives, introducing students to the course structure and demonstrating how different approaches to visualization serve different purposes.
 
-An overview of the course, what you will learn, and what we will be doing together. We look at 4 different perspectives on data visualization in order to paint a landscape of ideas that will be revisited and expanded upon throughout the rest of the semester.
+### Course overview
+Building skills across design and technical implementation.
 
-## Key Takeaways
+  - Build data visualizations and interactive experiences to share findings with others.
+  - Tell impactful stories that engage readers emotionally through data.
+  - Invite audiences in as co-creators to build new meaning alongside you in your work and collaborate with AI/ML to design solutions and make decisions.
+  - Craft tools to explore data-heavy questions and uncover insights.
+  - Incorporate ethics and accessibility into data visualization work.
 
-This lecture introduces the four foundational perspectives on data visualization and establishes the core concepts that will guide the course.
+### Course structure
+Six sections combining conceptual understanding with technical skills.
 
-### Visual Encoding Devices
-From Cleveland and McGill's research on elementary perceptual tasks:
-- Position on common scale (most accurate).
-- Position on non-aligned scales.
-- Length, direction, angle.
-- Area.
-- Volume.
-- Curvature.
-- Shading.
-- Color saturation (least accurate).
+  - Hello: Overview of data visualization (Creative Python).
+  - Primitives: Perception and cognitive science for visualization (Sketchingpy, Matplotlib).
+  - Combination: Data visualization within human-centered design (Geospatial and graph data).
+  - Conversation: Game design (Alternative user inputs).
+  - Context: Accessibility and ethics (Adaptive technologies).
+  - Skills: Iterative process (JavaScript, D3, P5.js).
 
-### The Premise of Data Visualization
-The human visual system is good at spotting patterns. We can leverage this capability to make data more understandable and actionable.
+### Course activities
+Multiple opportunities to engage with concepts through different modalities.
 
-## Course Overview
-We start with a discussion of the broader structure of the course.
+  - Weekly exercises.
+  - Weekly reading assignments.
+  - Interactive experience.
+  - Final project with presentation.
 
-### What You Will Learn
-- **Build data visualizations and interactive experiences** to share your findings with others.
-- **Tell impactful stories** that engage your readers emotionally through data.
-- **Invite your audience in as co-creators** to build new meaning alongside you in your work and collaborate with AI/ML to design solutions and make decisions.
-- **Craft tools to explore data-heavy questions** and uncover insights.
-- **Incorporate ethics and accessibility** into your data visualization work.
+### What we won't cover
+Some limitations to the course scope.
 
-### Course Structure
-You can think of the course as being broken into a series of chapters.
+  - Deep investigation of data manipulation and cleaning.
+  - Full treatment of evaluative methods.
+  - Server-side engineering.
+  - Tableau, PowerBI, and similar tools.
 
-- **Hello**: Overview of data visualization (Creative Python).
-- **Primitives**: Perception/cognitive science for visualization (Sketchingpy, Matplotlib).
-- **Combination**: Data visualization within human-centered design (Geospatial and graph data).
-- **Conversation**: Game design (Alternative user inputs).
-- **Context**: Accessibility and ethics (Adaptive technologies).
-- **Skills**: Iterative process (JavaScript, D3, P5.js).
+### Data visualization as representation
+How can data become visible?
 
-Across the course, you will have an opportunity to engage with concepts through:
+  - Visual encoding: Mapping attributes of data to visual attributes.
+  - Elementary perceptual tasks: Position, length, direction, angle, area, volume, curvature, shading, color saturation.
+  - Understanding when some visual encodings may be better than others.
+  - A first look at visualization and accessibility.
+  - Example: Isle Royale wolf and moose populations demonstrate the premise that the human visual system is good at spotting patterns.
+  - Progression from raw data table to color-coded table to bar charts reveals relationships between variables using increasingly effective encoding devices.
+  - Offers flexibility beyond the chart wizard with principles to guide design decisions.
+  - Returns later when learning more about the human visual system to understand when to use different chart types or encoding devices.
 
-- Weekly exercises
-- Weekly reading assignments
-- Interactive experience
-- Final project with presentation
+### Data visualization as task
+How can users ask questions of data?
 
-### What We Won't Cover
-There are some limitations to our time together. If these are essential to you, it might be best to find another course:
+  - Visualizations are part of a broader user journey.
+  - Structured way to think about the user in the context of data visualization.
+  - Focus on domains, tasks, questions, and data.
+  - Evidence-based understanding of user needs through a user-centered design or anthropology lens.
+  - Example: Rachel Binx at NASA (Vortex) looking at event records sent from spacecraft.
+  - Interviewed users to understand how they worked with data previously (log files).
+  - Users had never seen their data visually before and the periodicity of events was revelatory.
+  - Boiled down into tasks the user executes and built user experiences to support those tasks.
+  - Example: Jigsaw with multiple coordinated views supporting investigative analysis through interactive visualization.
+  - Offers structured evidence-based understanding of the user to support them in their tasks.
+  - Orients around domains, tasks, questions, and data.
+  - Fits within a broader modern user experience design dialogue building on Tamara Munzner's What/Why/How framework.
+  - Returns later in discussion of how to use traditional design concepts employed in other forms of product and UX design as part of data visualization and interactive data experiences.
 
-- Deep investigation of data manipulation/cleaning
-- Full treatment of evaluative methods
-- Server-side engineering
-- Tableau, PowerBI, and similar tools
+### Data visualization as message
+How can data tell stories?
 
-## Four Perspectives on Data Visualization
-Thematically, our time together will be broken into 4 perspectives. These represent different ways of thinking about data visualization and guide design in different ways.
+  - Forms given to data enable authors to convey a message to a reader.
+  - How does the reader feel when going through a visualization?
+  - Where is efficiency helpful but where does it conflict with the message of the piece?
+  - How might we defy reader expectations or have them confront prior held beliefs?
+  - Example: U.S. Gun Killings (Periscopic) uses orange arcs to show stolen years (lives cut short) and gray arcs to show the years people could have lived.
+  - Focuses on individual lives lost and potential futures.
+  - Not the most efficient according to the cognitive science perspective and encoding devices but making it less efficient makes it more powerful by giving weight to the deaths.
+  - Example: A Treaty to End Plastic Pollution (UC Berkeley/UCSB) combines logos (rational argument) with pathos (emotional appeal).
+  - Example: You Draw It (New York Times) about family income and college attendance.
+  - Reader draws their expectation on the chart before seeing the data.
+  - Challenges assumptions and creates engagement making readers confront their prior beliefs.
+  - Less efficient than a traditional approach but creates emotional investment in result.
+  - Offers a way to convey messages with logos and pathos.
+  - How to invoke emotional response and challenge reader assumptions.
+  - How to understand the process by which messages and meaning are interpreted.
+  - Returns later with techniques we can borrow from art and design to guide and evoke an emotional response.
 
-### 1. Data Visualization as Representation
+### Data visualization as dialogue
+How can data help us think?
 
-**Core Question:** How can data become visible?
+  - Data as humane dynamic media.
+  - The designer creates media for thought.
+  - Elevating the reader to an author of tools and co-creator of meaning.
+  - Creating tools which afford users an opportunity to find their own narratives instead of prescribing one.
+  - Ghost train ride vs open world metaphors (It's a Small World vs Star Wars: Galaxy's Edge).
+  - Example: Global Plastics AI Policy Tool as a layered experience where users can simulate different policies.
+  - Shows multiple outcome metrics (Mismanaged Waste, Incinerated Waste, Landfill Waste, Gross GHG).
+  - Users can adjust policy levers and see projected impacts.
+  - Invitation to build outside the original designer's intention.
+  - Supports exploration and hypothesis testing.
+  - Example: En-ROADS Climate Simulator with interactive sliders for various climate and energy policies.
+  - Real-time feedback on impact and users can test their own policy scenarios supporting collaborative decision-making.
+  - Offers co-creation and user agency often leaning on game design concepts.
+  - How to teach with/without tutorializing.
+  - How to create spaces to interrogate assumptions and build media to be repurposed.
+  - How to design experiences where the user is co-author.
+  - Returns later when employing interaction and game design to create digital spaces where users can explore data more freely and go beyond your own narrative.
 
-**Key Concepts:**
-- **Visual encoding**: Mapping attributes of data to visual attributes.
-- **Elementary perceptual tasks**: Position, length, direction, angle, area, volume, curvature, shading, color saturation.
-- Understanding when some visual encodings may be better than others.
-- A first look at visualization and accessibility.
+### Key examples discussed
+Historical and contemporary examples demonstrating the four perspectives.
 
-**Example: Isle Royale Wolf and Moose Populations**
-- A look at populations of wolf and moose and their relationship.
-- Demonstrated the premise that the human visual system is good at spotting patterns.
-- Showed progression from raw data table → color-coded table → bar charts → revealing relationships between variables. Each of these take advantage of increasingly useful "encoding devices" for this example dataset.
+  - John Snow's Cholera Map (1854): Classic example of data visualization as representation that revealed the Broad Street pump as the source.
+  - Isle Royale Wolf and Moose Populations: Demonstrated the power of visual encoding showing relationship between predator and prey populations over time with 1994 seeing the most moose (1800).
+  - We Feel Fine: Harvested emotional statements from blogs creating an artistic, interactive exploration of human emotion combining data visualization with emotional storytelling.
 
-**What This Perspective Offers:**
-- Flexibility beyond the "chart wizard" but principles to guide us.
-- Basic building blocks for how humans process visual information.
-- Freedom to use that understanding in many different ways.
+## Take Aways
+Data visualization encompasses multiple perspectives that serve different purposes and audiences.
 
-**Where This Comes Back:** Learning more about the human visual system to understand when to use different chart types or encoding devices.
-
-### 2. Data Visualization as Task
-
-**Core Question:** How can users ask questions of data?
-
-**Key Concepts:**
-- Visualizations are part of a broader user journey.
-- Structured way to think about the user in the context of data visualization.
-- Focus on domains, tasks, questions, and data.
-- Evidence-based understanding of user needs more through a user-centered design or anthropology lens.
-
-**Example: Rachel Binx at NASA (Vortex)**
-- Looking at "event records" sent from spacecraft to NASA.
-- Interviewed users to figure out how they worked with data previously (log files).
-- Users had never seen their data visually before.
-- Periodicity of events was revelatory.
-- Boiled down into "tasks" the user executes and built user experiences to support those tasks.
-
-**Example Visualization Tool: Jigsaw**
-- Multiple coordinated views (List View, Graph View, Scatter Plot View, Text View).
-- Supporting investigative analysis through interactive visualization.
-- Follows a user through a series of questions or tasks, not just efficiency of conveying info.
-
-**What This Perspective Offers:**
-- Structured evidence-based understanding of the user to support them in their tasks.
-- Orients around domains, tasks, questions, and data.
-- Fits within a broader modern user experience design dialogue.
-- Builds on Tamara Munzner's "What/Why/How" framework.
-
-**Where This Comes Back:** Discussion of how to use more traditional design concepts including those employed in other forms of product and UX design as part of data visualization and interactive data experiences.
-
-### 3. Data Visualization as Message
-
-**Core Question:** How can data tell stories?
-
-**Key Concepts:**
-- Forms given to data enable authors to convey a message to a reader.
-- How does the reader feel when going through a visualization?
-- Where is efficiency helpful but where does it conflict with the message of the piece?
-- How might we defy reader expectations or have them confront prior held beliefs?
-
-**Example: U.S. Gun Killings (Periscopic)**
-- Uses orange arcs to show stolen years (lives cut short).
-- Gray arcs show the years people could have lived.
-- Focuses on individual lives lost and potential futures.
-- Not the most "efficient" according to the cognitive science perspective and encoding devices but making it less "efficient" makes it more powerful by giving weight to the deaths.
-
-**Example: A Treaty to End Plastic Pollution (UC Berkeley/UCSB)**
-- Similar to gun deaths visualization, not the most efficient according to encoding devices.
-- Combines logos (rational argument) with pathos (emotional appeal).
-
-**Example: "You Draw It" (New York Times)**
-- Interactive piece about family income and college attendance.
-- Reader draws their expectation on the chart before seeing the data.
-- Challenges assumptions and creates engagement.
-- Makes readers confront their prior beliefs.
-- Less "efficient" than a more traditional approach but creates an emotional investment in result.
-
-**What This Perspective Offers:**
-- A way to convey messages with logos and pathos.
-- How to invoke emotional response.
-- How to challenge reader assumptions.
-- How to understand the process by which messages and meaning are interpreted.
-
-**Where This Comes Back:** Techniques we can borrow from art and design to guide and evoke an emotional response.
-
-### 4. Data Visualization as Dialogue
-
-**Core Question:** How can data help us think?
-
-**Key Concepts:**
-- Data as humane dynamic media.
-- The designer creates media for thought.
-- Elevating the reader to an author of tools and co-creator of meaning.
-- Creating tools which afford users an opporutnity to find their own narratives instead of prescribing one.
-- "Ghost train ride" vs "open world" metaphors (It's a Small World vs Star Wars: Galaxy's Edge).
-
-**Example: Global Plastics AI Policy Tool**
-- Layered experience where users can simulate different policies.
-- Shows multiple outcome metrics (Mismanaged Waste, Incinerated Waste, Landfill Waste, Gross GHG).
-- Users can adjust policy levers and see projected impacts.
-- Invitation to build outside the original designer's intention.
-- Supports exploration and hypothesis testing.
-
-**Example: En-ROADS Climate Simulator**
-- Interactive sliders for various climate and energy policies.
-- Real-time feedback on impact.
-- Users can test their own policy scenarios.
-- Supports collaborative decision-making.
-
-**What This Perspective Offers:**
-- Co-creation and user agency.
-- Often leaning on game design concepts.
-- How to teach with/without tutorializing.
-- How to create spaces to interrogate assumptions.
-- How to build media to be repurposed.
-- How to design experiences where the user is co-author.
-
-**Where This Comes Back:** How to employ interaction and game design to create digital spaces where users can explore data more freely and go beyond your own narrative.
-
-## Key Examples and Case Studies
-
-### Historical Example: John Snow's Cholera Map (1854)
-- Classic example of data visualization as representation
-- Mapped cholera deaths in London
-- Revealed the Broad Street pump as the source
-- Data → Graphic transformation that saved lives
-
-### Isle Royale Wolf and Moose Populations
-- Demonstrated the power of visual encoding
-- Showed relationship between predator and prey populations over time
-- Year 1994 saw the most moose (1800)
-- Inverse relationship visible in visualization
-
-### We Feel Fine
-- Harvested emotional statements from blogs
-- Created an artistic, interactive exploration of human emotion
-- Combined data visualization with emotional storytelling
-
-## Activities
-Like many lectures, we will ahve an assignment and reading. In addition to this outline, you can continue your engagement through videos.
-
-### Lecture Video
-- [Watch Lecture 1: Hello Visualization on Vimeo](https://vimeo.com/1047306328)
-
-### Assignment
-For getting warmed up, please write about 4 sentences reflecting on what you are hoping to gain from the course. If you feel comfortable and want to engage with other learners, post your response online!
-
-### Reading
-We will learn more about how tools change the way we think. Please watch the very excellent [Media for Thinking the Unthinkable lecture](https://vimeo.com/67076984) delivered by Bret Victor at the MIT Media Lab. A question for you to consider is what kinds of representations of thought do you use every day?
-
-### Links
-- [Video for the section on data visualization as task](https://youtu.be/2CMw4i9DiaM?t=112&feature=shared)
-- [Sam's teaching homepage](https://interactivedatascience.courses)
+  - Four perspectives (representation, task, message, dialogue) offer different lenses for understanding and creating visualizations.
+  - Visual encoding builds on how the human visual system processes information with some encodings being more effective than others.
+  - User-centered design approaches help create visualizations that support specific tasks and domains.
+  - Message-focused visualizations can combine rational argument with emotional appeal to create impact.
+  - Interactive tools can elevate users to co-creators allowing them to explore data and find their own meaning.
+  - The course will develop both technical skills (primarily Python with some JavaScript) and design understanding grounded in evidence and literature.
 
 ## Citations
 

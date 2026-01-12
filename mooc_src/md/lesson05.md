@@ -1,259 +1,59 @@
-# Lecture 5: Visualization as Design
-
-**Stat 198: Interactive Data Science and Visualization**
-**Instructor:** A Samuel Pottinger
-**Original Instruction Date:** February 5, 2025
-
-## Description
-
-A look at some historic figures in data visualization along with a discussion of Tufte. Also, a look at some demonstrative examples to refine our language for discussing information design. All of this sets the stage for glyphs and our transition into cognitive and perception science.
-
-## Key Takeaways
-
-This lecture traces the historical evolution of data visualization and introduces foundational design principles while acknowledging their limitations.
-
-1. **Historical Evolution**: Data visualization has evolved over centuries, with each pioneer contributing unique perspectives.
-2. **Design Principles**: Tufte provided actionable guidelines that remain influential today.
-3. **Critical Evaluation**: Understanding both the value and limitations of design principles.
-4. **Empirical Foundation**: Modern visualization must be grounded in scientific understanding of human perception.
-5. **Context Matters**: Who is remembered in history reflects systemic biases that we must acknowledge.
-
-## Overview of Section 2: Primitives
-We already got through the first section of the class! The course's second section introduces foundational concepts for understanding data visualization through multiple lenses:
-
-- **Visualization as Design**: Investigating early design ideas that continue to shape data visualization and understanding how we arrived at current practices.
-- **Visualization as Science 1**: Foundational cognitive and perception science principles and studies.
-- **Visualization as Science 2**: Application of cognitive science and perception principles to data visualization.
-- **Skills Labs**: Exploring the primitives available for drawing and how to draw with data.
-- **Formalizing Glyphs**: Cleveland and McGill tie it all together with actionable visualization recommendations for using primitives.
-
-## Today's Topics
-
-1. **Pioneers of Data Visualization**: Important historical figures and pieces.
-2. **Ideas of Tufte**: Overview of key concepts from Edward Tufte.
-3. **Problematic Graphs**: Analysis of graphics with potential issues.
-4. **After Tufte**: Evolution beyond Tufte's work and the foundation for the 4 perspectives.
-
-## Pioneers of Data Visualization
-This lecture provides a rapid overview of data visualization history - just one person per century. It's important to acknowledge who is remembered and who is left out of traditional historical narratives. The course will revisit history more thoroughly later.
-
-### Michael Florent van Langren (1600s)
-
-**Contribution**: Created the earliest known "statistical graphic" in 1644
-
-**Work**: "Grados de la Longitud" - visualized different estimates of the distance from Toledo to Rome, representing uncertainty and variation in measurements. Though not as well-known as later pioneers, this work established the foundation for graphical representation of statistical data.
-
-**Legacy**: Van Langren established visual representation for conveying numeric information.
-
-### William Playfair (1700s)
-
-**Contribution**: Often called the parent of modern data visualization
-
-**Key Innovations**:
-- Created common patterns used today, including the pie chart
-- Popularized existing forms like the bar chart and area chart
-- Demonstrated time series visualization with exports and imports
-
-**Notable Work**: 1786 visualization showing "Exports and Imports to and from Denmark & Norway from 1700 to 1780", featuring dual area charts showing balance of trade.
-
-**Legacy**: Playfair's innovations fundamentally shaped modern data visualization by creating and popularizing many chart types still in use today.
-
-### Florence Nightingale (1800s)
-
-**Contribution**: Pioneered graphical storytelling and data visualization for advocacy
-
-**Notable Work**: "Diagram of the Causes of Mortality in the Army in the East" (1858)
-- Rose diagram (coxcomb chart) showing causes of death during the Crimean War
-- Demonstrated that epidemic diseases caused more deaths than battlefield injuries
-- Effectively used data visualization for change and argument
-- Influenced public health policy through compelling visual evidence
-
-**Legacy**: Nightingale pioneered the use of data visualization as a tool for advocacy and policy change, demonstrating how visual evidence could drive meaningful social reform.
-
-### W.E.B. Du Bois (1900s)
-
-**Contribution**: Changed how we think about data visualization as message
-
-**Key Impact**:
-- Used data visualization in sociological settings to advocate for social justice
-- Created innovative and artistic visualizations for the 1900 Paris Exposition
-- Design ideas continue to influence modern data visualization
-- Demonstrated the power of visualization to communicate about inequality and social issues
-
-**Notable Work**: "Proportion of Freemen and Slaves Among American Negroes" - use of area and color to convey stark inequalities.
-
-**Legacy**: Influential in establishing data visualization as a tool for social commentary.
-
-### Donald Bitzer (Today)
-
-**Contribution**: Pioneered ideas around interactive media and explorable explanations
-
-**Key Innovation**: PLATO system in the 1960s
-- Early computer-based education system
-- Interactive simulations and visualizations
-- 1960s precursor to work by Bret Victor
-- Demonstrated potential of computational media for exploration and learning
-
-**Legacy**: Established foundations for modern interactive data visualization and explorable explanations decades before they became mainstream.
-
-## Edward Tufte and His Ideas
-
-### Introduction to Tufte
-
-Edward Tufte has been enormously influential in data visualization:
-
-- Brought many people into information design through touring workshops and popular books.
-- His perspective fundamentally shapes data visualization today.
-- Many people now disagree with some of his ideas, but his influence is undeniable.
-- His ideas should be understood as guidelines many follow as standard advice, not absolute rules.
-- His concepts are readily applicable even with basic tools like Google Sheets.
-
-### Tufte's Key Concepts
-
-#### 1. Lie Factor
-
-**Definition**:
-```
-Lie Factor = (size of effect shown in graphic) / (size of effect in data)
-```
-
-**Principle**: The visual representation should accurately reflect the magnitude of change in the underlying data. A lie factor significantly different from 1.0 indicates visual distortion.
-
-**Example**: The famous fuel economy standards graphic from the New York Times (1978).
-
-- Visual representation exaggerated the change in fuel standards.
-- Area representation made small numerical differences appear dramatic.
-- The length of the line representing 18 mpg (1978) was 0.6 inches.
-- The length representing 27.5 mpg (1985) was 5.3 inches.
-- This created a misleading visual impression of the rate of change.
-
-#### 2. Chartjunk
-
-**Definition**: Visual elements in a chart that don't convey data or assist comprehension.
-
-**Examples**:
-
-- Decorative icons or illustrations.
-- Unnecessary 3D effects.
-- Excessive grid lines.
-- Ornamental borders or patterns.
-- Pictorial representations that distort data.
-
-**Principle**: Remove non-essential visual elements to let the data speak clearly. Each element should serve a purpose in conveying information.
-
-#### 3. Data-Ink Ratio
-
-**Definition**: The proportion of a graphic's ink devoted to displaying data.
-
-**Formula Concept**:
-
-```
-Data-Ink Ratio = (Data-Ink) / (Total Ink Used)
-```
-
-**Principle**: Maximize the data-ink ratio by removing non-data ink where possible.
-
-**Application**:
-
-- Remove unnecessary grid lines.
-- Eliminate redundant labels.
-- Simplify axes where appropriate.
-- Use direct labeling instead of legends when possible.
-- Present data in its simplest effective form.
-
-**Example**: Progression from a bar chart with full grid and axes to a minimalist table showing just the essential numbers.
-
-#### 4. Data Density
-
-**Definition**: The amount of data displayed per unit area of the graphic.
-
-**Principle**: Increase data density within reason to show more information in less space.
-
-**Benefits**:
-
-- Allows comparison across more data points.
-- Reveals patterns that might be hidden in sparse displays.
-- Makes efficient use of reader's attention.
-
-**Example**: Adding gas prices to the fuel standard chart.
-
-- Shows relationship between two related variables.
-- Uses dual y-axes (though this technique itself is debated).
-- Provides richer context through additional data layer.
-
-**Historical Example**: Sparklines and small multiples showing Euro foreign exchange rates across multiple currencies and time periods.
-
-## Problematic Graphics: Group Activity
-
-Examine "darts" (problematic visualizations) identified by Michael Friendly. These examples motivated Tufte's work on principles for effective data visualization.
-
-### Purpose
-
-- Identify common visualization mistakes
-- Understand why certain design choices create confusion
-- Develop critical eye for evaluating visualizations
-- Apply Tufte's principles to real-world examples
-
-### Activity Structure
-
-- Groups examined different sections of problematic visualizations
-- Each group selected a favorite example to share
-- Class discussion of what makes these visualizations problematic
-- Connection to Tufte's principles (lie factor, chartjunk, data-ink ratio, data density)
-
-## The Legacy of Tufte
-
-Tufte has been essential and wildly influential. However, there have been some efforts to reconsider his ideas has visualization has evolved.
-
-### Critiques of Tufte
-
-**Matthew Dunnigan** (Principal User Research Manager, Microsoft):
-
-> "Specifically, it seems like he pulls some of his design principles out [of] thin air, and the design improvements they generate are not scientifically validated..."
-
-### Key Limitations
-
-1. **Lack of Empirical Validation**: Many of Tufte's principles were based on aesthetic judgment rather than controlled studies.
-2. **Overemphasis on Minimalism**: Removing all "non-data ink" may sometimes reduce comprehension.
-3. **Context Matters**: Different audiences and purposes may require different approaches.
-4. **Message vs. Efficiency**: Sometimes "inefficient" designs create stronger emotional impact.
-
-### Moving Forward: Bringing in Empirical Approaches
-
-This lecture brings us to the doorstep of modern data visualization by:
-
-1. **Establishing Historical Context**: Understanding where design principles originated.
-2. **Introducing Design Vocabulary**: Lie factor, chartjunk, data-ink ratio, data density.
-3. **Recognizing Limitations**: Acknowledging that aesthetic principles alone are insufficient.
-
-**The Next Step**: Crossing the threshold into scientific understanding
-
-- Cognitive and perception science principles.
-- Empirical studies of encoding devices.
-- Channel effectiveness research.
-- Evidence-based design recommendations.
-
-The following lectures will explore how scientific methods validate, refine, or challenge traditional design wisdom, culminating in one of the most important ideas: **channel effectiveness**.
-
-## Activities
-As before, continue what you started in class by reviewing these additional materials and activities.
-
-### Lecture Video
-[Watch Lecture 5: Visualization as Design on Vimeo](https://vimeo.com/1053582417)
-
-### Assignment
-Find another visualization but limit yourself to agencies and dedicated graphics teams within newsrooms. Examples: Periscopic, Stamen, Fathom, Accurat, or NYT Graphics. Please answer the following:
-- Which encoding devices are used within this piece?
-- What would Tufte say about the lie-factor, data-ink ratio, and data density?
-
-Please write 4-8 sentences.
-
-### Reading
-Please start to explore the core essential concept of pre-attentive attributes through the reading at Kesavan (2018).
-
-### Links
-- [Darts (data visualization examples)](https://www.datavis.ca/gallery/lie-factor.php)
-- [The Greatest Ever Infographic (shown in class)](https://youtu.be/3T7jMcstxY0?feature=shared)
+# Lesson 5: Design Principles
+Briefly exploring historical context and foundations.
+
+## Objective
+Trace the historical evolution of data visualization through pioneering figures and introduce foundational design principles while examining their value and limitations.
+
+## Outline
+This lecture examines key historical figures in data visualization and introduces Edward Tufte's influential design principles. We explore how these early ideas shaped modern practice while recognizing the need for empirical validation, setting the stage for cognitive and perception science approaches.
+
+### Historical pioneers
+A rapid overview covering one influential figure per century to understand how we arrived at modern data visualization.
+
+- Michael Florent van Langren (1600s): Earliest known statistical graphic showing uncertainty in measurements
+- William Playfair (1700s): Created and popularized fundamental chart types including pie charts and area charts
+- Florence Nightingale (1800s): Pioneered data visualization for advocacy and policy change
+- W.E.B. Du Bois (1900s): Transformed data visualization into a tool for social justice messaging
+- Donald Bitzer (Today): Early innovator in interactive media and explorable explanations through PLATO system
+- Important to acknowledge who is remembered and who is left out of traditional historical narratives
+
+### Tufte's design principles
+Edward Tufte brought many people into information design through touring workshops and popular books, fundamentally shaping modern data visualization.
+
+- Lie Factor: Visual representation should accurately reflect magnitude of change in data
+- Chartjunk: Remove visual elements that don't convey data or assist comprehension
+- Data-Ink Ratio: Maximize proportion of graphic's ink devoted to displaying data
+- Data Density: Increase amount of data displayed per unit area within reason
+- These are guidelines many follow as standard advice, not absolute rules
+- His ideas are readily applicable even with basic tools like Google Sheets
+
+### Problematic visualizations
+Analysis of "darts" or problematic graphics identified by Michael Friendly that motivated Tufte's work.
+
+- Common visualization mistakes and design choices that create confusion
+- Application of Tufte's principles to real-world examples
+- Development of critical eye for evaluating visualizations
+- Understanding why certain design choices fail
+
+### Moving beyond Tufte
+Recognition that aesthetic principles alone are insufficient for effective data visualization.
+
+- Many design principles were based on aesthetic judgment rather than controlled studies
+- Some principles lack empirical validation
+- Context, audience, and purpose require different approaches
+- Sometimes "inefficient" designs create stronger emotional impact
+- Need for scientific understanding of cognitive and perception principles
+- Next lectures will explore empirical approaches to encoding devices and channel effectiveness
+
+## Take Aways
+Historical context provides foundation for understanding design principles, but effective visualization requires empirical validation.
+
+- Data visualization has evolved over centuries with each pioneer contributing unique perspectives
+- Tufte provided actionable guidelines that remain influential today
+- Design principles should be understood as guidelines, not absolute rules
+- Understanding both value and limitations of traditional design wisdom is essential
+- Modern visualization must be grounded in scientific understanding of human perception
+- Who is remembered in history reflects systemic biases we must acknowledge
 
 ## Citations
 

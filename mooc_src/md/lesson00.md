@@ -2,10 +2,17 @@
 Briefly setting the stage for the course.
 
 ## Objective
-Provide a short primer on the online version of Interactive Data Science and Visualization with some background and direction on how best to use the online open source resources.
+Short pre-course primer on the online version of Interactive Data Science and Visualization with some background and direction on how best to use the online open source resources.
 
 ## Outline
-This online-only lecture starts by looking at the purpose and background of the course before outlining its structure and offering ideas for how best to use these open source materials.
+This online-only lecture serves as a preface to the course. It starts by looking at the purpose and background of the course before outlining its structure and offering ideas for how best to use these open source materials. This offers additional context to the online auidence before the first full lecture about how to take advantage of these resources in the Internet-based format.
+
+### Hello
+I am thankful you, your perspective, and you ideas are here.
+
+  - What is data visualization / information design?
+  - How this course thinks about creating experiences of data.
+  - This is a forward or preface to the online version of the course.
 
 ### Course purpose
 Providing multiple perspectives to mix practical design and technical instruction.
@@ -13,6 +20,7 @@ Providing multiple perspectives to mix practical design and technical instructio
   - The technical and design skills for creating world-class effective static and interactive user experiences with data, both for yourself and others.
   - Specific Python-based exercises with optional discussion of JavaScript.
   - Concrete technical skills for implementation paired with evidence / literature-backed design skills for design.
+  - More details in the first lecture about in-depth objectives.
 
 ### Course background
 Started at UC Berkeley but growing.
@@ -25,6 +33,7 @@ Started at UC Berkeley but growing.
 ### Course structure
 We take a 4 perspective approach with distinct but connected views into data visualization from the voices of different practitioners.
 
+  - First lecture provides a more complete overview.
   - Traditional perception science view of information design, the discipline behind data visualization.
   - Bridge into other design disciplines, especially user-centered design.
   - Arts, semiotics, sociological, media studies perspective on crafting narrative.

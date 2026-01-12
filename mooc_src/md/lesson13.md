@@ -1,192 +1,68 @@
-# Lecture 13: Building New Languages
+# Lesson 13
+Briefly building new visual languages.
 
-**Stat 198: Interactive Data Science and Visualization**
-**Instructor:** A Samuel Pottinger
-**Original Instruction Date:** March 10, 2025
+## Objective
+Explore how to create custom visual representations through encoding mappings, introduce two patterns for managing complexity (movements and levels), examine non-tabular data formats, and provide practical guidance for geospatial visualization design.
 
-## Description
+## Outline
+This lecture moves beyond traditional chart types to explore building custom visual languages through understanding dimensions, measures, and encoding devices. It introduces movements and levels as techniques for managing visual complexity, provides a brief survey of complex data formats, and offers design strategies specifically for geospatial data visualization.
 
-Exploration of how to make new visual representations through the use of visual encoding mappings as well as two new patterns for fitting in more variables: movements and levels. Finally, a look at data formats and a discussion of advice for geospatial visualization.
+### Charts without names
+Think in terms of encodings rather than predefined chart types.
 
-## Key Takeaways
+  - Instead of selecting from chart wizards, ask what are the dimensions and measures.
+  - Map variables to encoding devices directly rather than choosing named chart types.
+  - Historical examples include Marey's train schedule, Felton's annual reports, Minard's Napoleon map, NYT election visualizations, and Fathom's Connected China.
+  - Focus on the fundamental question: how can variables be mapped to available encoding devices?
 
-This lecture focuses on building custom visual languages beyond traditional chart types, introduces techniques for managing complexity in visualizations, and provides practical guidance for working with geospatial data.
+### Two techniques for managing complexity
+Movements and levels offer approaches for handling visual sophistication.
 
-### Charts Without Names
+  - Movements: Reuse visual motifs or graphical representations across multiple plots to create a story between them, inspired by Jonathan Harris.
+  - Example of movements: Podcast Anthropology uses consistent visual encoding across different views to create narrative continuity.
+  - Levels: Start with very simple graphics but, as the user spends more time interacting, add in more sophistication, inspired by Ben Fry.
+  - Example of levels: Global Plastics AI Policy Tool reveals progressively more detail as users engage deeper.
+  - Use movements when showing the same data from multiple perspectives or over time, and levels when users have varying expertise or interest in detail.
 
-Instead of relying on predefined chart types (bar chart, scatter plot, etc.), think in terms of:
-- **Dimensions and Measures**: What are the categorical vs. quantitative variables?
-- **Encoding Devices**: How can these be mapped to visual attributes?
-- **Visual Encoding Flexibility**: Move beyond the "chart wizard" to create custom representations.
+### In-class activity
+Dear Data inspired exercise completed during the lecture.
 
-### Two New Techniques for Complexity
+  - Draw by hand (pen, no code) your last five years and your next five years.
+  - Emphasizes the creative and expressive side of data visualization.
+  - Inspired by the Dear Data project.
+  - Assignment 11 can be completed at home.
 
-**Movements** (inspired by Jonathan Harris):
-- Reuse visual motifs or graphical representations across multiple plots to create a story between them
-- Creates visual continuity and narrative flow across different views
-- Example: Podcast Anthropology visualization
+### Complex data formats
+Brief look at different data formats beyond CSV.
 
-**Levels** (inspired by Ben Fry):
-- Start with very simple graphics
-- As the user spends more time interacting, add in more sophistication
-- Progressive disclosure of complexity
-- Example: Global Plastics AI Policy Tool with layered detail levels
+  - Text formats: CSV for simple tabular data, JSON for hierarchical data, YAML for human-readable configuration, and GeoJSON for geographic features.
+  - Binary formats: Protobuf for efficient serialization, Avro for row-oriented data, Arrow for columnar in-memory format, Geotiff for raster geospatial data, Geobuf for compact binary GeoJSON, GeoArrow for columnar geospatial data, COG (Cloud Optimized GeoTIFF) for efficient cloud-based raster access, and NetCDF for multidimensional scientific data.
+  - Working with GeoJSON: Standard format for geospatial vector data with JSON structure containing geometry and properties, tools like geojson.io for visualization and editing, and integration with mapping libraries like Mapbox and OpenStreetMap.
 
-## Novel Representations
-Do all charts have a name? What about structures we've never seen before?
+### Geospatial visualization challenges
+Maps present unique technical and design challenges.
 
-### Moving Beyond Chart Types
-- Traditional approach: selecting from predefined chart types (bar, line, pie, etc.)
-- New approach: thinking in terms of encodings and mappings
-- Focus on dimensions, measures, and how to map them to visual channels
+  - Technical challenges: Large file sizes often running into many gigabytes, multiple formats to work with, very large basemaps, and critical performance considerations for rendering and interaction.
+  - Design challenge 1: Loss of best encoding device as position (horizontal and vertical) is immediately consumed by geographic coordinates, forcing reliance on secondary encoding channels.
+  - Design challenge 2: Visual complexity of basemaps which include substantial visual elements like roads, labels, and terrain that can occlude or interfere with data glyphs.
 
-### Historical Examples
-- **Marey's Train Schedule**: Complex time-space visualization showing train movements
-- **Nicholas Felton's Annual Reports**: Creative personal data visualizations combining multiple encoding strategies
-- **Minard's Napoleon Map**: Classic example of multivariate flow map
-- **NYT Election Visualization**: Small multiples showing voter change across geography
-- **Fathom's Connected China**: Network visualization of social and political connections
+### Design strategies for maps
+Apply the first perspective to navigate map design.
 
-### Key Questions to Ask
-- What are the dimensions and measures in the data?
-- What encoding devices are available?
-- How can variables be mapped to these devices effectively?
+  - Focus on preattentive features: Emphasize shape, form, and color that will pop against the background, use high contrast to create clear figure/ground separation.
+  - Strategic use of encoding devices: Consider area for depicting small details that might be lost with other encodings, consider color for things where there are very large differences in values.
+  - Quantitative color scales: Focus on contrast against background, create strong figure/ground relationships, importance of perceptually uniform color spaces.
+  - Keep visual channels clear: Minimize clutter and overlapping elements, strategic use of simplification and aggregation, consider different zoom levels or detail levels.
+  - Focus on user and task: Not all data may be relevant for specific use cases, filter and focus based on user needs, task-driven design reduces unnecessary complexity.
 
-## Tips for Managing Complexity
-If we leave the default chart names behind, what tools do we have?
+## Take Aways
+Custom visual languages built on encoding principles enable more expressive data visualization, while movements and levels provide systematic approaches to managing complexity.
 
-### Movements: Creating Visual Continuity
-- **Definition**: Reusing visual motifs across multiple related visualizations
-- **Purpose**: Creates narrative connection between different data views
-- **Example Analysis**: Podcast Anthropology
-  - Consistent visual encoding for episodes across different views
-  - Color, shape, and position create continuity
-  - Allows readers to track elements across transformations
-
-### Levels: Progressive Complexity
-- **Definition**: Starting simple and adding sophistication as users engage deeper
-- **Purpose**: Prevents overwhelming users while allowing detailed exploration
-- **Example Analysis**: Global Plastics AI Policy Tool
-  - Overview level: Simple end-of-life metrics
-  - Details level: Breakdowns by policy interventions
-  - Deep dive: Country-specific impacts and assumptions
-  - Each level reveals more granularity
-
-### When to Use These Techniques
-- **Movements**: When showing the same data from multiple perspectives or over time
-- **Levels**: When users have varying levels of expertise or interest in detail
-
-## Group Activity: Assignment 11
-In class, we did assignment 11 together but you can do it at home!
-
-- Draw (by hand with a pen, no code) your last five years and your next five years
-- Inspired by the Dear Data project
-- Focus on personal data representation
-- Emphasizes the creative and expressive side of data visualization
-
-### Complex Data Formats
-A brief look at different data formats.
-
-### Text-Based Formats
-- **CSV**: Simple tabular data, rows and columns
-- **JSON**: Hierarchical data with nested structures
-- **YAML**: Human-readable configuration and structured data
-- **GeoJSON**: Geographic features with properties in JSON format
-
-### Binary Formats
-- **Protobuf**: Protocol buffers for efficient serialization
-- **Avro**: Row-oriented data serialization
-- **Arrow**: Columnar in-memory data format
-- **Geotiff**: Raster geospatial data
-- **Geobuf**: Compact binary encoding of GeoJSON
-- **GeoArrow**: Columnar geospatial data
-- **COG (Cloud Optimized GeoTIFF)**: Efficient cloud-based raster access
-- **NetCDF**: Multidimensional scientific data
-
-### Working with GeoJSON
-- Standard format for geospatial vector data
-- JSON structure with geometry and properties
-- Tools: geojson.io for visualization and editing
-- Integration with mapping libraries (Mapbox, OpenStreetMap)
-
-### Advice for Geospatial Visualization
-With these formats in mind, finishing with geospatial data.
-
-### Technical Challenges
-- **Large File Sizes**: Geospatial datasets often run into many gigabytes
-- **Multiple Formats**: Need to work with various text and binary formats
-- **Basemap Size**: The background map itself is often very large
-- **Performance**: Rendering and interaction performance becomes critical
-
-### Design Challenges
-
-**Challenge 1: Loss of Best Encoding Device**
-- Position (horizontal and vertical) is immediately consumed by geographic coordinates
-- This is typically the most accurate encoding device according to Cleveland & McGill
-- Forces reliance on secondary encoding channels (color, size, shape)
-
-**Challenge 2: Visual Complexity of Basemaps**
-- Basemaps include substantial visual elements (roads, labels, terrain)
-- These can occlude or interfere with data glyphs overlaid on top
-- Creates figure/ground separation challenges
-
-### Design Strategies for Maps
-
-**1. Focus on Preattentive Features**
-- Emphasize shape, form, and color that will "pop" against the background
-- Use high contrast to create clear figure/ground separation
-- Example visualizations showing effective use of distinct shapes and colors
-
-**2. Strategic Use of Encoding Devices**
-- **Area**: Good for depicting small details that might be lost with other encodings
-- **Color**: Effective when there are very large differences in values
-- Consider both approaches shown in climate adaptation visualizations
-
-**3. Quantitative Color Scales**
-- Focus on contrast against background
-- Create strong figure/ground relationships
-- Examples showing effective vs. ineffective color choices
-- Importance of perceptually uniform color spaces
-
-**4. Keep Visual Channels Clear**
-- Minimize clutter and overlapping elements
-- Strategic use of simplification and aggregation
-- Examples showing progression from cluttered to clean designs
-- Consider different zoom levels or detail levels
-
-**5. Focus on User and Task**
-- Not all data may be relevant for specific use cases
-- Filter and focus based on user needs
-- Task-driven design reduces unnecessary complexity
-- Teaser for next lecture on domain/task analysis
-
-## Activities
-This was a big lecture! Here are some resources to supplement.
-
-### Lecture Video
-[Watch Lecture 13: Building New Languages on Vimeo](https://vimeo.com/1064101038)
-
-### Assignment
-Please draw some representation of your last 5 years and what you hope your next 5 years will look like. You can use whatever tools and materials you like other than code. For inspiration see [Dear Data](https://www.dear-data.com/theproject).
-
-### Reading
-Please watch [15 Views on a Node-Link Graph](https://youtu.be/WOBKnRlOAes) by Tamara Munzner.
-
-## References
-
-### Text
-- Munzner, Tamara. *Visualization Analysis and Design*. CRC Press, 2015.
-  - Relevant chapters on visual encoding and marks/channels
-
-### Assignment
-- Assignment 12: Dear Data exercise (draw last 5 years and next 5 years by hand)
-
-### Reading
-- Munzner, Tamara. "15 Views on a Node-Link Graph." YouTube video. Available: https://youtu.be/WOBKnRlOAes
-
-### Links
-- [Dear Data Project](https://www.dear-data.com/theproject)
-- [Geojson.io](https://geojson.io/) - Interactive GeoJSON editor
+  - Think in encodings (dimensions, measures, and devices) rather than chart names to create novel representations.
+  - Use movements to create visual continuity across multiple views and levels to progressively disclose complexity.
+  - Be aware of various data formats beyond CSV including GeoJSON for geospatial work.
+  - When working with maps, focus on preattentive features, strategic encoding choices, clear visual channels, and task-driven design to overcome the challenges of losing position encoding and basemap complexity.
+  - For networks and other complex data types, see the assigned reading on "15 Views on a Node-Link Graph."
 
 ## Citations
 
@@ -225,3 +101,7 @@ Please watch [15 Views on a Node-Link Graph](https://youtu.be/WOBKnRlOAes) by Ta
 [17] A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse, M. de Bruyn, C. Boettiger, E. Baker, K. Koy, and D. McCauley, "Global Plastics AI Policy Tool," University of California, 2024. Available: https://global-plastics-tool.org/
 
 [18] A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse, C. Liu, S. Hu, M. de Bruyn, C. Boettiger, E. Baker, and D. McCauley, "Pathways to reduce global plastic waste mismanagement and greenhouse gas emissions by 2050," *Science*, 2024. doi: 10.1126/science.adr3837
+
+[19] T. Munzner, "15 Views on a Node-Link Graph," YouTube video. Available: https://youtu.be/WOBKnRlOAes
+
+[20] Dear Data Project, "Dear Data," 2015. Available: https://www.dear-data.com/theproject

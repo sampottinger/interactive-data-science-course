@@ -1,119 +1,82 @@
-# Lecture 17: The Reader as Player
+# Lesson 17
+Briefly introducing interaction patterns.
 
-**Stat 198: Interactive Data Science and Visualization**
-**Instructor:** A Samuel Pottinger
-**Original Instruction Date:** March 31, 2025
+## Objective
+Go deep into interactivity with affordances, kinesthetic projection, and common patterns in data visualization to prepare for creating interactive visualizations in the final project.
 
-## Description
-
-Go deep into interactivity with affordances, kinesthetic projection, and common patterns in data visualization. This is setting up our final ingredient for data visualizations that you need for the final!
-
-## Key Takeaways
-
+## Outline
 This lecture explores the bridge between user interaction and data visualization, introducing common interaction patterns and formalizing the concept of affordances to create more intuitive and engaging interactive experiences.
 
-### Acting Through Tools
+### Acting through tools
+Understanding how users interact with digital interfaces requires examining the relationship between action and tool.
 
-Understanding how users interact with digital interfaces requires examining the relationship between action and tool:
-- Users act through interfaces rather than on them
-- The concept of kinesthetic projection: how physical movement translates to digital action
-- Tools should feel like extensions of the user's intent
+  - Users act through interfaces rather than on them.
+  - The concept of kinesthetic projection: how physical movement translates to digital action.
+  - Tools should feel like extensions of the user's intent.
 
-### Common Interaction Patterns in Data Visualization
+### Common interaction patterns
+The lecture introduces fundamental interaction patterns that recur throughout interactive data visualization.
 
-The lecture introduces five fundamental interaction patterns that recur throughout interactive data visualization:
+  - Details disclosure: Revealing additional information on demand with progressive disclosure of complexity. Example: Podcast Anthropology visualization showing episode details by year.
+  - Coordinated scrubbing: Synchronized navigation across multiple views with time-based or parameter-based coordination. Example: TED visualization showing coordinated exploration of talks.
+  - Madlibs: Structured query interface using dropdown menus and selections with fill-in-the-blank approach to data exploration.
+  - Coordinated filtering: Filtering in one view affects all linked views enabling multi-faceted data exploration. Example: Global Plastics AI Policy Tool showing end of life outcomes by region.
+  - Configuration panel: Dedicated control interface for simulation or visualization parameters with multiple input types. Example: Hypothetical Rates Simulator showing agricultural subsidy scenarios.
+  - Direct manipulation: Users interact directly with visual elements by clicking, dragging, or tapping on data representations themselves. Example: FoodSim San Francisco allowing users to place buildings directly on map.
 
-#### 1. Details Disclosure
-- Revealing additional information on demand
-- Progressive disclosure of complexity
-- Example: Podcast Anthropology visualization showing episode details by year
-- Allows overview first, details on demand approach
+### Formalizing affordances
+The lecture introduces a formal way to think about interaction design through an action and target framework.
 
-#### 2. Coordinated Scrubbing
-- Synchronized navigation across multiple views
-- Time-based or parameter-based coordination
-- Example: TED visualization showing coordinated exploration of talks
-- Enables pattern discovery across dimensions
+  - Action: What the user does (click, hover, drag, type, etc.).
+  - Target: What the user acts upon (data point, axis, filter, button, etc.).
+  - Affordances should be discoverable without instruction.
+  - The design should suggest its own use with immediate and clear feedback.
+  - Interactions should feel natural and intuitive.
 
-#### 3. Madlibs
-- Structured query interface using dropdown menus and selections
-- Fill-in-the-blank approach to data exploration
-- Provides guidance while maintaining flexibility
-- Reduces cognitive load by constraining options
+### Group activity
+The lecture included a group activity where students imagined potential interactions for the Census visualization.
 
-#### 4. Coordinated Filtering
-- Filtering in one view affects all linked views
-- Multiple coordinated views responding to same filter
-- Example: Global Plastics AI Policy Tool showing end of life outcomes by region
-- Enables multi-faceted data exploration
+  - What actions could enhance data exploration?
+  - How could multiple views be coordinated?
+  - What filters or configurations would be useful?
+  - How can direct manipulation reveal insights?
 
-#### 5. Configuration Panel
-- Dedicated control interface for simulation or visualization parameters
-- Multiple input types (sliders, buttons, radio buttons)
-- Example: Hypothetical Rates Simulator showing agricultural subsidy scenarios
-- Separates controls from visualization for clarity
+### Road to the final
+These concepts prepare students for their final projects.
 
-#### 6. Direct Manipulation
-- Users interact directly with visual elements
-- Click, drag, or tap on data representations themselves
-- Example: FoodSim San Francisco allowing users to place buildings directly on map
-- Provides intuitive, spatial interaction model
-
-## Formalizing Affordances
-Affordances have come up in conversation before but let's give this a formal definition.
-
-### Action + Target Framework
-
-The lecture introduces a formal way to think about interaction design:
-- **Action**: What the user does (click, hover, drag, type, etc.)
-- **Target**: What the user acts upon (data point, axis, filter, button, etc.)
-
-This framework helps designers:
-- Systematically consider all possible interactions
-- Ensure affordances are clear and discoverable
-- Design consistent interaction patterns
-- Communicate design intentions clearly
-
-### Principles
-
-- Affordances should be discoverable without instruction
-- The design should suggest its own use
-- Feedback should be immediate and clear
-- Interactions should feel natural and intuitive
-
-## Group Activity
-
-The lecture included a group activity where students imagined potential interactions for the Census visualization:
-
-- What actions could enhance data exploration?
-- How could multiple views be coordinated?
-- What filters or configurations would be useful?
-- How can direct manipulation reveal insights?
-
-## Road to the Final
-
-The lecture concluded with discussion of how these concepts prepare students for their final projects:
-
-- Interaction patterns as building blocks
-- Combining multiple patterns for rich experiences
-- Balancing guidance with freedom
-- Designing for both exploration and explanation
-
-## Activities
-As always, some additional materials to consider...
-
-### Lecture Video
-[Watch Lecture 17: The Reader as Player on Vimeo](https://vimeo.com/1071192794)
+  - Interaction patterns serve as building blocks for rich experiences.
+  - Combining multiple patterns creates engaging visualizations.
+  - Balancing guidance with freedom in design.
+  - Designing for both exploration and explanation.
 
 ### Assignment
-We will start our interactive experience. There are different video games for you to choose from within the course manual. See "experience" section. After you have selected your choice, lookup the game specific instructions. You can space out your game play over the next few lectures. There will be an additional question asked of all games later in lesson 20 when it would be good to be done.
+We will start our interactive experience by selecting a video game from the course manual to play over the next few lectures.
+
+  - Choose from games listed in the "experience" section of the course manual.
+  - Look up game-specific instructions after selection.
+  - Space out gameplay over the next few lectures.
+  - Be ready to answer additional questions about your game in lesson 20.
 
 ### Reading
 Please watch a fantastic discussion regarding the role of the player from Extra Credits.
 
 ### Links
-- [First video from slides: Kinect Disconnect - Watch 1:30 to 3:10 for Kinesthetic Projection discussion](https://www.youtube.com/watch?v=ijcezUy3ZzY)
-- [Second video from slides: Affordances - How Design Teaches Us Without Words](https://www.youtube.com/watch?v=QCSXEKHL6fc)
+Additional resources for exploring kinesthetic projection and affordances.
+
+  - Kinect Disconnect: Watch 1:30 to 3:10 for Kinesthetic Projection discussion.
+  - Affordances: How Design Teaches Us Without Words.
+
+### Lecture video
+Watch Lecture 17: The Reader as Player on Vimeo.
+
+## Take Aways
+This lecture explores interaction patterns and affordances to create more intuitive interactive data visualizations.
+
+  - Users act through interfaces as extensions of their intent using kinesthetic projection.
+  - Six fundamental interaction patterns: details disclosure, coordinated scrubbing, madlibs, coordinated filtering, configuration panels, and direct manipulation.
+  - Affordances formalized through action and target framework help designers create discoverable interactions.
+  - Interaction patterns serve as building blocks that can be combined for rich interactive experiences.
+  - Design should balance guidance with freedom for both exploration and explanation.
 
 ## Citations
 
