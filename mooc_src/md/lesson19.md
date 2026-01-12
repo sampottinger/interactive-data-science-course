@@ -1,20 +1,20 @@
-# Lesson 19
-Briefly applying game design to visualization.
+# Lesson 19: Architecture
+Applying game design to visualization to offer structure.
 
 ## Objective
-Explore how game design principles, specifically level design and architectural patterns, can be applied to data visualization to guide users through complex information spaces and teach them how to interact with visualizations effectively.
+Explore how game design principles, specifically level design and architectural patterns, can be applied to data visualization. This can help guide users through complex information spaces and teach them how to interact with visualizations effectively.
 
 ## Outline
 Architecture in data visualization refers to how we structure and organize the user's journey through information. Just as game levels guide players through experiences while teaching mechanics, visualization architectures guide users through data while teaching interaction patterns. This lecture examines three architectural approaches borrowed from game design that can be applied to data visualization.
 
 ### Three architectural patterns
-Game design offers structured frameworks for guiding users through complex experiences.
+Game design offers structured frameworks for guiding users through complex experiences. We will look at three:
 
 - Levels: Modulate visibility and offer hints toward other areas.
 - Hayashida Level Design: Four-step progressive learning pattern.
 - Triangle Design: Valleys and hills with landmark-based navigation.
 
-### Architecture 1: Levels
+#### Levels
 Modulate what is visible to the user at any given moment in time, offer hints towards other areas.
 
 - Control information visibility to prevent overwhelming users.
@@ -25,7 +25,7 @@ Modulate what is visible to the user at any given moment in time, offer hints to
 - Example: Illinois Soil Health Tool demonstrates controlled information revelation.
 - Application: Reimagine data dashboards through narrative structures like Choose Your Own Adventure or interactive fiction.
 
-### Architecture 2: Hayashida Level Design
+#### Hayashida Level Design
 A four-step progressive learning pattern for introducing mechanics and complexity.
 
 - Introduction: Show information about the tool with pre-filled controls for minor modifications.
@@ -35,7 +35,7 @@ A four-step progressive learning pattern for introducing mechanics and complexit
 - Example: AFSC GAP Visualization implements Hayashida design for teaching Pacific cod data analysis.
 - This pattern tutorializes users through a real analysis, gradually building confidence and capability.
 
-### Architecture 3: Triangle Design
+#### Triangle Design
 Valleys and hills: modulate what is visible to the user at any given moment in time, offer hints towards other areas through landmark-based navigation.
 
 - Valley: Current region shows deep detail with local landmarks where users are immersed in specific data.
@@ -46,7 +46,10 @@ Valleys and hills: modulate what is visible to the user at any given moment in t
 - Create rhythm between focused analysis and broad understanding.
 - Examples: Global Plastics AI Policy Tool and No Ceilings demonstrate effective landmark-based navigation.
 
-### Case study: AFSC GAP Visualization
+### Case Studies
+Note that we looked at AFSC GAP in class (https://app.pyafscgap.org/) and then watched a video disecting Mario Level 1-1 (https://www.youtube.com/watch?v=ZH2wGpEZVgE).
+
+#### Case study: AFSC GAP Visualization
 The AFSC GAP (Alaska Fisheries Science Center Groundfish Assessment Program) visualization demonstrates Hayashida Level Design implementation.
 
 - Tool visualizes Pacific cod population data with analysis capabilities.
@@ -56,8 +59,8 @@ The AFSC GAP (Alaska Fisheries Science Center Groundfish Assessment Program) vis
 - Conclusion phase: Users apply skills to new analytical questions.
 - Users progressively learn data analysis capabilities without overwhelming initial tutorials.
 
-### Case study: Mario Level 1-1
-Super Mario Bros. Level 1-1 serves as a masterclass in teaching without words with principles directly applicable to data visualization onboarding.
+#### Case study: Mario Level 1-1
+Super Mario Bros. Level 1-1 teaches without words with principles directly applicable to data visualization onboarding.
 
 - Teaches all core game mechanics without explicit tutorial.
 - Users learn through guided exploration.
