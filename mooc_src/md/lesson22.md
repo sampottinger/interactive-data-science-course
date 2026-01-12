@@ -1,4 +1,4 @@
-# Lesson 22
+# Lesson 22: Accessibility
 Briefly introducing web accessibility standards.
 
 ## Objective
@@ -11,9 +11,8 @@ This lecture introduces web accessibility standards and practices specifically t
 Web accessibility standards provide clear guidelines for creating inclusive experiences.
 
   - WCAG provides comprehensive guidelines for making web content accessible to people with disabilities.
-  - Standards cover WCAG 2.0, 2.1, and 2.2.
   - Accessibility improvements designed for people with disabilities often benefit everyone through the curb-cut effect.
-  - Laws and programs designed to benefit vulnerable groups often end up benefiting all of society.
+  - Efforts to benefit vulnerable groups often end up benefiting all of society.
 
 ### Visual accessibility
 Visual accessibility addresses three categories of visual impairment with specific solutions for each.
@@ -22,7 +21,7 @@ Visual accessibility addresses three categories of visual impairment with specif
   - Low vision: Users may use magnifiers, scaled resolution, or have contrast sensitivity issues.
   - Blind or partially blind: Users may rely on screen readers and keyboard-only navigation.
 
-### Color deficiency solutions
+#### Color deficiency
 Double encoding and alternative visualizations help address color blindness.
 
   - WCAG 1.4.1: Color should not be the only way elements are visually distinguished from each other.
@@ -32,7 +31,7 @@ Double encoding and alternative visualizations help address color blindness.
   - Example: Income Gaps visualization uses both color and position to distinguish gender categories.
   - Example: Global Plastics AI Policy Tool provides colorblind-friendly color scheme options.
 
-### Low vision solutions
+#### Low vision
 Contrast and resize support ensure visualizations remain accessible at different scales.
 
   - WCAG 1.4.3: Ensure colors are sufficiently different from their backgrounds to be perceived.
@@ -42,7 +41,7 @@ Contrast and resize support ensure visualizations remain accessible at different
   - Use responsive design principles and avoid fixed-size elements that break when magnified.
   - Test visualizations at different zoom levels.
 
-### Screen reader support
+#### Screen reader
 Providing non-visual alternatives ensures content is accessible to blind users.
 
   - WCAG 1.1.1: Provide non-visual alternatives to visualizations.
@@ -59,7 +58,7 @@ Interactive visualizations present unique challenges for users with motor impair
   - Timed inputs: Some users may require additional time to complete interactions.
   - Keyboard-only navigation: Users may not have access to a pointing device.
 
-### Fine motor control solutions
+#### Fine motor control
 Making interactive targets large enough helps users with motor impairments.
 
   - Make interactive targets large enough with minimum 44x44 pixels recommended.
@@ -67,7 +66,7 @@ Making interactive targets large enough helps users with motor impairments.
   - Support alternative input devices.
   - Avoid interactions requiring precise hovering or dragging.
 
-### Keyboard navigation
+#### Keyboard navigation
 Providing keyboard alternatives ensures access for users without pointing devices.
 
   - WCAG 2.1.1: Provide keyboard alternatives for all custom drawing interactions.
@@ -77,7 +76,7 @@ Providing keyboard alternatives ensures access for users without pointing device
   - Example: Climate maize loss visualization includes keyboard controls for Esc, y, c, v, and u.
   - Example: Global Plastics AI Policy Tool uses standard HTML elements with proper left-to-right tab sequence.
 
-### Timing controls
+#### Timing controls
 Adjustable timing supports users who need more time to interact.
 
   - WCAG 2.2.1: Allow modification or pausing of timed actions.
@@ -86,6 +85,9 @@ Adjustable timing supports users who need more time to interact.
   - Include pause/play controls for animations.
   - Example: Sketchingpy provides pause functionality for auto-shuffling animations.
   - Example: Climate simulation tools allow users to control the pace of exploration.
+
+### Group activity
+Looked at the accessibility options first hand in https://global-plastics-tool.org/.
 
 ## Take Aways
 Accessibility is good for everyone, and making visualizations accessible requires attention to visual and motor considerations while following established guidelines.
