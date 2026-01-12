@@ -14,6 +14,7 @@ Providing multiple perspectives to foster practical design and technical skills.
   - Holistic design instruction and human lenses to critically consider pieces.
   - Hands-on exploration of skills to bring your ideas to life.
   - Python-based exercises with optional discussion of JavaScript.
+  - Focused on hands on experimentation and experience (learn what is best felt not described).
 
 ### Course background
 Started at UC Berkeley but growing.
