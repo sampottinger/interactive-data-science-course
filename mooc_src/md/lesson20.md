@@ -1,5 +1,5 @@
-# Lesson 20
-Briefly exploring player loops and experience.
+# Lesson 20: Interactive Experience
+Exploring how games structure interaction through player loops. Also, discuss your games!
 
 ## Objective
 Understand player loops as a framework for analyzing interactive experiences and apply these concepts to both video games and interactive data visualization tools.
@@ -14,14 +14,14 @@ Player loops describe the hierarchical structure of user engagement at different
   - Secondary loop: The medium term goal that is served by the primary loop, providing structure and direction.
   - Tertiary loop: The long term goal that is served by the primary loop, offering ultimate purpose and motivation.
 
-### Super Mario Bros. example
+#### Super Mario Bros. example
 Classic game design illustrating well-structured player loops.
 
   - Primary loop: Running, jumping, and avoiding obstacles.
   - Secondary loop: Completing a level by reaching the flagpole.
   - Tertiary loop: Rescuing Princess Peach and completing all worlds.
 
-### Global Plastics AI Policy Tool example
+#### Global Plastics AI Policy Tool example
 Demonstrating how player loop concepts apply to interactive data visualization, not just traditional video games.
 
   - Primary loop: Adjusting policy sliders and parameters, observing real-time feedback on the visualization.
@@ -35,6 +35,8 @@ Group activity for students to reflect on their game playing experience.
   - Groups review game-specific questions from the assignment materials together.
   - Each member submits individual responses identifying player loops in their chosen game.
   - Tie-in question connects game design concepts back to data visualization principles.
+
+See course manual for details.
 
 ### Practical implications for data visualization
 Understanding player loops helps designers create more engaging interactive visualizations.
