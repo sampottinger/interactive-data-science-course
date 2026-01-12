@@ -10,46 +10,46 @@ This lecture introduces the concept of player loops, the different layers of eng
 ### Player loops framework
 Player loops describe the hierarchical structure of user engagement at different timescales.
 
-- Primary loop: The moment to moment action and immediate, repetitive actions that players perform continuously.
-- Secondary loop: The medium term goal that is served by the primary loop, providing structure and direction.
-- Tertiary loop: The long term goal that is served by the primary loop, offering ultimate purpose and motivation.
+  - Primary loop: The moment to moment action and immediate, repetitive actions that players perform continuously.
+  - Secondary loop: The medium term goal that is served by the primary loop, providing structure and direction.
+  - Tertiary loop: The long term goal that is served by the primary loop, offering ultimate purpose and motivation.
 
 ### Super Mario Bros. example
 Classic game design illustrating well-structured player loops.
 
-- Primary loop: Running, jumping, and avoiding obstacles.
-- Secondary loop: Completing a level by reaching the flagpole.
-- Tertiary loop: Rescuing Princess Peach and completing all worlds.
+  - Primary loop: Running, jumping, and avoiding obstacles.
+  - Secondary loop: Completing a level by reaching the flagpole.
+  - Tertiary loop: Rescuing Princess Peach and completing all worlds.
 
 ### Global Plastics AI Policy Tool example
 Demonstrating how player loop concepts apply to interactive data visualization, not just traditional video games.
 
-- Primary loop: Adjusting policy sliders and parameters, observing real-time feedback on the visualization.
-- Secondary loop: Testing specific policy scenarios and comparing different policy combinations.
-- Tertiary loop: Developing comprehensive understanding of plastic waste management to inform policy decisions.
+  - Primary loop: Adjusting policy sliders and parameters, observing real-time feedback on the visualization.
+  - Secondary loop: Testing specific policy scenarios and comparing different policy combinations.
+  - Tertiary loop: Developing comprehensive understanding of plastic waste management to inform policy decisions.
 
 ### Interactive experience assignment discussion
 Group activity for students to reflect on their game playing experience.
 
-- Students sit with assigned groups to discuss the game they played.
-- Groups review game-specific questions from the assignment materials together.
-- Each member submits individual responses identifying player loops in their chosen game.
-- Tie-in question connects game design concepts back to data visualization principles.
+  - Students sit with assigned groups to discuss the game they played.
+  - Groups review game-specific questions from the assignment materials together.
+  - Each member submits individual responses identifying player loops in their chosen game.
+  - Tie-in question connects game design concepts back to data visualization principles.
 
 ### Practical implications for data visualization
 Understanding player loops helps designers create more engaging interactive visualizations.
 
-- Immediate feedback: Ensuring the primary loop provides instant, satisfying feedback.
-- Meaningful progress: Structuring secondary loops to show progress toward understanding.
-- Ultimate purpose: Designing tertiary loops that connect to real-world impact or insight.
+  - Immediate feedback: Ensuring the primary loop provides instant, satisfying feedback.
+  - Meaningful progress: Structuring secondary loops to show progress toward understanding.
+  - Ultimate purpose: Designing tertiary loops that connect to real-world impact or insight.
 
 ## Take Aways
 Player loops provide a powerful framework for analyzing and designing interactive experiences, whether in games or data visualization tools.
 
-- Primary loops should be intuitive, responsive, and immediately rewarding.
-- Secondary loops should provide structure without overwhelming the user.
-- Tertiary loops should connect to meaningful outcomes that justify investment of time and attention.
-- The same engagement principles that make games compelling can enhance interactive data visualization experiences.
+  - Primary loops should be intuitive, responsive, and immediately rewarding.
+  - Secondary loops should provide structure without overwhelming the user.
+  - Tertiary loops should connect to meaningful outcomes that justify investment of time and attention.
+  - The same engagement principles that make games compelling can enhance interactive data visualization experiences.
 
 ## Citations
 

@@ -10,66 +10,66 @@ This lecture explores the perceptual foundations of visual grouping and color us
 ### Gestalt Principles
 The Gestalt Principles describe how we pre-attentively perceive glyphs together within scenes, helping us understand how parts form together to build a whole.
 
-- Enable creation of visual hierarchy within visualizations.
-- Allow combining individual glyphs into larger meaningful structures.
-- Processed pre-attentively by the visual system.
-- Guide how viewers group and interpret visual elements.
-- Include emergence, closure, reification, common region, continuity, proximity, multistability, figure/ground, invariance, pragnanz, similarity, symmetry, and common fate.
+  - Enable creation of visual hierarchy within visualizations.
+  - Allow combining individual glyphs into larger meaningful structures.
+  - Processed pre-attentively by the visual system.
+  - Guide how viewers group and interpret visual elements.
+  - Include emergence, closure, reification, common region, continuity, proximity, multistability, figure/ground, invariance, pragnanz, similarity, symmetry, and common fate.
 
 ### Group Activity
 Hands-on exploration of Gestalt Principles through physical manipulation.
 
-- Students arranged blocks of different sizes, colors, and shapes.
-- Demonstrated proximity, continuity, similarity, symmetry, and closure.
-- Reinforced understanding of how these principles work in practice.
+  - Students arranged blocks of different sizes, colors, and shapes.
+  - Demonstrated proximity, continuity, similarity, symmetry, and closure.
+  - Reinforced understanding of how these principles work in practice.
 
 ### Color Vision Fundamentals
 Color perception is based on three types of cone cells in the human eye working together to enable full spectrum vision.
 
-- Short wavelength (S) cones peak around blue.
-- Medium wavelength (M) cones peak around green.
-- Long wavelength (L) cones peak around red.
-- Color perception is highly contextual and depends on background.
-- Surrounding glyphs can influence how we perceive a color.
+  - Short wavelength (S) cones peak around blue.
+  - Medium wavelength (M) cones peak around green.
+  - Long wavelength (L) cones peak around red.
+  - Color perception is highly contextual and depends on background.
+  - Surrounding glyphs can influence how we perceive a color.
 
 ### Color Spaces
 Different representations of color serve different purposes in visualization work.
 
-- RGB: Standard for computers and displays, often shown as hex codes.
-- HSL: More intuitive for building color schemes and creating variations.
-- Perceptually uniform color spaces: Ensure equal distances correspond to equal perceptual differences.
-- Equal steps in RGB or HSL do not correspond to equal perceptual differences.
+  - RGB: Standard for computers and displays, often shown as hex codes.
+  - HSL: More intuitive for building color schemes and creating variations.
+  - Perceptually uniform color spaces: Ensure equal distances correspond to equal perceptual differences.
+  - Equal steps in RGB or HSL do not correspond to equal perceptual differences.
 
 ### Tools for Creating Color Schemes
 Specialized tools help create effective, accessible color schemes.
 
-- ColorBrewer: Designed for cartography with sequential, diverging, and qualitative schemes.
-- I Want Hue: Generates perceptually distinct colors with customization options.
-- HSL Color Picker: Interactive tool for understanding color relationships.
-- All tools include consideration for colorblind accessibility.
+  - ColorBrewer: Designed for cartography with sequential, diverging, and qualitative schemes.
+  - I Want Hue: Generates perceptually distinct colors with customization options.
+  - HSL Color Picker: Interactive tool for understanding color relationships.
+  - All tools include consideration for colorblind accessibility.
 
 ### Color Usage Recommendations
 Evidence-based guidance for effective color use in visualization.
 
-- Consider avoiding color as a primary encoding device when possible.
-- For quantitative scales, use luminance variation with consistent hue and saturation.
-- For qualitative scales, limit to approximately 6 colors maximum.
-- Double encode when possible (color plus another visual attribute).
-- Account for colorblindness from the start.
-- Consider direct labeling as an alternative to color legends.
+  - Consider avoiding color as a primary encoding device when possible.
+  - For quantitative scales, use luminance variation with consistent hue and saturation.
+  - For qualitative scales, limit to approximately 6 colors maximum.
+  - Double encode when possible (color plus another visual attribute).
+  - Account for colorblindness from the start.
+  - Consider direct labeling as an alternative to color legends.
 
 ## Take Aways
 Gestalt Principles and thoughtful color usage form the foundation for creating clear, effective visualizations that leverage how our visual system naturally processes information.
 
-- Gestalt Principles tell us how to create hierarchy and combine glyphs into larger structures.
-- RGB is the standard for digital work but not perceptually uniform.
-- HSL can be more intuitive for creating color schemes and variations.
-- Perceptually uniform color spaces help ensure equal perceptual differences.
-- Context heavily influences color perception.
-- Limit qualitative color schemes to approximately 6 colors reliably.
-- Use established tools (ColorBrewer, I Want Hue) rather than choosing colors ad-hoc.
-- Double encode when possible and consider direct labeling.
-- Colorblind accessibility should be considered from the start.
+  - Gestalt Principles tell us how to create hierarchy and combine glyphs into larger structures.
+  - RGB is the standard for digital work but not perceptually uniform.
+  - HSL can be more intuitive for creating color schemes and variations.
+  - Perceptually uniform color spaces help ensure equal perceptual differences.
+  - Context heavily influences color perception.
+  - Limit qualitative color schemes to approximately 6 colors reliably.
+  - Use established tools (ColorBrewer, I Want Hue) rather than choosing colors ad-hoc.
+  - Double encode when possible and consider direct labeling.
+  - Colorblind accessibility should be considered from the start.
 
 ## Citations
 

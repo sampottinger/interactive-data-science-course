@@ -10,18 +10,18 @@ This skills lab session uses a flipped classroom model where students work throu
 ### Tutorial 3 focus
 Complete Tutorial 3 which integrates foundational Python skills with creative coding techniques.
 
-- Object-oriented programming in the context of creative coding.
-- Creating and managing custom objects for visual elements.
-- Building interactive graphical simulations.
-- Connecting concepts from Skills Lab 1 with new techniques.
+  - Object-oriented programming in the context of creative coding.
+  - Creating and managing custom objects for visual elements.
+  - Building interactive graphical simulations.
+  - Connecting concepts from Skills Lab 1 with new techniques.
 
 ### Flipped classroom approach
 Students work independently with support channels available.
 
-- Work through tutorial materials at their own pace.
-- Access support through various help channels including peer review.
-- Receive assistance from instructors during lab time.
-- Practice using the Sketchingpy Online Sketchbook.
+  - Work through tutorial materials at their own pace.
+  - Access support through various help channels including peer review.
+  - Receive assistance from instructors during lab time.
+  - Practice using the Sketchingpy Online Sketchbook.
 
 ## Take Aways
 Object-oriented programming enables more sophisticated and maintainable interactive visualizations by organizing code into reusable custom objects.

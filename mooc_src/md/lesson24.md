@@ -9,44 +9,44 @@ This concluding lecture brings together key concepts from the course and looks f
 ### Inquiry-based design
 Why do some visualization artists talk about questions?
 
-- Questions as framework: Using questions to structure and guide the visualization design process.
-- Layered complexity: Building visualizations that allow users to explore at different levels of depth.
-- User trust: Designing with confidence that users can navigate complex information spaces.
-- Zoom in, zoom out, zoom part way in: Allow users to explore data at multiple scales and levels of detail.
-- All roads lead to Rome: Design multiple pathways for users to reach key insights and information.
-- Layer into complexity, trust your users: Don't oversimplify; instead, create scaffolding that supports exploration of complex datasets.
-- Featured article from Stamen by Nicolette Hayes (2023): "Data Visualization for Education: When Asking Questions is the Answer" emphasizes the value of designing visualizations that prompt inquiry rather than simply presenting answers.
+  - Questions as framework: Using questions to structure and guide the visualization design process.
+  - Layered complexity: Building visualizations that allow users to explore at different levels of depth.
+  - User trust: Designing with confidence that users can navigate complex information spaces.
+  - Zoom in, zoom out, zoom part way in: Allow users to explore data at multiple scales and levels of detail.
+  - All roads lead to Rome: Design multiple pathways for users to reach key insights and information.
+  - Layer into complexity, trust your users: Don't oversimplify; instead, create scaffolding that supports exploration of complex datasets.
+  - Featured article from Stamen by Nicolette Hayes (2023): "Data Visualization for Education: When Asking Questions is the Answer" emphasizes the value of designing visualizations that prompt inquiry rather than simply presenting answers.
 
 ### Final projects
 Exploring datasets and formulating research questions.
 
-- Look at available datasets from the course manual.
-- Choose a dataset to work with.
-- Identify central questions that would be interesting to explore within the chosen dataset.
-- Discuss questions with a partner to reinforce the inquiry-based approach.
+  - Look at available datasets from the course manual.
+  - Choose a dataset to work with.
+  - Identify central questions that would be interesting to explore within the chosen dataset.
+  - Discuss questions with a partner to reinforce the inquiry-based approach.
 
 ### Resources beyond the class
 Places to continue learning and building skills in data visualization and interactive data science.
 
-- Continuing education resources: The Nature of Code, Crash Course Sociology, Philosophy Tube, Eyeo Festival, Game Maker's Toolkit, Design Delve, Extra Credits, Digital Anthropology, and Refactoring Guru.
-- Professional development: Guidance on how to continue building skills in data visualization and interactive data science.
-- Community engagement: Encouragement to engage with the broader data visualization and creative coding communities.
+  - Continuing education resources: The Nature of Code, Crash Course Sociology, Philosophy Tube, Eyeo Festival, Game Maker's Toolkit, Design Delve, Extra Credits, Digital Anthropology, and Refactoring Guru.
+  - Professional development: Guidance on how to continue building skills in data visualization and interactive data science.
+  - Community engagement: Encouragement to engage with the broader data visualization and creative coding communities.
 
 ### Goodbye and reflection
 The course is dedicated to the instructor's grandmother, who taught how technology can help us become more human.
 
-- A moment of reflection on the learning journey and what students have gained from the course.
-- Emphasis on continuing the learning journey beyond the course.
-- Encouragement to apply the four perspectives on data visualization in future work.
-- Reminder that the skills learned can be used to create meaningful, impactful visualizations.
+  - A moment of reflection on the learning journey and what students have gained from the course.
+  - Emphasis on continuing the learning journey beyond the course.
+  - Encouragement to apply the four perspectives on data visualization in future work.
+  - Reminder that the skills learned can be used to create meaningful, impactful visualizations.
 
 ## Take Aways
 Inquiry-based design treats questions as central to the visualization process, not just endpoints, enabling deeper engagement with data.
 
-- Trust your users to engage with complexity when given appropriate scaffolding and multiple entry points.
-- Multiple pathways to insight create more robust and accessible visualizations.
-- The course concepts including four perspectives, accessibility, ethics, and game design principles provide a comprehensive toolkit for creating effective interactive data visualizations.
-- Learning continues beyond the classroom through engagement with communities, resources, and continued practice.
+  - Trust your users to engage with complexity when given appropriate scaffolding and multiple entry points.
+  - Multiple pathways to insight create more robust and accessible visualizations.
+  - The course concepts including four perspectives, accessibility, ethics, and game design principles provide a comprehensive toolkit for creating effective interactive data visualizations.
+  - Learning continues beyond the classroom through engagement with communities, resources, and continued practice.
 
 ## Citations
 
