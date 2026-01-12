@@ -1,8 +1,8 @@
 # Lesson 10
-Briefly sketching with data.
+Sketching with data.
 
 ## Objective
-Apply coding skills with data, building on previous lessons in creative coding and visual representation through completion of Skills Lab 4, particularly Tutorial 11 on data resources.
+Apply coding skills with data. Builds on previous lessons in creative coding and visual representation through completion of Skills Lab 4, particularly Tutorial 11 on data resources.
 
 ## Outline
 This lecture focuses on practical application of coding skills with data. Building on previous lessons (Lectures 8 and 9) on sketching in code, this lesson adds the crucial element of working with actual data and prepares students for upcoming lessons on formalizing glyphs and empirical evidence regarding encoding devices.
@@ -22,14 +22,14 @@ Students complete the remaining tutorials in Skills Lab 4, with special emphasis
   - Use Sketchingpy Online Sketchbook for hands-on practice.
 
 ### Preparation for visual acuity
-The reading assignment introduces William Cleveland's work.
+Mention of the reading assignment introducing William Cleveland's work.
 
   - Prepares students for upcoming lessons on formalizing glyphs.
   - Introduces empirical evidence regarding encoding devices.
   - Begins foundation for visual acuity discussions.
 
 ## Take Aways
-This lesson falls within the Primitives section of the course, where students learn about perception and cognitive science principles for visualization using Sketchingpy and Matplotlib.
+This lesson continues the Primitives section of the course, where students learn about perception and cognitive science principles for visualization using Sketchingpy and Matplotlib.
 
   - Work with data in code using Sketchingpy.
   - Apply previous lessons on visual encoding to data-driven graphics.
