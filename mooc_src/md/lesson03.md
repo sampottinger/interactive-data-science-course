@@ -46,18 +46,14 @@ sketch.on_step(draw_moving_line)
 sketch.show()
 ```
 
-- Creating a drawing canvas (sketch).
-- Drawing static elements (lines).
-- Responding to user input (mouse position).
-- Creating interactive animations.
+This:
+
+- Creates a drawing canvas (sketch).
+- Draws static elements (lines).
+- Responds to user input (mouse position).
 
 ### Flipped classroom approach
-This lecture follows a flipped classroom model emphasizing hands-on learning.
-
-- Students work through tutorials at their own pace.
-- Hands-on learning takes precedence over passive lectures.
-- Peer support is available through dedicated help channels.
-- The instructor provides guidance as needed.
+This lecture follows a flipped classroom model to support hands-on exploration.
 
 ### Connection to course themes
 These exercises build technical foundations supporting the four perspectives introduced in Lecture 1.
@@ -74,16 +70,6 @@ The use of Sketchingpy emphasizes code as a creative medium.
 - Iteration and experimentation.
 - Direct manipulation of visual elements.
 - Building custom visualizations beyond pre-made chart types.
-
-### Assignment
-Revisit the visualization from the last exercise and consider what the 4 perspectives say about this visualization.
-
-- What visual encoding devices are used?
-- What task or user journey is being accomplished through the piece?
-- Does the piece try to also convey an emotion and, if so, how?
-- Does the piece invite the reader to reach their own conclusions about the data and, if so, how?
-
-Please write 4 - 8 sentences.
 
 ### Additional resources
 Optional materials to supplement your learning experience.

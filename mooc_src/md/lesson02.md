@@ -26,7 +26,7 @@ Students break into groups of 3-4 to analyze real interactive data visualization
   - FoodSim San Francisco: Geospatial simulation of food access in San Francisco through an interactive map-based visualization.
 
 ### Skills Labs
-Introduction to hands-on tutorials for building interactive visualizations. See https://mooc.interactivedatascience.courses/labs.
+Introduction to hands-on tutorials for building interactive visualizations (starts next lecture). See https://mooc.interactivedatascience.courses/labs.
 
 ## Take Aways
 Effective visualizations can be understood and improved through systematic analysis using multiple complementary perspectives.
