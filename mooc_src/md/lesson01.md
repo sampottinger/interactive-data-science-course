@@ -1,4 +1,5 @@
-# Lesson 1: Hello Visualization
+# Lesson 1: Overview
+A look at four perspectives
 
 ## Objective
 Introduce the four foundational perspectives on data visualization and establish core concepts that guide the course structure and learning outcomes.

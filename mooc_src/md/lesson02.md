@@ -1,4 +1,4 @@
-# Lesson 2
+# Lesson 2: Four Perspectives Application
 Briefly applying the four perspectives.
 
 ## Objective

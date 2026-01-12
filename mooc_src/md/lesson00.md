@@ -1,4 +1,4 @@
-# Lesson 0
+# Lesson 0: Hello!
 Briefly setting the stage for the course.
 
 ## Objective

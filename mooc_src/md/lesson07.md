@@ -1,4 +1,5 @@
-# Lesson 7: Gestalt Principles and Color
+# Lesson 7: Visualization as Science 2
+Gestalt Principles and Color
 
 ## Objective
 Understand how the visual system groups elements through Gestalt Principles and apply practical guidance for using color effectively in data visualization.
@@ -25,9 +26,9 @@ Hands-on exploration of Gestalt Principles through physical manipulation.
 ### Color Vision Fundamentals
 Color perception is based on three types of cone cells in the human eye working together to enable full spectrum vision.
 
-- Short wavelength (S) cones peak around 420nm (blue).
-- Medium wavelength (M) cones peak around 530nm (green).
-- Long wavelength (L) cones peak around 560nm (red/yellow).
+- Short wavelength (S) cones peak around blue.
+- Medium wavelength (M) cones peak around green.
+- Long wavelength (L) cones peak around red.
 - Color perception is highly contextual and depends on background.
 - Surrounding glyphs can influence how we perceive a color.
 

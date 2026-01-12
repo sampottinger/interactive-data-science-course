@@ -1,4 +1,4 @@
-# Lesson 4
+# Lesson 4: Skills Lab 2
 Briefly introducing custom objects for creative coding.
 
 ## Objective

@@ -32,7 +32,7 @@ Context:
 - His ideas are readily applicable even with basic tools like Google Sheets
 
 ### Problematic visualizations
-Analysis of "darts" or problematic graphics catalogued by Michael Friendly that demonstrate Tufte's work.
+Group activity: analysis of "darts" or problematic graphics catalogued by Michael Friendly that demonstrate Tufte's work.
 
 - Common visualization mistakes and design choices that create confusion
 - Application of Tufte's principles to real-world examples

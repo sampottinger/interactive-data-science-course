@@ -1,32 +1,33 @@
 # Lesson 6: Visualization as Science 1
+The visual processing system.
 
 ## Objective
 Explore the human visual system and its connection to data visualization design, examining how we extract visual information from the environment and what that means for creating effective visualizations.
 
 ## Outline
-This lecture transitions into a new perspective in the course, examining data visualization through the lens of cognitive and perception science. We explore the biological mechanisms of vision and their practical implications for designing effective visualizations, covering the structure and behavior of the eye, the stages of visual processing, the role of contrast, and preattentive features.
+This lecture transitions into a the first perspective in the course, examining data visualization through the lens of cognitive and perception science. We explore the biological mechanisms of vision and their practical implications for designing effective visualizations.
 
 ### The structure and behavior of the eye
 Understanding the anatomical and functional aspects essential for data visualization design.
 
 - The fovea means we only see a very small area with sharpness at a time.
-- Our brain constructs an image over time through multiple fixations.
+- Our brain constructs an image over time through multiple saccades.
 - Our vision is quite sharp for luminance (brightness) but hue (color) perception is complicated.
 - Key structures include the cornea, lens, iris, pupil, retina, fovea, and optic nerve.
 - Rod cells provide high sensitivity to light intensity with low spatial resolution.
-- Cone cells enable color perception with three types having different wavelength sensitivities: S-cones (blue, ~420 nm), M-cones (green, ~530 nm), and L-cones (red/yellow-green, ~560 nm).
+- Cone cells enable color perception with three types having different wavelength sensitivities.
 - Saccadic eye movements reposition the fovea to different points of interest, with visual processing suppressed during movement.
-- Eyes naturally prefer looking straight ahead, making pro-saccades easier than anti-saccades.
 
 ### The stages of visual processing
 How photons become meaningful information through the visual processing pipeline.
 
 - Photoreceptors convert light to neural signals processed through retinal layers.
-- Information transmits via the optic nerve to the visual cortex (V1/V2) and specialized areas (V3, V3A, V4, V5/MT).
+- Information transmits via the optic nerve to the visual cortex (V1/V2) and specialized areas that construct higher order information.
 - The dorsal pathway ("where") processes spatial location and motion, important for position-based encodings.
 - The ventral pathway ("what") processes object recognition and identification, important for form-based encodings.
-- Feature-driven (bottom-up) processing operates automatically and fast, driven by stimulus properties without conscious attention.
-- Context-driven (top-down) processing is influenced by knowledge and expectations, requiring cognitive effort.
+- Two competing forms of processing.
+  - Feature-driven (bottom-up) processing operates automatically and fast, driven by stimulus properties without conscious attention.
+  - Context-driven (top-down) processing is influenced by knowledge and expectations, requiring cognitive effort.
 - Humans can reliably remember only about 4 visual items, making it better to keep information visible.
 - The fovea and visual memory are limited, so manual scanning is slow and effortful.
 - The brain identifies structure and features (glyphs) not individual pixels.
@@ -34,7 +35,7 @@ How photons become meaningful information through the visual processing pipeline
 ### Contrast and relative processing
 How relative processing becomes important to visual understanding.
 
-- Visual perception is fundamentally relative, not absolute, with what we perceive depending heavily on surrounding context.
+- Visual perception is generally relative, not absolute, with what we perceive depending heavily on surrounding context.
 - The visual system is optimized for detecting differences and edges rather than absolute values.
 - The checker shadow illusion demonstrates how context changes perception even when luminance is identical.
 - Mach bands show perceived light and dark bands at boundaries that result from lateral inhibition enhancing edge detection.
@@ -46,7 +47,7 @@ How relative processing becomes important to visual understanding.
 ### Preattentive features
 Visual properties that can be detected quickly and automatically without conscious scanning.
 
-- Preattentive features can be processed in parallel across the visual field, allowing rapid detection (typically < 250 milliseconds) without focused attention.
+- Preattentive features can be processed in parallel across the visual field, allowing rapid detection without focused "conscious" attention.
 - They reduce cognitive load, enable quick pattern detection, and avoid slow serial scanning.
 - Color features include hue (color identity), saturation (color intensity), and brightness/luminance.
 - Form features include shape (circle, square, triangle), size (length, area), orientation (angle, tilt), enclosure, line width, and curvature.
@@ -56,14 +57,19 @@ Visual properties that can be detected quickly and automatically without conscio
 - Effectiveness depends on number of distractors, degree of difference, and combination of features (which can interfere with each other).
 - Use preattentive features strategically to enable rapid detection and avoid forcing users to scan serially through items.
 
+### Group activity
+Use of graduation and annual cost dataset with task of highlighting Berkeley from a number of different univerisites.
+
 ## Take Aways
-Understanding human visual perception provides concrete principles for creating effective data visualizations that work with, rather than against, our biological capabilities.
+Understanding human visual perception provides concrete principles for creating effective data visualizations that work with, rather than against, our visual processing system.
 
 - Limited visual memory means keeping information visible is better than requiring memorization, even if positioned far away.
-- Avoid scanning by using features the visual cortex is already good at identifying through preattentive properties.
+- Avoid scanning
+  - Using visual aspects the visual cortex is already good at identifying.
+  - Preattentive features like color, form, size, and orientation
+  - Enable rapid detection and efficient visual search.
 - Structure aids processing because the brain identifies meaningful units (glyphs) not individual pixels.
 - What we see depends on surrounding context, so manipulate borders to emphasize comparisons or absolute values as needed.
-- Use preattentive features like color, form, size, and orientation to enable rapid detection and efficient visual search.
 
 ## Citations
 
