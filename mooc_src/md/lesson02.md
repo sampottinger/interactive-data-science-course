@@ -18,15 +18,15 @@ We examine data visualization through four complementary views.
 ### Group activity
 Students break into groups of 3-4 to analyze real interactive data visualizations using the four perspectives framework.
 
-  - We Feel Fine: Circular visualization showing emotional words from blog posts with color-coded emotions.
+  - We Feel Fine: Visualization showing blog posts with color-coded emotions.
   - En-ROADS Climate Simulator: Interactive climate policy simulator with multiple sliders and graphs showing policy impacts over time.
   - Parable of the Polygons: Interactive game demonstrating segregation dynamics using triangles and squares.
   - U.S. Gun Deaths: Visualization showing individual lives lost to gun violence with orange and gray arcs representing stolen and potential years.
   - Income Gaps: Interactive exploration of income inequality allowing filtering by occupation, gender, race, and age.
-  - FoodSim: San Francisco: Geospatial simulation of food access in San Francisco through an interactive map-based visualization.
+  - FoodSim San Francisco: Geospatial simulation of food access in San Francisco through an interactive map-based visualization.
 
 ### Skills Labs
-Introduction to hands-on tutorials for building interactive visualizations.
+Introduction to hands-on tutorials for building interactive visualizations. See https://mooc.interactivedatascience.courses/labs.
 
 ## Take Aways
 Effective visualizations can be understood and improved through systematic analysis using multiple complementary perspectives.
