@@ -1,10 +1,11 @@
 # Lesson 21: Media for Thought
+A look at the various folks who have explored how interactive media can help build new thought. 
 
 ## Objective
-Examine how interactive visualizations can serve as media for thought, enabling users to explore data and ideas beyond prescribed narratives through explorable explanations, thinking toys, and diegetic design.
+Examine how interactive visualizations can serve as media for thought, enabling users to explore data and ideas beyond prescribed narratives. Finally taking a direct look at explorable explanations, thinking toys, and diegetic design.
 
 ## Outline
-This lecture explores the concept of "media for thought" - interactive experiences designed as tools for exploration and discovery rather than just presentation. Drawing from key thinkers in computing, design, and interaction, we examine how to create visualizations that empower users as co-creators of meaning.
+This lecture explores the concept of "media for thought" which are interactive experiences designed as tools for exploration and discovery rather than just presentation. Drawing from key thinkers in computing, design, and interaction, we examine how to create visualizations that empower users as co-creators of meaning.
 
 ### Historical foundations
 Early pioneers established the theoretical groundwork for interactive media as tools for thinking.
@@ -15,7 +16,7 @@ Early pioneers established the theoretical groundwork for interactive media as t
   - These early systems demonstrated how computers could be tools for thinking, not just calculation.
 
 ### Bret Victor and explorable explanations
-Victor's work created a manifesto for interactive, dynamic representations.
+Victor's work influenced modern understanding of explorable media.
 
   - Created "Explorable Explanations" (2011) and "Stop Drawing Dead Fish" (2012).
   - Active reading allows readers to ask questions, consider alternatives, and test claims.
@@ -23,12 +24,13 @@ Victor's work created a manifesto for interactive, dynamic representations.
   - Interactive media can externalize and make concrete the reader's exploration, moving from passive consumption to active investigation.
 
 ### Maggie Appleton on cultural practices
-Appleton focuses on programming as cultural practice rather than computational object.
+Appleton focuses on programming as cultural practice rather than computational object and tools which allow users to re-program them in-situ.
 
-  - Explores programming portals and learnable programming in "Tools for Thought as Cultural Practices, not Computational Objects."
+  - Explores programming portals and learnable programming.
   - Advocates for intertwining graphical representations with programming.
   - Programming systems should be open-ended and flexible.
   - Visual interfaces should not replace syntax entirely but provide the best of both worlds.
+  - Consider that tools for thought are cultural objects.
 
 ### Nicky Case and discovery through play
 Case creates explorable explanations where users discover insights through experimentation.
@@ -46,6 +48,8 @@ Creating effective interactive experiences requires specific approaches.
   - Offer meaningful controls within clear possibility spaces with clear feedback loops.
   - Balance freedom with comprehensibility to support serendipitous discovery.
 
+Note: Yatzee Crowshaw also established some of these ideas.
+
 ### Diegetic elements and possibility space
 Two key concepts for designing interactive experiences.
 
@@ -58,7 +62,7 @@ Two key concepts for designing interactive experiences.
 Media for thought transforms traditional visualization approaches.
 
   - Traditional visualizations often function as arguments with designer-driven messages.
-  - Media for thought gives users agency over messages derived, making them co-creators with the tool.
+  - Media for thought gives users agency over prescribed messages, making them co-creators with the tool.
   - Policy exploration tools allow stakeholders to test scenarios and see projected outcomes.
   - Examples include the Global Plastics AI Policy Tool, En-ROADS Climate Simulator, Income Gaps explorer, and Parable of the Polygons.
 
