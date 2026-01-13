@@ -1,176 +1,97 @@
-# Lecture 19: Architecture
+# Lesson 19: Architecture
+Applying game design to visualization to offer structure.
 
-**Stat 198: Interactive Data Science and Visualization**
-**Instructor:** A Samuel Pottinger
-**Original Instruction Date:** April 7, 2025
+## Objective
+Explore how game design principles, specifically level design and architectural patterns, can be applied to data visualization. This can help guide users through complex information spaces and teach them how to interact with visualizations effectively.
 
-## Description
+## Outline
+Architecture in data visualization refers to how we structure and organize the user's journey through information. Just as game levels guide players through experiences while teaching mechanics, visualization architectures guide users through data while teaching interaction patterns. This lecture examines three architectural approaches borrowed from game design that can be applied to data visualization.
 
-Look at level design and how it help us teach users about how to use and navigate through our data visualizations. Explore Meeks, Hayashida Level Design, and Triangle Design.
+### Three architectural patterns
+Game design offers structured frameworks for guiding users through complex experiences. We will look at three:
 
-## Key Takeaways
+- Levels: Modulate visibility and offer hints toward other areas.
+- Hayashida Level Design: Four-step progressive learning pattern.
+- Triangle Design: Valleys and hills with landmark-based navigation.
 
-This lecture explores how game design principles, specifically level design and architectural patterns, can be applied to data visualization to guide users through complex information spaces and teach them how to interact with visualizations effectively.
+#### Levels
+Modulate what is visible to the user at any given moment in time, offer hints towards other areas.
 
-Architecture in data visualization refers to how we structure and organize the user's journey through information. Just as game levels guide players through experiences while teaching mechanics, visualization architectures guide users through data while teaching interaction patterns.
+- Control information visibility to prevent overwhelming users.
+- Provide progressive disclosure of complexity.
+- Use hints and breadcrumbs to suggest additional content.
+- Think of dashboards as spaces with artifacts rather than just charts.
+- View dashboards as having space where users move through a complex world collecting insights.
+- Example: Illinois Soil Health Tool demonstrates controlled information revelation.
+- Application: Reimagine data dashboards through narrative structures like Choose Your Own Adventure or interactive fiction.
 
-## Course Timeline Update
+#### Hayashida Level Design
+A four-step progressive learning pattern for introducing mechanics and complexity.
 
-The lecture begins with an overview of the remaining course schedule:
+- Introduction: Show information about the tool with pre-filled controls for minor modifications.
+- Development: Use mechanics introduced previously, invite users to make changes and compare.
+- Twist: Enable overlays for the same display, allowing users to leverage previously learned mechanics in more complex interfaces.
+- Conclusion: Invite users to demonstrate acquired skills in a new problem context.
+- Example: AFSC GAP Visualization implements Hayashida design for teaching Pacific cod data analysis.
+- This pattern tutorializes users through a real analysis, gradually building confidence and capability.
 
-- **Wednesday (with makeup on Friday)**: Interactive experience discussions
-- **Friday**: BART visualization assignment
-- **Monday**: Interactive visualization extension (assigned today)
-- **End**: Final project (to be assigned on Wednesday)
+#### Triangle Design
+Valleys and hills: modulate what is visible to the user at any given moment in time, offer hints towards other areas through landmark-based navigation.
 
-## Three Architectural Patterns from Game Design
+- Valley: Current region shows deep detail with local landmarks where users are immersed in specific data.
+- Over the hill: Landmarks support quick insights and navigation with overview elements to orient users.
+- Mechanics impact whole world: Global effects of user actions are visible so users understand system-wide implications.
+- Balance between detail (valley) and overview (hill).
+- Use landmarks for orientation and navigation.
+- Create rhythm between focused analysis and broad understanding.
+- Examples: Global Plastics AI Policy Tool and No Ceilings demonstrate effective landmark-based navigation.
 
-The lecture introduces three key architectural approaches borrowed from game design that can be applied to data visualization:
+### Case Studies
+Note that we looked at AFSC GAP in class (https://app.pyafscgap.org/) and then watched a video disecting Mario Level 1-1 (https://www.youtube.com/watch?v=ZH2wGpEZVgE).
 
-### Architecture 1: Levels
+#### Case study: AFSC GAP Visualization
+The AFSC GAP (Alaska Fisheries Science Center Groundfish Assessment Program) visualization demonstrates Hayashida Level Design implementation.
 
-**Definition**: Modulate what is visible to the user at any given moment in time, offer hints towards other areas.
+- Tool visualizes Pacific cod population data with analysis capabilities.
+- Introduction phase: Pre-configured analysis with simple modifications.
+- Development phase: Users modify parameters using learned controls.
+- Twist phase: Overlays and additional complexity build on existing knowledge.
+- Conclusion phase: Users apply skills to new analytical questions.
+- Users progressively learn data analysis capabilities without overwhelming initial tutorials.
 
-**Key Concepts**:
-- Control information visibility to prevent overwhelming users
-- Provide progressive disclosure of complexity
-- Use hints and breadcrumbs to suggest additional content
-- Think of dashboards as spaces with artifacts rather than just charts
+#### Case study: Mario Level 1-1
+Super Mario Bros. Level 1-1 teaches without words with principles directly applicable to data visualization onboarding.
 
-**Metaphor**: Dashboard as game level
-- Viewing a dashboard as having **space** and **artifacts**
-- Users can be thought of as **moving through** a complex world
-- Designers can optimize how players navigate and **collect insights**
-- Map user movement through the dashboard to better design navigation
+- Teaches all core game mechanics without explicit tutorial.
+- Users learn through guided exploration.
+- Architecture naturally leads to skill acquisition.
+- Progressive difficulty with safe experimentation.
+- Design entry points that teach basic interactions naturally.
+- Use visual design to suggest actions (affordances).
+- Allow safe experimentation without consequences.
+- Build complexity gradually based on demonstrated competence.
 
-**Example**: Illinois Soil Health Tool
-- Demonstrates controlled information revelation
-- Users progress through levels of detail
-- Available at: https://illinois-soil-health-tool.org/
+### Practical applications
+Elijah Meeks' work on "Designing a Data Visualization Dashboard Like It was a Game" provides frameworks for implementation.
 
-**Application**: Choose Your Own Adventure vs Interactive Fiction
-- Reimagining data dashboards through narrative structures
-- Zork-style interaction with data
-- Users explore data spaces like game environments
+- Think spatially about dashboard organization.
+- Consider user movement patterns through information.
+- Create natural pathways and decision points.
+- Use landmarks for orientation.
+- Design for exploration and discovery.
+- Apply patterns for onboarding users to complex visualizations.
+- Implement progressive disclosure of analytical capabilities.
+- Design spatial organization of dashboard elements and navigation through multi-view systems.
 
-### Architecture 2: Hayashida Level Design
+## Take Aways
+Game design principles provide powerful frameworks for structuring data visualization experiences that teach users how to interact with and explore complex information.
 
-**Definition**: A four-step progressive learning pattern for introducing mechanics and complexity.
-
-**The Four Steps**:
-1. **Introduction**: Show information about the tool with pre-filled controls for minor modifications
-2. **Development**: Use mechanics introduced previously, invite users to make changes and compare
-3. **Twist**: Enable overlays for the same display, allowing users to leverage previously learned mechanics in more complex interfaces
-4. **Conclusion**: Invite users to demonstrate acquired skills in a new problem context
-
-**Example**: AFSC GAP Visualization
-- Implements Hayashida design for teaching Pacific cod data analysis
-- Progressive introduction of controls and complexity
-- Users build skills incrementally through structured sequence
-- Tool available at: https://app.pyafscgap.org/
-
-**Key Insight**: This pattern tutorializes users through a "real" analysis, gradually building their confidence and capability with the visualization tool.
-
-### Architecture 3: Triangle Design
-
-**Definition**: Valleys and hills - modulate what is visible to the user at any given moment in time, offer hints towards other areas through landmark-based navigation.
-
-**Three Components**:
-1. **Valley**: Current region shows deep detail with local landmarks - users are immersed in specific data
-2. **Over the hill**: Landmarks support quick insights and navigation - overview elements help orient users
-3. **Mechanics impact whole world**: Global effects of user actions are visible - users understand system-wide implications
-
-**Key Principles**:
-- Balance between detail (valley) and overview (hill)
-- Use landmarks for orientation and navigation
-- Show both local and global impacts of user interactions
-- Create rhythm between focused analysis and broad understanding
-
-**Examples**:
-- **Global Plastics AI Policy Tool**: https://global-plastics-tool.org
-  - Valley view shows detailed policy scenarios
-  - Hill view provides global impact metrics
-  - Mechanics (policy adjustments) affect entire system
-
-- **No Ceilings**: http://www.noceilings.org
-  - Clinton Foundation data visualization project
-  - Demonstrates effective use of landmarks for navigation
-  - Balances detail and overview throughout user journey
-
-## Case Studies
-Let's consider some prior work to contextualize these ideas...
-
-### AFSC GAP Visualization Revisited
-
-The lecture revisits the AFSC GAP (Alaska Fisheries Science Center Groundfish Assessment Program) visualization as a detailed example of Hayashida Level Design implementation:
-
-**Tool Purpose**: Visualize Pacific cod population data with analysis capabilities
-
-**Design Implementation**:
-- **Introduction phase**: Pre-configured analysis with simple modifications
-- **Development phase**: Users modify parameters using learned controls
-- **Twist phase**: Overlays and additional complexity build on existing knowledge
-- **Conclusion phase**: Users apply skills to new analytical questions
-
-**Learning Outcomes**: Users progressively learn data analysis capabilities without overwhelming initial tutorials.
-
-### Mario Level 1-1
-
-The lecture examines Super Mario Bros. Level 1-1 as a masterclass in teaching without words - principles directly applicable to data visualization onboarding.
-
-**Why Mario 1-1 Matters**:
-- Teaches all core game mechanics without explicit tutorial
-- Users learn through guided exploration
-- Architecture naturally leads to skill acquisition
-- Progressive difficulty with safe experimentation
-
-**Transferable Principles for Data Visualization**:
-- Design entry points that teach basic interactions naturally
-- Use visual design to suggest actions (affordances)
-- Allow safe experimentation without consequences
-- Build complexity gradually based on demonstrated competence
-- Use environmental cues rather than text instructions
-
-## Practical Applications
-
-Let's turn next to how you can put these ideas into practice.
-
-### Designing Data Visualization Dashboards Like Games
-
-Referenced work by Elijah Meeks: "Designing a Data Visualization Dashboard Like It was a Game"
-
-- Think spatially about dashboard organization
-- Consider user movement patterns through information
-- Create natural pathways and decision points
-- Use landmarks for orientation
-- Design for exploration and discovery
-
-### Use of Patterns
-
-The architectural patterns provide frameworks for:
-
-- **Onboarding users** to complex visualizations
-- **Progressive disclosure** of analytical capabilities
-- **Spatial organization** of dashboard elements
-- **Navigation design** through multi-view systems
-- **Teaching interaction patterns** without explicit tutorials
-
-## Activities
-Additional related materials and activities...
-
-### Lecture Video
-[Watch Lecture 19: Architecture on Vimeo](https://vimeo.com/1073368650)
-
-### Assignment
-The goal for this exercise is to take one of your prior visualizations from the class (Stack Overflow Developer Survey, Census, or BART) and make it interactive with at least one user action.
-
-### Reading
-Please watch this closer look at [Triangle Design in Zelda](https://youtu.be/CZzcVs8tNfE).
-
-### Links
-- [Hayashida Level Design](https://youtu.be/dBmIkEvEBtA) - Super Mario 3D World's 4 Step Level Design
-- [AFSC GAP visualization](https://app.pyafscgap.org/)
-- [Mario Level 1-1](https://youtu.be/ZH2wGpEZVgE) - Design Club breakdown
+- Architecture in visualization guides users through information spaces just as game levels guide players through experiences.
+- Three key patterns: Levels (controlled visibility), Hayashida Design (four-step learning), and Triangle Design (valleys and hills).
+- Dashboard design benefits from spatial thinking where users move through space collecting insights.
+- Progressive disclosure and tutorialization help users build skills without overwhelming them.
+- Visual affordances and environmental cues can teach interaction patterns without explicit instructions.
+- Landmark-based navigation helps users orient themselves between detail and overview.
 
 ## Citations
 

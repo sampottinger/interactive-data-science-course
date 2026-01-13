@@ -1,45 +1,45 @@
-# Lecture 10: Sketching with Data
+# Lesson 10
+Sketching with data.
 
-**Stat 198: Interactive Data Science and Visualization**
-**Instructor:** A Samuel Pottinger
-**Original Instruction Date:** February 26, 2025
+## Objective
+Apply coding skills with data. Builds on previous lessons in creative coding and visual representation through completion of Skills Lab 4, particularly Tutorial 11 on data resources.
 
-## Description
+## Outline
+This lecture focuses on practical application of coding skills with data. Building on previous lessons (Lectures 8 and 9) on sketching in code, this lesson adds the crucial element of working with actual data and prepares students for upcoming lessons on formalizing glyphs and empirical evidence regarding encoding devices.
 
-Continue your exploration in code with Skills Lab 4 which includes the very important [Tutorial 11](/labs/resources_data.html). Please try to complete all remaining tutorials under Skills Lab 4 at [Labs](/labs).
+### Data integration in creative coding
+Students learn to work with data in code using Sketchingpy and apply visual encoding principles to data-driven graphics.
 
-## Key Takeaways
+  - Loading and processing data in code.
+  - Applying visual encoding principles to data.
+  - Creating data-driven visualizations from scratch.
 
-This lecture focuses on practical application of coding skills with data, building on previous lessons in creative coding and visual representation.
+### Skills Lab 4
+Students complete the remaining tutorials in Skills Lab 4, with special emphasis on Tutorial 11.
 
-### Learning Objectives
-- Work with data in code using Sketchingpy
-- Apply previous lessons on visual encoding to data-driven graphics
-- Complete Tutorial 11 on data resources
-- Practice skills from Skills Lab 4
+  - Tutorial 11 covers working with data resources.
+  - Practice skills from Skills Lab 4.
+  - Use Sketchingpy Online Sketchbook for hands-on practice.
 
-### Context in Course
-This lesson falls within the **Primitives** section of the course, where students learn about perception and cognitive science principles for visualization using Sketchingpy and Matplotlib.
+### Preparation for visual acuity
+Mention of the reading assignment introducing William Cleveland's work.
 
-## Content Overview
-This lecture directs students to complete the remaining tutorials in Skills Lab 4, with special emphasis on Tutorial 11 which covers working with data resources.
+  - Prepares students for upcoming lessons on formalizing glyphs.
+  - Introduces empirical evidence regarding encoding devices.
+  - Begins foundation for visual acuity discussions.
 
-### Data Integration in Creative Coding
-Building on previous lessons (Lectures 8 and 9) on sketching in code, this lesson adds the crucial element of working with actual data:
-- Loading and processing data in code
-- Applying visual encoding principles to data
-- Creating data-driven visualizations from scratch
+## Take Aways
+This lesson continues the Primitives section of the course, where students learn about perception and cognitive science principles for visualization using Sketchingpy and Matplotlib.
 
-### Preparation for Visual Acuity
-The reading assignment introduces William Cleveland's work, preparing students for upcoming lessons on formalizing glyphs and empirical evidence regarding encoding devices.
+  - Work with data in code using Sketchingpy.
+  - Apply previous lessons on visual encoding to data-driven graphics.
+  - Complete Tutorial 11 on data resources.
+  - Read about William Cleveland's contributions to data visualization science.
 
-## Activities
-To supplement the skills lab itself, we have some additional resources.
+## Citations
 
-### Links
-- [Skills Labs](/labs)
-- [Sketchingpy Online Sketchbook](https://editor.sketchingpy.org/)
+[1] A. Pottinger and Sketchingpy Contributors, "Sketchingpy," Sketchingpy Project, 2025. Available: https://sketchingpy.org/
 
-### Reading
-We are getting ready for visual acuity. Get started by reading [How William Cleveland Turned Data Visualization Into a Science](https://priceonomics.com/how-william-cleveland-turned-data-visualization/).
+[2] A. Pottinger and Sketchingpy Contributors, "Sketchingpy Online Sketchbook," Sketchingpy Project, 2025. Available: https://editor.sketchingpy.org/
 
+[3] D. Miller, "How William Cleveland Turned Data Visualization Into a Science," Priceonomics. Available: https://priceonomics.com/how-william-cleveland-turned-data-visualization/
