@@ -1,5 +1,6 @@
 # Lesson 23: Ethics in Data Visualization
 
+
 ## Objective
 Critically examine the power and responsibility designers hold when creating data visualizations, exploring how design choices influence representation, narrative, and agency while considering the ethical implications of these decisions.
 
@@ -9,6 +10,9 @@ This lecture addresses complex ethical questions in data visualization, explorin
 ### Content Warning
 This lecture includes challenging material on ethical issues in data visualization including representation, bias, and power dynamics in design.
 
+### Situating ourselves
+A starting look at https://www.youtube.com/watch?v=AaU6tI2pb3M&t=690s.
+
 ### Lenses on the World
 Data visualization is not neutral and serves as a way of seeing that shapes understanding.
 
@@ -17,7 +21,7 @@ Data visualization is not neutral and serves as a way of seeing that shapes unde
   - Designers have power and responsibility for how they shape understanding and narratives.
   - These questions extend beyond visual representation into the heart of technology, including AI.
 
-### Theoretical Foundations
+### Digging in deeper
 Philosophical and theoretical frameworks help motivate practical considerations.
 
   - Michel Foucault on Discourse: power prescribes particular rules and categories which define criteria for legitimating knowledge and truth, and discourse masks its construction and capacity to produce knowledge and meaning.
@@ -25,7 +29,7 @@ Philosophical and theoretical frameworks help motivate practical considerations.
   - Marian Wright Edelman: "You can't be what you can't see" - representation matters and shapes what people believe is possible.
 
 ### Encoding Choices and Ethics
-Cleveland and McGill's hierarchy revisited with ethical considerations.
+Let's reivist Cleveland and McGill's hierarchy with these ethical considerations.
 
   - What are the "most important" variables and who decides what matters?
   - Which variables receive the highest-accuracy encodings and what narrative does that tell?
@@ -43,7 +47,7 @@ The possibility space defines what questions we can and cannot ask of data.
 ### Possibility Space (Narrative)
 Beyond what actions are possible, we must consider what narratives are possible.
 
-  - Propaganda Games (Extra Credits): games and interactive visualizations can promote particular viewpoints through mechanics.
+  - Propaganda Games (Extra Credits): games and interactive visualizations can promote particular viewpoints through mechanics. https://www.youtube.com/watch?v=UP4_bMhZ4gA
   - Parable of the Polygons: what is gained through abstraction (accessibility, clarity, universal applicability) versus what is lost (specificity, individual experiences, historical context).
   - Three Treatments of Gun Deaths: comparing Periscopic Gun Deaths (emotional, individual focus), Rand Longitudinal Study (state-by-state trends, policy impacts), and MDSR Book (statistical presentation, data accuracy).
   - No single answer exists but each makes different choices about emotional versus analytical framing and individual versus aggregate perspective.
@@ -77,11 +81,11 @@ Data visualization involves unavoidable ethical choices about representation and
   - Data visualization is not neutral - we are creating "ways of seeing" that shape understanding.
   - Design choices involve power and responsibility including encoding devices, baselines, possibility space, and accessibility.
   - Theoretical foundations from Foucault, Victor, and Edelman help us understand how visualization shapes what is possible to think and see.
-  - Cleveland and McGill's hierarchy requires asking who decides what variables are "most important."
+  - Cleveland and McGill's hierarchy requires asking who decides what variables are "most important" to determine encoding.
   - Possibility space defines what questions and narratives are possible through allowed actions and interactions.
   - Agency and representation require considering how those represented would feel about their representation.
   - Design Justice Network Principles provide a framework for centering impacted voices.
-  - This work requires critical thinking without a formula - we must do the work of thoughtful ethical design.
+  - This work requires critical thinking without a formula: we must do the work of thoughtful ethical design.
 
 ## Citations
 
