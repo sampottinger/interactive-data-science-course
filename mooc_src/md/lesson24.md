@@ -1,4 +1,5 @@
-# Lesson 24: Inquiry-Based Design
+# Lesson 24: Goodbye
+Inquiry-based design and a farewell.
 
 ## Objective
 Explore inquiry-based design as a framework for approaching data visualization work and prepare for the final project.
@@ -14,8 +15,9 @@ Why do some visualization artists talk about questions?
   - User trust: Designing with confidence that users can navigate complex information spaces.
   - Zoom in, zoom out, zoom part way in: Allow users to explore data at multiple scales and levels of detail.
   - All roads lead to Rome: Design multiple pathways for users to reach key insights and information.
-  - Layer into complexity, trust your users: Don't oversimplify; instead, create scaffolding that supports exploration of complex datasets.
-  - Featured article from Stamen by Nicolette Hayes (2023): "Data Visualization for Education: When Asking Questions is the Answer" emphasizes the value of designing visualizations that prompt inquiry rather than simply presenting answers.
+  - Layer into complexity, trust your users: don't oversimplify. Instead, create scaffolding that supports exploration of complex datasets.
+
+Featured article from Stamen by Nicolette Hayes (2023): "Data Visualization for Education: When Asking Questions is the Answer" emphasizes the value of designing visualizations that prompt inquiry rather than simply presenting answers.
 
 ### Final projects
 Exploring datasets and formulating research questions.
@@ -33,12 +35,7 @@ Places to continue learning and building skills in data visualization and intera
   - Community engagement: Encouragement to engage with the broader data visualization and creative coding communities.
 
 ### Goodbye and reflection
-The course is dedicated to the instructor's grandmother, who taught how technology can help us become more human.
-
-  - A moment of reflection on the learning journey and what students have gained from the course.
-  - Emphasis on continuing the learning journey beyond the course.
-  - Encouragement to apply the four perspectives on data visualization in future work.
-  - Reminder that the skills learned can be used to create meaningful, impactful visualizations.
+The course is dedicated to my grandmother Barbara Berke, who taught how technology can help us become more human. The video contains a more detailed farewell to students.
 
 ## Take Aways
 Inquiry-based design treats questions as central to the visualization process, not just endpoints, enabling deeper engagement with data.
