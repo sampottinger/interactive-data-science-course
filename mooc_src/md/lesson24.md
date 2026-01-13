@@ -2,7 +2,7 @@
 Inquiry-based design and a farewell.
 
 ## Objective
-Explore inquiry-based design as a framework for approaching data visualization work and prepare for the final project.
+Final instructional lecture. Explore inquiry-based design as a framework for approaching data visualization work and prepare for the final project.
 
 ## Outline
 This concluding lecture brings together key concepts from the course and looks forward to what comes next for students. The session focuses on inquiry-based design, which refers to a wide range of viewpoints in data visualization that approach visualization through a series of questions. The lecture also provides guidance for final projects and offers resources for continued learning beyond the course.

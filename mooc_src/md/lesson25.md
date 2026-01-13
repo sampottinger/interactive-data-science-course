@@ -1,11 +1,11 @@
-# Lesson 25
-Briefly applying skills in the final project.
+# Lesson 25: Final Project
+Skills labs for the final project.
 
 ## Objective
 Synthesize all course concepts and skills to create a portfolio-quality capstone interactive data visualization project demonstrating mastery of representation, task, message, and dialogue perspectives.
 
 ## Outline
-This final lesson focuses on applying everything learned throughout the course in a comprehensive final project, drawing from all four perspectives on data visualization while providing resources for advanced skill development through optional JavaScript tutorials.
+This final lesson focuses on applying everything learned throughout the course in a comprehensive final project, drawing from all four perspectives on data visualization. Also, providing resources for advanced skill development through optional JavaScript tutorials.
 
 ### Course completion
 Throughout this course, you have explored data visualization through multiple lenses.
@@ -33,7 +33,7 @@ You have multiple technology options for your final project.
   - Python with Sketchingpy: Great for custom visualizations with full control.
   - JavaScript with D3.js: Industry-standard library for web-based data visualization.
   - JavaScript with P5.js: Excellent for creative coding and interactive graphics.
-  - Other technologies may be acceptable - consult the Course Manual.
+  - Other technologies may be acceptable (consult the Course Manual).
 
 ### Design considerations
 Consider how your final project incorporates elements from each perspective.
@@ -53,7 +53,7 @@ For those considering web technologies, optional JavaScript tutorial available.
   - Web-based visualizations are easily shareable.
 
 ### Accessibility and ethics
-Technical excellence must be paired with responsible design.
+Technical excellence must be paired with responsible design. We will check for:
 
   - Color contrast ratios (WCAG 2.0 AA or AAA).
   - Keyboard navigation support.
