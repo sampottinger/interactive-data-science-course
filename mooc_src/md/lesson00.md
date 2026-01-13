@@ -33,6 +33,13 @@ We take a 4 perspective approach across 6 sections with distinct but connected v
   - Interaction perspective on creating tools which foster user-generated meaning.
 
 ### How to use the course
+Various types of instruction.
+
+  - Outlines
+  - Captioned videos
+  - Slides
+  - Rubrics, guides, manual, syllabus.
+
 Materials can serve multiple objectives.
 
   - Take it cover to cover and gain a full balanced practical perspective on modern data visualization.
