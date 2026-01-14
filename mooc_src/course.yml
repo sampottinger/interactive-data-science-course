@@ -1,4 +1,27 @@
 sections:
+  preface:
+    - number: 0
+      name: Hello
+      video: 1154435218
+      slides: true
+      materials_pdf: true
+      materials_pptx: true
+      materials_md: true
+      text: >
+        Short pre-course primer providing a quick preview of the class' structure and purpose before offering some background and direction on how best to use the online open source resources.
+      citations:
+        - >
+          A. Pottinger, "TED Visualization," Gleap.org. Available: https://gleap.org/content/ted_visualization
+        - >
+          Wikipedia Contributors, "Snow-cholera-map-1.jpg." Wikimedia Foundation, Inc., 2020. Available: https://en.wikipedia.org/wiki/File:Snow-cholera-map-1.jpg
+        - >
+          A. Pottinger, L. Connor, B. Guzder-Williams, M. Weltman-Fahs, N. Gondek, and T. Bowles, "Climate-driven doubling of U.S. maize loss probability: Interactive simulation with neural network Monte Carlo," JDSSV, 2025. doi: 10.52933/jdssv.v5i3.134
+        - >
+          A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse, M. de Bruyn, C. Boettiger, E. Baker, K. Koy, and D. McCauley, "Global Plastics AI Policy Tool," University of California, 2024. Available: https://global-plastics-tool.org/
+        - >
+          A. Pottinger, "Food Sim SF," Gleap, 2024. Available: https://foodsimsf.com/
+        - >
+          A. S. Pottinger and G. Zarpellon, "Pyafscgap.org: Open source multi-modal Python-based tools for NOAA AFSC RACE GAP," JOSS, vol. 8, no. 86, p. 5593, Jun. 2023, doi: 10.21105/joss.05593.
   hello:
     - number: 1
       name: Hello Visualization
