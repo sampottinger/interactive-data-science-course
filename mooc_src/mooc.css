@@ -176,12 +176,11 @@ section {
   border-radius: 5px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   margin-left: 10px;
-  margint-right: 10px;
+  margin-right: 10px;
 }
 
 .intro .content {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 10px;
 }
 
 .intro h1 {
