@@ -1,5 +1,5 @@
-# Lesson 26: Using AI to Implement
-Instruction on using AI assistance effectively in data visualization.
+# Lesson 26: AI in Viz
+Using AI in visualization, including in imeplementation.
 
 ## Objective
 Offer a hands-on exploration of using AI in constructing data visualizations through two LLM-focused labs.
@@ -12,22 +12,23 @@ Since the original teaching of Stat 198, some things have changed.
 
   - Generative AI has grown in popularity but so has resistance to it.
   - Some of the ethical considerations are outside the scope of this class but remain relevant.
+  - Encourage looking at Gebru at https://satml.org/2023/videos/.
   - Libraries like Sketchingpy have added llms.txt or similar to help aid use.
 
-However, the rules and lessons haven’t really changed.
+However, the rules and lessons haven't really changed.
 
 ### New instruction
 Lesson 26 goes beyond the original material of Stat 198 as an update to prior instruction. Specifically, new skills lab 6 offers two new tutorials.
 
   - Tutorial 13 looks at Matplotlib and re-generating the graphic we examined early in lecture.
-  - Tutorial 14 expands this to Sketchingpy to provide a similar graphic.
+  - Tutorial 14 expands this to Sketchingpy to provide a similar graphic with an agent-based workflow.
   - Requires an AI assistant (we demonstrate with Claude).
 
 ### Role of AI
 AI does not provide a silver bullet for understanding or visualizing data.
 
   - Limitations of language: it can be hard to describe what exactly is desired.
-  - Don’t forget the role of iteration.
+  - Don't forget the role of iteration.
     - Avoid offloading responsibility to AI.
     - Consider how AI can afford faster iteration.
   - May provide new capabilities for user experience.
@@ -35,7 +36,7 @@ AI does not provide a silver bullet for understanding or visualizing data.
 ## Take Aways
 AI can help craft data visualizations but may serve more a role in accelerating implementation. However, it may be less helpful in design, especially as it can be difficult to describe in words what is desirable.
 
-  - Explore if AI is right for you, it’s OK not to use it.
+  - Explore if AI is right for you, it's OK not to use it.
   - LLMs can provide a quick visualization.
   - Use tools like LLMs.txt to access libraries.
   - Remain vigilant in iteration and use LLMs to try more ideas faster.
