@@ -299,11 +299,11 @@
                         different technical skills and complete a final project.
                     </p>
                     <ul>
-                        {% for lecture in sections['conclusion'] %}
+                        {% for lesson in sections['conclusion'] %}
                         <li>
                             <a href="/lesson{{ lesson['number'] }}.html"
-                                >Lecture {{ lecture['number'] }}: {{
-                                lecture['name'] }}</a
+                                >Lesson {{ lesson['number'] }}: {{
+                                lesson['name'] }}</a
                             >
                         </li>
                         {% endfor %}
