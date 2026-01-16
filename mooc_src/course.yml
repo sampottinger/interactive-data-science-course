@@ -1049,7 +1049,7 @@ sections:
       materials_pdf: false
       materials_pptx: false
       materials_md: true
-      text: > 
+      text: >
         <p>
           First, consider completing <a href="/labs/js.html">tutorial 12</a> which the final optional <a href="/labs">skills lab</a>
         </p>
@@ -1063,3 +1063,26 @@ sections:
         <p>
           That's the end of our time together. Thank you so much for joining me on on this journey! If you enjoyed this course, please let someone else know about it.
         </p>
+    - number: 26
+      name: AI in Viz
+      video: 1155141922
+      materials_pdf: true
+      materials_pptx: true
+      materials_md: true
+      text: >
+        Explore using AI in implementing data visualizations. This optional extra lesson looks at using generative AI by re-constructing an example data visualization from one of the early lessons of the course. Complete <a href="/labs">Skills Lab 6</a> to get hands on!
+      reading: >
+        Learn more about the ethical considerations by watching <a href="https://satml.org/2023/videos/">Timnit Gebru's talk on Eugenics and the Promise of Utopia through AGI</a>.
+      citations:
+          - >
+            Anthropic, "Claude," Anthropic, 2024. Available: https://www.anthropic.com/claude
+          - >
+            J. Willison, "llms.txt," llmstxt Project, 2024. Available: https://llmstxt.org/
+          - >
+            A. Pottinger and Sketchingpy Contributors, "Sketchingpy," Sketchingpy Project, 2025. Available: https://sketchingpy.org/
+          - >
+            J. D. Hunter, "Matplotlib: A 2D Graphics Environment," Computing in Science & Engineering, vol. 9, no. 3, pp. 90-95, 2007, doi: 10.1109/MCSE.2007.55.
+          - >
+            Isle Royale National Park Michigan, "Wolf & Moose Populations." National Parks Service, Mar. 29, 2024. Available: https://www.nps.gov/isro/learn/nature/wolf-moose-populations.htm
+          - >
+            T. Gebru, "Eugenics and the Promise of Utopia through Artificial General Intelligence," IEEE Conference on Secure and Trustworthy Machine Learning (SaTML), 2023. Available: https://satml.org/2023/videos/
