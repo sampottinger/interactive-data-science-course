@@ -1,3 +1,14 @@
+"""Static site generator for MOOC content.
+
+This module provides a command-line tool to render MOOC (Massive Open Online Course) content
+into static HTML pages. It supports rendering both index pages (course listings) and individual
+lesson pages using Jinja2 templates and YAML data files.
+
+The generator processes course structure from YAML files and applies Jinja2 templates to create
+a static website with navigation between lessons, citation formatting, and material links.
+
+License: BSD-3-Clause
+"""
 import itertools
 import re
 import sys
@@ -95,8 +106,8 @@ def main_lesson():
 
 def process_citation(citation: str) -> str:
   """Prepare a citation to be rendered in HTML.
-  
-  Insert links into citation text to be rendered as HTML where links are generated in two 
+
+  Insert links into citation text to be rendered as HTML where links are generated in two
   circumstances. First, when a DOI is mentioned like "doi: 10.1080/01621459.1984.10478080" where
   a link is inserted to https://www.doi.org/10.1080/01621459.1984.10478080. Similarly, any text
   which starts with http:// or https:// will become a link to the URL in text up until a non-URL

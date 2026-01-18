@@ -3,9 +3,9 @@ on:
     branches: ['**']
 
 jobs:
-  build_mooc:
+  check_python:
     runs-on: ubuntu-latest
-    name: Build MOOC
+    name: Check Python Code
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -14,7 +14,43 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install dependencies
-        run: pip install -r mooc_src/requirements.txt
+        run: pip install -r requirements.txt
+      - name: Run pyflakes
+        run: pyflakes mooc_src/*.py
+      - name: Run pycodestyle
+        run: pycodestyle mooc_src/*.py
+  check_js:
+    runs-on: ubuntu-latest
+    name: Check JavaScript Code
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install
+      - name: Run lint
+        run: npx eslint mooc_src/*.js
+  build_mooc:
+    runs-on: ubuntu-latest
+    name: Build MOOC
+    needs: [check_python, check_js]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
       - name: Scaffold MOOC
         run: mkdir mooc
       - name: Build MOOC

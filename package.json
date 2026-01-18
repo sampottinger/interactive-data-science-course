@@ -1,0 +1,11 @@
+{
+  "name": "interactive-data-science-course",
+  "version": "1.0.0",
+  "description": "Interactive Data Science and Visualization MOOC",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "eslint": "^8.44.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
