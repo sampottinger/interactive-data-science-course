@@ -31,3 +31,7 @@ Object-oriented programming enables more sophisticated and maintainable interact
 [1] B. Adhikari, "Marey's train schedule," University of Missouri Saint Louis, 2021. Available: https://badriadhikari.github.io/data-viz-workshop-2021/minards/
 
 [2] B. LeRoy, "Review of Tufte's The Visual Display of Quantitative Information," Carnegie Mellon University, 2018. Available: https://benjaminleroy.github.io/pages/blog/public/post/2018/05/16/review-of-tufte-s-the-visual-display-of-quantitative-information/
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

@@ -133,3 +133,7 @@ Accessibility is good for everyone, and making visualizations accessible require
 [16] A. Pottinger and Sketchingpy Contributors, "Sketchingpy," Sketchingpy Project, 2025. Available: https://sketchingpy.org/
 
 [17] WebAIM, "WebAIM's WCAG 2 Checklist," Utah State University. Available: https://webaim.org/standards/wcag/checklist
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

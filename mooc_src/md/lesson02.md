@@ -120,3 +120,7 @@ Effective visualizations can be understood and improved through systematic analy
 [41] J. Harris, "The Web's Secret Stories." TED Conference., 2007. Available: https://youtu.be/zAvNlh2Z0GI?feature=shared.
 
 [42] Thanks to https://unsplash.com/photos/DHl49oyrn7Y
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

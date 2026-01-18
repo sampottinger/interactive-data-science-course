@@ -94,3 +94,7 @@ Understanding human visual perception provides concrete principles for creating 
 [10] C. Ware, Information Visualization: Perception for Design. MK Press.
 
 [11] C. Ware, Visual Thinking for Design. MK Press.
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

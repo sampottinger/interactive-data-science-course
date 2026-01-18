@@ -66,3 +66,7 @@ Inquiry-based design treats questions as central to the visualization process, n
 [9] H. Horst and D. Miller, *Digital Anthropology*, Routledge, 2012.
 
 [10] A. Shvets, "Refactoring Guru," Refactoring Guru. Available: https://refactoring.guru/
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

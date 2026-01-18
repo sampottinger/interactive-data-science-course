@@ -118,3 +118,7 @@ Custom visual languages built on encoding principles enable more expressive data
 [19] T. Munzner, "15 Views on a Node-Link Graph," YouTube video. Available: https://youtu.be/WOBKnRlOAes
 
 [20] Dear Data Project, "Dear Data," 2015. Available: https://www.dear-data.com/theproject
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

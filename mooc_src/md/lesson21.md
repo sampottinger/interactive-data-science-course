@@ -108,3 +108,7 @@ Interactive visualizations can become media for thought when they empower users 
 [11] M. Appleton, "Maggie Appleton," Maggie Appleton. Available: https://maggieappleton.com/about
 
 [12] GDC, "Nicky Case 2019 Crop Photo," Wikimedia Foundation, 2025. Available: https://en.wikipedia.org/wiki/Nicky_Case#/media/File:Nicky_Case_-_Game_Developers_Conference_2019_Crop.png
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

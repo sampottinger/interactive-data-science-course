@@ -96,3 +96,7 @@ Browser-based tools like Jupyter Lite and Sketchingpy make Python programming ac
 [2] A. Pottinger and Sketchingpy Contributors, "Sketchingpy," Sketchingpy Project, 2025. Available: https://sketchingpy.org/
 
 [3] C. H. Swaroop, "A Byte of Python," 2003. Available: https://python.swaroopch.com
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

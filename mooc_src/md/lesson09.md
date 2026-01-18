@@ -85,3 +85,7 @@ Text, images, data, and user interaction offer engagement, exploration, and stor
 ## Citations
 
 [1] Thanks to https://badriadhikari.github.io/data-viz-workshop-2021/minards/ for imagery.
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

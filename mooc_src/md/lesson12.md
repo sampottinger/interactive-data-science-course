@@ -92,3 +92,7 @@ Visualization pattern selection should be driven by both data complexity and use
 [8] S. Zhang, "Canyon," OpenProcessing. Available: https://openprocessing.org/sketch/2552991
 
 [9] Y. Holtz and C. Healy, "From Data to Viz," 2018. Available: https://www.data-to-viz.com
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

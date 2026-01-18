@@ -104,3 +104,7 @@ Understanding these different conceptualizations of the user suggests designers 
 [11] L. Parren, "Pilot Driving Plane During Daytime," Unsplash, 2018. Available: https://unsplash.com/photos/pilot-driving-plane-during-daytime-S3xxiedz0hE
 
 [12] F Bezies, "Installation MS-Windows 98," Flickr, 2013. Available: https://www.flickr.com/photos/fredbezies/9136730422/
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

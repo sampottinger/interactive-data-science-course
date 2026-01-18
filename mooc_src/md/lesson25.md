@@ -133,3 +133,7 @@ This course has provided a comprehensive toolkit for creating meaningful, access
 [29] A. Pottinger, L. Connor, B. Guzder-Williams, M. Weltman-Fahs, N. Gondek, and T. Bowles, "Climate-driven doubling of U.S. maize loss probability: Interactive simulation with neural network Monte Carlo," *JDSSV*, 2025. doi: 10.52933/jdssv.v5i3.134
 
 [30] A. S. Pottinger and G. Zarpellon, "Pyafscgap.org: Open source multi-modal Python-based tools for NOAA AFSC RACE GAP," *JOSS*, vol. 8, no. 86, p. 5593, Jun. 2023, doi: 10.21105/joss.05593.
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

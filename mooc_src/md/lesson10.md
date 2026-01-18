@@ -43,3 +43,7 @@ This lesson continues the Primitives section of the course, where students learn
 [2] A. Pottinger and Sketchingpy Contributors, "Sketchingpy Online Sketchbook," Sketchingpy Project, 2025. Available: https://editor.sketchingpy.org/
 
 [3] D. Miller, "How William Cleveland Turned Data Visualization Into a Science," Priceonomics. Available: https://priceonomics.com/how-william-cleveland-turned-data-visualization/
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

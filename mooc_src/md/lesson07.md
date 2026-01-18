@@ -100,3 +100,7 @@ Gestalt Principles and thoughtful color usage form the foundation for creating c
 [13] M. Jacomy, "I Want Hue," Sciences-Po Medialab, 2024. Available: https://medialab.github.io/iwanthue/
 
 [14] B. Mathis "HSL Color Picker," 2024. Available: https://hslpicker.com/#ffd900
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

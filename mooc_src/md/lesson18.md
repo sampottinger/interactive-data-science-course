@@ -76,3 +76,7 @@ The mechanics of interaction themselves can tell stories and create meaning in d
 [7] K. Sumah, L. Floyd, and H. McCracken, "Changes in State Firearm Mortality," Rand Corporation, 2024. Available: https://www.rand.org/research/gun-policy/longitudinal-firearm-mortality.html
 
 [8] V. Hart and N. Case, "Parable of the Polygons," Nicky Case, 2022. Available: https://ncase.me/polygons/
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

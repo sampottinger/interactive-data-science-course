@@ -61,3 +61,7 @@ This lecture transitions from theory to practice, using coding to implement perc
 [3] OpenProcessing, "Discover Trending Projects," OpenProcessing, 2025. Available: https://openprocessing.org/discover/#/trending
 
 [4] Genuary, "Genuary Creative Coding Prompts," Genuary, 2025. Available: https://genuary.art
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.
