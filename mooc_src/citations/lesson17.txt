@@ -1,0 +1,10 @@
+M. Hoekstra, “MacPaint,” Geek Technique, 2007. Available: https://www.geektechnique.org/blog/786/mac-paint.html
+J. Portnow, "Kinect Disconnect - How NOT to do Motion Control," Extra Credits, 2012. Available: https://www.youtube.com/watch?v=ijcezUy3ZzY
+A. Pottinger, "Podcast Anthropology," Gleap, 2015. Available: https://gleap.org/static/special/podcast_viz/index.html
+A. Pottinger, "Ted Viz 2," Gleap, 2013. Available: https://gleap.org/content/ted_visualization_2
+A. Pottinger, "Montreal Policy Simulator," University of California, 2025. Available: https://mlf-policy-explorer.org/
+A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse, M. de Bruyn, C. Boettiger, E. Baker, K. Koy, and D. McCauley, "Global Plastics AI Policy Tool," University of California, 2024. Available: https://global-plastics-tool.org/
+A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M, Morse, C. Liu, S. Hu, M. de Bruyn, C. Boettiger, E. Baker, and D. McCauley, "Pathways to reduce global plastic waste mismanagement and greenhouse gas emissions by 2050," Science, 2024. doi: 10.1126/science.adr3837
+A. Pottinger, "FoodSim: San Francisco." 2023. Available: https://foodsimsf.com/
+J. Portnow, "Affordances - How Design Teaches Us Without Words," Extra Credits, 2014. Available: https://www.youtube.com/watch?v=QCSXEKHL6fc
+A. Pottinger, L. Connor, B. Guzder-Williams, M. Weltman-Fahs, N. Gondek, and T. Bowles, "Climate-driven doubling of U.S. maize loss probability: Interactive simulation with neural network Monte Carlo," JDSSV, 2025. doi: 10.52933/jdssv.v5i3.134

@@ -79,7 +79,22 @@ def main_lesson():
 
   lesson = lessons_by_number[lesson_number]
 
-  citations_raw = lesson.get('citations', [])
+  # Load citations from text file if available
+  citations_raw = []
+  has_citations = lesson.get('citations', False)
+  if has_citations:
+    citations_file = f'citations/lesson{lesson_number:02d}.txt'
+    try:
+      with open(citations_file, 'r') as f:
+        for line in f:
+            # Skip empty lines and whitespace-only lines
+            stripped = line.strip()
+            if stripped:
+                citations_raw.append(stripped)
+    except FileNotFoundError:
+        # If file doesn't exist, citations_raw remains empty
+        pass
+
   citations = map(process_citation, citations_raw)
 
   template_vals = {

@@ -1,1088 +1,612 @@
 sections:
   preface:
-    - number: 0
-      name: Hello
-      video: 1154435218
-      slides: true
-      materials_pdf: true
-      materials_pptx: true
-      materials_md: true
-      text: >
-        Short pre-course primer providing a quick preview of the class' structure and purpose before offering some background and direction on how best to use the online open source resources.
-      citations:
-        - >
-          A. Pottinger, "TED Visualization," Gleap.org. Available: https://gleap.org/content/ted_visualization
-        - >
-          Wikipedia Contributors, "Snow-cholera-map-1.jpg." Wikimedia Foundation, Inc., 2020. Available: https://en.wikipedia.org/wiki/File:Snow-cholera-map-1.jpg
-        - >
-          A. Pottinger, L. Connor, B. Guzder-Williams, M. Weltman-Fahs, N. Gondek, and T. Bowles, "Climate-driven doubling of U.S. maize loss probability: Interactive simulation with neural network Monte Carlo," JDSSV, 2025. doi: 10.52933/jdssv.v5i3.134
-        - >
-          A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse, M. de Bruyn, C. Boettiger, E. Baker, K. Koy, and D. McCauley, "Global Plastics AI Policy Tool," University of California, 2024. Available: https://global-plastics-tool.org/
-        - >
-          A. Pottinger, "Food Sim SF," Gleap, 2024. Available: https://foodsimsf.com/
-        - >
-          A. S. Pottinger and G. Zarpellon, "Pyafscgap.org: Open source multi-modal Python-based tools for NOAA AFSC RACE GAP," JOSS, vol. 8, no. 86, p. 5593, Jun. 2023, doi: 10.21105/joss.05593.
-  hello:
-    - number: 1
-      name: Hello Visualization
-      video: 1047306328
-      slides: true
-      materials_pdf: true
-      materials_pptx: true
-      materials_md: true
-      text: > 
-        An overview of the course, what you will learn, and what we will be doing together. We look at 4 different perspectives on data visualization in order to paint a landscape of ideas that will be revisited and expanded upon throughout the rest of the semester.
-      assignment: >
-        For getting warmed up, please write about 4 sentences reflecting on what you are hoping to gain from the course. If you are feel comfortable and want to engage with other learners, post your response online!
-      reading: > 
-        We will learn more about how tools change the way we think. Please watch the very excellent <a href="https://vimeo.com/67076984">Media for Thinking the Unthinkable lecture</a> delivered by Bret Victor at the MIT Media Lab. A question for you to consider is what kinds of representations of thought do you use every day?
-      links:
-        - url: https://youtu.be/2CMw4i9DiaM?t=112&feature=shared
-          text: Video for the section on data visualization as task
-        - url: https://mooc.interactivedatascience.courses/
-          text: Course Homepage
-      citations:
-        - >
-          G. Aisch, A. Cox, and K. Quealy, "You Draw It: How Family Income Predicts Children's College Chances." The New York Times Company, May 28, 2015. Available: https://www.nytimes.com/interactive/2015/05/28/upshot/you-draw-it-how-family-income-affects-childrens-college-chances.html
-        - >
-          R. Binx, "Vortex." 2015. Available: https://rachelbinx.com/data-visualization/vortex
-        - >
-          R. Binx, "Designing for Realtime Spacecraft Operations." BocoupLLC, Apr. 2016. Available: https://www.youtube.com/watch?v=HuYKhSHcRSQ
-        - >
-          Book Books Book, "We Feel Fine." YouTube, Dec. 2009. Available: https://www.youtube.com/watch?v=vi8WrnWNSzU
-        - >
-          W. S. Cleveland and R. McGill, "Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods," Journal of the American Statistical Association, vol. 79, no. 387, pp. 531–554, Sep. 1984, doi: 10.1080/01621459.1984.10478080.
-        - >
-          Flipflops, "I feel… everything." Flipflops.org, Oct. 2007. Available: https://www.flipflops.org/category/thoughtful/page/2/
-        - >
-          V. Hart and N. Case, "Parable of the Polygons." Nicky Case, 2022. Available: https://ncase.me/polygons/
-        - >
-          Isle Royale National Park MIchigan, "Wolf & Moose Populations." National Parks Service, Mar. 29, 2024. Available: https://www.nps.gov/isro/learn/nature/wolf-moose-populations.htm
-        - > 
-          S. D. Kamvar and J. Harris, "We feel fine and searching the emotional web," in Proceedings of the fourth ACM international conference on Web search and data mining, Hong Kong China: ACM, Feb. 2011, pp. 117–126. doi: 10.1145/1935826.1935854.
-        - >
-          A. KIRK, DATA VISUALISATION: a handbook for data driven design. S.l.: SAGE PUBLICATIONS, 2024.
-        - >
-          A. Kirk, "Visualizing Data." Visualising Data Ltd, 2024. Available: https://visualisingdata.com/
-        - >
-          T. Munzner, "A Nested Model for Visualization Design and Validation," IEEE Trans. Visual. Comput. Graphics, vol. 15, no. 6, pp. 921–928, Nov. 2009, doi: 10.1109/TVCG.2009.111.
-        - >
-          T. Munzner, "Visualization Analysis and Design." AK Peters Visualization Series, 2014. Available: https://books.apple.com/us/book/visualization-analysis-and-design/id1567434451
-        - >
-          T. Munzner, Visualization analysis and design. in A.K. Peters visualization series. Boca Raton: CRC Press, Taylor & Francis Group, CRC Press is an imprint of the Taylor & Francis Group, an informa business, 2015.
-        - >
-          T. Munzner, "Task Abstraction (Ch 3), Visualization Analysis & Design, 2021." YouTube, 2021. Available: https://www.youtube.com/watch?v=pHljd-cgICY
-        - >
-          M. Nix, Visual simplexity: die Darstellung großer Datenmengen. Frankfurt am Main: entwickler.press, 2013.
-        - >
-          K. Rees and Periscopic, "U.S. Gun Deaths." Periscopic, 2018. Available: https://guns.periscopic.com/
-        - >
-          A. Pottinger, "FoodSim: San Francisco." 2023. Available: https://foodsimsf.com/
-        - >
-          A. Pottinger, "Income Gaps." 2023. Available: https://incomegaps.com/
-        - >
-          A. Pottinger, "Interactive Data Science." 2024. Available: https://mooc.interactivedatascience.courses/
-        - >
-          A. S. Pottinger et al., "Combining Game Design and Data Visualization to Inform Plastics Policy: Fostering Collaboration between Science, Decision-Makers, and Artificial Intelligence," 2023, arXiv. doi: 10.48550/ARXIV.2312.11359.
-        - >
-          A. Pottinger, L. Connor, B. Guzder-Williams, M. Weltman-Fahs, N. Gondek, and T. Bowles, "Climate-driven doubling of U.S. maize loss probability: Interactive simulation with neural network Monte Carlo," JDSSV, 2025. doi: 10.52933/jdssv.v5i3.134
-        - >
-          A. S. Pottinger and G. Zarpellon, "Pyafscgap.org: Open source multi-modal Python-basedtools for NOAA AFSC RACE GAP," JOSS, vol. 8, no. 86, p. 5593, Jun. 2023, doi: 10.21105/joss.05593.
-        - > 
-          J. N. Rooney-Varga, F. Kapmeier, J. D. Sterman, A. P. Jones, M. Putko, and K. Rath, "The Climate Action Simulation," Simulation & Gaming, vol. 51, no. 2, pp. 114–140, Apr. 2020, doi: 10.1177/1046878119890643.
-        - >
-          J. Schell, The art of game design: a book of lenses, Third edition. Boca Raton: CRC Press/Taylor & Francis Group, 2020.
-        - >
-          J. Snow, On the mode of communication of cholera. London: John Churchill, 1855. Available: https://archive.org/details/b28985266/page/n57/mode/2up
-        - >
-          J. Stasko, C. Gorg, Z. Liu, and K. Singhal, "Jigsaw: Supporting Investigative Analysis through Interactive Visualization," in 2007 IEEE Symposium on Visual Analytics Science and Technology, Sacramento, CA, USA: IEEE, Oct. 2007, pp. 131–138. doi: 10.1109/VAST.2007.4389006.
-        - >
-          The Document Foundation, LibreOffice. (2024). The Document Foundation.
-        - >
-          ThoughtLab, The Wendy and Eric Schmidt Center for Data Science and Environment, and Benioff Ocean Science Laboratory, "A Treaty to End Plastic Pollution. Forever." University of California, 2023. Available: https://plasticstreaty.berkeley.edu/
-        - >
-          B. Victor, "Inventing on Principle." CUSEC, 2012. Available: https://www.youtube.com/watch?v=PUv66718DII
-        - >
-          B. Victor, "Media for Thinking the Unthinkable." MIT Media Lab, Apr. 04, 2013. Available: https://vimeo.com/67076984
-        - >
-          Visual Computing BLOG, "Tamara Munzner discussed quantification in terms of a nested model of visualization design and evaluation." Transregional Collaborative Research Center. Available: https://www.visual-computing.org/2018/10/17/computerscienceconferenceweek/201810_conferenceweek_munzner-2/
-        - >
-          C. Ware, "Colin Ware | The Data Visualzation Research Lab." University of New Hampshire. Available: https://ccom.unh.edu/vislab/people/colin_ware/
-        - >
-          C. Ware, Information visualization: perception for design, Fourth edition. Cambridge, MA: Morgan Kaufmann, 2021.
-        - >
-          Wikipedia Contributors, "Snow-cholera-map-1.jpg." Wikimedia Foundation, Inc., 2020. Available: https://en.wikipedia.org/wiki/File:Snow-cholera-map-1.jpg
-        - >
-          Wikipedia Contributors, "Bret Victor." Wikimedia Foundation, Inc., Jun. 22, 2023. Available: https://en.wikipedia.org/wiki/Bret_Victor
-        - >
-          Wikipedia Contributors, "Star Wars: Galaxy's Edge." Wikimedia Foundation, Inc., Sep. 21, 2024. Available: https://en.wikipedia.org/wiki/Star_Wars:_Galaxy%27s_Edge
-        - >
-          Wikipedia Contributors, "It's a Small World." Wikimedia Foundation, Inc., Sep. 24, 2024. Available: https://en.wikipedia.org/wiki/It%27s_a_Small_World
-        - >
-          N. Yee, "Motivations for Play in Online Games," CyberPsychology & Behavior, vol. 9, no. 6, pp. 772–775, Dec. 2006, doi: 10.1089/cpb.2006.9.772.
-        - >
-          J. Harris and S. Kavar, "We Feel Fine." We Feel Fine., 2006. Available: http://www.wefeelfine.org and https://jjh.org/we-feel-fine.
-        - >
-          J. Harris, "The Web's Secret Stories." TED Conference., 2007. Available: https://youtu.be/zAvNlh2Z0GI?feature=shared.
-        - >
-          Thanks to https://unsplash.com/photos/DHl49oyrn7Y
-    - number: 2
-      name: Hello Examples
-      video: 1047985024
-      slides: true
-      materials_pdf: true
-      materials_pptx: true
-      materials_md: true
-      text: > 
-        We revisit the four perspectives on data visualization from our first lecture and use them to analyze some demonstrative examples. These are the types of things you'll be able to build by the end of the course!
-      assignment: >
-        Find a visualization from your daily life or from the news. What do you think the piece's intended message is? How does the author convey this message? Write 4 - 8 sentences with your answers.
-      reading: > 
-        We will look at open source and licensing. This will be important to understand how to use existing open source tools and how to make new ones. Please review <a href="https://youtu.be/KI5qBAWcQv8">Winslow 2019</a> followed by <a href="https://youtu.be/TF3crgcQr28">Harris 2013</a>.
-      links:
-        - text: We Feel Fine (recommend watching from 2:40 to 8:04)
-          url: https://www.ted.com/talks/jonathan_harris_the_web_s_secret_stories/details .
-        - text: Income gaps (viz 1)
-          url: https://incomegaps.com/
-        - text: En-ROADS (viz 2)
-          url: https://en-roads.climateinteractive.org/scenario.html?v=25.1.0
-        - text: Gun Deaths (viz 3)
-          url: https://guns.periscopic.com/
-        - text: Food Sim SF (viz 4)
-          url: https://foodsimsf.com/
-        - text: Parable of the Polygons (viz 5)
-          url: https://ncase.me/polygons/
-      citations:
-        - >
-          G. Aisch, A. Cox, and K. Quealy, "You Draw It: How Family Income Predicts Children's College Chances." The New York Times Company, May 28, 2015. Available: https://www.nytimes.com/interactive/2015/05/28/upshot/you-draw-it-how-family-income-affects-childrens-college-chances.html
-        - >
-          R. Binx, "Vortex." 2015. Available: https://rachelbinx.com/data-visualization/vortex
-        - >
-          R. Binx, "Designing for Realtime Spacecraft Operations." BocoupLLC, Apr. 2016. Available: https://www.youtube.com/watch?v=HuYKhSHcRSQ
-        - >
-          J. Harris, "We Feel Fine." YouTube, Dec. 2009. Available: https://www.youtube.com/watch?v=vi8WrnWNSzU
-        - >
-          W. S. Cleveland and R. McGill, "Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods," Journal of the American Statistical Association, vol. 79, no. 387, pp. 531–554, Sep. 1984, doi: 10.1080/01621459.1984.10478080.
-        - >
-          Flipflops, "I feel… everything." Flipflops.org, Oct. 2007. Available: https://www.flipflops.org/category/thoughtful/page/2/
-        - >
-          V. Hart and N. Case, "Parable of the Polygons." Nicky Case, 2022. Available: https://ncase.me/polygons/
-        - >
-          Isle Royale National Park MIchigan, "Wolf & Moose Populations." National Parks Service, Mar. 29, 2024. Available: https://www.nps.gov/isro/learn/nature/wolf-moose-populations.htm
-        - >
-          S. D. Kamvar and J. Harris, "We feel fine and searching the emotional web," in Proceedings of the fourth ACM international conference on Web search and data mining, Hong Kong China: ACM, Feb. 2011, pp. 117–126. doi: 10.1145/1935826.1935854.
-        - >
-          A. KIRK, DATA VISUALISATION: a handbook for data driven design. S.l.: SAGE PUBLICATIONS, 2024.
-        - >
-          A. Kirk, "Visualizing Data." Visualising Data Ltd, 2024. Available: https://visualisingdata.com/
-        - >
-          T. Munzner, "A Nested Model for Visualization Design and Validation," IEEE Trans. Visual. Comput. Graphics, vol. 15, no. 6, pp. 921–928, Nov. 2009, doi: 10.1109/TVCG.2009.111.
-        - >
-          T. Munzner, "Visualization Analysis and Design." AK Peters Visualization Series, 2014. Available: https://books.apple.com/us/book/visualization-analysis-and-design/id1567434451
-        - >
-          T. Munzner, Visualization analysis and design. in A.K. Peters visualization series. Boca Raton: CRC Press, Taylor & Francis Group, CRC Press is an imprint of the Taylor & Francis Group, an informa business, 2015.
-        - >
-          T. Munzner, "Task Abstraction (Ch 3), Visualization Analysis & Design, 2021." YouTube, 2021. Available: https://www.youtube.com/watch?v=pHljd-cgICY
-        - >
-          M. Nix, Visual simplexity: die Darstellung großer Datenmengen. Frankfurt am Main: entwickler.press, 2013.
-        - >
-          K. Rees, Periscopic, "U.S. Gun Deaths." Periscopic, 2018. Available: https://guns.periscopic.com/
-        - >
-          A. Pottinger, "FoodSim: San Francisco." 2023. Available: https://foodsimsf.com/
-        - >
-          A. Pottinger, "Income Gaps." 2023. Available: https://incomegaps.com/
-        - >
-          A. Pottinger, "Interactive Data Science." 2024. Available: https://mooc.interactivedatascience.courses/
-        - >
-          A. S. Pottinger et al., "Combining Game Design and Data Visualization to Inform Plastics Policy: Fostering Collaboration between Science, Decision-Makers, and Artificial Intelligence," 2023, arXiv. doi: 10.48550/ARXIV.2312.11359.
-        - >
-          A. Pottinger, L. Connor, B. Guzder-Williams, M. Weltman-Fahs, N. Gondek, and T. Bowles, "Climate-driven doubling of U.S. maize loss probability: Interactive simulation with neural network Monte Carlo," JDSSV, 2025. doi: 10.52933/jdssv.v5i3.134
-        - >
-          A. S. Pottinger and G. Zarpellon, "Pyafscgap.org: Open source multi-modal Python-basedtools for NOAA AFSC RACE GAP," JOSS, vol. 8, no. 86, p. 5593, Jun. 2023, doi: 10.21105/joss.05593.
-        - >
-          J. N. Rooney-Varga, F. Kapmeier, J. D. Sterman, A. P. Jones, M. Putko, and K. Rath, "The Climate Action Simulation," Simulation & Gaming, vol. 51, no. 2, pp. 114–140, Apr. 2020, doi: 10.1177/1046878119890643.
-        - >
-          J. Schell, The art of game design: a book of lenses, Third edition. Boca Raton: CRC Press/Taylor & Francis Group, 2020.
-        - >
-          J. Snow, On the mode of communication of cholera. London: John Churchill, 1855. Available: https://archive.org/details/b28985266/page/n57/mode/2up
-        - >
-          J. Stasko, C. Gorg, Z. Liu, and K. Singhal, "Jigsaw: Supporting Investigative Analysis through Interactive Visualization," in 2007 IEEE Symposium on Visual Analytics Science and Technology, Sacramento, CA, USA: IEEE, Oct. 2007, pp. 131–138. doi: 10.1109/VAST.2007.4389006.
-        - >
-          The Document Foundation, LibreOffice. (2024). The Document Foundation.
-        - >
-          ThoughtLab, The Wendy and Eric Schmidt Center for Data Science and Environment, and Benioff Ocean Science Laboratory, "A Treaty to End Plastic Pollution. Forever." University of California, 2023. Available: https://plasticstreaty.berkeley.edu/
-        - >
-          B. Victor, "Inventing on Principle." CUSEC, 2012. Available: https://www.youtube.com/watch?v=PUv66718DII
-        - >
-          B. Victor, "Media for Thinking the Unthinkable." MIT Media Lab, Apr. 04, 2013. Available: https://vimeo.com/67076984
-        - >
-          Visual Computing BLOG, "Tamara Munzner discussed quantification in terms of a nested model of visualization design and evaluation." Transregional Collaborative Research Center. Available: https://www.visual-computing.org/2018/10/17/computerscienceconferenceweek/201810_conferenceweek_munzner-2/
-        - >
-          C. Ware, "Colin Ware | The Data Visualzation Research Lab." University of New Hampshire. Available: https://ccom.unh.edu/vislab/people/colin_ware/
-        - >
-          C. Ware, Information visualization: perception for design, Fourth edition. Cambridge, MA: Morgan Kaufmann, 2021.
-        - >
-          Wikipedia Contributors, "Snow-cholera-map-1.jpg." Wikimedia Foundation, Inc., 2020. Available: https://en.wikipedia.org/wiki/File:Snow-cholera-map-1.jpg
-        - >
-          Wikipedia Contributors, "Bret Victor." Wikimedia Foundation, Inc., Jun. 22, 2023. Available: https://en.wikipedia.org/wiki/Bret_Victor
-        - >
-          Wikipedia Contributors, "Star Wars: Galaxy’s Edge." Wikimedia Foundation, Inc., Sep. 21, 2024. Available: https://en.wikipedia.org/wiki/Star_Wars:_Galaxy%27s_Edge
-        - >
-          Wikipedia Contributors, "It’s a Small World." Wikimedia Foundation, Inc., Sep. 24, 2024. Available: https://en.wikipedia.org/wiki/It%27s_a_Small_World
-        - >
-          N. Yee, "Motivations for Play in Online Games," CyberPsychology & Behavior, vol. 9, no. 6, pp. 772–775, Dec. 2006, doi: 10.1089/cpb.2006.9.772.
-        - >
-          J. Harris and S. Kavar, "We Feel Fine." We Feel Fine., 2006. Available: http://www.wefeelfine.org and https://jjh.org/we-feel-fine.
-        - >
-          J. Harris, "The Web’s Secret Stories." TED Conference., 2007. Available: https://youtu.be/zAvNlh2Z0GI?feature=shared.
-        - >
-          Thanks to https://unsplash.com/photos/DHl49oyrn7Y
-    - number: 3
-      name: Hello Creative Python
-      video: 1049110017
-      slides: true
-      materials_pdf: true
-      materials_pptx: true
-      materials_md: true
-      text: >
-        A hands-on first look at how we can use Python for creative coding. See tutorials at <a href="/labs">Labs</a>.
-      assignment: >
-        Revisit the visualization from the last exercise. What might the 4 perspectives say about this visualization?
-        
-        <ul>
-          <li>What visual encoding devices are used?</li>
-          <li>What task or user journey is being accomplished through the piece?</li>
-          <li>Does the piece try to also convey an emotion and, if so, how?</li>
-          <li>Does the piece invite the reader to reach new their own conclusions about the data and, if so, how?</li>
-        </ul>
-        
-        Please write 4 - 8 sentences.
-      reading: Optionally review <a href="https://python.swaroopch.com">A Byte of Python</a> if you want to brush up on (or learn) the fundamentals of Python.
-      citations:
-        - >
-          Thanks to https://badriadhikari.github.io/data-viz-workshop-2021/minards/ for imagery.
-      links:
-        - text: Skills Labs
-          url: /labs
-        - text: Sketchingpy Online Sketchbook
-          url: https://editor.sketchingpy.org/
-    - number: 4
-      name: Hello Creative Objects
-      video: 1049130582
-      slides: true
-      materials_pdf: true
-      materials_pptx: true
-      materials_md: true
-      text: >
-        Using object-oriented programming for interactive graphical simulation. See tutorials at <a href="/labs">Labs</a>.
-      reading: >
-        We will take a look at some of the ideas of Edward Tufte that continue to shape data visualization today. Please read <a href="https://benjaminleroy.github.io/pages/blog/public/post/2018/05/16/review-of-tufte-s-the-visual-display-of-quantitative-information/">this review of Tufte from LeRoy</a>.
-      citations:
-        - >
-          Thanks to https://badriadhikari.github.io/data-viz-workshop-2021/minards/ for imagery.
-      links:
-        - text: Skills Labs
-          url: /labs
-        - text: Sketchingpy Online Sketchbook
-          url: https://editor.sketchingpy.org/
-  primitives:
-    - number: 5
-      name: Visualization as Design
-      video: 1053582417
-      slides: true
-      materials_pdf: true
-      materials_pptx: true
-      materials_md: true
-      text: >
-        A look at some historic figures in data visualization along with a discussion of Tufte. Also, a look at some demonstrative examples to refine our language for discussing information design. All of this sets the stage for glyphs and our transition into cognitive and perception science.
-      assignment: >
-        Find another visualization but limit yourself to agencies and dedicated graphics teams within newsrooms. Examples: <a href="https://periscopic.com/#!/impacts">Periscopic</a>, <a href="https://stamen.com/work/">Stamen</a>, <a href="https://fathom.info/projects/">Fathom</a>, <a href="https://www.accurat.it">Accurat</a>, or <a href="https://www.nytimes.com/spotlight/graphics">NYT Graphics</a>. Please answer the following:
+  - number: 0
+    name: Hello
+    video: 1154435218
+    slides: true
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: 'Short pre-course primer providing a quick preview of the class'' structure and purpose before offering some background
+      and direction on how best to use the online open source resources.
 
-        <ul>
-          <li>Which encoding devices are used within this piece?</li>
-          <li>What would Tufte say about the lie-factor, data-ink ratio, and data density?</li>
-        </ul>
-        
-        Please write 4 - 8 sentences.
-      reading: >
-        Please start to explore the core essential concept of pre-attentive attributes through the reading at <a href="https://medium.com/@vidya83.kesavan/preattentive-attributes-in-visualization-an-example-cb05ba1c9371">Kesavan (2018)</a>.
-      links:
-        - text: Darts (data visualization examples)
-          url: https://www.datavis.ca/gallery/lie-factor.php
-        - text: The Gratest Ever Infographic (shown in class)
-          url: https://youtu.be/3T7jMcstxY0?feature=shared
-      citations:
-        - >
-          B. Adhikari, "Marey's train schedule," University of Missouri Saint Louis, 2021. Available: https://badriadhikari.github.io/data-viz-workshop-2021/minards/
-        - >
-          M. van Langren, "Grados de la Longitud," 1644. Available: https://commons.wikimedia.org/wiki/File:Grados_de_la_Longitud.jpg
-        - >
-          J. Norman, "Michael Florent van Langren issues the Earliest Known Graph of Statistical Data," History of Information, 2013. Available: https://www.historyofinformation.com/detail.php?id=3415
-        - >
-          W. Playfair, "Time Series of Exports and Imports of Denmark and Norway," Commercial and Political Atlas, 2011. Available: https://en.wikipedia.org/wiki/William_Playfair#/media/File:Playfair_TimeSeries-2.png
-        - >
-          D. Bellhouse, "The Flawed Genius of William Playfair: The Story of the Father of Statistical Graphics," University of Toronto Press, 2023. Available: https://www.jstor.org/stable/10.3138/jj.6167271
-        - >
-          M. Callejon, "Masters series: William Playfair, the father of statistical graphics," Flourish, 2023. Available: https://flourish.studio/blog/masters-william-playfair-father-of-statistical-graphics/
-        - >
-          H. Hering, "Florence Nightingale Portrait," 1860. Available: https://en.wikipedia.org/wiki/Florence_Nightingale#/media/File:Florence_Nightingale_(H_Hering_NPG_x82368).jpg
-        - >
-          J. Mansky, "W.E.B. Du Bois’ Visionary Infographics Come Together for the First Time in Full Color," Smithsonian Magazine, 2018. Available: https://www.smithsonianmag.com/history/first-time-together-and-color-book-displays-web-du-bois-visionary-infographics-180970826/
-        - >
-          University of Illinois, "Faculty portrait photograph of Professor of Electrical Engineering Donald Bitzer," University of Illinois, 1971. Available: https://archon.library.illinois.edu/archives/index.php?p=digitallibrary%2Fdigitalcontent&id=7887
-        - >
-          J. Scott, "5.08 of BBS: The Documentary," Textfiles, 2005. Available: https://en.wikipedia.org/wiki/PLATO_%28computer_system%29#/media/File:PLATO_chem_exp.jpg
-        - >
-          B. Leroy, "Review of Tufte’s The Visual Display of Quantitative Information," Carnegie Mellon University, 2018. Available: https://benjaminleroy.github.io/pages/blog/public/post/2018/05/16/review-of-tufte-s-the-visual-display-of-quantitative-information/
-        - >
-          M. Friendly, "Darts," York University, 2025. Available: https://www.datavis.ca/gallery/lie-factor.php.
-        - >
-          Princeton University, "Public Lectures: Edward Tufte (Photo)," Princeton University. Available: https://lectures.princeton.edu/lectures/2013/edward-tufte
-        - >
-          Union of Concerned Scientists, "Brief History of US Fuel Efficiency Standards," Union of Concerned Scientists, 2017. Available: https://www.ucsusa.org/resources/brief-history-us-fuel-efficiency
-        - >
-          N. Vega, "A gallon of gas was 65 cents in 1978—here’s how much it cost every year since," CNBC, 2022. Available: https://www.cnbc.com/2022/04/13/how-much-gas-cost-every-year-since-1978.html
-        - >
-          M. Dunnigan, "Why Tufte is Wrong," Medium, 2014. Available: https://medium.com/@MattDuignan/why-tuftes-wrong-a9bd6a14ff8e
-        - >
-          B. Adhikari, "Data Density," University of Missouri Saint Louis, 2021. Available: https://badriadhikari.github.io/data-viz-workshop-2021/Tufte/Chapter_8/
-    - number: 6
-      name: Visualization as Science 1
-      video: 1055340727
-      slides: true
-      materials_pdf: true
-      materials_pptx: true
-      materials_md: true
-      text: >
-        A look at the human visual system and the connection between the eyes and brain. Explore how we extract visual information for the environment and what that means for data visualization.
-      assignment: >
-        Plot job satisfaction from the Stack Overflow Developer Survey using your preferred software.
-        This can be done in spreadsheet software if desired! Your plot could be a bar chart, a scatterplot, a heatmap, etc. You don't need to plot all variables but, instead, can focus on a small subset of interest. Please provide 2 - 4 sentences describing how this representation uses pre-attentive features. You may use a <a href="/support/stackoverflow.xlsx">simplified dataset</a> I prepared for you or the <a href="https://survey.stackoverflow.co">original full dataset from Stack Overflow</a>.
-      reading: >
-        We are getting a look at the Gestalt Principles through <a href="https://youtu.be/c1qdyszaeTU?feature=shared">Gestalt - The Parts and the Whole by Extra Credits</a>.
-      links:
-        - text: The evolution of the human eye (shown in class)
-          url: https://www.youtube.com/watch?v=qrKZBh8BL_U
-      citations:
-        - >
-          B. Adhikari, "Marey's train schedule," University of Missouri Saint Louis, 2021. Available: https://badriadhikari.github.io/data-viz-workshop-2021/minards/
-        - >
-          S. Bell, "Introduction and Perceptual Elements of Colour," University of Saskatchewan. Available: https://openpress.usask.ca/introgeomatics/chapter/introduction-and-perceptual-elements-of-colour/
-        - >
-          J. Harvey, "The evolution of the human eye," TED Ed, 2015. Available: https://www.youtube.com/watch?v=qrKZBh8BL_U
-        - >
-          D. Camors, Y. Trotter, P. Pouget, S. Gilardeau & J. Durand, "Visual straight-ahead preference in saccadic eye movements," Nature Communications, 2016. Available: https://www.nature.com/articles/srep23124
-        - >
-          OSC Rice, "Vision," Washington State University. Available: https://opentext.wsu.edu/psych105nusbaum/chapter/vision/
-        - >
-          "Vision," CourseHero. Available: https://www.coursehero.com/study-guides/wmopen-psychology/outcome-vision/
-        - >
-          E. Adelson, "Checker shadow illusion," Wikimedia, 2018. Available: https://en.wikipedia.org/wiki/Checker_shadow_illusion#/media/File:Checker_shadow_illusion.svg
-        - >
-          DancingPhilosopher, "Mach Bands," Wikimedia, 2012. Available: https://en.wikipedia.org/wiki/Optical_illusion#/media/File:Mach_bands_-_animation.gif
-        - >
-          US Department of Education, "College Scorecard," US Department of Education. Available: https://collegescorecard.ed.gov/search/?sort=salary:desc&page=0&state=CA
-        - >
-          C. Ware, "Information Visualization: Perception for Design," MK Press.
-        - >
-          C. Ware, "Visual Thinking for Design," MK Press.
-    - number: 7
-      name: Visualization as Science 2
-      video: 1055836472
-      slides: true
-      materials_pdf: true
-      materials_pptx: true
-      materials_md: true
-      text: >
-        Tour the Gestalt Principles and engage in a hands-on activity to put them into practice. Afterwards, explore color vision including color spaces, perceptually consistent color schemes, tools for color, and general guidance.
-      assignment: >
-        <p>Return to your Job Satisfaction exercise. Make a new graphic that displays the same variables but use a different visual representation. For example, if you previously chose a scatter plot, try a heatmap or bar chart. It doesn't necessarily need to be better or worse. It just needs to be different. Finally, write 3 - 4 sentence about how your plot uses pre-attentive variables.</p>
-      links:
-        - text: Activity as a PowerPoint file
-          url: /support/lecture7.pptx
-      citations:
-        - >
-          B. Adhikari, "Marey's train schedule," University of Missouri Saint Louis, 2021. Available: https://badriadhikari.github.io/data-viz-workshop-2021/minards/
-        - >
-          C. Ware, "Information Visualization: Perception for Design," MK Press.
-        - >
-          C. Ware, "Visual Thinking for Design," MK Press.
-        - >
-          Interaction Design Foundation - IxDF. "What are the Gestalt Principles?" Interaction Design Foundation - IxDF. Available: https://www.interaction-design.org/literature/topics/gestalt-principles (accessed Feb. 12, 2025).
-        - >
-          MRMW, "Reification," Wikimedia, 2020. Available: https://en.wikipedia.org/wiki/Gestalt_psychology#/media/File:Reification.svg
-        - >
-          B. Young, "Cross Keys," Wikimedia, 2011. Available: https://en.wikipedia.org/wiki/Gestalt_psychology#/media/File:CrossKeys.png.
-        - >
-          "Vision," CourseHero. Available: https://www.coursehero.com/study-guides/wmopen-psychology/outcome-vision/
-        - >
-          R. Madsen, "Perceptually uniform color spaces," Programming Design Systems, 2020. Available: https://programmingdesignsystems.com/color/perceptually-uniform-color-spaces/
-        - >
-          SharkD, "RGB Cube," Wikimedia, 2010. Available: https://en.wikipedia.org/wiki/RGB_color_spaces#/media/File:RGB_Cube_Show_lowgamma_cutout_b.png.
-        - >
-          J. Rus, "HSL and HSV Models," Wikimedia, 2010. Available: https://en.wikipedia.org/wiki/RGB_color_spaces#/media/File:RGB_Cube_Show_lowgamma_cutout_b.png.
-        - >
-          K. Cherry, "Figure / Ground Perception in Psychology," Verywell Mind, 2023. Available: https://www.verywellmind.com/what-is-figure-ground-perception-2795195.
-        - >
-          C. Brewer, M Harrower, and The Pennsylvania State University, "Colorbrewer 2.0," The Pennsylvania State University, 2013. Available: https://colorbrewer2.org/.
-        - >
-          M. Jacomy, "I Want Hue," Sciences-Po Medialab, 2024. Available: https://medialab.github.io/iwanthue/.
-        - >
-          B. Mathis "HSL Color Picker," 2024. Available: https://hslpicker.com/#ffd900
-    - number: 8
-      name: Sketching in Code 1
-      video: 1057751163
-      slides: true
-      materials_pdf: true
-      materials_pptx: true
-      materials_md: true
-      text: >
-        Using code to draw graphics as guided by recent concepts from class including preattentive features. See <a href="/labs">Labs</a>.
-      assignment: >
-        <p>We are going to do a little creative coding where we will build up a sketch over the next two exercises. This doesn't need to be too complicated or even too much code. Also, don't worry if this first attempt is a little rough. You will get a chance to refine your work!</p>
-        <p>All that said, please use the concepts we have been exploring from class to build an artistic graphic that is drawn using code. In this piece, please explore at least one Gestalt Principles and one Pre-attentive Feature. This will offer important practice for drawing graphics relevant to building highly customized visualizations. For this submission, please do not make it interactive yet. We will do that in the follow up activity! Need inspiration? Check out the following...</p>
-        <ul>
-          <li><a href="https://sketchingpy.org/examples.html">Sketchingpy examples</a></li>
-          <li><a href="https://openprocessing.org/discover/#/trending">OpenProcessing</a></li>
-          <li><a href="https://genuary.art">Genuary</a></li>
-        </ul>
-      reading: >
-        I wanted to keep things light so you can focus on the Skills Labs. So, we are going to look at little ahead with a very short preview about why geospatial visualization is so hard. Please watch <a href="https://youtu.be/kIID5FDi2JQ">All Maps are Wrong</a>.
-      links:
-        - text: Skills Labs
-          url: /labs
-        - text: Sketchingpy Online Sketchbook
-          url: https://editor.sketchingpy.org/
-      citations:
-        - >
-          Thanks to https://badriadhikari.github.io/data-viz-workshop-2021/minards/ for imagery.
-    - number: 9
-      name: Sketching in Code 2
-      url: /lecture9.html
-      materials_pdf: false
-      materials_pptx: false
-      materials_md: true
-      text: >
-        Looking at the other elements we can bring into our work... text, images, data, and the user. Please try to complete the remaining tutorials under Skills Lab 3 at <a href="/labs">Labs</a>.
-      assignment: >
-        For this follow up exercise, we are going to add interactivity. Specifically, add interaction that uses only a single action or verb like hover or click. This action could be contextualized like we saw in Skills Lab 4’s rotating color wheels. However, the goal is to explore how our work can respond to a simple user action.
-      links:
-        - text: Skills Labs
-          url: /labs
-        - text: Sketchingpy Online Sketchbook
-          url: https://editor.sketchingpy.org/
-    - number: 10
-      name: Sketching with Data
-      materials_pdf: false
-      materials_pptx: false
-      materials_md: true
-      text: >
-        Continue your exploration in code with Skills Lab 4 which includes the very important <a href="/labs/resources_data.html">Tutorial 11</a>. Please try to complete all remaining tutorials under Skills Lab 4 at <a href="/labs">Labs</a>.
-      links:
-        - text: Skills Labs
-          url: /labs
-        - text: Sketchingpy Online Sketchbook
-          url: https://editor.sketchingpy.org/
-      reading: >
-        We are getting ready for visual acuity. Get started by reading <a href="https://priceonomics.com/how-william-cleveland-turned-data-visualization/">How William Cleveland Turned Data Visualization Into a Science</a>.
-    - number: 11
-      name: Formalizing Glyphs
-      video: 1061901487
-      slides: true
-      materials_pdf: true
-      materials_pptx: true
-      materials_md: true
-      text: >
-        Consider essential empirical evidence regarding encoding devices from Cleveland and McGill. Also, examine important techniques that allow us to re-use high value encoding devices. Specifically, learn more about dual axes, shared axes, and direct labeling.
-      assignment: >
-        <p>
-          We have a fantastic opportunity to apply recent class concepts through an exploration of US Census American Community Survey (2024) results.
-        </p>
-        <p>
-          <strong>Introduction</strong>: We will be working with a dataset derived from US Census data. Though originally designed for use in understanding "income gaps" between different groups of people, it can also be used to explore other questions about economics and work. It can explore differing levels of participation in different occupations, unemployment rates, and regional trends. There are a lot of variables to explore! This project will provide a space to experiment with encoding devices, data density, preattentive features, and more.
-        </p>
-        <p>
-          <strong>Objective</strong>: Please visualize a subset of variables from this dataset. If using shared axes, please have a clear "main plot" from which those axes are shared. For this assignment, please include 4 or more variables. For example, you could visualize unemployment and wage (2 variables) by age and gender (2 variables). This would be a total of 4 variables (unemployment, wage, age, gender).
-        </p>
-        <p>
-          <strong>Data</strong>: You may use the <a href="https://microdata.epi.org">EPI Microdata Extracts</a> directly but I recommend using the Income Gaps CSV instead to focus your time on the visual elements of this project. If you are using the <a href="https://incomegaps.com/data.csv">Income Gaps CSV file</a>, I also recommend using <a href="https://github.com/sampottinger/incomegaps/blob/main/preprocess/data_model.py">data_model.py</a> as described in the <a href="https://github.com/sampottinger/incomegaps?tab=readme-ov-file#data">Income Gaps CSV documentation</a>. If using the online editor for Sketchingpy, just download <a href="https://github.com/sampottinger/incomegaps/blob/main/preprocess/data_model.py">data_model.py</a> and add it to your sketchbook.
-        </p>
-        <p>
-          <strong>Tech</strong>: Though you may be able to complete Assignment 9 using prebuilt charts like through Matplotlib, you may find it more difficult to continue using it for later exercises where detailed control over each element of your graphic will be essential. Therefore, I recommend using Python and Sketchingpy. To help, see also <a href="https://gist.github.com/sampottinger/f69bd39def0cd05268d5a639d49f354e">the code I used for my Stack Overflow Developers Survey example</a>.
-        </p>
-      reading: >
-        Start taking a look through <a href="https://www.data-to-viz.com">https://www.data-to-viz.com</a>. We will dig in deeper together soon!
-      citations:
-        - >
-          A. Pottinger, "TED Visualization," Gleap.org. Available: https://gleap.org/content/ted_visualization
-        - >
-          W. Cleveland and R. McGill, "Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods," Journal of the American Statistical Association, 1984. Available: https://www.jstor.org/stable/2288400
-        - >
-          "Stack Overflow Annual Developer Survey 2024," Stack Exchange Inc, 2024. Available: https://survey.stackoverflow.co/
-        - >
-          C. Ware, "Information Visualization: Perception for Design (Interactive Technologies)," Morgan Kaufmann, 2012.
-        - >
-          A. Cairo, "The Truthful Art," New Riders, 2016.
-        - >
-          NYT Opinion, "10 Columnists and Writers Rate What Mattered in Trump’s First Full Month," New York Times Company, 2025. Available: https://www.nytimes.com/interactive/2025/03/01/opinion/trump-administration-first-month.html.
+      '
+    citations: true
+  hello:
+  - number: 1
+    name: Hello Visualization
+    video: 1047306328
+    slides: true
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: 'An overview of the course, what you will learn, and what we will be doing together. We look at 4 different perspectives
+      on data visualization in order to paint a landscape of ideas that will be revisited and expanded upon throughout the
+      rest of the semester.
+
+      '
+    assignment: 'For getting warmed up, please write about 4 sentences reflecting on what you are hoping to gain from the
+      course. If you are feel comfortable and want to engage with other learners, post your response online!
+
+      '
+    reading: 'We will learn more about how tools change the way we think. Please watch the very excellent <a href="https://vimeo.com/67076984">Media
+      for Thinking the Unthinkable lecture</a> delivered by Bret Victor at the MIT Media Lab. A question for you to consider
+      is what kinds of representations of thought do you use every day?
+
+      '
+    links:
+    - url: https://youtu.be/2CMw4i9DiaM?t=112&feature=shared
+      text: Video for the section on data visualization as task
+    - url: https://mooc.interactivedatascience.courses/
+      text: Course Homepage
+    citations: true
+  - number: 2
+    name: Hello Examples
+    video: 1047985024
+    slides: true
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: 'We revisit the four perspectives on data visualization from our first lecture and use them to analyze some demonstrative
+      examples. These are the types of things you''ll be able to build by the end of the course!
+
+      '
+    assignment: 'Find a visualization from your daily life or from the news. What do you think the piece''s intended message
+      is? How does the author convey this message? Write 4 - 8 sentences with your answers.
+
+      '
+    reading: 'We will look at open source and licensing. This will be important to understand how to use existing open source
+      tools and how to make new ones. Please review <a href="https://youtu.be/KI5qBAWcQv8">Winslow 2019</a> followed by <a
+      href="https://youtu.be/TF3crgcQr28">Harris 2013</a>.
+
+      '
+    links:
+    - text: We Feel Fine (recommend watching from 2:40 to 8:04)
+      url: https://www.ted.com/talks/jonathan_harris_the_web_s_secret_stories/details .
+    - text: Income gaps (viz 1)
+      url: https://incomegaps.com/
+    - text: En-ROADS (viz 2)
+      url: https://en-roads.climateinteractive.org/scenario.html?v=25.1.0
+    - text: Gun Deaths (viz 3)
+      url: https://guns.periscopic.com/
+    - text: Food Sim SF (viz 4)
+      url: https://foodsimsf.com/
+    - text: Parable of the Polygons (viz 5)
+      url: https://ncase.me/polygons/
+    citations: true
+  - number: 3
+    name: Hello Creative Python
+    video: 1049110017
+    slides: true
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: 'A hands-on first look at how we can use Python for creative coding. See tutorials at <a href="/labs">Labs</a>.
+
+      '
+    assignment: "Revisit the visualization from the last exercise. What might the 4 perspectives say about this visualization?\n\
+      <ul>\n  <li>What visual encoding devices are used?</li>\n  <li>What task or user journey is being accomplished through\
+      \ the piece?</li>\n  <li>Does the piece try to also convey an emotion and, if so, how?</li>\n  <li>Does the piece invite\
+      \ the reader to reach new their own conclusions about the data and, if so, how?</li>\n</ul>\nPlease write 4 - 8 sentences.\n"
+    reading: Optionally review <a href="https://python.swaroopch.com">A Byte of Python</a> if you want to brush up on (or
+      learn) the fundamentals of Python.
+    citations: true
+    links:
+    - text: Skills Labs
+      url: /labs
+    - text: Sketchingpy Online Sketchbook
+      url: https://editor.sketchingpy.org/
+  - number: 4
+    name: Hello Creative Objects
+    video: 1049130582
+    slides: true
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: 'Using object-oriented programming for interactive graphical simulation. See tutorials at <a href="/labs">Labs</a>.
+
+      '
+    reading: 'We will take a look at some of the ideas of Edward Tufte that continue to shape data visualization today. Please
+      read <a href="https://benjaminleroy.github.io/pages/blog/public/post/2018/05/16/review-of-tufte-s-the-visual-display-of-quantitative-information/">this
+      review of Tufte from LeRoy</a>.
+
+      '
+    citations: true
+    links:
+    - text: Skills Labs
+      url: /labs
+    - text: Sketchingpy Online Sketchbook
+      url: https://editor.sketchingpy.org/
+  primitives:
+  - number: 5
+    name: Visualization as Design
+    video: 1053582417
+    slides: true
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: 'A look at some historic figures in data visualization along with a discussion of Tufte. Also, a look at some demonstrative
+      examples to refine our language for discussing information design. All of this sets the stage for glyphs and our transition
+      into cognitive and perception science.
+
+      '
+    assignment: "Find another visualization but limit yourself to agencies and dedicated graphics teams within newsrooms.\
+      \ Examples: <a href=\"https://periscopic.com/#!/impacts\">Periscopic</a>, <a href=\"https://stamen.com/work/\">Stamen</a>,\
+      \ <a href=\"https://fathom.info/projects/\">Fathom</a>, <a href=\"https://www.accurat.it\">Accurat</a>, or <a href=\"\
+      https://www.nytimes.com/spotlight/graphics\">NYT Graphics</a>. Please answer the following:\n<ul>\n  <li>Which encoding\
+      \ devices are used within this piece?</li>\n  <li>What would Tufte say about the lie-factor, data-ink ratio, and data\
+      \ density?</li>\n</ul>\nPlease write 4 - 8 sentences.\n"
+    reading: 'Please start to explore the core essential concept of pre-attentive attributes through the reading at <a href="https://medium.com/@vidya83.kesavan/preattentive-attributes-in-visualization-an-example-cb05ba1c9371">Kesavan
+      (2018)</a>.
+
+      '
+    links:
+    - text: Darts (data visualization examples)
+      url: https://www.datavis.ca/gallery/lie-factor.php
+    - text: The Gratest Ever Infographic (shown in class)
+      url: https://youtu.be/3T7jMcstxY0?feature=shared
+    citations: true
+  - number: 6
+    name: Visualization as Science 1
+    video: 1055340727
+    slides: true
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: 'A look at the human visual system and the connection between the eyes and brain. Explore how we extract visual
+      information for the environment and what that means for data visualization.
+
+      '
+    assignment: 'Plot job satisfaction from the Stack Overflow Developer Survey using your preferred software. This can be
+      done in spreadsheet software if desired! Your plot could be a bar chart, a scatterplot, a heatmap, etc. You don''t need
+      to plot all variables but, instead, can focus on a small subset of interest. Please provide 2 - 4 sentences describing
+      how this representation uses pre-attentive features. You may use a <a href="/support/stackoverflow.xlsx">simplified
+      dataset</a> I prepared for you or the <a href="https://survey.stackoverflow.co">original full dataset from Stack Overflow</a>.
+
+      '
+    reading: 'We are getting a look at the Gestalt Principles through <a href="https://youtu.be/c1qdyszaeTU?feature=shared">Gestalt
+      - The Parts and the Whole by Extra Credits</a>.
+
+      '
+    links:
+    - text: The evolution of the human eye (shown in class)
+      url: https://www.youtube.com/watch?v=qrKZBh8BL_U
+    citations: true
+  - number: 7
+    name: Visualization as Science 2
+    video: 1055836472
+    slides: true
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: 'Tour the Gestalt Principles and engage in a hands-on activity to put them into practice. Afterwards, explore color
+      vision including color spaces, perceptually consistent color schemes, tools for color, and general guidance.
+
+      '
+    assignment: '<p>Return to your Job Satisfaction exercise. Make a new graphic that displays the same variables but use
+      a different visual representation. For example, if you previously chose a scatter plot, try a heatmap or bar chart.
+      It doesn''t necessarily need to be better or worse. It just needs to be different. Finally, write 3 - 4 sentence about
+      how your plot uses pre-attentive variables.</p>
+
+      '
+    links:
+    - text: Activity as a PowerPoint file
+      url: /support/lecture7.pptx
+    citations: true
+  - number: 8
+    name: Sketching in Code 1
+    video: 1057751163
+    slides: true
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: 'Using code to draw graphics as guided by recent concepts from class including preattentive features. See <a href="/labs">Labs</a>.
+
+      '
+    assignment: "<p>We are going to do a little creative coding where we will build up a sketch over the next two exercises.\
+      \ This doesn't need to be too complicated or even too much code. Also, don't worry if this first attempt is a little\
+      \ rough. You will get a chance to refine your work!</p> <p>All that said, please use the concepts we have been exploring\
+      \ from class to build an artistic graphic that is drawn using code. In this piece, please explore at least one Gestalt\
+      \ Principles and one Pre-attentive Feature. This will offer important practice for drawing graphics relevant to building\
+      \ highly customized visualizations. For this submission, please do not make it interactive yet. We will do that in the\
+      \ follow up activity! Need inspiration? Check out the following...</p> <ul>\n  <li><a href=\"https://sketchingpy.org/examples.html\"\
+      >Sketchingpy examples</a></li>\n  <li><a href=\"https://openprocessing.org/discover/#/trending\">OpenProcessing</a></li>\n\
+      \  <li><a href=\"https://genuary.art\">Genuary</a></li>\n</ul>\n"
+    reading: 'I wanted to keep things light so you can focus on the Skills Labs. So, we are going to look at little ahead
+      with a very short preview about why geospatial visualization is so hard. Please watch <a href="https://youtu.be/kIID5FDi2JQ">All
+      Maps are Wrong</a>.
+
+      '
+    links:
+    - text: Skills Labs
+      url: /labs
+    - text: Sketchingpy Online Sketchbook
+      url: https://editor.sketchingpy.org/
+    citations: true
+  - number: 9
+    name: Sketching in Code 2
+    url: /lecture9.html
+    materials_pdf: false
+    materials_pptx: false
+    materials_md: true
+    text: 'Looking at the other elements we can bring into our work... text, images, data, and the user. Please try to complete
+      the remaining tutorials under Skills Lab 3 at <a href="/labs">Labs</a>.
+
+      '
+    assignment: 'For this follow up exercise, we are going to add interactivity. Specifically, add interaction that uses only
+      a single action or verb like hover or click. This action could be contextualized like we saw in Skills Lab 4’s rotating
+      color wheels. However, the goal is to explore how our work can respond to a simple user action.
+
+      '
+    links:
+    - text: Skills Labs
+      url: /labs
+    - text: Sketchingpy Online Sketchbook
+      url: https://editor.sketchingpy.org/
+    citations: false
+  - number: 10
+    name: Sketching with Data
+    materials_pdf: false
+    materials_pptx: false
+    materials_md: true
+    text: 'Continue your exploration in code with Skills Lab 4 which includes the very important <a href="/labs/resources_data.html">Tutorial
+      11</a>. Please try to complete all remaining tutorials under Skills Lab 4 at <a href="/labs">Labs</a>.
+
+      '
+    links:
+    - text: Skills Labs
+      url: /labs
+    - text: Sketchingpy Online Sketchbook
+      url: https://editor.sketchingpy.org/
+    reading: 'We are getting ready for visual acuity. Get started by reading <a href="https://priceonomics.com/how-william-cleveland-turned-data-visualization/">How
+      William Cleveland Turned Data Visualization Into a Science</a>.
+
+      '
+    citations: false
+  - number: 11
+    name: Formalizing Glyphs
+    video: 1061901487
+    slides: true
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: 'Consider essential empirical evidence regarding encoding devices from Cleveland and McGill. Also, examine important
+      techniques that allow us to re-use high value encoding devices. Specifically, learn more about dual axes, shared axes,
+      and direct labeling.
+
+      '
+    assignment: "<p>\n  We have a fantastic opportunity to apply recent class concepts through an exploration of US Census\
+      \ American Community Survey (2024) results.\n</p> <p>\n  <strong>Introduction</strong>: We will be working with a dataset\
+      \ derived from US Census data. Though originally designed for use in understanding \"income gaps\" between different\
+      \ groups of people, it can also be used to explore other questions about economics and work. It can explore differing\
+      \ levels of participation in different occupations, unemployment rates, and regional trends. There are a lot of variables\
+      \ to explore! This project will provide a space to experiment with encoding devices, data density, preattentive features,\
+      \ and more.\n</p> <p>\n  <strong>Objective</strong>: Please visualize a subset of variables from this dataset. If using\
+      \ shared axes, please have a clear \"main plot\" from which those axes are shared. For this assignment, please include\
+      \ 4 or more variables. For example, you could visualize unemployment and wage (2 variables) by age and gender (2 variables).\
+      \ This would be a total of 4 variables (unemployment, wage, age, gender).\n</p> <p>\n  <strong>Data</strong>: You may\
+      \ use the <a href=\"https://microdata.epi.org\">EPI Microdata Extracts</a> directly but I recommend using the Income\
+      \ Gaps CSV instead to focus your time on the visual elements of this project. If you are using the <a href=\"https://incomegaps.com/data.csv\"\
+      >Income Gaps CSV file</a>, I also recommend using <a href=\"https://github.com/sampottinger/incomegaps/blob/main/preprocess/data_model.py\"\
+      >data_model.py</a> as described in the <a href=\"https://github.com/sampottinger/incomegaps?tab=readme-ov-file#data\"\
+      >Income Gaps CSV documentation</a>. If using the online editor for Sketchingpy, just download <a href=\"https://github.com/sampottinger/incomegaps/blob/main/preprocess/data_model.py\"\
+      >data_model.py</a> and add it to your sketchbook.\n</p> <p>\n  <strong>Tech</strong>: Though you may be able to complete\
+      \ Assignment 9 using prebuilt charts like through Matplotlib, you may find it more difficult to continue using it for\
+      \ later exercises where detailed control over each element of your graphic will be essential. Therefore, I recommend\
+      \ using Python and Sketchingpy. To help, see also <a href=\"https://gist.github.com/sampottinger/f69bd39def0cd05268d5a639d49f354e\"\
+      >the code I used for my Stack Overflow Developers Survey example</a>.\n</p>\n"
+    reading: 'Start taking a look through <a href="https://www.data-to-viz.com">https://www.data-to-viz.com</a>. We will dig
+      in deeper together soon!
+
+      '
+    citations: true
   combination:
-    - number: 12
-      name: Patterns
-      video: 1062955146
-      slides: true
-      materials_pdf: true
-      materials_pptx: true
-      materials_md: true
-      text: >
-        A tour through common chart types used for different situations as well as common terminology and a brief introductory mention of domains and tasks.
-      assignment: >
-        <p>
-          We will continue the Census visuliazation you started in the last exercise. This activity is the same but, whereas the previous prompt asked for 4 or more variables, please include 6 or more variables this time. If you want that cheat code, <a href="https://github.com/sampottinger/census-example-sketchingpy">my response is available on GitHub</a>. License under BSD-3-Clause. Please run assignment_10.py. Totally optional! Just leaving this here if you want to take advantage of it. See also a <a href="https://vimeo.com/1064872882">video walkthrough of the code</a>.
-        </p>
-      reading: >
-        Please take a look at a discussion of <a href="https://vimeo.com/133608605">Dear Data at Eyeo (2015)</a>.
-      citations:
-        - >
-          Tableau, "Tableau Logo," Salesforce, 2024. Available: https://www.salesforce.com/news/tableau-from-salesforce-logo-color-1/
-        - >
-          H. Wickham, "Tidy Data," Journal of Statistical Software, 2014. Available: https://www.jstatsoft.org/article/view/v059i10 
-        - >
-          Tableau, "Dimensions and Measures, Blue and Green," Salesforce, Available: https://help.tableau.com/current/pro/desktop/en-us/datafields_typesandroles.htm
-        - >
-          S. Carmody, "Mosaic Big," Wikimedia Foundation, 2009. Available: https://en.wikipedia.org/wiki/Mosaic_plot#/media/File:Mosaic-big.png
-        - >
-          G. Silvermanaz, "2012 Singapore Products Export Treemap," Wikimedia Foundation, 2014. Available: https://en.wikipedia.org/wiki/Treemapping#/media/File:2012_Singapore_Products_Export_Treemap.png
-        - >
-          S. Maskey, "Zoomable Sunburst with Labels Issue," StackOverflow, 2014. Available: https://stackoverflow.com/questions/24547620/zoomable-sunburst-with-labels-issue
-        - >
-          T. Munzner, "A Nested Model for Visualization Design and Validation," in IEEE Transactions on Visualization and Computer Graphics, vol. 15, no. 6, pp. 921-928, Nov.-Dec. 2009, doi: 10.1109/TVCG.2009.111
-        - >
-          S. Zhang, "Canyon," OpenProcessing. Available: https://openprocessing.org/sketch/2552991
-        - >
-          Y. Holtz and C. Healy, "From Data to Viz," 2018. Available: https://www.data-to-viz.com 
-    - number: 13
-      name: Building New Languages
-      url: /lecture13.html
-      video: 1064101038
-      slides: true
-      materials_pdf: true
-      materials_pptx: true
-      materials_md: true
-      text: >
-        Exploration of how to make new visual representations through the use of visual encoding mappings as well as two new patterns for fitting in more variables... movements and levels. Finally, a look at data formats and a discussion of advice for geospatial visualization.
-      assignment: >
-        Please draw some representation of your last 5 years and what you hope your next 5 years will look like. You can use whatever tools and materials you like other than code. For inspiration see <a href="https://www.dear-data.com/theproject">Dear Data</a>.
-      reading: >
-        Please watch <a href="https://youtu.be/WOBKnRlOAes">15 Views on a Node-Link Graph</a> by Tamara Munzner.
-      citations:
-        - >
-          B. Adhikari, "Marey's train schedule," University of Missouri Saint Louis, 2021. Available: https://badriadhikari.github.io/data-viz-workshop-2021/minards/
-        - >
-          N. Felton, "2012 Annual Report," Feltron, 2013. Available: https://feltron.com/FAR12.html.
-        - >
-          J. Cheng, "Analyzing Minard's Visualization Of Napoleon's 1812 March," ThoughtBot, 2014. Available: https://thoughtbot.com/blog/analyzing-minards-visualization-of-napoleons-1812-march
-        - >
-          A. Wu, L. Gamio, R. Gebeloff, E. Shao, and M. Bender, "Key to Trump’s Win: Heavy Losses for Harris Across the Map," New York Times Company, 2024. Available: https://www.nytimes.com/interactive/2024/11/19/us/politics/voter-turnout-election-trump-harris.html
-        - >
-          Fathom Information Design, "Connected China," Thomson Reuters. Available: https://fathom.info/china/
-        - >
-          D. Ling, "Introduction to Statistics Using LibreOffice.org Calc, Apache OpenOffice.org Calc, and Gnumeric," Comfsm, Available: http://www.comfsm.fm/~dleeling/statistics/text5.html
-        - >
-          Fathom Information Design, "No Ceilings", The Clinton Foundation and The Bill and Melinda Gates Foundation. Available:  https://noceilings.org/
-        - >
-          A. Pottinger, "Podcast Anthropology," Gleap, 2025. Available: http://podcastanthropology.com/
-        - >
-          B. Fry, "Audience & Context," Eyeo, 2015. Available:  https://vimeo.com/133608686?embedded=true&source=vimeo_logo&owner=8053320
-        - >
-          Geojson.io, "Geojson.io," Mapbox. Available: https://geojson.io/
-        - >
-          A. Pottinger, L. Connor, B. Guzder-Williams, M. Weltman-Fahs, N. Gondek, and T. Bowles, "Climate-driven doubling of U.S. maize loss probability: Interactive simulation with neural network Monte Carlo," JDSSV, 2025. doi: 10.52933/jdssv.v5i3.134
-        - >
-          A. Pottinger, "SF AirBnB Analysis," Towards Data Science, Available: https://gleap.org/content/airbnb
-        - >
-          A. Pottinger, "California Crop Shift Simulation," University of California, 2024. Available: "https://crop-shift-sampottinger3-2860.replit.app/
-        - >
-          A. Pottinger, "Food Sim SF," Gleap, 2024. Available: https://foodsimsf.com/
-        - >
-          S. Kamvar and J. Harris, "We Feel Fine and Searching the Emotional Web," Proceedings of the fourth ACM international conference on Web search and data mining, 2011. Available: https://www.wefeelfine.org/wefeelfine.pdf
-        - >
-          A. Pottinger, "TED Visualization," Gleap, 2012. Available: https://gleap.org/content/ted_visualization
-    - number: 14
-      name: Task / Domain
-      url: /lecture14.html
-      video: 1064129940
-      slides: true
-      materials_pdf: true
-      materials_pptx: true
-      materials_md: true
-      text: Expand on the idea of domains and tasks with examples before looking at the What / Why / How framework.
-      reading: >
-        An overview of what / why / how at <a href="https://www.datarocks.co.nz/post/data-viz-bookshelf_visualization-analysis-design-tamara-munzner">Visualisation Analysis & Design by Tamara Munzner or the What-Why-How of data viz</a>.
-      links:
-        - text: Video 1 from lecture
-          url: https://www.youtube.com/watch?v=2CMw4i9DiaM
-        - text: Video 2 from lecture
-          url: https://www.youtube.com/watch?v=HuYKhSHcRSQ
-      citations:
-        - >
-          T. Munzner, "Visualization Analysis & Design," University of British Columbia, 2021. Available: https://www.youtube.com/watch?v=pHljd-cgICY
-        - >
-          T. Romanowski, "Visualisation Analysis & Design by Tamara Munzner or the What-Why-How of data viz," Datarocks, 2023. Available: https://www.datarocks.co.nz/post/data-viz-bookshelf_visualization-analysis-design-tamara-munzner
-        - >
-          J. Stasko, C. Gorg, Z. Liu, and K. Singhal, "Jigsaw – Visual Analytics," Georgia Institute of Technology, 2009. Available at: https://youtu.be/2CMw4i9DiaM?feature=shared
-        - >
-          R. Binx, "Designing for Realtime Spacecraft Operations," OpenVisConf, 2016. Available at: https://youtu.be/HuYKhSHcRSQ?feature=shared
-    - number: 15
-      name: Measurement and Evaluation
-      url: /lecture15.html
-      video: 1066458181
-      slides: true
-      materials_pdf: true
-      materials_pptx: true
-      materials_md: true
-      text: >
-        Learning how to learn from users with a high level look at design research including user interviews, contextual inquiry, and the Think-Aloud Protocol. Note that the lesson was changed after the rehearsal recording. See <a href="#links">links</a>.
-      assignment: >
-        For this assignment please record yourself (instructions for <a href="https://support.apple.com/en-us/102618">Mac</a>, <a href="https://itsfoss.com/best-linux-screen-recorders/">Linux</a>, <a href="https://www.microsoft.com/en-us/windows/learning-center/how-to-record-screen-windows-11">Windows</a>) doing a think-aloud walkthrough of the introductory sequence at <a href="https://app.pyafscgap.org/">https://app.pyafscgap.org/</a>. Please follow the prompts at the top of the screen and do not click skip intro. After you record yourself, listen back to how it went. What is this activity good at soliciting? What might this activity be poor at uncovering? Write two sentences in reflection.
-      links:
-        - text: Video replacing the one mentioned in slides
-          url: https://www.youtube.com/watch?v=gHGN6hs2gZY
-        - text: For those in the University community, UC Berkeley library link for originally intended video
-          url: https://search.library.berkeley.edu/permalink/01UCS_BER/1thfj9n/alma991023789480406535
-      reading: >
-        I would love to share <a href="https://youtu.be/-FT3qmJEvs0">a talk from Jane Fulton Suri</a>. Sorry the screen isn't visible but it's an excellent follow up to today and also one of the only recordings available of it. The hospital example involved a camera basically fixed to a patient's head which revealed that their the day is spent looking up at the ceiling with people looking down at them.
-      citations:
-        - >
-          "The Deep Dive: One Company's Secret Weapon for Innovation," ABC News, 1999.
-        - > 
-          "The Art of the Insight: Learnings from 30 Years of Curiosity and Empathy," IDEO U, 2019. Available: https://www.ideou.com/blogs/inspiration/the-art-of-the-insight-learnings-from-30-years-of-curiosity-and-empathy
-        - >
-          C. Nickerson, "Symbolic Interactionism Theory & Examples," Simply Pscyhology, 2025. Available: https://www.simplypsychology.org/symbolic-interaction-theory.html
-        - >
-          J. Tong, "Diagrammatic thinking and audience reading of COVID-19 data visualisations: A UK case study," Convergence, 2024. doi: 10.1177/13548565241309886.
-        - >
-          B. Hanington and B. Martin, "Universal Methods of Design," Rockport Publishers, 2012.
-        - >
-          "User Interview Example Questions," Yale University. Available: https://usability.yale.edu/understanding-your-user/user-interviews/user-interview-example-questions
-        - > 
-          J. Gallegos, "50 Powerful User Interview Questions You Should Consider Asking," Respondent, 2022. Available: https://blog.respondent.io/best-user-interview-question
-        - >
-          B. Shneiderman and C. Plaisant, "Strategies for Evaluating Information Visualization Tools: Multi-dimensional In-depth Long-term Case Studies," BELIV '06, 2006. doi: 10.1145/1168149.1168158
-        - >
-          C. Lewis and J. Rieman, "Task-Centered User Interface Design: A Practical Introduction," HCI Bibliography / IBM Research, 1993. Available: https://www.hcibib.org/tcuid/
-        - >
-          C. Lewis, "Clayton Lewis" Available: https://sites.google.com/view/clayton-lewis.
-        - >
-          "What is Deign Thinking? An Overview," AJ&Smart, 2020. Available: https://www.youtube.com/watch?v=gHGN6hs2gZY.
+  - number: 12
+    name: Patterns
+    video: 1062955146
+    slides: true
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: 'A tour through common chart types used for different situations as well as common terminology and a brief introductory
+      mention of domains and tasks.
+
+      '
+    assignment: "<p>\n  We will continue the Census visuliazation you started in the last exercise. This activity is the same\
+      \ but, whereas the previous prompt asked for 4 or more variables, please include 6 or more variables this time. If you\
+      \ want that cheat code, <a href=\"https://github.com/sampottinger/census-example-sketchingpy\">my response is available\
+      \ on GitHub</a>. License under BSD-3-Clause. Please run assignment_10.py. Totally optional! Just leaving this here if\
+      \ you want to take advantage of it. See also a <a href=\"https://vimeo.com/1064872882\">video walkthrough of the code</a>.\n\
+      </p>\n"
+    reading: 'Please take a look at a discussion of <a href="https://vimeo.com/133608605">Dear Data at Eyeo (2015)</a>.
+
+      '
+    citations: true
+  - number: 13
+    name: Building New Languages
+    url: /lecture13.html
+    video: 1064101038
+    slides: true
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: 'Exploration of how to make new visual representations through the use of visual encoding mappings as well as two
+      new patterns for fitting in more variables... movements and levels. Finally, a look at data formats and a discussion
+      of advice for geospatial visualization.
+
+      '
+    assignment: 'Please draw some representation of your last 5 years and what you hope your next 5 years will look like.
+      You can use whatever tools and materials you like other than code. For inspiration see <a href="https://www.dear-data.com/theproject">Dear
+      Data</a>.
+
+      '
+    reading: 'Please watch <a href="https://youtu.be/WOBKnRlOAes">15 Views on a Node-Link Graph</a> by Tamara Munzner.
+
+      '
+    citations: true
+  - number: 14
+    name: Task / Domain
+    url: /lecture14.html
+    video: 1064129940
+    slides: true
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: Expand on the idea of domains and tasks with examples before looking at the What / Why / How framework.
+    reading: 'An overview of what / why / how at <a href="https://www.datarocks.co.nz/post/data-viz-bookshelf_visualization-analysis-design-tamara-munzner">Visualisation
+      Analysis & Design by Tamara Munzner or the What-Why-How of data viz</a>.
+
+      '
+    links:
+    - text: Video 1 from lecture
+      url: https://www.youtube.com/watch?v=2CMw4i9DiaM
+    - text: Video 2 from lecture
+      url: https://www.youtube.com/watch?v=HuYKhSHcRSQ
+    citations: true
+  - number: 15
+    name: Measurement and Evaluation
+    url: /lecture15.html
+    video: 1066458181
+    slides: true
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: 'Learning how to learn from users with a high level look at design research including user interviews, contextual
+      inquiry, and the Think-Aloud Protocol. Note that the lesson was changed after the rehearsal recording. See <a href="#links">links</a>.
+
+      '
+    assignment: 'For this assignment please record yourself (instructions for <a href="https://support.apple.com/en-us/102618">Mac</a>,
+      <a href="https://itsfoss.com/best-linux-screen-recorders/">Linux</a>, <a href="https://www.microsoft.com/en-us/windows/learning-center/how-to-record-screen-windows-11">Windows</a>)
+      doing a think-aloud walkthrough of the introductory sequence at <a href="https://app.pyafscgap.org/">https://app.pyafscgap.org/</a>.
+      Please follow the prompts at the top of the screen and do not click skip intro. After you record yourself, listen back
+      to how it went. What is this activity good at soliciting? What might this activity be poor at uncovering? Write two
+      sentences in reflection.
+
+      '
+    links:
+    - text: Video replacing the one mentioned in slides
+      url: https://www.youtube.com/watch?v=gHGN6hs2gZY
+    - text: For those in the University community, UC Berkeley library link for originally intended video
+      url: https://search.library.berkeley.edu/permalink/01UCS_BER/1thfj9n/alma991023789480406535
+    reading: 'I would love to share <a href="https://youtu.be/-FT3qmJEvs0">a talk from Jane Fulton Suri</a>. Sorry the screen
+      isn''t visible but it''s an excellent follow up to today and also one of the only recordings available of it. The hospital
+      example involved a camera basically fixed to a patient''s head which revealed that their the day is spent looking up
+      at the ceiling with people looking down at them.
+
+      '
+    citations: true
   conversation:
-    - number: 16
-      name: The Reader as User
-      video: 1067524875
-      slides: true
-      materials_pdf: true
-      materials_pptx: true
-      materials_md: true
-      text: The four waves of HCI and the ideas of Stuart Hall before briefly discussing how video games might fit into the data visualizations conversation.
-      assignment: >
-        <p>In this exercise, we will visualize the BART ridership dataset. For this activity, please visualize 4 variables.</p>
-        <p>Note that this project invites you to do geospatial visualization in that stations have latitudes and longitudes. However, it is not required. If you want to go this route, see the geospatial examples on the <a href="https://sketchingpy.org/examples.html">Sketchingpy examples page</a>. To support you, please see this geojson which has the outline of the Bay Area: <a href="/support/bayarea.geojson">bayarea.geojson</a>. If you do geospatial visualization, latitude counts for one variable and longitude counts for another. The geojson is under Public Domain.</p>
-        Regardless, please use the BART 2024 <a href="/support/bart.xlsx">ridership data I preprocessed for you</a> or the <a href="https://www.bart.gov/about/reports/ridership">upstream official dataset</a>.
-      reading: >
-        I have selected a fairly short video for you to review digging deeper into the idea of affordances through <a href="https://www.vox.com/2016/2/26/11120236/bad-doors-human-centered-design">bad doors</a>.
-      links:
-        - text: Example linked in slides
-          url: https://www.theguardian.com/us-news/2022/mar/13/how-covid-shook-the-us-charts-graphs
-      citations:
-        - >
-          M. Hoekstra, “MacPaint,” Geek Technique, 2007. Available: https://www.geektechnique.org/blog/786/mac-paint.html
-        - >
-          "Reception Theory," Revision World. Available: https://revisionworld.com/a2-level-level-revision/media-studies-level-revision/reception-theory#google_vignette
-        - >
-          J. Tong, "Diagrammatic thinking and audience reading of COVID-19 data visualisations: A UK case study," Convergence, 2024. doi: 10.1177/13548565241309886.
-        - >
-          "Stuart Hall," Wikimedia Foundation, 2025. Available: https://en.wikipedia.org/wiki/Stuart_Hall_(cultural_theorist)
-        - >
-          E. Berger and A. Witherspoon, "How Covid shook the US: eight charts that capture the last two years," The Guardian, 2022. Available: https://www.theguardian.com/us-news/2022/mar/13/how-covid-shook-the-us-charts-graphs
-        - >
-          S. Harrison, P. Sengers, and D. Tatar, "The Three Paradigms of HCI," CHI 2007, 2007.
-        - >
-          "Understanding Projects," Asana. Available: https://help.asana.com/s/article/understanding-projects?language=en_US
-        - >
-          Schell, Jesse. The Art of Game Design: A Book of Lenses. CRC Press, Taylor & Francis Group, 2020.
-        - >
-          Wright, Will. “Spore, Birth of a Game.” TED, Ted Conferences, 2007, https://www.ted.com/talks/will_wright_spore_birth_of_a_game.
-        - >
-          S. Dale. "Back wooden 4-Panel Door Closed," Unsplash, 2018. Available: https://unsplash.com/photos/black-wooden-4-panel-door-closed-dJycgkec2p0
-        - >
-          L. Parren, "Pilot Driving Plane During Daytime," Unsplash, 2018. Available: https://unsplash.com/photos/pilot-driving-plane-during-daytime-S3xxiedz0hE
-        - >
-          F Bezies, "Installation MS-Windows 98," Flickr, 2013. Available: https://www.flickr.com/photos/fredbezies/9136730422/
-    - number: 17
-      name: The Reader as Player
-      video: 1071192794
-      slides: true
-      materials_pdf: true
-      materials_pptx: true
-      materials_md: true
-      text: Go deep into interactivity with affordances, kinesthetic projection, and common patterns in data visualization. This is setting up our final ingredient for data visualizations that you need for the final!
-      assignment: >
-        <p>
-          We will start our interactive experience. There are different video games for you to choose from within the <a href="/support/Spring2025Manual.pdf">course manual</a>. See "experience" section. After you have selected your choice, lookup the <a href="/support/games.pdf">game specific instructions</a>. You can space out your game play over the next few lectures. There will be an additional question asked of all games later in <a href="/lesson20.html">lesson 20</a> when it would be good to be done.
-        </p>
-      reading: Please watch a <a href="https://www.youtube.com/watch?v=1XlfeXpiSuQ">fantastic discussion regarding the role of the player</a> from Extra Credits.
-      links:
-        - text: First video from slides (we are less interested in Kinect and more in the discussion of Kinesthetic Projection in the middle). Specifically, watch 1:30 to 3:10.
-          url: https://www.youtube.com/watch?v=ijcezUy3ZzY
-        - text: Second video from slides
-          url: https://www.youtube.com/watch?v=QCSXEKHL6fc
-      citations:
-        - >
-          M. Hoekstra, “MacPaint,” Geek Technique, 2007. Available: https://www.geektechnique.org/blog/786/mac-paint.html
-        - >
-          J. Portnow, "Kinect Disconnect - How NOT to do Motion Control," Extra Credits, 2012. Available: https://www.youtube.com/watch?v=ijcezUy3ZzY
-        - >
-          A. Pottinger, "Podcast Anthropology," Gleap, 2015. Available: https://gleap.org/static/special/podcast_viz/index.html
-        - >
-          A. Pottinger, "Ted Viz 2," Gleap, 2013. Available: https://gleap.org/content/ted_visualization_2
-        - >
-          A. Pottinger, "Montreal Policy Simulator," University of California, 2025. Available: https://mlf-policy-explorer.org/
-        - >
-          A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse, M. de Bruyn, C. Boettiger, E. Baker, K. Koy, and D. McCauley, "Global Plastics AI Policy Tool," University of California, 2024. Available: https://global-plastics-tool.org/
-        - >
-          A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M, Morse, C. Liu, S. Hu, M. de Bruyn, C. Boettiger, E. Baker, and D. McCauley, "Pathways to reduce global plastic waste mismanagement and greenhouse gas emissions by 2050," Science, 2024. doi: 10.1126/science.adr3837
-        - >
-          A. Pottinger, "FoodSim: San Francisco." 2023. Available: https://foodsimsf.com/
-        - >
-          J. Portnow, "Affordances - How Design Teaches Us Without Words," Extra Credits, 2014. Available: https://www.youtube.com/watch?v=QCSXEKHL6fc
-        - >
-          A. Pottinger, L. Connor, B. Guzder-Williams, M. Weltman-Fahs, N. Gondek, and T. Bowles, "Climate-driven doubling of U.S. maize loss probability: Interactive simulation with neural network Monte Carlo," JDSSV, 2025. doi: 10.52933/jdssv.v5i3.134
-    - number: 18
-      name: Ludonarrative
-      video: 1071935515
-      slides: true
-      materials_pdf: true
-      materials_pptx: true
-      materials_md: true
-      text: Examine the ideas of ludonarrative and environmental storytelling. Please see examples in the <a href="#links">links section</a>. I strongly recommend spending some time with each! Please note that there are multiple content warnings for this lecture.
-      reading: Please take a deeper dive into ways to convey narrative without dialogue. Watch <a href="https://youtu.be/Qot5_rMB8Jc">The Last Guardian and the Language of Games</a>.
-      links:
-        - text: Mechanics as Metaphor I
-          url: https://youtu.be/4QwcI4iQt2Y?feature=shared
-        - text: Global Plastics Treaty
-          url: https://plasticstreaty.berkeley.edu/
-        - text: Global Plastics AI Policy Tool
-          url: https://global-plastics-tool.org/
-        - text: Periscopic Gun Deaths
-          url: https://guns.periscopic.com/
-        - text: Rand Firearm Mortality
-          url: https://www.rand.org/research/gun-policy/longitudinal-firearm-mortality.htm
-        - text: Parable of the Polygons
-          url: https://ncase.me/polygons
-        - text: Mechanics as Metaphor II
-          url: https://youtu.be/pP_qNm-96Dc?feature=shared
-      citations:
-        - >
-          A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse, M. de Bruyn, C. Boettiger, E. Baker, K. Koy, and D. McCauley, "Global Plastics AI Policy Tool," University of California, 2024. Available: https://global-plastics-tool.org/
-        - >
-          A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M, Morse, C. Liu, S. Hu, M. de Bruyn, C. Boettiger, E. Baker, and D. McCauley, "Pathways to reduce global plastic waste mismanagement and greenhouse gas emissions by 2050," Science, 2024. doi: 10.1126/science.adr3837
-        - >
-          G. Nicoli, "Spiritfarer: la morte felice," Ludica, 2020. Available: https://www.ludicamag.com/spiritfarer-la-morte-felice/
-        - >
-          J. Portnow, "Mechanics as Metaphor I," Extra Credits, 2012. Available: https://www.youtube.com/watch?v=4QwcI4iQt2Y
-        - >
-          A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse, M. de Bruyn, C. Boettiger, E. Baker, K. Koy, ThoughtLab, and D. McCauley, "Plastics Treaty," University of California, 2023. Available: https://plasticstreaty.berkeley.edu/
-        - >
-          K. Rees and Periscopic, "U.S. Gun Killings in 2018," Periscopic, 2018. Available: https://guns.periscopic.com/
-        - >
-          K. Sumah, L. Floyd, and H. McCracken, "Changes in State Firearm Mortality," Rand Corporation, 2024. Available: https://www.rand.org/research/gun-policy/longitudinal-firearm-mortality.html
-        - >
-          V. Hart and N. Case, "Parable of the Polygons," Nicky Case, 2022. Available: https://ncase.me/polygons/
-    - number: 19
-      name: Architecture
-      video: 1073368650
-      slides: true
-      materials_pdf: true
-      materials_pptx: true
-      materials_md: true
-      text: Look at level design and how it help us teach users about how to use and navigate through our data visualizations. Explore Meeks, Hayashida Level Design, and Triangle Deisgn.
-      reading: Please watch this closer look at <a href="https://youtu.be/CZzcVs8tNfE">Triangle Design in Zelda</a>.
-      links:
-        - text: Hayashida Level Design
-          url: https://youtu.be/dBmIkEvEBtA
-        - text: AFSC GAP visualization
-          url: https://app.pyafscgap.org/
-        - text: Mario Level 1-1
-          url: https://youtu.be/ZH2wGpEZVgE
-      citations:
-        - >
-          G. Nicoli, "Spiritfarer: la morte felice," Ludica, 2020. Available: https://www.ludicamag.com/spiritfarer-la-morte-felice/
-        - >
-          M. Brown, "Super Mario 3D World's 4 Step Level Design," Game Maker's Toolkit, 2015. Available: https://www.youtube.com/watch?v=dBmIkEvEBtA
-        - >
-          A. Pottinger and G. Zarpellon, "Pyafscgap.org: Open source multi-modal Python-based tools for NOAA AFSC RACE GAP," JOSS, 2023. doi: 10.21105/joss.05593.
-        - >
-          D. Emmons and J. Portnow, "Design Club - Super Mario Bros: Level 1-1," Extra Credits, 2014. Available: https://www.youtube.com/watch?v=ZH2wGpEZVgE
-        - >
-          "Illinois Soil Health," University of California, 2023. Available: https://illinois-soil-health-tool.org/
-        - >
-          E. Meeks, "Designing a Data Visualization Dashboard Like It was a Game," Nightingale, 2018. Available: https://medium.com/nightingale/designing-a-data-visualization-dashboard-like-it-was-a-game-b347858c1bce
-        - >
-          A. Pottinger, N. Biyani, R. Geyer, D. J. McCauley, M. de Bruyn, M. R. Morse, N. Nathan, K. Koy, and C. Martinez, "Combining Game Design and Data Visualization to Inform Plastics Policy: Fostering Collaboration between Science, Decision-Makers, and Artificial Intelligence," Arxiv, 2023. Available: https://arxiv.org/abs/2312.11359.
-        - >
-          Fathom Information Design, "No Ceilings," The Clinton Foundation, 2015. Available: http://www.noceilings.org/
+  - number: 16
+    name: The Reader as User
+    video: 1067524875
+    slides: true
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: The four waves of HCI and the ideas of Stuart Hall before briefly discussing how video games might fit into the
+      data visualizations conversation.
+    assignment: '<p>In this exercise, we will visualize the BART ridership dataset. For this activity, please visualize 4
+      variables.</p> <p>Note that this project invites you to do geospatial visualization in that stations have latitudes
+      and longitudes. However, it is not required. If you want to go this route, see the geospatial examples on the <a href="https://sketchingpy.org/examples.html">Sketchingpy
+      examples page</a>. To support you, please see this geojson which has the outline of the Bay Area: <a href="/support/bayarea.geojson">bayarea.geojson</a>.
+      If you do geospatial visualization, latitude counts for one variable and longitude counts for another. The geojson is
+      under Public Domain.</p> Regardless, please use the BART 2024 <a href="/support/bart.xlsx">ridership data I preprocessed
+      for you</a> or the <a href="https://www.bart.gov/about/reports/ridership">upstream official dataset</a>.
+
+      '
+    reading: 'I have selected a fairly short video for you to review digging deeper into the idea of affordances through <a
+      href="https://www.vox.com/2016/2/26/11120236/bad-doors-human-centered-design">bad doors</a>.
+
+      '
+    links:
+    - text: Example linked in slides
+      url: https://www.theguardian.com/us-news/2022/mar/13/how-covid-shook-the-us-charts-graphs
+    citations: true
+  - number: 17
+    name: The Reader as Player
+    video: 1071192794
+    slides: true
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: Go deep into interactivity with affordances, kinesthetic projection, and common patterns in data visualization.
+      This is setting up our final ingredient for data visualizations that you need for the final!
+    assignment: "<p>\n  We will start our interactive experience. There are different video games for you to choose from within\
+      \ the <a href=\"/support/Spring2025Manual.pdf\">course manual</a>. See \"experience\" section. After you have selected\
+      \ your choice, lookup the <a href=\"/support/games.pdf\">game specific instructions</a>. You can space out your game\
+      \ play over the next few lectures. There will be an additional question asked of all games later in <a href=\"/lesson20.html\"\
+      >lesson 20</a> when it would be good to be done.\n</p>\n"
+    reading: Please watch a <a href="https://www.youtube.com/watch?v=1XlfeXpiSuQ">fantastic discussion regarding the role
+      of the player</a> from Extra Credits.
+    links:
+    - text: First video from slides (we are less interested in Kinect and more in the discussion of Kinesthetic Projection
+        in the middle). Specifically, watch 1:30 to 3:10.
+      url: https://www.youtube.com/watch?v=ijcezUy3ZzY
+    - text: Second video from slides
+      url: https://www.youtube.com/watch?v=QCSXEKHL6fc
+    citations: true
+  - number: 18
+    name: Ludonarrative
+    video: 1071935515
+    slides: true
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: Examine the ideas of ludonarrative and environmental storytelling. Please see examples in the <a href="#links">links
+      section</a>. I strongly recommend spending some time with each! Please note that there are multiple content warnings
+      for this lecture.
+    reading: Please take a deeper dive into ways to convey narrative without dialogue. Watch <a href="https://youtu.be/Qot5_rMB8Jc">The
+      Last Guardian and the Language of Games</a>.
+    links:
+    - text: Mechanics as Metaphor I
+      url: https://youtu.be/4QwcI4iQt2Y?feature=shared
+    - text: Global Plastics Treaty
+      url: https://plasticstreaty.berkeley.edu/
+    - text: Global Plastics AI Policy Tool
+      url: https://global-plastics-tool.org/
+    - text: Periscopic Gun Deaths
+      url: https://guns.periscopic.com/
+    - text: Rand Firearm Mortality
+      url: https://www.rand.org/research/gun-policy/longitudinal-firearm-mortality.htm
+    - text: Parable of the Polygons
+      url: https://ncase.me/polygons
+    - text: Mechanics as Metaphor II
+      url: https://youtu.be/pP_qNm-96Dc?feature=shared
+    citations: true
+  - number: 19
+    name: Architecture
+    video: 1073368650
+    slides: true
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: Look at level design and how it help us teach users about how to use and navigate through our data visualizations.
+      Explore Meeks, Hayashida Level Design, and Triangle Deisgn.
+    reading: Please watch this closer look at <a href="https://youtu.be/CZzcVs8tNfE">Triangle Design in Zelda</a>.
+    links:
+    - text: Hayashida Level Design
+      url: https://youtu.be/dBmIkEvEBtA
+    - text: AFSC GAP visualization
+      url: https://app.pyafscgap.org/
+    - text: Mario Level 1-1
+      url: https://youtu.be/ZH2wGpEZVgE
+    citations: true
   context:
-    - number: 20
-      name: Loops and Experience
-      video: 1073391515
-      slides: true
-      materials_pdf: true
-      materials_pptx: true
-      materials_md: true
-      text: A short lecture on player loops followed by exploring <a href="/support/games.pdf">questions specific to your game</a>. In addition to the game-specific questions, please also write 3 sentences on what the player loops are within your game.
-      links:
-        - text: Game-specific questions. Also, write 3 sentences on the player loops within your games.
-          url: /support/games.pdf
-      assignment: >
-        <p>
-          You did it - you made it to the last regular assignment before the final!
-        </p>
-        <p>
-          The goal for this exercise is to take one of your prior visualizations from the class (Stack Overflow Developer Survey, Census, or BART) and make it interactive with at least one user action.
-        </p>
-      citations:
-        - >
-          G. Nicoli, "Spiritfarer: la morte felice," Ludica, 2020. Available: https://www.ludicamag.com/spiritfarer-la-morte-felice/
-        - >
-          A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse, M. de Bruyn, C. Boettiger, E. Baker, K. Koy, and D. McCauley, "Global Plastics AI Policy Tool," University of California, 2024. Available: https://global-plastics-tool.org/
-        - >
-          A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M, Morse, C. Liu, S. Hu, M. de Bruyn, C. Boettiger, E. Baker, and D. McCauley, "Pathways to reduce global plastic waste mismanagement and greenhouse gas emissions by 2050," Science, 2024. doi: 10.1126/science.adr3837
-        - >
-          Strategy Wiki Contributors, "Super Mario Brows. / World 1," Strategy Wiki. Available: https://strategywiki.org/wiki/Super_Mario_Bros./World_1
-    - number: 21
-      name: Thinking Toys and Diegesis
-      video: 1075915883
-      slides: true
-      materials_pdf: true
-      materials_pptx: true
-      materials_md: true
-      text: A deeper look at building explorable explorations and the idea of thinking toys / diegesis.
-      reading: Please watch this GDC talk on <a href="https://youtu.be/ontNUxSLhb8">Storytelling with Verbs</a>.
-      links:
-        - text: Video from slides (recommend watching 4:43 to 13:40)
-          url: https://vimeo.com/64895205
-      citations:
-        - >
-          A. Shatov, "White Digital Device at 12 00," Unsplash, 2021. Available: https://unsplash.com/photos/white-digital-device-at-12-00-DHl49oyrn7Y
-        - >
-          B. Victor, "Stop Drawing Dead Fish," SIGGRAPH, 2012. Available: https://vimeo.com/64895205
-        - >
-          Wikipedia Contributors, "PLATO," Wikimedia Foundation, 2025. Available: https://en.wikipedia.org/wiki/PLATO_(computer_system)
-        - >
-          Kenneth E. Iverson Estates, "Kenneth Eugene Iverson (17 December 1920 – 19 October 2004)," Wikimedia Foundation, 2017. Available: https://en.wikipedia.org/wiki/Kenneth_E._Iverson#/media/File:Kei_younger.jpg
-        - >
-          The Grainger College of Engineering, "Donald L. Bitzer," University of Illinois Urbana-Champaign, 2004. Available: https://grainger.illinois.edu/alumni/distinguished/Donald-Bitzer
-        - >
-          K. Iverson, "Notation as a Tool of Thought," ACM, 1980. doi: 10.1145/358896.358899
-        - >
-          B. Victor, "Bret Victor," Wikimedia Foundation, 2013. Available: https://en.wikipedia.org/wiki/Bret_Victor#/media/File:Bret_Victor.png
-        - >
-          B. Victor, "Explorable Explanations," Bret Victor, 2011. Available: https://worrydream.com/ExplorableExplanations/
-        - >
-          M. Appleton, "Programming Portals," Maggie Appleton, 2022. Available: https://maggieappleton.com/programming-portals/
-        - >
-          M. Appleton, "Tools for Thought as Cultural Practices, not Computational Objects," Maggie Appleton, 2025. Available: https://maggieappleton.com/tools-thought-talk
-        - >
-          M. Appleton, "Maggie Appleton," Maggie Appleton. Available: https://maggieappleton.com/about
-        - >
-          GDC, "Nicky Case 2019 Crop Photo," Wikimedia Foundation, 2025. Available: https://en.wikipedia.org/wiki/Nicky_Case#/media/File:Nicky_Case_-_Game_Developers_Conference_2019_Crop.png
-    - number: 22
-      name: Accessibility
-      video: 1075913765
-      slides: true
-      materials_pdf: true
-      materials_pptx: true
-      materials_md: true
-      text: Learn about the Web Content Accessibility Guidelines. Explore some common steps which you can take within your interactive data visualizations that can help improve access.
-      links:
-        - text: Video from slides
-          url: https://youtu.be/xrqdU4cZaLw
-      assignment: >
-        Though there is still some material left, this is a good opportunity to start on your final project to be refined over the next few lessons. See the <a href="/Spring2025Manual.pdf">course manual</a> for recommended project ideas / datasets.
-      reading: Please continue of our discussion by considering <a href="https://youtu.be/Ufe0i26DGiA">motor accessibility</a> and <a href="https://www.youtube.com/watch?v=ObhvacfIOg0">cognitive disability</a> over at Game Makers Toolkit.
-      citations:
-        - >
-          A. Shatov, "White Digital Device at 12 00," Unsplash, 2021. Available: https://unsplash.com/photos/white-digital-device-at-12-00-DHl49oyrn7Y
-        - >
-          M. Brown, "Making Games Better for Gamers with Colourblindness & Low Vision | Designing for Disability," Game Maker's Toolkit, 2018. Available: https://www.youtube.com/watch?v=xrqdU4cZaLw
-        - >
-          WAI, "WCAG 2 Overview," W3C, 2025. Available: https://www.w3.org/WAI/standards-guidelines/wcag/
-        - >
-          A. Blackwell, "The Curb-Cut Effect," SSIR, 2017. Available: https://ssir.org/articles/entry/the_curb_cut_effect
-        - >
-          Larea, "Color," The Noun Project, 2024. Available: https://thenounproject.com/icon/color-7309833/
-        - >
-          Alvida, "Glasses," The Noun Project, 2025. Available: https://thenounproject.com/icon/glasses-7656753/
-        - >
-          R. Romadoni, "Blind," The Noun Project, 2025. Available: https://thenounproject.com/icon/blind-7616838/
-        - >
-          A. Pottinger, "Income Gaps." 2023. Available: https://incomegaps.com/
-        - >
-          A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse, M. de Bruyn, C. Boettiger, E. Baker, K. Koy, and D. McCauley, "Global Plastics AI Policy Tool," University of California, 2024. Available: https://global-plastics-tool.org/
-        - >
-          A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M, Morse, C. Liu, S. Hu, M. de Bruyn, C. Boettiger, E. Baker, and D. McCauley, "Pathways to reduce global plastic waste mismanagement and greenhouse gas emissions by 2050," Science, 2024. doi: 10.1126/science.adr3837
-        - >
-          WebAIM, "Contrast Checker," Utah State University. Available: https://webaim.org/resources/contrastchecker/
-        - >
-          A. Pottinger, L. Connor, B. Guzder-Williams, M. Weltman-Fahs, N. Gondek, and T. Bowles, "Climate-driven doubling of U.S. maize loss probability: Interactive simulation with neural network Monte Carlo," JDSSV, 2025. doi: 10.52933/jdssv.v5i3.134
-        - >
-          E. Purnomo, "Target," The Noun Project, 2022. Available: https://thenounproject.com/icon/target-4642615/
-        - >
-          P. Octaviani, "Keyboard," The Noun Project, 2023. Available: https://thenounproject.com/icon/keyboard-5600882/
-        - >
-          Alzam, "Speed," The Noun Project, 2022. Available: https://thenounproject.com/icon/speed-4573076/
-        - >
-          A. Pottinger and Sketchingpy Contributors, "Sketchingpy," Sketchingpy Project, 2025. Available: https://sketchingpy.org/
-        - >
-          WebAIM, "WebAIM's WCAG 2 Checklist," Utah State University. Available: https://webaim.org/resources/contrastchecker/
-    - number: 23
-      name: Ethics
-      video: 1077298223
-      slides: true
-      materials_pdf: true
-      materials_pptx: true
-      materials_md: true
-      text: Explore some of the common issues that come up and how bias enters into our work. Critically examine the power we have as designers. Consider how exercising that power can lead to both positive and negative outcomes. Note that this lecture has multiple content warnings.
-      reading: Sasha Costanza-Chock (Eyeo 2019) digging deeper into Design Justice at <a href="https://vimeo.com/354276956">https://vimeo.com/354276956</a>.
-      links:
-        - text: Video 1 (recommend watching 11:30 to 20:30)
-          url: https://www.youtube.com/watch?v=AaU6tI2pb3M
-        - text: Video 2
-          url: https://www.youtube.com/watch?v=UP4_bMhZ4gA
-        - text: Income Gaps
-          url: https://incomegaps.com/
-        - text: Periscopic Gun Deaths
-          url: https://guns.periscopic.com/
-        - text: Rand Firearm Mortality
-          url: https://www.rand.org/research/gun-policy/longitudinal-firearm-mortality.html
-        - text: MDSR Book Gun Deaths
-          url: https://mdsr-book.github.io/mdsr2e/ch-ethics.html
-        - text: Parable of the Polygons
-          url: https://ncase.me/polygons/
-      citations:
-        - >
-          A. Shatov, "White Digital Device at 12 00," Unsplash, 2021. Available: https://unsplash.com/photos/white-digital-device-at-12-00-DHl49oyrn7Y
-        - >
-          J. Berger, Ways of Seeing, Penguin Books, 1972. Image: https://en.wikipedia.org/wiki/Ways_of_Seeing#/media/File:Waysofseeingcvr.jpg
-        - >
-          R. Jones, "Deceptive by Design: Data Visualization and The Ethics of Representation," MIT. Available: https://technologist.mit.edu/deceptive-by-design-data-visualization-and-the-ethics-of-representation/
-        - >
-          Wikipedia Contributors, "Ciclo de conferências do filósofo francês Michel Foucault, no Hospital das Clínicas da Universidade do Estado da Guanabara (UEG)," Wikimedia Foundation. Available: https://en.wikipedia.org/wiki/Michel_Foucault#/media/File:Michel_Foucault_1974_Brasil.jpg
-        - >
-          W. Pragher, "Photograph of Martin Heidegger," Wikimedia Foundation. Available: https://en.wikipedia.org/wiki/Martin_Heidegger#/media/File:Heidegger_2_(1960).jpg
-        - >
-          R. Adams, "Michel Foucault: Discourse," Critical Legal Thinking, 2017. Available: https://criticallegalthinking.com/2017/11/17/michel-foucault-discourse/
-        - >
-          Wikipedia Contributors, "Bret Victor." Wikimedia Foundation, Inc., Jun. 22, 2023. Available: https://en.wikipedia.org/wiki/Bret_Victor
-        - >
-          B. Victor, "Media for Thinking The Unthinkable," MIT Media Lab, 2013. Available: https://vimeo.com/67076984
-        - >
-          CDC, "Marian Write Edelman," Wikimedia Foundation. Available: https://en.wikipedia.org/wiki/Marian_Wright_Edelman#/media/File:Marian_Wright_Edelman_01.jpg
-        - >
-          M. Edelman, "You can't be what you can't see," Goodreads. Available: https://www.goodreads.com/quotes/536048-you-can-t-be-what-you-can-t-see
-        - >
-          A. Thorn, "AI is an Ethical Nightmare," Philosophy Tube, 2023. Available: https://www.youtube.com/watch?v=AaU6tI2pb3M
-        - >
-          W. S. Cleveland and R. McGill, "Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods," Journal of the American Statistical Association, vol. 79, no. 387, pp. 531–554, Sep. 1984, doi: 10.1080/01621459.1984.10478080.
-        - >
-          A. Pottinger, "Income Gaps." 2023. Available: https://incomegaps.com/
-        - >
-          A. Tierney, "Median annual earnings of full-time workers in the United States in 2023, by gender," Statista, 2024. Available: https://www.statista.com/statistics/1186135/us-median-annual-worker-earnings-by-gender/
-        - >
-          B. Baumer, D. Kaplan, and N. Horton, Modern Data Science with R, 2nd Ed, CRC Press, 2021.
-        - >
-          K. Rees and Periscopic, "U.S. Gun Deaths." Periscopic, 2018. Available: https://guns.periscopic.com/
-        - >
-          K. Sumah, L. Floyd, and H. McCracken, "Changes in State Firearm Mortality," Rand Corporation, 2024. Available: https://www.rand.org/research/gun-policy/longitudinal-firearm-mortality.html
-        - >
-          A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse, M. de Bruyn, C. Boettiger, E. Baker, K. Koy, and D. McCauley, "Global Plastics AI Policy Tool," University of California, 2024. Available: https://global-plastics-tool.org/
-        - >
-          A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M, Morse, C. Liu, S. Hu, M. de Bruyn, C. Boettiger, E. Baker, and D. McCauley, "Pathways to reduce global plastic waste mismanagement and greenhouse gas emissions by 2050," Science, 2024. doi: 10.1126/science.adr3837
-        - >
-          J. Portnow, "Propaganda Games - Ethical Game Design," Extra Credits, 2012. Available: https://www.youtube.com/watch?v=UP4_bMhZ4gA
-        - >
-          V. Hart and N. Case, "Parable of the Polygons," Nicky Case, 2022. Available: https://ncase.me/polygons/
-        - >
-          Design Justice Networ, "Design Justice Network Principles," Design Justice Network, 2018. Available: https://designjustice.org/read-the-principles
-    - number: 24
-      name: Inquiry-Based Design
-      video: 1077646004
-      slides: true
-      materials_pdf: true
-      materials_pptx: true
-      materials_md: true
-      text: Consider inquiry-based design which this class is using to refer to a wide range of viewpoints in data visualization that approach visualization through a series of questions. Also, take a look towards the final. Finally, a goodby from Sam with concluding remarks for the class ahead of the skills labs.
-      reading: <a href="https://stamen.com/data-visualization-for-education-when-asking-questions-is-the-answer/">Data Visualization for Education</a> from Stamen.
-      citations:
-          - >
-            N. Hayes, "Data Visualization for Education: When Asking Questions is the Answer," Stamen, 2023. Available: https://stamen.com/data-visualization-for-education-when-asking-questions-is-the-answer/
-          - >
-            S. Lourterwasser and Crash Course, "Crash Course Sociology," Crash Course, 2017. Available at: https://thecrashcourse.com/topic/sociology/
-          - >
-            A. Thorn, "Philosophy Tube," Philosophy Tube. Available: https://www.youtube.com/@philosophytube
-          - >
-            D. Shiffman, The Nature of Code, No Starch Press, 2024. Available: https://natureofcode.com/
-          - >
-            Eyeo Festival, "Eyeo Festival," Eyeo Festival. Available: https://eyeofestival.com/
-          - >
-            M. Brown, "Game Maker's Toolkit," Game Maker's Toolkit. Available: https://gamemakerstoolkit.com/
-          - >
-            J-M8, "Design Delve," Second Wind. Available: https://www.youtube.com/watch?v=LR2vQO_BHC0&list=PLUBKwq0XD0uc3-bC1m0IYvbdu8dEX4rd2
-          - >
-            Extra Credits, "Extra Credits," Extra Credits. Available: https://www.youtube.com/@extracredits
-          - >
-            H. Horst and D. Miller, Digital Anthropology, Routledge, 2012.
-          - >
-            A. Shvets, "Refactoring Guru," Refactoring Guru. Available: https://refactoring.guru/
+  - number: 20
+    name: Loops and Experience
+    video: 1073391515
+    slides: true
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: A short lecture on player loops followed by exploring <a href="/support/games.pdf">questions specific to your game</a>.
+      In addition to the game-specific questions, please also write 3 sentences on what the player loops are within your game.
+    links:
+    - text: Game-specific questions. Also, write 3 sentences on the player loops within your games.
+      url: /support/games.pdf
+    assignment: "<p>\n  You did it - you made it to the last regular assignment before the final!\n</p> <p>\n  The goal for\
+      \ this exercise is to take one of your prior visualizations from the class (Stack Overflow Developer Survey, Census,\
+      \ or BART) and make it interactive with at least one user action.\n</p>\n"
+    citations: true
+  - number: 21
+    name: Thinking Toys and Diegesis
+    video: 1075915883
+    slides: true
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: A deeper look at building explorable explorations and the idea of thinking toys / diegesis.
+    reading: Please watch this GDC talk on <a href="https://youtu.be/ontNUxSLhb8">Storytelling with Verbs</a>.
+    links:
+    - text: Video from slides (recommend watching 4:43 to 13:40)
+      url: https://vimeo.com/64895205
+    citations: true
+  - number: 22
+    name: Accessibility
+    video: 1075913765
+    slides: true
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: Learn about the Web Content Accessibility Guidelines. Explore some common steps which you can take within your interactive
+      data visualizations that can help improve access.
+    links:
+    - text: Video from slides
+      url: https://youtu.be/xrqdU4cZaLw
+    assignment: 'Though there is still some material left, this is a good opportunity to start on your final project to be
+      refined over the next few lessons. See the <a href="/Spring2025Manual.pdf">course manual</a> for recommended project
+      ideas / datasets.
+
+      '
+    reading: Please continue of our discussion by considering <a href="https://youtu.be/Ufe0i26DGiA">motor accessibility</a>
+      and <a href="https://www.youtube.com/watch?v=ObhvacfIOg0">cognitive disability</a> over at Game Makers Toolkit.
+    citations: true
+  - number: 23
+    name: Ethics
+    video: 1077298223
+    slides: true
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: Explore some of the common issues that come up and how bias enters into our work. Critically examine the power we
+      have as designers. Consider how exercising that power can lead to both positive and negative outcomes. Note that this
+      lecture has multiple content warnings.
+    reading: Sasha Costanza-Chock (Eyeo 2019) digging deeper into Design Justice at <a href="https://vimeo.com/354276956">https://vimeo.com/354276956</a>.
+    links:
+    - text: Video 1 (recommend watching 11:30 to 20:30)
+      url: https://www.youtube.com/watch?v=AaU6tI2pb3M
+    - text: Video 2
+      url: https://www.youtube.com/watch?v=UP4_bMhZ4gA
+    - text: Income Gaps
+      url: https://incomegaps.com/
+    - text: Periscopic Gun Deaths
+      url: https://guns.periscopic.com/
+    - text: Rand Firearm Mortality
+      url: https://www.rand.org/research/gun-policy/longitudinal-firearm-mortality.html
+    - text: MDSR Book Gun Deaths
+      url: https://mdsr-book.github.io/mdsr2e/ch-ethics.html
+    - text: Parable of the Polygons
+      url: https://ncase.me/polygons/
+    citations: true
+  - number: 24
+    name: Inquiry-Based Design
+    video: 1077646004
+    slides: true
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: Consider inquiry-based design which this class is using to refer to a wide range of viewpoints in data visualization
+      that approach visualization through a series of questions. Also, take a look towards the final. Finally, a goodby from
+      Sam with concluding remarks for the class ahead of the skills labs.
+    reading: <a href="https://stamen.com/data-visualization-for-education-when-asking-questions-is-the-answer/">Data Visualization
+      for Education</a> from Stamen.
+    citations: true
   conclusion:
-    - number: 25
-      name: Skills and Final Project
-      materials_pdf: false
-      materials_pptx: false
-      materials_md: true
-      text: >
-        <p>
-          First, consider completing <a href="/labs/js.html">tutorial 12</a> which the final optional <a href="/labs">skills lab</a>
-        </p>
-        <p>
-          Second, if you have not already done so, explore the final project as outlined in the <a href="/Spring2025Manual.pdf">Course Maual</a>. This is a great opportunity to take everything you learned over the course and demosntrate mastery in an excellent portfolio-building activity.
-        </p>
-      assignment: >
-        <p>
-          Design and implement your final project.
-        </p>
-        <p>
-          That's the end of our time together. Thank you so much for joining me on on this journey! If you enjoyed this course, please let someone else know about it.
-        </p>
-    - number: 26
-      name: AI in Viz
-      video: 1155141922
-      materials_pdf: true
-      materials_pptx: true
-      materials_md: true
-      text: >
-        Explore using AI in implementing data visualizations. This optional extra lesson looks at using generative AI by re-constructing an example data visualization from one of the early lessons of the course. Complete <a href="/labs">Skills Lab 6</a> to get hands on!
-      reading: >
-        Learn more about the ethical considerations by watching <a href="https://satml.org/2023/videos/">Timnit Gebru's talk on Eugenics and the Promise of Utopia through AGI</a>.
-      citations:
-          - >
-            Anthropic, "Claude," Anthropic, 2024. Available: https://www.anthropic.com/claude
-          - >
-            J. Willison, "llms.txt," llmstxt Project, 2024. Available: https://llmstxt.org/
-          - >
-            A. Pottinger and Sketchingpy Contributors, "Sketchingpy," Sketchingpy Project, 2025. Available: https://sketchingpy.org/
-          - >
-            J. D. Hunter, "Matplotlib: A 2D Graphics Environment," Computing in Science & Engineering, vol. 9, no. 3, pp. 90-95, 2007, doi: 10.1109/MCSE.2007.55.
-          - >
-            Isle Royale National Park Michigan, "Wolf & Moose Populations." National Parks Service, Mar. 29, 2024. Available: https://www.nps.gov/isro/learn/nature/wolf-moose-populations.htm
-          - >
-            T. Gebru, "Eugenics and the Promise of Utopia through Artificial General Intelligence," IEEE Conference on Secure and Trustworthy Machine Learning (SaTML), 2023. Available: https://satml.org/2023/videos/
+  - number: 25
+    name: Skills and Final Project
+    materials_pdf: false
+    materials_pptx: false
+    materials_md: true
+    text: "<p>\n  First, consider completing <a href=\"/labs/js.html\">tutorial 12</a> which the final optional <a href=\"\
+      /labs\">skills lab</a>\n</p> <p>\n  Second, if you have not already done so, explore the final project as outlined in\
+      \ the <a href=\"/Spring2025Manual.pdf\">Course Maual</a>. This is a great opportunity to take everything you learned\
+      \ over the course and demosntrate mastery in an excellent portfolio-building activity.\n</p>\n"
+    assignment: "<p>\n  Design and implement your final project.\n</p> <p>\n  That's the end of our time together. Thank you\
+      \ so much for joining me on on this journey! If you enjoyed this course, please let someone else know about it.\n</p>\n"
+    citations: false
+  - number: 26
+    name: AI in Viz
+    video: 1155141922
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: 'Explore using AI in implementing data visualizations. This optional extra lesson looks at using generative AI by
+      re-constructing an example data visualization from one of the early lessons of the course. Complete <a href="/labs">Skills
+      Lab 6</a> to get hands on!
+
+      '
+    reading: 'Learn more about the ethical considerations by watching <a href="https://satml.org/2023/videos/">Timnit Gebru''s
+      talk on Eugenics and the Promise of Utopia through AGI</a>.
+
+      '
+    citations: true
