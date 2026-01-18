@@ -11,6 +11,9 @@ sections:
       and direction on how best to use the online open source resources.
 
       '
+    reading: 'Be sure to briefly skim the <a href="/#materials">materials</a> to know that they are available.
+
+      '
     citations: true
   - number: 1
     name: Hello Visualization
@@ -28,9 +31,10 @@ sections:
       course. If you are feel comfortable and want to engage with other learners, post your response online!
 
       '
-    reading: 'We will learn more about how tools change the way we think. Please watch the very excellent <a href="https://vimeo.com/67076984">Media
-      for Thinking the Unthinkable lecture</a> delivered by Bret Victor at the MIT Media Lab. A question for you to consider
-      is what kinds of representations of thought do you use every day?
+    reading: 'Just a reminder the <a href="/#materials">materials</a> are available. We will learn more about how tools change
+      the way we think. Please watch the very excellent <a href="https://vimeo.com/67076984">Media for Thinking the Unthinkable
+      lecture</a> delivered by Bret Victor at the MIT Media Lab. A question for you to consider is what kinds of representations
+      of thought do you use every day?
 
       '
     links:
