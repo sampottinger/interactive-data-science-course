@@ -1,0 +1,109 @@
+# Contributing to IDSV
+Thank you for contributing to Interactive Data Science and Visualization! Your time and efforts can help ensure this open educational resource (OER) continues to grow and serve more learners into the future. We appreciate you, your ideas, and your time. Before starting, please review the following.
+
+## Philosophy
+Interactive Data Science and Visualization is intended as a hands-on exploration of information design and explorable digital media.
+
+### Inclusive
+It is important that the course not only discusses ethics and accessibility but is itself ethical and accessible. Towards that end, all videos must have manually confirmed captions in English at minimum. Furthermore, we strive to use language which is inviting and inclusive of learners from many backgrounds.
+
+### Flexible
+The structure of instruction should consider that folks may be joining for different reasons where some use the full class and others take individual pieces. Sections of the course may build on each other but reasonable steps should be taken to allow for modularity where possible.
+
+### Open
+The course must be fully open with code released under BSD and non-code materials in CC-BY-NC 4.0. The CC-BY-NC 4.0 is used due to some incorporated educational materials' licensing. All software should be open when possible.
+
+### Holistic
+Data visualization is science and art. We are committed to multi-disciplinary instruction which pulls from multiple perspectives and which treats this topical area as both a question of implementation (programming / engineering) and design with balanced instruction in both. We believe this necessarily involves instruction which pulls from humanities and social sciences.
+
+### Experiential
+It is strongly encouraged that all full lessons include a hands-on activity to allow for demonstration of concepts. Some exceptions are made for lessons which are logistically oriented.
+
+## Limitations
+We will continue to strive towards our objectives above. However, we recognize the following limitations at this time:
+
+ - We currently only offer instruction and materials in English.
+ - We allow use of Vimeo as practical for hosting of larger video files with captions for accessibility.
+ - Use of proprietary AI assistants for the AI section of the course is currently allowed while open weights AI models / infrastructure improve.
+ - We remain committed to primarily teaching through Python-based exercises.
+
+These limitations are largely driven by resource constraints and we welcome new volunteers via GitHub issue to help us further improve! However, please understand that we may keep these scope constraints depending on current community capacity.
+
+## Structure
+There are two major areas of the course materials: the MOOC source and the skills labs.
+
+### MOOC Source
+This includes the "lecture" class materials. All lessons must have, at minimum, a yaml entry. However, other materials may appear as well. These materials are rendered into a content management system with formalized / standardized templates.
+
+#### YAML
+We use yaml to index all files and materials. Each yaml file can contain one or more sections where sections is a list of named sections which contain an ordered list of lessons. Each lesson may have:
+
+| **Field**      | **Required** | **Purpose**                                                                                              | **Type** |
+| -------------- | ------------ | -------------------------------------------------------------------------------------------------------- | -------- |
+| number         | Yes          | The 0-indexed ID of the lesson unique across the course.                                                 | int      |
+| name           | Yes          | Human readable short name (used in index).                                                               | string   |
+| text           | Yes          | Short description of the lesson.                                                                         | html     |
+| materials_pdf  | Recommended  | Flag indicating if a PDF version of the lesson is available.                                             | bool     |
+| materials_pptx | Recommended  | Flag indicating if a PowerPoint (PPTX) version of the lesson is available.                               | bool     |
+| materials_md   | Recommended  | Flag indicating if a markdown version of the lesson is available.                                        | bool     |
+| citations      | Recommended  | Flag indicating if there are citations for the lecture.                                                  | bool     |
+| assignment     | No           | Long-form description of the out of lesson (like homework) exercise associated with the lesson (if any). | html     |
+| reading        | No           | Long-form description of the out of lesson (like homework) reading associated with the lesson (if any).  | html     |
+| links          | No           | List of links (with `text` and `url` fields) which are mentioned in the lesson.                          | list     |
+| video          | No           | The Vimeo ID of the video associated with the lesson.                                                    | int      |
+
+Though both may be used in a "homework" role subject to class structure (i.e. flipped classroom), note that `assignment` is distinct from `reading` in that the former generally does not have some kind of work product produced by learners to be submitted to teachers. These are both distinct from `links` which are intended to provide access to materials which help complete the lesson itself.
+
+#### Citations
+Each lesson with citations should have a file in the form of `lesson00.txt` within `mooc_src/citations`. Each line should contain a single citation. Empty lines (including those containing only whitespace) are ignored. These files should end with a single empty line.
+
+#### Markdown
+It is strongly recommended that all lessons contain a markdown version as it is the most accessible format where possible. The intention is provide a self-contained text version of the lesson.
+
+We require files in the form `lesson00.md` where each should have the following structure:
+
+ - **Header**: Lesson number and name with very brief description.
+ - **Objective**: 1 - 4 sentences describing the objective and purpose of the lesson.
+ - **Outline**: Brief 1 - 4 sentences describing the content of the lcture followed by subsections with the components of the lesson each containing short descriptions and bullet points.
+ - **Take Aways**: Ideally 1 sentence overview of what should be remembered from the lesson followed by bullet points.
+ - **Citations**: Citations which may match or be close to the citation file for the lesson.
+
+Citations from the markdown may differ from the txt citations file where required for assignments / activities outside the lesson itself.
+
+#### PDF / PPTX
+Slides should be provided as PDF files with optional but encouraged PPTX versions. There should be a title slide and a slide indicating creative commons license.
+
+#### Support
+Files beyond those above are also allowed. In general, these are files used across multiple lessons or special files supporting specific lesson activities.
+
+### Skills Labs
+During original teaching of this course as Stat 198 at UC Berkeley, the skills labs were taught using a flipped classroom structure. These are distinct to regular lessons in that there is minimal to no lecture component. Instead, time is spent on one or more directly interactive activities.
+
+Due to the nature of skills labs, the `labs` directory is published directly as static content. This affords maximal flexibility in crafting the lab experience outside of a formalized template like normal lessons. That said, we ask that new labs follow the structure of existing labs as, for example, seen in `python_graphics.html`. Please ensure the following at minimum:
+
+ - A contents `details` tag.
+ - Use of header, main, and sections for accessibility including skip link.
+ - Use of `pre` for code sections.
+ - A `details` tag for citations.
+ - Formal `footer` with license information.
+ - Header which links back to labs and MOOC homepage.
+
+These should be fully static pages (HTML, CSS, JS) and automated use of server-side components is currently disallowed.
+
+## Content management
+Skills labs are posted directly as static materials but the regular lessons (MOOC source) compiles materials to a static website using `render.py`. This takes advantage of very limited open source libraries. At this time, only jinja2 and pyyaml are allowed in this process. Please keep `render.sh` up to date such that it builds all lessons. The only external service currently allowed is Vimeo.
+
+## Standards
+Please follow conventions of existing code and materials where possible. Please also ensure:
+
+ - MOOC source materials build successfully before opening pull requests.
+ - All public or top level members in JS / Python have docstring or JSDoc. 
+ - Checks from `pycodestyle` pass.
+ - Checks from `eslint` pass.
+ - Only `pnpm` and not `npm` are used for security purposes.
+ - Use virtualenv where possible but ensure venv and node modules are excluded from git (are present in gitignore).
+
+Refrain from using webpack or typescript (JS resources should be deployed directly). Please use vanilla JS where possible.
+
+## AI Assistants
+The original version of this class was made without AI. In general, completely new course materials should be written manually. However, AI may absolutely assist with "logistical" or "mechanical" edits or adapting / refining existing material / code. Specifically, we invite experimentation in the AI skills labs for playing with AI assistants in taking a more active role in preparing materials. Please just exercise close supervision and manual validation of changes made. Use of AI assistants should be disclosed, like through co-author in git commit which is sufficient for transparency.
