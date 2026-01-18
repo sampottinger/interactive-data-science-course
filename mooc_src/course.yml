@@ -1,7 +1,7 @@
 sections:
-  preface:
+  hello:
   - number: 0
-    name: Hello
+    name: Hello (Preface)
     video: 1154435218
     slides: true
     materials_pdf: true
@@ -12,7 +12,6 @@ sections:
 
       '
     citations: true
-  hello:
   - number: 1
     name: Hello Visualization
     video: 1047306328
