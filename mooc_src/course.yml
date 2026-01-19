@@ -586,7 +586,7 @@ sections:
       </p>
     citations: false
   - number: 26
-    name: AI in Viz
+    name: AI in Viz (Optional)
     video: 1155141922
     materials_pdf: true
     materials_pptx: true
