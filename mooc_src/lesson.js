@@ -1,4 +1,3 @@
-
 /**
  * Logic to run the lesson page.
  *
@@ -8,19 +7,18 @@
 /**
  * Add click listeners for enable and disable embed.
  *
- * Add click listeners which enable and disable the video embed when clicked, preventing default
- * link events in the process. These apply to all elements with the enable-video-embed-link class
- * to enable embed and all elements with the disable-video-embed-link to disable embed.
+ * Add click listeners to enable and disable the video embed (user
+ * click). Callbacks will modify the user preference cookie.
  */
 function addEmbedListeners() {
-  document.querySelectorAll('.enable-video-embed-link').forEach(link => {
+  document.querySelectorAll('.enable-video-embed-link').forEach((link) => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       onEnableEmbed();
     });
   });
 
-  document.querySelectorAll('.disable-video-embed-link').forEach(link => {
+  document.querySelectorAll('.disable-video-embed-link').forEach((link) => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       onDisableEmbed();
@@ -31,10 +29,10 @@ function addEmbedListeners() {
 /**
  * Read the preference from the cookie for embeds.
  *
- * Read the preference from the site cookie for if video embeds are enabled, returning false if a
- * preference is not yet specified.
+ * Read the preference from the site cookie for if video embeds are
+ * enabled, returning false if a preference is not yet specified.
  *
- * @returns {boolean} True if video embeds are enabled and false otherwise.
+ * @return {boolean} True if video embeds are enabled and false otherwise.
  */
 function getEmbedPreference() {
   return document.cookie.includes('video_embeds_enabled=true');
@@ -43,9 +41,9 @@ function getEmbedPreference() {
 /**
  * Callback for when the user has requested video embeds be enabled.
  *
- * Callback for when the user has requested video embeds be enabled, saving their preference in the
- * site cookie and showing the embed on the current page. This will overwrite any prior preferences
- * saved.
+ * Callback for when the user has requested video embeds be enabled,
+ * saving their preference in the site cookie and showing the embed on the
+ * current page. This will overwrite any prior preferences saved.
  */
 function onEnableEmbed() {
   document.cookie = 'video_embeds_enabled=true;path=/';
@@ -55,9 +53,9 @@ function onEnableEmbed() {
 /**
  * Callback for when the user has requested video embeds be disabled.
  *
- * Callback for when the user has requested video embeds be disabled, saving their preference in the
- * site cookie and hiding the embed on the current page. This will overwrite any prior preferences
- * saved.
+ * Callback for when the user has requested video embeds be disabled,
+ * saving their preference in the site cookie and hiding the embed on the
+ * current page. This will overwrite any prior preferences saved.
  */
 function onDisableEmbed() {
   document.cookie = 'video_embeds_enabled=false;path=/';
@@ -67,8 +65,8 @@ function onDisableEmbed() {
 /**
  * Show the video embed on this page.
  *
- * Take the iframe template from video-embed-template and putting the contents into
- * video-embed-target before setting video-embed to be visible.
+ * Render the video embed template on this page, allowing the Vimeo integration
+ * to proceed.
  */
 function showEmbed() {
   const template = document.getElementById('video-embed-template').innerHTML;
@@ -79,6 +77,9 @@ function showEmbed() {
 
 /**
  * Hide the video embed on this page by hiding video-embed.
+ *
+ * Remove the video embed template on this page, preventing the Vimeo
+ * integration.
  */
 function hideEmbed() {
   document.getElementById('video-embed-target').innerHTML = '';
@@ -87,11 +88,7 @@ function hideEmbed() {
 }
 
 /**
- * Check cookie settings and initialize video embed on the page if specified.
- *
- * Check cookie settings and initialize video embed on the page if the cookie indicates that user's
- * preference is to have embeds enabled. No action taken if the cookie indicates that the user's
- * preference is that video embeds are disabled.
+ * Check cookie settings and initialize video embed on the page.
  */
 function initEmbedGivenSettings() {
   if (getEmbedPreference()) {

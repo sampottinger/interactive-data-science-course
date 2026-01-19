@@ -54,3 +54,7 @@ AI can help craft data visualizations but may serve more a role in accelerating 
 [5] Isle Royale National Park Michigan, "Wolf & Moose Populations." National Parks Service, Mar. 29, 2024. Available: https://www.nps.gov/isro/learn/nature/wolf-moose-populations.htm
 
 [6] T. Gebru, "Eugenics and the Promise of Utopia through Artificial General Intelligence," IEEE Conference on Secure and Trustworthy Machine Learning (SaTML), 2023. Available: https://satml.org/2023/videos/
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

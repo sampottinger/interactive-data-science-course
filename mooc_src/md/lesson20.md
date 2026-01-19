@@ -62,3 +62,7 @@ Player loops provide a powerful framework for analyzing and designing interactiv
 [3] A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M, Morse, C. Liu, S. Hu, M. de Bruyn, C. Boettiger, E. Baker, and D. McCauley, "Pathways to reduce global plastic waste mismanagement and greenhouse gas emissions by 2050," *Science*, 2024. doi: 10.1126/science.adr3837
 
 [4] Strategy Wiki Contributors, "Super Mario Bros. / World 1," Strategy Wiki. Available: https://strategywiki.org/wiki/Super_Mario_Bros./World_1
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

@@ -95,3 +95,7 @@ Historical context provides foundation for understanding design principles, but 
 [16] M. Dunnigan, "Why Tufte is Wrong," Medium, 2014. Available: https://medium.com/@MattDuignan/why-tuftes-wrong-a9bd6a14ff8e
 
 [17] B. Adhikari, "Data Density," University of Missouri Saint Louis, 2021. Available: https://badriadhikari.github.io/data-viz-workshop-2021/Tufte/Chapter_8/
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

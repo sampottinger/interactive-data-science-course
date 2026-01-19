@@ -105,3 +105,7 @@ This outline was expanded after the video was recorded and may include additiona
 [3] J. Stasko, C. Gorg, Z. Liu, and K. Singhal, "Jigsaw – Visual Analytics," Georgia Institute of Technology, 2009. Available at: https://youtu.be/2CMw4i9DiaM?feature=shared
 
 [4] R. Binx, "Designing for Realtime Spacecraft Operations," OpenVisConf, 2016. Available at: https://youtu.be/HuYKhSHcRSQ?feature=shared
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

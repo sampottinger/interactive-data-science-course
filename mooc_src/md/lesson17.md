@@ -108,3 +108,7 @@ This lecture explores interaction patterns and affordances to create more intuit
 [9] J. Portnow, "Affordances - How Design Teaches Us Without Words," Extra Credits, 2014. Available: https://www.youtube.com/watch?v=QCSXEKHL6fc
 
 [10] A. Pottinger, L. Connor, B. Guzder-Williams, M. Weltman-Fahs, N. Gondek, and T. Bowles, "Climate-driven doubling of U.S. maize loss probability: Interactive simulation with neural network Monte Carlo," *JDSSV*, 2025. doi: 10.52933/jdssv.v5i3.134
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

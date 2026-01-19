@@ -74,3 +74,7 @@ Moving forward, the course will explore how to combine these principles with hum
 [5] A. Cairo, "The Truthful Art," New Riders, 2016.
 
 [6] NYT Opinion, "10 Columnists and Writers Rate What Mattered in Trump's First Full Month," *New York Times Company*, 2025. Available: https://www.nytimes.com/interactive/2025/03/01/opinion/trump-administration-first-month.html.
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

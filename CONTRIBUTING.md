@@ -52,7 +52,74 @@ We use yaml to index all files and materials. Each yaml file can contain one or 
 | links          | No           | List of links (with `text` and `url` fields) which are mentioned in the lesson.                          | list     |
 | video          | No           | The Vimeo ID of the video associated with the lesson.                                                    | int      |
 
+##### Additional distinctions
 Though both may be used in a "homework" role subject to class structure (i.e. flipped classroom), note that `assignment` is distinct from `reading` in that the former generally does not have some kind of work product produced by learners to be submitted to teachers. These are both distinct from `links` which are intended to provide access to materials which help complete the lesson itself.
+
+##### Best practices
+Note that the following are recommended in YAML:
+
+ - The html fields should use `>` instead of regular single or double quote strings.
+ - Non-supported or deprecated fields (such as `slides`) should be removed.
+ - Recommended fields should be specified even if using default values.
+ - Fields which are marked as "no" for required should not be included if using the default value.
+ - Leading and trailing whitespace on strings may be left in place if it improves the readability of the yaml file but should otherwise be removed.
+ - Avoid JSON object notation.
+ - Please keep lines to 100 characters or fewer. Exceptions made for very long URLs.
+
+Here is an example of a poorly implemented entry:
+
+```
+  - number: 3
+    name: Hello Creative Python
+    video: 1049110017
+    slides: true
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: 'A hands-on first look at how we can use Python for creative coding. See tutorials at <a href="/labs">Labs</a>.
+
+      '
+    assignment: "Revisit the visualization from the last exercise. What might the 4 perspectives say about this visualization?\n\
+      <ul>\n  <li>What visual encoding devices are used?</li>\n  <li>What task or user journey is being accomplished through\
+      \ the piece?</li>\n  <li>Does the piece try to also convey an emotion and, if so, how?</li>\n  <li>Does the piece invite\
+      \ the reader to reach new their own conclusions about the data and, if so, how?</li>\n</ul>\nPlease write 4 - 8 sentences.\n"
+    reading: Optionally review <a href="https://python.swaroopch.com">A Byte of Python</a> if you want to brush up on (or
+      learn) the fundamentals of Python.
+    citations: true
+    links: [{"text": "Skills Labs", "url": "/labs"}, {"text": "Sketchingpy Online Sketchbook", "url": https://editor.sketchingpy.org/}]
+```
+
+Here is a well implemented entry:
+
+```
+  - number: 3
+    name: Hello Creative Python
+    video: 1049110017
+    materials_pdf: true
+    materials_pptx: true
+    materials_md: true
+    text: >
+      A hands-on first look at how we can use Python for creative coding. See tutorials at <a href="/labs">Labs</a>.
+    assignment: >
+      Revisit the visualization from the last exercise. What might the 4 perspectives say about this visualization?
+
+      <ul>
+        <li>What visual encoding devices are used?</li>
+        <li>What task or user journey is being accomplished through the piece?</li>
+        <li>Does the piece try to also convey an emotion and, if so, how?</li>
+        <li>Does the piece invite the reader to reach new their own conclusions about the data and, if so, how?</li>
+      </ul>
+      
+      Please write 4 - 8 sentences.
+    reading: >
+      Optionally review <a href="https://python.swaroopch.com">A Byte of Python</a> if you want to brush up on (or learn) the fundamentals of Python.
+    citations: true
+    links:
+    - text: Skills Labs
+      url: /labs
+    - text: Sketchingpy Online Sketchbook
+      url: https://editor.sketchingpy.org/
+```
 
 #### Citations
 Each lesson with citations should have a file in the form of `lesson00.txt` within `mooc_src/citations`. Each line should contain a single citation. Empty lines (including those containing only whitespace) are ignored. These files should end with a single empty line.
@@ -106,4 +173,4 @@ Please follow conventions of existing code and materials where possible. Please 
 Refrain from using webpack or typescript (JS resources should be deployed directly). Please use vanilla JS where possible.
 
 ## AI Assistants
-The original version of this class was made without AI. In general, completely new course materials should be written manually. However, AI may absolutely assist with "logistical" or "mechanical" edits or adapting / refining existing material / code. Specifically, we invite experimentation in the AI skills labs for playing with AI assistants in taking a more active role in preparing materials. Please just exercise close supervision and manual validation of changes made. Use of AI assistants should be disclosed, like through co-author in git commit which is sufficient for transparency.
+The original version of this class was made without AI. In general, completely new course materials should be written manually. However, AI may absolutely assist with "logistical" or "mechanical" edits or adapting / refining existing material / code (like proofreading). Specifically, we invite experimentation in the AI skills labs for playing with AI assistants in taking a more active role in preparing materials given the level of AI engagement expected. Please just exercise close supervision and manual validation of changes made. Use of AI assistants for any non-trivial edits should be disclosed, like through co-author in git commit which is sufficient for transparency.

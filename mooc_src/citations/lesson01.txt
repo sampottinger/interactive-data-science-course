@@ -1,0 +1,42 @@
+G. Aisch, A. Cox, and K. Quealy, "You Draw It: How Family Income Predicts Children's College Chances." The New York Times Company, May 28, 2015. Available: https://www.nytimes.com/interactive/2015/05/28/upshot/you-draw-it-how-family-income-affects-childrens-college-chances.html
+R. Binx, "Vortex." 2015. Available: https://rachelbinx.com/data-visualization/vortex
+R. Binx, "Designing for Realtime Spacecraft Operations." BocoupLLC, Apr. 2016. Available: https://www.youtube.com/watch?v=HuYKhSHcRSQ
+Book Books Book, "We Feel Fine." YouTube, Dec. 2009. Available: https://www.youtube.com/watch?v=vi8WrnWNSzU
+W. S. Cleveland and R. McGill, "Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods," Journal of the American Statistical Association, vol. 79, no. 387, pp. 531–554, Sep. 1984, doi: 10.1080/01621459.1984.10478080.
+Flipflops, "I feel… everything." Flipflops.org, Oct. 2007. Available: https://www.flipflops.org/category/thoughtful/page/2/
+V. Hart and N. Case, "Parable of the Polygons." Nicky Case, 2022. Available: https://ncase.me/polygons/
+Isle Royale National Park MIchigan, "Wolf & Moose Populations." National Parks Service, Mar. 29, 2024. Available: https://www.nps.gov/isro/learn/nature/wolf-moose-populations.htm
+S. D. Kamvar and J. Harris, "We feel fine and searching the emotional web," in Proceedings of the fourth ACM international conference on Web search and data mining, Hong Kong China: ACM, Feb. 2011, pp. 117–126. doi: 10.1145/1935826.1935854.
+A. KIRK, DATA VISUALISATION: a handbook for data driven design. S.l.: SAGE PUBLICATIONS, 2024.
+A. Kirk, "Visualizing Data." Visualising Data Ltd, 2024. Available: https://visualisingdata.com/
+T. Munzner, "A Nested Model for Visualization Design and Validation," IEEE Trans. Visual. Comput. Graphics, vol. 15, no. 6, pp. 921–928, Nov. 2009, doi: 10.1109/TVCG.2009.111.
+T. Munzner, "Visualization Analysis and Design." AK Peters Visualization Series, 2014. Available: https://books.apple.com/us/book/visualization-analysis-and-design/id1567434451
+T. Munzner, Visualization analysis and design. in A.K. Peters visualization series. Boca Raton: CRC Press, Taylor & Francis Group, CRC Press is an imprint of the Taylor & Francis Group, an informa business, 2015.
+T. Munzner, "Task Abstraction (Ch 3), Visualization Analysis & Design, 2021." YouTube, 2021. Available: https://www.youtube.com/watch?v=pHljd-cgICY
+M. Nix, Visual simplexity: die Darstellung großer Datenmengen. Frankfurt am Main: entwickler.press, 2013.
+K. Rees and Periscopic, "U.S. Gun Deaths." Periscopic, 2018. Available: https://guns.periscopic.com/
+A. Pottinger, "FoodSim: San Francisco." 2023. Available: https://foodsimsf.com/
+A. Pottinger, "Income Gaps." 2023. Available: https://incomegaps.com/
+A. Pottinger, "Interactive Data Science." 2024. Available: https://mooc.interactivedatascience.courses/
+A. S. Pottinger et al., "Combining Game Design and Data Visualization to Inform Plastics Policy: Fostering Collaboration between Science, Decision-Makers, and Artificial Intelligence," 2023, arXiv. doi: 10.48550/ARXIV.2312.11359.
+A. Pottinger, L. Connor, B. Guzder-Williams, M. Weltman-Fahs, N. Gondek, and T. Bowles, "Climate-driven doubling of U.S. maize loss probability: Interactive simulation with neural network Monte Carlo," JDSSV, 2025. doi: 10.52933/jdssv.v5i3.134
+A. S. Pottinger and G. Zarpellon, "Pyafscgap.org: Open source multi-modal Python-basedtools for NOAA AFSC RACE GAP," JOSS, vol. 8, no. 86, p. 5593, Jun. 2023, doi: 10.21105/joss.05593.
+J. N. Rooney-Varga, F. Kapmeier, J. D. Sterman, A. P. Jones, M. Putko, and K. Rath, "The Climate Action Simulation," Simulation & Gaming, vol. 51, no. 2, pp. 114–140, Apr. 2020, doi: 10.1177/1046878119890643.
+J. Schell, The art of game design: a book of lenses, Third edition. Boca Raton: CRC Press/Taylor & Francis Group, 2020.
+J. Snow, On the mode of communication of cholera. London: John Churchill, 1855. Available: https://archive.org/details/b28985266/page/n57/mode/2up
+J. Stasko, C. Gorg, Z. Liu, and K. Singhal, "Jigsaw: Supporting Investigative Analysis through Interactive Visualization," in 2007 IEEE Symposium on Visual Analytics Science and Technology, Sacramento, CA, USA: IEEE, Oct. 2007, pp. 131–138. doi: 10.1109/VAST.2007.4389006.
+The Document Foundation, LibreOffice. (2024). The Document Foundation.
+ThoughtLab, The Wendy and Eric Schmidt Center for Data Science and Environment, and Benioff Ocean Science Laboratory, "A Treaty to End Plastic Pollution. Forever." University of California, 2023. Available: https://plasticstreaty.berkeley.edu/
+B. Victor, "Inventing on Principle." CUSEC, 2012. Available: https://www.youtube.com/watch?v=PUv66718DII
+B. Victor, "Media for Thinking the Unthinkable." MIT Media Lab, Apr. 04, 2013. Available: https://vimeo.com/67076984
+Visual Computing BLOG, "Tamara Munzner discussed quantification in terms of a nested model of visualization design and evaluation." Transregional Collaborative Research Center. Available: https://www.visual-computing.org/2018/10/17/computerscienceconferenceweek/201810_conferenceweek_munzner-2/
+C. Ware, "Colin Ware | The Data Visualzation Research Lab." University of New Hampshire. Available: https://ccom.unh.edu/vislab/people/colin_ware/
+C. Ware, Information visualization: perception for design, Fourth edition. Cambridge, MA: Morgan Kaufmann, 2021.
+Wikipedia Contributors, "Snow-cholera-map-1.jpg." Wikimedia Foundation, Inc., 2020. Available: https://en.wikipedia.org/wiki/File:Snow-cholera-map-1.jpg
+Wikipedia Contributors, "Bret Victor." Wikimedia Foundation, Inc., Jun. 22, 2023. Available: https://en.wikipedia.org/wiki/Bret_Victor
+Wikipedia Contributors, "Star Wars: Galaxy's Edge." Wikimedia Foundation, Inc., Sep. 21, 2024. Available: https://en.wikipedia.org/wiki/Star_Wars:_Galaxy%27s_Edge
+Wikipedia Contributors, "It's a Small World." Wikimedia Foundation, Inc., Sep. 24, 2024. Available: https://en.wikipedia.org/wiki/It%27s_a_Small_World
+N. Yee, "Motivations for Play in Online Games," CyberPsychology & Behavior, vol. 9, no. 6, pp. 772–775, Dec. 2006, doi: 10.1089/cpb.2006.9.772.
+J. Harris and S. Kavar, "We Feel Fine." We Feel Fine., 2006. Available: http://www.wefeelfine.org and https://jjh.org/we-feel-fine.
+J. Harris, "The Web's Secret Stories." TED Conference., 2007. Available: https://youtu.be/zAvNlh2Z0GI?feature=shared.
+Thanks to https://unsplash.com/photos/DHl49oyrn7Y

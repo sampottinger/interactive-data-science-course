@@ -70,3 +70,7 @@ There are lots of ways into data visualization and it means different things in 
 [5] A. Pottinger, "Food Sim SF," Gleap, 2024. Available: https://foodsimsf.com/
 
 [6] A. S. Pottinger and G. Zarpellon, "Pyafscgap.org: Open source multi-modal Python-based tools for NOAA AFSC RACE GAP," *JOSS*, vol. 8, no. 86, p. 5593, Jun. 2023, doi: 10.21105/joss.05593.
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

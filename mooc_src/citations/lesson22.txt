@@ -1,0 +1,17 @@
+A. Shatov, "White Digital Device at 12 00," Unsplash, 2021. Available: https://unsplash.com/photos/white-digital-device-at-12-00-DHl49oyrn7Y
+M. Brown, "Making Games Better for Gamers with Colourblindness & Low Vision | Designing for Disability," Game Maker's Toolkit, 2018. Available: https://www.youtube.com/watch?v=xrqdU4cZaLw
+WAI, "WCAG 2 Overview," W3C, 2025. Available: https://www.w3.org/WAI/standards-guidelines/wcag/
+A. Blackwell, "The Curb-Cut Effect," SSIR, 2017. Available: https://ssir.org/articles/entry/the_curb_cut_effect
+Larea, "Color," The Noun Project, 2024. Available: https://thenounproject.com/icon/color-7309833/
+Alvida, "Glasses," The Noun Project, 2025. Available: https://thenounproject.com/icon/glasses-7656753/
+R. Romadoni, "Blind," The Noun Project, 2025. Available: https://thenounproject.com/icon/blind-7616838/
+A. Pottinger, "Income Gaps." 2023. Available: https://incomegaps.com/
+A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse, M. de Bruyn, C. Boettiger, E. Baker, K. Koy, and D. McCauley, "Global Plastics AI Policy Tool," University of California, 2024. Available: https://global-plastics-tool.org/
+A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M, Morse, C. Liu, S. Hu, M. de Bruyn, C. Boettiger, E. Baker, and D. McCauley, "Pathways to reduce global plastic waste mismanagement and greenhouse gas emissions by 2050," Science, 2024. doi: 10.1126/science.adr3837
+WebAIM, "Contrast Checker," Utah State University. Available: https://webaim.org/resources/contrastchecker/
+A. Pottinger, L. Connor, B. Guzder-Williams, M. Weltman-Fahs, N. Gondek, and T. Bowles, "Climate-driven doubling of U.S. maize loss probability: Interactive simulation with neural network Monte Carlo," JDSSV, 2025. doi: 10.52933/jdssv.v5i3.134
+E. Purnomo, "Target," The Noun Project, 2022. Available: https://thenounproject.com/icon/target-4642615/
+P. Octaviani, "Keyboard," The Noun Project, 2023. Available: https://thenounproject.com/icon/keyboard-5600882/
+Alzam, "Speed," The Noun Project, 2022. Available: https://thenounproject.com/icon/speed-4573076/
+A. Pottinger and Sketchingpy Contributors, "Sketchingpy," Sketchingpy Project, 2025. Available: https://sketchingpy.org/
+WebAIM, "WebAIM's WCAG 2 Checklist," Utah State University. Available: https://webaim.org/resources/contrastchecker/

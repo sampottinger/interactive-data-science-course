@@ -1,0 +1,16 @@
+B. Adhikari, "Marey's train schedule," University of Missouri Saint Louis, 2021. Available: https://badriadhikari.github.io/data-viz-workshop-2021/minards/
+N. Felton, "2012 Annual Report," Feltron, 2013. Available: https://feltron.com/FAR12.html.
+J. Cheng, "Analyzing Minard's Visualization Of Napoleon's 1812 March," ThoughtBot, 2014. Available: https://thoughtbot.com/blog/analyzing-minards-visualization-of-napoleons-1812-march
+A. Wu, L. Gamio, R. Gebeloff, E. Shao, and M. Bender, "Key to Trump’s Win: Heavy Losses for Harris Across the Map," New York Times Company, 2024. Available: https://www.nytimes.com/interactive/2024/11/19/us/politics/voter-turnout-election-trump-harris.html
+Fathom Information Design, "Connected China," Thomson Reuters. Available: https://fathom.info/china/
+D. Ling, "Introduction to Statistics Using LibreOffice.org Calc, Apache OpenOffice.org Calc, and Gnumeric," Comfsm, Available: http://www.comfsm.fm/~dleeling/statistics/text5.html
+Fathom Information Design, "No Ceilings", The Clinton Foundation and The Bill and Melinda Gates Foundation. Available:  https://noceilings.org/
+A. Pottinger, "Podcast Anthropology," Gleap, 2025. Available: http://podcastanthropology.com/
+B. Fry, "Audience & Context," Eyeo, 2015. Available:  https://vimeo.com/133608686?embedded=true&source=vimeo_logo&owner=8053320
+Geojson.io, "Geojson.io," Mapbox. Available: https://geojson.io/
+A. Pottinger, L. Connor, B. Guzder-Williams, M. Weltman-Fahs, N. Gondek, and T. Bowles, "Climate-driven doubling of U.S. maize loss probability: Interactive simulation with neural network Monte Carlo," JDSSV, 2025. doi: 10.52933/jdssv.v5i3.134
+A. Pottinger, "SF AirBnB Analysis," Towards Data Science, Available: https://gleap.org/content/airbnb
+A. Pottinger, "California Crop Shift Simulation," University of California, 2024. Available: "https://crop-shift-sampottinger3-2860.replit.app/
+A. Pottinger, "Food Sim SF," Gleap, 2024. Available: https://foodsimsf.com/
+S. Kamvar and J. Harris, "We Feel Fine and Searching the Emotional Web," Proceedings of the fourth ACM international conference on Web search and data mining, 2011. Available: https://www.wefeelfine.org/wefeelfine.pdf
+A. Pottinger, "TED Visualization," Gleap, 2012. Available: https://gleap.org/content/ted_visualization

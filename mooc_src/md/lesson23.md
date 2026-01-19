@@ -134,3 +134,7 @@ Data visualization involves unavoidable ethical choices about representation and
 [22] Design Justice Network, "Design Justice Network Principles," Design Justice Network, 2018. Available: https://designjustice.org/read-the-principles
 
 [23] S. Costanza-Chock, "Design Justice" (Eyeo 2019). Available: https://vimeo.com/354276956
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

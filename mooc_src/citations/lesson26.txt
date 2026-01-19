@@ -1,0 +1,6 @@
+Anthropic, "Claude," Anthropic, 2024. Available: https://www.anthropic.com/claude
+J. Willison, "llms.txt," llmstxt Project, 2024. Available: https://llmstxt.org/
+A. Pottinger and Sketchingpy Contributors, "Sketchingpy," Sketchingpy Project, 2025. Available: https://sketchingpy.org/
+J. D. Hunter, "Matplotlib: A 2D Graphics Environment," Computing in Science & Engineering, vol. 9, no. 3, pp. 90-95, 2007, doi: 10.1109/MCSE.2007.55.
+Isle Royale National Park Michigan, "Wolf & Moose Populations." National Parks Service, Mar. 29, 2024. Available: https://www.nps.gov/isro/learn/nature/wolf-moose-populations.htm
+T. Gebru, "Eugenics and the Promise of Utopia through Artificial General Intelligence," IEEE Conference on Secure and Trustworthy Machine Learning (SaTML), 2023. Available: https://satml.org/2023/videos/

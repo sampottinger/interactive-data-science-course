@@ -121,3 +121,7 @@ Design research provides essential methods for understanding users and improving
 [10] C. Lewis, "Clayton Lewis." Available: https://sites.google.com/view/clayton-lewis
 
 [11] "What is Design Thinking? An Overview," AJ&Smart, 2020. Available: https://www.youtube.com/watch?v=gHGN6hs2gZY
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

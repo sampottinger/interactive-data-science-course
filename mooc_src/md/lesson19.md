@@ -110,3 +110,7 @@ Game design principles provide powerful frameworks for structuring data visualiz
 [7] A. Pottinger, N. Biyani, R. Geyer, D. J. McCauley, M. de Bruyn, M. R. Morse, N. Nathan, K. Koy, and C. Martinez, "Combining Game Design and Data Visualization to Inform Plastics Policy: Fostering Collaboration between Science, Decision-Makers, and Artificial Intelligence," Arxiv, 2023. Available: https://arxiv.org/abs/2312.11359.
 
 [8] Fathom Information Design, "No Ceilings," The Clinton Foundation, 2015. Available: http://www.noceilings.org/
+
+## License
+
+This lesson is part of [Interactive Data Science and Visualization](https://mooc.interactivedatascience.courses/) and is released under a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.
