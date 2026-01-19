@@ -121,7 +121,10 @@ def load_citations_from_file(lesson_number: int) -> list:
   citations_file = f'citations/lesson{lesson_number:02d}.txt'
   try:
     with open(citations_file, 'r') as f:
-      return list(filter(None, map(str.strip, f)))
+      stripped = map(str.strip, f)
+      no_empty = filter(None, stripped)
+      realized = list(no_empty)
+      return realized
   except FileNotFoundError:
     return []
 
