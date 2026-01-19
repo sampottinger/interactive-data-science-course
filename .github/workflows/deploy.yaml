@@ -5,7 +5,7 @@ on:
 jobs:
   check_python:
     runs-on: ubuntu-latest
-    name: Check Python Code
+    name: Check Python
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -21,7 +21,7 @@ jobs:
         run: pycodestyle mooc_src/*.py
   check_js:
     runs-on: ubuntu-latest
-    name: Check JavaScript Code
+    name: Check JS
     steps:
       - name: Checkout
         uses: actions/checkout@v4
