@@ -7,10 +7,8 @@
 /**
  * Add click listeners for enable and disable embed.
  *
- * Add click listeners which enable and disable the video embed when
- * clicked, preventing default link events in the process. These apply to
- * all elements with the enable-video-embed-link class to enable embed and
- * all elements with the disable-video-embed-link to disable embed.
+ * Add click listeners to enable and disable the video embed (user
+ * click). Callbacks will modify the user preference cookie.
  */
 function addEmbedListeners() {
   document.querySelectorAll('.enable-video-embed-link').forEach((link) => {
@@ -67,9 +65,8 @@ function onDisableEmbed() {
 /**
  * Show the video embed on this page.
  *
- * Take the iframe template from video-embed-template and putting the
- * contents into video-embed-target before setting video-embed to be
- * visible.
+ * Render the video embed template on this page, allowing the Vimeo integration
+ * to proceed.
  */
 function showEmbed() {
   const template = document.getElementById('video-embed-template').innerHTML;
@@ -80,6 +77,9 @@ function showEmbed() {
 
 /**
  * Hide the video embed on this page by hiding video-embed.
+ *
+ * Remove the video embed template on this page, preventing the Vimeo
+ * integration.
  */
 function hideEmbed() {
   document.getElementById('video-embed-target').innerHTML = '';
@@ -89,11 +89,6 @@ function hideEmbed() {
 
 /**
  * Check cookie settings and initialize video embed on the page.
- *
- * Check cookie settings and initialize video embed on the page if the
- * cookie indicates that user's preference is to have embeds enabled. No
- * action taken if the cookie indicates that the user's preference is that
- * video embeds are disabled.
  */
 function initEmbedGivenSettings() {
   if (getEmbedPreference()) {
