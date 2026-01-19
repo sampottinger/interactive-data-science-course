@@ -37,7 +37,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Run lint
-        run: npx eslint mooc_src/*.js
+        run: npx eslint 'mooc_src/**/*.js'
   build:
     runs-on: ubuntu-latest
     name: Build
@@ -63,10 +63,6 @@ jobs:
         run: cp -r mooc_src/pptx mooc/pptx
       - name: Copy Markdown materials
         run: cp -r mooc_src/md mooc/md
-      - name: Copy style
-        run: cp mooc_src/mooc.css mooc/mooc.css
-      - name: Copy logic
-        run: cp mooc_src/lesson.js mooc/lesson.js
       - name: Upload MOOC directory as artifact
         uses: actions/upload-artifact@v4
         with:
