@@ -9,7 +9,7 @@ importers:
   .:
     devDependencies:
       eslint:
-        specifier: ^8.44.0
+        specifier: ^8.57.1
         version: 8.57.1
       eslint-config-google:
         specifier: ^0.14.0
