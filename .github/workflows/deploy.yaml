@@ -38,9 +38,9 @@ jobs:
         run: pnpm install
       - name: Run lint
         run: npx eslint mooc_src/*.js
-  build_mooc:
+  build:
     runs-on: ubuntu-latest
-    name: Build MOOC
+    name: Build
     needs: [check_python, check_js]
     steps:
       - name: Checkout
@@ -77,7 +77,7 @@ jobs:
     name: Upload
     environment: deploy
     if: github.ref == 'refs/heads/main'
-    needs: build_mooc
+    needs: build
     steps:
       - name: Checkout
         uses: actions/checkout@v4
