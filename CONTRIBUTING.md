@@ -56,14 +56,15 @@ We use yaml to index all files and materials. Each yaml file can contain one or 
 Though both may be used in a "homework" role subject to class structure (i.e. flipped classroom), note that `assignment` is distinct from `reading` in that the former generally does not have some kind of work product produced by learners to be submitted to teachers. These are both distinct from `links` which are intended to provide access to materials which help complete the lesson itself.
 
 ##### Best practices
-Note that the following are recommended:
+Note that the following are recommended in YAML:
 
- - The html fields should use `>` insetad of regular single or double quote strings.
+ - The html fields should use `>` instead of regular single or double quote strings.
  - Non-supported or deprecated fields (such as `slides`) should be removed.
  - Recommended fields should be specified even if using default values.
  - Fields which are marked as "no" for required should not be included if using the default value.
  - Leading and trailing whitespace on strings may be left in place if it improves the readability of the yaml file but should otherwise be removed.
  - Avoid JSON object notation.
+ - Please keep lines to 100 characters or fewer. Exceptions made for very long URLs.
 
 Here is an example of a poorly implemented entry:
 

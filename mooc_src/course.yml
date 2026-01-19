@@ -7,10 +7,11 @@ sections:
     materials_pptx: true
     materials_md: true
     text: >
-      Short pre-course primer providing a quick preview of the class's structure and purpose before offering some background
-      and direction on how best to use the online open source resources.
+      Short pre-course primer providing a quick preview of the class's structure and purpose before
+      offering some background and direction on how best to use the online open source resources.
     reading: >
-      Be sure to briefly skim the <a href="/#materials">materials</a> to know that they are available.
+      Be sure to briefly skim the <a href="/#materials">overall course materials</a> which include
+      the course syllabus, manual, and coding exercise rubric.
     citations: true
   - number: 1
     name: Hello Visualization
@@ -19,17 +20,25 @@ sections:
     materials_pptx: true
     materials_md: true
     text: >
-      An overview of the course, what you will learn, and what we will be doing together. We look at 4 different perspectives
-      on data visualization in order to paint a landscape of ideas that will be revisited and expanded upon throughout the
-      rest of the semester.
+      A detailed overview of the course which introduces central concepts, what you will learn, and
+      what we will be doing together. Specifically, we look at 4 different perspectives on data
+      visualization in order to paint a landscape of ideas that will be revisited and expanded upon
+      throughout the rest of our time together.
     assignment: >
-      For getting warmed up, please write about 4 sentences reflecting on what you are hoping to gain from the course. If you
-      feel comfortable and want to engage with other learners, post your response online!
+      For getting warmed up, please write about 4 sentences reflecting on what you are hoping to
+      gain from the course. If you feel comfortable and want to engage with other learners, post
+      your response online!
     reading: >
-      Just a reminder the <a href="/#materials">materials</a> are available. We will learn more about how tools change the way
-      we think. Please watch the very excellent <a href="https://vimeo.com/67076984">Media for Thinking the Unthinkable
-      lecture</a> delivered by Bret Victor at the MIT Media Lab. A question for you to consider is what kinds of representations
-      of thought do you use every day?
+      <p>
+        We will learn more about how tools change the way we think. Please watch the very excellent
+        <a href="https://vimeo.com/67076984">Media for Thinking the Unthinkable lecture</a>
+        delivered by Bret Victor at the MIT Media Lab. A question for you to consider is what kinds
+        of representations of thought do you use every day?
+      </p>
+      <p>
+        Again, just a reminder that <a href="/#materials">central course materials</a> are
+        available which include the course manual, syllabus, and grading rubric.
+      </p>
     links:
     - text: Video for the section on data visualization as task
       url: https://youtu.be/2CMw4i9DiaM?t=112&feature=shared
@@ -43,15 +52,18 @@ sections:
     materials_pptx: true
     materials_md: true
     text: >
-      We revisit the four perspectives on data visualization from our first lecture and use them to analyze some demonstrative
-      examples. These are the types of things you'll be able to build by the end of the course!
+      We revisit the four perspectives on data visualization from our first lecture and use them
+      to analyze some demonstrative examples. These are the types of things you'll be able to build
+      by the end of the course!
     assignment: >
-      Find a visualization from your daily life or from the news. What do you think the piece's intended message
-      is? How does the author convey this message? Write 4 - 8 sentences with your answers.
+      Find a visualization from your daily life or from the news. What do you think the piece's
+      intended message is? How does the author convey this message? Write 4 - 8 sentences with your
+      answers.
     reading: >
-      We will look at open source and licensing. This will be important to understand how to use existing open source
-      tools and how to make new ones. Please review <a href="https://youtu.be/KI5qBAWcQv8">Winslow 2019</a> followed by <a
-      href="https://youtu.be/TF3crgcQr28">Harris 2013</a>.
+      We will look at open source and licensing. This will be important to understand how to use
+      existing open source tools and how to make new ones. Please review
+      <a href="https://youtu.be/KI5qBAWcQv8">Winslow 2019</a> followed by
+      <a href="https://youtu.be/TF3crgcQr28">Harris 2013</a>.
     links:
     - text: We Feel Fine (recommend watching from 2:40 to 8:04)
       url: https://www.ted.com/talks/jonathan_harris_the_web_s_secret_stories/details
@@ -73,20 +85,26 @@ sections:
     materials_pptx: true
     materials_md: true
     text: >
-      A hands-on first look at how we can use Python for creative coding. See tutorials at <a href="/labs">Labs</a>.
+      A hands-on first look at how we can use Python for creative coding. See tutorials at <a
+      href="/labs">Skills Labs</a>.
     assignment: >
-      Revisit the visualization from the last exercise. What might the 4 perspectives say about this visualization?
+      Revisit the visualization from the last exercise. What might the 4 perspectives say about
+      this visualization?
 
       <ul>
         <li>What visual encoding devices are used?</li>
         <li>What task or user journey is being accomplished through the piece?</li>
         <li>Does the piece try to also convey an emotion and, if so, how?</li>
-        <li>Does the piece invite the reader to reach their own conclusions about the data and, if so, how?</li>
+        <li>
+          Does the piece invite the reader to reach their own conclusions about the data and, if
+          so, how?
+        </li>
       </ul>
 
       Please write 4 - 8 sentences.
     reading: >
-      Optionally review <a href="https://python.swaroopch.com">A Byte of Python</a> if you want to brush up on (or learn) the fundamentals of Python.
+      Optionally review <a href="https://python.swaroopch.com">A Byte of Python</a> if you want to
+      brush up on (or learn) the fundamentals of Python.
     citations: true
     links:
     - text: Skills Labs
@@ -100,11 +118,20 @@ sections:
     materials_pptx: true
     materials_md: true
     text: >
-      Using object-oriented programming for interactive graphical simulation. See tutorials at <a href="/labs">Labs</a>.
+      <p>
+        Using object-oriented programming for interactive graphical simulation. See tutorials at
+        <a href="/labs">Skills Labs</a>.
+      </p>
+      <p>
+        If you are new to programming, you may optionally elect to engage AI assistants. If that is
+        of interest, check out the bonus <a href="/lesson26.html">Lesson 26</a> on using AI.
+      </p>
     reading: >
-      We will take a look at some of the ideas of Edward Tufte that continue to shape data visualization today. Please
-      read <a href="https://benjaminleroy.github.io/pages/blog/public/post/2018/05/16/review-of-tufte-s-the-visual-display-of-quantitative-information/">this
-      review of Tufte from LeRoy</a>.
+      We will take a look at some of the ideas of Edward Tufte that continue to shape data
+      visualization today. Please read
+      <a href="https://benjaminleroy.github.io/pages/blog/public/post/2018/05/16/review-of-tufte-s-the-visual-display-of-quantitative-information/">
+        this review of Tufte from LeRoy
+      </a>.
     citations: true
     links:
     - text: Skills Labs
@@ -119,13 +146,20 @@ sections:
     materials_pptx: true
     materials_md: true
     text: >
-      A look at some historic figures in data visualization along with a discussion of Tufte. Also, a look at some demonstrative
-      examples to refine our language for discussing information design. All of this sets the stage for glyphs and our transition
-      into cognitive and perception science.
+      A look at some historic figures in data visualization along with a discussion of Tufte. Also,
+      a look at some demonstrative examples to refine our language for discussing information
+      design. All of this sets the stage for glyphs and our transition into cognitive and
+      perception science.
     assignment: >
       Find another visualization but limit yourself to agencies and dedicated graphics teams within newsrooms.
-      Examples: <a href="https://periscopic.com/#!/impacts">Periscopic</a>, <a href="https://stamen.com/work/">Stamen</a>,
-      <a href="https://fathom.info/projects/">Fathom</a>, <a href="https://www.accurat.it">Accurat</a>, or <a href="https://www.nytimes.com/spotlight/graphics">NYT Graphics</a>.
+      
+      Examples:
+        <a href="https://periscopic.com/#!/impacts">Periscopic</a>,
+        <a href="https://stamen.com/work/">Stamen</a>,
+        <a href="https://fathom.info/projects/">Fathom</a>,
+        <a href="https://www.accurat.it">Accurat</a>,
+        or <a href="https://www.nytimes.com/spotlight/graphics">NYT Graphics</a>.
+      
       Please answer the following:
 
       <ul>
@@ -135,7 +169,11 @@ sections:
 
       Please write 4 - 8 sentences.
     reading: >
-      Please start to explore the core essential concept of pre-attentive attributes through the reading at <a href="https://medium.com/@vidya83.kesavan/preattentive-attributes-in-visualization-an-example-cb05ba1c9371">Kesavan (2018)</a>.
+      Please start to explore the core essential concept of pre-attentive attributes through the
+      reading at
+      <a href="https://medium.com/@vidya83.kesavan/preattentive-attributes-in-visualization-an-example-cb05ba1c9371">
+        Kesavan (2018)
+      </a>.
     links:
     - text: Darts (data visualization examples)
       url: https://www.datavis.ca/gallery/lie-factor.php
@@ -149,14 +187,24 @@ sections:
     materials_pptx: true
     materials_md: true
     text: >
-      A look at the human visual system and the connection between the eyes and brain. Explore how we extract visual
-      information for the environment and what that means for data visualization.
+      A look at the human visual system and the connection between the eyes and brain. Explore how
+      we extract visual information for the environment and what that means for data visualization.
     assignment: >
-      Plot job satisfaction from the Stack Overflow Developer Survey using your preferred software. This can be
-      done in spreadsheet software if desired! Your plot could be a bar chart, a scatterplot, a heatmap, etc. You don't need
-      to plot all variables but, instead, can focus on a small subset of interest. Please provide 2 - 4 sentences describing
-      how this representation uses pre-attentive features. You may use a <a href="/support/stackoverflow.xlsx">simplified
-      dataset</a> I prepared for you or the <a href="https://survey.stackoverflow.co">original full dataset from Stack Overflow</a>.
+      Plot job satisfaction from the Stack Overflow Developer Survey using your preferred software.
+      This can be done in spreadsheet software if desired! Your plot could be a bar chart, a
+      scatterplot, a heatmap, etc. You don't need to plot all variables but, instead, can focus on
+      a small subset of interest. Please provide 2 - 4 sentences describing how this representation
+      uses pre-attentive features. You may use a
+      
+      <a href="/support/stackoverflow.xlsx">
+        simplified dataset
+      </a>
+      
+      I prepared for you or the
+      
+      <a href="https://survey.stackoverflow.co">
+        original full dataset from Stack Overflow
+      </a>.
     reading: >
       We are getting a look at the Gestalt Principles through <a href="https://youtu.be/c1qdyszaeTU?feature=shared">Gestalt
       - The Parts and the Whole by Extra Credits</a>.
@@ -171,13 +219,20 @@ sections:
     materials_pptx: true
     materials_md: true
     text: >
-      Tour the Gestalt Principles and engage in a hands-on activity to put them into practice. Afterwards, explore color
-      vision including color spaces, perceptually consistent color schemes, tools for color, and general guidance.
+      Tour the Gestalt Principles and engage in a hands-on activity to put them into practice.
+      Afterwards, explore color vision including color spaces, perceptually consistent color
+      schemes, tools for color, and general guidance.
     assignment: >
-      <p>Return to your Job Satisfaction exercise. Make a new graphic that displays the same variables but use
-      a different visual representation. For example, if you previously chose a scatter plot, try a heatmap or bar chart.
-      It doesn't necessarily need to be better or worse. It just needs to be different. Finally, write 3 - 4 sentences about
-      how your plot uses pre-attentive variables.</p>
+      <p>
+        Return to your Job Satisfaction exercise. Make a new graphic that displays the same
+        variables but use a different visual representation. For example, if you previously chose a
+        scatter plot, try a heatmap or bar chart. It doesn't necessarily need to be better or
+        worse. It just needs to be different.
+      </p>
+      <p>
+        When done, write 3 - 4 sentences about how your plot uses pre-attentive variables. Use this
+        as a chance to reflect on how it felt to explore alternative options.
+      </p>
     links:
     - text: Activity as a PowerPoint file
       url: /support/lecture7.pptx
@@ -189,19 +244,38 @@ sections:
     materials_pptx: true
     materials_md: true
     text: >
-      Using code to draw graphics as guided by recent concepts from class including preattentive features. See <a href="/labs">Labs</a>.
+      Using code to draw graphics as guided by recent concepts from class including preattentive
+      features. See <a href="/labs">Labs</a>.
     assignment: >
-      <p>We are going to do a little creative coding where we will build up a sketch over the next two exercises. This doesn't need to be too complicated or even too much code. Also, don't worry if this first attempt is a little rough. You will get a chance to refine your work!</p>
+      <p>
+        We are going to do a little creative coding where we will build up a sketch over the next
+        two exercises. This doesn't need to be too complicated or even too much code. Also, don't
+        worry if this first attempt is a little rough. You will get a chance to refine your work!
+      </p>
 
-      <p>All that said, please use the concepts we have been exploring from class to build an artistic graphic that is drawn using code. In this piece, please explore at least one Gestalt Principle and one Pre-attentive Feature. This will offer important practice for drawing graphics relevant to building highly customized visualizations. For this submission, please do not make it interactive yet. We will do that in the follow up activity! Need inspiration? Check out the following...</p>
+      <p>
+        All that said, please use the concepts we have been exploring from class to build an
+        artistic graphic that is drawn using code. In this piece, please explore at least one
+        Gestalt Principle and one Pre-attentive Feature. This will offer important practice for
+        drawing graphics relevant to building highly customized visualizations. For this
+        submission, please do not make it interactive yet. We will do that in the follow up
+        activity! Need inspiration? Check out the following...
+      </p>
 
       <ul>
         <li><a href="https://sketchingpy.org/examples.html">Sketchingpy examples</a></li>
         <li><a href="https://openprocessing.org/discover/#/trending">OpenProcessing</a></li>
         <li><a href="https://genuary.art">Genuary</a></li>
       </ul>
+
+      <p>
+        If you are new to programming, you may optionally elect to engage AI assistants. If that is
+        of interest, check out the bonus <a href="/lesson26.html">Lesson 26</a> on using AI.
+      </p>
     reading: >
-      I wanted to keep things light so you can focus on the Skills Labs. So, we are going to look a little ahead with a very short preview about why geospatial visualization is so hard. Please watch <a href="https://youtu.be/kIID5FDi2JQ">All Maps are Wrong</a>.
+      I wanted to keep things light so you can focus on the Skills Labs. So, we are going to look a
+      little ahead with a very short preview about why geospatial visualization is so hard. Please
+      watch <a href="https://youtu.be/kIID5FDi2JQ">All Maps are Wrong</a>.
     links:
     - text: Skills Labs
       url: /labs
@@ -214,12 +288,20 @@ sections:
     materials_pptx: false
     materials_md: true
     text: >
-      Looking at the other elements we can bring into our work... text, images, data, and the user. Please try to complete
-      the remaining tutorials under Skills Lab 3 at <a href="/labs">Labs</a>.
+      <p>
+        Looking at the other elements we can bring into our work... text, images, data, and the
+        user. Please try to complete the remaining tutorials under Skills Lab 3 at
+        <a href="/labs">Labs</a>.
+      </p>
+      <p>
+        If you are having trouble, you may optionally elect to engage AI assistants. If that is of
+        interest, check out the bonus <a href="/lesson26.html">Lesson 26</a> on using AI.
+      </p>
     assignment: >
-      For this follow up exercise, we are going to add interactivity. Specifically, add interaction that uses only
-      a single action or verb like hover or click. This action could be contextualized like we saw in Skills Lab 4's rotating
-      color wheels. However, the goal is to explore how our work can respond to a simple user action.
+      For this follow up exercise, we are going to add interactivity. Specifically, add interaction
+      that uses only a single action or verb like hover or click. This action could be
+      contextualized like we saw in Skills Lab 4's rotating color wheels. However, the goal is to
+      explore how our work can respond to a simple user action.
     links:
     - text: Skills Labs
       url: /labs
@@ -232,16 +314,27 @@ sections:
     materials_pptx: false
     materials_md: true
     text: >
-      Continue your exploration in code with Skills Lab 4 which includes the very important <a href="/labs/resources_data.html">Tutorial
-      11</a>. Please try to complete all remaining tutorials under Skills Lab 4 at <a href="/labs">Labs</a>.
+      <p>
+        Continue your exploration in code with Skills Lab 4 which includes the very important
+        <a href="/labs/resources_data.html">Tutorial 11</a>. Please try to complete all remaining
+        tutorials under Skills Lab 4 at <a href="/labs">Labs</a>.
+      </p>
+
+      <p>
+        If you are having trouble, you may optionally elect to engage AI assistants. If that is of
+        interest, check out the bonus <a href="/lesson26.html">Lesson 26</a> on using AI.
+      </p>
     links:
     - text: Skills Labs
       url: /labs
     - text: Sketchingpy Online Sketchbook
       url: https://editor.sketchingpy.org/
     reading: >
-      We are getting ready for visual acuity. Get started by reading <a href="https://priceonomics.com/how-william-cleveland-turned-data-visualization/">How
-      William Cleveland Turned Data Visualization Into a Science</a>.
+      We are getting ready for visual acuity. Get started by reading
+      
+      <a href="https://priceonomics.com/how-william-cleveland-turned-data-visualization/">
+        How William Cleveland Turned Data Visualization Into a Science
+      </a>.
     citations: false
   - number: 11
     name: Formalizing Glyphs
@@ -250,27 +343,80 @@ sections:
     materials_pptx: true
     materials_md: true
     text: >
-      Consider essential empirical evidence regarding encoding devices from Cleveland and McGill. Also, examine important
-      techniques that allow us to re-use high value encoding devices. Specifically, learn more about dual axes, shared axes,
+      Consider essential empirical evidence regarding encoding devices from Cleveland and McGill.
+      Also, examine important techniques that allow us to re-use high value encoding devices.
+      Specifically, learn more about dual axes, shared axes,
       and direct labeling.
     assignment: >
       <p>
-        We have a fantastic opportunity to apply recent class concepts through an exploration of US Census American Community Survey (2024) results.
+        We have a fantastic opportunity to apply recent class concepts through an exploration of US
+        Census American Community Survey (2024) results.
       </p>
       <p>
-        <strong>Introduction</strong>: We will be working with a dataset derived from US Census data. Though originally designed for use in understanding "income gaps" between different groups of people, it can also be used to explore other questions about economics and work. It can explore differing levels of participation in different occupations, unemployment rates, and regional trends. There are a lot of variables to explore! This project will provide a space to experiment with encoding devices, data density, preattentive features, and more.
+        <strong>Introduction</strong>: We will be working with a dataset derived from US Census
+        data. Though originally designed for use in understanding "income gaps" between different
+        groups of people, it can also be used to explore other questions about economics and work.
+        It can explore differing levels of participation in different occupations, unemployment
+        rates, and regional trends. There are a lot of variables to explore! This project will
+        provide a space to experiment with encoding devices, data density, preattentive features,
+        and more.
       </p>
       <p>
-        <strong>Objective</strong>: Please visualize a subset of variables from this dataset. If using shared axes, please have a clear "main plot" from which those axes are shared. For this assignment, please include 4 or more variables. For example, you could visualize unemployment and wage (2 variables) by age and gender (2 variables). This would be a total of 4 variables (unemployment, wage, age, gender).
+        <strong>Objective</strong>: Please visualize a subset of variables from this dataset. If
+        using shared axes, please have a clear "main plot" from which those axes are shared. For
+        this assignment, please include 4 or more variables. For example, you could visualize
+        unemployment and wage (2 variables) by age and gender (2 variables). This would be a total
+        of 4 variables (unemployment, wage, age, gender).
       </p>
       <p>
-        <strong>Data</strong>: You may use the <a href="https://microdata.epi.org">EPI Microdata Extracts</a> directly but I recommend using the Income Gaps CSV instead to focus your time on the visual elements of this project. If you are using the <a href="https://incomegaps.com/data.csv">Income Gaps CSV file</a>, I also recommend using <a href="https://github.com/sampottinger/incomegaps/blob/main/preprocess/data_model.py">data_model.py</a> as described in the <a href="https://github.com/sampottinger/incomegaps?tab=readme-ov-file#data">Income Gaps CSV documentation</a>. If using the online editor for Sketchingpy, just download <a href="https://github.com/sampottinger/incomegaps/blob/main/preprocess/data_model.py">data_model.py</a> and add it to your sketchbook.
+        <strong>Data</strong>: You may use the
+        
+        <a href="https://microdata.epi.org">
+          EPI Microdata Extracts
+        </a>
+        
+        directly but I recommend using the Income Gaps CSV instead to focus your time on the visual
+        elements of this project. If you are using the
+        
+        <a href="https://incomegaps.com/data.csv">
+          Income Gaps CSV file
+        </a>,
+        
+        I also recommend using
+        
+        <a href="https://github.com/sampottinger/incomegaps/blob/main/preprocess/data_model.py">
+          data_model.py
+        </a> as described in the
+        
+        <a href="https://github.com/sampottinger/incomegaps?tab=readme-ov-file#data">
+          Income Gaps CSV documentation
+        </a>.
+        
+        If using the online editor for Sketchingpy, just download
+        
+        <a href="https://github.com/sampottinger/incomegaps/blob/main/preprocess/data_model.py">
+          data_model.py
+        </a>
+        
+        and add it to your sketchbook.
       </p>
       <p>
-        <strong>Tech</strong>: Though you may be able to complete Assignment 9 using prebuilt charts like through Matplotlib, you may find it more difficult to continue using it for later exercises where detailed control over each element of your graphic will be essential. Therefore, I recommend using Python and Sketchingpy. To help, see also <a href="https://gist.github.com/sampottinger/f69bd39def0cd05268d5a639d49f354e">the code I used for my Stack Overflow Developers Survey example</a>.
+        <strong>Tech</strong>: Though you may be able to complete Assignment 9 using prebuilt charts
+        like through Matplotlib, you may find it more difficult to continue using it for later
+        exercises where detailed control over each element of your graphic will be essential.
+        Therefore, I recommend using Python and Sketchingpy. To help, see also
+        
+        <a href="https://gist.github.com/sampottinger/f69bd39def0cd05268d5a639d49f354e">
+          the code I used for my Stack Overflow Developers Survey example
+        </a>.
+      </p>
+      <p>
+        If this is feeling a little difficult, you may optionally elect to engage AI assistants. If
+        that is of interest, check out the bonus <a href="/lesson26.html">Lesson 26</a> on using AI.
       </p>
     reading: >
-      Start taking a look through <a href="https://www.data-to-viz.com">https://www.data-to-viz.com</a>. We will dig in deeper together soon!
+      Start taking a look through <a href="https://www.data-to-viz.com">Data to Viz</a>. We will dig
+      in deeper together soon!
     citations: true
   combination:
   - number: 12
@@ -280,18 +426,33 @@ sections:
     materials_pptx: true
     materials_md: true
     text: >
-      A tour through common chart types used for different situations as well as common terminology and a brief introductory
-      mention of domains and tasks.
+      A tour through common chart types used for different situations as well as common terminology
+      and a brief introductory mention of domains and tasks.
     assignment: >
       <p>
-        We will continue the Census visualization you started in the last exercise. This activity is the same
-        but, whereas the previous prompt asked for 4 or more variables, please include 6 or more variables this time. If you
-        want that cheat code, <a href="https://github.com/sampottinger/census-example-sketchingpy">my response is available
-        on GitHub</a>. License under BSD-3-Clause. Please run assignment_10.py. Totally optional! Just leaving this here if
-        you want to take advantage of it. See also a <a href="https://vimeo.com/1064872882">video walkthrough of the code</a>.
+        We will continue the Census visualization you started in the last exercise. This activity is
+        the same but, whereas the previous prompt asked for 4 or more variables, please include 6 or
+        more variables this time. If you want a little cheat code,
+        
+        <a href="https://github.com/sampottinger/census-example-sketchingpy">
+          my response is available on GitHub
+        </a>.
+        
+        License under BSD-3-Clause. Please run assignment_10.py. Totally optional! Just leaving this
+        here if you want to take advantage of it. See also a
+        
+        <a href="https://vimeo.com/1064872882">
+          video walkthrough of the code
+        </a>.
+      </p>
+      <p>
+        Once more, if this is feeling a little difficult, you may optionally elect to engage AI
+        assistants. If that is of interest, check out the bonus
+        <a href="/lesson26.html">Lesson 26</a> on using AI.
       </p>
     reading: >
-      Please take a look at a discussion of <a href="https://vimeo.com/133608605">Dear Data at Eyeo (2015)</a>.
+      Please take a look at a discussion of
+      <a href="https://vimeo.com/133608605">Dear Data at Eyeo (2015)</a>.
     citations: true
   - number: 13
     name: Building New Languages
@@ -300,15 +461,16 @@ sections:
     materials_pptx: true
     materials_md: true
     text: >
-      Exploration of how to make new visual representations through the use of visual encoding mappings as well as two
-      new patterns for fitting in more variables... movements and levels. Finally, a look at data formats and a discussion
-      of advice for geospatial visualization.
+      Exploration of how to make new visual representations through the use of visual encoding
+      mappings as well as two new patterns for fitting in more variables... movements and levels.
+      Finally, a look at data formats and a discussion of advice for geospatial visualization.
     assignment: >
-      Please draw some representation of your last 5 years and what you hope your next 5 years will look like.
-      You can use whatever tools and materials you like other than code. For inspiration see <a href="https://www.dear-data.com/theproject">Dear
-      Data</a>.
+      Please draw some representation of your last 5 years and what you hope your next 5 years will
+      look like. You can use whatever tools and materials you like other than code. For inspiration
+      see <a href="https://www.dear-data.com/theproject">Dear Data</a>.
     reading: >
-      Please watch <a href="https://youtu.be/WOBKnRlOAes">15 Views on a Node-Link Graph</a> by Tamara Munzner.
+      Please watch <a href="https://youtu.be/WOBKnRlOAes">15 Views on a Node-Link Graph</a> by
+      Tamara Munzner.
     citations: true
   - number: 14
     name: Task / Domain
@@ -317,10 +479,14 @@ sections:
     materials_pptx: true
     materials_md: true
     text: >
-      Expand on the idea of domains and tasks with examples before looking at the What / Why / How framework.
+      Expand on the idea of domains and tasks with examples before looking at the What / Why / How
+      framework.
     reading: >
-      An overview of what / why / how at <a href="https://www.datarocks.co.nz/post/data-viz-bookshelf_visualization-analysis-design-tamara-munzner">Visualisation
-      Analysis & Design by Tamara Munzner or the What-Why-How of data viz</a>.
+      An overview of what / why / how at
+
+      <a href="https://www.datarocks.co.nz/post/data-viz-bookshelf_visualization-analysis-design-tamara-munzner">
+        Visualisation Analysis & Design by Tamara Munzner or the What-Why-How of data viz
+      </a>.
     links:
     - text: Video 1 from lecture
       url: https://www.youtube.com/watch?v=2CMw4i9DiaM
@@ -334,25 +500,42 @@ sections:
     materials_pptx: true
     materials_md: true
     text: >
-      Learning how to learn from users with a high level look at design research including user interviews, contextual
-      inquiry, and the Think-Aloud Protocol. Note that the lesson was changed after the rehearsal recording. See <a href="#links">links</a>.
+      Learning how to learn from users with a high level look at design research including user
+      interviews, contextual inquiry, and the Think-Aloud Protocol. Note that the lesson was changed
+      after the rehearsal recording. See <a href="#links">links</a>.
     assignment: >
-      For this assignment please record yourself (instructions for <a href="https://support.apple.com/en-us/102618">Mac</a>,
-      <a href="https://itsfoss.com/best-linux-screen-recorders/">Linux</a>, <a href="https://www.microsoft.com/en-us/windows/learning-center/how-to-record-screen-windows-11">Windows</a>)
-      doing a think-aloud walkthrough of the introductory sequence at <a href="https://app.pyafscgap.org/">https://app.pyafscgap.org/</a>.
-      Please follow the prompts at the top of the screen and do not click skip intro. After you record yourself, listen back
-      to how it went. What is this activity good at soliciting? What might this activity be poor at uncovering? Write two
-      sentences in reflection.
+      <p>
+        For this assignment please record yourself. Instructions for:
+      </p>
+      
+      <ul>
+        <li><a href="https://support.apple.com/en-us/102618">Mac</a></li>
+        <li><a href="https://itsfoss.com/best-linux-screen-recorders/">Linux</a></li>
+        <li>
+          <a href="https://www.microsoft.com/en-us/windows/learning-center/how-to-record-screen-windows-11">
+            Windows
+          </a>
+        </li>
+      </ul>
+
+      <p>
+        Please do a think-aloud walkthrough of the introductory sequence at
+        <a href="https://app.pyafscgap.org/">https://app.pyafscgap.org/</a>. Please follow the
+        prompts at the top of the screen and do not click skip intro. After you record yourself,
+        listen back to how it went. What is this activity good at soliciting? What might this
+        activity be poor at uncovering? Write two sentences in reflection.
+      </p>
     links:
     - text: Video replacing the one mentioned in slides
       url: https://www.youtube.com/watch?v=gHGN6hs2gZY
-    - text: For those in the University community, UC Berkeley library link for originally intended video
+    - text: For those in the UC Berkeley community, library link for originally intended video
       url: https://search.library.berkeley.edu/permalink/01UCS_BER/1thfj9n/alma991023789480406535
     reading: >
-      I would love to share <a href="https://youtu.be/-FT3qmJEvs0">a talk from Jane Fulton Suri</a>. Sorry the screen
-      isn't visible but it's an excellent follow up to today and also one of the only recordings available of it. The hospital
-      example involved a camera basically fixed to a patient's head which revealed that their day is spent looking up
-      at the ceiling with people looking down at them.
+      I would love to share <a href="https://youtu.be/-FT3qmJEvs0">a talk from Jane Fulton Suri</a>.
+      Sorry the screen isn't visible but it's an excellent follow up to today and also one of the
+      only recordings available of it. The hospital example involved a camera basically fixed to a
+      patient's head which revealed that their day is spent looking up at the ceiling with people
+      looking down at them.
     citations: true
   conversation:
   - number: 16
@@ -362,21 +545,22 @@ sections:
     materials_pptx: true
     materials_md: true
     text: >
-      The four waves of HCI and the ideas of Stuart Hall before briefly discussing how video games might fit into the
-      data visualizations conversation.
+      The four waves of HCI and the ideas of Stuart Hall before briefly discussing how video games
+      might fit into the data visualizations conversation.
     assignment: >
       <p>
-        In this exercise, we will visualize the BART ridership dataset. For this activity, please visualize 4
-        variables.
+        In this exercise, we will visualize the BART ridership dataset. For this activity, please
+        visualize 4 variables.
       </p>
 
       <p>
-        Note that this project invites you to do geospatial visualization in that stations have latitudes
-        and longitudes. However, it is not required. If you want to go this route, see the geospatial examples on the
-        <a href="https://sketchingpy.org/examples.html">Sketchingpy examples page</a>. To support you, please see this
-        geojson which has the outline of the Bay Area:
-        <a href="/support/bayarea.geojson">bayarea.geojson</a>. If you do geospatial visualization, latitude counts for
-        one variable and longitude counts for another. The geojson is under Public Domain.
+        Note that this project invites you to do geospatial visualization in that stations have
+        latitudes and longitudes. However, it is not required. If you want to go this route, see the
+        geospatial examples on the <a href="https://sketchingpy.org/examples.html">Sketchingpy
+        examples page</a>. To support you, please see this geojson which has the outline of the Bay
+        Area: <a href="/support/bayarea.geojson">bayarea.geojson</a>. If you do geospatial
+        visualization, latitude counts for one variable and longitude counts for another. The
+        geojson is under Public Domain.
       </p>
 
       <p>
@@ -384,9 +568,18 @@ sections:
         <a href="/support/bart.xlsx">ridership data I preprocessed for you</a> or the
         <a href="https://www.bart.gov/about/reports/ridership">upstream official dataset</a>.
       </p>
+
+      <p>
+        As we move into geospatial work, you may optionally elect to engage AI assistants. If that
+        is of interest, check out the bonus <a href="/lesson26.html">Lesson 26</a> on using AI.
+      </p>
     reading: >
-      I have selected a fairly short video for you to review digging deeper into the idea of affordances through
-      <a href="https://www.vox.com/2016/2/26/11120236/bad-doors-human-centered-design">bad doors</a>.
+      I have selected a fairly short video for you to review digging deeper into the idea of
+      affordances through
+      
+      <a href="https://www.vox.com/2016/2/26/11120236/bad-doors-human-centered-design">
+        bad doors
+      </a>.
     links:
     - text: Example linked in slides
       url: https://www.theguardian.com/us-news/2022/mar/13/how-covid-shook-the-us-charts-graphs
@@ -398,21 +591,25 @@ sections:
     materials_pptx: true
     materials_md: true
     text: >
-      Go deep into interactivity with affordances, kinesthetic projection, and common patterns in data visualization.
-      This is setting up our final ingredient for data visualizations that you need for the final!
+      Go deep into interactivity with affordances, kinesthetic projection, and common patterns in
+      data visualization. This is setting up our final ingredient for data visualizations that you
+      need for the final!
     assignment: >
       <p>
-        We will start our interactive experience. There are different video games for you to choose from within
-        the <a href="/support/Spring2025Manual.pdf">course manual</a>. See "experience" section. After you have selected
-        your choice, lookup the <a href="/support/games.pdf">game specific instructions</a>. You can space out your game
-        play over the next few lectures. There will be an additional question asked of all games later in <a href="/lesson20.html">lesson 20</a> when it would be good to be done.
+        We will start our interactive experience. There are different video games for you to choose
+        from within the <a href="/support/Spring2025Manual.pdf">course manual</a>. See "experience"
+        section. After you have selected your choice, lookup the <a href="/support/games.pdf">game
+        specific instructions</a>. You can space out your game play over the next few lectures.
+        There will be an additional question asked of all games later in
+        <a href="/lesson20.html">lesson 20</a> when it would be good to be done.
       </p>
     reading: >
-      Please watch a <a href="https://www.youtube.com/watch?v=1XlfeXpiSuQ">fantastic discussion regarding the role
-      of the player</a> from Extra Credits.
+      Please watch a <a href="https://www.youtube.com/watch?v=1XlfeXpiSuQ">fantastic discussion
+      regarding the role of the player</a> from Extra Credits.
     links:
-    - text: First video from slides (we are less interested in Kinect and more in the discussion of Kinesthetic Projection
-        in the middle). Specifically, watch 1:30 to 3:10.
+    - text: >
+        First video from slides (we are less interested in Kinect and more in the discussion of
+        Kinesthetic Projection in the middle). Specifically, watch 1:30 to 3:10.
       url: https://www.youtube.com/watch?v=ijcezUy3ZzY
     - text: Second video from slides
       url: https://www.youtube.com/watch?v=QCSXEKHL6fc
@@ -424,12 +621,12 @@ sections:
     materials_pptx: true
     materials_md: true
     text: >
-      Examine the ideas of ludonarrative and environmental storytelling. Please see examples in the <a href="#links">links
-      section</a>. I strongly recommend spending some time with each! Please note that there are multiple content warnings
-      for this lecture.
+      Examine the ideas of ludonarrative and environmental storytelling. Please see examples in the
+      <a href="#links">links section</a>. I strongly recommend spending some time with each! Please
+      note that there are multiple content warnings for this lecture.
     reading: >
-      Please take a deeper dive into ways to convey narrative without dialogue. Watch <a href="https://youtu.be/Qot5_rMB8Jc">The
-      Last Guardian and the Language of Games</a>.
+      Please take a deeper dive into ways to convey narrative without dialogue. Watch
+      <a href="https://youtu.be/Qot5_rMB8Jc">The Last Guardian and the Language of Games</a>.
     links:
     - text: Mechanics as Metaphor I
       url: https://youtu.be/4QwcI4iQt2Y?feature=shared
@@ -453,10 +650,14 @@ sections:
     materials_pptx: true
     materials_md: true
     text: >
-      Look at level design and how it helps us teach users about how to use and navigate through our data visualizations.
-      Explore Meeks, Hayashida Level Design, and Triangle Design.
+      Look at level design and how it helps us teach users about how to use and navigate through our
+      data visualizations. Explore Meeks, Hayashida Level Design, and Triangle Design.
     reading: >
-      Please watch this closer look at <a href="https://youtu.be/CZzcVs8tNfE">Triangle Design in Zelda</a>.
+      Please watch this closer look at
+      
+      <a href="https://youtu.be/CZzcVs8tNfE">
+        Triangle Design in Zelda
+      </a>.
     links:
     - text: Hayashida Level Design
       url: https://youtu.be/dBmIkEvEBtA
@@ -473,16 +674,28 @@ sections:
     materials_pptx: true
     materials_md: true
     text: >
-      A short lecture on player loops followed by exploring <a href="/support/games.pdf">questions specific to your game</a>.
-      In addition to the game-specific questions, please also write 3 sentences on what the player loops are within your game.
+      A short lecture on player loops followed by exploring
+      
+      <a href="/support/games.pdf">
+        questions specific to your game
+      </a>.
+      
+      In addition to the game-specific questions, please also write 3 sentences on what the player
+      loops are within your game.
     assignment: >
       <p>
         You did it - you made it to the last regular assignment before the final!
       </p>
 
       <p>
-        The goal for this exercise is to take one of your prior visualizations from the class (Stack Overflow Developer Survey, Census,
-        or BART) and make it interactive with at least one user action.
+        The goal for this exercise is to take one of your prior visualizations from the class (Stack
+        Overflow Developer Survey, Census, or BART) and make it interactive with at least one user
+        action.
+      </p>
+
+      <p>
+        Need help? Explore an optional <a href="/lesson26.html">Lesson 26</a> looking at using AI
+        assistants.
       </p>
     links:
     - text: Game-specific questions. Also, write 3 sentences on the player loops within your games.
@@ -497,7 +710,11 @@ sections:
     text: >
       A deeper look at building explorable explorations and the idea of thinking toys / diegesis.
     reading: >
-      Please watch this GDC talk on <a href="https://youtu.be/ontNUxSLhb8">Storytelling with Verbs</a>.
+      Please watch this GDC talk on
+      
+      <a href="https://youtu.be/ontNUxSLhb8">
+        Storytelling with Verbs
+      </a>.
     links:
     - text: Video from slides (recommend watching 4:43 to 13:40)
       url: https://vimeo.com/64895205
@@ -509,15 +726,20 @@ sections:
     materials_pptx: true
     materials_md: true
     text: >
-      Learn about the Web Content Accessibility Guidelines. Explore some common steps which you can take within your interactive
-      data visualizations that can help improve access.
+      Learn about the Web Content Accessibility Guidelines. Explore some common steps which you can
+      take within your interactive data visualizations that can help improve access.
     assignment: >
-      Though there is still some material left, this is a good opportunity to start on your final project to be
-      refined over the next few lessons. See the <a href="/Spring2025Manual.pdf">course manual</a> for recommended project
-      ideas / datasets.
+      Though there is still some material left, this is a good opportunity to start on your final
+      project to be refined over the next few lessons. See the
+      <a href="/Spring2025Manual.pdf">course manual</a> for recommended project ideas / datasets.
     reading: >
-      Please continue with our discussion by considering <a href="https://youtu.be/Ufe0i26DGiA">motor accessibility</a>
-      and <a href="https://www.youtube.com/watch?v=ObhvacfIOg0">cognitive disability</a> over at Game Makers Toolkit.
+      Please continue with our discussion by considering
+      
+      <a href="https://youtu.be/Ufe0i26DGiA">motor accessibility</a>
+      
+      and <a href="https://www.youtube.com/watch?v=ObhvacfIOg0">cognitive disability</a>
+      
+      over at Game Makers Toolkit.
     links:
     - text: Video from slides
       url: https://youtu.be/xrqdU4cZaLw
@@ -529,11 +751,12 @@ sections:
     materials_pptx: true
     materials_md: true
     text: >
-      Explore some of the common issues that come up and how bias enters into our work. Critically examine the power we
-      have as designers. Consider how exercising that power can lead to both positive and negative outcomes. Note that this
-      lecture has multiple content warnings.
+      Explore some of the common issues that come up and how bias enters into our work. Critically
+      examine the power we have as designers. Consider how exercising that power can lead to both
+      positive and negative outcomes. Note that this lecture has multiple content warnings.
     reading: >
-      Sasha Costanza-Chock (Eyeo 2019) digging deeper into Design Justice at <a href="https://vimeo.com/354276956">https://vimeo.com/354276956</a>.
+      Sasha Costanza-Chock (Eyeo 2019) digging deeper into Design Justice at
+      <a href="https://vimeo.com/354276956">https://vimeo.com/354276956</a>.
     links:
     - text: Video 1 (recommend watching 11:30 to 20:30)
       url: https://www.youtube.com/watch?v=AaU6tI2pb3M
@@ -557,12 +780,14 @@ sections:
     materials_pptx: true
     materials_md: true
     text: >
-      Consider inquiry-based design which this class is using to refer to a wide range of viewpoints in data visualization
-      that approach visualization through a series of questions. Also, take a look towards the final. Finally, a goodbye from
-      Sam with concluding remarks for the class ahead of the skills labs.
+      Consider inquiry-based design which this class is using to refer to a wide range of viewpoints
+      in data visualization that approach visualization through a series of questions. Also, take a
+      look towards the final. Finally, a goodbye from Sam with concluding remarks for the class
+      ahead of the skills labs.
     reading: >
-      <a href="https://stamen.com/data-visualization-for-education-when-asking-questions-is-the-answer/">Data Visualization
-      for Education</a> from Stamen.
+      <a href="https://stamen.com/data-visualization-for-education-when-asking-questions-is-the-answer/">
+        Data Visualization for Education
+      </a> from Stamen.
     citations: true
   conclusion:
   - number: 25
@@ -572,17 +797,23 @@ sections:
     materials_md: true
     text: >
       <p>
-        First, consider completing <a href="/labs/js.html">tutorial 12</a> which the final optional <a href="/labs">skills lab</a>
+        First, consider completing <a href="/labs/js.html">tutorial 12</a> which an optional
+        <a href="/labs">skills lab</a> with more information about implementation technologies.
       </p>
       <p>
-        Second, if you have not already done so, explore the final project as outlined in the <a href="/Spring2025Manual.pdf">Course Manual</a>. This is a great opportunity to take everything you learned over the course and demonstrate mastery in an excellent portfolio-building activity.
+        Second, if you have not already done so, explore the final project as outlined in the
+        <a href="/Spring2025Manual.pdf">Course Manual</a>. This is a great opportunity to take
+        everything you learned over the course and demonstrate mastery in an excellent
+        portfolio-building activity.
       </p>
     assignment: >
       <p>
-        Design and implement your final project.
+        Design and implement your final project. Don't forget <a href="/lesson26.html">Lesson 26</a>
+        if you might benefit from AI assistance in crafting your piece.
       </p>
       <p>
-        That's the end of our time together. Thank you so much for joining me on this journey! If you enjoyed this course, please let someone else know about it.
+        That's the end of our time together. Thank you so much for joining me on this journey! If
+        you enjoyed this course, please let someone else know about it.
       </p>
     citations: false
   - number: 26
@@ -592,10 +823,13 @@ sections:
     materials_pptx: true
     materials_md: true
     text: >
-      Explore using AI in implementing data visualizations. This optional extra lesson looks at using generative AI by
-      re-constructing an example data visualization from one of the early lessons of the course. Complete <a href="/labs">Skills
-      Lab 6</a> to get hands on!
+      Explore using AI in implementing data visualizations. This optional extra lesson looks at
+      using generative AI by re-constructing an example data visualization from one of the early
+      lessons of the course. Complete <a href="/labs">Skills Lab 6</a> to get hands on!
     reading: >
-      Learn more about the ethical considerations by watching <a href="https://satml.org/2023/videos/">Timnit Gebru's
-      talk on Eugenics and the Promise of Utopia through AGI</a>.
+      Learn more about the ethical considerations by watching
+      
+      <a href="https://satml.org/2023/videos/">
+        Timnit Gebru's talk on Eugenics and the Promise of Utopia through AGI
+      </a>.
     citations: true
