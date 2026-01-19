@@ -79,21 +79,8 @@ def main_lesson():
 
   lesson = lessons_by_number[lesson_number]
 
-  # Load citations from text file if available
-  citations_raw = []
   has_citations = lesson.get('citations', False)
-  if has_citations:
-    citations_file = f'citations/lesson{lesson_number:02d}.txt'
-    try:
-      with open(citations_file, 'r') as f:
-        for line in f:
-            # Skip empty lines and whitespace-only lines
-            stripped = line.strip()
-            if stripped:
-                citations_raw.append(stripped)
-    except FileNotFoundError:
-        # If file doesn't exist, citations_raw remains empty
-        pass
+  citations_raw = load_citations_from_file(lesson_number) if has_citations else []
 
   citations = map(process_citation, citations_raw)
 
@@ -117,6 +104,26 @@ def main_lesson():
   result = template.render(**template_vals)
   with open(output_path, 'w') as f:
     f.write(result)
+
+
+def load_citations_from_file(lesson_number: int) -> list:
+  """Load citations from a text file for a given lesson.
+
+  Load citations from text file if available. If file doesn't exist, returns
+  an empty list. Skip empty lines and whitespace-only lines.
+
+  Args:
+    lesson_number: The 0-indexed lesson number.
+
+  Returns:
+    list: A list of citation strings, or an empty list if the file doesn't exist.
+  """
+  citations_file = f'citations/lesson{lesson_number:02d}.txt'
+  try:
+    with open(citations_file, 'r') as f:
+      return list(filter(None, map(str.strip, f)))
+  except FileNotFoundError:
+    return []
 
 
 def process_citation(citation: str) -> str:

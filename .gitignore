@@ -2,3 +2,4 @@ mooc/
 mooc_src/venv/
 node_modules/
 tasks/
+*.pyc
