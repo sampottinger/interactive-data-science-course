@@ -1,0 +1,386 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <title>AI Basics</title>
+        <link href="/labs/labs.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="skip-link">
+            <a href="#main">Skip to content</a>
+        </div>
+        <header>
+            This tutorial is part of the <a href="/labs">skills labs</a> within
+            <a href="/">Interactive Data Science and Visualization</a>.
+        </header>
+        <main id="main">
+            <h1>AI Basics for Data Visualization</h1>
+
+            Welcome to Skills Lab 6! In this tutorial, we will explore how to use AI assistants to help create data visualizations. Rather than writing every line of code from scratch, we can collaborate with AI to build visualizations more quickly while still applying our design knowledge and critical thinking skills.
+
+            <details>
+                <summary>Contents</summary>
+                <ul>
+                    <li><a href="#motivation">Motivation</a></li>
+                    <li><a href="#prepare">Prepare</a></li>
+                    <li><a href="#initial-request">Initial Request</a></li>
+                    <li><a href="#first-iteration">First Iteration</a></li>
+                    <li><a href="#refining-labels">Refining Labels</a></li>
+                    <li><a href="#final-polish">Final Polish</a></li>
+                    <li><a href="#reflection">Reflection</a></li>
+                    <li><a href="#next">Next</a></li>
+                </ul>
+            </details>
+
+            <section id="motivation">
+                <h2>Motivation</h2>
+
+                Throughout this course, you have been building data visualizations through a combination of pre-built charting libraries and custom drawing with Sketchingpy. You've learned about visual encoding, task-oriented design, accessibility, and data-ink ratio. These skills remain critical even as we introduce a new tool: AI assistants.
+
+                <p>
+                    AI assistants like Claude, ChatGPT, or other language models can help generate visualization code quickly. However, they work best when you bring your visualization expertise to the conversation. You need to:
+                </p>
+
+                <ul>
+                    <li>Know what kind of visualization will best serve your data and purpose</li>
+                    <li>Recognize when a visualization has issues with readability, accessibility, or design</li>
+                    <li>Provide specific feedback to improve the output</li>
+                    <li>Iterate towards a better result</li>
+                </ul>
+
+                <p>
+                    Think of an AI assistant as a collaborator who can write code quickly but needs your design eye and domain knowledge to guide the work. This tutorial will walk you through a real example of this iterative process.
+                </p>
+
+                <p>
+                    <strong>Important note</strong>: The exact output you get from an AI assistant may differ slightly from what's shown here. That's completely normal and expected. The key learning goal is to experience the process of iteration: making a request, reviewing the output, identifying what to improve, and refining your prompts accordingly.
+                </p>
+            </section>
+
+            <section id="prepare">
+                <h2>Prepare</h2>
+
+                For this tutorial, you'll need access to an AI assistant that can generate Python code for data visualization. Some options include:
+
+                <ul>
+                    <li><strong>Claude</strong> (claude.ai)</li>
+                    <li><strong>ChatGPT</strong> (chat.openai.com)</li>
+                    <li><strong>GitHub Copilot</strong> (if you have access)</li>
+                    <li>Other language model services</li>
+                </ul>
+
+                <p>
+                    You'll also need a Python environment where you can run the generated code. This could be:
+                </p>
+
+                <ul>
+                    <li>A Jupyter notebook</li>
+                    <li>Google Colab</li>
+                    <li>Your local Python installation</li>
+                    <li>Any environment where you can install and use matplotlib</li>
+                </ul>
+
+                <p>
+                    For this example, we'll be using matplotlib to create a visualization of predator-prey dynamics between wolves and moose populations at Isle Royale National Park. You don't need to download the data yourself - we'll ask the AI assistant to fetch it for us.
+                </p>
+
+                <p>
+                    Make sure you have matplotlib installed in your environment. If you're using a Jupyter notebook or Colab, it's likely already available. If not, you can install it with:
+                </p>
+
+                <pre>
+pip install matplotlib
+</pre>
+
+                <p>
+                    Once you're set up, open your AI assistant in one window and your Python environment in another so you can easily test the code as you go.
+                </p>
+            </section>
+
+            <section id="initial-request">
+                <h2>Initial Request</h2>
+
+                Let's start by making our first request to the AI assistant. The goal here is to create a split bar plot showing both wolf and moose populations over time, with wolves extending to the left and moose extending to the right.
+
+                <p>
+                    Try copying this prompt into your AI assistant:
+                </p>
+
+                <pre>
+Hello! Can you please use matplotlib to generate a graph of wolves vs moose
+populations as a split bar plot (one going to the left and the other going
+to the right) where the axes have different colors to correspond to the bar
+colors for the two series? Please have the left facing axis for wolves go
+from 0 to 50 and the right facing axis for moose go from 0 to 2500. See
+https://www.nps.gov/isro/learn/nature/wolf-moose-populations.htm for data.
+</pre>
+
+                <p>
+                    <strong>Check the work</strong>: Run the code provided by the AI assistant. You should see a visualization with:
+                </p>
+
+                <ul>
+                    <li>Blue bars extending to the left representing wolf populations</li>
+                    <li>Orange (or similar color) bars extending to the right representing moose populations</li>
+                    <li>A timeline showing years (likely 1980-2019 or similar range)</li>
+                    <li>Color-coordinated axes with scales from 0-50 for wolves and 0-2500 for moose</li>
+                </ul>
+
+                <p>
+                    Take a moment to examine the output. What do you notice? Can you see the predator-prey relationship in the data?
+                </p>
+
+                <p>
+                    <strong>What to look for</strong>: The classic predator-prey oscillation pattern should be visible, but the wolf data might appear compressed because the scale is much smaller (0-50) compared to moose (0-2500). This brings us to our first iteration.
+                </p>
+            </section>
+
+            <section id="first-iteration">
+                <h2>First Iteration</h2>
+
+                Looking at the initial visualization, you might notice that the wolf population changes are hard to see because they're compressed into a narrow space compared to the moose. The wolves vary from about 0 to 50, while moose vary from about 500 to 2500, so the wolf variations look subtle.
+
+                <p>
+                    Let's improve this by giving wolves more horizontal space. This will make the harmonic relationship between the two populations easier to see.
+                </p>
+
+                <p>
+                    Try this prompt:
+                </p>
+
+                <pre>
+This is great but the wolves are too compressed. Let's have the split at
+roughly half way across the plot. This means that there is more horizontal
+space per wolf than per moose. However, this will show the harmonic
+relationship better.
+</pre>
+
+                <p>
+                    <strong>Check the work</strong>: Run the updated code. Now you should see:
+                </p>
+
+                <ul>
+                    <li>Wolves taking up approximately half the plot width (left side)</li>
+                    <li>Moose taking up approximately half the plot width (right side)</li>
+                    <li>Much more visible oscillations in the wolf population</li>
+                    <li>The predator-prey relationship should be much clearer</li>
+                </ul>
+
+                <p>
+                    <strong>What improved</strong>: By allocating equal horizontal space to both scales, we've effectively "zoomed in" on the wolf data. Now you can see how when wolves are high, moose populations tend to be lower, and when wolves crash (especially around 2015-2018 in the data), moose populations surge.
+                </p>
+
+                <p>
+                    This is an excellent example of how your visualization knowledge guides the AI. The assistant gave you a technically correct chart, but you recognized that the visual encoding wasn't optimal for showing the relationship you wanted to highlight.
+                </p>
+            </section>
+
+            <section id="refining-labels">
+                <h2>Refining Labels</h2>
+
+                The visualization is getting better, but you might notice that the axis labels could be clearer. Specifically, there might be overlapping text where the colored "Wolves" and "Moose" labels compete with a black axis title.
+
+                <p>
+                    Let's clean this up and make the labels more descriptive. Try this prompt:
+                </p>
+
+                <pre>
+Perfect! We have the colored wolves and moose labels overlapping with the
+black axis title. Let's set the black axis title to empty and then let's
+make the colors for both series darker so that it is easy to read wolves
+and moose. Finally, let's say "Number of Wolves" and "Number of Moose" in
+that colored text.
+</pre>
+
+                <p>
+                    <strong>Check the work</strong>: Run the code and verify:
+                </p>
+
+                <ul>
+                    <li>The black axis title is now gone, eliminating the overlap</li>
+                    <li>The blue and orange colors are darker and easier to read</li>
+                    <li>The labels now say "Number of Wolves" and "Number of Moose" instead of just "Wolves" and "Moose"</li>
+                    <li>The visualization should feel cleaner and more professional</li>
+                </ul>
+
+                <p>
+                    <strong>Design thinking</strong>: Notice how this iteration focused on reducing visual clutter and improving readability. This connects to Tufte's concepts of reducing chartjunk and maximizing the data-ink ratio. You're making intentional design choices to improve the final product.
+                </p>
+            </section>
+
+            <section id="final-polish">
+                <h2>Final Polish</h2>
+
+                There's one more improvement we can make. Right now, the numerical labels along the horizontal axis (the tick marks showing the actual population numbers) are all in black. Let's make them match their respective data series for maximum clarity.
+
+                <p>
+                    Try this final prompt:
+                </p>
+
+                <pre>
+Doing really well. One last thing. The labels for the count (along the
+bottom horizontal axis). Can you please make those the same color as the
+series they describe (so one color on left and a different color on right)?
+</pre>
+
+                <p>
+                    <strong>Check the work</strong>: Run the final version. You should now see:
+                </p>
+
+                <ul>
+                    <li>Blue tick labels on the left side (for wolf counts)</li>
+                    <li>Orange tick labels on the right side (for moose counts)</li>
+                    <li>The tick marks themselves are also color-coded</li>
+                    <li>The entire visualization now uses color consistently to distinguish the two data series</li>
+                </ul>
+
+                <p>
+                    <strong>The result</strong>: You now have a polished visualization that clearly shows the predator-prey dynamics between wolves and moose. Every visual element is intentionally designed to support the viewer's understanding of the data.
+                </p>
+            </section>
+
+            <section id="reflection">
+                <h2>Reflection</h2>
+
+                Let's step back and think about what we just accomplished and what it teaches us about working with AI assistants for data visualization.
+
+                <p>
+                    <strong>The iterative process</strong>: Notice that we didn't get a perfect visualization in one shot. We went through several rounds:
+                </p>
+
+                <ol>
+                    <li>Initial request with basic requirements</li>
+                    <li>Adjusting the spatial allocation to better show the data</li>
+                    <li>Cleaning up labels and improving readability</li>
+                    <li>Fine-tuning color coding for consistency</li>
+                </ol>
+
+                <p>
+                    This is exactly how you should work with AI assistants. Start with the core requirements, then iteratively refine based on your design knowledge and what you observe in the output.
+                </p>
+
+                <p>
+                    <strong>Your expertise matters</strong>: At each step, you brought your knowledge from this course to bear:
+                </p>
+
+                <ul>
+                    <li>You recognized that the compressed wolf data wasn't showing the pattern effectively</li>
+                    <li>You identified overlapping labels as visual clutter</li>
+                    <li>You applied color coding principles to improve clarity</li>
+                </ul>
+
+                <p>
+                    The AI assistant can write code quickly, but it needed your design eye to reach the optimal result. Without your guidance, the first version would have been technically correct but visually suboptimal.
+                </p>
+
+                <p>
+                    <strong>Specificity in feedback</strong>: Notice how each prompt was specific about what to change and why. Vague feedback like "make it better" is less effective than "give wolves more horizontal space to show the oscillations better." The more precisely you can articulate what you want, the better results you'll get.
+                </p>
+
+                <p>
+                    <strong>Verification is essential</strong>: After each change, we ran the code and examined the output. Don't skip this step. AI assistants can make mistakes, and you need to verify that the changes match your intentions.
+                </p>
+
+                <p>
+                    <strong>When to use AI assistance</strong>: AI assistants are particularly valuable when:
+                </p>
+
+                <ul>
+                    <li>You need to quickly prototype a visualization</li>
+                    <li>You're working with standard chart types (bar plots, scatter plots, line charts, etc.)</li>
+                    <li>You want to explore different design options rapidly</li>
+                    <li>You know what you want but need help with implementation details</li>
+                </ul>
+
+                <p>
+                    However, for highly custom visualizations or when you need pixel-perfect control, you might still prefer to write the code yourself using tools like Sketchingpy.
+                </p>
+
+                <p>
+                    <strong>Limitations to keep in mind</strong>: AI assistants have some limitations:
+                </p>
+
+                <ul>
+                    <li>They may not always make optimal design choices without guidance</li>
+                    <li>Their output can vary - you might get different results on different runs</li>
+                    <li>They might not be familiar with the latest library versions or features</li>
+                    <li>Complex visualizations may require multiple rounds of refinement</li>
+                </ul>
+
+                <p>
+                    This is why your visualization knowledge from this course remains essential. You're not replacing your skills with AI - you're augmenting them with a powerful tool that can accelerate your work when properly directed.
+                </p>
+
+                <p>
+                    <strong>Compare to previous work</strong>: Think back to the visualizations you've built from scratch using Sketchingpy. There, you had complete control over every pixel and could create highly customized designs. Here, you're trading some of that control for speed and convenience. Both approaches have their place in your toolkit.
+                </p>
+
+                <p>
+                    The key is knowing when to use each approach and how to work effectively with AI when you choose that path.
+                </p>
+            </section>
+
+            <section id="next">
+                <h2>Next</h2>
+
+                Congratulations! You've experienced the process of collaborating with an AI assistant to create a data visualization. You started with a basic request, reviewed the output critically, and iteratively refined it using your visualization knowledge.
+
+                <p>
+                    As you continue working with AI assistants for data visualization, remember:
+                </p>
+
+                <ul>
+                    <li>Always review the output - don't blindly trust generated code</li>
+                    <li>Apply your design knowledge to identify improvements</li>
+                    <li>Be specific in your feedback and requests</li>
+                    <li>Iterate towards better results</li>
+                    <li>Verify that the visualization accurately represents the data</li>
+                </ul>
+
+                <p>
+                    In future work, you might combine AI-generated code with manual refinements, or use AI to scaffold a visualization that you then customize further. The possibilities are extensive when you pair AI capabilities with human expertise.
+                </p>
+
+                <details>
+                    <summary>Citations</summary>
+                    <ul>
+                        <li>
+                            National Park Service, "Wolf and Moose Populations," Isle Royale National Park, 2025. [Online]. Available:
+                            <a href="https://www.nps.gov/isro/learn/nature/wolf-moose-populations.htm" target="_blank">https://www.nps.gov/isro/learn/nature/wolf-moose-populations.htm</a>
+                        </li>
+                        <li>
+                            J. Hunter, et al., "Matplotlib: Visualization with Python," Matplotlib Development Team, 2025. [Online]. Available:
+                            <a href="https://matplotlib.org" target="_blank">https://matplotlib.org</a>
+                        </li>
+                        <li>
+                            E. Tufte, "The Visual Display of Quantitative Information," Graphics Press, 2001.
+                        </li>
+                        <li>
+                            Anthropic, "Claude," Anthropic PBC, 2025. [Online]. Available:
+                            <a href="https://claude.ai" target="_blank">https://claude.ai</a>
+                        </li>
+                        <li>
+                            OpenAI, "ChatGPT," OpenAI, 2025. [Online]. Available:
+                            <a href="https://chat.openai.com" target="_blank">https://chat.openai.com</a>
+                        </li>
+                    </ul>
+                </details>
+            </section>
+        </main>
+        <footer>
+            Materials on this page are available under
+            <a href="https://opensource.org/license/bsd-3-clause"
+                >BSD 3-Clause License</a
+            >
+            for code and
+            <a href="https://creativecommons.org/licenses/by/4.0/"
+                >CC-BY License</a
+            >
+            for all other material. Thank you to
+            <a href="https://public-sans.digital.gov">PublicSans</a> under the
+            Open Font License. No cookies are used. Analytics limited to
+            standard server logging which may collect IP addresses. These logs
+            are deleted or anonymized within 30 days.
+        </footer>
+    </body>
+</html>
