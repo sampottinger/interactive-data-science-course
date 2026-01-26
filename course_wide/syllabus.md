@@ -1,5 +1,5 @@
 # Interactive Data Science and Visualization
-Formal curriculum and syllabus which is completed by the [course manual](/support/course_wide/manual.md) with practical guidance on either taking the course as a learner or providing / adapting it as an instructor.
+Formal curriculum and syllabus which is completed by the [course manual](/course_wide/manual.md) with practical guidance on either taking the course as a learner or providing / adapting it as an instructor.
 
 **Note:** A [PDF version of this syllabus](syllabus.pdf) from the UC Berkeley Spring 2025 teaching is also available.
 

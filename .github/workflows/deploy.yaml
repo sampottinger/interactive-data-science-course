@@ -63,6 +63,10 @@ jobs:
         run: cp -r mooc_src/pptx mooc/pptx
       - name: Copy Markdown materials
         run: cp -r mooc_src/md mooc/md
+      - name: Copy labs directory
+        run: cp -r labs mooc/labs
+      - name: Copy course_wide directory
+        run: cp -r course_wide mooc/course_wide
       - name: Upload MOOC directory as artifact
         uses: actions/upload-artifact@v4
         with:

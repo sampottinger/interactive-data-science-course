@@ -12,7 +12,7 @@ Most of my current focus is on crafting tools for policy makers to engage scienc
 
 That's enough about me. Let's talk about you! I'm excited to have you here as story-tellers, designers, scientists, and engineers. This hands-on course will help you build sophisticated interactive tools. Regardless of if you may be making those experiences for others or for yourself, our time together will focus on the ways we see information and construct knowledge. At the end of the course, you will be well versed in information design. We will use readings, short hands-on practice projects, a longer hands-on interactive experience, a capstone, and collaborative in-person discussion to get there.
 
-This "student manual" gives you everything you need to navigate the course. While the [syllabus](/support/course_wide/syllabus.md) offers an overview of the schedule with weekly lecture and assignments, this complements those materials with details on each reading and project. Also, to help you set time expectations, it outlines estimated duration for each activity.
+This "student manual" gives you everything you need to navigate the course. While the [syllabus](/course_wide/syllabus.md) offers an overview of the schedule with weekly lecture and assignments, this complements those materials with details on each reading and project. Also, to help you set time expectations, it outlines estimated duration for each activity.
 
 I'll end this welcome letter with something a mentor told me once: design is an act of hope. When we do this work, we are engaging in optimism and practice of building a brighter, stronger, and more inclusive future.
 
