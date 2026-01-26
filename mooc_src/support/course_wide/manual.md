@@ -1,6 +1,8 @@
 # Interactive Data Science and Visualization Manual
 Document which helps students engage with or instructors teach IDSV.
 
+**Note:** A [PDF version of this manual](manual.pdf) from the UC Berkeley Spring 2025 teaching is also available.
+
 ## Hello
 I'm excited that you are joining us as we explore interactive data science and visualization.
 
@@ -10,7 +12,7 @@ Most of my current focus is on crafting tools for policy makers to engage scienc
 
 That's enough about me. Let's talk about you! I'm excited to have you here as story-tellers, designers, scientists, and engineers. This hands-on course will help you build sophisticated interactive tools. Regardless of if you may be making those experiences for others or for yourself, our time together will focus on the ways we see information and construct knowledge. At the end of the course, you will be well versed in information design. We will use readings, short hands-on practice projects, a longer hands-on interactive experience, a capstone, and collaborative in-person discussion to get there.
 
-This "student manual" gives you everything you need to navigate the course. While the syllabus offers an overview of the schedule with weekly lecture and assignments, this complements those materials with details on each reading and project. Also, to help you set time expectations, it outlines estimated duration for each activity.
+This "student manual" gives you everything you need to navigate the course. While the [syllabus](/support/course_wide/syllabus.md) offers an overview of the schedule with weekly lecture and assignments, this complements those materials with details on each reading and project. Also, to help you set time expectations, it outlines estimated duration for each activity.
 
 I'll end this welcome letter with something a mentor told me once: design is an act of hope. When we do this work, we are engaging in optimism and practice of building a brighter, stronger, and more inclusive future.
 
@@ -43,18 +45,18 @@ Readings do not have submissions but you are welcome to discuss with the rest of
 | Week | Day 1                                                                | Day 2                                                             |
 | ---- | -------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | 1    |                                                                      |                                                                   |
-| 2    | Media for Thinking the Unthinkable (Victor)                          | Dealing with Open Source Licenses (Winslow)                       |
-| 3    |                                                                      | Review of Tufte (LeRoy)                                           |
-| 4    | Preattentive Attributes in Visualization (Kesavan)                   | Inventing on Principle (Victor)                                   |
+| 2    | [Media for Thinking the Unthinkable (Victor 2013)](https://vimeo.com/67076984) | Dealing with Open Source Licenses (Winslow 2019) |
+| 3    |                                                                      | [Review of Tufte (LeRoy 2018)](https://benjaminleroy.github.io/pages/blog/public/post/2018/05/16/review-of-tufte-s-the-visual-display-of-quantitative-information/) |
+| 4    | [Preattentive Attributes in Visualization (Kesavan 2016)](https://daydreamingnumbers.com/blog/preattentive-attributes-example/) | [Inventing on Principle (Victor 2012)](https://www.youtube.com/watch?v=PUv66718DII) |
 | 5    |                                                                      | OpenProcessing Genuary                                            |
 | 6    | Genuary                                                              |                                                                   |
-| 7    | William Cleveland (Pricenomics)                                      | From Data to Viz (Holtz 2018)                                     |
-| 8    | 15 View on a Node Link Graph (Munzner)                               | Dear Data (Luipi and Posavec)                                     |
-| 9    | Designing for Realtime Spacecraft (Binx)                             | Bad Doors (Posner et al)                                          |
-| 10   | Explorable Explanations (Victor), Role of the Player (Portnow)       | Last Guardian: Language of Games (Brown)                          |
-| 11   | Super Mario Level 1-1 (Emmons and Portnow), Zelda Open World (Brown) | Storytelling with Verbs (Tremblay), Birth of a Game (Wright)      |
-| 12   | Games are for Everyone (Brown)                                       | What Ethical AI Really Means (Thorne), Eyeo 2019 (Costanza-Chock) |
-| 13   | World Design of Metroid (Brown)                                      |                                                                   |
+| 7    | [William Cleveland (Pricenomics 2016)](https://priceonomics.com/how-william-cleveland-turned-data-visualization/) | [From Data to Viz (Holtz 2018)](https://www.data-to-viz.com/) |
+| 8    | [15 View on a Node Link Graph (Munzner 2007)](https://www.youtube.com/watch?v=WOBKnRlOAes) | [Dear Data (Luipi and Posavec 2015)](https://vimeo.com/channels/eyeo2015/133608605) |
+| 9    | Designing for Realtime Spacecraft (Binx 2016)                        | [Bad Doors (Posner et al 2016)](https://www.youtube.com/watch?v=yY96hTb8WgI) |
+| 10   | Explorable Explanations (Victor 2011), Role of the Player (Portnow 2011) | [Last Guardian: Language of Games (Brown 2017)](https://www.youtube.com/watch?v=Qot5_rMB8Jc) |
+| 11   | [Super Mario Level 1-1 (Emmons and Portnow 2014)](https://www.youtube.com/watch?v=ZH2wGpEZVgE), [Zelda Open World (Brown 2023)](https://www.youtube.com/watch?v=CZzcVs8tNfE&themeRefresh=1) | [Storytelling with Verbs (Tremblay 2020)](https://www.youtube.com/watch?v=ontNUxSLhb8), [Birth of a Game (Wright 2007)](https://www.ted.com/talks/will_wright_spore_birth_of_a_game?language=en) |
+| 12   | [Games are for Everyone (Brown 2018)](https://www.youtube.com/watch?v=xrqdU4cZaLw) | [What Ethical AI Really Means (Thorne 2023)](https://www.youtube.com/watch?v=AaU6tI2pb3M), [Eyeo 2019 (Costanza-Chock 2019)](https://vimeo.com/354276956) |
+| 13   | [World Design of Metroid (Brown 2018)](https://www.youtube.com/watch?v=kUT60DKaEGc) |                                                                   |
 
 **Remainder:** Readings for Final and Interactive Experience
 
@@ -71,31 +73,31 @@ Some of these games have combat and some deal with some heavier topics. Also, ma
 
 #### Ludic Elements / Ludonarrative
 
-**Papers Please** (Pope 2013)
+**[Papers Please (2014)](https://papersplea.se)**
 - What message do the ludic elements convey?
 - What is gained by having the player take action to advance the narrative?
 
-**Spiritfarer** (Thunder Lotus 2020)
+**[Spiritfarer (Thunder Lotus 2020)](https://thunderlotusgames.com/spiritfarer/)**
 - How does the game build the player's investment in the characters?
 - How does food interact with the broader narrative and character building?
 
 #### Dynamic Narrative / Design
 
-**Cosmic Wheel** (Deconstructteam 2023)
+**[Cosmic Wheel (Deconstructteam 2023)](https://cosmicwheel.com/)**
 - How do the player and game respond to each other?
 - To what degree does the player have agency over the narrative?
 
-**FTL** (Ma and Davis 2012)
+**[FTL (Ma and Davis 2012)](https://subsetgames.com/ftl.html)**
 - How does the game build tension if you can pause?
 - What is the effect of limiting the player to a subset of content?
 
 #### Environmental / Atmospheric Storytelling
 
-**Unpacking** (Brier et al 2021)
+**Unpacking (Brier et al 2021)**
 - Would the game be different with dialogue?
 - How does the game use solution validity to build its narrative?
 
-**Afterplace** (Kice 2022)
+**Afterplace (Kice 2022)**
 - How can dialogue / signage serve multiple roles?
 - How does the game build "vibe" of different areas outside of dialogue?
 
@@ -154,7 +156,7 @@ Revisit your BART or census visualization and add a single verb / single interac
 For the final project, we will build a visualization using what we learned throughout the course. This capstone affords additional time for a deeper exploration. You are welcome to share code and ideas with others as described in the "collaborate" section.
 
 ### Motivation
-This visualization should be interactive, multi-dimensional, and reflect our discussion of ethics. You may use any licensed dataset but see below for some possible options which are well documented and formatted. As the "activity" for 9 lectures, we anticipate that this exercise will take about 18 hours. However, if you need more time, you may convert the 5 hours of final reading to additional project time. Sketchingpy is recommended but talk to Sam if you want to use a different technology.
+This visualization should be interactive, multi-dimensional, and reflect our discussion of ethics. You may use any licensed dataset but see below for some possible options which are well documented and formatted. As the "activity" for 9 lectures, we anticipate that this exercise will take about 18 hours. However, if you need more time, you may convert the 5 hours of final reading to additional project time. [Sketchingpy (Pottinger 2024)](https://sketchingpy.org) is recommended but talk to Sam if you want to use a different technology.
 
 ### Dataset Options
 These options are given as a starting point known to have favorable licensing and suitable documentation. However, you may choose to consider a different dataset for your work.
@@ -262,6 +264,58 @@ Some stuff which didn’t fit into the rest of the manual.
 
 ### Dedication
 Dedicated to my late grandmother, Barbara. Thank you for your wisdom and kindness. I hope I may continue your tradition of teaching creative computing.
+
+## Works Cited
+
+Brier, Wren, Tim Dawson, Kip Bunyea, and Erika Olsen. "Unpacking," November 2, 2021.
+
+Brown, Mark. "Designing for Disability." Game Maker's Toolkit, 2018. https://www.youtube.com/watch?v=xrqdU4cZaLw.
+
+———. "How Nintendo Solved Zelda's Open World Problem." Game Makers Toolkit, May 9, 2023. https://www.youtube.com/watch?v=CZzcVs8tNfE&themeRefresh=1.
+
+———. "The Last Guardian and the Language of Games." Game Maker's Toolkit, January 9, 2017. https://www.youtube.com/watch?v=Qot5_rMB8Jc.
+
+———. "The World Design of Metroid 1 and Zero Mission." Game Maker's Toolkit, July 31, 2018. https://www.youtube.com/watch?v=kUT60DKaEGc.
+
+Deconstructteam. "The Cosmic Wheel Sisterhood," August 16, 2023. https://cosmicwheel.com/.
+
+Emmons, Dan, and James Portnow. "Super Mario Bros: Level 1-1 - How Super Mario Mastered Level Design." Extra Credits, June 5, 2014. https://www.youtube.com/watch?v=ZH2wGpEZVgE.
+
+Holtz, Y. "From Data to Viz." Data to Viz, 2018. https://www.data-to-viz.com/
+
+Kesavan, Vidya. "Preattentive Attributes in Visualization – An Example," November 17, 2016. https://daydreamingnumbers.com/blog/preattentive-attributes-example/.
+
+LeRoy, Benjamin. "Review of Tufte's 'The Visual Display of Quantitative Information,'" May 16, 2018. https://benjaminleroy.github.io/pages/blog/public/post/2018/05/16/review-of-tufte-s-the-visual-display-of-quantitative-information/.
+
+Luipi, Georigia, and Stefanie Posavec. "Dear Data." Eyeo, 2015. https://vimeo.com/channels/eyeo2015/133608605.
+
+Ma, Justin, and Matthew Davis. "FTL: Faster Than Light," September 14, 2012. https://subsetgames.com/ftl.html.
+
+Munzner, Tamara. "15 Views of a Node Link Graph." Google, October 8, 2007. https://www.youtube.com/watch?v=WOBKnRlOAes.
+
+"Papers, Please," February 12, 2014. https://papersplea.se.
+
+Posner, Joe, Roman Mars, Don Norman, and Gina Barton. "It's Not You. Bad Doors Are Everywhere." Vox Media, February 26, 2016. https://www.youtube.com/watch?v=yY96hTb8WgI.
+
+Pottinger, A. "Sketchingpy." UC Berkeley, 2024. sketchingpy.org.
+
+Pricenomics. "How William Cleveland Turned Data Visualization Into a Science." Udemy, January 6, 2016. https://priceonomics.com/how-william-cleveland-turned-data-visualization/.
+
+Sasha, Costanza-Chock. "Eyeo 2019 - Sasha Costanza-Chock." Eyeo Festival, 2019. https://vimeo.com/354276956.
+
+Thorne, Abigail. "Here's What Ethical AI Really Means." Philosophy Tube, October 13, 2023. https://www.youtube.com/watch?v=AaU6tI2pb3M.
+
+Thunder Lotus Games. "Spiritfarer," August 18, 2020. https://thunderlotusgames.com/spiritfarer/.
+
+Tremblay, Kaitlin. "Storytelling with Verbs: Integrating Gameplay and Narrative." GDC, March 17, 2020. https://www.youtube.com/watch?v=ontNUxSLhb8.
+
+Victor, Bret. "Inventing on Principle." CUSEC, 2012. https://www.youtube.com/watch?v=PUv66718DII.
+
+———. "Media for Thinking the Unthinkable." MIT Media Lab, April 4, 2013. https://vimeo.com/67076984.
+
+Winslow, Steve. Dealing with Open Source Licenses. Nerd Summit. 2019.
+
+Wright, Will. "Spore, Birth of a Game." TED Conference, March 2007. https://www.ted.com/talks/will_wright_spore_birth_of_a_game?language=en.
 
 ### License
 This resource is released under the [CC-BY-NC license](https://creativecommons.org/licenses/by-nc/4.0/deed.en). 
