@@ -1,7 +1,7 @@
 # Interactive Data Science and Visualization
-Formal curriculum and syllabus which is completed by the [course manual](/course_wide/manual.md) with practical guidance on either taking the course as a learner or providing / adapting it as an instructor.
+Formal curriculum and syllabus which is completed by the [course manual](/course_wide/manual.html) with practical guidance on either taking the course as a learner or providing / adapting it as an instructor.
 
-**Note:** A [PDF version of this syllabus](syllabus.pdf) from the UC Berkeley Spring 2025 teaching is also available.
+**Other formats:** [HTML version](syllabus.html) | [Markdown version](syllabus.md) (you are here) | [PDF version](syllabus.pdf) (from UC Berkeley Spring 2025 teaching)
 
 ## Motivation
 Before getting into a detailed breakdown of the material, let’s explore how this course can help.
@@ -16,7 +16,7 @@ Scientists, engineers, designers, artists, journalists, and anyone else who want
 We have three pillars of our time together:
 
 - Explore data visualization theory and fundamentals before studying cutting edge work in interactive data science.
-- Learn practical career-building technologies for building both static interactive data experiences through hands-on portfolio-building activities.
+- Learn practical career-building technologies for building both static and interactive data experiences through hands-on portfolio-building activities.
 - Examine existing powerful and informative interactive experiences including data visualizations and other interactive media like video games.
 
 ### What you will be able to do after?
@@ -38,7 +38,7 @@ Hello! My name is Sam Pottinger. I am a Senior Research Software Engineer / Data
 This course can be adapted to meet different learning criteria and formats. However, in teaching it in person at the University of California Berkeley, we met twice weekly for an hour with an additional hour of office hours online. It was completed in a semester-based schedule. Additionally, this was originally offered for 2 credit hours though conversion of optional aspects of the course to required may meet criteria to teach for 3 credit hours instead. In either case, this was comprised of hands-on activities, final mastery project, original lectures, discussion, hands-on skills labs, and guest lectures over 7 short modules.
 
 ### Prerequisites
-Recommended But not required that learners have had prior introduction to Python or JavaScript (course or self-taught). Recommended at the graduate level or for undergrad at sophomore or later.
+Recommended but not required that learners have had prior introduction to Python or JavaScript (course or self-taught). Recommended at the graduate level or for undergrad at sophomore or later.
 
 ### Skills taught
 In considering how this course may layer into broader degree requirements or personal learning objectives:
@@ -166,6 +166,13 @@ Reading to be provided. Students encouraged to purchase the interactive experien
 
 ---
 
+## See Also
+
+For additional course materials, please see:
+
+- [Course Manual](/course_wide/manual.html) - Detailed guidance for students and instructors
+- [Grading Rubric](/course_wide/rubric.html) - Detailed grading criteria for code projects
+
 ## Works Cited  
 Bitzer, D., P. Braunfeld, and W. Lichtenberger. "PLATO: An Automatic Teaching Device." IRE Transactions on Education 4, no. 4 (December 1961): 157–61. https://doi.org/10.1109/TE.1961.4322215.
 
@@ -199,7 +206,7 @@ Hart, Vi, and Nicky Case. "Parable of the Polygons," November 7, 2014. https://n
 
 Hayes, Nicolette. "Data Visualization for Education: When Asking Questions Is the Answer." Stamen Design, April 26, 2023. https://stamen.com/data-visualization-for-education-when-asking-questions-is-the-answer/.
 
-Hess, Kosma. "80 Types of Charts and Graphs," May 30, 2022. https://www.datylon.com/blog/types-of-charts-graphs-examples-data-visualization
+Hess, Kosma. "80 Types of Charts and Graphs," May 30, 2022. https://www.datylon.com/blog/types-of-charts-graphs-examples-data-visualization.
 
 IxDF. "What Is Participatory Design?" Interaction Design Foundation, March 17, 2023. https://www.interaction-design.org/literature/topics/participatory-design.
 
@@ -219,7 +226,7 @@ Munzner, Tamara. "15 Views of a Node Link Graph." Google, October 8, 2007. https
 
 Nass, Clifford, Jonathan Steuer, and Ellen R. Tauber. "Computers Are Social Actors," 204. Boston, Massachusetts, United States: ACM Press, 1994. https://doi.org/10.1145/259963.260288.
 
-Norman, Donald A. The Design of Everyday Things. Revised and Expandes editons. Cambridge, MA London: The MIT Press, 2013.
+Norman, Donald A. The Design of Everyday Things. Revised and Expanded editions. Cambridge, MA London: The MIT Press, 2013.
 
 Portnow, James. "Gestalt and Parts of the Whole." Extra Credits, 2018.
 

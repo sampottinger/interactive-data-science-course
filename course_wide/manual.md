@@ -1,7 +1,7 @@
 # Interactive Data Science and Visualization Manual
 Document which helps students engage with or instructors teach IDSV.
 
-**Note:** A [PDF version of this manual](manual.pdf) from the UC Berkeley Spring 2025 teaching is also available.
+**Other formats:** [HTML version](manual.html) | [Markdown version](manual.md) (you are here) | [PDF version](manual.pdf) (from UC Berkeley Spring 2025 teaching)
 
 ## Hello
 I'm excited that you are joining us as we explore interactive data science and visualization.
@@ -10,9 +10,9 @@ My name is Sam. Prior to UC Berkeley, I was at Google, Apple, IDEO, and various 
 
 Most of my current focus is on crafting tools for policy makers to engage science in their work. This course is about building those kinds of digital environments that let us see the world around us in new ways through data. Specifically, we will construct "dialectic" experiences through which users can co-create narrative and build new knowledge in partnership with interactive "media for thought" (Victor 2011). We are going to journey through cognitive science, information design, game design, and more to explore how these ingredients come together within world-class tools for modern sense-making.
 
-That's enough about me. Let's talk about you! I'm excited to have you here as story-tellers, designers, scientists, and engineers. This hands-on course will help you build sophisticated interactive tools. Regardless of if you may be making those experiences for others or for yourself, our time together will focus on the ways we see information and construct knowledge. At the end of the course, you will be well versed in information design. We will use readings, short hands-on practice projects, a longer hands-on interactive experience, a capstone, and collaborative in-person discussion to get there.
+That's enough about me. Let's talk about you! I'm excited to have you here as story-tellers, designers, scientists, and engineers. This hands-on course will help you build sophisticated interactive tools. Regardless of whether you are making those experiences for others or for yourself, our time together will focus on the ways we see information and construct knowledge. At the end of the course, you will be well versed in information design. We will use readings, short hands-on practice projects, a longer hands-on interactive experience, a capstone, and collaborative in-person discussion to get there.
 
-This "student manual" gives you everything you need to navigate the course. While the [syllabus](/course_wide/syllabus.md) offers an overview of the schedule with weekly lecture and assignments, this complements those materials with details on each reading and project. Also, to help you set time expectations, it outlines estimated duration for each activity.
+This "student manual" gives you everything you need to navigate the course. While the [syllabus](/course_wide/syllabus.html) offers an overview of the schedule with weekly lecture and assignments, this complements those materials with details on each reading and project. Also, to help you set time expectations, it outlines estimated duration for each activity.
 
 I'll end this welcome letter with something a mentor told me once: design is an act of hope. When we do this work, we are engaging in optimism and practice of building a brighter, stronger, and more inclusive future.
 
@@ -108,7 +108,7 @@ Short assignments foster active exploration of concepts discussed in each lectur
 Some assignments require coding but others may, for example, be drawing or short writings. Though we provide instruction in Sketchingpy, alternative technologies may be used if desired and pre-approved. The details of each assignment are provided below. These are due 2 days after lecture date below. There are 14 of these short assignments in total for 28 expected hours.
 
 ### Specifics
-In addition to the description here, additional details are provided in the corresponding lesson in which the assignment Is given
+In addition to the description here, additional details are provided in the corresponding lesson in which the assignment is given
 
 #### Assignment 1: Async introductions
 For getting warmed up, we will exchange short introductions online. Please write about 4 sentences introducing yourself and what you are hoping to gain from the course. Include an image describing yourself that isn't a photograph of yourself.
@@ -116,7 +116,7 @@ For getting warmed up, we will exchange short introductions online. Please write
 #### Assignment 2: Example visualization 1
 Find a visualization from your daily life. For example, this could include a graphic from the news or a textbook. What do you think the piece's intended message is? How does the author convey this message? Post 4 - 8 sentences with your answers and a link to the piece.
 
-#### Assignment 3: Example visualization 1
+#### Assignment 3: Example visualization 2
 Revisit a visualization posted by someone else from last assignment. What might the 4 perspectives say about this visualization? Please post 4 - 8 sentences.
 
 #### Assignment 4: Example visualization 2
@@ -245,10 +245,10 @@ At the end of the course, we will do a showcase of final projects.
 The goal is that this time together is a celebration of everything accomplished over the semester and an opportunity to try some skills one more time. You will have a chance to get non-graded feedback prior to the submission deadline. While optional, this is intended to help build confidence and reduce stress going into the final. The best outcome is that you are proud of this work and I hope that this is something you can be comfortable putting into your portfolio.
 
 ### Guidance for open source online learners
-This final project can really 
+This final project can really be whatever you want it to be as long as it meets the requirements described in the build section above.
 
 ### Guidance for UC Berkeley community
-Additionally, some guidance for our UC Berkeley community
+Additionally, some guidance for our UC Berkeley community.
 
 ### Guests
 There will be a survey to students to see about the possibility of inviting guests such as friends and family but this will require consent from those attending. It is completely OK if you would like to skip this.
@@ -264,6 +264,13 @@ Some stuff which didn’t fit into the rest of the manual.
 
 ### Dedication
 Dedicated to my late grandmother, Barbara. Thank you for your wisdom and kindness. I hope I may continue your tradition of teaching creative computing.
+
+## See Also
+
+For additional course materials, please see:
+
+- [Course Syllabus](/course_wide/syllabus.html) - Formal curriculum and weekly schedule
+- [Grading Rubric](/course_wide/rubric.html) - Detailed grading criteria for code projects
 
 ## Works Cited
 
@@ -281,7 +288,7 @@ Deconstructteam. "The Cosmic Wheel Sisterhood," August 16, 2023. https://cosmicw
 
 Emmons, Dan, and James Portnow. "Super Mario Bros: Level 1-1 - How Super Mario Mastered Level Design." Extra Credits, June 5, 2014. https://www.youtube.com/watch?v=ZH2wGpEZVgE.
 
-Holtz, Y. "From Data to Viz." Data to Viz, 2018. https://www.data-to-viz.com/
+Holtz, Y. "From Data to Viz." Data to Viz, 2018. https://www.data-to-viz.com/.
 
 Kesavan, Vidya. "Preattentive Attributes in Visualization – An Example," November 17, 2016. https://daydreamingnumbers.com/blog/preattentive-attributes-example/.
 
