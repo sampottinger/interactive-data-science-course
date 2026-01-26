@@ -1,22 +1,24 @@
-# Interactive Data Science and Visualization - Spring 2025 Semester
+# Interactive Data Science and Visualization
+Formal curriculum and syllabus which is completed by the course manual with practical guidance on either taking the course as a learner or providing / adapting it as an instructor.
 
-## Curriculum and Syllabus
+## Motivation
+Before getting into a detailed breakdown of the material, let’s explore how this course can help.
 
-### Why sign up?
-
+### Why take this class?
 Data are essential to how we experience and understand the world. The way we interact with tools, analyses, and simulations all change the insights we learn, the stories we tell, the actions we take, who is included, and what is left out. This course combines traditional user experience and information design with interactive storytelling and video game design. We will emphasize practical techniques and technical skills needed to make both word-class data visualizations and interactive data science tools. More info online at [https://interactivedatascience.courses](https://interactivedatascience.courses).
 
-#### Who is this for?
-
+### Who is this for?
 Scientists, engineers, designers, artists, journalists, and anyone else who wants to explore new methods for interactively and visually understanding, experiencing, and communicating data.
 
-#### What we will do together?
+### What we will do together?
+We have three pillars of our time together:
 
 - Explore data visualization theory and fundamentals before studying cutting edge work in interactive data science.
 - Learn practical career-building technologies for building both static interactive data experiences through hands-on portfolio-building activities.
 - Examine existing powerful and informative interactive experiences including data visualizations and other interactive media like video games.
 
-#### What you will be able to do after?
+### What you will be able to do after?
+After completing the course, you should be able to:
 
 - Build data visualizations and other interactive experiences to share your data findings with others.
 - Invite your audience in as co-creators to build new meaning alongside you in your work.
@@ -24,68 +26,49 @@ Scientists, engineers, designers, artists, journalists, and anyone else who want
 - Tell impactful stories that engage your readers emotionally through data.
 - Incorporate ethics and accessibility into your work.
 
----
-
-## Overview
+## Basics
+Next, let’s explore the logistics and basic information of the class together. This section offers fundamental information about the course as required to consider its place within a personal learning journey or for instructors to consider its role within a broader degree plan.
 
 ### Instructor
-
 Hello! My name is Sam Pottinger. I am a Senior Research Software Engineer / Data Scientist at UC Berkeley's Schmidt Center for Data Science and Environment. I've previously worked at Google, Apple, two start ups, and global design firm IDEO. I offer over a decade of data visualization / interactive science experience. My research at Berkeley blends information design, video game design, and ML / AI, and public policy for environment.
 
-### Schedule
-
-In-person. Monday / Wednesday 3 - 4 pm. Shires Hall #211. Office hours to be announced.
+### Schedule and credit
+This course can be adapted to meet different learning criteria and formats. However, in teaching it in person at the University of California Berkeley, we met twice weekly for an hour with an additional hour of office hours online. It was completed in a semester-based schedule. Additionally, this was originally offered for 2 credit hours though conversion of optional aspects of the course to required may meet criteria to teach for 3 credit hours instead. In either case, this was comprised of hands-on activities, final mastery project, original lectures, discussion, hands-on skills labs, and guest lectures over 7 short modules.
 
 ### Prerequisites
+Recommended But not required that learners have had prior introduction to Python or JavaScript (course or self-taught). Recommended at the graduate level or for undergrad at sophomore or later.
 
-Prior introduction to Python or JavaScript (course or self-taught). Grad or undergrad (soph or later).
+### Skills taught
+In considering how this course may layer into broader degree requirements or personal learning objectives:
 
-### Technical Skills Taught
-
-Sketchingpy, P5, and D3. Will also provide optional brief Python and JavaScript / HTML / CSS instruction.
-
-### Theoretical Skills Taught
-
-Information design, video game design, evaluative methods, human visual perception, accessibility.
-
-### Class Format
-
-2 credit hours. 2 meeting / week. Hands-on activities, final mastery project, original lectures, discussion, hands-on skills labs, and guest lectures over 7 short modules.
-
-### Activities
-
-Given each lecture as described below. 54% small projects, 12% interactive experience reflection, 35% final project intended to build mastery.
+ - **Technical Skills Taught**: Sketchingpy, P5, and D3. Will also provide optional brief Python and JavaScript / HTML / CSS instruction.
+ - **Theoretical Skills Taught**: Information design, video game design, evaluative methods, human visual perception, accessibility.
 
 ### Grading
-
-Pass / fail. Scores provided for each small project, final project, and the interactive experience reflection. See details (final page) for more information.
+Given each lecture as described below. 54% small projects, 12% interactive experience reflection, 35% final project intended to build mastery. Originally taught as pass / fail. Scores provided for each small project, final project, and the interactive experience reflection.
 
 ### Additional Resources
-
 Includes complementary short reading / videos and supportive technology skills labs. The interactive experience will be your choice of either a video game or interactive data visualization.
+  
+## Course sections
+The course is designed across 7 major sections expected to be taken in order.
 
----
-
-## 1. Hello
-
+### 1. Hello
 Begin with an initial exploration of key ideas.
 
-We will start our journey together by motivating why data visualization is useful, what interactive science can offer, and take an early look at some of the foundational ideas that we will explore together throughout the rest of the course. We will also make sure everyone has what they need to do some upcoming activities with two optional skills labs.
+We start our journey together by motivating why data visualization is useful, what interactive science can offer, and take an early look at some of the foundational ideas that we will explore together throughout the rest of the course. We will also make sure everyone has what they need to do some upcoming activities with two optional skills labs.
 
-| Day | Reading / Watching | Classroom Material | Activity |
-|-----|-------------------|-------------------|----------|
-| 1 | None | 4 perspectives on data visualization. | Async introductions. |
+| Day | Reading / Watching | Classroom Material                    | Activity             |
+| --- | ------------------ | ------------------------------------- | -------------------- |
+| 1   | None               | 4 perspectives on data visualization. | Async introductions. |
 | 2 | Media for Thinking the Unthinkable (Victor 2013) | Trying out the 4 perspectives on 4 examples. | Example visualization 1 |
 | 3 | Dealing with Open Source Licenses (Winslow 2019) | Skills lab on creative coding in Python with basic concepts introduced. | Revisit example from the 4 perspectives lens. |
 | 4 | A Byte of Python (Swaroop 2023) | Skills lab on software architecture for creative coding in Python. | None. |
-
----
-
-## 2. Primitives
-
+  
+### 2. Primitives
 Study of the essential building blocks for data visualization.
 
-We will transition to the foundational building blocks of data visualization and explore the cognitive science underpinnings behind effective information design. Using what many call the grammar of graphics, we will also have our first small projects that begin to offer hands-on experiences to build custom graphics with code.
+We transition to the foundational building blocks of data visualization and explore the cognitive science underpinnings behind effective information design. Using what many call the grammar of graphics, we will also have our first small projects that begin to offer hands-on experiences to build custom graphics with code.
 
 | Day | Reading / Watching | Classroom Material | Activity |
 |-----|-------------------|-------------------|----------|
@@ -96,10 +79,8 @@ We will transition to the foundational building blocks of data visualization and
 | 10 | All Maps are Wrong (Harris 2016) | Events, user loops, and data manipulation. | Responsive art 2. |
 | 11 | How William Cleveland Turned Data Visualization Into a Science (Pricenomics 2016) | Cleveland and McGill (1984), grammar(Wilkinson 2005), shared axes / direct label (Tufte 2013). Chartjunk 2. | Census 1 / Income inequality with 4 variables. |
 
----
 
-## 3. Combination
-
+### 3. Combination
 Understand common patterns and methods for making new ones.
 
 Having built up the primitives used in data visualization, we pick up the pace to build sophisticated data graphics. After using existing chart types, we will venture into the great unknown by looking at how these lego pieces enable us to build completely new visual representations and how to test if novel approaches are successful.
@@ -111,10 +92,8 @@ Having built up the primitives used in data visualization, we pick up the pace t
 | 14 | 15 Views on a Node Link Graph (Munzner 2007) | Task / domain (Munzner). | BART 1 |
 | 15 | Designing for Realtime Spacecraft Operations (Binx 2016) | Inquiry (Munzner 2014), thinking-aloud (Lewis 1982), diary studies (Shniderman and Plaisant 2006), participatory desig (IxDF 2023), generalizable knoweldge vs quality assurance. | Think-Aloud of Pyafscgap (Pottinger and Zarpellon 2023). |
 
----
 
-## 4. Conversation
-
+### 4. Conversation  
 Consider and design for the reader's dialogue with your work.
 
 Just short of half way through the course, you are already an expert at choosing from existing chart types and constructing your own novel visual representations. Next we look critically at the role of the reader to construct media which enable the reader to explore more freely and become a co-creator of knowledge.
@@ -122,16 +101,11 @@ Just short of half way through the course, you are already an expert at choosing
 | Day | Reading / Watching | Classroom Material | Activity |
 |-----|-------------------|-------------------|----------|
 | 16 | It's Not You, Bad Doors are Everywhere (Posner et al 2016) | History of HCI (Duarte and Baranauskas 2016). Affordances (Norman 2013), working memory (Ware 2021), social actors (Nass et al 1994) | BART 2 |
-| 17 | The Role of the Player (Portnow 2011), Explorable Explanations (Victor 2011) | Why game design and its role, thinking and play, PLATO system (Bitzer et al). Ethos, pathos, logos. | Game or interactive viz analysis part 1*. |
-| 18 | The Last Guardian and the Language of Games (Brown 2017) | Bussed out visualization (Bremer and Wu 2017), Gun Deaths (Rees 2013), Parable of the Polygons (Hart and Case 2014). | Game or interactive viz analysis part 2*. |
+| 17 | The Role of the Player (Portnow 2011), Explorable Explanations (Victor 2011) | Why game design and its role, thinking and play, PLATO system (Bitzer et al). Ethos, pathos, logos. | Game or interactive viz analysis part 1. |
+| 18 | The Last Guardian and the Language of Games (Brown 2017) | Bussed out visualization (Bremer and Wu 2017), Gun Deaths (Rees 2013), Parable of the Polygons (Hart and Case 2014). | Game or interactive viz analysis part 2. |
 | 19 | Super Mario Bros: Level 1-1 (Edmonds and Portnow 2014), Triangle Design (Brown 2023). | Loops (Brazie 2024), Hayashida level design (Pottinger and Zarpelleon 2023), Plastics (Pottinger et al 2024) | Game or interactive viz analysis part 3*. |
 
-*Visualization options available later. Video game options include Cosmic Wheel (Deconstructteam 2023), FTL (Ma and Davis 2012), Spiritfarer (Thunder Lotus 2020), Papers Please (Pope 2013), Unpacking (Brier et al 2021).
-
----
-
-## 5. Context
-
+### 5. Context
 Expand our understanding of the reader.
 
 Now that we have a deeper understanding of how to think about the reader within our designs, we next zoom out to understand users as within a broader social and physical context. We will also consider visualization in a broader sense-making context.
@@ -144,11 +118,8 @@ Now that we have a deeper understanding of how to think about the reader within 
 | 23 | Here's What Ethical AI Really Means (Thorne 2023) or Sasha Costanza-Chock (2019) | User Centered Machine Learning (Pottinger 2019). | [Final] Initial designs. |
 | 24 | The World Design of Metroid 1 and Zero Mission (Brown 2018) | Inquiry-based design (Hayes 2023), overview of datasets, journey mapping. | [Final] Initial design ideas. |
 
----
-
-## 6. Skills
-
-Grow your technical tool chest.
+### 6. Skills
+Grow your implementation tool chest.
 
 You have gotten through some of the most important concepts in data visualization and interactive science. Now, we will explore different technical skills as you work on your final project. Note that guest lectures may move.
 
@@ -158,10 +129,7 @@ You have gotten through some of the most important concepts in data visualizatio
 | 26.1 | None | P5 introduction. | [Final] Iterate for final. |
 | 26.2 | Lecture 25.2 is reading for Lecture 26. | D3 introduction. | [Final] Iterate for final. |
 
----
-
-## 7. Mastery
-
+### 7. Build
 Contribute to your portfolio.
 
 The course ends with sharing final projects and a celebration of our time together.
@@ -170,42 +138,33 @@ The course ends with sharing final projects and a celebration of our time togeth
 |-----|-------------------|-------------------|----------|
 | 27 | Final reading (see appendix) | Final projects and celebration. | [Final] Feedback |
 
----
-
 ## Details
+Ready to take or teach the class? Here’s some additional information that might help.
 
 ### Welcoming and Supportive Environment
-
 I love this topic and I hope you will love it too! I am dedicated to your success within this course. All activities and projects should be an engaging avenue for collaboration focused on refinement of ideas in a hands-on but low pressure setting. We will be discussing big topics through design and artistic expression. By participating, we collectively promise to generously create a welcoming and supportive environment for exploration. Lectures will be hands-on so laptops and discussion encouraged. Class time ensures successful outcomes in the course and will provide key information about assignments. However, things happen. I trust you to use your time well so attendance will not be taken. There are no textbook or service fees and free options are available for the interactive experience if you do not wish to purchase a copy of a game.
 
 ### How to Succeed and Pass the Course
+Except day 1, each instruction day has an outside activity essential to course objectives and complementary to that day's discussion. I am excited to provide written individual feedback to help complement other course resources. Numerical scoring is not a focus of this course. However, for the purposes of pass / fail, each instructional day has an activity worth 10 points with two instruction days per week. 14 days have small projects which are generally short to complete, the interactive experience analysis spans 3 days, and the final project spans 9 days. For each 10 point grading, 3 points are given for completeness, 3 for reflecting course materials, 2 for technical correctness, and 2 for exploration / expression. For those at UC Berkeley, 70% overall grade is required to pass (course is pass / fail).
 
-Except day 1, each instruction day has an outside activity essential to course objectives and complementary to that day's discussion. I am excited to provide written individual feedback to help complement other course resources. Numerical scoring is not a focus of this course. However, for the purposes of pass / fail, each instructional day has an activity worth 10 points with two instruction days per week. 14 days have small projects which are generally short to complete, the interactive experience analysis spans 3 days, and the final project spans 9 days. For each 10 point grading, 3 points are given for completeness, 3 for reflecting course materials, 2 for technical correctness, and 2 for exploration / expression. 70% overall grade is required to pass (course is pass / fail).
-
-### Timely Response and Late Assignments
-
+### Timely Response and Late Assignments  
 Being able to share timely feedback on activities enables projects to serve an important role in ensuring you get the most out of your time in the course. Therefore, activities are due at 5pm 2 days after their assignment except the final which is due altogether on May 14, 2025. Submissions must be made by May 1 if you want to receive pre-final feedback. Please talk to me if personal circumstances arise. Note that, automatically, there are no points deducted for 7 calendar days after assignment. However, 20% will be deducted each calendar day for late assignments starting at 5pm on the 8th day after assignment. All times are given in PT.
 
 ### Student Feedback
-
-Student feedback will be solicited at the end of each module to ensure the course is meeting its goals. Grades and submissions through university-provided LMS.
+At UC Berkeley, student feedback will be solicited at the end of each module to ensure the course is meeting its goals. Grades and submissions through university-provided LMS.
 
 ### Contact
-
-I work at Wellman Hall #201. Contact options available at interactivedatascience.courses. Small course without a TA.
+I work at Wellman Hall #201. Contact options available at interactivedatascience.courses. Originally taught as a small course without a TA.
 
 ### Lab / Discussion
+To fit the 2 credit hour format, labs will take place during course instruction time as indicated in the schedule. For those attempting a 3 credit version of the course, the lab and discussion sections can expand class time.
 
-To fit the 2 credit hour format, labs will take place during course instruction time as indicated in the schedule.
-
-### Books
-
-Reading to be provided. Students encouraged to purchase the interactive experience but alternatives provided.
+### Paid resources
+Reading to be provided. Students encouraged to purchase the interactive experience but alternatives provided. Otherwise, all materials are intended to be free to access.
 
 ---
 
-## Works Cited
-
+## Works Cited  
 Bitzer, D., P. Braunfeld, and W. Lichtenberger. "PLATO: An Automatic Teaching Device." IRE Transactions on Education 4, no. 4 (December 1961): 157–61. https://doi.org/10.1109/TE.1961.4322215.
 
 Brazie, Alexander. "Designing The Core Gameplay Loop: A Beginner's Guide." Game Design Skills, March 19, 2024. https://gamedesignskills.com/game-design/core-loops-in-gameplay/.
@@ -319,5 +278,4 @@ Thunder Lotus Games. "Spiritfarer," August 18, 2020. https://thunderlotusgames.c
 ---
 
 ## License
-
 Provided under the [CC-BY International 4.0 License](https://creativecommons.org/licenses/by/4.0/).
