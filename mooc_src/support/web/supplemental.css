@@ -3,6 +3,18 @@
     src: url("/support/web/PublicSans-Regular.otf") format("opentype");
 }
 
+html {
+    height: 100%;
+    width: 100%;
+    font-family: PublicSans;
+    background-color: #FFFFFF;
+    color: #333;
+}
+
+body {
+    padding: 10px;
+}
+
 a,
 a:visited,
 a:link {
@@ -13,10 +25,6 @@ a:link {
 a:hover,
 a:active {
     color: #0000A0;
-}
-
-body {
-    padding: 10px;
 }
 
 details {
@@ -71,14 +79,6 @@ header {
     border-radius: 3px;
 }
 
-html {
-    height: 100%;
-    width: 100%;
-    font-family: PublicSans;
-    background-color: #FFFFFF;
-    color: #333;
-}
-
 pre {
     background-color: #333333;
     color: #FFFFFF;
@@ -91,6 +91,17 @@ section {
     margin-top: 30px;
     border-top: 1px dotted #A0A0A0;
     padding-top: 30px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #333;
+}
+
+th,
+td {
+    border: 1px solid #333;
+    padding: 4px;
 }
 
 .skip-link {
