@@ -182,7 +182,7 @@ Brazie, Alexander. "Designing The Core Gameplay Loop: A Beginner's Guide." Game 
 
 Bremer, Nadieh, and Shirely Wu. "Bussed out: How America Moves Its Homeless (Visualization)." The Guardian, December 20, 2017. https://www.theguardian.com/us-news/ng-interactive/2017/dec/20/bussed-out-america-moves-homeless-people-country-study.
 
-Binx, Rachel. "Designing for Realtime Spacecraft Operations." BocoupLLC, April 2016. https://www.youtube.com/watch?v=HuYKhSHcRSQ.
+Binx, Rachel. "Designing for Realtime Spacecraft Operations." OpenVis Conf, April 2016. https://www.youtube.com/watch?v=HiGd-JJ94QA.
 
 Brown, Mark. "Designing for Disability." Game Maker's Toolkit, 2018. https://www.youtube.com/watch?v=xrqdU4cZaLw.
 
