@@ -1,0 +1,27 @@
+{
+  "name": "Interactive Data Science Course",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22"
+    }
+  },
+
+  "postCreateCommand": "pip install -r requirements.txt && npm install -g pnpm@10 && pnpm install",
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.linting.enabled": true,
+        "python.linting.pycodestyleEnabled": true,
+        "python.linting.pyflakesEnabled": true,
+        "eslint.enable": true,
+        "files.eol": "\n"
+      }
+    }
+  },
+
+  "remoteUser": "vscode"
+}
