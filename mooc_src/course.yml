@@ -597,7 +597,7 @@ sections:
     assignment: >
       <p>
         We will start our interactive experience. There are different video games for you to choose
-        from within the <a href="/support/course_wide/manual.pdf">course manual</a>. See "experience"
+        from within the <a href="/course_wide/manual.html">course manual</a>. See "experience"
         section. After you have selected your choice, lookup the <a href="/support/lesson_specific/games.pdf">game
         specific instructions</a>. You can space out your game play over the next few lectures.
         There will be an additional question asked of all games later in
@@ -731,7 +731,7 @@ sections:
     assignment: >
       Though there is still some material left, this is a good opportunity to start on your final
       project to be refined over the next few lessons. See the
-      <a href="/manual.pdf">course manual</a> for recommended project ideas / datasets.
+      <a href="/course_wide/manual.html">course manual</a> for recommended project ideas / datasets.
     reading: >
       Please continue with our discussion by considering
       
@@ -802,7 +802,7 @@ sections:
       </p>
       <p>
         Second, if you have not already done so, explore the final project as outlined in the
-        <a href="/manual.pdf">Course Manual</a>. This is a great opportunity to take
+        <a href="/course_wide/manual.html">Course Manual</a>. This is a great opportunity to take
         everything you learned over the course and demonstrate mastery in an excellent
         portfolio-building activity.
       </p>
