@@ -43,8 +43,8 @@ Recommended but not required that learners have had prior introduction to Python
 ### Skills taught
 In considering how this course may layer into broader degree requirements or personal learning objectives:
 
- - **Technical Skills Taught**: [Sketchingpy](https://sketchingpy.org/) (Pottinger 2024), [P5](https://p5js.org/) (P5js Contributors 2026), and [D3](https://d3js.org/) (Bostock et al 2011). Will also provide optional brief Python and JavaScript / HTML / CSS instruction.
- - **Theoretical Skills Taught**: Information design, video game design, evaluative methods, human visual perception, accessibility.
+ - **Technical skills taught**: [Sketchingpy (Pottinger 2024)](https://sketchingpy.org/), [P5 (P5js Contributors 2026)](https://p5js.org/), and [D3 (Bostock et al 2011)](https://d3js.org/). Will also provide optional brief Python and JavaScript / HTML / CSS instruction.
+ - **Theoretical skills taught**: Information design, video game design, evaluative methods, human visual perception, accessibility.
 
 ### Grading
 Given each lecture as described below. 54% small projects, 12% interactive experience reflection, 35% final project intended to build mastery. Originally taught as pass / fail. Scores provided for each small project, final project, and the interactive experience reflection.
@@ -74,12 +74,12 @@ We transition to the foundational building blocks of data visualization and expl
 
 | Day | Reading / Watching | Classroom Material | Activity |
 |-----|-------------------|-------------------|----------|
-| 5 | [Review of Tufte's "The Visual Display of Quantitative Information" (LeRoy 2018)](https://benjaminleroy.github.io/pages/blog/public/post/2018/05/16/review-of-tufte-s-the-visual-display-of-quantitative-information/) | Examples of problematic graphs (Tufte 2013), Chart junk (Tufte 2013), Tuftean axes (Tufte 2013), [After Tufte (Elliot 2016)](https://medium.com/@kennelliott/39-studies-about-human-perception-in-30-minutes-4728f9e31a73) | Example visualization 2. |
-| 6 | [Preattentive Attributes in Visualization (Kesavan 2016)](https://daydreamingnumbers.com/blog/preattentive-attributes-example/) | Visual processing stages, working memory, pre-attention features (Ware 2021). Gestalt / neg space (Portnow 2018) | Job satisfaction. |
-| 7 | [Inventing on Principle (Victor 2012)](https://www.youtube.com/watch?v=PUv66718DII) | Color (Ware 2021), Gestalt / neg space (Portnow 2018) | Job satisfaction remix. |
+| 5 | [Review of Tufte's "The Visual Display of Quantitative Information" (LeRoy 2018)](https://benjaminleroy.github.io/pages/blog/public/post/2018/05/16/review-of-tufte-s-the-visual-display-of-quantitative-information/) | Examples of problematic graphs ([Tufte 2001](https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/)), Chart junk ([Tufte 2001](https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/)), Tuftean axes ([Tufte 2001](https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/)), [After Tufte (Elliot 2016)](https://medium.com/@kennelliott/39-studies-about-human-perception-in-30-minutes-4728f9e31a73) | Example visualization 2. |
+| 6 | [Preattentive Attributes in Visualization (Kesavan 2016)](https://daydreamingnumbers.com/blog/preattentive-attributes-example/) | Visual processing stages, working memory, pre-attention features ([Ware 2021](https://shop.elsevier.com/books/visual-thinking-for-information-design/ware/978-0-12-823567-6)). Gestalt / neg space ([Portnow et al 2018](https://youtu.be/c1qdyszaeTU)) | Job satisfaction. |
+| 7 | [Inventing on Principle (Victor 2012)](https://www.youtube.com/watch?v=PUv66718DII) | Color ([Ware 2021](https://shop.elsevier.com/books/visual-thinking-for-information-design/ware/978-0-12-823567-6)), Gestalt / neg space ([Portnow et al 2018](https://youtu.be/c1qdyszaeTU)) | Job satisfaction remix. |
 | 8/9 | [Genuary](https://genuary.art/) | Stroke, fill, primitive shapes, options for input, fonts. | Responsive art 1. |
 | 10 | [All Maps are Wrong (Harris 2016)](https://www.youtube.com/watch?v=kIID5FDi2JQ) | Events, user loops, and data manipulation. | Responsive art 2. |
-| 11 | [How William Cleveland Turned Data Visualization Into a Science (Pricenomics 2016)](https://priceonomics.com/how-william-cleveland-turned-data-visualization/) | Cleveland and McGill (1984), grammar (Wilkinson 2005), shared axes / direct label (Tufte 2013). Chartjunk 2. | Census 1 / Income inequality with 4 variables. |
+| 11 | [How William Cleveland Turned Data Visualization Into a Science (Pricenomics 2016)](https://priceonomics.com/how-william-cleveland-turned-data-visualization/) | [Cleveland and McGill (1984)](https://www.jstor.org/stable/2288400), grammar ([Wilkinson 2005](https://link.springer.com/book/10.1007/0-387-28695-0)), shared axes / direct label ([Tufte 2001](https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/)). Chartjunk 2. | Census 1 / Income inequality with 4 variables. |
 
 
 ### 3. Combination
@@ -89,10 +89,10 @@ Having built up the primitives used in data visualization, we pick up the pace t
 
 | Day | Reading / Watching | Classroom Material | Activity |
 |-----|-------------------|-------------------|----------|
-| 12 | [From Data to Viz (Holtz 2018)](https://www.data-to-viz.com/) | Taxonomy of common graphs ([Hess 2022](https://www.datylon.com/blog/types-of-charts-graphs-examples-data-visualization)). [Developer happiness (Pottinger 2019)](https://towardsdatascience.com/what-are-the-happiest-jobs-in-tech-4c4d33e065f0), task / domain (Munzner). | Census 2 / Income inequality with 6 variables. |
+| 12 | [From Data to Viz (Holtz 2018)](https://www.data-to-viz.com/) | Taxonomy of common graphs ([Hess 2022](https://www.datylon.com/blog/types-of-charts-graphs-examples-data-visualization)). [Developer happiness (Pottinger 2019)](https://towardsdatascience.com/what-are-the-happiest-jobs-in-tech-4c4d33e065f0), task / domain ([Munzner 2014](https://www.cs.ubc.ca/~tmm/vadbook/)). | Census 2 / Income inequality with 6 variables. |
 | 13 | [Lupi and Posavec (2015)](https://vimeo.com/channels/eyeo2015/133608605) | Movements ([Harris and Kamvar 2015](http://www.wefeelfine.org); [Pottinger 2015](https://gleap.org/content/ted_visualization)). Levels ([Fry 2015](https://vimeo.com/133608686)). Networks. Geographic data formats, projections. A look at [Gephi](https://gephi.org/) and [QGIS](https://qgis.org/). | Draw your last 5 years and your next 5 years by hand. |
-| 14 | [15 Views on a Node Link Graph (Munzner 2007)](https://www.youtube.com/watch?v=WOBKnRlOAes) | Task / domain (Munzner). | BART 1 |
-| 15 | [Designing for Realtime Spacecraft Operations (Binx 2016)](https://www.youtube.com/watch?v=HiGd-JJ94QA) | Inquiry (Munzner 2014), thinking-aloud (Lewis 1982), diary studies (Shniderman and Plaisant 2006), participatory desig ([IxDF 2023](https://www.interaction-design.org/literature/topics/participatory-design)), generalizable knoweldge vs quality assurance. | Think-Aloud of [Pyafscgap](https://pyafscgap.org/) ([Pottinger and Zarpellon 2023](https://joss.theoj.org/papers/10.21105/joss.05593)). |
+| 14 | [15 Views on a Node Link Graph (Munzner 2007)](https://www.youtube.com/watch?v=WOBKnRlOAes) | Task / domain ([Munzner 2014](https://www.cs.ubc.ca/~tmm/vadbook/)). | BART 1 |
+| 15 | [Designing for Realtime Spacecraft Operations (Binx 2016)](https://www.youtube.com/watch?v=HiGd-JJ94QA) | Inquiry ([Munzner 2014](https://www.cs.ubc.ca/~tmm/vadbook/)), thinking-aloud ([Lewis 1982](https://research.ibm.com/publications/learning-to-use-a-text-processing-system-evidence-from-thinking-aloud-protocols)), diary studies ([Shneiderman and Plaisant 2006](https://dl.acm.org/doi/10.1145/1168149.1168158)), participatory design ([IxDF 2023](https://www.interaction-design.org/literature/topics/participatory-design)), generalizable knowledge vs quality assurance. | Think-Aloud of [Pyafscgap](https://pyafscgap.org/) ([Pottinger and Zarpellon 2023](https://joss.theoj.org/papers/10.21105/joss.05593)). |
 
 
 ### 4. Conversation  
@@ -102,8 +102,8 @@ Just short of half way through the course, you are already an expert at choosing
 
 | Day | Reading / Watching | Classroom Material | Activity |
 |-----|-------------------|-------------------|----------|
-| 16 | [It's Not You, Bad Doors are Everywhere (Posner et al 2016)](https://www.youtube.com/watch?v=yY96hTb8WgI) | History of HCI (Duarte and Baranauskas 2016). Affordances (Norman 2013), working memory (Ware 2021), social actors (Nass et al 1994) | BART 2 |
-| 17 | [The Role of the Player (Portnow 2011)](https://www.youtube.com/watch?v=ulm7bcB2xvY), [Explorable Explanations (Victor 2011)](https://worrydream.com/ExplorableExplanations/) | Why game design and its role, thinking and play, PLATO system (Bitzer et al). Ethos, pathos, logos. | Game or interactive viz analysis part 1. |
+| 16 | [It's Not You, Bad Doors are Everywhere (Posner et al 2016)](https://www.youtube.com/watch?v=yY96hTb8WgI) | History of HCI ([Duarte and Baranauskas 2016](https://dl.acm.org/doi/10.1145/3033701.3033740)). Affordances ([Norman 2013](https://www.nngroup.com/books/design-everyday-things-revised/)), working memory ([Ware 2021](https://shop.elsevier.com/books/visual-thinking-for-information-design/ware/978-0-12-823567-6)), social actors ([Nass et al 1994](https://dl.acm.org/doi/10.1145/191666.191703)) | BART 2 |
+| 17 | [The Role of the Player (Portnow 2011)](https://www.youtube.com/watch?v=ulm7bcB2xvY), [Explorable Explanations (Victor 2011)](https://worrydream.com/ExplorableExplanations/) | Why game design and its role, thinking and play, PLATO system ([Bitzer et al 1961](https://ieeexplore.ieee.org/document/4322215)). Ethos, pathos, logos. | Game or interactive viz analysis part 1. |
 | 18 | [The Last Guardian and the Language of Games (Brown 2017)](https://www.youtube.com/watch?v=Qot5_rMB8Jc) | [Bussed out visualization (Bremer and Wu 2017)](https://www.theguardian.com/us-news/ng-interactive/2017/dec/20/bussed-out-america-moves-homeless-people-country-study), [Gun Deaths (Rees 2013)](https://guns.periscopic.com/), [Parable of the Polygons (Hart and Case 2014)](https://ncase.me/polygons/). | Game or interactive viz analysis part 2. |
 | 19 | [Super Mario Bros: Level 1-1 (Edmonds and Portnow 2014)](https://www.youtube.com/watch?v=ZH2wGpEZVgE), [Triangle Design (Brown 2023)](https://www.youtube.com/watch?v=CZzcVs8tNfE&themeRefresh=1). | [Loops (Brazie 2024)](https://gamedesignskills.com/game-design/core-loops-in-gameplay/), [Hayashida level design](https://youtu.be/dBmIkEvEBtA) ([Pottinger and Zarpellon 2023](https://joss.theoj.org/papers/10.21105/joss.05593)), [Plastics (Pottinger et al 2024)](https://doi.org/10.48550/ARXIV.2312.11359) | Game or interactive viz analysis part 3*. |
 
@@ -115,7 +115,7 @@ Now that we have a deeper understanding of how to think about the reader within 
 | Day | Reading / Watching | Classroom Material | Activity |
 |-----|-------------------|-------------------|----------|
 | 20 | None | Interactive Experience graded activity. | Interactive Visualization |
-| 21 | [Storytelling with Verbs (Tremblay 2020)](https://www.youtube.com/watch?v=ontNUxSLhb8). [Spore, birth of a game (Wright 2007)](https://www.ted.com/talks/will_wright_spore_birth_of_a_game?language=en) | [Possibility space (Wright 2003)](https://www.computerhistory.org/revolution/computer-games/16/201/2309). [Diegesis (Dassler and Portnow 2019)](https://www.youtube.com/watch?v=-auyB19Mc6U). APH visualization (Pottinger et al 2024). | None |
+| 21 | [Storytelling with Verbs (Tremblay 2020)](https://www.youtube.com/watch?v=ontNUxSLhb8). [Spore, birth of a game (Wright 2007)](https://www.ted.com/talks/will_wright_spore_birth_of_a_game?language=en) | [Possibility space (Wright 2003)](https://www.computerhistory.org/revolution/computer-games/16/201/2309). [Diegesis (Dassler and Portnow 2019)](https://www.youtube.com/watch?v=-auyB19Mc6U). [APH visualization (Pottinger et al 2025)](https://doi.org/10.52933/jdssv.v5i3.134). | None |
 | 22 | [Games are for Everyone (Brown 2018)](https://www.youtube.com/watch?v=xrqdU4cZaLw) | [WCAG (MDN 2024)](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG), common patterns, non-visual strategies. | [Final] Choose topic. |
 | 23 | [Here's What Ethical AI Really Means (Thorne 2023)](https://www.youtube.com/watch?v=AaU6tI2pb3M) or [Sasha Costanza-Chock (2019)](https://vimeo.com/354276956) | [User Centered Machine Learning (Pottinger 2019)](https://www.slideshare.net/Samnsparky/user-centered-data-science-135680883). | [Final] Initial designs. |
 | 24 | [The World Design of Metroid 1 and Zero Mission (Brown 2018)](https://www.youtube.com/watch?v=kUT60DKaEGc) | [Inquiry-based design (Hayes 2023)](https://stamen.com/data-visualization-for-education-when-asking-questions-is-the-answer/), overview of datasets, journey mapping. | [Final] Initial design ideas. |
@@ -226,7 +226,7 @@ Kesavan, Vidya. "Preattentive Attributes in Visualization – An Example," Novem
 
 LeRoy, Benjamin. "Review of Tufte's 'The Visual Display of Quantitative Information,'" May 16, 2018. https://benjaminleroy.github.io/pages/blog/public/post/2018/05/16/review-of-tufte-s-the-visual-display-of-quantitative-information/.
 
-Lewis, Clayton. "Using the 'Thinking-Aloud' Method in Cognitive Interface Design." IBM Research, 1982. https://dominoweb.draco.res.ibm.com/2513e349e05372cc852574ec0051eea4.html.
+Lewis, Clayton. "Using the 'Thinking-Aloud' Method in Cognitive Interface Design." IBM Research, 1982. https://research.ibm.com/publications/learning-to-use-a-text-processing-system-evidence-from-thinking-aloud-protocols.
 
 Luipi, Georigia, and Stefanie Posavec. "Dear Data." Eyeo, 2015. https://vimeo.com/channels/eyeo2015/133608605.
 
@@ -234,13 +234,13 @@ MDN Contributors. "Understanding the Web Content Accessibility Guidelines." Mozi
 
 Munzner, Tamara. "15 Views of a Node Link Graph." Google, October 8, 2007. https://www.youtube.com/watch?v=WOBKnRlOAes.
 
-———. Visualization Analysis and Design. A.K. Peters Visualization Series. Boca Raton: CRC Press, Taylor & Francis Group, CRC Press is an imprint of the Taylor & Francis Group, an informa business, 2015.
+———. Visualization Analysis and Design. A.K. Peters Visualization Series. Boca Raton: CRC Press, Taylor & Francis Group, CRC Press is an imprint of the Taylor & Francis Group, an informa business, 2014. https://www.cs.ubc.ca/~tmm/vadbook/.
 
 Nass, Clifford, Jonathan Steuer, and Ellen R. Tauber. "Computers Are Social Actors," 204. Boston, Massachusetts, United States: ACM Press, 1994. https://doi.org/10.1145/259963.260288.
 
-Norman, Donald A. The Design of Everyday Things. Revised and Expanded editions. Cambridge, MA London: The MIT Press, 2013.
+Norman, Donald A. The Design of Everyday Things. Revised and Expanded edition. Cambridge, MA London: The MIT Press, 2013. https://www.nngroup.com/books/design-everyday-things-revised/.
 
-Portnow, James. "Gestalt and Parts of the Whole." Extra Credits, 2018. https://www.youtube.com/watch?v=TcMO1xhjKTg.
+Portnow, James, et al. "Gestalt and Parts of the Whole." Extra Credits, 2018. https://youtu.be/c1qdyszaeTU.
 
 ———. "The Role of the Player - The Fundamental Difference between Games and Every Other Art Form." Extra Credits, October 12, 2011. https://www.youtube.com/watch?v=ulm7bcB2xvY.
 
@@ -276,7 +276,7 @@ Thorne, Abigail. "Here's What Ethical AI Really Means." Philosophy Tube, October
 
 Tremblay, Kaitlin. "Storytelling with Verbs: Integrating Gameplay and Narrative." GDC, March 17, 2020. https://www.youtube.com/watch?v=ontNUxSLhb8.
 
-Tufte, Edward R. The Visual Display of Quantitative Information. 2nd ed., 8th print. Cheshire, Conn: Graphics Press, 2013.
+Tufte, Edward R. The Visual Display of Quantitative Information. 2nd ed. Cheshire, Conn: Graphics Press, 2001. https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/.
 
 Victor, Bret. "Explorable Explanations." Bret Victor, 2011. https://worrydream.com/ExplorableExplanations/.
 
@@ -284,7 +284,7 @@ Victor, Bret. "Explorable Explanations." Bret Victor, 2011. https://worrydream.c
 
 ———. "Media for Thinking the Unthinkable." MIT Media Lab, April 4, 2013. https://vimeo.com/67076984.
 
-Ware, Colin. Information Visualization: Perception for Design. Fourth edition. Cambridge, MA: Morgan Kaufmann, Inc, 2021.
+Ware, Colin. Visual Thinking for Information Design. 2nd ed. Cambridge, MA: Morgan Kaufmann, 2021. https://shop.elsevier.com/books/visual-thinking-for-information-design/ware/978-0-12-823567-6.
 
 Wilkinson, Leland. The Grammar of Graphics. Second edition. Statistics and Computing. New York, NY: Springer, 2005.
 
