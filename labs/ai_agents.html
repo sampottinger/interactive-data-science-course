@@ -4,9 +4,9 @@ Using advanced AI techniques for data visualization including llms.txt, agentic 
 ## Motivation
 We've just seen [how we can chat with an AI assistant in building simple visualizations](/labs/ai_basics.html) but let's consider two potential challenges and two solutions.
 
-**Knowledge**: What if you ask the AI assistant about a technology it perhaps doesn't know much about or maybe where that techonology has changed since when the AI was built? There is a protocol called [llms.txt](https://llmstxt.org/) which lets us provide new knowledge to assistants. It is kind of like a library for AI!
+**Knowledge**: What if you ask the AI assistant about a technology it perhaps doesn't know much about or maybe where that technology has changed since when the AI was built? There is a protocol called [llms.txt](https://llmstxt.org/) which lets us provide new knowledge to assistants. It is kind of like a library for AI!
 
-**Context**: What about building visualizations with novel representations or lots of customization where there's quite a bit more code or iteration? AI asisstants have limited "context" or chat lengths. This can sometimes impair our ability to use them in more complex tasks. That said, some assistants like [Claude](https://claude.ai/new) allow for use of "agents" which you can think of as allowing multiple AI assistants to coordinate with each other, saving any individual from over-burdening their context.
+**Context**: What about building visualizations with novel representations or lots of customization where there's quite a bit more code or iteration? AI assistants have limited "context" or chat lengths. This can sometimes impair our ability to use them in more complex tasks. That said, some assistants like [Claude](https://claude.ai/new) allow for use of "agents" which you can think of as allowing multiple AI assistants to coordinate with each other, saving any individual from over-burdening their context.
 
 **Reproducibility**: If we have a lot of work with an AI, how can we document our work? We will discuss [markdown](https://www.markdownguide.org/) and the use of "task files" that allow us to prompt assistants with more structure and documentation.
 
@@ -18,7 +18,7 @@ There are a few ways to pull this off but, if you are interested in using agents
 ### Using the browser
 If you don't want to use the command line, it may be best to try this without agents. Don't worry though! We can still demonstrate the use of llms.txt and task files. Just make sure to have the web version of your assistant ready to go and use the [Sketchingpy online sketchbook](https://editor.sketchingpy.org/).
 
-### Preparing agents the command line
+### Preparing agents on the command line
 If working with agents on the command line, the best place to get started is to create a new empty directory to do the work:
 
 ```
@@ -28,22 +28,22 @@ $ mkdir wolves_moose_viz
 Then, write a [requirements.txt](https://pip.pypa.io/en/stable/reference/requirements-file-format/) file which is a way to denote what libraries are in use for that project (which is useful both to humans and AI working on the project with you):
 
 ```
-$ echo "sketchingpy[desktopall]" >>> requirements.txt
+$ echo "sketchingpy[desktopall]" >> requirements.txt
 ```
 
 Let's also add some tools that can help us write cleaner Python code. The first is [pyflakes](https://github.com/PyCQA/pyflakes) which is a tool to automatically check Python files for issues that would prevent that code from running.
 
 ```
-echo "pyflakes" >>> requirements.txt
+$ echo "pyflakes" >> requirements.txt
 ```
 
 Let's also add [pycodestyle](https://pypi.org/project/pycodestyle/) which can check code for issues that might make it more difficult for other engineers (or AI!) to read the code even if the code is valid:
 
 ```
-echo "pycodestyle" >>> requirements.txt
+$ echo "pycodestyle" >> requirements.txt
 ```
 
-Finally, it is often a good idea to use a [virutal environment](https://docs.python-guide.org/dev/virtualenvs/) to keep your system clean:
+Finally, it is often a good idea to use a [virtual environment](https://docs.python-guide.org/dev/virtualenvs/) to keep your system clean:
 
 ```
 $ python -m venv venv
@@ -64,10 +64,10 @@ $ claude
 ```
 
 ## Importing knowledge
-First, let's tell our AI assistant about the latest version of [Skethcingpy](https://sketchingpy.org) which we will use to perform the drawing.
+First, let's tell our AI assistant about the latest version of [Sketchingpy](https://sketchingpy.org) which we will use to perform the drawing.
 
 ### Knowledge without agents
-Most AI assistants can easily work with llms.txt just by giving a web path to where the file or files can be found. Generally both an llms-full.txt which is a longer but self-contained document is avialable along with llms.txt which is more of an index which can be used to find other information. We will stick with llms-full.txt for now! That in mind, let's go ahead and tell our assistant to pull in that information:
+Most AI assistants can easily work with llms.txt just by giving a web path to where the file or files can be found. Generally both an llms-full.txt which is a longer but self-contained document is available along with llms.txt which is more of an index which can be used to find other information. We will stick with llms-full.txt for now! That in mind, let's go ahead and tell our assistant to pull in that information:
 
 ```
 Hello! We will complete a series of tasks together using Sketchingpy. Please read https://sketchingpy.org/llms-full.txt?v=20250915 before we start so that you know how to use the library.
@@ -76,7 +76,7 @@ Hello! We will complete a series of tasks together using Sketchingpy. Please rea
 Note that some assistants might have limited internet access. If that's the case, you can download llms-full.txt files and add them as attachments to your chat. For more information, see the [Sketchingpy llms documentation](https://sketchingpy.org/guides/llm_ai_assistant.html).
 
 ### Knowledge with agents
-We will have two agents: one that completes a task as described in a text file and another that checks the work of the first agent and fixes any issues with styling using pycodestyle and pyflakes. Depending on the assistant you are using, there might be different instructions for adding a new agent. For Claude, type `/agents` into the Claude Code interface and then add a new agent. When asked for description, try something like (note that, if you are not using a virutal environment, remove the comment about using venv):
+We will have two agents: one that completes a task as described in a text file and another that checks the work of the first agent and fixes any issues with styling using pycodestyle and pyflakes. Depending on the assistant you are using, there might be different instructions for adding a new agent. For Claude, type `/agents` into the Claude Code interface and then add a new agent. When asked for description, try something like (note that, if you are not using a virtual environment, remove the comment about using venv):
 
 ```
 This implementer agent should be given the path to a markdown file describing a task to complete. It should read that file and complete the task using Sketchingpy. In order to prepare to do its work, it should also then read https://sketchingpy.org/llms-full.txt?v=20250915. After it has gathered all of the necessary information, it should make a detailed todo list to complete the task assigned. Finally, when done, it should update the task markdown file with a description of what it did and if it encountered any issues. It should run the script before concluding work but it does not need to worry about any style issues which will be addressed by a later agent.
@@ -151,7 +151,7 @@ Great! Next, please read and complete the attached task file. Please prepare a P
 
 When done, take the Python code generated and double check it! Maybe confirm that, even if it doesn't do anything yet, that the script runs and finishes without error. This is a similar cycle of iteration we saw in our earlier experiments with AI!
 
-### Scaffodling with agents
+### Scaffolding with agents
 If using agents, go ahead and run Claude Code in the directory in a new chat and ask it something like the following:
 
 ```
@@ -171,7 +171,7 @@ In this next step, we should gather the required data and give our sketch access
 Please write a `wolvesMoose.csv` which contains the table at https://www.nps.gov/isro/learn/nature/wolf-moose-populations.htm with the columns year, wolves, and moose.
 
 ## Add to script
-Next, I would like to update our script to create a sketch that is 400 pixels wide by 600 pixels tall. Let's have this cleared with a background of color #FFFFFF. Let's then use the data layer to load the file `wolvesMoose.csv` which we will plan to pass into the class we just constructed along with the sketch. Please initialize an instance of our presenter and call its draw method before calling show on the sketch. We do not need interactivity on this sketch, it should just write to an `output.png` file.
+Next, I would like to update our script to create a sketch that is 400 pixels wide by 650 pixels tall. Let's have this cleared with a background of color #FFFFFF. Let's then use the data layer to load the file `wolvesMoose.csv` which we will plan to pass into the class we just constructed along with the sketch. Please initialize an instance of our presenter and call its draw method before calling show on the sketch. We do not need interactivity on this sketch, it should just write to a `wolvesMoose.png` file.
 
 Please leave our class stubbed except in the constructor where we should save data and sketch as private instance variables. Please leave all of this in one script file.
 
@@ -190,12 +190,12 @@ Let's draw the axes for our sketch. Let's not use push / pop style or transform.
 
 ## Define constants
 
-At the top fo the file after imports, let's define some constants:
+At the top of the file after imports, let's define some constants:
 
- - Let's move our min and max values for wolves and moose to constants `MIN_WOLVES` (0), `MAX_WOLVES` (500), `MIN_MOOSE` (0), and `MAX_MOOSE` (1800).
+ - Let's move our min and max values for wolves and moose to constants `MIN_WOLVES` (0), `MAX_WOLVES` (50), `MIN_MOOSE` (0), and `MAX_MOOSE` (2400).
  - Let's also define the colors we want to use as `BACKGROUND_COLOR` (#F0F0F0), `AXIS_COLOR` (#333333), `WOLVES_COLOR` (#D95F02), and `MOOSE_COLOR` (#7570B3).
- - Let's also use the `sans-serif` font (`FONT`) with `AXIS_SIZE` as 16px (16) and `BODY_SIZE` as 13px (13).
- - Let's also create some common spacing where the center of the first column for year is at x coordinate of 55px (`YEAR_X = 55`), the right align target for wolves is x coordiante of 245px (`WOLVES_X = 245`) and the align target for moose is 255px (`MOOSE_X = 255`). The width of the year column should be 50px (`YEAR_WIDTH`) and width of both the moose and wolves columsn should be 140px.
+ - Let's also use the `sans-serif` font (`FONT`) with `AXIS_SIZE` as 15px (15) and `BODY_SIZE` as 13px (13).
+ - Let's also create some common spacing where the center of the first column for year is at x coordinate of 55px (`YEAR_X = 55`), the right align target for wolves is x coordinate of 245px (`WOLVES_X = 245`) and the align target for moose is 255px (`MOOSE_X = 255`). The width of the year column should be 50px (`YEAR_WIDTH`) and columns for wolves and moose should be 140px wide (but no constant needed since we will use the value inline).
  - Let's also use `WIDTH` and `HEIGHT` for sketch dimensions.
  - Let's say that the header and footer height (`AXIS_HEIGHT`) is 30px.
 
@@ -207,9 +207,9 @@ Next, let's go ahead and have `draw` start with calling `_draw_top` and `_draw_b
 
 ## Draw Top
 
-Let's then implement `_draw_top` to use axis color and to draw the text Year, Wolves, Moose at the center, right, and left coordinate for those three columns at 30px y coordinate from the top. Let's set those back vertically by 5px and have a horizontal line in axis color drawn spanning the extent of the column for each. Please use `AXIS_SIZE` for all text in this section. Text should use fill and no stroke while line should use no fill and stroke.
+Let's then implement `_draw_top` to use axis color and to draw the text Year, Wolves, Moose at the center, right, and left coordinate for those three columns at 50px y coordinate from the top (with 20px reserved for title). Let's set those back vertically by 5px and have a horizontal line in axis color drawn spanning the extent of the column for each. Please use `AXIS_SIZE` for all text in this section. Text should use fill and no stroke while line should use no fill and stroke.
 
-_Note_: We should have text aligned to bottom 25px from the top and the line at 30px from the top of the sketch.
+_Note_: We should have text aligned to bottom 45px from the top and the line at 50px from the top of the sketch.
 
 ## Draw Bottom
 
@@ -235,7 +235,7 @@ Next, we can start filling in some of the elements from the data themselves, sta
 Next I would like to draw the years as the first part of _draw_series.
 
 ## Method
-Let's loop through the data we saved and get that year's y coordinate can be found by using _get_y_pos which should do a linear scaling from the top of the sketch to the bottom: 40 + (year - min year) / (max year - min year) * (height - 40 * 2). Let's add MIN_YEAR and MAX_YEAR to represent that we are going from 1980 to 2018. That said, we should probably offset year by 1 so go 1979 to 2018.
+Let's loop through the data we saved and get that year's y coordinate can be found by using _get_y_pos which should do a linear scaling from the top of the sketch to the bottom: `top_line + padding + (year - MIN_YEAR) / (MAX_YEAR - MIN_YEAR) * (bottom_line - top_line - 2 * padding)` where `top_line = 50`, `bottom_line = HEIGHT - AXIS_HEIGHT`, and `padding = 15`. Let's add MIN_YEAR and MAX_YEAR to represent that we are going from 1979 to 2019.
 
 ## Notes
 If needed, prior task markdown files are present in this directory like `01_scaffold.md`.
@@ -259,7 +259,7 @@ Next, let's have the count for the species drawn at the y position for year and 
 If needed, prior task markdown files are present in this directory like `01_scaffold.md`.
 ```
 
-Continue and we should have a pretty good visualization! However, there are a few things we might want to tighten up since we have so much control over drawing
+Continue and we should have a pretty good visualization! However, there are a few things we might want to tighten up since we have so much control over drawing.
 
 ## Finishing touches
 Finishing off this iterative process, let's highlight the max values from both series and clean up the title / labeling.
@@ -272,7 +272,7 @@ To finish off the visualization, we will add highlighting and clean up on spacin
 Let's add a dictionary called `self._observed_maxes` which has entries for wolves and moose. Let's use the `max` function over a `map` to get the max observed value for each: `max(map(lambda x: int(x), map(lambda x: x['Wolves'], data)))`. Let's then, while iterating in `_draw_body` see if the value for the series matches the maximum value for the series and, if it is, let's have the fill for that text for just that data point for just that series alone be `AXIS_COLOR`.
 
 ## Spacing / labels
-Let's make the sketch 20 pixels taller to have 15px `AXIS_COLOR` text at the top that says "Isle Royale National Park" as the title. Let's also ensure the year labels are bottom aligned and 5 pixels above the y position for the year.
+Let's use 18px `AXIS_COLOR` text at the top of the sketch that says "Isle Royale National Park" as the title, drawn at y position 21 with center and bottom alignment. Let's also ensure the year labels are bottom aligned and 5 pixels above the y position for the year.
 
 ## Notes
 If needed, prior task markdown files are present in this directory like `01_scaffold.md`.
