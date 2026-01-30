@@ -1,112 +1,210 @@
-# Advanced AI Techniques
-Using advanced AI techniques for data visualization including llms.txt, agentic workflows / subagents, and task files.
+<!doctype html>
 
-## Motivation
-We've just seen [how we can chat with an AI assistant in building simple visualizations](/labs/ai_basics.html) but let's consider two potential challenges and two solutions.
+<html lang="en">
+    <head>
+        <title>AI Advanced</title>
+        <link href="/support/web/supplemental.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="skip-link">
+            <a href="#main">Skip to content</a>
+        </div>
+        <header>
+            This tutorial is part of the <a href="/labs">skills labs</a> within
+            <a href="/">Interactive Data Science and Visualization</a>.
+        </header>
+        <main id="main">
+            <h1>Advanced AI Techniques</h1>
 
-**Knowledge**: What if you ask the AI assistant about a technology it perhaps doesn't know much about or maybe where that technology has changed since when the AI was built? There is a protocol called [llms.txt](https://llmstxt.org/) which lets us provide new knowledge to assistants. It is kind of like a library for AI!
+            Using advanced AI techniques for data visualization including llms.txt, agentic workflows / subagents, and task files.
 
-**Context**: What about building visualizations with novel representations or lots of customization where there's quite a bit more code or iteration? AI assistants have limited "context" or chat lengths. This can sometimes impair our ability to use them in more complex tasks. That said, some assistants like [Claude](https://claude.ai/new) allow for use of "subagents" which you can think of as allowing multiple AI assistants to coordinate with each other, saving any individual from over-burdening their context.
+            <details>
+                <summary>Contents</summary>
+                <ul>
+                    <li><a href="#motivation">Motivation</a></li>
+                    <li><a href="#setup">Setup</a></li>
+                    <li><a href="#importing-knowledge">Importing Knowledge</a></li>
+                    <li><a href="#scaffolding">Scaffolding</a></li>
+                    <li><a href="#data">Data</a></li>
+                    <li><a href="#draw-outlines">Draw Outlines</a></li>
+                    <li><a href="#draw-years">Draw Years</a></li>
+                    <li><a href="#draw-body">Draw Body</a></li>
+                    <li><a href="#finishing-touches">Finishing Touches</a></li>
+                    <li><a href="#reflection">Reflection</a></li>
+                </ul>
+            </details>
 
-**Reproducibility**: If we have a lot of work with an AI, how can we document our work? We will discuss [markdown](https://www.markdownguide.org/) and the use of "task files" that allow us to prompt assistants with more structure and documentation.
+            <section id="motivation">
+                <h2>Motivation</h2>
 
-This tutorial will walk through use of llms.txt and, optionally, use of assistants to build out a more bespoke / tailored version of the wolves and moose visualization from the [previous tutorial](/labs/ai_basics.html).
+                <p>
+                    We've just seen <a href="/labs/ai_basics.html">how we can chat with an AI assistant in building simple visualizations</a> but let's consider two potential challenges and two solutions.
+                </p>
 
-## Setup
-There are a few ways to pull this off but, if you are interested in using agents, going through Claude Code and the command line may be a good strategy. Otherwise, let's make sure you have what you need in order to do this entirely from the browser.
+                <p>
+                    <strong>Knowledge</strong>: What if you ask the AI assistant about a technology it perhaps doesn't know much about or maybe where that technology has changed since when the AI was built? There is a protocol called <a href="https://llmstxt.org/">llms.txt</a> which lets us provide new knowledge to assistants. It is kind of like a library for AI!
+                </p>
 
-### Using the browser
-If you don't want to use the command line, it may be best to try this without agents. Don't worry though! We can still demonstrate the use of llms.txt and task files. Just make sure to have the web version of your assistant ready to go and use the [Sketchingpy online sketchbook](https://editor.sketchingpy.org/).
+                <p>
+                    <strong>Context</strong>: What about building visualizations with novel representations or lots of customization where there's quite a bit more code or iteration? AI assistants have limited "context" or chat lengths. This can sometimes impair our ability to use them in more complex tasks. That said, some assistants like <a href="https://claude.ai/new">Claude</a> allow for use of "subagents" which you can think of as allowing multiple AI assistants to coordinate with each other, saving any individual from over-burdening their context.
+                </p>
 
-### Preparing agents on the command line
-If working with agents on the command line, the best place to get started is to create a new empty directory to do the work:
+                <p>
+                    <strong>Reproducibility</strong>: If we have a lot of work with an AI, how can we document our work? We will discuss <a href="https://www.markdownguide.org/">markdown</a> and the use of "task files" that allow us to prompt assistants with more structure and documentation.
+                </p>
 
-```
+                <p>
+                    This tutorial will walk through use of llms.txt and, optionally, use of assistants to build out a more bespoke / tailored version of the wolves and moose visualization from the <a href="/labs/ai_basics.html">previous tutorial</a>.
+                </p>
+            </section>
+
+            <section id="setup">
+                <h2>Setup</h2>
+
+                <p>
+                    There are a few ways to pull this off but, if you are interested in using agents, going through Claude Code and the command line may be a good strategy. Otherwise, let's make sure you have what you need in order to do this entirely from the browser.
+                </p>
+
+                <h3>Using the browser</h3>
+
+                <p>
+                    If you don't want to use the command line, it may be best to try this without agents. Don't worry though! We can still demonstrate the use of llms.txt and task files. Just make sure to have the web version of your assistant ready to go and use the <a href="https://editor.sketchingpy.org/">Sketchingpy online sketchbook</a>.
+                </p>
+
+                <h3>Preparing agents on the command line</h3>
+
+                <p>
+                    If working with agents on the command line, the best place to get started is to create a new empty directory to do the work:
+                </p>
+
+                <pre>
 $ mkdir wolves_moose_viz
 $ cd wolves_moose_viz
-```
+</pre>
 
-Then, write a [requirements.txt](https://pip.pypa.io/en/stable/reference/requirements-file-format/) file which is a way to denote what libraries are in use for that project (which is useful both to humans and AI working on the project with you):
+                <p>
+                    Then, write a <a href="https://pip.pypa.io/en/stable/reference/requirements-file-format/">requirements.txt</a> file which is a way to denote what libraries are in use for that project (which is useful both to humans and AI working on the project with you):
+                </p>
 
-```
+                <pre>
 $ echo "sketchingpy[static]" >> requirements.txt
-```
+</pre>
 
-In addition to Sketchingpy, we will also grab Pillow:
+                <p>
+                    In addition to Sketchingpy, we will also grab Pillow:
+                </p>
 
-```
+                <pre>
 $ echo "pillow" >> requirements.txt
-```
+</pre>
 
-Let's also add some tools that can help us write cleaner Python code. The first is [pyflakes](https://github.com/PyCQA/pyflakes) which is a tool to automatically check Python files for issues that would prevent that code from running.
+                <p>
+                    Let's also add some tools that can help us write cleaner Python code. The first is <a href="https://github.com/PyCQA/pyflakes">pyflakes</a> which is a tool to automatically check Python files for issues that would prevent that code from running.
+                </p>
 
-```
+                <pre>
 $ echo "pyflakes" >> requirements.txt
-```
+</pre>
 
-Let's also add [pycodestyle](https://pypi.org/project/pycodestyle/) which can check code for issues that might make it more difficult for other engineers (or AI!) to read the code even if the code is valid:
+                <p>
+                    Let's also add <a href="https://pypi.org/project/pycodestyle/">pycodestyle</a> which can check code for issues that might make it more difficult for other engineers (or AI!) to read the code even if the code is valid:
+                </p>
 
-```
+                <pre>
 $ echo "pycodestyle" >> requirements.txt
-```
+</pre>
 
-Finally, it is often a good idea to use a [virtual environment](https://docs.python-guide.org/dev/virtualenvs/) to keep your system clean:
+                <p>
+                    Finally, it is often a good idea to use a <a href="https://docs.python-guide.org/dev/virtualenvs/">virtual environment</a> to keep your system clean:
+                </p>
 
-```
+                <pre>
 $ python3 -m venv venv
 $ source venv/bin/activate
 $ pip install -r requirements.txt
-```
+</pre>
 
-If that isn't your preference though, you can install directly:
+                <p>
+                    If that isn't your preference though, you can install directly:
+                </p>
 
-```
+                <pre>
 $ pip install -r requirements.txt
-```
+</pre>
 
-Lastly, go ahead and install your AI assistant's command line tool in a different terminal window. For this tutorial, we will use [Claude Code](https://code.claude.com/docs). Please follow the [install instructions](https://code.claude.com/docs/en/setup) and then start the assistant to ensure you are logged in.
+                <p>
+                    Lastly, go ahead and install your AI assistant's command line tool in a different terminal window. For this tutorial, we will use <a href="https://code.claude.com/docs">Claude Code</a>. Please follow the <a href="https://code.claude.com/docs/en/setup">install instructions</a> and then start the assistant to ensure you are logged in.
+                </p>
 
-```
+                <pre>
 $ claude
-```
+</pre>
 
-It is recommended that you start Claude from within the `wolves_moose_viz` directory.
+                <p>
+                    It is recommended that you start Claude from within the <code>wolves_moose_viz</code> directory.
+                </p>
+            </section>
 
-## Importing knowledge
-First, let's tell our AI assistant about the latest version of [Sketchingpy](https://sketchingpy.org) which we will use to perform the drawing.
+            <section id="importing-knowledge">
+                <h2>Importing knowledge</h2>
 
-### Knowledge without agents
-Most AI assistants can easily work with llms.txt just by giving a web path to where the file or files can be found. Generally both an llms-full.txt which is a longer but self-contained document is available along with llms.txt which is more of an index which can be used to find other information. We will stick with llms-full.txt for now! That in mind, let's go ahead and tell our assistant to pull in that information:
+                <p>
+                    First, let's tell our AI assistant about the latest version of <a href="https://sketchingpy.org">Sketchingpy</a> which we will use to perform the drawing.
+                </p>
 
-```
+                <h3>Knowledge without agents</h3>
+
+                <p>
+                    Most AI assistants can easily work with llms.txt just by giving a web path to where the file or files can be found. Generally both an llms-full.txt which is a longer but self-contained document is available along with llms.txt which is more of an index which can be used to find other information. We will stick with llms-full.txt for now! That in mind, let's go ahead and tell our assistant to pull in that information:
+                </p>
+
+                <pre>
 Hello! We will complete a series of tasks together using Sketchingpy. Please read https://sketchingpy.org/llms-full.txt?v=20250915 before we start so that you know how to use the library.
-```
+</pre>
 
-Note that some assistants might have limited internet access. If that's the case, you can download llms-full.txt files and add them as attachments to your chat. For more information, see the [Sketchingpy llms documentation](https://sketchingpy.org/guides/llm_ai_assistant.html).
+                <p>
+                    Note that some assistants might have limited internet access. If that's the case, you can download llms-full.txt files and add them as attachments to your chat. For more information, see the <a href="https://sketchingpy.org/guides/llm_ai_assistant.html">Sketchingpy llms documentation</a>.
+                </p>
 
-### Knowledge with agents
-We will have two agents: one that completes a task as described in a text file and another that checks the work of the first agent and fixes any issues with styling using pycodestyle and pyflakes. Depending on the assistant you are using, there might be different instructions for adding a new agent. For Claude, type `/agents` into the Claude Code interface and then add a new agent. When asked for description, try something like (note that, if you are not using a virtual environment, remove the comment about using venv):
+                <h3>Knowledge with agents</h3>
 
-```
+                <p>
+                    We will have two agents: one that completes a task as described in a text file and another that checks the work of the first agent and fixes any issues with styling using pycodestyle and pyflakes. Depending on the assistant you are using, there might be different instructions for adding a new agent. For Claude, type <code>/agents</code> into the Claude Code interface and then add a new agent. When asked for description, try something like (note that, if you are not using a virtual environment, remove the comment about using venv):
+                </p>
+
+                <pre>
 This implementer agent should be given the path to a markdown file describing a task to complete. It should read that file and complete the task using Sketchingpy. In order to prepare to do its work, it should also then read https://sketchingpy.org/llms-full.txt?v=20250915. After it has gathered all of the necessary information, it should make a detailed todo list to complete the task assigned. Finally, when done, it should update the task markdown file with a description of what it did and if it encountered any issues. It should run the script before concluding work but it does not need to worry about any style issues which will be addressed by a later agent. Please call this agent `implementer`. Please ask it to use the venv.
-```
+</pre>
 
-You can use the recommended agent settings including to put this in the project folder and the option to provide a description but let Claude make the actual agent file. After done, go ahead and add a second agent:
+                <p>
+                    You can use the recommended agent settings including to put this in the project folder and the option to provide a description but let Claude make the actual agent file. After done, go ahead and add a second agent:
+                </p>
 
-```
+                <pre>
 This checker agent should be given the path to a markdown file describing a task that was just worked on by another agent. It should read that file and investigate the specific changes made to complete that task which should have been done using Sketchingpy. In order to prepare to do its work, it should also then read https://sketchingpy.org/llms-full.txt?v=20250915. After it has gathered all of the necessary information, it should double check and, where appropriate, improve that work. In addition to running the script to ensure it executes successfully, it should also run pyflakes followed by pycodestyle to resolve any problems identified. Please have it update the task file with any issues encountered and report overall status to the agent which called it. Please call this agent `checker`. Please ask it to use the venv.
-```
+</pre>
 
-Having added these two agents, we now have kinda a "special purpose" AI assistant for implementing our ideas and another to check that work and improve it. We are splitting across these two so that neither on their own run out of room in their context. However, we are also giving them instructions they should follow each time to ensure success.
+                <p>
+                    Having added these two agents, we now have kinda a "special purpose" AI assistant for implementing our ideas and another to check that work and improve it. We are splitting across these two so that neither on their own run out of room in their context. However, we are also giving them instructions they should follow each time to ensure success.
+                </p>
+            </section>
 
-## Scaffolding
-Alright we should be ready to take our first step which is just to sketch out the outlines of the code we want to have draw this visualization. This will let us dictate the code's architecture and then fill it in progressively through subsequent tasks.
+            <section id="scaffolding">
+                <h2>Scaffolding</h2>
 
-That objective in sight, consider that many AI assistants use Markdown as a way to converse with the user and to internally represent conversation. Indeed, agent files are just markdown! Anyway, this is a lightweight way to structure text where `#` means a top level header, `##` means a sub-header, `**` means bold, the tick character means code, and `-` means a list. There are resources to [learn how to use Markdown](https://www.markdownguide.org/) with its many features but we will try to stick to that for now. Specifically, we will make Markdown files each with an individual task to be completed by our AI assistant.
+                <p>
+                    Alright we should be ready to take our first step which is just to sketch out the outlines of the code we want to have draw this visualization. This will let us dictate the code's architecture and then fill it in progressively through subsequent tasks.
+                </p>
 
-All that in mind, let's make a new text file called `01_scaffold.md`. Then read and place the following inside:
+                <p>
+                    That objective in sight, consider that many AI assistants use Markdown as a way to converse with the user and to internally represent conversation. Indeed, agent files are just markdown! Anyway, this is a lightweight way to structure text where <code>#</code> means a top level header, <code>##</code> means a sub-header, <code>**</code> means bold, the tick character means code, and <code>-</code> means a list. There are resources to <a href="https://www.markdownguide.org/">learn how to use Markdown</a> with its many features but we will try to stick to that for now. Specifically, we will make Markdown files each with an individual task to be completed by our AI assistant.
+                </p>
 
-```
+                <p>
+                    All that in mind, let's make a new text file called <code>01_scaffold.md</code>. Then read and place the following inside:
+                </p>
+
+                <pre>
 # Table presenter
 Please create a class TablePresenter which takes in a sketch and which has stubbed methods and make docstrings for the given description (please use Google-style docstrings). Please have these simply throw NotImplementedError as we will fill them in as we go along. Please wrap at 80 characters.
 
@@ -149,30 +247,45 @@ Get the hex code to use for a given series (wolves, moose, year). Error thrown i
 `_get_max(self, series: str) -> float`
 
 Get the maximum count for a series (wolves, moose, year). Error thrown if the series is unknown or unsupported.
-```
+</pre>
 
-### Scaffolding without agents
-If not using agents, attach your markdown file as an attachment to your chat and ask your assistant to complete that task.
+                <h3>Scaffolding without agents</h3>
 
-```
+                <p>
+                    If not using agents, attach your markdown file as an attachment to your chat and ask your assistant to complete that task.
+                </p>
+
+                <pre>
 Great! Next, please read and complete the attached task file. Please prepare a Python script.
-```
+</pre>
 
-When done, take the Python code generated and double check it! Maybe confirm that, even if it doesn't do anything yet, that the script runs and finishes without error. This is a similar cycle of iteration we saw in our earlier experiments with AI! A `NotImplementedError` may be anticipated.
+                <p>
+                    When done, take the Python code generated and double check it! Maybe confirm that, even if it doesn't do anything yet, that the script runs and finishes without error. This is a similar cycle of iteration we saw in our earlier experiments with AI! A <code>NotImplementedError</code> may be anticipated.
+                </p>
 
-### Scaffolding with agents
-If using agents, go ahead and run Claude Code in the directory in a new chat and ask it something like the following:
+                <h3>Scaffolding with agents</h3>
 
-```
+                <p>
+                    If using agents, go ahead and run Claude Code in the directory in a new chat and ask it something like the following:
+                </p>
+
+                <pre>
 Hello! Please have the implementer agent followed by the checker agent complete `01_scaffold.md`. However, please first learn more about Sketchingpy by reading https://sketchingpy.org/llms-full.txt?v=20250915.
-```
+</pre>
 
-This should have the AI assistant (the "coordinating agent") invoke the implementer agent first to write out the "first draft" of the code for our task. Then, when the implementer is done, it should invoke a checker agent to confirm the work. Note that implementer and checker both have their own context that is cleared after their invocation is done.
+                <p>
+                    This should have the AI assistant (the "coordinating agent") invoke the implementer agent first to write out the "first draft" of the code for our task. Then, when the implementer is done, it should invoke a checker agent to confirm the work. Note that implementer and checker both have their own context that is cleared after their invocation is done.
+                </p>
+            </section>
 
-## Data
-Alright we have our scaffold here, let's bring in our data. Following the same flow, let's make a `02_data.md`:
+            <section id="data">
+                <h2>Data</h2>
 
-```
+                <p>
+                    Alright we have our scaffold here, let's bring in our data. Following the same flow, let's make a <code>02_data.md</code>:
+                </p>
+
+                <pre>
 # Load data
 In this next step, we should gather the required data and give our sketch access to that file.
 
@@ -186,14 +299,21 @@ Please leave our class stubbed except in the constructor where we should save da
 
 ## Notes
 If needed, prior task markdown files are present in this directory like `01_scaffold.md`.
-```
+</pre>
 
-As before, make sure to review the output and run the script. Note that, if your agent cannot access the information from the internet, you can copy from [that table](https://www.nps.gov/isro/learn/nature/wolf-moose-populations.htm) into spreadsheet software and provide it as a CSV directly.
+                <p>
+                    As before, make sure to review the output and run the script. Note that, if your agent cannot access the information from the internet, you can copy from <a href="https://www.nps.gov/isro/learn/nature/wolf-moose-populations.htm">that table</a> into spreadsheet software and provide it as a CSV directly.
+                </p>
+            </section>
 
-## Draw outlines
-Now that we have gotten through so much of that set up, we are in a really good position to start doing some drawing. Let's make a `03_draw_outline.md`:
+            <section id="draw-outlines">
+                <h2>Draw outlines</h2>
 
-```
+                <p>
+                    Now that we have gotten through so much of that set up, we are in a really good position to start doing some drawing. Let's make a <code>03_draw_outline.md</code>:
+                </p>
+
+                <pre>
 # Draw outline
 Let's draw the axes for our sketch. Let's not use push / pop style or transform. This should be able to run just to draw the top and bottom of the sketch.
 
@@ -232,18 +352,25 @@ Please use `BODY_SIZE` for text in the bottom. Text should use fill and no strok
 ## Notes
 
 Please use `AXIS_HEIGHT` in both draw bottom and draw top. Also, if needed, prior task markdown files are present in this directory like `01_scaffold.md`. Please use the font at http://mooc.interactivedatascience.courses/support/web/PublicSans-Regular.otf.
-```
+</pre>
 
-Please execute this using the agent or manual flow from before and check the result. Don't forget that your coordinating agent (the one you talk to directly) can also assist with edits like if something feels too cramped or not quite right! For example:
+                <p>
+                    Please execute this using the agent or manual flow from before and check the result. Don't forget that your coordinating agent (the one you talk to directly) can also assist with edits like if something feels too cramped or not quite right! For example:
+                </p>
 
-```
+                <pre>
 The 1980 seems to start too far down. Can you have the years start maybe 15 pixels higher?
-```
+</pre>
+            </section>
 
-## Draw years
-Next, we can start filling in some of the elements from the data themselves, starting with the years. Let's make a `04_draw_years.md`:
+            <section id="draw-years">
+                <h2>Draw years</h2>
 
-```
+                <p>
+                    Next, we can start filling in some of the elements from the data themselves, starting with the years. Let's make a <code>04_draw_years.md</code>:
+                </p>
+
+                <pre>
 # Draw years
 Next I would like to draw the years as the first part of _draw_series.
 
@@ -252,14 +379,21 @@ Let's loop through the data we saved and get that year's y coordinate can be fou
 
 ## Notes
 If needed, prior task markdown files are present in this directory like `01_scaffold.md`.
-```
+</pre>
 
-As before, give this a shot with your agents or by continuing your chat.
+                <p>
+                    As before, give this a shot with your agents or by continuing your chat.
+                </p>
+            </section>
 
-## Draw body
-Alright let's get the rest of the data visible. In `05_draw_body.md`:
+            <section id="draw-body">
+                <h2>Draw body</h2>
 
-```
+                <p>
+                    Alright let's get the rest of the data visible. In <code>05_draw_body.md</code>:
+                </p>
+
+                <pre>
 # Draw body
 Next, I would like to implement `_get_length` and support drawing the labels and bars for the other two columns in `draw`.
 
@@ -270,18 +404,25 @@ Next, let's have the count for the species drawn at the y position for year and 
 
 ## Notes
 If needed, prior task markdown files are present in this directory like `01_scaffold.md`.
-```
+</pre>
 
-Continue and we should have a pretty good visualization! However, there are a few things we might want to tighten up since we have so much control over drawing. Once more, you might be seeing some things to improve and you can ask for help like:
+                <p>
+                    Continue and we should have a pretty good visualization! However, there are a few things we might want to tighten up since we have so much control over drawing. Once more, you might be seeing some things to improve and you can ask for help like:
+                </p>
 
-```
+                <pre>
 I think we are almost there... the text is a bit high off of the corresponding bar. Can you bring them closer together and make the text right above the bars like 2px smaller (ensure the year text still uses the original size)? Let's also shift the bar down just maybe 2 pixels.
-```
+</pre>
+            </section>
 
-## Finishing touches
-Finishing off this iterative process, let's highlight the max values from both series and clean up the title / labeling. Consider this `06_finish.md`:
+            <section id="finishing-touches">
+                <h2>Finishing touches</h2>
 
-```
+                <p>
+                    Finishing off this iterative process, let's highlight the max values from both series and clean up the title / labeling. Consider this <code>06_finish.md</code>:
+                </p>
+
+                <pre>
 # Finish
 To finish off the visualization, we will add highlighting and clean up on spacing / labels.
 
@@ -293,9 +434,35 @@ Let's use 18px `AXIS_COLOR` text at the top of the sketch that says "Isle Royale
 
 ## Notes
 If needed, prior task markdown files are present in this directory like `01_scaffold.md`.
-```
+</pre>
 
-Take a look at the result and, if anything needs tweaks, be sure to use the coordinating agent to resolve anything final or use this as a chance to modify the code directly!
+                <p>
+                    Take a look at the result and, if anything needs tweaks, be sure to use the coordinating agent to resolve anything final or use this as a chance to modify the code directly!
+                </p>
+            </section>
 
-## Reflection
-This tutorial offers some techniques to engage AI on difficult or long tasks where you can break up elements into individual steps and, optionally, then ask subagents to work through those steps using repeatable structured actions all without exhausting context. In any case, this co-iteration with AI remains essential so that you can retain an active hand in ensuring a positive overall outcome, guiding assistants in their work as they go. Indeed, thanks to things like llms.txt, you can also invite assistants into tasks where they can use the latest information available. Granted, what we discussed today may not necessarily be required for each task. A markdown document can be helpful when you have a lot to say or want to ensure there is an auditable trail of what you tried. Additionally, llms.txt are more important for libraries which change often, are new, or may be less well known. Finally, subagents really are bets for larger efforts and, for smaller edits, might not be worth the overhead. Consider these as valuable ingredients as you craft your engagement with AI.
+            <section id="reflection">
+                <h2>Reflection</h2>
+
+                <p>
+                    This tutorial offers some techniques to engage AI on difficult or long tasks where you can break up elements into individual steps and, optionally, then ask subagents to work through those steps using repeatable structured actions all without exhausting context. In any case, this co-iteration with AI remains essential so that you can retain an active hand in ensuring a positive overall outcome, guiding assistants in their work as they go. Indeed, thanks to things like llms.txt, you can also invite assistants into tasks where they can use the latest information available. Granted, what we discussed today may not necessarily be required for each task. A markdown document can be helpful when you have a lot to say or want to ensure there is an auditable trail of what you tried. Additionally, llms.txt are more important for libraries which change often, are new, or may be less well known. Finally, subagents really are bets for larger efforts and, for smaller edits, might not be worth the overhead. Consider these as valuable ingredients as you craft your engagement with AI.
+                </p>
+            </section>
+        </main>
+        <footer>
+            Materials on this page are available under
+            <a href="https://opensource.org/license/bsd-3-clause"
+                >BSD 3-Clause License</a
+            >
+            for code and
+            <a href="https://creativecommons.org/licenses/by/4.0/"
+                >CC-BY License</a
+            >
+            for all other material. Thank you to
+            <a href="https://public-sans.digital.gov">Public Sans</a> under the
+            Open Font License. No cookies are used. Analytics limited to
+            standard server logging which may collect IP addresses. These logs
+            are deleted or anonymized within 30 days.
+        </footer>
+    </body>
+</html>
