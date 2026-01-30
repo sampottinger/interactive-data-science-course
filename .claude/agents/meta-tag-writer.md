@@ -74,6 +74,15 @@ The title for course-wide materials should follow this pattern:
 
 `{Brief Description} (Interactive Data Sci / Viz)`
 
+## Description guidelines
+The description for skills labs should follow this pattern:
+
+`Learn how to {learning objectives} using {technology}. Part of Interactive Data Sci / Viz.`
+
+The description for course-wide materials should follow this pattern:
+
+`The {short description} for Interactive Data Science and Visualization, an open source online course.`
+
 ## Tone guidance
 Please avoid the following words:
 
