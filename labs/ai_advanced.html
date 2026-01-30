@@ -159,9 +159,7 @@ $ claude
                     Most AI assistants can easily work with llms.txt just by giving a web path to where the file or files can be found. Generally both an llms-full.txt which is a longer but self-contained document is available along with llms.txt which is more of an index which can be used to find other information. We will stick with llms-full.txt for now! That in mind, let's go ahead and tell our assistant to pull in that information:
                 </p>
 
-                <blockquote class="prompt">
-Hello! We will complete a series of tasks together using Sketchingpy. Please read https://sketchingpy.org/llms-full.txt?v=20250915 before we start so that you know how to use the library.
-</blockquote>
+                <blockquote class="prompt">Hello! We will complete a series of tasks together using Sketchingpy. Please read https://sketchingpy.org/llms-full.txt?v=20250915 before we start so that you know how to use the library.</blockquote>
 
                 <p>
                     Note that some assistants might have limited internet access. If that's the case, you can download llms-full.txt files and add them as attachments to your chat. For more information, see the <a href="https://sketchingpy.org/guides/llm_ai_assistant.html">Sketchingpy llms documentation</a>.
@@ -173,17 +171,13 @@ Hello! We will complete a series of tasks together using Sketchingpy. Please rea
                     We will have two agents: one that completes a task as described in a text file and another that checks the work of the first agent and fixes any issues with styling using pycodestyle and pyflakes. Depending on the assistant you are using, there might be different instructions for adding a new agent. For Claude, type <code>/agents</code> into the Claude Code interface and then add a new agent. When asked for description, try something like (note that, if you are not using a virtual environment, remove the comment about using venv):
                 </p>
 
-                <blockquote class="prompt">
-This implementer agent should be given the path to a markdown file describing a task to complete. It should read that file and complete the task using Sketchingpy. In order to prepare to do its work, it should also then read https://sketchingpy.org/llms-full.txt?v=20250915. After it has gathered all of the necessary information, it should make a detailed todo list to complete the task assigned. Finally, when done, it should update the task markdown file with a description of what it did and if it encountered any issues. It should run the script before concluding work but it does not need to worry about any style issues which will be addressed by a later agent. Please call this agent `implementer`. Please ask it to use the venv.
-</blockquote>
+                <blockquote class="prompt">This implementer agent should be given the path to a markdown file describing a task to complete. It should read that file and complete the task using Sketchingpy. In order to prepare to do its work, it should also then read https://sketchingpy.org/llms-full.txt?v=20250915. After it has gathered all of the necessary information, it should make a detailed todo list to complete the task assigned. Finally, when done, it should update the task markdown file with a description of what it did and if it encountered any issues. It should run the script before concluding work but it does not need to worry about any style issues which will be addressed by a later agent. Please call this agent `implementer`. Please ask it to use the venv.</blockquote>
 
                 <p>
                     You can use the recommended agent settings including to put this in the project folder and the option to provide a description but let Claude make the actual agent file. After done, go ahead and add a second agent:
                 </p>
 
-                <blockquote class="prompt">
-This checker agent should be given the path to a markdown file describing a task that was just worked on by another agent. It should read that file and investigate the specific changes made to complete that task which should have been done using Sketchingpy. In order to prepare to do its work, it should also then read https://sketchingpy.org/llms-full.txt?v=20250915. After it has gathered all of the necessary information, it should double check and, where appropriate, improve that work. In addition to running the script to ensure it executes successfully, it should also run pyflakes followed by pycodestyle to resolve any problems identified. Please have it update the task file with any issues encountered and report overall status to the agent which called it. Please call this agent `checker`. Please ask it to use the venv.
-</blockquote>
+                <blockquote class="prompt">This checker agent should be given the path to a markdown file describing a task that was just worked on by another agent. It should read that file and investigate the specific changes made to complete that task which should have been done using Sketchingpy. In order to prepare to do its work, it should also then read https://sketchingpy.org/llms-full.txt?v=20250915. After it has gathered all of the necessary information, it should double check and, where appropriate, improve that work. In addition to running the script to ensure it executes successfully, it should also run pyflakes followed by pycodestyle to resolve any problems identified. Please have it update the task file with any issues encountered and report overall status to the agent which called it. Please call this agent `checker`. Please ask it to use the venv.</blockquote>
 
                 <p>
                     Having added these two agents, we now have kinda a "special purpose" AI assistant for implementing our ideas and another to check that work and improve it. We are splitting across these two so that neither on their own run out of room in their context. However, we are also giving them instructions they should follow each time to ensure success.
@@ -205,8 +199,7 @@ This checker agent should be given the path to a markdown file describing a task
                     All that in mind, let's make a new text file called <code>01_scaffold.md</code>. Then read and place the following inside:
                 </p>
 
-                <blockquote class="prompt">
-# Table presenter
+                <blockquote class="prompt"># Table presenter
 Please create a class TablePresenter which takes in a sketch and which has stubbed methods and make docstrings for the given description (please use Google-style docstrings). Please have these simply throw NotImplementedError as we will fill them in as we go along. Please wrap at 80 characters.
 
 `__init__(self, sketch: sketchingpy.Sketch2D, data: list[dict])`
@@ -247,8 +240,7 @@ Get the hex code to use for a given series (wolves, moose, year). Error thrown i
 
 `_get_max(self, series: str) -> float`
 
-Get the maximum count for a series (wolves, moose, year). Error thrown if the series is unknown or unsupported.
-</blockquote>
+Get the maximum count for a series (wolves, moose, year). Error thrown if the series is unknown or unsupported.</blockquote>
 
                 <h3>Scaffolding without agents</h3>
 
@@ -256,9 +248,7 @@ Get the maximum count for a series (wolves, moose, year). Error thrown if the se
                     If not using agents, attach your markdown file as an attachment to your chat and ask your assistant to complete that task.
                 </p>
 
-                <blockquote class="prompt">
-Great! Next, please read and complete the attached task file. Please prepare a Python script.
-</blockquote>
+                <blockquote class="prompt">Great! Next, please read and complete the attached task file. Please prepare a Python script.</blockquote>
 
                 <p>
                     When done, take the Python code generated and double check it! Maybe confirm that, even if it doesn't do anything yet, that the script runs and finishes without error. This is a similar cycle of iteration we saw in our earlier experiments with AI! A <code>NotImplementedError</code> may be anticipated.
@@ -270,9 +260,7 @@ Great! Next, please read and complete the attached task file. Please prepare a P
                     If using agents, go ahead and run Claude Code in the directory in a new chat and ask it something like the following:
                 </p>
 
-                <blockquote class="prompt">
-Hello! Please have the implementer agent followed by the checker agent complete `01_scaffold.md`. However, please first learn more about Sketchingpy by reading https://sketchingpy.org/llms-full.txt?v=20250915.
-</blockquote>
+                <blockquote class="prompt">Hello! Please have the implementer agent followed by the checker agent complete `01_scaffold.md`. However, please first learn more about Sketchingpy by reading https://sketchingpy.org/llms-full.txt?v=20250915.</blockquote>
 
                 <p>
                     This should have the AI assistant (the "coordinating agent") invoke the implementer agent first to write out the "first draft" of the code for our task. Then, when the implementer is done, it should invoke a checker agent to confirm the work. Note that implementer and checker both have their own context that is cleared after their invocation is done.
@@ -286,8 +274,7 @@ Hello! Please have the implementer agent followed by the checker agent complete 
                     Alright we have our scaffold here, let's bring in our data. Following the same flow, let's make a <code>02_data.md</code>:
                 </p>
 
-                <blockquote class="prompt">
-# Load data
+                <blockquote class="prompt"># Load data
 In this next step, we should gather the required data and give our sketch access to that file.
 
 ## Gather data
@@ -299,8 +286,7 @@ Next, I would like to update our script to create a sketch that is 400 pixels wi
 Please leave our class stubbed except in the constructor where we should save data and sketch as private instance variables. Please leave all of this in one script file.
 
 ## Notes
-If needed, prior task markdown files are present in this directory like `01_scaffold.md`.
-</blockquote>
+If needed, prior task markdown files are present in this directory like `01_scaffold.md`.</blockquote>
 
                 <p>
                     As before, make sure to review the output and run the script. Note that, if your agent cannot access the information from the internet, you can copy from <a href="https://www.nps.gov/isro/learn/nature/wolf-moose-populations.htm">that table</a> into spreadsheet software and provide it as a CSV directly.
@@ -314,8 +300,7 @@ If needed, prior task markdown files are present in this directory like `01_scaf
                     Now that we have gotten through so much of that set up, we are in a really good position to start doing some drawing. Let's make a <code>03_draw_outline.md</code>:
                 </p>
 
-                <blockquote class="prompt">
-# Draw outline
+                <blockquote class="prompt"># Draw outline
 Let's draw the axes for our sketch. Let's not use push / pop style or transform. This should be able to run just to draw the top and bottom of the sketch.
 
 ## Define constants
@@ -352,16 +337,13 @@ Please use `BODY_SIZE` for text in the bottom. Text should use fill and no strok
 
 ## Notes
 
-Please use `AXIS_HEIGHT` in both draw bottom and draw top. Also, if needed, prior task markdown files are present in this directory like `01_scaffold.md`. Please use the font at http://mooc.interactivedatascience.courses/support/web/PublicSans-Regular.otf.
-</blockquote>
+Please use `AXIS_HEIGHT` in both draw bottom and draw top. Also, if needed, prior task markdown files are present in this directory like `01_scaffold.md`. Please use the font at http://mooc.interactivedatascience.courses/support/web/PublicSans-Regular.otf.</blockquote>
 
                 <p>
                     Please execute this using the agent or manual flow from before and check the result. Don't forget that your coordinating agent (the one you talk to directly) can also assist with edits like if something feels too cramped or not quite right! For example:
                 </p>
 
-                <blockquote class="prompt">
-The 1980 seems to start too far down. Can you have the years start maybe 15 pixels higher?
-</blockquote>
+                <blockquote class="prompt">The 1980 seems to start too far down. Can you have the years start maybe 15 pixels higher?</blockquote>
             </section>
 
             <section id="draw-years">
@@ -371,16 +353,14 @@ The 1980 seems to start too far down. Can you have the years start maybe 15 pixe
                     Next, we can start filling in some of the elements from the data themselves, starting with the years. Let's make a <code>04_draw_years.md</code>:
                 </p>
 
-                <blockquote class="prompt">
-# Draw years
+                <blockquote class="prompt"># Draw years
 Next I would like to draw the years as the first part of _draw_series.
 
 ## Method
 Let's loop through the data we saved and get that year's y coordinate can be found by using _get_y_pos which should do a linear scaling from the top of the sketch to the bottom: `top_line + padding + (year - MIN_YEAR) / (MAX_YEAR - MIN_YEAR) * (bottom_line - top_line - 2 * padding)` where `top_line = 50`, `bottom_line = HEIGHT - AXIS_HEIGHT`, and `padding = 15`. Let's add MIN_YEAR and MAX_YEAR to represent that we are going from 1979 to 2019.
 
 ## Notes
-If needed, prior task markdown files are present in this directory like `01_scaffold.md`.
-</blockquote>
+If needed, prior task markdown files are present in this directory like `01_scaffold.md`.</blockquote>
 
                 <p>
                     As before, give this a shot with your agents or by continuing your chat.
@@ -394,8 +374,7 @@ If needed, prior task markdown files are present in this directory like `01_scaf
                     Alright let's get the rest of the data visible. In <code>05_draw_body.md</code>:
                 </p>
 
-                <blockquote class="prompt">
-# Draw body
+                <blockquote class="prompt"># Draw body
 Next, I would like to implement `_get_length` and support drawing the labels and bars for the other two columns in `draw`.
 
 ## Method
@@ -404,16 +383,13 @@ Let's start with `_get_length`. This should determine how wide the bar should be
 Next, let's have the count for the species drawn at the y position for year and right aligned for wolves / left aligned for moose but in the color corresponding to the series. This will create the "tornado" that makes it easier to see one species trading off for the other. This should happen 5 pixels above the y position with bottom alignment. Then, at the y position itself, we should draw the rectangle using rect mode of corner where the rectangle is 3 pixels tall.
 
 ## Notes
-If needed, prior task markdown files are present in this directory like `01_scaffold.md`.
-</blockquote>
+If needed, prior task markdown files are present in this directory like `01_scaffold.md`.</blockquote>
 
                 <p>
                     Continue and we should have a pretty good visualization! However, there are a few things we might want to tighten up since we have so much control over drawing. Once more, you might be seeing some things to improve and you can ask for help like:
                 </p>
 
-                <blockquote class="prompt">
-I think we are almost there... the text is a bit high off of the corresponding bar. Can you bring them closer together and make the text right above the bars like 2px smaller (ensure the year text still uses the original size)? Let's also shift the bar down just maybe 2 pixels.
-</blockquote>
+                <blockquote class="prompt">I think we are almost there... the text is a bit high off of the corresponding bar. Can you bring them closer together and make the text right above the bars like 2px smaller (ensure the year text still uses the original size)? Let's also shift the bar down just maybe 2 pixels.</blockquote>
             </section>
 
             <section id="finishing-touches">
@@ -423,8 +399,7 @@ I think we are almost there... the text is a bit high off of the corresponding b
                     Finishing off this iterative process, let's highlight the max values from both series and clean up the title / labeling. Consider this <code>06_finish.md</code>:
                 </p>
 
-                <blockquote class="prompt">
-# Finish
+                <blockquote class="prompt"># Finish
 To finish off the visualization, we will add highlighting and clean up on spacing / labels.
 
 ## Highlighting
@@ -434,8 +409,7 @@ Let's add a dictionary called `self._observed_maxes` which has entries for wolve
 Let's use 18px `AXIS_COLOR` text at the top of the sketch that says "Isle Royale National Park" as the title, drawn at y position 21 with center and bottom alignment. Let's also ensure the year labels are bottom aligned and 5 pixels above the y position for the year.
 
 ## Notes
-If needed, prior task markdown files are present in this directory like `01_scaffold.md`.
-</blockquote>
+If needed, prior task markdown files are present in this directory like `01_scaffold.md`.</blockquote>
 
                 <p>
                     Take a look at the result and, if anything needs tweaks, be sure to use the coordinating agent to resolve anything final or use this as a chance to modify the code directly!
