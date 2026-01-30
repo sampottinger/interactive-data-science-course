@@ -72,26 +72,15 @@
                 <h2>Prepare</h2>
 
                 <p>
-                    We'll be using <a href="https://matplotlib.org/">matplotlib</a> to create a visualization of predator-prey dynamics between wolves and moose populations at Isle Royale National Park, returning to an example from <a href="/lesson1.html">Lesson 1</a>. This gives us a nice dataset which has some dimensionality but still tame enough that we can take advantage of some pre-built charts.
+                    We'll be using <a href="https://matplotlib.org/">matplotlib</a> to create a visualization of predator-prey dynamics between wolves and moose populations at Isle Royale National Park, returning to an example from <a href="/lesson1.html">Lesson 1</a>. This gives us a nice dataset which has some dimensionality but still tame enough that we can take advantage of some pre-built charts. The goal here is to create a split bar plot showing both wolf and moose populations over time, with wolves extending to the left and moose extending to the right.
                 </p>
 
                 <p>
-                    You don't need to download the data yourself. We'll ask the AI assistant to fetch it for us! The goal here is to create a split bar plot showing both wolf and moose populations over time, with wolves extending to the left and moose extending to the right. Anyway, with this goal established, we will need some things ready to go.
+                    Before we can get into it, we do need access to an AI assistant that can generate Python for data visualization. I used Claude which typically offers strong performance in testing but other options include <a href="https://chat.openai.com">ChatGPT</a>, <a href="https://gemini.google.com/">Gemini</a>, and <a href="https://mistral.ai/">Mistral AI</a>. If in need of a free option, Mistral has also performed quite well.
                 </p>
 
                 <p>
-                    First, you'll need access to an AI assistant that can generate Python code for data visualization. I used Claude in helping build out this lab but some options include:
-                </p>
-
-                <ul>
-                    <li><a href="https://claude.ai">Claude</a></li>
-                    <li><a href="https://chat.openai.com">ChatGPT</a></li>
-                    <li><a href="https://gemini.google.com/">Gemini</a></li>
-                    <li><a href="https://mistral.ai/">Mistral AI</a></li>
-                </ul>
-
-                <p>
-                    Next, as in <a href="/labs/python_intro.html">Tutorial 1</a>, you'll also need a Python environment where you can run the generated code. However, this could be <a href="https://jupyter.org/try-jupyter/lab/">Jupyter Lite</a> which does not require installation. However, if you used something other than Jupyter Lite, make sure you have matplotlib installed in your environment. For example, this could be done with:
+                    Next, as in <a href="/labs/python_intro.html">Tutorial 1</a>, you'll also need a Python environment where you can run the generated code. However, this could be <a href="https://jupyter.org/try-jupyter/lab/">Jupyter Lite</a> which does not require installation. That said, if you used something other than Jupyter Lite, make sure you have matplotlib installed in your environment. For example, this could be done with (optionally in a <a href="https://docs.python-guide.org/dev/virtualenvs/">virtual environment</a>):
                 </p>
 
                 <pre>
@@ -110,10 +99,8 @@ pip install matplotlib
             <section id="initial-request">
                 <h2>Initial Request</h2>
 
-                Let's start by making our first request to the AI assistant.
-
                 <p>
-                    Try copying this prompt into your AI assistant:
+                    Let's start by making our first request to the assistant, just to get a basic initial plot. Try copying this prompt into your chat window with your chosen AI:
                 </p>
 
                 <blockquote class="prompt">Hello! Can you please use matplotlib to generate a graph of wolves vs moose populations as a split bar plot (one going to the left and the other going to the right) where the axes have different colors to correspond to the bar colors for the two series? Please have the left facing axis for wolves go from 0 to 50 and the right facing axis for moose go from 0 to 2500. See https://www.nps.gov/isro/learn/nature/wolf-moose-populations.htm for data.</blockquote>
@@ -269,6 +256,10 @@ pip install matplotlib
                         <li>
                             Project Jupyter, "Jupyter," Project Jupyter, 2025. [Online]. Available:
                             <a href="https://jupyter.org" target="_blank">https://jupyter.org</a>
+                        </li>
+                        <li>
+                            K. Reitz and T. Schlusser, "The Hitchhiker's Guide to Python," 2025. [Online]. Available:
+                            <a href="https://docs.python-guide.org" target="_blank">https://docs.python-guide.org</a>
                         </li>
                     </ul>
                 </details>
