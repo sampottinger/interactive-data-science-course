@@ -73,3 +73,13 @@ The title for skills labs should follow this pattern:
 The title for course-wide materials should follow this pattern:
 
 `{Brief Description} (Interactive Data Sci / Viz)`
+
+## Tone guidance
+Please avoid the following words:
+
+ - Master
+ - Conquer
+ - Perfect
+ - Dominate
+ - Impress
+ - Dictate
