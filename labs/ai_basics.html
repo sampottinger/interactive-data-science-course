@@ -17,7 +17,7 @@
         <main id="main">
             <h1>AI Basics for Data Visualization</h1>
 
-            In this optional tutorial, we will explore how to use AI assistants to help create data visualizations. Rather than writing every line of code from scratch, we can collaborate with AI to build visualizations more quickly while still applying the design knowledge and multi-disciplinary lenses we've developed together throughout the course.
+            In this optional tutorial, we will explore how to use AI assistants to help create data visualizations. Specifically, we can collaborate with AI or "large language models" (LLMs) to build visualizations more quickly. However, we will do so while still applying the design knowledge and multi-disciplinary lenses we've developed together throughout the course.
 
             <details>
                 <summary>Contents</summary>
@@ -37,24 +37,34 @@
             <section id="motivation">
                 <h2>Motivation</h2>
 
-                So far, you have been building data visualizations through a combination of pre-built charting libraries and custom drawing with Sketchingpy. Next, we introduce AI assistants which can help you build your ideas faster. Indeed, these tools are best when used to accelerate the iteration that comes from building a prototype and experiencing it to further improve design choices.
+                <p>
+                    So far, we have been building data visualizations through a combination of pre-built charting libraries (like through matplotlib) and custom drawing with technologies like Sketchingpy. However, sometimes it can be a lot of code. Iteration times between one idea to the next can be extensive. What if we could get through those cycles faster? Maybe we could explore more design possibilies!
+                </p>
+                
+                <p>
+                    That in mind, we next introduce AI assistants which can help you implement faster. That said, these tools are best when used to accelerate that iteration process we've already seen in the class. In other words, as we will see in a moment, there is still value that comes from building a prototype and experiencing it (as a human) to further improve design choices.
+                </p>
+
+                <p>
+                    Let's try practicing going through this cycle by revisiting the moose and wolves example from the very start of class. However, this time, let's see what it feels like to be accelerated by AI while still applying our critical design perspective.
+                </p>
             </section>
 
             <section id="role">
                 <h2>Role of AI</h2>
 
                 <p>
-                    AI assistants like Claude, ChatGPT, or other language models can help generate visualization code quickly. However, they don't necessarily know about design and can't experience visualizations the same way you (and your human audiences) will. A lot of the heavy lifting still comes from guiding solutions to a good conclusion, taking advantage of the techniques we discussed in class. Put another way, they work best when you bring your visualization expertise to direct the conversation which involves:
+                    AI assistants like <a href="https://claude.ai/">Claude</a>, <a herf="http://chatgpt.com/">ChatGPT</a>, or other language models can help generate visualization code quickly. However, they don't necessarily know about design and can't experience visualizations the same way you (and your human audiences) will. A lot of the heavy lifting still comes from guiding solutions to a good conclusion, taking advantage of the techniques we discussed in class. Put another way, they work best when you bring your visualization expertise to direct the conversation which involves:
                 </p>
 
                 <ul>
                     <li>Knowing what kinds of visualization will best serve your data and purpose or what you might want to explore.</li>
-                    <li>Recognizing when a visualization generated has issues with readability, accessibility, or other design considerations.</li>
-                    <li>Providing specific feedback to improve the output in the process of iterating towards a better result.</li>
+                    <li>Recognizing when a visualization generated has issues with readability, accessibility, or other design considerations like poor gestalt.</li>
+                    <li>Providing specific feedback to guide the output in the process of iterating towards a better result.</li>
                 </ul>
 
                 <p>
-                    All that in mind, think of an AI assistant as an avenue to accelerate implementation quickly but note that moving faster isn't always better. How could that be the case? Consider that, when writing code yourself, you are confronted in the implementation process with lots of questions and decisions because the code forces you to be explicit about what you want. Instead, when AI helps you move quickly, you need to be even more conscientious of all of the concepts from the class in order to ensure your ideas are layered because it is possible that, through the help of an AI, you actually aren't making all of the initial choices yourself. This may leave you with less control!
+                    All that in mind, think of an AI assistant as an avenue to accelerate implementation quickly but ask if that moving faster is always better. How could it be an issue? Well, this depends on the task at hand but consider that, when writing code yourself, you are confronted in the implementation process with lots of questions and decisions because the code forces you to be explicit about what you want. Instead, when AI helps you move quickly, some of those choices might be made for you possibly without you realizing. In other words, you need to be even more conscientious of all of the concepts from the class in order to ensure your ideas are layered in. Be careful that AI doesn't leave you with less control.
                 </p>
             </section>
 
@@ -62,7 +72,11 @@
                 <h2>Prepare</h2>
 
                 <p>
-                    We'll be using matplotlib to create a visualization of predator-prey dynamics between wolves and moose populations at Isle Royale National Park. You don't need to download the data yourself. We'll ask the AI assistant to fetch it for us! The goal here is to create a split bar plot showing both wolf and moose populations over time, with wolves extending to the left and moose extending to the right. Anyway, with this goal established, we will need some things ready to go.
+                    We'll be using <a href="https://matplotlib.org/">matplotlib</a> to create a visualization of predator-prey dynamics between wolves and moose populations at Isle Royale National Park, returning to an example from <a href="/lesson1.html">Lesson 1</a>. This gives us a nice example which has some dimensionality but still tame enough that we can take advantage of some pre-built charts.
+                </p>
+
+                <p>
+                    You don't need to download the data yourself. We'll ask the AI assistant to fetch it for us! The goal here is to create a split bar plot showing both wolf and moose populations over time, with wolves extending to the left and moose extending to the right. Anyway, with this goal established, we will need some things ready to go.
                 </p>
 
                 <p>
@@ -85,11 +99,11 @@ pip install matplotlib
 </pre>
 
                 <p>
-                    Once you're set up, open your AI assistant in one window and your Python environment in another so you can easily execute the code as you go, helping fuel that essential iteration process.
+                    Once you're set up, open your AI assistant in one window and your Python environment in another so you can easily execute the code as you go. This set up can help fuel that essential iteration process.
                 </p>
 
                 <p>
-                    <strong>Note</strong>: The exact output you get from an AI assistant may differ slightly from what's shown here. That's completely normal and expected. The key learning goal is to experience the process of iteration: making a request, reviewing the output, identifying what to improve, and refining your prompts accordingly.
+                    <strong>Note</strong>: The exact output you get from an AI assistant may differ slightly from what's shown here. That's completely normal and expected! The key learning objective here is to experience the process of iteration: making a request, reviewing the output, identifying what to improve, and refining your prompts accordingly.
                 </p>
             </section>
 
@@ -116,7 +130,7 @@ pip install matplotlib
                 </ul>
 
                 <p>
-                    Take a moment to examine the output. What do you notice? Can you see the predator-prey relationship in the data? The classic predator-prey oscillation pattern should be visible, but the wolf data might appear compressed because the scale is much smaller (0-50) compared to moose (0-2500). This brings us to our first iteration.
+                    Take a moment to examine the output. What do you notice? Can you see the predator-prey relationship in the data? The classic predator-prey oscillation pattern migh be visible. However, it's likely that the wolf data appear compressed because AI made a symmetric scale: the range of the actual data on one side is much smaller (up to 50) than the other (up to 2500). This brings us to our first iteration.
                 </p>
             </section>
 
@@ -124,7 +138,7 @@ pip install matplotlib
                 <h2>First Iteration</h2>
 
                 <p>
-                    Looking at the initial visualization, you might notice that the wolf population changes are hard to see because they're compressed into a narrow space compared to the moose. The wolves vary from about 0 to 50, while moose vary from about 500 to 2500. The wolf variations are too compact to read properly! Let's improve this by giving wolves more horizontal space. This will make the harmonic relationship between the two populations easier to see. How about another prompt:
+                    Let's address this issue where the wolf population changes may be hard to see because they're compressed into a narrow space compared to the moose. Specifically, let's improve this by giving wolves more horizontal space per individual. This will make the harmonic relationship between the two populations easier to see. How about another prompt:
                 </p>
 
                 <blockquote class="prompt">This is great but the wolves are too compressed. Let's have the split at roughly half way across the plot. This means that there is more horizontal space per wolf than per moose. However, this will show the harmonic relationship better.</blockquote>
@@ -141,11 +155,11 @@ pip install matplotlib
                 </ul>
 
                 <p>
-                    By allocating equal horizontal space to both scales, we've effectively "zoomed in" on the wolf data. Now you can see how when wolves are high, moose populations tend to be lower, and when wolves crash (especially around 2015-2018 in the data), moose populations surge.
+                    By allocating equal horizontal space to both scales, we've effectively "zoomed in" on the wolf data. Now you can see how when wolves are high, moose populations tend to be lower. Conversely, when wolves go down (especially around 2015-2018 in the data), moose populations go up.
                 </p>
 
                 <p>
-                    This is an excellent example of how your visualization knowledge guides the AI. Hopefully the assistant gave you a chart meeting your initial expectations. However, perhaps that initial prompt didn't include our knowledge of what the optimal visual encoding would be for the relationship we want to highlight.
+                    This is an great example of how your human understanding of a visualization helps guide the AI. This is especially true as the story (or capabilities for users to tell their own stories) becomes more clear through experience.
                 </p>
             </section>
 
@@ -153,7 +167,7 @@ pip install matplotlib
                 <h2>Refining Labels</h2>
 
                 <p>
-                    The visualization is getting better, but you may notice that the axis labels could be clearer. Specifically, there might be overlapping text where the colored "Wolves" and "Moose" labels compete with a black axis title. If that is the case, let's clean this up and make the labels more descriptive. Try this prompt:
+                    The visualization is getting clearer but you may also notice that the axis labels might need some work. For instance, there might be overlapping text where the colored "Wolves" and "Moose" labels compete with a black axis title. If that is the case, let's clean this up and make the supporting elements more clear. Try this prompt:
                 </p>
 
                 <blockquote class="prompt">Perfect! We have the colored wolves and moose labels overlapping with the black axis title. Let's set the black axis title to empty and then let's make the colors for both series darker so that it is easy to read wolves and moose. Finally, let's say "Number of Wolves" and "Number of Moose" in that colored text.</blockquote>
@@ -164,12 +178,12 @@ pip install matplotlib
 
                 <ul>
                     <li>The black axis title is now gone, eliminating the overlap</li>
-                    <li>The blue and orange colors are darker and easier to read</li>
-                    <li>The labels now say "Number of Wolves" and "Number of Moose" instead of just "Wolves" and "Moose"</li>
+                    <li>The blue and orange colors are darker and hopefully easier to read</li>
+                    <li>The labels now should say "Number of Wolves" and "Number of Moose" instead of just "Wolves" and "Moose"</li>
                 </ul>
 
                 <p>
-                    Notice how this iteration focused on reducing visual clutter and improving readability. This connects to Tufte's concepts of reducing chartjunk and maximizing the data-ink ratio.
+                    Notice how this iteration focused on reducing visual clutter and improving readability. This connects to Tufte's concepts of reducing chartjunk and maximizing the data-ink ratio!
                 </p>
             </section>
 
@@ -177,7 +191,7 @@ pip install matplotlib
                 <h2>Final Polish</h2>
 
                 <p>
-                    There's one more improvement we can make. Right now, it's likely that the numerical labels along the horizontal axis (the tick marks showing the actual population numbers) are all in black. Let's make them match their respective data series for maximum clarity. Try this final prompt:
+                    There's one more improvement we can make. Right now, it's possible that the numerical labels along the horizontal axis (the tick marks showing the actual population numbers) are all in black. Let's make them match their respective data series for maximum clarity. Try this final prompt:
                 </p>
 
                 <blockquote class="prompt">Doing really well! One last thing. The labels for the count (along the bottom horizontal axis). Can you please make those the same color as the series they describe (so one color on left and a different color on right)?</blockquote>
@@ -194,7 +208,7 @@ pip install matplotlib
                 </ul>
 
                 <p>
-                    Alright... after all of that valuable back and forth, you hopefully now have a polished visualization that clearly shows the predator-prey dynamics between wolves and moose. Every visual element is intentionally designed to support the viewer's understanding of the data.
+                    Alright... after all of that valuable back and forth, you hopefully now have a polished visualization that clearly shows the predator-prey dynamics between wolves and moose. Just as if you built it up from scratch by hand, we can see how iteration with AI can eventually achieve a similar result where every visual element is intentionally designed to support the viewer's understanding of the data.
                 </p>
             </section>
 
@@ -202,7 +216,7 @@ pip install matplotlib
                 <h2>Reflection</h2>
 
                 <p>
-                    Let's step back and think about what we just accomplished and what it teaches us about working with AI assistants for data visualization. Specifically, notice that we (likely) didn't get a perfect visualization in one shot. We went through several rounds as we determined the elements about which we needed to be more explicit:
+                    Let's step back and think about what we just accomplished and what it might tell us about working with AI assistants for data visualization. Specifically, notice that we (likely) didn't get a perfect visualization in the first try. Instead, we went through several rounds as we determined the elements about which we needed to be more precise:
                 </p>
 
                 <ol>
@@ -213,14 +227,14 @@ pip install matplotlib
                 </ol>
 
                 <p>
-                    This shows that your regular iterative process when you write code "by hand" is similar to how it is often best to work with AI assistants. Importantly, at each step, we have an opportunity to incorporate knowledge from this course. Just as we created early sketches in code and refine for higher fidelity in prior tutorials, continue to use the lenses of the class to critically evaluate ever improving outputs through ever more specific prompts.
+                    Think back to your regular iterative process when you write code "by hand" and how this might be similar to how it is often best to work with AI assistants. Importantly, at each step, we have an opportunity to incorporate knowledge from this course and from our experience of a prototype. Just as we created early sketches in code and refine for higher fidelity in prior tutorials, we can continue to use the lenses of the class in a cycle of critically evaluating ever improving outputs through ever more specific prompts.
                 </p>
             </section>
 
             <section id="next">
                 <h2>Next</h2>
 
-                This is a first stab at a relatively simple script. However, what happens when things get longer or more involved? What if we have a chart type for which there isn't already a pre-built implementation? Continue onwards to <a href="/labs/ai_advanced.html">Tutorial 14</a> to learn about advanced AI techniques including llms.txt and subagents / agentic workflows.
+                This is a first stab at a relatively simple script. However, what happens when things get longer or more involved? What if we have a chart type for which there isn't already a pre-built implementation? Let's continue onwards to <a href="/labs/ai_advanced.html">Tutorial 14</a> to learn about advanced AI techniques including llms.txt and subagents / agentic workflows.
 
                 <details>
                     <summary>Citations</summary>
