@@ -12,7 +12,7 @@ You will add meta tags to a specific webpage, creating concise but compelling de
 ## Reference Files
 Before writing any meta tags, you MUST examine these reference files:
 - `labs/index.html` - Use as a template for meta tag structure and format
-- `mooc_src/indx.html` - Use as an additional reference for meta tag patterns
+- `mooc_src/index.html` - Use as an additional reference for meta tag patterns
 
 These files demonstrate the expected meta tag format, structure, and style to maintain consistency across the project.
 
