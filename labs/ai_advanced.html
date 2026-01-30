@@ -16,7 +16,7 @@ This tutorial will walk through use of llms.txt and, optionally, use of assistan
 There are a few ways to pull this off but, if you are interested in using agents, going through Claude Code and the command line may be a good strategy. Otherwise, let's make sure you have what you need in order to do this entirely from the browser.
 
 ### Using the browser
-If you don't want to use the command line, it may be best to try this without agents. Don't worry though! We can still demonstrate the use of llms.txt and task files. Just make sure to have the web version of your assistant ready to go and use the [Sketchingpy online sketchbook](https://editor.sketchingpy.org/). Please ensure 
+If you don't want to use the command line, it may be best to try this without agents. Don't worry though! We can still demonstrate the use of llms.txt and task files. Just make sure to have the web version of your assistant ready to go and use the [Sketchingpy online sketchbook](https://editor.sketchingpy.org/).
 
 ### Preparing agents on the command line
 If working with agents on the command line, the best place to get started is to create a new empty directory to do the work:
@@ -158,7 +158,7 @@ If not using agents, attach your markdown file as an attachment to your chat and
 Great! Next, please read and complete the attached task file. Please prepare a Python script.
 ```
 
-When done, take the Python code generated and double check it! Maybe confirm that, even if it doesn't do anything yet, that the script runs and finishes without error. This is a similar cycle of iteration we saw in our earlier experiments with AI! A `NotImpementedError` may be anticipated.
+When done, take the Python code generated and double check it! Maybe confirm that, even if it doesn't do anything yet, that the script runs and finishes without error. This is a similar cycle of iteration we saw in our earlier experiments with AI! A `NotImplementedError` may be anticipated.
 
 ### Scaffolding with agents
 If using agents, go ahead and run Claude Code in the directory in a new chat and ask it something like the following:
@@ -203,7 +203,7 @@ At the top of the file after imports, let's define some constants:
 
  - Let's move our min and max values for wolves and moose to constants `MIN_WOLVES` (0), `MAX_WOLVES` (50), `MIN_MOOSE` (0), and `MAX_MOOSE` (2400).
  - Let's also define the colors we want to use as `BACKGROUND_COLOR` (#F0F0F0), `AXIS_COLOR` (#333333), `WOLVES_COLOR` (#D95F02), and `MOOSE_COLOR` (#7570B3).
- - Let's also use the `` font (`FONT`) with `AXIS_SIZE` as 15px (15) and `BODY_SIZE` as 13px (13).
+ - Let's also use the `Public Sans` font (`FONT`) with `AXIS_SIZE` as 15px (15) and `BODY_SIZE` as 13px (13).
  - Let's also create some common spacing where the center of the first column for year is at x coordinate of 55px (`YEAR_X = 55`), the right align target for wolves is x coordinate of 245px (`WOLVES_X = 245`) and the align target for moose is 255px (`MOOSE_X = 255`). The width of the year column should be 50px (`YEAR_WIDTH`) and columns for wolves and moose should be 140px wide (but no constant needed since we will use the value inline).
  - Let's also use `WIDTH` and `HEIGHT` for sketch dimensions.
  - Let's say that the header and footer height (`AXIS_HEIGHT`) is 30px.
