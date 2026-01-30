@@ -64,3 +64,12 @@ After completing your work, provide a brief summary of:
 - The meta tags you added
 - Key messaging decisions you made
 - Any observations about the page content that informed your choices
+
+## Title guidelines
+The title for skills labs should follow this pattern:
+
+`Lab: {Brief Description} (Interactive Data Sci / Viz)`
+
+The title for course-wide materials should follow this pattern:
+
+`{Brief Description} (Interactive Data Sci / Viz)`
