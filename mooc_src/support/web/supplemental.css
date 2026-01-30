@@ -93,17 +93,6 @@ pre {
     padding: 5px;
 }
 
-.prompt {
-    background-color: #F0F0F0;
-    color: #333333;
-    border-left: 4px solid #1010F0;
-    border-radius: 3px;
-    padding: 10px;
-    margin: 10px 0;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-}
-
 section {
     margin-top: 30px;
     border-top: 1px dotted #A0A0A0;
@@ -119,6 +108,19 @@ th,
 td {
     border: 1px solid #333;
     padding: 4px;
+}
+
+.prompt {
+    background-color: #303030;
+    color: white;
+    border-left: 5px solid #606060;
+    border-right: 5px solid #606060;
+    border-radius: 6px;
+    padding: 10px 20px 20px 20px;
+    margin: 10px 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: monospace;
 }
 
 .skip-link {
