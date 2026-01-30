@@ -102,14 +102,14 @@ pip install matplotlib
                     Try copying this prompt into your AI assistant:
                 </p>
 
-                <pre>
+                <blockquote class="prompt">
 Hello! Can you please use matplotlib to generate a graph of wolves vs moose
 populations as a split bar plot (one going to the left and the other going
 to the right) where the axes have different colors to correspond to the bar
 colors for the two series? Please have the left facing axis for wolves go
 from 0 to 50 and the right facing axis for moose go from 0 to 2500. See
 https://www.nps.gov/isro/learn/nature/wolf-moose-populations.htm for data.
-</pre>
+</blockquote>
 
                 <p>
                     <strong>Check the work</strong>: Run the code provided by the AI assistant. You should see a visualization with:
@@ -134,12 +134,12 @@ https://www.nps.gov/isro/learn/nature/wolf-moose-populations.htm for data.
                     Looking at the initial visualization, you might notice that the wolf population changes are hard to see because they're compressed into a narrow space compared to the moose. The wolves vary from about 0 to 50, while moose vary from about 500 to 2500. The wolf variations are too compact to read properly! Let's improve this by giving wolves more horizontal space. This will make the harmonic relationship between the two populations easier to see. How about another prompt:
                 </p>
 
-                <pre>
+                <blockquote class="prompt">
 This is great but the wolves are too compressed. Let's have the split at
 roughly half way across the plot. This means that there is more horizontal
 space per wolf than per moose. However, this will show the harmonic
 relationship better.
-</pre>
+</blockquote>
 
                 <p>
                     <strong>Check the work</strong>: Run the updated code. Now you should see:
@@ -168,13 +168,13 @@ relationship better.
                     The visualization is getting better, but you may notice that the axis labels could be clearer. Specifically, there might be overlapping text where the colored "Wolves" and "Moose" labels compete with a black axis title. If that is the case, let's clean this up and make the labels more descriptive. Try this prompt:
                 </p>
 
-                <pre>
+                <blockquote class="prompt">
 Perfect! We have the colored wolves and moose labels overlapping with the
 black axis title. Let's set the black axis title to empty and then let's
 make the colors for both series darker so that it is easy to read wolves
 and moose. Finally, let's say "Number of Wolves" and "Number of Moose" in
 that colored text.
-</pre>
+</blockquote>
 
                 <p>
                     <strong>Check the work</strong>: Run the code and verify:
@@ -198,11 +198,11 @@ that colored text.
                     There's one more improvement we can make. Right now, it's likely that the numerical labels along the horizontal axis (the tick marks showing the actual population numbers) are all in black. Let's make them match their respective data series for maximum clarity. Try this final prompt:
                 </p>
 
-                <pre>
+                <blockquote class="prompt">
 Doing really well. One last thing. The labels for the count (along the
 bottom horizontal axis). Can you please make those the same color as the
 series they describe (so one color on left and a different color on right)?
-</pre>
+</blockquote>
 
                 <p>
                     <strong>Check the work</strong>: Run the final version. You should now see:
