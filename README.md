@@ -23,8 +23,8 @@ The course materials in this repository are built into a complete website throug
 ### Structure
 The source materials for these resources are divided into three directories:
 
- - **Course-wide materials** (`/course_wide`): These are resources which apply across many or all lessons of the course and are wide-ranging documents such as the course manual and syllabus as well as grading rubirc. In general, these should be provided in html, markdown, and PDF.
- - **Skills labs** (`/labs`):  Hands-on tutorials and focused instruction on implementation skills. These are often recommended for a flipped classroom structure.
+ - **Course-wide materials** (`/course_wide`): These are resources which apply across many or all lessons of the course and are wide-ranging documents such as the course manual and syllabus as well as grading rubric. In general, these should be provided in html, markdown, and PDF.
+ - **Skills labs** (`/labs`): Hands-on tutorials and focused instruction on implementation skills. These are often recommended for a flipped classroom structure.
  - **Individual lessons** (`/mooc_src`): Traditional lectures that mix classic instruction and shorter hands-on activities intended for a traditional classroom structure.
 
 ### Dev Container
@@ -97,15 +97,15 @@ To deploy to [the official website](https://mooc.interactivedatascience.courses/
 ## Open source
 Various lessons and activities within this course may use different technologies and each have their own citations listing. That said, the course itself uses the following:
 
- - eslint
- - eslint-config-google
- - Jinja2
- - pip
- - pnpm
- - pycodestyle
- - pyflakes
- - PyYAML
- - Python
+ - [eslint](https://eslint.org/) under an [MIT license](https://github.com/eslint/eslint/blob/main/LICENSE).
+ - [eslint-config-google](https://github.com/google/eslint-config-google) under an [Apache 2.0 license](https://github.com/google/eslint-config-google/blob/main/LICENSE).
+ - [Jinja2](https://jinja.palletsprojects.com/) under a [BSD 3 Clause license](https://jinja.palletsprojects.com/en/3.1.x/license/).
+ - [pip](https://pip.pypa.io/) under an [MIT license](https://github.com/pypa/pip/blob/main/LICENSE.txt).
+ - [pnpm](https://pnpm.io/) under an [MIT license](https://github.com/pnpm/pnpm/blob/main/LICENSE).
+ - [pycodestyle](https://pycodestyle.pycqa.org/) under an [MIT license](https://github.com/PyCQA/pycodestyle/blob/main/LICENSE).
+ - [pyflakes](https://github.com/PyCQA/pyflakes) under an [MIT license](https://github.com/PyCQA/pyflakes/blob/main/LICENSE).
+ - [PyYAML](https://pyyaml.org/) under an [MIT license](https://github.com/yaml/pyyaml/blob/main/LICENSE).
+ - [Python](https://www.python.org/) under a [PSF license](https://docs.python.org/3/license.html).
  - [sketchingpy](https://sketchingpy.org/) under a [BSD 3 Clause license](https://codeberg.org/sketchingpy/Sketchingpy/src/branch/main/LICENSE.md).
 
 For those using our CI / CD, note that our automation uses GitHub Actions [as described in our GitHub Actions build script](https://github.com/sampottinger/interactive-data-science-course/blob/main/.github/workflows/deploy.yaml).
