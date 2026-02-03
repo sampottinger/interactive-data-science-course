@@ -51,22 +51,8 @@ jobs:
           python-version: '3.12'
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Scaffold MOOC
-        run: mkdir mooc
       - name: Build MOOC
-        run: cd mooc_src; bash render.sh
-      - name: Copy supporting files
-        run: cp -r mooc_src/support mooc/support
-      - name: Copy PDF materials
-        run: cp -r mooc_src/pdf mooc/pdf
-      - name: Copy PPTX materials
-        run: cp -r mooc_src/pptx mooc/pptx
-      - name: Copy Markdown materials
-        run: cp -r mooc_src/md mooc/md
-      - name: Copy labs directory
-        run: cp -r labs mooc/labs
-      - name: Copy course_wide directory
-        run: cp -r course_wide mooc/course_wide
+        run: bash build.sh
       - name: Upload MOOC directory as artifact
         uses: actions/upload-artifact@v4
         with:
