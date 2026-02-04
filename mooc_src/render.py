@@ -54,7 +54,7 @@ def load_course_from_directory(lessons_dir):
   ])
 
   for section_dir in section_dirs:
-    section_name = section_dir.split('_', 1)[1].lower()
+    section_name = section_dir.split('_', 1)[1]
     section_path = os.path.join(lessons_dir, section_dir)
 
     lessons = []

@@ -123,18 +123,18 @@
                 <div class="tag">An overview of the class.</div>
                 <p>
                     The course is organized into five sections:
-                    <a href="#hello">hello</a>,
-                    <a href="#primitives">primitives</a>,
-                    <a href="#combination">combination</a>,
-                    <a href="#conversation">conversation</a>, and
-                    <a href="#context">context</a>. You may consider
+                    <a href="#Hello">Hello</a>,
+                    <a href="#Primitives">Primitives</a>,
+                    <a href="#Combination">Combination</a>,
+                    <a href="#Conversation">Conversation</a>, and
+                    <a href="#Context">Context</a>. You may consider
                     going in order as material from one lesson helps set up the
                     concepts introduced in the subsequent lessons. However, you
                     are also encouraged to jump around to meet your own learning
                     objectives.
                 </p>
 
-                <div id="hello" class="lesson-section">
+                <div id="Hello" class="lesson-section">
                     <h3>Section 1: Hello</h3>
                     <div class="tag">
                         Begin with an initial exploration of key ideas.
@@ -149,7 +149,7 @@
                         activities with two skills labs.
                     </p>
                     <ul>
-                        {% for lesson in sections['hello'] %}
+                        {% for lesson in sections['Hello'] %}
                         <li>
                             <a href="/lesson{{ lesson['number'] }}.html"
                                 >Lesson {{ lesson['number'] }}: {{
@@ -160,7 +160,7 @@
                     </ul>
                 </div>
 
-                <div id="primitives" class="lesson-section">
+                <div id="Primitives" class="lesson-section">
                     <h3>Section 2: Primitives</h3>
                     <div class="tag">
                         Study of the essential building blocks for data
@@ -174,7 +174,7 @@
                         hands-on experiences to build custom graphics with code.
                     </p>
                     <ul>
-                        {% for lesson in sections['primitives'] %}
+                        {% for lesson in sections['Primitives'] %}
                         <li>
                             <a href="/lesson{{ lesson['number'] }}.html"
                                 >Lesson {{ lesson['number'] }}: {{
@@ -185,7 +185,7 @@
                     </ul>
                 </div>
 
-                <div id="combination" class="lesson-section">
+                <div id="Combination" class="lesson-section">
                     <h3>Section 3: Combination</h3>
                     <div class="tag">
                         Understand common patterns and methods for making new
@@ -201,7 +201,7 @@
                         approaches are successful.
                     </p>
                     <ul>
-                        {% for lesson in sections['combination'] %}
+                        {% for lesson in sections['Combination'] %}
                         <li>
                             <a href="/lesson{{ lesson['number'] }}.html"
                                 >Lesson {{ lesson['number'] }}: {{
@@ -212,7 +212,7 @@
                     </ul>
                 </div>
 
-                <div id="combination" class="lesson-section">
+                <div id="Conversation" class="lesson-section">
                     <h3>Section 4: Conversation</h3>
                     <div class="tag">
                         Consider and design for the reader's dialogue with your
@@ -227,7 +227,7 @@
                         freely and become a co-creator of knowledge.
                     </p>
                     <ul>
-                        {% for lesson in sections['conversation'] %}
+                        {% for lesson in sections['Conversation'] %}
                         <li>
                             <a href="/lesson{{ lesson['number'] }}.html"
                                 >Lesson {{ lesson['number'] }}: {{
@@ -238,7 +238,7 @@
                     </ul>
                 </div>
 
-                <div id="context" class="lesson-section">
+                <div id="Context" class="lesson-section">
                     <h3>Section 5: Context</h3>
                     <div class="tag">
                         Expand our understanding of the reader.
@@ -251,7 +251,7 @@
                         sense-making context.
                     </p>
                     <ul>
-                        {% for lesson in sections['context'] %}
+                        {% for lesson in sections['Context'] %}
                         <li>
                             <a href="/lesson{{ lesson['number'] }}.html"
                                 >Lesson {{ lesson['number'] }}: {{
@@ -262,7 +262,7 @@
                     </ul>
                 </div>
 
-                <div id="context" class="lesson-section">
+                <div id="Conclusion" class="lesson-section">
                     <h3>Conclusion</h3>
                     <div class="tag">
                         Grow your technical tool chest and demonstrate what you
@@ -274,7 +274,7 @@
                         different technical skills and complete a final project.
                     </p>
                     <ul>
-                        {% for lesson in sections['conclusion'] %}
+                        {% for lesson in sections['Conclusion'] %}
                         <li>
                             <a href="/lesson{{ lesson['number'] }}.html"
                                 >Lesson {{ lesson['number'] }}: {{
