@@ -7,7 +7,7 @@ Interactive Data Science and Visualization takes a multi-disciplinary perspectiv
 This self-paced massive open online course (MOOC) is a thoughtful upgrade to Stat 198 taught at the University of California, Berkeley in 2025. It adds additional resources and optional lessons along with modifications for a fully online experience. That said, it also offers modularity where these re-usable open educational materials can be adapted to other instruction.
 
 ## Structure / Format
-The source materials for these resources are divided into three directories:
+The source materials for these resources are divided into three directories. However, `/mooc_src/course.yml` specifically provides an index of all materials via **YAML** which is rendered into the overall MOOC website.
 
 ### Individual lessons
 Found in `/mooc_src`, traditional lectures that mix classic instruction and shorter hands-on activities intended for a traditional classroom structure. These are available in **markdown** with html and typically **PDF**, **PPTX**, and **video** accompanying materials.
