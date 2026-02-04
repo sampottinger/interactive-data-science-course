@@ -141,7 +141,15 @@ Citations from the markdown may differ from the txt citations file where require
 Slides should be provided as PDF files with optional but encouraged PPTX versions. There should be a title slide and a slide indicating creative commons license.
 
 #### Support
-Files beyond those above are also allowed. In general, these are files used across multiple lessons or special files supporting specific lesson activities.
+All lesson materials (markdown, PDF, and PPTX files) are stored under `mooc_src/support/` to organize supporting materials in a central location. The support directory contains:
+
+ - `md/`: Markdown versions of all lessons
+ - `pdf/`: PDF slide decks for all lessons
+ - `pptx/`: PowerPoint source files for all lessons
+ - `web/`: Web assets used across multiple lessons
+ - `misc/`: Miscellaneous files for specific lesson activities (datasets, supplemental documents, etc.)
+
+Files beyond the standard lesson materials are also allowed in the `misc/` subdirectory. In general, these are files used across multiple lessons or special files supporting specific lesson activities.
 
 ### Skills Labs
 During original teaching of this course as Stat 198 at UC Berkeley, the skills labs were taught using a flipped classroom structure. These are distinct to regular lessons in that there is minimal to no lecture component. Instead, time is spent on one or more directly interactive activities.

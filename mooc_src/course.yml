@@ -196,7 +196,7 @@ sections:
       a small subset of interest. Please provide 2 - 4 sentences describing how this representation
       uses pre-attentive features. You may use a
       
-      <a href="/support/lesson_specific/stackoverflow.xlsx">
+      <a href="/support/misc/stackoverflow.xlsx">
         simplified dataset
       </a>
       
@@ -235,7 +235,7 @@ sections:
       </p>
     links:
     - text: Activity as a PowerPoint file
-      url: /support/lesson_specific/lecture7.pptx
+      url: /support/misc/lecture7.pptx
     citations: true
   - number: 8
     name: Sketching in Code 1
@@ -558,14 +558,14 @@ sections:
         latitudes and longitudes. However, it is not required. If you want to go this route, see the
         geospatial examples on the <a href="https://sketchingpy.org/examples.html">Sketchingpy
         examples page</a>. To support you, please see this geojson which has the outline of the Bay
-        Area: <a href="/support/lesson_specific/bayarea.geojson">bayarea.geojson</a>. If you do geospatial
+        Area: <a href="/support/misc/bayarea.geojson">bayarea.geojson</a>. If you do geospatial
         visualization, latitude counts for one variable and longitude counts for another. The
         geojson is under Public Domain.
       </p>
 
       <p>
         Regardless, please use the BART 2024
-        <a href="/support/lesson_specific/bart.xlsx">ridership data I preprocessed for you</a> or the
+        <a href="/support/misc/bart.xlsx">ridership data I preprocessed for you</a> or the
         <a href="https://www.bart.gov/about/reports/ridership">upstream official dataset</a>.
       </p>
 
@@ -598,7 +598,7 @@ sections:
       <p>
         We will start our interactive experience. There are different video games for you to choose
         from within the <a href="/course_wide/manual.html">course manual</a>. See "experience"
-        section. After you have selected your choice, lookup the <a href="/support/lesson_specific/games.pdf">game
+        section. After you have selected your choice, lookup the <a href="/support/misc/games.pdf">game
         specific instructions</a>. You can space out your game play over the next few lectures.
         There will be an additional question asked of all games later in
         <a href="/lesson20.html">lesson 20</a> when it would be good to be done.
@@ -676,7 +676,7 @@ sections:
     text: >
       A short lecture on player loops followed by exploring
 
-      <a href="/support/lesson_specific/games.pdf">
+      <a href="/support/misc/games.pdf">
         questions specific to your game
       </a>.
       
@@ -699,7 +699,7 @@ sections:
       </p>
     links:
     - text: Game-specific questions. Also, write 3 sentences on the player loops within your games.
-      url: /support/lesson_specific/games.pdf
+      url: /support/misc/games.pdf
     citations: true
   - number: 21
     name: Thinking Toys and Diegesis
