@@ -44,6 +44,19 @@ mapping (not wrapped in a `sections` key or list). Lesson files are named
 with a numeric prefix followed by a descriptive name (e.g.,
 `00_hello_preface.yaml`, `01_hello_visualization.yaml`).
 
+Each section directory must also contain an `index.yml` file with section
+metadata:
+
+| **Field** | **Required** | **Purpose**                                           | **Type** |
+| --------- | ------------ | ----------------------------------------------------- | -------- |
+| name      | Yes          | The section name (e.g., "Hello", "Primitives").       | string   |
+| tagline   | Yes          | A brief one-sentence tagline for the section.         | string   |
+| detailed  | Yes          | Longer description of the section content and goals.  | string   |
+
+The `detailed` field should use `>` (folded scalar) for multi-line content
+and follow the same line length guidelines as lesson YAML files (100
+characters or fewer).
+
 Each lesson may have:
 
 | **Field**      | **Required** | **Purpose**                                                                                              | **Type** |

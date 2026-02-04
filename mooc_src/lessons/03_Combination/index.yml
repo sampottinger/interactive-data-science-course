@@ -1,0 +1,8 @@
+name: Combination
+tagline: Understand common patterns and methods for making new ones.
+detailed: >
+  Having built up the primitives used in data visualization, we pick up
+  the pace to build sophisticated data graphics. After using existing
+  chart types, we venture into the great unknown by looking at how these
+  building blocks enable us to build completely new visual
+  representations and how to test if novel approaches are successful.

@@ -33,8 +33,8 @@ def load_course_from_directory(lessons_dir):
   """Load course structure from directory hierarchy.
 
   Scans the lessons directory for section subdirectories and loads
-  individual YAML lesson files from each section. Returns a dictionary
-  matching the structure previously loaded from course.yml.
+  individual YAML lesson files from each section. Also loads index.yml
+  from each section directory for section metadata.
 
   Args:
     lessons_dir: Path to the lessons directory containing section
@@ -42,9 +42,9 @@ def load_course_from_directory(lessons_dir):
 
   Returns:
     dict: Dictionary with 'sections' key containing section names
-      mapped to lists of lesson dictionaries. Section names are
-      derived from directory names by stripping numeric prefix and
-      lowercasing (e.g., '01_Hello' -> 'hello').
+      mapped to section dictionaries with 'name', 'tagline', 'detailed',
+      and 'lessons' keys. Section names are derived from directory names
+      by stripping numeric prefix (e.g., '01_Hello' -> 'Hello').
   """
   sections = {}
 
@@ -56,6 +56,11 @@ def load_course_from_directory(lessons_dir):
   for section_dir in section_dirs:
     section_name = section_dir.split('_', 1)[1]
     section_path = os.path.join(lessons_dir, section_dir)
+
+    # Load index.yml from each section directory
+    index_path = os.path.join(section_path, 'index.yml')
+    with open(index_path, 'r') as f:
+      section_meta = yaml.load(f, Loader=yaml.Loader)
 
     lessons = []
     yaml_files = sorted([
@@ -69,7 +74,12 @@ def load_course_from_directory(lessons_dir):
         lesson = yaml.load(f, Loader=yaml.Loader)
         lessons.append(lesson)
 
-    sections[section_name] = lessons
+    sections[section_name] = {
+        'name': section_meta['name'],
+        'tagline': section_meta['tagline'],
+        'detailed': section_meta['detailed'],
+        'lessons': lessons
+    }
 
   return {'sections': sections}
 
@@ -114,7 +124,7 @@ def main_lesson():
   data = load_course_from_directory(lessons_dir)
 
   sections = data['sections'].values()
-  lessons = itertools.chain(*sections)
+  lessons = itertools.chain(*[s['lessons'] for s in sections])
   lessons_by_number_tuple = map(lambda x: (x['number'], x), lessons)
   lessons_by_number = dict(lessons_by_number_tuple)
 
@@ -215,7 +225,7 @@ def main_list():
   data = load_course_from_directory(lessons_dir)
 
   sections = data['sections'].values()
-  lessons = itertools.chain(*sections)
+  lessons = itertools.chain(*[s['lessons'] for s in sections])
   lesson_numbers = sorted([lesson['number'] for lesson in lessons])
 
   for number in lesson_numbers:
