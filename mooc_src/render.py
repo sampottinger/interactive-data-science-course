@@ -7,20 +7,71 @@ listings) and individual lesson pages using Jinja2 templates and YAML data files
 License: BSD-3-Clause
 """
 import itertools
+import os
 import re
 import sys
 
 import jinja2
 import yaml
 
-USAGE_RENDER_INDEX_STR = 'USAGE: python render.py index [template] [yaml] [output]'
+USAGE_RENDER_INDEX_STR = \
+    'USAGE: python render.py index [template] [lessons_dir] [output]'
 USAGE_RENDER_INDEX_ARGS = 4
 
-USAGE_RENDER_LESSON_STR = 'USAGE: python render.py lesson [template] [yaml] [number] [output]'
+USAGE_RENDER_LESSON_STR = \
+    'USAGE: python render.py lesson [template] [lessons_dir] [number] [output]'
 USAGE_RENDER_LESSON_ARGS = 5
 
-USAGE_STR = 'USAGE: python render.py [index | lesson]'
+USAGE_RENDER_LIST_STR = 'USAGE: python render.py list [lessons_dir]'
+USAGE_RENDER_LIST_ARGS = 2
+
+USAGE_STR = 'USAGE: python render.py [index | lesson | list]'
 MIN_ARGS = 1
+
+
+def load_course_from_directory(lessons_dir):
+  """Load course structure from directory hierarchy.
+
+  Scans the lessons directory for section subdirectories and loads
+  individual YAML lesson files from each section. Returns a dictionary
+  matching the structure previously loaded from course.yml.
+
+  Args:
+    lessons_dir: Path to the lessons directory containing section
+      subdirectories.
+
+  Returns:
+    dict: Dictionary with 'sections' key containing section names
+      mapped to lists of lesson dictionaries. Section names are
+      derived from directory names by stripping numeric prefix and
+      lowercasing (e.g., '01_Hello' -> 'hello').
+  """
+  sections = {}
+
+  section_dirs = sorted([
+      d for d in os.listdir(lessons_dir)
+      if os.path.isdir(os.path.join(lessons_dir, d))
+  ])
+
+  for section_dir in section_dirs:
+    section_name = section_dir.split('_', 1)[1].lower()
+    section_path = os.path.join(lessons_dir, section_dir)
+
+    lessons = []
+    yaml_files = sorted([
+        f for f in os.listdir(section_path)
+        if f.endswith('.yaml')
+    ])
+
+    for yaml_file in yaml_files:
+      yaml_path = os.path.join(section_path, yaml_file)
+      with open(yaml_path, 'r') as f:
+        lesson = yaml.load(f, Loader=yaml.Loader)
+        lessons.append(lesson)
+
+    sections[section_name] = lessons
+
+  return {'sections': sections}
 
 
 def main_index():
@@ -30,14 +81,13 @@ def main_index():
     sys.exit(1)
 
   template_path = sys.argv[2]
-  data_path = sys.argv[3]
+  lessons_dir = sys.argv[3]
   output_path = sys.argv[4]
 
   with open(template_path) as f:
     template = jinja2.Template(f.read())
 
-  with open(data_path, 'r') as f:
-    data = yaml.load(f, Loader=yaml.Loader)
+  data = load_course_from_directory(lessons_dir)
 
   result = template.render(sections=data['sections'])
   with open(output_path, 'w') as f:
@@ -51,7 +101,7 @@ def main_lesson():
     sys.exit(1)
 
   template_path = sys.argv[2]
-  data_path = sys.argv[3]
+  lessons_dir = sys.argv[3]
   lesson_number = int(sys.argv[4])
   output_path = sys.argv[5]
 
@@ -61,8 +111,7 @@ def main_lesson():
   with open(template_path) as f:
     template = jinja2.Template(f.read())
 
-  with open(data_path, 'r') as f:
-    data = yaml.load(f, Loader=yaml.Loader)
+  data = load_course_from_directory(lessons_dir)
 
   sections = data['sections'].values()
   lessons = itertools.chain(*sections)
@@ -156,6 +205,23 @@ def process_citation(citation: str) -> str:
   return citation
 
 
+def main_list():
+  """Command to list all lesson numbers."""
+  if len(sys.argv) != USAGE_RENDER_LIST_ARGS + 1:
+    print(USAGE_RENDER_LIST_STR)
+    sys.exit(1)
+
+  lessons_dir = sys.argv[2]
+  data = load_course_from_directory(lessons_dir)
+
+  sections = data['sections'].values()
+  lessons = itertools.chain(*sections)
+  lesson_numbers = sorted([lesson['number'] for lesson in lessons])
+
+  for number in lesson_numbers:
+    print(number)
+
+
 def main():
   """Main entrypoint for the static MOOC generator."""
   if len(sys.argv) < MIN_ARGS + 1:
@@ -167,6 +233,8 @@ def main():
     main_index()
   elif command == 'lesson':
     main_lesson()
+  elif command == 'list':
+    main_list()
 
 
 if __name__ == '__main__':

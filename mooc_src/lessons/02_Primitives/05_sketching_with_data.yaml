@@ -1,0 +1,31 @@
+number: 10
+name: Sketching with Data
+materials_pdf: false
+materials_pptx: false
+materials_md: true
+text: >
+  <p>
+    Continue your exploration in code with Skills Lab 4 which includes
+    the very important <a href="/labs/resources_data.html">Tutorial
+    11</a>. Please try to complete all remaining tutorials under
+    Skills Lab 4 at <a href="/labs">Labs</a>.
+  </p>
+
+  <p>
+    If you are having trouble, you may optionally elect to engage AI
+    assistants. If that is of interest, check out the bonus <a
+    href="/lesson26.html">Lesson 26</a> on using AI.
+  </p>
+links:
+- text: Skills Labs
+  url: /labs
+- text: Sketchingpy Online Sketchbook
+  url: https://editor.sketchingpy.org/
+reading: >
+  We are getting ready for visual acuity. Get started by reading
+
+  <a
+  href="https://priceonomics.com/how-william-cleveland-turned-data-visualization/">
+    How William Cleveland Turned Data Visualization Into a Science
+  </a>.
+citations: false

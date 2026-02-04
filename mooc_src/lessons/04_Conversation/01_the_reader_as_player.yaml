@@ -1,0 +1,36 @@
+number: 17
+name: The Reader as Player
+video: 1071192794
+materials_pdf: true
+materials_pptx: true
+materials_md: true
+text: >
+  Go deep into interactivity with affordances, kinesthetic projection,
+  and common patterns in data visualization. This is setting up our
+  final ingredient for data visualizations that you need for the
+  final!
+assignment: >
+  <p>
+    We will start our interactive experience. There are different
+    video games for you to choose from within the <a
+    href="/course_wide/manual.html">course manual</a>. See
+    "experience" section. After you have selected your choice, lookup
+    the <a href="/support/misc/games.pdf">game specific
+    instructions</a>. You can space out your game play over the next
+    few lectures. There will be an additional question asked of all
+    games later in <a href="/lesson20.html">lesson 20</a> when it
+    would be good to be done.
+  </p>
+reading: >
+  Please watch a <a
+  href="https://www.youtube.com/watch?v=1XlfeXpiSuQ">fantastic
+  discussion regarding the role of the player</a> from Extra Credits.
+links:
+- text: >
+    First video from slides (we are less interested in Kinect and more
+    in the discussion of Kinesthetic Projection in the middle).
+    Specifically, watch 1:30 to 3:10.
+  url: https://www.youtube.com/watch?v=ijcezUy3ZzY
+- text: Second video from slides
+  url: https://www.youtube.com/watch?v=QCSXEKHL6fc
+citations: true

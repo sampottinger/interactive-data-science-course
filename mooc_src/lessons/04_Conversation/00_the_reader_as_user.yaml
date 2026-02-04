@@ -1,0 +1,55 @@
+number: 16
+name: The Reader as User
+video: 1067524875
+materials_pdf: true
+materials_pptx: true
+materials_md: true
+text: >
+  The four waves of HCI and the ideas of Stuart Hall before briefly
+  discussing how video games might fit into the data visualizations
+  conversation.
+assignment: >
+  <p>
+    In this exercise, we will visualize the BART ridership dataset.
+    For this activity, please visualize 4 variables.
+  </p>
+
+  <p>
+    Note that this project invites you to do geospatial visualization
+    in that stations have latitudes and longitudes. However, it is not
+    required. If you want to go this route, see the geospatial
+    examples on the <a
+    href="https://sketchingpy.org/examples.html">Sketchingpy examples
+    page</a>. To support you, please see this geojson which has the
+    outline of the Bay Area: <a
+    href="/support/misc/bayarea.geojson">bayarea.geojson</a>. If you
+    do geospatial visualization, latitude counts for one variable and
+    longitude counts for another. The geojson is under Public Domain.
+  </p>
+
+  <p>
+    Regardless, please use the BART 2024 <a
+    href="/support/misc/bart.xlsx">ridership data I preprocessed for
+    you</a> or the <a
+    href="https://www.bart.gov/about/reports/ridership">upstream
+    official dataset</a>.
+  </p>
+
+  <p>
+    As we move into geospatial work, you may optionally elect to
+    engage AI assistants. If that is of interest, check out the bonus
+    <a href="/lesson26.html">Lesson 26</a> on using AI.
+  </p>
+reading: >
+  I have selected a fairly short video for you to review digging
+  deeper into the idea of affordances through
+
+  <a
+  href="https://www.vox.com/2016/2/26/11120236/bad-doors-human-centered-design">
+    bad doors
+  </a>.
+links:
+- text: Example linked in slides
+  url: >
+    https://www.theguardian.com/us-news/2022/mar/13/how-covid-shook-the-us-charts-graphs
+citations: true

@@ -1,0 +1,23 @@
+number: 14
+name: Task / Domain
+video: 1064129940
+materials_pdf: true
+materials_pptx: true
+materials_md: true
+text: >
+  Expand on the idea of domains and tasks with examples before looking
+  at the What / Why / How framework.
+reading: >
+  An overview of what / why / how at
+
+  <a
+  href="https://www.datarocks.co.nz/post/data-viz-bookshelf_visualization-analysis-design-tamara-munzner">
+    Visualisation Analysis & Design by Tamara Munzner or the
+    What-Why-How of data viz
+  </a>.
+links:
+- text: Video 1 from lecture
+  url: https://www.youtube.com/watch?v=2CMw4i9DiaM
+- text: Video 2 from lecture
+  url: https://www.youtube.com/watch?v=HuYKhSHcRSQ
+citations: true

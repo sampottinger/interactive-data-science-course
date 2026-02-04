@@ -1,0 +1,38 @@
+number: 20
+name: Loops and Experience
+video: 1073391515
+materials_pdf: true
+materials_pptx: true
+materials_md: true
+text: >
+  A short lecture on player loops followed by exploring
+
+  <a href="/support/misc/games.pdf">
+    questions specific to your game
+  </a>.
+
+  In addition to the game-specific questions, please also write 3
+  sentences on what the player loops are within your game.
+assignment: >
+  <p>
+    You did it - you made it to the last regular assignment before the
+    final!
+  </p>
+
+  <p>
+    The goal for this exercise is to take one of your prior
+    visualizations from the class (Stack Overflow Developer Survey,
+    Census, or BART) and make it interactive with at least one user
+    action.
+  </p>
+
+  <p>
+    Need help? Explore an optional <a href="/lesson26.html">Lesson
+    26</a> looking at using AI assistants.
+  </p>
+links:
+- text: >
+    Game-specific questions. Also, write 3 sentences on the player
+    loops within your games.
+  url: /support/misc/games.pdf
+citations: true

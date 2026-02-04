@@ -1,0 +1,95 @@
+number: 11
+name: Formalizing Glyphs
+video: 1061901487
+materials_pdf: true
+materials_pptx: true
+materials_md: true
+text: >
+  Consider essential empirical evidence regarding encoding devices
+  from Cleveland and McGill. Also, examine important techniques that
+  allow us to re-use high value encoding devices. Specifically, learn
+  more about dual axes, shared axes, and direct labeling.
+assignment: >
+  <p>
+    We have a fantastic opportunity to apply recent class concepts
+    through an exploration of US Census American Community Survey
+    (2024) results.
+  </p>
+  <p>
+    <strong>Introduction</strong>: We will be working with a dataset
+    derived from US Census data. Though originally designed for use in
+    understanding "income gaps" between different groups of people, it
+    can also be used to explore other questions about economics and
+    work. It can explore differing levels of participation in
+    different occupations, unemployment rates, and regional trends.
+    There are a lot of variables to explore! This project will provide
+    a space to experiment with encoding devices, data density,
+    preattentive features, and more.
+  </p>
+  <p>
+    <strong>Objective</strong>: Please visualize a subset of variables
+    from this dataset. If using shared axes, please have a clear "main
+    plot" from which those axes are shared. For this assignment,
+    please include 4 or more variables. For example, you could
+    visualize unemployment and wage (2 variables) by age and gender (2
+    variables). This would be a total of 4 variables (unemployment,
+    wage, age, gender).
+  </p>
+  <p>
+    <strong>Data</strong>: You may use the
+
+    <a href="https://microdata.epi.org">
+      EPI Microdata Extracts
+    </a>
+
+    directly but I recommend using the Income Gaps CSV instead to
+    focus your time on the visual elements of this project. If you are
+    using the
+
+    <a href="https://incomegaps.com/data.csv">
+      Income Gaps CSV file
+    </a>,
+
+    I also recommend using
+
+    <a
+    href="https://github.com/sampottinger/incomegaps/blob/main/preprocess/data_model.py">
+      data_model.py
+    </a> as described in the
+
+    <a
+    href="https://github.com/sampottinger/incomegaps?tab=readme-ov-file#data">
+      Income Gaps CSV documentation
+    </a>.
+
+    If using the online editor for Sketchingpy, just download
+
+    <a
+    href="https://github.com/sampottinger/incomegaps/blob/main/preprocess/data_model.py">
+      data_model.py
+    </a>
+
+    and add it to your sketchbook.
+  </p>
+  <p>
+    <strong>Tech</strong>: Though you may be able to complete
+    Assignment 9 using prebuilt charts like through Matplotlib, you
+    may find it more difficult to continue using it for later
+    exercises where detailed control over each element of your graphic
+    will be essential. Therefore, I recommend using Python and
+    Sketchingpy. To help, see also
+
+    <a
+    href="https://gist.github.com/sampottinger/f69bd39def0cd05268d5a639d49f354e">
+      the code I used for my Stack Overflow Developers Survey example
+    </a>.
+  </p>
+  <p>
+    If this is feeling a little difficult, you may optionally elect to
+    engage AI assistants. If that is of interest, check out the bonus
+    <a href="/lesson26.html">Lesson 26</a> on using AI.
+  </p>
+reading: >
+  Start taking a look through <a href="https://www.data-to-viz.com">Data
+  to Viz</a>. We will dig in deeper together soon!
+citations: true

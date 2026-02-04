@@ -1,0 +1,24 @@
+number: 19
+name: Architecture
+video: 1073368650
+materials_pdf: true
+materials_pptx: true
+materials_md: true
+text: >
+  Look at level design and how it helps us teach users about how to
+  use and navigate through our data visualizations. Explore Meeks,
+  Hayashida Level Design, and Triangle Design.
+reading: >
+  Please watch this closer look at
+
+  <a href="https://youtu.be/CZzcVs8tNfE">
+    Triangle Design in Zelda
+  </a>.
+links:
+- text: Hayashida Level Design
+  url: https://youtu.be/dBmIkEvEBtA
+- text: AFSC GAP visualization
+  url: https://app.pyafscgap.org/
+- text: Mario Level 1-1
+  url: https://youtu.be/ZH2wGpEZVgE
+citations: true

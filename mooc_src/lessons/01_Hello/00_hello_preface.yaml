@@ -1,0 +1,15 @@
+number: 0
+name: Hello (Preface)
+video: 1154435218
+materials_pdf: true
+materials_pptx: true
+materials_md: true
+text: >
+  Short pre-course primer providing a quick preview of the class's
+  structure and purpose before offering some background and direction
+  on how best to use the online open source resources.
+reading: >
+  Be sure to briefly skim the <a href="/#materials">overall course
+  materials</a> which include the course syllabus, manual, and coding
+  exercise rubric.
+citations: true

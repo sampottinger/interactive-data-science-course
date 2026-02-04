@@ -1,0 +1,30 @@
+number: 25
+name: Skills and Final Project
+materials_pdf: false
+materials_pptx: false
+materials_md: true
+text: >
+  <p>
+    First, consider completing <a href="/labs/js.html">tutorial
+    12</a> which an optional <a href="/labs">skills lab</a> with more
+    information about implementation technologies.
+  </p>
+  <p>
+    Second, if you have not already done so, explore the final project
+    as outlined in the <a href="/course_wide/manual.html">Course
+    Manual</a>. This is a great opportunity to take everything you
+    learned over the course and demonstrate mastery in an excellent
+    portfolio-building activity.
+  </p>
+assignment: >
+  <p>
+    Design and implement your final project. Don't forget <a
+    href="/lesson26.html">Lesson 26</a> if you might benefit from AI
+    assistance in crafting your piece.
+  </p>
+  <p>
+    That's the end of our time together. Thank you so much for joining
+    me on this journey! If you enjoyed this course, please let someone
+    else know about it.
+  </p>
+citations: false

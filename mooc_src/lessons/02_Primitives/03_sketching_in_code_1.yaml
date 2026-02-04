@@ -1,0 +1,54 @@
+number: 8
+name: Sketching in Code 1
+video: 1057751163
+materials_pdf: true
+materials_pptx: true
+materials_md: true
+text: >
+  Using code to draw graphics as guided by recent concepts from class
+  including preattentive features. See <a href="/labs">Labs</a>.
+assignment: >
+  <p>
+    We are going to do a little creative coding where we will build up
+    a sketch over the next two exercises. This doesn't need to be too
+    complicated or even too much code. Also, don't worry if this first
+    attempt is a little rough. You will get a chance to refine your
+    work!
+  </p>
+
+  <p>
+    All that said, please use the concepts we have been exploring from
+    class to build an artistic graphic that is drawn using code. In
+    this piece, please explore at least one Gestalt Principle and one
+    Pre-attentive Feature. This will offer important practice for
+    drawing graphics relevant to building highly customized
+    visualizations. For this submission, please do not make it
+    interactive yet. We will do that in the follow up activity! Need
+    inspiration? Check out the following...
+  </p>
+
+  <ul>
+    <li><a
+    href="https://sketchingpy.org/examples.html">Sketchingpy
+    examples</a></li>
+    <li><a
+    href="https://openprocessing.org/discover/#/trending">OpenProcessing</a></li>
+    <li><a href="https://genuary.art">Genuary</a></li>
+  </ul>
+
+  <p>
+    If you are new to programming, you may optionally elect to engage
+    AI assistants. If that is of interest, check out the bonus <a
+    href="/lesson26.html">Lesson 26</a> on using AI.
+  </p>
+reading: >
+  I wanted to keep things light so you can focus on the Skills Labs.
+  So, we are going to look a little ahead with a very short preview
+  about why geospatial visualization is so hard. Please watch <a
+  href="https://youtu.be/kIID5FDi2JQ">All Maps are Wrong</a>.
+links:
+- text: Skills Labs
+  url: /labs
+- text: Sketchingpy Online Sketchbook
+  url: https://editor.sketchingpy.org/
+citations: true

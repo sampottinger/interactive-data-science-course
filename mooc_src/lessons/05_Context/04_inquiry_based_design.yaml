@@ -1,0 +1,18 @@
+number: 24
+name: Inquiry-Based Design
+video: 1077646004
+materials_pdf: true
+materials_pptx: true
+materials_md: true
+text: >
+  Consider inquiry-based design which this class is using to refer to
+  a wide range of viewpoints in data visualization that approach
+  visualization through a series of questions. Also, take a look
+  towards the final. Finally, a goodbye from Sam with concluding
+  remarks for the class ahead of the skills labs.
+reading: >
+  <a
+  href="https://stamen.com/data-visualization-for-education-when-asking-questions-is-the-answer/">
+    Data Visualization for Education
+  </a> from Stamen.
+citations: true
