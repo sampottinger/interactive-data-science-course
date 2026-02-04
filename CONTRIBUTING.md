@@ -35,14 +35,20 @@ There are two major areas of the course materials: the MOOC source and the skill
 ### MOOC Source
 This includes the "lecture" class materials. All lessons must have, at minimum, a yaml entry. However, other materials may appear as well. These materials are rendered into a content management system with formalized / standardized templates.
 
+The MOOC source is organized in `mooc_src/` with the following structure:
+ - `lessons/`: Section directories containing per-lesson YAML files and section metadata
+ - `support/`: Supporting materials organized by type (md, pdf, pptx, web, misc)
+ - `citations/`: Citation files for lessons
+
 #### YAML
 Course lessons are organized in the `mooc_src/lessons/` directory. This
 directory contains numbered section subdirectories (e.g., `01_Hello`,
-`02_Primitives`) with each section containing individual YAML files for
-each lesson. Each YAML file represents a single lesson as a top-level
-mapping (not wrapped in a `sections` key or list). Lesson files are named
-with a numeric prefix followed by a descriptive name (e.g.,
-`00_hello_preface.yaml`, `01_hello_visualization.yaml`).
+`02_Primitives`), each containing individual YAML files for each lesson
+and an `index.yml` file with section metadata. Each lesson YAML file
+represents a single lesson as a top-level mapping (not wrapped in a
+`sections` key or list). Lesson files are named with a numeric prefix
+followed by a descriptive name (e.g., `00_hello_preface.yaml`,
+`01_hello_visualization.yaml`).
 
 Each section directory must also contain an `index.yml` file with section
 metadata:

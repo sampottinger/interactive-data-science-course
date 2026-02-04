@@ -9,16 +9,20 @@ This self-paced massive open online course (MOOC) is a thoughtful upgrade to Sta
 ## Structure / Format
 The source materials for these resources are divided into three directories.
 Lesson definitions are organized in `mooc_src/lessons/` as individual **YAML**
-files within section subdirectories, which are rendered into the overall MOOC
-website.
+files within numbered section subdirectories (e.g., `01_Hello`, `02_Primitives`).
+Each section directory contains per-lesson YAML files and an `index.yml` file
+with section metadata (name, tagline, detailed description). These are rendered
+into the overall MOOC website.
 
 ### Individual lessons
 Found in `/mooc_src`, traditional lectures that mix classic instruction and
 shorter hands-on activities intended for a traditional classroom structure.
-Lesson YAML files are organized in `mooc_src/lessons/` by section, while
-lesson materials (markdown, PDF, and PPTX files) are organized under
-`mooc_src/support/`. These are available in **markdown** with html and
-typically **PDF**, **PPTX**, and **video** accompanying materials.
+Lesson YAML files are organized in `mooc_src/lessons/` within numbered section
+subdirectories (e.g., `01_Hello/00_hello_preface.yaml`), while lesson materials
+(markdown, PDF, and PPTX files) are organized under `mooc_src/support/` in
+`md/`, `pdf/`, and `pptx/` subdirectories. Additional supporting files are in
+`support/web/` and `support/misc/`. These are available in **markdown** with
+html and typically **PDF**, **PPTX**, and **video** accompanying materials.
 
 ### Course-wide materials
 Found in `/course_wide`, these are resources which apply across many or all lessons of the course and are wide-ranging documents such as the course manual and syllabus as well as grading rubric. In general, these are available in **markdown** with **html** and **PDF** options.

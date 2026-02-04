@@ -157,13 +157,13 @@ Visualize 6 variables of the income inequality dataset with a design guided by t
 Draw your last 5 years and your next 5 years by hand. Take a photo and post.
 
 #### Assignment 12: BART 1
-Visualize the [BART dataset](/support/lesson_specific/bart.xlsx) (BART 2025) with a minimum of 3 variables. You do not need to show everything. For example, you may choose to focus on a single station. Please do not make this version with interactivity. Post your code and a screenshot!
+Visualize the [BART dataset](/support/misc/bart.xlsx) (BART 2025) with a minimum of 3 variables. You do not need to show everything. For example, you may choose to focus on a single station. Please do not make this version with interactivity. Post your code and a screenshot!
 
 #### Assignment 13: Think-Aloud of Pyafscgap
 Record yourself on zoom or similar doing a Think Aloud of [Pyafscgap's](https://pyafscgap.org/) visualization (Pottinger and Zarpellon 2023). Post your walkthrough and listen to someone else's recording. What is this activity good at soliciting? What might this activity be poor at uncovering? Post 2 sentences as a reply.
 
 #### Assignment 14: BART 2
-Visualize the [BART dataset](/support/lesson_specific/bart.xlsx) (BART 2025) with a minimum of 4 variables. You do not need to show everything. For example, you may choose to focus on a single station. You may optionally make this with interactivity. Post your code and a screenshot!
+Visualize the [BART dataset](/support/misc/bart.xlsx) (BART 2025) with a minimum of 4 variables. You do not need to show everything. For example, you may choose to focus on a single station. You may optionally make this with interactivity. Post your code and a screenshot!
 
 #### Assignment 15: Interactive Visualization
 Revisit your BART or census visualization and add a single verb / single interaction. Post your code and screenshot.
