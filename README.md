@@ -6,6 +6,18 @@ Interactive Data Science and Visualization takes a multi-disciplinary perspectiv
 
 This self-paced massive open online course (MOOC) is a thoughtful upgrade to Stat 198 taught at the University of California, Berkeley in 2025. It adds additional resources and optional lessons along with modifications for a fully online experience. That said, it also offers modularity where these re-usable open educational materials can be adapted to other instruction.
 
+## Structure / Format
+The source materials for these resources are divided into three directories:
+
+### Individual lessons
+Found in `/mooc_src`, traditional lectures that mix classic instruction and shorter hands-on activities intended for a traditional classroom structure. These are available in **markdown** with html and typically **PDF**, **PPTX**, and **video** accompanying materials.
+
+### Course-wide materials
+Found in `/course_wide`, these are resources which apply across many or all lessons of the course and are wide-ranging documents such as the course manual and syllabus as well as grading rubric. In general, these are available in **markdown** with **html** and **PDF** options.
+
+### Skills labs
+Found in `/labs`, hands-on tutorials and focused instruction on implementation skills. These are often recommended for a flipped classroom structure. They are provided in **html** and **Python** with supplemental materials.
+
 ## Using
 The course materials are available online for free at [https://mooc.interactivedatascience.courses](https://mooc.interactivedatascience.courses/). This includes:
 
@@ -18,14 +30,7 @@ The course materials are available online for free at [https://mooc.interactived
 The course website may also be constructed using the source available in this repository as described in the [Developing](#developing) and [Deploying](#deploying) sections.
 
 ## Developing
-The course materials in this repository are built into a complete website through a small Python script.
-
-### Structure
-The source materials for these resources are divided into three directories:
-
- - **Course-wide materials** (`/course_wide`): These are resources which apply across many or all lessons of the course and are wide-ranging documents such as the course manual and syllabus as well as grading rubric. In general, these should be provided in html, markdown, and PDF.
- - **Skills labs** (`/labs`): Hands-on tutorials and focused instruction on implementation skills. These are often recommended for a flipped classroom structure.
- - **Individual lessons** (`/mooc_src`): Traditional lectures that mix classic instruction and shorter hands-on activities intended for a traditional classroom structure.
+The course materials in this repository are built into a complete website through Python.
 
 ### Dev Container
 The recommended approach to establishing a local development environment is through a [dev container](https://containers.dev/). This can be as simple as opening this repository in a [GitHub Codespace](https://github.com/features/codespaces) instance. Alternatively, you can set up a local dev container through an IDE like [VSCode](https://code.visualstudio.com/docs/devcontainers/create-dev-container) or [IntelliJ](https://www.jetbrains.com/help/idea/connect-to-devcontainer.html). If preferred, you can also use a [dev container from the command line](https://github.com/devcontainers/cli).
