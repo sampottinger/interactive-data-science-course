@@ -10,6 +10,7 @@ import os
 import sys
 
 import jinja2
+import yaml
 
 USAGE_STR = 'USAGE: python render.py [syllabus | manual | rubric | syllabus_md | manual_md | rubric_md | all]'
 MIN_ARGS = 1
@@ -26,10 +27,27 @@ def get_template_loader():
     return jinja2.Environment(loader=loader)
 
 
+def load_syllabus_data():
+    """Load syllabus data from syllabus.yml.
+
+    Returns:
+        dict: Syllabus data containing sections and lessons.
+    """
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    syllabus_path = os.path.join(script_dir, 'syllabus.yml')
+
+    with open(syllabus_path, 'r') as f:
+        data = yaml.safe_load(f)
+
+    return data
+
+
 def render_syllabus():
     """Render the syllabus HTML from template."""
     env = get_template_loader()
     template = env.get_template('syllabus_template.html')
+
+    syllabus_data = load_syllabus_data()
 
     context = {
         'title': 'Course Syllabus (Interactive Data Sci / Viz)',
@@ -38,7 +56,9 @@ def render_syllabus():
         'og_description': 'Complete curriculum: data visualization fundamentals, interactive storytelling, Python graphics, D3, P5, game design principles, accessibility, and ethical AI. 7 modules, hands-on projects, portfolio building.',
         'og_url': 'https://mooc.interactivedatascience.courses/course_wide/syllabus.html',
         'twitter_title': 'Course Syllabus (Interactive Data Sci / Viz)',
-        'twitter_description': 'Learn the complete curriculum: data visualization fundamentals, interactive storytelling, Python graphics, D3, P5, game design, accessibility, ethical AI. Free, hands-on course modules.'
+        'twitter_description': 'Learn the complete curriculum: data visualization fundamentals, interactive storytelling, Python graphics, D3, P5, game design, accessibility, ethical AI. Free, hands-on course modules.',
+        'sections': syllabus_data['sections'],
+        'lessons': syllabus_data['lessons']
     }
 
     result = template.render(**context)
@@ -112,7 +132,12 @@ def render_syllabus_md():
     env = get_template_loader()
     template = env.get_template('syllabus_template.md')
 
-    context = {}
+    syllabus_data = load_syllabus_data()
+
+    context = {
+        'sections': syllabus_data['sections'],
+        'lessons': syllabus_data['lessons']
+    }
 
     result = template.render(**context)
 
