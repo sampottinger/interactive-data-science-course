@@ -35,13 +35,13 @@ There are two major areas of the course materials: the MOOC source and the skill
 ### MOOC Source
 This includes the "lecture" class materials. All lessons must have, at minimum, a yaml entry. However, other materials may appear as well. These materials are rendered into a content management system with formalized / standardized templates.
 
-The MOOC source is organized in `mooc_src/` with the following structure:
+The MOOC source is organized in `lecture/` with the following structure:
  - `lessons/`: Section directories containing per-lesson YAML files and section metadata
  - `support/`: Supporting materials organized by type (md, pdf, pptx, web, misc)
  - `citations/`: Citation files for lessons
 
 #### YAML
-Course lessons are organized in the `mooc_src/lessons/` directory. This
+Course lessons are organized in the `lecture/lessons/` directory. This
 directory contains numbered section subdirectories (e.g., `01_Hello`,
 `02_Primitives`), each containing individual YAML files for each lesson
 and an `index.yml` file with section metadata. Each lesson YAML file
@@ -149,7 +149,7 @@ Here is a well implemented entry:
 ```
 
 #### Citations
-Each lesson with citations should have a file in the form of `lesson00.txt` within `mooc_src/citations`. Each line should contain a single citation. Empty lines (including those containing only whitespace) are ignored. These files should end with a single empty line.
+Each lesson with citations should have a file in the form of `lesson00.txt` within `lecture/citations`. Each line should contain a single citation. Empty lines (including those containing only whitespace) are ignored. These files should end with a single empty line.
 
 #### Markdown
 It is strongly recommended that all lessons contain a markdown version as it is the most accessible format where possible. The intention is provide a self-contained text version of the lesson.
@@ -168,7 +168,7 @@ Citations from the markdown may differ from the txt citations file where require
 Slides should be provided as PDF files with optional but encouraged PPTX versions. There should be a title slide and a slide indicating creative commons license.
 
 #### Support
-All lesson materials (markdown, PDF, and PPTX files) are stored under `mooc_src/support/` to organize supporting materials in a central location. The support directory contains:
+All lesson materials (markdown, PDF, and PPTX files) are stored under `lecture/support/` to organize supporting materials in a central location. The support directory contains:
 
  - `md/`: Markdown versions of all lessons
  - `pdf/`: PDF slide decks for all lessons

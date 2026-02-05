@@ -1,6 +1,6 @@
 ---
 name: meta-tag-writer
-description: "Use this agent when you need to add or update meta tags for a webpage. This includes Open Graph tags, Twitter cards, and standard meta descriptions. The agent should be given a specific page path and will create compelling, SEO-friendly meta tags based on the page content.\\n\\nExamples:\\n\\n<example>\\nContext: User wants to add meta tags to a new page they just created.\\nuser: \"I just finished creating the about.html page in labs. Can you add meta tags to it?\"\\nassistant: \"I'll use the meta-tag-writer agent to create compelling meta tags for your about.html page.\"\\n<Task tool call to launch meta-tag-writer agent with the path 'labs/about.html'>\\n</example>\\n\\n<example>\\nContext: User is working on a course page and mentions needing meta tags.\\nuser: \"The new lesson page at mooc_src/lessons/intro.html is ready for review.\"\\nassistant: \"I notice this page may need meta tags. Let me use the meta-tag-writer agent to add appropriate meta tags for this lesson page.\"\\n<Task tool call to launch meta-tag-writer agent with the path 'mooc_src/lessons/intro.html'>\\n</example>\\n\\n<example>\\nContext: User explicitly requests meta tag updates for SEO purposes.\\nuser: \"We need to improve the SEO for products/feature.html\"\\nassistant: \"I'll launch the meta-tag-writer agent to create optimized meta tags for the feature page.\"\\n<Task tool call to launch meta-tag-writer agent with the path 'products/feature.html'>\\n</example>"
+description: "Use this agent when you need to add or update meta tags for a webpage. This includes Open Graph tags, Twitter cards, and standard meta descriptions. The agent should be given a specific page path and will create compelling, SEO-friendly meta tags based on the page content.\\n\\nExamples:\\n\\n<example>\\nContext: User wants to add meta tags to a new page they just created.\\nuser: \"I just finished creating the about.html page in labs. Can you add meta tags to it?\"\\nassistant: \"I'll use the meta-tag-writer agent to create compelling meta tags for your about.html page.\"\\n<Task tool call to launch meta-tag-writer agent with the path 'labs/about.html'>\\n</example>\\n\\n<example>\\nContext: User is working on a course page and mentions needing meta tags.\\nuser: \"The new lesson page at lecture/lessons/intro.html is ready for review.\"\\nassistant: \"I notice this page may need meta tags. Let me use the meta-tag-writer agent to add appropriate meta tags for this lesson page.\"\\n<Task tool call to launch meta-tag-writer agent with the path 'lecture/lessons/intro.html'>\\n</example>\\n\\n<example>\\nContext: User explicitly requests meta tag updates for SEO purposes.\\nuser: \"We need to improve the SEO for products/feature.html\"\\nassistant: \"I'll launch the meta-tag-writer agent to create optimized meta tags for the feature page.\"\\n<Task tool call to launch meta-tag-writer agent with the path 'products/feature.html'>\\n</example>"
 model: haiku
 ---
 
@@ -12,7 +12,7 @@ You will add meta tags to a specific webpage, creating concise but compelling de
 ## Reference Files
 Before writing any meta tags, you MUST examine these reference files:
 - `labs/index.html` - Use as a template for meta tag structure and format
-- `mooc_src/index.html` - Use as an additional reference for meta tag patterns
+- `lecture/index.html` - Use as an additional reference for meta tag patterns
 
 These files demonstrate the expected meta tag format, structure, and style to maintain consistency across the project.
 
@@ -41,7 +41,7 @@ These files demonstrate the expected meta tag format, structure, and style to ma
 
 ## Workflow
 
-1. **Read the reference files** (`labs/index.html` and `mooc_src/indx.html`) to understand the meta tag structure
+1. **Read the reference files** (`labs/index.html` and `lecture/indx.html`) to understand the meta tag structure
 2. **Read the assigned page** to understand its content, purpose, and key messages
 3. **Craft meta tags** that:
    - Accurately summarize the page's unique value proposition
