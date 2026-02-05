@@ -5,7 +5,10 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Lab: Color and Style (Interactive Data Sci / Viz)</title>
-        <meta name="description" content="Learn color encoding and styling techniques as preattentive features for effective data visualization. Explore hex codes, transparency, and design principles." />
+        <meta
+            name="description"
+            content="In our previous tutorial which explored form as a preattentive feature, we investigated drawing different shapes. In this tutorial, we continue Skills..."
+        />
         <link href="/support/web/supplemental.css" rel="stylesheet" type="text/css" />
 
         <meta
@@ -15,7 +18,7 @@
         <meta property="og:type" content="article" />
         <meta
             property="og:description"
-            content="Discover how color and styling enhance data visualization as preattentive features. Hands-on tutorial covering hex codes, transparency, stroke, and design principles."
+            content="In our previous tutorial which explored form as a preattentive feature, we investigated drawing different shapes. In this tutorial, we continue Skills..."
         />
         <meta
             property="og:url"
@@ -32,7 +35,7 @@
         />
         <meta
             name="twitter:description"
-            content="Discover how color and styling enhance data visualization as preattentive features. Hands-on tutorial covering hex codes, transparency, stroke, and design principles."
+            content="In our previous tutorial which explored form as a preattentive feature, we investigated drawing different shapes. In this tutorial, we continue Skills..."
         />
         <meta
             name="twitter:image"
@@ -45,354 +48,115 @@
             <a href="#main">Skip to content</a>
         </div>
         <header>
-            This tutorial is part of the <a href="/labs">skills labs</a> within
-            <a href="/">Interactive Data Science and Visualization</a>.
+            This tutorial is part of the <a href="/labs">skills labs</a> within <a href="/">Interactive Data Science and Visualization</a>.
         </header>
         <main id="main">
             <h1>Color and Style</h1>
 
-            In our
-            <a href="/labs/features_form.html">previous tutorial</a>
-            which explored form as a preattentive feature, we investigated
-            drawing different shapes. In this tutorial, we continue Skills Lab 3
-            by looking at our next preattentive features: color. Indeed, color
-            is one part of a broader set of glyph attributes often referred to
-            simply as style. This suite of options can help as important
-            encoding device and, when used together with other preattentive
-            features, can help increase data density.
+            <p>
+                <strong>Other formats:</strong> <a href="/labs/features_style.md">Markdown version</a>
+            </p>
+
+            In our <a href="/labs/features_form.html">previous tutorial</a> which explored form as a preattentive feature, we investigated drawing different shapes. In this tutorial, we continue Skills Lab 3 by looking at our next preattentive features color. Indeed, color is one part of a broader set of glyph attributes often referred to simply as style. This suite of options can help as important encoding device and, when used together with other preattentive features, can help increase data density.
+
 
             <details>
                 <summary>Contents</summary>
                 <ul>
+                    
                     <li><a href="#hex">Hex Codes</a></li>
+                    
                     <li><a href="#fill">Fill</a></li>
+                    
                     <li><a href="#transparency">Transparency</a></li>
+                    
                     <li><a href="#stroke">Stroke</a></li>
+                    
                     <li><a href="#weight">Weight</a></li>
+                    
                     <li><a href="#context">Context</a></li>
+                    
                     <li><a href="#next">Next</a></li>
+                    
                 </ul>
             </details>
 
+            
             <section id="hex">
                 <h2>Hex Codes</h2>
-                Our glyphs can actually have multiple potential colors at the
-                same time. However, the first step is finding the color we want.
-                We discussed some options in class:
-                <a href="https://colorbrewer2.org/" target="_blank"
-                    >ColorBrewer</a
-                >
-                and
-                <a href="https://medialab.github.io/iwanthue/" target="_blank"
-                    >I Want Hue</a
-                >
-                both provide good options. If you have Python installed on your
-                machine, you might also take a look at
-                <a
-                    href="https://github.com/matplotlib/viscm?tab=readme-ov-file"
-                    target="_blank"
-                    >Viscm</a
-                >. Finally, if you just need to manipulate some colors, a great
-                tool is
-                <a href="https://hslpicker.com/#ffd900" target="_blank"
-                    >HSL Color Picker</a
-                >, which can work on multiple color spaces at the same time. All
-                that said, many (maybe most) tools will work with hex codes or
-                offer hex codes as an option. I'll be using those color codes
-                below but you can see what they correspond to (and change them)
-                using HSL Color Picker. Indeed, many of these colors will come
-                from ColorBrewer. On that note, be sure to check out a short
-                <a
-                    href="https://www.freecodecamp.org/news/how-hex-code-colors-work-how-to-choose-colors-without-a-color-picker/"
-                    target="_blank"
-                    >hex code primer</a
-                >
-                if you are unfamiliar with color hex codes.
-            </section>
+                Our glyphs can actually have multiple potential colors at the same time. However, the first step is finding the color we want. We discussed some options in class: <a href="https://colorbrewer2.org/" target="_blank"
+    >ColorBrewer</a
+> and <a href="https://medialab.github.io/iwanthue/" target="_blank"
+    >I Want Hue</a
+> both provide good options. If you have Python installed on your machine, you might also take a look at <a
+    href="https://github.com/matplotlib/viscm?tab=readme-ov-file"
+    target="_blank"
+    >Viscm</a
+>. Finally, if you just need to manipulate some colors, a great tool is <a href="https://hslpicker.com/#ffd900" target="_blank"
+    >HSL Color Picker</a
+>, which can work on multiple color spaces at the same time.
 
+            </section>
+            
             <section id="fill">
                 <h2>Fill</h2>
-                The easiest place to start for styling in
-                <a href="https://sketchingpy.org/" target="_blank"
-                    >Sketchingpy</a
-                >
-                is the fill color for a shape. Let's use circles to demonstrate!
-                Here, we can draw circles with different colors as well one
-                circle which has no fill (will pass through to any figures drawn
-                behind):
-
-                <pre>
-import sketchingpy
-
+                The easiest place to start for styling in <a href="https://sketchingpy.org/" target="_blank"
+    >Sketchingpy</a
+> is the fill color for a shape. Let's use circles to demonstrate!
+<pre> import sketchingpy
 sketch = sketchingpy.Sketch2D(500, 500)
+sketch.set_fill("#a6cee3") sketch.draw_ellipse(150, 250, 100, 100)
+sketch.clear_fill() sketch.draw_ellipse(250, 250, 100, 100)
+sketch.set_fill("#b2df8a") sketch.draw_ellipse(350, 250, 100, 100)
+sketch.show()</pre >
 
-sketch.set_fill("#a6cee3")
-sketch.draw_ellipse(150, 250, 100, 100)
-
-sketch.clear_fill()
-sketch.draw_ellipse(250, 250, 100, 100)
-
-sketch.set_fill("#b2df8a")
-sketch.draw_ellipse(350, 250, 100, 100)
-
-sketch.show()</pre
-                >
-
-                Try using some of our color tools to specify a different fill
-                color!
             </section>
-
+            
             <section id="transparency">
                 <h2>Transparency</h2>
-                With our circles overlapping, we notice that what is drawn first
-                goes at the bottom and is obsurced by whatever is drawn
-                afterwards. This is called the
-                <a
-                    href="https://bcalabs.org/subject/painter-algorithm-in-computer-graphics"
-                    >Painter's Algorithm</a
-                >
-                which basically says you should draw your scene from back to
-                front. Let's let the user peer through those overlapping shapes
-                though by adding transparency to our color. Appending two
-                additional numbers to our hex codes specifies opacity where 00
-                means fully transparent and FF means fully opaque.
+                With our circles overlapping, we notice that what is drawn first goes at the bottom. We can control transparency to create layered effects. Learn more about transparency and the alpha channel.
 
-                <pre>
-import sketchingpy
-
-sketch = sketchingpy.Sketch2D(500, 500)
-
-sketch.set_fill("#a6cee399")
-sketch.draw_ellipse(150, 250, 100, 100)
-
-sketch.clear_fill()
-sketch.draw_ellipse(250, 250, 100, 100)
-
-sketch.set_fill("#b2df8a99")
-sketch.draw_ellipse(350, 250, 100, 100)
-
-sketch.show()</pre
-                >
-
-                Try changing the order in which the colors are set and the
-                opacity part of the color code.
             </section>
-
+            
             <section id="stroke">
                 <h2>Stroke</h2>
-                So far, we've been manipulating the insides of our circles.
-                Let's change the outsides. Same thing as before, let's have one
-                circle that's different.
+                In addition to fill, shapes can have a stroke or outline. Learn how to control stroke colors and create shapes with just outlines.
 
-                <pre>
-import sketchingpy
-
-sketch = sketchingpy.Sketch2D(500, 500)
-
-sketch.set_stroke("#1f78b4")
-sketch.clear_fill()
-sketch.draw_ellipse(150, 250, 100, 100)
-
-sketch.set_fill("#C0C0C0")
-sketch.clear_stroke()
-sketch.draw_ellipse(250, 250, 100, 100)
-
-sketch.set_stroke("#33a02c")
-sketch.clear_fill()
-sketch.draw_ellipse(350, 250, 100, 100)
-
-sketch.show()</pre
-                >
-
-                Try changing the colors again. When the area is smaller, is the
-                contrast needed for readability higher?
             </section>
-
+            
             <section id="weight">
                 <h2>Weight</h2>
-                Let's continue that thought around the size of these areas. We
-                change the stroke width through its weight:
+                The thickness of strokes can be controlled with weight settings. This is useful for emphasis and visual hierarchy.
 
-                <pre>
-import sketchingpy
-
-sketch = sketchingpy.Sketch2D(500, 500)
-
-sketch.set_stroke_weight(3)
-
-sketch.set_stroke("#1f78b4")
-sketch.clear_fill()
-sketch.draw_ellipse(150, 250, 100, 100)
-
-sketch.set_fill("#C0C0C0")
-sketch.clear_stroke()
-sketch.draw_ellipse(250, 250, 100, 100)
-
-sketch.set_stroke("#33a02c")
-sketch.clear_fill()
-sketch.draw_ellipse(350, 250, 100, 100)
-
-sketch.show()</pre
-                >
-
-                Try changing the strokes such that the first and last circle
-                have different weights.
             </section>
-
+            
             <section id="context">
                 <h2>Context</h2>
-                Before we move on to the transformation matrix, we have a chance
-                to play with some of the concepts around relative color
-                interpretation and figure / ground as discussed in lectures. Try
-                this sketch out for a moment which uses colors which could be
-                useful for a quantitative scale:
+                Color choices should consider context, accessibility, and cultural meanings. Learn about best practices for using color in visualization.
 
-                <pre>
-import sketchingpy
-
-sketch = sketchingpy.Sketch2D(500, 500)
-
-sketch.clear('#FFFFFF')
-
-sketch.set_ellipse_mode("radius")
-
-def draw_circles(y):
-    sketch.set_stroke("#000000")
-
-    sketch.set_fill("#edf8fb")
-    sketch.draw_ellipse(150, y, 20, 20)
-
-    sketch.set_fill("#b2e2e2")
-    sketch.draw_ellipse(200, y, 20, 20)
-
-    sketch.set_fill("#66c2a4")
-    sketch.draw_ellipse(250, y, 20, 20)
-
-    sketch.set_fill("#2ca25f")
-    sketch.draw_ellipse(300, y, 20, 20)
-
-    sketch.set_fill("#006d2c")
-    sketch.draw_ellipse(350, y, 20, 20)
-
-draw_circles(125)
-
-sketch.set_rect_mode("corner")
-sketch.clear_stroke()
-sketch.set_fill("#555555")
-sketch.draw_rect(0, 250, 500, 250)
-
-draw_circles(375)
-
-sketch.show()</pre
-                >
-
-                Note that this uses
-                <a
-                    href="https://sketchingpy.org/reference/clear.html"
-                    target="_blank"
-                    >clear</a
-                >. Let's assume for a moment that this is a
-                <a
-                    href="https://www.data-to-viz.com/graph/heatmap.html"
-                    target="_blank"
-                    >heatmap</a
-                >. We don't have a color scale listed. However, based on the
-                background, which dot do you think corresponds to the highest
-                and lowest number? Does your answer change depending on the
-                background? It is possible that, using the concept of figure /
-                ground from lecture, you may think the color with the highest
-                luminance contrast corresponds to the highest number. That is a
-                common recommendation! In other words, the rightmost dot may be
-                seen as the highest in the top part of the graphic and the
-                leftmost dot may be seen as the highest in the bottom part of
-                the graphic.
             </section>
-
+            
             <section id="next">
                 <h2>Next</h2>
-                We are starting to build up a comprehensive set of tools to
-                bring into our data visualization work. Next, continue on to
-                <a href="/labs/features_position.html">Tutorial 6</a>
-                to learn about the transformation matrix and our next
-                preattentive feature: position.
+                Continue on to <a href="/labs/features_position.html">Tutorial 6</a> to learn about position as a preattentive feature.
 
-                <details>
-                    <summary>Citations</summary>
-                    <ul>
-                        <li>
-                            A. Pottinger, "Sketchingpy." Sketchingpy Project,
-                            2024. [Online]. Available:
-                            <a href="https://sketchingpy.org/" target="_blank"
-                                >https://sketchingpy.org/</a
-                            >
-                        </li>
-                        <li>
-                            C. Brewer, M Harrower, and The Pennsylvania State
-                            University, “Colorbrewer 2.0,” The Pennsylvania
-                            State University, 2013. [Online]. Available:
-                            <a href="https://colorbrewer2.org/" target="_blank"
-                                >https://colorbrewer2.org/</a
-                            >
-                        </li>
-                        <li>
-                            M. Jacomy, "I Want Hue," Sciences-Po Medialab, 2024.
-                            [Online]. Available:
-                            <a
-                                href="https://medialab.github.io/iwanthue/"
-                                target="_blank"
-                                >https://medialab.github.io/iwanthue/</a
-                            >
-                        </li>
-                        <li>
-                            B. Mathis "HSL Color Picker," 2024. [Online].
-                            Available:
-                            <a
-                                href="https://hslpicker.com/#ffd900"
-                                target="_blank"
-                                >https://hslpicker.com/#ffd900</a
-                            >
-                        </li>
-                        <li>
-                            Matplotlib, "Viscm," 2023. [Online]. Available:
-                            <a
-                                href="https://github.com/matplotlib/viscm?tab=readme-ov-file"
-                                target="_blank"
-                                >https://github.com/matplotlib/viscm?tab=readme-ov-file</a
-                            >
-                        </li>
-
-                        <li>
-                            N. Davies, "How Hex Code Colors Work," FreeCodeCamp,
-                            2023. [Online]. Available:
-                            <a
-                                href="https://www.freecodecamp.org/news/how-hex-code-colors-work-how-to-choose-colors-without-a-color-picker/"
-                                target="_blank"
-                            >
-                                https://www.freecodecamp.org/news/how-hex-code-colors-work-how-to-choose-colors-without-a-color-picker/
-                            </a>
-                        </li>
-                        <li>
-                            BCA Labs, "Painter's Algorithm in Computer
-                            Graphics," BCA Labs, 2024. [Online]. Available:
-                            <a
-                                href="https://bcalabs.org/subject/painter-algorithm-in-computer-graphics"
-                                target="_blank"
-                            >
-                                https://bcalabs.org/subject/painter-algorithm-in-computer-graphics
-                            </a>
-                        </li>
-                        <li>
-                            Y. Holtz, "From Data to Viz." Data to Viz, 2018.
-                            [Online]. Available:
-                            <a
-                                href="https://www.data-to-viz.com/"
-                                target="_blank"
-                                >https://www.data-to-viz.com/</a
-                            >
-                        </li>
-                    </ul>
-                </details>
             </section>
+            
+
+            
+            <details>
+                <summary>Citations</summary>
+                <ul>
+                    
+                    <li>A. Pottinger, "Sketchingpy." Sketchingpy Project, 2024. [Online]. Available: <a href="https://sketchingpy.org/" target="_blank">https://sketchingpy.org/</a></li>
+                    
+                    <li>C. Brewer, "ColorBrewer 2.0." [Online]. Available: <a href="https://colorbrewer2.org/" target="_blank">https://colorbrewer2.org/</a></li>
+                    
+                    <li>HSL Color Picker. [Online]. Available: <a href="https://hslpicker.com/" target="_blank">https://hslpicker.com/</a></li>
+                    
+                </ul>
+            </details>
+            
         </main>
         <footer>
             Materials on this page are available under

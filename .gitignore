@@ -1,5 +1,5 @@
 mooc/
-mooc_src/venv/
+venv/
 node_modules/
 tasks/
 *.pyc

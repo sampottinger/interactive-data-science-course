@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lab: {{ name }} (Interactive Data Sci / Viz)</title>
+        <meta
+            name="description"
+            content="{{ header | striptags | truncate(155) }}"
+        />
+        <link href="/support/web/supplemental.css" rel="stylesheet" type="text/css" />
+
+        <meta
+            property="og:title"
+            content="Lab: {{ name }} (Interactive Data Sci / Viz)"
+        />
+        <meta property="og:type" content="article" />
+        <meta
+            property="og:description"
+            content="{{ header | striptags | truncate(155) }}"
+        />
+        <meta
+            property="og:url"
+            content="https://mooc.interactivedatascience.courses/labs/{{ file }}"
+        />
+        <meta
+            property="og:image"
+            content="https://mooc.interactivedatascience.courses/support/web/card.jpg"
+        />
+
+        <meta
+            name="twitter:title"
+            content="Lab: {{ name }} (Interactive Data Sci / Viz)"
+        />
+        <meta
+            name="twitter:description"
+            content="{{ header | striptags | truncate(155) }}"
+        />
+        <meta
+            name="twitter:image"
+            content="https://mooc.interactivedatascience.courses/support/web/card.jpg"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+    </head>
+    <body>
+        <div class="skip-link">
+            <a href="#main">Skip to content</a>
+        </div>
+        <header>
+            This tutorial is part of the <a href="/labs">skills labs</a> within <a href="/">Interactive Data Science and Visualization</a>.
+        </header>
+        <main id="main">
+            <h1>{{ name }}</h1>
+
+            <p>
+                <strong>Other formats:</strong> <a href="/labs/{{ file | replace('.html', '.md') }}">Markdown version</a>
+            </p>
+
+            {{ header | safe }}
+
+            <details>
+                <summary>Contents</summary>
+                <ul>
+                    {% for section in sections %}
+                    <li><a href="#{{ section.name }}">{{ section.short }}</a></li>
+                    {% endfor %}
+                </ul>
+            </details>
+
+            {% for section in sections %}
+            <section id="{{ section.name }}">
+                <h2>{{ section.short }}</h2>
+                {{ section.html | safe }}
+            </section>
+            {% endfor %}
+
+            {% if citations %}
+            <details>
+                <summary>Citations</summary>
+                <ul>
+                    {% for citation in citations %}
+                    <li>{{ citation | safe }}</li>
+                    {% endfor %}
+                </ul>
+            </details>
+            {% endif %}
+        </main>
+        <footer>
+            Materials on this page are available under
+            <a href="https://opensource.org/license/bsd-3-clause"
+                >BSD 3-Clause License</a
+            >
+            for code and
+            <a href="https://creativecommons.org/licenses/by/4.0/"
+                >CC-BY License</a
+            >
+            for all other material. Thank you to
+            <a href="https://public-sans.digital.gov">PublicSans</a> under the
+            Open Font License. No cookies are used. Analytics limited to
+            standard server logging which may collect IP addresses. These logs
+            are deleted or anonymized within 30 days.
+        </footer>
+    </body>
+</html>

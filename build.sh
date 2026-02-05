@@ -5,6 +5,9 @@ mkdir mooc
 cd mooc_src
 bash render.sh
 cd ..
+cd labs
+bash render.sh
+cd ..
 mkdir -p mooc/support
 cp -r mooc_src/support/web mooc/support/web
 cp -r mooc_src/support/misc mooc/support/misc
