@@ -81,12 +81,28 @@ SAFE TO PROCEED
 
 ### Component 6: Update docs
 
-- **Status**: Not started
-- **Files to modify**:
-  - `README.md` - Update to reflect course_wide rendering changes
-  - `CONTRIBUTING.md` - Update if needed to reflect new structure
+**Component successfully completed. Documentation updated following project standards.**
 
-**Description**: Update `README.md` and, if needed, `CONTRIBUTING.md` to reflect changes from this task. This includes documenting the new `course_wide/render.py`, the `syllabus.yml` data file, the Jinja2 template structure for course_wide, and any changes to the build process.
+Successfully updated README.md and CONTRIBUTING.md to document the new course_wide structure, template system, and build process. Documentation follows existing patterns and provides clear guidance for contributors.
+
+**Key accomplishments**:
+- README.md updated with course_wide structure overview (base templates, page templates, syllabus.yml)
+- README.md build section expanded to show course_wide/render.sh usage
+- README.md contributing section updated to include course_wide/*.py in lint checks
+- CONTRIBUTING.md updated with comprehensive course-wide materials section
+- New section documents template structure, modification workflow, and YAML guidelines
+- Content management section updated to mention both mooc_src and course_wide rendering
+- Standards section updated to include course_wide/*.py in pycodestyle checks
+- Full build verified successful with proper output file generation
+- Template files correctly excluded from mooc output directory
+
+**Files modified**:
+- `/home/ubuntu/interactive-data-science-course-2/README.md` - Added course_wide documentation in Structure and Building sections, updated linting commands
+- `/home/ubuntu/interactive-data-science-course-2/CONTRIBUTING.md` - Added Course-Wide Materials section with template and YAML guidelines, updated references throughout
+
+Build status: Build successful
+
+SAFE TO PROCEED
 
 ### Component 7: Update build scripts and GitHub Actions
 
