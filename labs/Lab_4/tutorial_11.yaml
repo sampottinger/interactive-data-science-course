@@ -1,0 +1,40 @@
+name: Data
+file: resources_data.html
+header: >
+  In this tutorial, we bring it all together by learning how to load,
+  process, and visualize real data in Python.
+sections:
+  - name: intro
+    short: Introduction
+    long: Introduction to working with data
+    html: >
+      Data is at the heart of visualization. Learn how to load and
+      process data for visualization.
+  - name: csv
+    short: CSV Files
+    long: Working with CSV data
+    html: >
+      CSV files are a common data format. Learn how to read CSV files
+      and use the data in your visualizations.
+  - name: processing
+    short: Data Processing
+    long: Processing and transforming data
+    html: >
+      Raw data often needs processing. Learn techniques for cleaning
+      and transforming data for visualization.
+  - name: visualization
+    short: Creating Visualizations
+    long: Putting it all together to create data visualizations
+    html: >
+      Combine everything you've learned to create complete data
+      visualizations from real datasets.
+  - name: next
+    short: Next
+    long: Continue to the next tutorial
+    html: >
+      This completes Lab 4! You may continue to
+      <a href="/labs/js.html">Tutorial 12</a>
+      to explore JavaScript, or return to the lectures.
+citations:
+  - text: A. Pottinger, "Sketchingpy." Sketchingpy Project, 2024. [Online].
+    available: https://sketchingpy.org/

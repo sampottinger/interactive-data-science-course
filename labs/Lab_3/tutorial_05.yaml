@@ -1,0 +1,103 @@
+name: Color and Style
+file: features_style.html
+header: >
+  In our
+  <a href="/labs/features_form.html">previous tutorial</a>
+  which explored form as a preattentive feature, we investigated
+  drawing different shapes. In this tutorial, we continue Skills Lab 3
+  by looking at our next preattentive features color. Indeed, color
+  is one part of a broader set of glyph attributes often referred to
+  simply as style. This suite of options can help as important
+  encoding device and, when used together with other preattentive
+  features, can help increase data density.
+sections:
+  - name: hex
+    short: Hex Codes
+    long: Learn about hex color codes and color tools
+    html: >
+      Our glyphs can actually have multiple potential colors at the
+      same time. However, the first step is finding the color we want.
+      We discussed some options in class:
+      <a href="https://colorbrewer2.org/" target="_blank"
+          >ColorBrewer</a
+      >
+      and
+      <a href="https://medialab.github.io/iwanthue/" target="_blank"
+          >I Want Hue</a
+      >
+      both provide good options. If you have Python installed on your
+      machine, you might also take a look at
+      <a
+          href="https://github.com/matplotlib/viscm?tab=readme-ov-file"
+          target="_blank"
+          >Viscm</a
+      >. Finally, if you just need to manipulate some colors, a great
+      tool is
+      <a href="https://hslpicker.com/#ffd900" target="_blank"
+          >HSL Color Picker</a
+      >, which can work on multiple color spaces at the same time.
+  - name: fill
+    short: Fill
+    long: Learn to set fill colors for shapes
+    html: >
+      The easiest place to start for styling in
+      <a href="https://sketchingpy.org/" target="_blank"
+          >Sketchingpy</a
+      >
+      is the fill color for a shape. Let's use circles to demonstrate!
+
+      <pre>
+      import sketchingpy
+
+      sketch = sketchingpy.Sketch2D(500, 500)
+
+      sketch.set_fill("#a6cee3")
+      sketch.draw_ellipse(150, 250, 100, 100)
+
+      sketch.clear_fill()
+      sketch.draw_ellipse(250, 250, 100, 100)
+
+      sketch.set_fill("#b2df8a")
+      sketch.draw_ellipse(350, 250, 100, 100)
+
+      sketch.show()</pre
+      >
+  - name: transparency
+    short: Transparency
+    long: Learn to use transparency and alpha channels
+    html: >
+      With our circles overlapping, we notice that what is drawn first
+      goes at the bottom. We can control transparency to create layered effects.
+      Learn more about transparency and the alpha channel.
+  - name: stroke
+    short: Stroke
+    long: Learn to set stroke (outline) colors for shapes
+    html: >
+      In addition to fill, shapes can have a stroke or outline. Learn how to
+      control stroke colors and create shapes with just outlines.
+  - name: weight
+    short: Weight
+    long: Learn to control stroke weight and thickness
+    html: >
+      The thickness of strokes can be controlled with weight settings.
+      This is useful for emphasis and visual hierarchy.
+  - name: context
+    short: Context
+    long: Understand design context and color choices
+    html: >
+      Color choices should consider context, accessibility, and cultural meanings.
+      Learn about best practices for using color in visualization.
+  - name: next
+    short: Next
+    long: Continue to the next tutorial
+    html: >
+      Continue on to
+      <a href="/labs/features_position.html">Tutorial 6</a>
+      to learn about position as a preattentive feature.
+citations:
+  - text: A. Pottinger, "Sketchingpy." Sketchingpy Project, 2024. [Online].
+    available: https://sketchingpy.org/
+  - text: C. Brewer, "ColorBrewer 2.0." [Online].
+    available: https://colorbrewer2.org/
+  - text: HSL Color Picker. [Online].
+    available: https://hslpicker.com/
