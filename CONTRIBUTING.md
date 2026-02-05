@@ -181,7 +181,24 @@ Files beyond the standard lesson materials are also allowed in the `misc/` subdi
 ### Skills Labs
 During original teaching of this course as Stat 198 at UC Berkeley, the skills labs were taught using a flipped classroom structure. These are distinct to regular lessons in that there is minimal to no lecture component. Instead, time is spent on one or more directly interactive activities.
 
-Due to the nature of skills labs, the `labs` directory is published directly as static content. This affords maximal flexibility in crafting the lab experience outside of a formalized template like normal lessons. That said, we ask that new labs follow the structure of existing labs as, for example, seen in `python_graphics.html`. Please ensure the following at minimum:
+Skills labs are organized in the `labs/` directory with the following structure:
+ - `Lab_1/`, `Lab_2/`, etc.: Lab-specific directories containing YAML source files
+ - Each lab directory contains an `index.yml` with lab metadata (name, lesson) and tutorial YAML files
+ - Tutorial YAML files define individual tutorials with name, file, header, sections, and citations
+ - Templates: `tutorial.html`, `index_template.html`, `tutorial.md` for rendering
+ - `render.py` and `render.sh` to generate HTML and Markdown output from YAML sources
+
+The YAML-based structure allows for consistent formatting and easier maintenance. Tutorial YAML files follow this structure:
+
+| **Field** | **Required** | **Purpose** | **Type** |
+| --------- | ------------ | ----------- | -------- |
+| name      | Yes          | Human readable name of the tutorial. | string |
+| file      | Yes          | Base filename for output (e.g., "python_intro" generates python_intro.html and python_intro.md). | string |
+| header    | Yes          | HTML content for the tutorial header/introduction. | html |
+| sections  | Yes          | List of tutorial sections, each with "name" (anchor ID), "short" (heading), "long" (description), and "html" (content). | list |
+| citations | No           | List of citations, each with "text" and optional "available" (URL). | list |
+
+HTML fields should use `>` for folded scalars as with lesson YAML files. Generated tutorials include:
 
  - A contents `details` tag.
  - Use of header, main, and sections for accessibility including skip link.
@@ -193,7 +210,7 @@ Due to the nature of skills labs, the `labs` directory is published directly as 
 These should be fully static pages (HTML, CSS, JS) and automated use of server-side components is currently disallowed.
 
 ## Content management
-Skills labs are posted directly as static materials but the regular lessons (MOOC source) compiles materials to a static website using `render.py`. This takes advantage of very limited open source libraries. At this time, only jinja2 and pyyaml are allowed in this process. Please keep `render.sh` up to date such that it builds all lessons. The only external service currently allowed is Vimeo.
+Both skills labs and regular lessons (MOOC source) compile materials to a static website using `render.py` scripts. This takes advantage of very limited open source libraries. At this time, only jinja2 and pyyaml are allowed in this process. Please keep `render.sh` scripts up to date such that they build all lessons and labs. The only external service currently allowed is Vimeo.
 
 ## Standards
 Please follow conventions of existing code and materials where possible. Please also ensure:

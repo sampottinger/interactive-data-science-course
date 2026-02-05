@@ -28,7 +28,7 @@ html and typically **PDF**, **PPTX**, and **video** accompanying materials.
 Found in `/course_wide`, these are resources which apply across many or all lessons of the course and are wide-ranging documents such as the course manual and syllabus as well as grading rubric. In general, these are available in **markdown** with **html** and **PDF** options.
 
 ### Skills labs
-Found in `/labs`, hands-on tutorials and focused instruction on implementation skills. These are often recommended for a flipped classroom structure. They are provided in **html** and **Python** with supplemental materials.
+Found in `/labs`, hands-on tutorials and focused instruction on implementation skills. These are often recommended for a flipped classroom structure. Lab YAML source files are organized in `labs/Lab_1/` through `labs/Lab_6/` subdirectories, each containing an `index.yml` and tutorial YAML files. These are rendered into **HTML** and **Markdown** formats with supplemental materials.
 
 ## Using
 The course materials are available online for free at [https://mooc.interactivedatascience.courses](https://mooc.interactivedatascience.courses/). This includes:
@@ -75,7 +75,14 @@ $ cd lecture
 $ bash render.sh
 ```
 
-Alternatively, build the full course by using `build.sh` in the root of the repository:
+Build the labs through `labs`:
+
+```bash
+$ cd labs
+$ bash render.sh
+```
+
+Alternatively, build the full course (lessons and labs) by using `build.sh` in the root of the repository:
 
 ```bash
 $ bash build.sh
@@ -90,8 +97,8 @@ If desired, subagents can help with development activities. These are available 
 For those interested in contributing to this open source project, thank you! In addition to additional logistical instructions in this README for building the course website, please see also our [contributing guide](https://github.com/sampottinger/interactive-data-science-course/blob/aa4f19e55f90a5574fac67c92b490fbc830b0f72/CONTRIBUTING.md). That said, it is recommended that the following pass prior to commit:
 
 ```bash
-$ pyflakes lecture/*.py
-$ pycodestyle lecture/*.py
+$ pyflakes lecture/*.py labs/*.py
+$ pycodestyle lecture/*.py labs/*.py
 $ npx eslint 'lecture/**/*.js'
 ```
 
