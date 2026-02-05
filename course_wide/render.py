@@ -108,6 +108,8 @@ def render_rubric():
     env = get_template_loader()
     template = env.get_template('rubric_template.html')
 
+    syllabus_data = load_syllabus_data()
+
     context = {
         'title': 'Project Grading Rubric (Interactive Data Sci / Viz)',
         'description': 'Understand grading criteria for your code projects: completeness, materials, technical execution, and exploration. Clear standards for all assignments and final project.',
@@ -115,7 +117,9 @@ def render_rubric():
         'og_description': 'Grading criteria for your coding projects across completeness, visualization concepts, technical execution, and exploration. Understand what instructors evaluate.',
         'og_url': 'https://mooc.interactivedatascience.courses/course_wide/rubric.html',
         'twitter_title': 'Project Grading Rubric (Interactive Data Sci / Viz)',
-        'twitter_description': 'Grading criteria for your coding projects across completeness, visualization concepts, technical execution, and exploration. Understand what instructors evaluate.'
+        'twitter_description': 'Grading criteria for your coding projects across completeness, visualization concepts, technical execution, and exploration. Understand what instructors evaluate.',
+        'rubric_sections': syllabus_data['rubric']['sections'],
+        'rubric_items': syllabus_data['rubric']['items']
     }
 
     result = template.render(**context)
@@ -182,7 +186,12 @@ def render_rubric_md():
     env = get_template_loader()
     template = env.get_template('rubric_template.md')
 
-    context = {}
+    syllabus_data = load_syllabus_data()
+
+    context = {
+        'rubric_sections': syllabus_data['rubric']['sections'],
+        'rubric_items': syllabus_data['rubric']['items']
+    }
 
     result = template.render(**context)
 

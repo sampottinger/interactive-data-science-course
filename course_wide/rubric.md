@@ -16,6 +16,7 @@ There are 4 categories of criteria with the weighting below. This weighting is m
 | Tech / Program Correct | 20%        |
 | Explore / Express      | 20%        |
 
+
 ## Rubric Criteria by Assignment
 
 The goal of this rubric really is to help structure feedback, provide ideas to keep in mind as learners build work, and help you understand what instructors may choose to focus on. Each individual criterion is worth one point within its category.
@@ -42,6 +43,7 @@ The goal of this rubric really is to help structure feedback, provide ideas to k
 | Explore       | Clear understanding of domain and tasks or clear user agency.      | Assignment 14 (AFSC GAP 1)            |
 | Explore       | Clear user loop.                                                   | Assignment 18 (AFSC GAP or BART 2)    |
 | Explore       | Ethical representation.                                            | Final                                 |
+
 
 ## Notes
 

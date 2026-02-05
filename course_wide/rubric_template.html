@@ -40,23 +40,11 @@
                         <th>Category</th>
                         <th>Weight</th>
                     </tr>
-                    <tr>
-                        <td>Completeness</td>
-                        <td>30%</td>
+                    {% for section in rubric_sections %}<tr>
+                        <td>{{ section.name }}</td>
+                        <td>{{ section.weight }}</td>
                     </tr>
-                    <tr>
-                        <td>Materials / Concepts</td>
-                        <td>30%</td>
-                    </tr>
-                    <tr>
-                        <td>Tech / Program Correct</td>
-                        <td>20%</td>
-                    </tr>
-                    <tr>
-                        <td>Explore / Express</td>
-                        <td>20%</td>
-                    </tr>
-                </table>
+                    {% endfor %}</table>
             </section>
 
             <section id="criteria">
@@ -72,107 +60,12 @@
                         <th>Criterion</th>
                         <th>First Assignment</th>
                     </tr>
-                    <tr>
-                        <td>Completeness</td>
-                        <td>Submission follows instructions.</td>
-                        <td>Assignment 7 (Creative Code 1)</td>
+                    {% for item in rubric_items %}<tr>
+                        <td>{{ item.category }}</td>
+                        <td>{{ item.criterion }}</td>
+                        <td>{{ item.starts }}</td>
                     </tr>
-                    <tr>
-                        <td>Completeness</td>
-                        <td>Appropriate / required density.</td>
-                        <td>Assignment 9 (Census 1)</td>
-                    </tr>
-                    <tr>
-                        <td>Completeness</td>
-                        <td>Low lie-factor.</td>
-                        <td>Assignment 10 (Census 2)</td>
-                    </tr>
-                    <tr>
-                        <td>Completeness</td>
-                        <td>Clear pathway / tutorialization.</td>
-                        <td>Assignment 14 (AFSC GAP 1)</td>
-                    </tr>
-                    <tr>
-                        <td>Completeness</td>
-                        <td>Ethical representation.</td>
-                        <td>Final</td>
-                    </tr>
-                    <tr>
-                        <td>Materials</td>
-                        <td>Readable use of preattentive features.</td>
-                        <td>Assignment 7 (Creative Code 1)</td>
-                    </tr>
-                    <tr>
-                        <td>Materials</td>
-                        <td>Appropriate use of Gestalt principles.</td>
-                        <td>Assignment 7 (Creative Code 1)</td>
-                    </tr>
-                    <tr>
-                        <td>Materials</td>
-                        <td>Makes acuity-efficient use of encodings.</td>
-                        <td>Assignment 9 (Census 1)</td>
-                    </tr>
-                    <tr>
-                        <td>Materials</td>
-                        <td>Data-ink ratio / chartjunk purposeful.</td>
-                        <td>Assignment 10 (Census 2)</td>
-                    </tr>
-                    <tr>
-                        <td>Materials</td>
-                        <td>Clear affordances.</td>
-                        <td>Assignment 18 (AFSC GAP or BART 2)</td>
-                    </tr>
-                    <tr>
-                        <td>Materials</td>
-                        <td>Clear ludonarrative and / or clear exposition.</td>
-                        <td>Final</td>
-                    </tr>
-                    <tr>
-                        <td>Tech</td>
-                        <td>Code included with license and instructions.</td>
-                        <td>Assignment 7 (Creative Code 1)</td>
-                    </tr>
-                    <tr>
-                        <td>Tech</td>
-                        <td>Code executes following submission instructions.</td>
-                        <td>Assignment 8 (Creative Code 2)</td>
-                    </tr>
-                    <tr>
-                        <td>Tech</td>
-                        <td>Code documented and readable.</td>
-                        <td>Assignment 10 (Census 2)</td>
-                    </tr>
-                    <tr>
-                        <td>Tech</td>
-                        <td>Accessible implementation.</td>
-                        <td>Final</td>
-                    </tr>
-                    <tr>
-                        <td>Explore</td>
-                        <td>Robust interpretability, possibly direct labeling.</td>
-                        <td>Assignment 9 (Census 1)</td>
-                    </tr>
-                    <tr>
-                        <td>Explore</td>
-                        <td>Clear hierarchy or figure / ground.</td>
-                        <td>Assignment 12 (BART 1)</td>
-                    </tr>
-                    <tr>
-                        <td>Explore</td>
-                        <td>Clear understanding of domain and tasks or clear user agency.</td>
-                        <td>Assignment 14 (AFSC GAP 1)</td>
-                    </tr>
-                    <tr>
-                        <td>Explore</td>
-                        <td>Clear user loop.</td>
-                        <td>Assignment 18 (AFSC GAP or BART 2)</td>
-                    </tr>
-                    <tr>
-                        <td>Explore</td>
-                        <td>Ethical representation.</td>
-                        <td>Final</td>
-                    </tr>
-                </table>
+                    {% endfor %}</table>
             </section>
 
             <section id="notes">

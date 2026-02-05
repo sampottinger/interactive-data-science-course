@@ -330,3 +330,76 @@ lessons:
       - text: Final projects and celebration.
     activity:
       - text: '[Final] Feedback'
+
+rubric:
+  sections:
+    - name: Completeness
+      weight: 30%
+    - name: Materials / Concepts
+      weight: 30%
+    - name: Tech / Program Correct
+      weight: 20%
+    - name: Explore / Express
+      weight: 20%
+
+  items:
+    - category: Completeness
+      criterion: Submission follows instructions.
+      starts: Assignment 7 (Creative Code 1)
+    - category: Completeness
+      criterion: Appropriate / required density.
+      starts: Assignment 9 (Census 1)
+    - category: Completeness
+      criterion: Low lie-factor.
+      starts: Assignment 10 (Census 2)
+    - category: Completeness
+      criterion: Clear pathway / tutorialization.
+      starts: Assignment 14 (AFSC GAP 1)
+    - category: Completeness
+      criterion: Ethical representation.
+      starts: Final
+    - category: Materials
+      criterion: Readable use of preattentive features.
+      starts: Assignment 7 (Creative Code 1)
+    - category: Materials
+      criterion: Appropriate use of Gestalt principles.
+      starts: Assignment 7 (Creative Code 1)
+    - category: Materials
+      criterion: Makes acuity-efficient use of encodings.
+      starts: Assignment 9 (Census 1)
+    - category: Materials
+      criterion: Data-ink ratio / chartjunk purposeful.
+      starts: Assignment 10 (Census 2)
+    - category: Materials
+      criterion: Clear affordances.
+      starts: Assignment 18 (AFSC GAP or BART 2)
+    - category: Materials
+      criterion: Clear ludonarrative and / or clear exposition.
+      starts: Final
+    - category: Tech
+      criterion: Code included with license and instructions.
+      starts: Assignment 7 (Creative Code 1)
+    - category: Tech
+      criterion: Code executes following submission instructions.
+      starts: Assignment 8 (Creative Code 2)
+    - category: Tech
+      criterion: Code documented and readable.
+      starts: Assignment 10 (Census 2)
+    - category: Tech
+      criterion: Accessible implementation.
+      starts: Final
+    - category: Explore
+      criterion: Robust interpretability, possibly direct labeling.
+      starts: Assignment 9 (Census 1)
+    - category: Explore
+      criterion: Clear hierarchy or figure / ground.
+      starts: Assignment 12 (BART 1)
+    - category: Explore
+      criterion: Clear understanding of domain and tasks or clear user agency.
+      starts: Assignment 14 (AFSC GAP 1)
+    - category: Explore
+      criterion: Clear user loop.
+      starts: Assignment 18 (AFSC GAP or BART 2)
+    - category: Explore
+      criterion: Ethical representation.
+      starts: Final
