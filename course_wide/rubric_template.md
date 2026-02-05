@@ -1,10 +1,14 @@
-# Code Projects Rubric
+{% extends "base.md" %}
 
+{% block title %}Code Projects Rubric{% endblock %}
+
+{% block description %}
 Across the course, you will be asked to submit code for 7 regular assignments and the final project. This rubric describes how these exercises are scored. Specifically, as we gain more skills, we can add more criteria to our rubric until reaching the final!
+{% endblock %}
 
+{% block other_formats %}[HTML version](rubric.html) | [Markdown version](rubric.md) (you are here) | [PDF version](rubric.pdf) (from UC Berkeley Spring 2025 teaching){% endblock %}
 
-**Other formats:** [HTML version](rubric.html) | [Markdown version](rubric.md) (you are here) | [PDF version](rubric.pdf) (from UC Berkeley Spring 2025 teaching)
-
+{% block content %}
 ## Category Weights
 
 There are 4 categories of criteria with the weighting below. This weighting is maintained regardless of assignment.
@@ -50,15 +54,10 @@ Some take-aways:
 - Each criterion within a category is worth one point.
 - Criteria accumulate as the course progresses.
 - Once a criterion is introduced, it continues to apply in subsequent assignments.
+{% endblock %}
 
-## See Also
-
-For additional course materials, please see:
-
-
+{% block see_also_links %}
 - [Course Manual](/course_wide/manual.html) - Detailed guidance for students and instructors
 - [Course Syllabus](/course_wide/syllabus.html) - Formal curriculum and weekly schedule
-
-
-## Works Cited
-
+{% endblock %}
+{% block works_cited %}{% endblock %}

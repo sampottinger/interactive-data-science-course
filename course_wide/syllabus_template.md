@@ -1,8 +1,14 @@
-# Interactive Data Science and Visualization
-Formal curriculum and syllabus which is completed by the [course manual](/course_wide/manual.html) with practical guidance on either taking the course as a learner or providing / adapting it as an instructor.
+{% extends "base.md" %}
 
-**Other formats:** [HTML version](syllabus.html) | [Markdown version](syllabus.md) (you are here) | [PDF version](syllabus.pdf) (from UC Berkeley Spring 2025 teaching)
+{% set license_text = "Provided under the [CC-BY International 4.0 License](https://creativecommons.org/licenses/by/4.0/)." %}
 
+{% block title %}Interactive Data Science and Visualization{% endblock %}
+
+{% block description %}Formal curriculum and syllabus which is completed by the [course manual](/course_wide/manual.html) with practical guidance on either taking the course as a learner or providing / adapting it as an instructor.{% endblock %}
+
+{% block other_formats %}[HTML version](syllabus.html) | [Markdown version](syllabus.md) (you are here) | [PDF version](syllabus.pdf) (from UC Berkeley Spring 2025 teaching){% endblock %}
+
+{% block content %}
 ## Motivation
 Before getting into a detailed breakdown of the material, let's explore how this course can help.
 
@@ -163,20 +169,18 @@ To fit the 2 credit hour format, labs will take place during course instruction 
 
 ### Paid resources
 Reading to be provided. Students encouraged to purchase the interactive experience but alternatives provided. Otherwise, all materials are intended to be free to access.
-
+{% endblock %}
+{% block separator %}
 
 ---
+{% endblock %}
 
-## See Also
-
-For additional course materials, please see:
-
-
+{% block see_also_links %}
 - [Course Manual](/course_wide/manual.html) - Detailed guidance for students and instructors
 - [Grading Rubric](/course_wide/rubric.html) - Detailed grading criteria for code projects
+{% endblock %}
 
-
-## Works Cited
+{% block works_cited_section %}## Works Cited
 
 Bitzer, D., P. Braunfeld, and W. Lichtenberger. "PLATO: An Automatic Teaching Device." IRE Transactions on Education 4, no. 4 (December 1961): 157–61. https://doi.org/10.1109/TE.1961.4322215.
 
@@ -311,9 +315,11 @@ Ma, Justin, and Matthew Davis. "FTL: Faster Than Light," September 14, 2012. htt
 "Papers, Please," February 12, 2014. https://papersplea.se.
 
 Thunder Lotus Games. "Spiritfarer," August 18, 2020. https://thunderlotusgames.com/spiritfarer/.
+{% endblock %}
 
+{% block license_section %}
 
 ---
 
-## License
-Provided under the [CC-BY International 4.0 License](https://creativecommons.org/licenses/by/4.0/).
+{% block license_heading %}## License{% endblock %}
+{{ license_text }}{% endblock %}

@@ -1,8 +1,12 @@
-# Interactive Data Science and Visualization Manual
-Document which helps students engage with or instructors teach IDSV.
+{% extends "base.md" %}
 
-**Other formats:** [HTML version](manual.html) | [PDF version](manual.pdf)
+{% block title %}Interactive Data Science and Visualization Manual{% endblock %}
 
+{% block description %}Document which helps students engage with or instructors teach IDSV.{% endblock %}
+
+{% block other_formats %}[HTML version](manual.html) | [PDF version](manual.pdf){% endblock %}
+
+{% block content %}
 ## Hello
 I'm excited that you are joining us as we explore interactive data science and visualization.
 
@@ -277,18 +281,97 @@ This will give us one last chance to practice skills taught in the course. We wi
 
 ## Misc
 Dedicated to my late grandmother, Barbara. Thank you for your wisdom and kindness. I hope I may continue your tradition of teaching creative computing.
+{% endblock %}
 
-## See Also
-
-For additional course materials, please see:
-
-
+{% block see_also_links %}
 - [Course Syllabus](/course_wide/syllabus.html) - Formal curriculum and weekly schedule
 - [Grading Rubric](/course_wide/rubric.html) - Detailed grading criteria for code projects
-
-
+{% endblock %}
+{% block works_cited %}
 ## Works Cited
 
+ACLED. "Armed Conflict Location & Event Data Project," 2025. https://acleddata.com/.
 
-### License
-This resource is released under the [CC-BY-NC license](https://creativecommons.org/licenses/by-nc/4.0/deed.en).
+BART. "BART Ridership Reports," Bay Area Rapid Transit, 2025. https://www.bart.gov/about/reports/ridership.
+
+Brier, Wren, Tim Dawson, Kip Bunyea, and Erika Olsen. "Unpacking," November 2, 2021.
+
+Brown, Mark. "Designing for Disability." Game Maker's Toolkit, 2018. https://www.youtube.com/watch?v=xrqdU4cZaLw.
+
+———. "How Nintendo Solved Zelda's Open World Problem." Game Makers Toolkit, May 9, 2023. https://www.youtube.com/watch?v=CZzcVs8tNfE&themeRefresh=1.
+
+———. "The Last Guardian and the Language of Games." Game Maker's Toolkit, January 9, 2017. https://www.youtube.com/watch?v=Qot5_rMB8Jc.
+
+———. "The World Design of Metroid 1 and Zero Mission." Game Maker's Toolkit, July 31, 2018. https://www.youtube.com/watch?v=kUT60DKaEGc.
+
+Bureau of Transportation Statistics. "Amtrak Ridership," U.S. Department of Transportation, 2024. https://www.bts.gov/browse-statistical-products-and-data/state-transportation-statistics/amtrak-ridership.
+
+California Department of Finance. "California State Budget," State of California, 2026. https://ebudget.ca.gov/.
+
+Deconstructteam. "The Cosmic Wheel Sisterhood," August 16, 2023. https://cosmicwheel.com/.
+
+Economic Policy Institute. "EPI Microdata Extracts," 2025. https://microdata.epi.org/.
+
+Emmons, Dan, and James Portnow. "Super Mario Bros: Level 1-1 - How Super Mario Mastered Level Design." Extra Credits, June 5, 2014. https://www.youtube.com/watch?v=ZH2wGpEZVgE.
+
+Genuary. "Genuary Creative Coding Prompts." Genuary, 2025. https://genuary.art/.
+
+GitHut. "GitHub Language Statistics," 2024. https://madnight.github.io/githut/.
+
+Holtz, Y. "From Data to Viz." Data to Viz, 2018. https://www.data-to-viz.com/.
+
+Kice. "Afterplace," 2022. https://afterplace.game/.
+
+Kesavan, Vidya. "Preattentive Attributes in Visualization – An Example," November 17, 2016. https://daydreamingnumbers.com/blog/preattentive-attributes-example/.
+
+LeRoy, Benjamin. "Review of Tufte's 'The Visual Display of Quantitative Information,'" May 16, 2018. https://benjaminleroy.github.io/pages/blog/public/post/2018/05/16/review-of-tufte-s-the-visual-display-of-quantitative-information/.
+
+Luipi, Georigia, and Stefanie Posavec. "Dear Data." Eyeo, 2015. https://vimeo.com/channels/eyeo2015/133608605.
+
+Ma, Justin, and Matthew Davis. "FTL: Faster Than Light," September 14, 2012. https://subsetgames.com/ftl.html.
+
+Munzner, Tamara. "15 Views of a Node Link Graph." Google, October 8, 2007. https://www.youtube.com/watch?v=WOBKnRlOAes.
+
+OpenProcessing. "Browse Genuary Projects." OpenProcessing, 2025. https://openprocessing.org/browse?q=genuary&time=thisYear&type=all&offset=0.
+
+"Papers, Please," February 12, 2014. https://papersplea.se.
+
+Posner, Joe, Roman Mars, Don Norman, and Gina Barton. "It's Not You. Bad Doors Are Everywhere." Vox Media, February 26, 2016. https://www.youtube.com/watch?v=yY96hTb8WgI.
+
+Pottinger, A., L. Connor, B. Guzder-Williams, M. Weltman-Fahs, N. Gondek, and T. Bowles. "Climate-driven doubling of U.S. maize loss probability: Interactive simulation with neural network Monte Carlo," JDSSV, 2025. doi: 10.52933/jdssv.v5i3.134.
+
+Pottinger, A., R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse, M. de Bruyn, C. Boettiger, E. Baker, K. Koy, and D. McCauley. "Global Plastics AI Policy Tool," University of California, 2024. https://global-plastics-tool.org/.
+
+Pottinger, A. "Income Gaps," 2023. https://incomegaps.com/.
+
+Pottinger, A. "Sketchingpy." UC Berkeley, 2024. sketchingpy.org.
+
+Pottinger, A., and G. Zarpellon. "Pyafscgap.org: Open source multi-modal Python-based tools for NOAA AFSC RACE GAP," JOSS, 2023. doi: 10.21105/joss.05593.
+
+Pricenomics. "How William Cleveland Turned Data Visualization Into a Science." Udemy, January 6, 2016. https://priceonomics.com/how-william-cleveland-turned-data-visualization/.
+
+Sasha, Costanza-Chock. "Eyeo 2019 - Sasha Costanza-Chock." Eyeo Festival, 2019. https://vimeo.com/354276956.
+
+Stack Exchange Inc. "Stack Overflow Annual Developer Survey 2024," 2024. https://survey.stackoverflow.co/.
+
+Thorne, Abigail. "Here's What Ethical AI Really Means." Philosophy Tube, October 13, 2023. https://www.youtube.com/watch?v=AaU6tI2pb3M.
+
+Thunder Lotus Games. "Spiritfarer," August 18, 2020. https://thunderlotusgames.com/spiritfarer/.
+
+Tremblay, Kaitlin. "Storytelling with Verbs: Integrating Gameplay and Narrative." GDC, March 17, 2020. https://www.youtube.com/watch?v=ontNUxSLhb8.
+
+U.S. Energy Information Administration. "State Energy Data System (SEDS)," 2024. https://www.eia.gov/state/seds/.
+
+Victor, Bret. "Inventing on Principle." CUSEC, 2012. https://www.youtube.com/watch?v=PUv66718DII.
+
+———. "Media for Thinking the Unthinkable." MIT Media Lab, April 4, 2013. https://vimeo.com/67076984.
+
+Winslow, Steve. Dealing with Open Source Licenses. Nerd Summit. 2019.
+
+Witchbeam. "Unpacking," 2021. https://www.witchbeam.com.au/unpacking.
+
+Wright, Will. "Spore, Birth of a Game." TED Conference, March 2007. https://www.ted.com/talks/will_wright_spore_birth_of_a_game?language=en.
+{% endblock %}
+
+{% block license_heading %}### License{% endblock %}
+{% set license_text = "This resource is released under the [CC-BY-NC license](https://creativecommons.org/licenses/by-nc/4.0/deed.en)." %}

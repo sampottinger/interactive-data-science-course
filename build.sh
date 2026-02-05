@@ -23,6 +23,11 @@ for file in course_wide/*.html; do
         cp "$file" mooc/course_wide/
     fi
 done
-# Copy markdown and PDF files if they exist
-cp course_wide/*.md mooc/course_wide/ 2>/dev/null || true
+# Copy markdown and PDF files (exclude templates and base.md)
+for file in course_wide/*.md; do
+    basename=$(basename "$file")
+    if [[ "$basename" != *"_template.md" && "$basename" != "base.md" ]]; then
+        cp "$file" mooc/course_wide/
+    fi
+done 2>/dev/null || true
 cp course_wide/*.pdf mooc/course_wide/ 2>/dev/null || true
