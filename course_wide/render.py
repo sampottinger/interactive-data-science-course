@@ -78,6 +78,8 @@ def render_manual():
     env = get_template_loader()
     template = env.get_template('manual_template.html')
 
+    syllabus_data = load_syllabus_data()
+
     context = {
         'title': 'Course Manual (Interactive Data Sci / Viz)',
         'description': 'Complete course manual with readings, interactive labs, exercises, and capstone guidance. Navigate assignments, time expectations, collaboration guidelines, and data science projects.',
@@ -85,7 +87,8 @@ def render_manual():
         'og_description': 'Complete course manual with readings, interactive labs, exercises, and capstone guidance. Navigate assignments, time expectations, collaboration guidelines, and data science projects.',
         'og_url': 'https://mooc.interactivedatascience.courses/course_wide/manual.html',
         'twitter_title': 'Course Manual (Interactive Data Sci / Viz)',
-        'twitter_description': 'Complete course manual with readings, interactive labs, exercises, and capstone guidance. Navigate assignments, time expectations, collaboration guidelines, and data science projects.'
+        'twitter_description': 'Complete course manual with readings, interactive labs, exercises, and capstone guidance. Navigate assignments, time expectations, collaboration guidelines, and data science projects.',
+        'lessons': syllabus_data['lessons']
     }
 
     result = template.render(**context)
@@ -156,7 +159,11 @@ def render_manual_md():
     env = get_template_loader()
     template = env.get_template('manual_template.md')
 
-    context = {}
+    syllabus_data = load_syllabus_data()
+
+    context = {
+        'lessons': syllabus_data['lessons']
+    }
 
     result = template.render(**context)
 

@@ -71,7 +71,7 @@ The course is designed across 7 major sections expected to be taken in order.
 |-----|-------------------|-------------------|----------|
 {%- for lesson in lessons %}
 {%- if lesson.section == section.name %}
-| {{ lesson.lesson }} | {% if lesson.reading %}{% for item in lesson.reading %}{% if item.url %}[{{ item.text }}]({{ item.url }}){% else %}{{ item.text }}{% endif %}{% if not loop.last %}{{ item.separator if item.separator else ', ' }}{% elif item.separator %}{{ item.separator }}{% endif %}{% endfor %}{% else %}None{% endif %} | {% if lesson.class %}{% for item in lesson.class %}{{ item.text }}{% if not loop.last %} {% endif %}{% endfor %}{% endif %} | {% if lesson.activity %}{% for item in lesson.activity %}{{ item.text }}{% if not loop.last %} {% endif %}{% endfor %}{% endif %} |
+| [{{ lesson.lesson }}](/lesson{% if lesson.lesson is string %}{{ lesson.lesson.split('/')[0].split('.')[0] }}{% else %}{{ lesson.lesson }}{% endif %}.html) | {% if lesson.reading %}{% for item in lesson.reading %}{% if item.url %}[{{ item.text }}]({{ item.url }}){% else %}{{ item.text }}{% endif %}{% if not loop.last %}{{ item.separator if item.separator else ', ' }}{% elif item.separator %}{{ item.separator }}{% endif %}{% endfor %}{% else %}None{% endif %} | {% if lesson.class %}{% for item in lesson.class %}{{ item.text }}{% if not loop.last %} {% endif %}{% endfor %}{% endif %} | {% if lesson.activity %}{% for item in lesson.activity %}{{ item.text }}{% if not loop.last %} {% endif %}{% endfor %}{% endif %} |
 {%- endif %}
 {%- endfor %}
 {% endfor %}

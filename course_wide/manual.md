@@ -42,21 +42,31 @@ There are 17 readings, each taking about an hour. As documented later, there are
 
 Readings do not have submissions but you are welcome to discuss with the rest of the class or through social media as described in the lectures.
 
-| Week | Day 1                                                                | Day 2                                                             |
-| ---- | -------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| 1    |                                                                      |                                                                   |
-| 2    | [Media for Thinking the Unthinkable (Victor 2013)](https://vimeo.com/67076984) | Dealing with Open Source Licenses (Winslow 2019) |
-| 3    |                                                                      | [Review of Tufte (LeRoy 2018)](https://benjaminleroy.github.io/pages/blog/public/post/2018/05/16/review-of-tufte-s-the-visual-display-of-quantitative-information/) |
-| 4    | [Preattentive Attributes in Visualization (Kesavan 2016)](https://daydreamingnumbers.com/blog/preattentive-attributes-example/) | [Inventing on Principle (Victor 2012)](https://www.youtube.com/watch?v=PUv66718DII) |
-| 5    |                                                                      | [OpenProcessing Genuary](https://openprocessing.org/browse?q=genuary&time=thisYear&type=all&offset=0) |
-| 6    | [Genuary](https://genuary.art/)                                      |                                                                   |
-| 7    | [William Cleveland (Pricenomics 2016)](https://priceonomics.com/how-william-cleveland-turned-data-visualization/) | [From Data to Viz (Holtz 2018)](https://www.data-to-viz.com/) |
-| 8    | [15 View on a Node Link Graph (Munzner 2007)](https://www.youtube.com/watch?v=WOBKnRlOAes) | [Dear Data (Luipi and Posavec 2015)](https://vimeo.com/channels/eyeo2015/133608605) |
-| 9    | [Designing for Realtime Spacecraft (Binx 2016)](https://www.youtube.com/watch?v=HiGd-JJ94QA) | [Bad Doors (Posner et al 2016)](https://www.youtube.com/watch?v=yY96hTb8WgI) |
-| 10   | [Explorable Explanations (Victor 2011)](https://vimeo.com/115154289), [Role of the Player (Portnow 2011)](https://www.youtube.com/watch?v=ulm7bcB2xvY) | [Last Guardian: Language of Games (Brown 2017)](https://www.youtube.com/watch?v=Qot5_rMB8Jc) |
-| 11   | [Super Mario Level 1-1 (Emmons and Portnow 2014)](https://www.youtube.com/watch?v=ZH2wGpEZVgE), [Zelda Open World (Brown 2023)](https://www.youtube.com/watch?v=CZzcVs8tNfE&themeRefresh=1) | [Storytelling with Verbs (Tremblay 2020)](https://www.youtube.com/watch?v=ontNUxSLhb8), [Birth of a Game (Wright 2007)](https://www.ted.com/talks/will_wright_spore_birth_of_a_game?language=en) |
-| 12   | [Games are for Everyone (Brown 2018)](https://www.youtube.com/watch?v=xrqdU4cZaLw) | [What Ethical AI Really Means (Thorne 2023)](https://www.youtube.com/watch?v=AaU6tI2pb3M), [Eyeo 2019 (Costanza-Chock 2019)](https://vimeo.com/354276956) |
-| 13   | [World Design of Metroid (Brown 2018)](https://www.youtube.com/watch?v=kUT60DKaEGc) |                                                                   |
+| Day | Reading |
+| --- | ------- |
+| 2 | [Media for Thinking the Unthinkable (Victor 2013)](https://vimeo.com/67076984) |
+| 3 | [Dealing with Open Source Licenses (Winslow 2019)](https://docs.google.com/presentation/d/1qF9MHkp0p6THLU1bXPV7snaKTMYwYWH0RqxL7v0bJ8Y/edit?usp=sharing) |
+| 4 | [A Byte of Python (Swaroop 2023)](https://python.swaroopch.com) |
+| 5 | [Review of Tufte's "The Visual Display of Quantitative Information" (LeRoy 2018)](https://benjaminleroy.github.io/pages/blog/public/post/2018/05/16/review-of-tufte-s-the-visual-display-of-quantitative-information/) |
+| 6 | [Preattentive Attributes in Visualization (Kesavan 2016)](https://daydreamingnumbers.com/blog/preattentive-attributes-example/) |
+| 7 | [Inventing on Principle (Victor 2012)](https://www.youtube.com/watch?v=PUv66718DII) |
+| 8/9 | [Genuary](https://genuary.art/) |
+| 10 | [All Maps are Wrong (Harris 2016)](https://www.youtube.com/watch?v=kIID5FDi2JQ) |
+| 11 | [How William Cleveland Turned Data Visualization Into a Science (Pricenomics 2016)](https://priceonomics.com/how-william-cleveland-turned-data-visualization/) |
+| 12 | [From Data to Viz (Holtz 2018)](https://www.data-to-viz.com/) |
+| 13 | [Lupi and Posavec (2015)](https://vimeo.com/channels/eyeo2015/133608605) |
+| 14 | [15 Views on a Node Link Graph (Munzner 2007)](https://www.youtube.com/watch?v=WOBKnRlOAes) |
+| 15 | [Designing for Realtime Spacecraft Operations (Binx 2016)](https://www.youtube.com/watch?v=HiGd-JJ94QA) |
+| 16 | [It's Not You, Bad Doors are Everywhere (Posner et al 2016)](https://www.youtube.com/watch?v=yY96hTb8WgI) |
+| 17 | [The Role of the Player (Portnow 2011)](https://www.youtube.com/watch?v=ulm7bcB2xvY), [Explorable Explanations (Victor 2011)](https://worrydream.com/ExplorableExplanations/) |
+| 18 | [The Last Guardian and the Language of Games (Brown 2017)](https://www.youtube.com/watch?v=Qot5_rMB8Jc) |
+| 19 | [Super Mario Bros: Level 1-1 (Edmonds and Portnow 2014)](https://www.youtube.com/watch?v=ZH2wGpEZVgE), [Triangle Design (Brown 2023)](https://www.youtube.com/watch?v=CZzcVs8tNfE&themeRefresh=1). |
+| 21 | [Storytelling with Verbs (Tremblay 2020)](https://www.youtube.com/watch?v=ontNUxSLhb8). [Spore, birth of a game (Wright 2007)](https://www.ted.com/talks/will_wright_spore_birth_of_a_game?language=en) |
+| 22 | [Games are for Everyone (Brown 2018)](https://www.youtube.com/watch?v=xrqdU4cZaLw) |
+| 23 | [Here's What Ethical AI Really Means (Thorne 2023)](https://www.youtube.com/watch?v=AaU6tI2pb3M) or [Sasha Costanza-Chock (2019)](https://vimeo.com/354276956) |
+| 24 | [The World Design of Metroid 1 and Zero Mission (Brown 2018)](https://www.youtube.com/watch?v=kUT60DKaEGc) |
+| 26.2 | Lecture 25.2 is reading for Lecture 26. |
+| 27 | Final reading (see appendix) |
 
 **Remainder:** Readings for Final and Interactive Experience
 
