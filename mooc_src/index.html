@@ -123,8 +123,7 @@
                 <div class="tag">An overview of the class.</div>
                 <p>
                     The course is organized into {{ sections|length }} sections:
-                    {%- set section_list = sections.values()|list -%}
-                    {%- for section in section_list -%}
+                    {%- for section in sections -%}
                         {%- if loop.last %} and {% elif not loop.first %}, {% endif -%}
                         <a href="#{{ section.name }}">{{ section.name }}</a>
                     {%- endfor -%}
@@ -135,7 +134,7 @@
                     objectives.
                 </p>
 
-                {% for section in sections.values() %}
+                {% for section in sections %}
                 <div id="{{ section.name }}" class="lesson-section">
                     <h3>Section {{ loop.index }}: {{ section.name }}</h3>
                     <div class="tag">

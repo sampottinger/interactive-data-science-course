@@ -158,7 +158,8 @@ def main_index():
 
   data = load_course_from_directory(lessons_dir)
 
-  result = template.render(sections=data['sections'])
+  sections_list = list(data['sections'].values())
+  result = template.render(sections=sections_list)
   with open(output_path, 'w') as f:
     f.write(result)
 
