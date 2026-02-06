@@ -70,10 +70,10 @@ def load_course_from_directory(lessons_dir):
   """
   sections = {}
 
-  section_dirs = sorted([
-      d for d in os.listdir(lessons_dir)
-      if os.path.isdir(os.path.join(lessons_dir, d))
-  ])
+  members = os.listdir(lessons_dir)
+  full_paths = map(lambda x: os.path.join(lessons_dir, x), members)
+  unsorted_directories = filter(lambda x: os.path.isdir(x), full_paths)
+  section_dirs = sorted(unsorted_directories)
 
   for section_dir in section_dirs:
     section_name = section_dir.split('_', 1)[1]
