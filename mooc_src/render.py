@@ -85,10 +85,9 @@ def load_course_from_directory(lessons_dir):
       section_meta = yaml.load(f, Loader=yaml.Loader)
 
     lessons = []
-    yaml_files = sorted([
-        f for f in os.listdir(section_path)
-        if f.endswith('.yaml')
-    ])
+    section_members = os.listdir(section_path)
+    yaml_only = filter(lambda x: x.endswith('.yaml'), section_members)
+    yaml_files = sorted(yaml_only)
 
     for yaml_file in yaml_files:
       yaml_path = os.path.join(section_path, yaml_file)
