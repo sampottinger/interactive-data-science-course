@@ -123,10 +123,10 @@
                 <div class="tag">An overview of the class.</div>
                 <p>
                     The course is organized into {{ sections|length }} sections:
-                    {%- for section in sections -%}
-                        {%- if loop.last %} and {% elif not loop.first %}, {% endif -%}
+                    {% for section in sections %}
+                        {% if loop.last %} and {% elif not loop.first %}, {% endif %}
                         <a href="#{{ section.name }}">{{ section.name }}</a>
-                    {%- endfor -%}
+                    {% endfor %}
                     . You may consider
                     going in order as material from one lesson helps set up the
                     concepts introduced in the subsequent lessons. However, you
