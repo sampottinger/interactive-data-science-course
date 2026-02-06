@@ -134,9 +134,9 @@ def load_course_from_directory(lessons_dir):
   unsorted_directories = filter(lambda x: os.path.isdir(x), full_paths)
   section_dirs = sorted(unsorted_directories)
 
-  section_info = map(
-      lambda section_dir: get_section_lessons(section_dir, lessons_dir),
-      section_dirs)
+  get_lesson_from_dir = lambda section_dir: get_section_lessons(
+      section_dir, lessons_dir)
+  section_info = map(get_lesson_from_dir, section_dirs)
   keyed_sections = map(lambda x: (x['name'], x), section_info)
   sections_by_name = dict(keyed_sections)
 
