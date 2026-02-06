@@ -16,4 +16,37 @@ reading: >
 links:
 - text: Video from slides (recommend watching 4:43 to 13:40)
   url: https://vimeo.com/64895205
-citations: true
+citations:
+- text: >
+    A. Shatov, "White Digital Device at 12 00," Unsplash, 2021.
+  available: https://unsplash.com/photos/white-digital-device-at-12-00-DHl49oyrn7Y
+- text: B. Victor, "Stop Drawing Dead Fish," SIGGRAPH, 2012.
+  available: https://vimeo.com/64895205
+- text: >
+    Wikipedia Contributors, "PLATO," Wikimedia Foundation, 2025.
+  available: https://en.wikipedia.org/wiki/PLATO_(computer_system)
+- text: >
+    Kenneth E. Iverson Estates, "Kenneth Eugene Iverson (17 December 1920
+    – 19 October 2004)," Wikimedia Foundation, 2017.
+  available: https://en.wikipedia.org/wiki/Kenneth_E._Iverson#/media/File:Kei_younger.jpg
+- text: >
+    The Grainger College of Engineering, "Donald L. Bitzer," University of
+    Illinois Urbana-Champaign, 2004.
+  available: https://grainger.illinois.edu/alumni/distinguished/Donald-Bitzer
+- text: K. Iverson, "Notation as a Tool of Thought," ACM, 1980.
+  doi: 10.1145/358896.358899
+- text: B. Victor, "Bret Victor," Wikimedia Foundation, 2013.
+  available: https://en.wikipedia.org/wiki/Bret_Victor#/media/File:Bret_Victor.png
+- text: B. Victor, "Explorable Explanations," Bret Victor, 2011.
+  available: https://worrydream.com/ExplorableExplanations/
+- text: M. Appleton, "Programming Portals," Maggie Appleton, 2022.
+  available: https://maggieappleton.com/programming-portals/
+- text: >
+    M. Appleton, "Tools for Thought as Cultural Practices, not Computational
+    Objects," Maggie Appleton, 2025.
+  available: https://maggieappleton.com/tools-thought-talk
+- text: M. Appleton, "Maggie Appleton," Maggie Appleton.
+  available: https://maggieappleton.com/about
+- text: >
+    GDC, "Nicky Case 2019 Crop Photo," Wikimedia Foundation, 2025.
+  available: https://en.wikipedia.org/wiki/Nicky_Case#/media/File:Nicky_Case_-_Game_Developers_Conference_2019_Crop.png

@@ -28,7 +28,9 @@ reading: >
   Optionally review <a href="https://python.swaroopch.com">A Byte of
   Python</a> if you want to brush up on (or learn) the fundamentals of
   Python.
-citations: true
+citations:
+- text: Thanks for imagery.
+  available: https://badriadhikari.github.io/data-viz-workshop-2021/minards/
 links:
 - text: Skills Labs
   url: /labs

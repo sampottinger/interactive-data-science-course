@@ -28,4 +28,35 @@ links:
   url: https://ncase.me/polygons
 - text: Mechanics as Metaphor II
   url: https://youtu.be/pP_qNm-96Dc?feature=shared
-citations: true
+citations:
+- text: >
+    A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse, M.
+    de Bruyn, C. Boettiger, E. Baker, K. Koy, and D. McCauley, "Global
+    Plastics AI Policy Tool," University of California, 2024.
+  available: https://global-plastics-tool.org/
+- text: >
+    A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse, C.
+    Liu, S. Hu, M. de Bruyn, C. Boettiger, E. Baker, and D. McCauley,
+    "Pathways to reduce global plastic waste mismanagement and greenhouse gas
+    emissions by 2050," Science, 2024.
+  doi: 10.1126/science.adr3837
+- text: >
+    G. Nicoli, "Spiritfarer: la morte felice," Ludica, 2020.
+  available: https://www.ludicamag.com/spiritfarer-la-morte-felice/
+- text: >
+    J. Portnow, "Mechanics as Metaphor I," Extra Credits, 2012.
+  available: https://www.youtube.com/watch?v=4QwcI4iQt2Y
+- text: >
+    A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse, M.
+    de Bruyn, C. Boettiger, E. Baker, K. Koy, ThoughtLab, and D. McCauley,
+    "Plastics Treaty," University of California, 2023.
+  available: https://plasticstreaty.berkeley.edu/
+- text: >
+    K. Rees and Periscopic, "U.S. Gun Killings in 2018," Periscopic, 2018.
+  available: https://guns.periscopic.com/
+- text: >
+    K. Sumah, L. Floyd, and H. McCracken, "Changes in State Firearm
+    Mortality," Rand Corporation, 2024.
+  available: https://www.rand.org/research/gun-policy/longitudinal-firearm-mortality.html
+- text: V. Hart and N. Case, "Parable of the Polygons," Nicky Case, 2022.
+  available: https://ncase.me/polygons/

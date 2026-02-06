@@ -19,7 +19,9 @@ reading: >
   continue to shape data visualization today. Please read <a
   href="https://benjaminleroy.github.io/pages/blog/public/post/2018/05/16/review-of-tufte-s-the-visual-display-of-quantitative-information/">
   this review of Tufte from LeRoy</a>.
-citations: true
+citations:
+- text: Thanks for imagery.
+  available: https://badriadhikari.github.io/data-viz-workshop-2021/minards/
 links:
 - text: Skills Labs
   url: /labs

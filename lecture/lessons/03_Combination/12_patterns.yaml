@@ -36,4 +36,33 @@ assignment: >
 reading: >
   Please take a look at a discussion of <a
   href="https://vimeo.com/133608605">Dear Data at Eyeo (2015)</a>.
-citations: true
+citations:
+- text: Tableau, "Tableau Logo," Salesforce, 2024.
+  available: https://www.salesforce.com/news/tableau-from-salesforce-logo-color-1/
+- text: >
+    H. Wickham, "Tidy Data," Journal of Statistical Software,
+    2014.
+  available: https://www.jstatsoft.org/article/view/v059i10
+- text: >
+    Tableau, "Dimensions and Measures, Blue and Green," Salesforce.
+  available: https://help.tableau.com/current/pro/desktop/en-us/datafields_typesandroles.htm
+- text: >
+    S. Carmody, "Mosaic Big," Wikimedia Foundation, 2009.
+  available: https://en.wikipedia.org/wiki/Mosaic_plot#/media/File:Mosaic-big.png
+- text: >
+    G. Silvermanaz, "2012 Singapore Products Export Treemap,"
+    Wikimedia Foundation, 2014.
+  available: https://en.wikipedia.org/wiki/Treemapping#/media/File:2012_Singapore_Products_Export_Treemap.png
+- text: >
+    S. Maskey, "Zoomable Sunburst with Labels Issue," StackOverflow,
+    2014.
+  available: https://stackoverflow.com/questions/24547620/zoomable-sunburst-with-labels-issue
+- text: >
+    T. Munzner, "A Nested Model for Visualization Design and
+    Validation," in IEEE Transactions on Visualization and Computer
+    Graphics, vol. 15, no. 6, pp. 921–928, Nov.–Dec. 2009.
+  doi: 10.1109/TVCG.2009.111
+- text: S. Zhang, "Canyon," OpenProcessing.
+  available: https://openprocessing.org/sketch/2552991
+- text: Y. Holtz and C. Healy, "From Data to Viz," 2018.
+  available: https://www.data-to-viz.com
