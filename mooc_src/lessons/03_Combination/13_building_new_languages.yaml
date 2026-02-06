@@ -1,0 +1,21 @@
+number: 13
+name: Building New Languages
+video: 1064101038
+materials_pdf: true
+materials_pptx: true
+materials_md: true
+text: >
+  Exploration of how to make new visual representations through the
+  use of visual encoding mappings as well as two new patterns for
+  fitting in more variables... movements and levels. Finally, a look
+  at data formats and a discussion of advice for geospatial
+  visualization.
+assignment: >
+  Please draw some representation of your last 5 years and what you
+  hope your next 5 years will look like. You can use whatever tools
+  and materials you like other than code. For inspiration see <a
+  href="https://www.dear-data.com/theproject">Dear Data</a>.
+reading: >
+  Please watch <a href="https://youtu.be/WOBKnRlOAes">15 Views on a
+  Node-Link Graph</a> by Tamara Munzner.
+citations: true

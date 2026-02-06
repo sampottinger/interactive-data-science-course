@@ -1,0 +1,39 @@
+number: 12
+name: Patterns
+video: 1062955146
+materials_pdf: true
+materials_pptx: true
+materials_md: true
+text: >
+  A tour through common chart types used for different situations as
+  well as common terminology and a brief introductory mention of
+  domains and tasks.
+assignment: >
+  <p>
+    We will continue the Census visualization you started in the last
+    exercise. This activity is the same but, whereas the previous
+    prompt asked for 4 or more variables, please include 6 or more
+    variables this time. If you want a little cheat code,
+
+    <a href="https://github.com/sampottinger/census-example-sketchingpy">
+      my response is available on GitHub
+    </a>.
+
+    License under BSD-3-Clause. Please run assignment_10.py. Totally
+    optional! Just leaving this here if you want to take advantage of
+    it. See also a
+
+    <a href="https://vimeo.com/1064872882">
+      video walkthrough of the code
+    </a>.
+  </p>
+  <p>
+    Once more, if this is feeling a little difficult, you may
+    optionally elect to engage AI assistants. If that is of interest,
+    check out the bonus <a href="/lesson26.html">Lesson 26</a> on
+    using AI.
+  </p>
+reading: >
+  Please take a look at a discussion of <a
+  href="https://vimeo.com/133608605">Dear Data at Eyeo (2015)</a>.
+citations: true

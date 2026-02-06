@@ -122,34 +122,31 @@
                 <h2>Lessons</h2>
                 <div class="tag">An overview of the class.</div>
                 <p>
-                    The course is organized into five sections:
-                    <a href="#hello">hello</a>,
-                    <a href="#primitives">primitives</a>,
-                    <a href="#combination">combination</a>,
-                    <a href="#conversation">conversation</a>, and
-                    <a href="#context">context</a>. You may consider
-                    going in order as material from one lesson helps set up the
-                    concepts introduced in the subsequent lessons. However, you
-                    are also encouraged to jump around to meet your own learning
-                    objectives.
+                    The course is organized into {{ sections|length }} sections:
+                </p>
+                <ul>
+                    {% for section in sections %}
+                    <li><a href="#{{ section.name }}">{{ section.name }}</a></li>
+                    {% endfor %}
+                </ul>
+                <p>
+                    You may consider going in order as material from one lesson
+                    helps set up the concepts introduced in the subsequent
+                    lessons. However, you are also encouraged to jump around to
+                    meet your own learning objectives.
                 </p>
 
-                <div id="hello" class="lesson-section">
-                    <h3>Section 1: Hello</h3>
+                {% for section in sections %}
+                <div id="{{ section.name }}" class="lesson-section">
+                    <h3>Section {{ loop.index }}: {{ section.name }}</h3>
                     <div class="tag">
-                        Begin with an initial exploration of key ideas.
+                        {{ section.tagline }}
                     </div>
                     <p>
-                        We start our journey together by motivating why data
-                        visualization is useful, what interactive science can
-                        offer, and take an early look at some of the
-                        foundational ideas that we will explore together
-                        throughout the rest of the course. We will also make
-                        sure everyone has what they need to do some upcoming
-                        activities with two skills labs.
+                        {{ section.detailed }}
                     </p>
                     <ul>
-                        {% for lesson in sections['hello'] %}
+                        {% for lesson in section.lessons %}
                         <li>
                             <a href="/lesson{{ lesson['number'] }}.html"
                                 >Lesson {{ lesson['number'] }}: {{
@@ -159,131 +156,7 @@
                         {% endfor %}
                     </ul>
                 </div>
-
-                <div id="primitives" class="lesson-section">
-                    <h3>Section 2: Primitives</h3>
-                    <div class="tag">
-                        Study of the essential building blocks for data
-                        visualization.
-                    </div>
-                    <p>
-                        We next transition to the foundational building blocks
-                        of data visualization and explore the cognitive science
-                        underpinnings behind effective information design. We
-                        also have our first small projects that begin to offer
-                        hands-on experiences to build custom graphics with code.
-                    </p>
-                    <ul>
-                        {% for lesson in sections['primitives'] %}
-                        <li>
-                            <a href="/lesson{{ lesson['number'] }}.html"
-                                >Lesson {{ lesson['number'] }}: {{
-                                lesson['name'] }}</a
-                            >
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-
-                <div id="combination" class="lesson-section">
-                    <h3>Section 3: Combination</h3>
-                    <div class="tag">
-                        Understand common patterns and methods for making new
-                        ones.
-                    </div>
-                    <p>
-                        Having built up the primitives used in data
-                        visualization, we pick up the pace to build
-                        sophisticated data graphics. After using existing chart
-                        types, we venture into the great unknown by looking at
-                        how these building blocks enable us to build completely
-                        new visual representations and how to test if novel
-                        approaches are successful.
-                    </p>
-                    <ul>
-                        {% for lesson in sections['combination'] %}
-                        <li>
-                            <a href="/lesson{{ lesson['number'] }}.html"
-                                >Lesson {{ lesson['number'] }}: {{
-                                lesson['name'] }}</a
-                            >
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-
-                <div id="combination" class="lesson-section">
-                    <h3>Section 4: Conversation</h3>
-                    <div class="tag">
-                        Consider and design for the reader's dialogue with your
-                        work.
-                    </div>
-                    <p>
-                        Just short of half way through the course, you are
-                        already an expert at choosing from existing chart types
-                        and constructing your own novel visual representations.
-                        Next we look critically at the role of the reader to
-                        construct media which enable users to explore more
-                        freely and become a co-creator of knowledge.
-                    </p>
-                    <ul>
-                        {% for lesson in sections['conversation'] %}
-                        <li>
-                            <a href="/lesson{{ lesson['number'] }}.html"
-                                >Lesson {{ lesson['number'] }}: {{
-                                lesson['name'] }}</a
-                            >
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-
-                <div id="context" class="lesson-section">
-                    <h3>Section 5: Context</h3>
-                    <div class="tag">
-                        Expand our understanding of the reader.
-                    </div>
-                    <p>
-                        Now that we have a deeper understanding of how to think
-                        about the reader within our designs, we next zoom out to
-                        understand users as within a broader social and physical
-                        context. We also consider visualization in a broader
-                        sense-making context.
-                    </p>
-                    <ul>
-                        {% for lesson in sections['context'] %}
-                        <li>
-                            <a href="/lesson{{ lesson['number'] }}.html"
-                                >Lesson {{ lesson['number'] }}: {{
-                                lesson['name'] }}</a
-                            >
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-
-                <div id="context" class="lesson-section">
-                    <h3>Conclusion</h3>
-                    <div class="tag">
-                        Grow your technical tool chest and demonstrate what you
-                        learned.
-                    </div>
-                    <p>
-                        You now have some of the most important concepts in data
-                        visualization and interactive science. Next, we explore
-                        different technical skills and complete a final project.
-                    </p>
-                    <ul>
-                        {% for lesson in sections['conclusion'] %}
-                        <li>
-                            <a href="/lesson{{ lesson['number'] }}.html"
-                                >Lesson {{ lesson['number'] }}: {{
-                                lesson['name'] }}</a
-                            >
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
+                {% endfor %}
             </section>
 
             <section id="materials">

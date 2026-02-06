@@ -5,9 +5,11 @@ mkdir mooc
 cd mooc_src
 bash render.sh
 cd ..
-cp -r mooc_src/support mooc/support
-cp -r mooc_src/pdf mooc/pdf
-cp -r mooc_src/pptx mooc/pptx
-cp -r mooc_src/md mooc/md
+mkdir -p mooc/support
+cp -r mooc_src/support/web mooc/support/web
+cp -r mooc_src/support/misc mooc/support/misc
+cp -r mooc_src/support/pdf mooc/pdf
+cp -r mooc_src/support/pptx mooc/pptx
+cp -r mooc_src/support/md mooc/md
 cp -r labs mooc/labs
 cp -r course_wide mooc/course_wide

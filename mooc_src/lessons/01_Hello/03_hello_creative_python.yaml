@@ -1,0 +1,36 @@
+number: 3
+name: Hello Creative Python
+video: 1049110017
+materials_pdf: true
+materials_pptx: true
+materials_md: true
+text: >
+  A hands-on first look at how we can use Python for creative coding.
+  See tutorials at <a href="/labs">Skills Labs</a>.
+assignment: >
+  Revisit the visualization from the last exercise. What might the 4
+  perspectives say about this visualization?
+
+  <ul>
+    <li>What visual encoding devices are used?</li>
+    <li>What task or user journey is being accomplished through the
+    piece?</li>
+    <li>Does the piece try to also convey an emotion and, if so,
+    how?</li>
+    <li>
+      Does the piece invite the reader to reach their own conclusions
+      about the data and, if so, how?
+    </li>
+  </ul>
+
+  Please write 4 - 8 sentences.
+reading: >
+  Optionally review <a href="https://python.swaroopch.com">A Byte of
+  Python</a> if you want to brush up on (or learn) the fundamentals of
+  Python.
+citations: true
+links:
+- text: Skills Labs
+  url: /labs
+- text: Sketchingpy Online Sketchbook
+  url: https://editor.sketchingpy.org/

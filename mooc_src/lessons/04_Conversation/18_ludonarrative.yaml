@@ -1,0 +1,31 @@
+number: 18
+name: Ludonarrative
+video: 1071935515
+materials_pdf: true
+materials_pptx: true
+materials_md: true
+text: >
+  Examine the ideas of ludonarrative and environmental storytelling.
+  Please see examples in the <a href="#links">links section</a>. I
+  strongly recommend spending some time with each! Please note that
+  there are multiple content warnings for this lecture.
+reading: >
+  Please take a deeper dive into ways to convey narrative without
+  dialogue. Watch <a href="https://youtu.be/Qot5_rMB8Jc">The Last
+  Guardian and the Language of Games</a>.
+links:
+- text: Mechanics as Metaphor I
+  url: https://youtu.be/4QwcI4iQt2Y?feature=shared
+- text: Global Plastics Treaty
+  url: https://plasticstreaty.berkeley.edu/
+- text: Global Plastics AI Policy Tool
+  url: https://global-plastics-tool.org/
+- text: Periscopic Gun Deaths
+  url: https://guns.periscopic.com/
+- text: Rand Firearm Mortality
+  url: https://www.rand.org/research/gun-policy/longitudinal-firearm-mortality.htm
+- text: Parable of the Polygons
+  url: https://ncase.me/polygons
+- text: Mechanics as Metaphor II
+  url: https://youtu.be/pP_qNm-96Dc?feature=shared
+citations: true

@@ -35,8 +35,34 @@ There are two major areas of the course materials: the MOOC source and the skill
 ### MOOC Source
 This includes the "lecture" class materials. All lessons must have, at minimum, a yaml entry. However, other materials may appear as well. These materials are rendered into a content management system with formalized / standardized templates.
 
+The MOOC source is organized in `mooc_src/` with the following structure:
+ - `lessons/`: Section directories containing per-lesson YAML files and section metadata
+ - `support/`: Supporting materials organized by type (md, pdf, pptx, web, misc)
+ - `citations/`: Citation files for lessons
+
 #### YAML
-We use yaml to index all files and materials. Each yaml file can contain one or more sections where sections is a list of named sections which contain an ordered list of lessons. Each lesson may have:
+Course lessons are organized in the `mooc_src/lessons/` directory. This
+directory contains numbered section subdirectories (e.g., `01_Hello`,
+`02_Primitives`), each containing individual YAML files for each lesson
+and an `index.yml` file with section metadata. Each lesson YAML file
+represents a single lesson as a top-level mapping. Lesson files are named with a numeric prefix
+followed by a descriptive name (e.g., `00_hello_preface.yaml`,
+`01_hello_visualization.yaml`).
+
+Each section directory must also contain an `index.yml` file with section
+metadata:
+
+| **Field** | **Required** | **Purpose**                                           | **Type** |
+| --------- | ------------ | ----------------------------------------------------- | -------- |
+| name      | Yes          | The section name (e.g., "Hello", "Primitives").       | string   |
+| tagline   | Yes          | A brief one-sentence tagline for the section.         | string   |
+| detailed  | Yes          | Longer description of the section content and goals.  | string   |
+
+The `detailed` field should use `>` (folded scalar) for multi-line content
+and follow the same line length guidelines as lesson YAML files (100
+characters or fewer).
+
+Each lesson may have:
 
 | **Field**      | **Required** | **Purpose**                                                                                              | **Type** |
 | -------------- | ------------ | -------------------------------------------------------------------------------------------------------- | -------- |
@@ -141,7 +167,15 @@ Citations from the markdown may differ from the txt citations file where require
 Slides should be provided as PDF files with optional but encouraged PPTX versions. There should be a title slide and a slide indicating creative commons license.
 
 #### Support
-Files beyond those above are also allowed. In general, these are files used across multiple lessons or special files supporting specific lesson activities.
+All lesson materials (markdown, PDF, and PPTX files) are stored under `mooc_src/support/` to organize supporting materials in a central location. The support directory contains:
+
+ - `md/`: Markdown versions of all lessons
+ - `pdf/`: PDF slide decks for all lessons
+ - `pptx/`: PowerPoint source files for all lessons
+ - `web/`: Web assets used across multiple lessons
+ - `misc/`: Miscellaneous files for specific lesson activities (datasets, supplemental documents, etc.)
+
+Files beyond the standard lesson materials are also allowed in the `misc/` subdirectory. In general, these are files used across multiple lessons or special files supporting specific lesson activities.
 
 ### Skills Labs
 During original teaching of this course as Stat 198 at UC Berkeley, the skills labs were taught using a flipped classroom structure. These are distinct to regular lessons in that there is minimal to no lecture component. Instead, time is spent on one or more directly interactive activities.

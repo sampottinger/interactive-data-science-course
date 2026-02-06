@@ -1,0 +1,28 @@
+number: 9
+name: Sketching in Code 2
+materials_pdf: false
+materials_pptx: false
+materials_md: true
+text: >
+  <p>
+    Looking at the other elements we can bring into our work... text,
+    images, data, and the user. Please try to complete the remaining
+    tutorials under Skills Lab 3 at <a href="/labs">Labs</a>.
+  </p>
+  <p>
+    If you are having trouble, you may optionally elect to engage AI
+    assistants. If that is of interest, check out the bonus <a
+    href="/lesson26.html">Lesson 26</a> on using AI.
+  </p>
+assignment: >
+  For this follow up exercise, we are going to add interactivity.
+  Specifically, add interaction that uses only a single action or verb
+  like hover or click. This action could be contextualized like we saw
+  in Skills Lab 4's rotating color wheels. However, the goal is to
+  explore how our work can respond to a simple user action.
+links:
+- text: Skills Labs
+  url: /labs
+- text: Sketchingpy Online Sketchbook
+  url: https://editor.sketchingpy.org/
+citations: false
