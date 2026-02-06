@@ -1,0 +1,29 @@
+name: Orientation
+file: features_orientation.html
+header: >
+  In our previous tutorials, we explored form, color, and position as preattentive
+  features. In this tutorial, we complete our exploration of basic preattentive
+  features by looking at orientation.
+sections:
+  - name: intro
+    short: Introduction
+    long: Introduction to orientation as a preattentive feature
+    body: >
+      Orientation refers to the angle or rotation of visual elements.
+      It can be used to encode data or create visual variety.
+  - name: rotation
+    short: Rotation
+    long: Learn to rotate shapes
+    body: >
+      Learn how to rotate shapes and use orientation to encode information
+      in your visualizations.
+  - name: next
+    short: Next
+    long: Continue to the next tutorial
+    body: >
+      Continue on to
+      <a href="/labs/resources_text.html">Tutorial 8</a>
+      to learn about working with text in your visualizations.
+citations:
+  - text: A. Pottinger, "Sketchingpy." Sketchingpy Project, 2024. [Online].
+    available: https://sketchingpy.org/

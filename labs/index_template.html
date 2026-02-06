@@ -1,0 +1,95 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Skills Labs (Interactive Data Sci / Viz)</title>
+        <meta name="description" content="14 hands-on labs covering Python, graphics, data visualization, preattentive features, and AI-assisted design. Interactive tutorials with live code." />
+        <link href="/support/web/supplemental.css" rel="stylesheet" type="text/css" />
+
+        <meta
+            property="og:title"
+            content="Skills Labs (Interactive Data Sci / Viz)"
+        />
+        <meta property="og:type" content="article" />
+        <meta
+            property="og:description"
+            content="14 interactive labs for data visualization skills: Python, graphics, preattentive features, data handling, and AI design. Free hands-on tutorials you can complete at your own pace."
+        />
+        <meta
+            property="og:url"
+            content="https://mooc.interactivedatascience.courses/labs/"
+        />
+        <meta
+            property="og:image"
+            content="https://mooc.interactivedatascience.courses/support/web/card.jpg"
+        />
+
+        <meta
+            name="twitter:title"
+            content="Skills Labs (Interactive Data Sci / Viz)"
+        />
+        <meta
+            name="twitter:description"
+            content="14 interactive labs for data visualization skills: Python, graphics, preattentive features, data handling, and AI design. Free hands-on tutorials you can complete at your own pace."
+        />
+        <meta
+            name="twitter:image"
+            content="https://mooc.interactivedatascience.courses/support/web/card.jpg"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+    </head>
+    <body>
+        <div class="skip-link">
+            <a href="#main">Skip to content</a>
+        </div>
+        <header>
+            This page provides an index for all of the skills labs as part of
+            Stat 198: Interactive Data Science and Visualization.
+            <a href="/">Return to course homepage</a>.
+        </header>
+        <main id="main">
+            <h1>Skills Labs</h1>
+            Hello! This page provides links to all of our skills labs for the
+            semester. It will be updated as we go along. Remember that Skills
+            Labs use a "flipped classroom" so you will complete these on your
+            own time. However, I will be available during regular lecture hours
+            and office hours to assist. Look forward to seeing what you make!
+            {% if labs and labs[0].tutorials %}
+            <a href="/labs/{{ labs[0].tutorials[0].file }}">Start first tutorial</a>.
+            {% endif %}
+
+            {% for lab in labs %}
+            <section>
+                <h2>Lab {{ loop.index }}: {{ lab.name }}</h2>
+                {{ lab.subheader | safe }}{% if lab.lesson %} This corresponds to
+                <a href="/lesson{{ lab.lesson }}.html">Lesson {{ lab.lesson }}</a>.{% endif %}
+
+                <ul>
+                    {% for tutorial in lab.tutorials %}
+                    <li>
+                        <a href="/labs/{{ tutorial.file }}"
+                            >Tutorial {{ tutorial.number }}: {{ tutorial.name }}</a
+                        >
+                    </li>
+                    {% endfor %}
+                </ul>
+            </section>
+            {% endfor %}
+
+            <section>
+                <h2>License</h2>
+                Code at mooc.interactivedatascience.courses/labs is released under
+                the
+                <a href="https://opensource.org/license/bsd-3-clause"
+                    >BSD 3-Clause License</a
+                >. Everything else at mooc.interactivedatascience.courses/labs is
+                released under the
+                <a href="https://creativecommons.org/licenses/by/4.0/"
+                    >CC-BY License</a
+                >.
+            </section>
+        </main>
+    </body>
+</html>

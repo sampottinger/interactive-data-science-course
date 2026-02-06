@@ -17,7 +17,7 @@ You must execute the following phases in strict sequence for the assigned lesson
 4. If CONTRIBUTING.md is missing or lacks YAML guidelines, immediately inform the user and request clarification
 
 ### Phase 2: Lesson Identification
-1. Locate the specific lesson YAML file under `mooc_src/lessons/` that you've been assigned to work on. Lessons are organized in numbered section directories (e.g., `01_Hello/`, `02_Primitives/`) with individual YAML files per lesson (e.g., `00_hello_preface.yaml`).
+1. Locate the specific lesson YAML file under `lecture/lessons/` that you've been assigned to work on. Lessons are organized in numbered section directories (e.g., `01_Hello/`, `02_Primitives/`) with individual YAML files per lesson (e.g., `00_hello_preface.yaml`).
 2. Verify you've identified the correct lesson by confirming its title or identifier with available context
 3. Read the complete YAML file for this lesson, including all properties
 4. If the lesson cannot be found or is ambiguous, stop and ask for clarification
@@ -101,4 +101,4 @@ Your final deliverable is a lesson entry that perfectly conforms to CONTRIBUTING
 
 ## Notes
 
-Lesson YAML files are in `mooc_src/lessons/` organized by section directories (e.g., `mooc_src/lessons/01_Hello/00_hello_preface.yaml`). To check your work, invoke `python3 ./render.py lesson ./lesson.html ./lessons $i ../mooc/lesson$i.html` from the `mooc_src/` directory (where `$i` is the lesson number). This can check both that the yaml is valid grammatically and interpreted correctly. Please do not make temporary scripts or invoke Python otherwise where possible. Just rely on the render.py script. See render.sh for more details.
+Lesson YAML files are in `lecture/lessons/` organized by section directories (e.g., `lecture/lessons/01_Hello/00_hello_preface.yaml`). To check your work, invoke `python3 ./render.py lesson ./lesson.html ./lessons $i ../mooc/lesson$i.html` from the `lecture/` directory (where `$i` is the lesson number). This can check both that the yaml is valid grammatically and interpreted correctly. Please do not make temporary scripts or invoke Python otherwise where possible. Just rely on the render.py script. See render.sh for more details.

@@ -1,0 +1,34 @@
+name: Images and Buffers
+file: resources_images.html
+header: >
+  In this tutorial, we explore working with images and buffers in
+  Sketchingpy for more advanced visualization techniques.
+sections:
+  - name: intro
+    short: Introduction
+    long: Introduction to images and buffers
+    body: >
+      Images can add richness to visualizations. Learn how to load and
+      display images in your sketches.
+  - name: loading
+    short: Loading Images
+    long: Learn to load and display images
+    body: >
+      Learn how to load image files and display them in your visualizations
+      using Sketchingpy.
+  - name: buffers
+    short: Buffers
+    long: Understanding graphics buffers
+    body: >
+      Buffers allow for advanced graphics techniques. Learn about
+      off-screen rendering and compositing.
+  - name: next
+    short: Next
+    long: Continue to the next tutorial
+    body: >
+      Continue on to
+      <a href="/labs/resources_loops.html">Tutorial 10</a>
+      to learn about user interaction loops.
+citations:
+  - text: A. Pottinger, "Sketchingpy." Sketchingpy Project, 2024. [Online].
+    available: https://sketchingpy.org/

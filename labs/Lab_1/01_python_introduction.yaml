@@ -1,0 +1,282 @@
+name: Python Introduction
+file: python_intro.html
+header: >
+  Hello! This page is intended for those who maybe have less prior experience with Python. This will provide an overview of some common features of the language that may be useful during the semester. That said, this certainly isn't comprehensive. Depending on your comfort level, I may also suggest <a href="https://python.swaroopch.com">A Byte of Python</a> as a more complete guide. If you already know Python, you may also consider <a href="/labs/python_graphics.html">skipping to Tutorial 2</a>.
+sections:
+  - name: setup
+    short: Getting set up for Python
+    long: Learn how to set up your Python environment using Jupyter Lite or local installation
+    body: >
+      <p>
+          This course can be completed entirely within a web browser and you can use <a href="https://jupyter.org/try-jupyter/lab/">Jupyter Lite</a> to complete this tutorial. While I have written this document assuming you are taking this approach, you may optionally install Python "locally" on your machine instead using the instructions for Linux, Mac, and Windows found in the <a href="https://docs.python-guide.org/starting/installation/">Hitchiker's Guide to Python</a>.
+      </p>
+      <p>
+          If you are using <a href="https://jupyter.org/try-jupyter/lab/">Jupyter Lite</a> (or <a href="https://jupyter.org/install">local Jupyter</a>), go ahead and create a new notebook. You can execute code by typing it into a cell and pressing shift-enter (or shift-return). You can also re-execute prior code by clicking on a cell and presing shift-enter (or shift-return).
+      </p>
+  - name: exercise
+    short: Exercise
+    long: Introduction to the bank account tracking exercise
+    body: >
+      <p>In this exercise, we will write code which tracks bank accounts and moves money between them. This might be a little business-y though that's what computers are often used for! Of course, we will get some variety in the <a href="/labs/python_graphics.html">subsequent tutorial</a> where we will move into some more creative coding.</p>
+
+      <p>Anyway, a computer program is kind of like an empty world you can fill with your thoughts. You can build almost anything from scratch. However, there are a few basic tools for you to use. For example, computers do know about numbers and math. We will explore developing a useful program taking advantage of the types of things that the computer already knows about, largely by giving names to numbers and telling the computer how to change those values over time.</p>
+  - name: arithmetic
+    short: Arithmetic
+    long: Learn basic arithmetic operations in Python
+    body: >
+      Doing arithmetic is easy. We can add numbers (try this out in your notebook):
+
+      <pre>5 + 4</pre>
+
+      We can subtract numbers:
+
+      <pre>5 - 4</pre>
+
+      We can multiply numbers:
+
+      <pre>5 * 4</pre>
+
+      We can divide numbers:
+
+      <pre>5 / 4</pre>
+
+      We can make equations:
+
+      <pre>5 + 2 / 4</pre>
+
+      We can use parantheses:
+
+      <pre>(5 + 2) / 4</pre>
+
+      Every time you use a calculator, you are doing a little programming. Learn more about <a href="https://python.swaroopch.com/op_exp.html">math in Python</a>.
+  - name: variables
+    short: Variables
+    long: Learn how to create and use variables in Python
+    body: >
+      We can give names to numbers and change the value of those names over time. We call these names "variables" to annoy mathematicians. For example, we can put $5 in a bank account:
+
+      <pre>my_bank_account = 5</pre>
+
+      Now, the concept "my_bank_account" exists within this empty world. We can change that balance:
+
+      <pre>my_bank_account = my_bank_account + 4</pre>
+
+      Of course, we can check the value of a variable too by putting it into a cell and executing:
+
+      <pre>my_bank_account</pre>
+
+      You can use just about any name you want containing numbers, letters, and underscores. That said, the computer thinks names are case sensitive and, for some old reasons, they can't start with a number. <a href="https://python.swaroopch.com/basics.html#variable">More info about variables</a>.
+  - name: lists
+    short: Lists
+    long: Learn how to work with lists in Python
+    body: >
+      Maybe we have more than one bank account. We can create lists of values like a bank account with $5 and another with $10 and another with $15:
+
+      <pre>my_bank_accounts = [5, 10, 15]</pre>
+
+      We can refer to individual numbers within the list. For reasons that make more sense to the computer than the humans, the first item in a list is called 0, the second called 1, and so on.
+
+      <pre>my_bank_accounts[0]</pre>
+
+      We can use these values like variables. Maybe we can figure out how much is in our first two accounts:
+
+      <pre>my_bank_accounts[0] + my_bank_accounts[1]</pre>
+
+      We can even use other variables to figure out which value we want:
+
+      <pre>index = 0
+      my_bank_accounts[index]</pre>
+
+      Of course, we can add to our lists too:
+
+      <pre>my_bank_accounts.append(20)
+      my_bank_accounts</pre>
+
+      See <a href="https://python.swaroopch.com/data_structures.html#list">more info about lists</a>. All that said, working on just one value in a list a time can be a pain. So, we will next tell the computer to do something over and over again.
+  - name: loops
+    short: Loops
+    long: Learn how to use loops to repeat actions in Python
+    body: >
+      We can tell the computer to do something multiple time. For example, we can get the total amount across all of our accounts no matter how many accounts we have:
+
+      <pre>total_money = 0
+      for bank_account in my_bank_accounts:
+          total_money = total_money + bank_account</pre>
+
+      In the above snippet, we have a "loop" where the indented code below is repeated, once for each bank account in my_bank_accounts. A variable called bank_account exists but only within that indented section. The indent tells the computer to make a small world inside our world (a "room" maybe?) that lasts just for a little while in order to perform some task. After the task is over (in this case, a single bank account is processed), that little world is discarded. There are lots of things you can do with loops, see <a href="https://python.swaroopch.com/control_flow.html">more info about loops</a>.
+  - name: strings
+    short: Strings
+    long: Learn how to work with text strings in Python
+    body: >
+      <p>
+          The computer also knows about letters. That said, instead of letters, programmers say "characters" to encompass anything you can type. We can combine these characters together into "strings" which are like numbers in that the computer can manipulate them:
+
+          <pre>my_name = 'Sam'</pre>
+
+          They can be read just like numbers given names:
+
+          <pre>my_name</pre>
+
+          We can also add strings together:
+
+          <pre>my_name = my_name + ' Pottinger'</pre>
+
+          There's lots that strings can do. <a href="https://developers.google.com/edu/python/strings">More info about strings</a>.
+      </p>
+  - name: dictionaries
+    short: Dictionaries
+    long: Learn how to use dictionaries to map keys to values
+    body: >
+      Sometimes it isn't convienent to refer to our first bank account as 0 and our second as 1. Maybe we have different bank accounts for different people. Dictionaries map from one value to another:
+
+      <pre>bank_accounts = {'mine': 5, 'yours': 10}</pre>
+
+      Now, instead of using a number as a name within a list, we can use a name as a name:
+
+      <pre>bank_accounts['mine']</pre>
+
+      The name we give to a value is called the key:
+
+      <pre>all_names = ''
+      for account_name in bank_accounts.keys():
+          name_with_space = account_name + ' '
+          all_names = all_names + name_with_space</pre>
+
+      So, we can take a look at all the names:
+
+      <pre>all_names</pre>
+
+      We can also look at all the values. Maybe this dictionary has account balances for all the accounts at the bank:
+
+      <pre>total_money = 0
+      for balance in bank_accounts.values():
+          total_money = total_money + balance</pre>
+
+      These are just names though and we can add new ones easily.
+
+      <pre>bank_accounts['someone else'] = 15</pre>
+
+      <a href="https://python.swaroopch.com/data_structures.html#dictionary">Learn more about dictionaries</a>.
+  - name: functions
+    short: Functions
+    long: Learn how to define and use functions in Python
+    body: >
+      We have given names to numbers but we can also give names to code. For example, you could pay me:
+
+      <pre>def pay_me():
+          bank_accounts['mine'] = bank_accounts['mine'] + 1
+          bank_accounts['yours'] = bank_accounts['yours'] - 1</pre>
+
+      Now, the action "pay_me" exists in this world. You can run that code by using its name and adding parantheses afterwards:
+
+      <pre>pay_me()</pre>
+
+      Try seeing what your bank balance is now:
+
+      <pre>bank_accounts['yours']</pre>
+
+      Notice the indent. This "function" makes a small world inside our world (a "room" perhaps?) and does some actions there just like we saw with the for loop. We can tell the computer a bit more information about how we want to execute an action:
+
+      <pre>def transfer(from_account, to_account, amount):
+          bank_accounts[from_account] = bank_accounts[from_account] - amount
+          bank_accounts[to_account] = bank_accounts[to_account] - amount</pre>
+
+      These names like "from_account" only exist within that small world inside a world made. They are re-made each time you run "transfer" like so:
+
+      <pre>transfer("mine", "yours", 2)
+      transfer("yours", "mine", 3)</pre>
+
+      Now, let's see what my balance is:
+
+      <pre>bank_accounts['mine']</pre>
+
+      Giving names to code can be really useful. <a href="https://python.swaroopch.com/functions.html">Learn more about functions</a>.
+  - name: conditionals
+    short: Conditionals
+    long: Learn how to use conditional statements in Python
+    body: >
+      Let's say that the bank gives you 1% interest if you have over $2. We can make a function, telling the computer only to do something if something else is true.
+
+      <pre>def pay_interest(name):
+          amount = bank_accounts[name]
+
+          if amount > 2:
+              interest = amount * 0.01
+          else:
+              interest = 0
+
+          new_amount = amount + interest
+          bank_accounts[name] = new_amount</pre>
+
+      We can describe conditions like greater than (>), greater than or equal to (>=), less than (<), less than or equal to (<=), not equal (!=), and equal (==). Let's give it a shot:
+
+      <pre>pay_interest('yours')
+      bank_accounts['yours']</pre>
+
+      We can string together conditions with words like "or" such that only one of two things needs to be true or "and" where both need to be true. Let's say that interest goes up to 2% if someone has over $100:
+
+      <pre>def pay_interest(name):
+          amount = bank_accounts[name]
+
+          if amount > 2 and amount < 100:
+              interest = amount * 0.01
+          elif amount >= 100:
+              interest = amount * 0.02
+          else:
+              interest = 0
+
+          new_amount = amount + interest
+          bank_accounts[name] = new_amount</pre>
+
+      Note that "if" means do something if something else is true. Meanwhile, "elif" stands for "else if" and means if the first condtion wasn't true, try another one. Finally, else means that, if none of the conditions I tried are true, do something as a fallback. <a href="https://python.swaroopch.com/control_flow.html">Learn more about conditionals</a>.
+  - name: combining_ideas
+    short: Combining ideas
+    long: Learn how to combine multiple Python concepts together
+    body: >
+      With all of these ideas in place, let's tell the computer about two more actions. First, let's tell the computer how to pay interest to everyone.
+
+      <pre>def pay_interest_to_everyone():
+          for name in bank_accounts.keys():
+              pay_interest(name)</pre>
+
+      Let's give it a shot:
+
+      <pre>pay_interest_to_everyone()</pre>
+
+      Also, let's tell the computer how to get the total across all bank accounts in the bank:
+
+      <pre>def get_total_in_bank():
+          total_amount = 0
+          for balance in bank_accounts.values():
+              total_amount = total_amount + balance
+          return balance</pre>
+
+      That final return statement is new. This tells the computer that, when this action is taken, it creates a number that is left behind after the function finishes (as that small world within a world is destroyed). Give it a shot:
+
+      <pre>get_total_in_bank()</pre>
+
+      We can give a name to that result just like we can other numbers:
+
+      <pre>total_in_bank = get_total_in_bank()</pre>
+
+      Try reading it like you would any other variable:
+
+      <pre>total_in_bank</pre>
+
+      In other words, return can be used to leave behind a bit of work that a function did so it can be used in other code later.
+  - name: conclusion
+    short: Conclusion
+    long: Wrap up and next steps
+    body: >
+      <p>
+          In this session, we told the computer the names of different numbers and text (variables) before we told the computer how to change those values over time. We made lists of values, we made dictionaries, and we told the computer how to take actions it didn't know about before (functions). Finally, we told the computer how to do something in repetition (loops) and only sometimes if certain things are true (conditionals). So far, we've stuck to building these digital worlds out of the types of things that the computer knew about ahead of time like numbers. We also were confined to just text. In the <a href="/labs/python_graphics.html">next tutorial</a>, we will enter the world of graphics. You may also <a href="/labs">return to the skills labs index</a>.
+      </p>
+citations:
+  - text: C. Swaroop, A Byte of Python. 2024. [Online].
+    available: https://python.swaroopch.com
+  - text: K. Reitz and T. Schlusser, The Hitchhiker's Guide to Python best practices for development, First edition. Beijing Boston Farnham Sebastopol Tokyo O'Reilly, 2016. [Online].
+    available: https://docs.python-guide.org
+  - text: Google for Developers, "Python Strings." Google, Jul. 23, 2024. [Online].
+    available: https://developers.google.com/edu/python/strings
+  - text: Jupyter Contributors and IPython Contributors, "Jupyter." [Online].
+    available: https://jupyter.org
