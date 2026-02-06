@@ -137,7 +137,7 @@
 
                 {% for section in sections.values() %}
                 <div id="{{ section.name }}" class="lesson-section">
-                    <h3>{% if not loop.last %}Section {{ loop.index }}: {% endif %}{{ section.name }}</h3>
+                    <h3>Section {{ loop.index }}: {{ section.name }}</h3>
                     <div class="tag">
                         {{ section.tagline }}
                     </div>
