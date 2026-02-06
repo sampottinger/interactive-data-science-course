@@ -175,7 +175,8 @@ def main_lesson():
   data = load_course_from_directory(lessons_dir)
 
   sections = data['sections'].values()
-  lessons = itertools.chain(*[s['lessons'] for s in sections])
+  lessons_nested = map(lambda x: x['lessons'], sections)
+  lessons = itertools.chain(*lessons_nested)
   lessons_by_number_tuple = map(lambda x: (x['number'], x), lessons)
   lessons_by_number = dict(lessons_by_number_tuple)
 
@@ -276,7 +277,8 @@ def main_list():
   data = load_course_from_directory(lessons_dir)
 
   sections = data['sections'].values()
-  lessons = itertools.chain(*[s['lessons'] for s in sections])
+  lessons_nested = map(lambda x: x['lessons'], sections)
+  lessons = itertools.chain(*lessons_nested)
   lesson_numbers = sorted([lesson['number'] for lesson in lessons])
 
   for number in lesson_numbers:
