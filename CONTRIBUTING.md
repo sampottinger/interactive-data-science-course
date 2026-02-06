@@ -151,24 +151,33 @@ Here is a well implemented entry:
 Citations can be provided in two formats: inline YAML lists (preferred) or separate text files (deprecated).
 
 ##### Preferred format: Inline YAML lists
-The recommended approach is to embed citations directly in the lesson YAML file as a list of plain citation strings. Each string should be an IEEE-derivative citation. URLs and DOIs should be left as plain text within the citation string; they will be automatically linkified at render time by the `process_citation()` function in `lecture/render.py`.
+The recommended approach is to embed citations directly in the lesson YAML file as a list of structured citation objects. This format matches the skills labs citation structure. Each citation is a YAML mapping with a `text` field and an optional `available` field for URLs.
 
-For citations exceeding 100 characters, use the `>` folded scalar syntax to improve readability. Do not break URLs across lines.
+Key points:
+- `text` contains the citation body (IEEE-derivative format recommended). Do NOT include "Available:" prefix in text — it is generated from the `available` field at render time.
+- `available` is optional and contains a URL where the resource can be accessed. Citations without a URL (e.g., books, DOI-only references) omit this field.
+- DOIs remain in the `text` field and will be automatically linkified by `process_citation()`.
+- For `text` values exceeding 100 characters, use the `>` folded scalar syntax. Keep lines under 100 characters. Do not break URLs across lines.
 
 Example:
 ```yaml
 citations:
-  - >
-    J. Snow, On the mode of communication of cholera. London: John
-    Churchill, 1855. Available:
-    https://archive.org/details/b28985266/page/n57/mode/2up
-  - >
-    A. Kirk, DATA VISUALISATION: a handbook for data driven design.
-    S.l.: SAGE PUBLICATIONS, 2024.
-  - W. Playfair, Commercial and Political Atlas. London, 1786.
+  - text: >
+      J. Snow, On the mode of communication of cholera. London: John
+      Churchill, 1855.
+    available: https://archive.org/details/b28985266/page/n57/mode/2up
+  - text: >
+      A. Kirk, DATA VISUALISATION: a handbook for data driven design.
+      S.l.: SAGE PUBLICATIONS, 2024.
+  - text: >
+      W. S. Cleveland and R. McGill, "Graphical Perception: Theory,
+      Experimentation, and Application to the Development of Graphical
+      Methods," Journal of the American Statistical Association, vol. 79,
+      no. 387, pp. 531-554, Sep. 1984, doi:
+      10.1080/01621459.1984.10478080.
 ```
 
-Short citations (under 100 characters) may be plain strings without `>`.
+Short `text` values (under 100 characters) may be plain strings without `>`.
 
 ##### Deprecated format: Separate text files
 The older format uses `citations: true` in the lesson YAML along with a corresponding text file in the form of `lesson00.txt` within `lecture/citations`. Each line contains a single citation. Empty lines (including those containing only whitespace) are ignored. These files end with a single empty line.

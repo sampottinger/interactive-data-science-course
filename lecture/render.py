@@ -251,8 +251,12 @@ def load_citations_from_file(lesson_number: int) -> list:
     return []
 
 
-def process_citation(citation: str) -> str:
+def process_citation(citation) -> str:
   """Prepare a citation to be rendered in HTML.
+
+  Accepts both structured (dict) and plain string citations. For structured
+  citations, extracts text and available fields. For plain strings, applies
+  direct linkification.
 
   Insert links into citation text to be rendered as HTML where:
 
@@ -261,24 +265,45 @@ def process_citation(citation: str) -> str:
    - Text which starts with http:// or https:// will become a link to the URL.
 
   Args:
-    citation: The citation text into which HTML links should be added.
+    citation: Either a dict with 'text' and optional 'available' keys, or
+      a plain citation string.
 
   Returns:
     str: The citation text with links added to be displayed as HTML.
   """
+  if isinstance(citation, dict):
+    # Structured format: dict with text and optional available
+    text = citation.get('text', '')
+    available = citation.get('available', '')
 
-  url_pattern = r'(https?://[^\s]+)'
-  citation = re.sub(url_pattern,
-                    lambda m: f'<a href="{m.group(1)}">{m.group(1)}</a>',
-                    citation)
+    # Apply DOI linkification to text
+    doi_pattern = r'doi:\s*([\d\.]+/[\w\d\.\-\/]+)'
+    text = re.sub(
+        doi_pattern, lambda m:
+        f'doi: <a href="https://www.doi.org/{m.group(1)}">{m.group(1)}</a>',
+        text)
 
-  doi_pattern = r'doi:\s*([\d\.]+/[\w\d\.\-\/]+)'
-  citation = re.sub(
-      doi_pattern, lambda m:
-      f'doi: <a href="https://www.doi.org/{m.group(1)}">{m.group(1)}</a>',
-      citation)
+    # Append available URL if present
+    if available:
+      if not available.startswith('http://') and not available.startswith('https://'):
+        available = 'https://' + available
+      return f'{text} Available: <a href="{available}" target="_blank">{available}</a>'
+    else:
+      return text
+  else:
+    # Legacy plain string format
+    url_pattern = r'(https?://[^\s]+)'
+    citation = re.sub(url_pattern,
+                      lambda m: f'<a href="{m.group(1)}">{m.group(1)}</a>',
+                      citation)
 
-  return citation
+    doi_pattern = r'doi:\s*([\d\.]+/[\w\d\.\-\/]+)'
+    citation = re.sub(
+        doi_pattern, lambda m:
+        f'doi: <a href="https://www.doi.org/{m.group(1)}">{m.group(1)}</a>',
+        citation)
+
+    return citation
 
 
 def main_list():
