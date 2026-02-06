@@ -49,8 +49,11 @@ USAGE_RENDER_LESSON_ARGS = [
 USAGE_RENDER_LESSON_STR = build_usage_str('lesson', USAGE_RENDER_LESSON_ARGS)
 USAGE_RENDER_LESSON_ARGS = len(USAGE_RENDER_LESSON_ARGS) + 1
 
-USAGE_RENDER_LIST_STR = 'USAGE: python render.py list [lessons_dir]'
-USAGE_RENDER_LIST_ARGS = 2
+USAGE_RENDER_LIST_ARGS = [
+    'lessons_dir'
+]
+USAGE_RENDER_LIST_STR = build_usage_str('list', USAGE_RENDER_LIST_ARGS)
+USAGE_RENDER_LIST_ARGS = len(USAGE_RENDER_LIST_ARGS) + 1
 
 USAGE_STR = 'USAGE: python render.py [index | lesson | list]'
 MIN_ARGS = 1
