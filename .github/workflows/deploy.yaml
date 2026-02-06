@@ -85,7 +85,7 @@ jobs:
           sshpass -p "${{ secrets.SFTP_PASSWORD }}" scp -o StrictHostKeyChecking=no -r ./mooc/* ${{ secrets.SFTP_USER }}@${{ secrets.SFTP_HOST }}:./mooc.interactivedatascience.courses/
       - name: Upload labs
         run: |
-          sshpass -p "${{ secrets.SFTP_PASSWORD }}" scp -o StrictHostKeyChecking=no -r ./labs/* ${{ secrets.SFTP_USER }}@${{ secrets.SFTP_HOST }}:./mooc.interactivedatascience.courses/labs/
+          sshpass -p "${{ secrets.SFTP_PASSWORD }}" scp -o StrictHostKeyChecking=no -r ./mooc/labs/* ${{ secrets.SFTP_USER }}@${{ secrets.SFTP_HOST }}:./mooc.interactivedatascience.courses/labs/
       - name: Upload course wide
         run: |
           sshpass -p "${{ secrets.SFTP_PASSWORD }}" scp -o StrictHostKeyChecking=no -r ./course_wide/* ${{ secrets.SFTP_USER }}@${{ secrets.SFTP_HOST }}:./mooc.interactivedatascience.courses/course_wide/
