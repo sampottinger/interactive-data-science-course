@@ -51,6 +51,59 @@ USAGE_STR = 'USAGE: python render.py [index | lesson | list]'
 MIN_ARGS = 1
 
 
+def load_yaml(yaml_path):
+  """Load a YAML file from the given path.
+
+  Args:
+    yaml_path: Path to the YAML file to load.
+
+  Returns:
+    dict: The parsed YAML content.
+  """
+  with open(yaml_path, 'r') as f:
+    return yaml.load(f, Loader=yaml.Loader)
+
+
+def get_section_lessons(section_dir, lessons_dir):
+  """Extract section information and lessons from a section directory.
+
+  Args:
+    section_dir: Full path to the section directory.
+    lessons_dir: Path to the lessons directory containing sections.
+
+  Returns:
+    dict: Dictionary with 'name', 'tagline', 'detailed', and 'lessons' keys.
+  """
+  # Extract section ID from directory name
+  dir_basename = os.path.basename(section_dir)
+  section_components = dir_basename.split('_')
+  id_pieces = section_components[1:]
+  section_id = '_'.join(id_pieces)
+
+  section_path = section_dir
+
+  # Load index.yml from section directory
+  index_path = os.path.join(section_path, 'index.yml')
+  section_meta = load_yaml(index_path)
+
+  # Load all lesson YAML files
+  section_members = os.listdir(section_path)
+  yaml_only = filter(lambda x: x.endswith('.yaml'), section_members)
+  yaml_files = sorted(yaml_only)
+
+  yaml_paths = map(lambda x: os.path.join(section_path, x), yaml_files)
+  lessons_lazy = map(load_yaml, yaml_paths)
+  lessons = list(lessons_lazy)
+
+  return {
+      'name': section_meta['name'],
+      'tagline': section_meta['tagline'],
+      'detailed': section_meta['detailed'],
+      'lessons': lessons,
+      'id': section_id
+  }
+
+
 def load_course_from_directory(lessons_dir):
   """Load course structure from directory hierarchy.
 
@@ -68,41 +121,18 @@ def load_course_from_directory(lessons_dir):
       and 'lessons' keys. Section names are derived from directory names
       by stripping numeric prefix (e.g., '01_Hello' -> 'Hello').
   """
-  sections = {}
-
   members = os.listdir(lessons_dir)
   full_paths = map(lambda x: os.path.join(lessons_dir, x), members)
   unsorted_directories = filter(lambda x: os.path.isdir(x), full_paths)
   section_dirs = sorted(unsorted_directories)
 
-  for section_dir in section_dirs:
-    section_name = section_dir.split('_', 1)[1]
-    section_path = os.path.join(lessons_dir, section_dir)
+  section_info = map(
+      lambda section_dir: get_section_lessons(section_dir, lessons_dir),
+      section_dirs)
+  keyed_sections = map(lambda x: (x['name'], x), section_info)
+  sections_by_name = dict(keyed_sections)
 
-    # Load index.yml from each section directory
-    index_path = os.path.join(section_path, 'index.yml')
-    with open(index_path, 'r') as f:
-      section_meta = yaml.load(f, Loader=yaml.Loader)
-
-    lessons = []
-    section_members = os.listdir(section_path)
-    yaml_only = filter(lambda x: x.endswith('.yaml'), section_members)
-    yaml_files = sorted(yaml_only)
-
-    for yaml_file in yaml_files:
-      yaml_path = os.path.join(section_path, yaml_file)
-      with open(yaml_path, 'r') as f:
-        lesson = yaml.load(f, Loader=yaml.Loader)
-        lessons.append(lesson)
-
-    sections[section_name] = {
-        'name': section_meta['name'],
-        'tagline': section_meta['tagline'],
-        'detailed': section_meta['detailed'],
-        'lessons': lessons
-    }
-
-  return {'sections': sections}
+  return {'sections': sections_by_name}
 
 
 def main_index():
