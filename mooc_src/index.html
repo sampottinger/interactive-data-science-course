@@ -122,9 +122,9 @@
                 <h2>Lessons</h2>
                 <div class="tag">An overview of the class.</div>
                 <p>
-                    The course is organized into {{ sections|length - 1 }} sections:
+                    The course is organized into 6 sections:
                     {%- set section_list = sections.values()|list -%}
-                    {%- for section in section_list[:-1] -%}
+                    {%- for section in section_list -%}
                         {%- if loop.last %} and {% elif not loop.first %}, {% endif -%}
                         <a href="#{{ section.name }}">{{ section.name }}</a>
                     {%- endfor -%}
