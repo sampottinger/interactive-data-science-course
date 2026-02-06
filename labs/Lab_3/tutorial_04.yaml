@@ -20,7 +20,7 @@ sections:
   - name: ellipse
     short: Ellipse
     long: Learn to draw ellipses and circles with different modes
-    html: >
+    body: >
       We have seen some circles already but we will start our journey
       through forms with ellipses. An ellipse is a circular object
       that is a circle if the width and height are the same. These can
@@ -101,7 +101,7 @@ sections:
   - name: rectangle
     short: Rectangle
     long: Learn to draw rectangles with different modes
-    html: >
+    body: >
       Let's continue to rectangles. These can be useful for things
       like
       <a
@@ -176,7 +176,7 @@ sections:
   - name: arc
     short: Arc
     long: Learn to draw arcs and partial circles
-    html: >
+    body: >
       I want to get to custom shapes in a moment but there's one last
       element to put into your tool chest. A quick glance at the chart
       wizard in spreadsheet software might make it seem like arcs
@@ -244,7 +244,7 @@ sections:
   - name: line
     short: Line
     long: Learn to draw lines and connected line segments
-    html: >
+    body: >
       So far, we've worked with pre-defined shapes. However,
       Sketchingpy lets us make new forms as well. To explore how we
       can go about creating these shapes, let's briefly return to
@@ -318,7 +318,7 @@ sections:
   - name: curve
     short: Curve
     long: Learn to draw bezier curves
-    html: >
+    body: >
       Some charts like
       <a
           href="https://www.data-to-viz.com/graph/sankey.html"
@@ -359,7 +359,7 @@ sections:
   - name: shape
     short: Shape
     long: Create custom shapes combining different elements
-    html: >
+    body: >
       Now we can tie it all together. Let's make a custom shape
       (triangle) and put it next to some of the prebuilt shapes
       (circle and square):
@@ -399,7 +399,7 @@ sections:
   - name: next
     short: Next
     long: Continue to the next tutorial
-    html: >
+    body: >
       We have some shapes! Now, continue on to
       <a href="/labs/features_style.html">Tutorial 5</a>
       to learn about our next preattentive feature: color and styling.

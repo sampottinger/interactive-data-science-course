@@ -7,25 +7,25 @@ sections:
   - name: intro
     short: Introduction
     long: Introduction to working with text in visualizations
-    html: >
+    body: >
       Text is an essential component of data visualization, providing labels,
       annotations, and context. Learn how to work with text in Sketchingpy.
   - name: drawing_text
     short: Drawing Text
     long: Learn to draw text on the canvas
-    html: >
+    body: >
       Learn how to position and style text in your visualizations using
       Sketchingpy's text drawing capabilities.
   - name: fonts
     short: Fonts
     long: Working with fonts and typography
-    html: >
+    body: >
       Typography choices impact readability and aesthetics. Learn about
       font selection and text styling.
   - name: next
     short: Next
     long: Continue to the next tutorial
-    html: >
+    body: >
       Continue on to
       <a href="/labs/resources_images.html">Tutorial 9</a>
       to learn about working with images.

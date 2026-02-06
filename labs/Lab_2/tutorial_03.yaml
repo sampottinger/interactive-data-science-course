@@ -6,7 +6,7 @@ sections:
   - name: recap
     short: Recap
     long: Review of concepts from previous tutorials
-    html: >
+    body: >
       In our <a href="/labs/python_intro.html">first tutorial</a>, we
       introduced the idea that computer programs are like empty
       worlds. To populate those worlds, we can give names to numbers
@@ -25,7 +25,7 @@ sections:
   - name: exercise
     short: Exercise
     long: Build a simulation with bouncing balls
-    html: >
+    body: >
       We will build a simulation in which balls rush out across the
       screen, bouncing off the edges once they reach the ends of the
       sketch. This will demonstrate how to tell the computer about new
@@ -36,7 +36,7 @@ sections:
   - name: classes
     short: Classes
     long: Learn about classes and object-oriented programming
-    html: >
+    body: >
       <p>
           To tell the computer about a new type of thing, we create a
           class. Specifically, we will make a class for the balls
@@ -87,7 +87,7 @@ sections:
   - name: sketch
     short: Sketch
     long: Create a sketch for the simulation
-    html: >
+    body: >
       Let's start by making a sketch.
 
       <pre>
@@ -117,7 +117,7 @@ sections:
   - name: ball
     short: Defining a Ball
     long: Create a Ball class with position and velocity
-    html: >
+    body: >
       Let's make our first class. Our ball will have an x and y
       position on screen. This ball will also be in motion. We will
       define that movement through velocity as pixels per second in
@@ -158,7 +158,7 @@ sections:
   - name: motion
     short: Moving a Ball
     long: Add methods to update ball position and handle bouncing
-    html: >
+    body: >
       Now that we have created the fields on a ball, let's define its
       behaviors. The ball will "bounce" by reversing its x and / or y
       velocities. Starting with that:
@@ -228,7 +228,7 @@ sections:
   - name: simulation
     short: Defining a Simulation
     long: Create a Simulation class to manage multiple balls
-    html: >
+    body: >
       It is common to make a class for an overall simulation as well.
       This can be used to keep track of time and the different
       instances that make up the simulated world.
@@ -266,7 +266,7 @@ sections:
   - name: draw
     short: Draw the System
     long: Visualize the simulation by drawing the balls
-    html: >
+    body: >
       We are simulating the system but we haven't yet made it visible.
       Let's go ahead and create a new simulation and register a
       function to call on each step of the sketch:
@@ -296,7 +296,7 @@ sections:
   - name: mouse
     short: Get the Mouse
     long: Add mouse position tracking to the simulation
-    html: >
+    body: >
       Next, we want the user to be able to interact with the
       simulation through the mouse. For this, we need to route that
       information to each Ball instance. Let's start by updating the
@@ -332,7 +332,7 @@ sections:
   - name: interacting
     short: Interacting with the Mouse
     long: Implement collision detection with the mouse cursor
-    html: >
+    body: >
       At a high level, we want to see if the mouse is near the ball.
       If it is, we then change the x velocity if the ball bounces
       against the cursor horizontally or we change the y velocity if
@@ -404,7 +404,7 @@ sections:
   - name: cleanup
     short: Cleaning Up
     long: Learn about private attributes and docstrings
-    html: >
+    body: >
       <p>
           Go ahead and give this a run if you haven't already. Need
           help?
@@ -492,7 +492,7 @@ sections:
   - name: next
     short: Next Steps
     long: What to do after completing this tutorial
-    html: >
+    body: >
       We've reached the end of our first set of skills labs! If you
       are taking the course with me during the semester, please note
       that lectures (and recordings) will go back to normal for a bit
