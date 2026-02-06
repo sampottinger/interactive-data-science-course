@@ -40,9 +40,14 @@ USAGE_RENDER_INDEX_ARGS = [
 USAGE_RENDER_INDEX_STR = build_usage_str('index', USAGE_RENDER_INDEX_ARGS)
 USAGE_RENDER_INDEX_ARGS = len(USAGE_RENDER_INDEX_ARGS) + 1
 
-USAGE_RENDER_LESSON_STR = \
-    'USAGE: python render.py lesson [template] [lessons_dir] [number] [output]'
-USAGE_RENDER_LESSON_ARGS = 5
+USAGE_RENDER_LESSON_ARGS = [
+    'template',
+    'lessons_dir',
+    'number',
+    'output'
+]
+USAGE_RENDER_LESSON_STR = build_usage_str('lesson', USAGE_RENDER_LESSON_ARGS)
+USAGE_RENDER_LESSON_ARGS = len(USAGE_RENDER_LESSON_ARGS) + 1
 
 USAGE_RENDER_LIST_STR = 'USAGE: python render.py list [lessons_dir]'
 USAGE_RENDER_LIST_ARGS = 2
