@@ -45,8 +45,7 @@ Course lessons are organized in the `lecture/lessons/` directory. This
 directory contains numbered section subdirectories (e.g., `01_Hello`,
 `02_Primitives`), each containing individual YAML files for each lesson
 and an `index.yml` file with section metadata. Each lesson YAML file
-represents a single lesson as a top-level mapping (not wrapped in a
-`sections` key or list). Lesson files are named with a numeric prefix
+represents a single lesson as a top-level mapping. Lesson files are named with a numeric prefix
 followed by a descriptive name (e.g., `00_hello_preface.yaml`,
 `01_hello_visualization.yaml`).
 

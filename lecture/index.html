@@ -122,22 +122,23 @@
                 <h2>Lessons</h2>
                 <div class="tag">An overview of the class.</div>
                 <p>
-                    The course is organized into {{ sections|length - 1 }} sections:
-                    {%- set section_list = sections.values()|list -%}
-                    {%- for section in section_list[:-1] -%}
-                        {%- if loop.last %} and {% elif not loop.first %}, {% endif -%}
-                        <a href="#{{ section.name }}">{{ section.name }}</a>
-                    {%- endfor -%}
-                    . You may consider
-                    going in order as material from one lesson helps set up the
-                    concepts introduced in the subsequent lessons. However, you
-                    are also encouraged to jump around to meet your own learning
-                    objectives.
+                    The course is organized into {{ sections|length }} sections:
+                </p>
+                <ul>
+                    {% for section in sections %}
+                    <li><a href="#{{ section.name }}">{{ section.name }}</a></li>
+                    {% endfor %}
+                </ul>
+                <p>
+                    You may consider going in order as material from one lesson
+                    helps set up the concepts introduced in the subsequent
+                    lessons. However, you are also encouraged to jump around to
+                    meet your own learning objectives.
                 </p>
 
-                {% for section in sections.values() %}
+                {% for section in sections %}
                 <div id="{{ section.name }}" class="lesson-section">
-                    <h3>{% if not loop.last %}Section {{ loop.index }}: {% endif %}{{ section.name }}</h3>
+                    <h3>Section {{ loop.index }}: {{ section.name }}</h3>
                     <div class="tag">
                         {{ section.tagline }}
                     </div>

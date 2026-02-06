@@ -5,7 +5,7 @@ materials_pdf: true
 materials_pptx: true
 materials_md: true
 text: >
-  A look at some historic figures in data visualization along with a
+  A look at some historic figures in data visualization including a
   discussion of Tufte. Also, a look at some demonstrative examples to
   refine our language for discussing information design. All of this
   sets the stage for glyphs and our transition into cognitive and
