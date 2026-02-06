@@ -196,8 +196,13 @@ def main_lesson():
 
   lesson = lessons_by_number[lesson_number]
 
-  has_citations = lesson.get('citations', False)
-  citations_raw = load_citations_from_file(lesson_number) if has_citations else []
+  citations_field = lesson.get('citations', False)
+  if isinstance(citations_field, list):
+    citations_raw = citations_field
+  elif citations_field:
+    citations_raw = load_citations_from_file(lesson_number)
+  else:
+    citations_raw = []
 
   citations = map(process_citation, citations_raw)
 
