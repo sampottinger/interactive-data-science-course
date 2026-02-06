@@ -151,12 +151,13 @@ Here is a well implemented entry:
 Citations can be provided in two formats: inline YAML lists (preferred) or separate text files (deprecated).
 
 ##### Preferred format: Inline YAML lists
-The recommended approach is to embed citations directly in the lesson YAML file as a list of structured citation objects. This format matches the skills labs citation structure. Each citation is a YAML mapping with a `text` field and an optional `available` field for URLs.
+The recommended approach is to embed citations directly in the lesson YAML file as a list of structured citation objects. This format matches the skills labs citation structure. Each citation is a YAML mapping with a `text` field, an optional `doi` field, and an optional `available` field for URLs.
 
 Key points:
-- `text` contains the citation body (IEEE-derivative format recommended). Do NOT include "Available:" prefix in text — it is generated from the `available` field at render time.
-- `available` is optional and contains a URL where the resource can be accessed. Citations without a URL (e.g., books, DOI-only references) omit this field.
-- DOIs remain in the `text` field and will be automatically linkified by `process_citation()`.
+- `text` contains the citation body (IEEE-derivative format recommended). Do NOT include "Available:" or "doi:" prefix in text — these are generated from their respective fields at render time.
+- `doi` is optional and contains just the DOI identifier (e.g., `10.1080/01621459.1984.10478080`). This is rendered as `doi: <link to doi.org>`.
+- `available` is optional and contains a URL where the resource can be accessed. Citations without a URL (e.g., books) omit this field.
+- A citation may have `doi`, `available`, both, or neither.
 - For `text` values exceeding 100 characters, use the `>` folded scalar syntax. Keep lines under 100 characters. Do not break URLs across lines.
 
 Example:
@@ -173,8 +174,8 @@ citations:
       W. S. Cleveland and R. McGill, "Graphical Perception: Theory,
       Experimentation, and Application to the Development of Graphical
       Methods," Journal of the American Statistical Association, vol. 79,
-      no. 387, pp. 531-554, Sep. 1984, doi:
-      10.1080/01621459.1984.10478080.
+      no. 387, pp. 531-554, Sep. 1984.
+    doi: 10.1080/01621459.1984.10478080
 ```
 
 Short `text` values (under 100 characters) may be plain strings without `>`.

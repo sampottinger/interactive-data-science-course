@@ -255,41 +255,46 @@ def process_citation(citation) -> str:
   """Prepare a citation to be rendered in HTML.
 
   Accepts both structured (dict) and plain string citations. For structured
-  citations, extracts text and available fields. For plain strings, applies
-  direct linkification.
+  citations, extracts text, optional doi, and optional available fields.
+  For plain strings, applies direct linkification.
 
   Insert links into citation text to be rendered as HTML where:
 
-   - DOI mentions like "doi: 10.1080/01621459.1984.10478080" expand to
+   - For structured citations (dict), DOI values from the 'doi' field expand
+     to https://doi.org/IDENTIFIER.
+   - For plain string citations (legacy), DOI mentions like
+     "doi: 10.1080/01621459.1984.10478080" expand to
      https://www.doi.org/10.1080/01621459.1984.10478080.
-   - Text which starts with http:// or https:// will become a link to the URL.
+   - Text which starts with http:// or https:// will become a link to the URL
+     (plain strings only).
 
   Args:
-    citation: Either a dict with 'text' and optional 'available' keys, or
-      a plain citation string.
+    citation: Either a dict with 'text', optional 'doi', and optional
+      'available' keys, or a plain citation string.
 
   Returns:
     str: The citation text with links added to be displayed as HTML.
   """
   if isinstance(citation, dict):
-    # Structured format: dict with text and optional available
+    # Structured format: dict with text, optional doi, and optional available
     text = citation.get('text', '')
+    doi = citation.get('doi', '')
     available = citation.get('available', '')
 
-    # Apply DOI linkification to text
-    doi_pattern = r'doi:\s*([\d\.]+/[\w\d\.\-\/]+)'
-    text = re.sub(
-        doi_pattern, lambda m:
-        f'doi: <a href="https://www.doi.org/{m.group(1)}">{m.group(1)}</a>',
-        text)
+    # Build the output starting with text
+    result = text
+
+    # Append DOI link if present
+    if doi:
+      result += f' doi: <a href="https://doi.org/{doi}">{doi}</a>.'
 
     # Append available URL if present
     if available:
       if not available.startswith('http://') and not available.startswith('https://'):
         available = 'https://' + available
-      return f'{text} Available: <a href="{available}" target="_blank">{available}</a>'
-    else:
-      return text
+      result += f' Available: <a href="{available}" target="_blank">{available}</a>'
+
+    return result
   else:
     # Legacy plain string format
     url_pattern = r'(https?://[^\s]+)'
