@@ -14,9 +14,31 @@ import sys
 import jinja2
 import yaml
 
-USAGE_RENDER_INDEX_STR = \
-    'USAGE: python render.py index [template] [lessons_dir] [output]'
-USAGE_RENDER_INDEX_ARGS = 4
+BASE_USAGE_STR = 'USAGE: python render.py'
+
+
+def build_usage_str(command, attrs):
+  """Build a usage string for a command with its arguments.
+
+  Args:
+    command: The command name to build usage string for.
+    attrs: List of argument names for the command.
+
+  Returns:
+    str: The formatted usage string with bracketed arguments.
+  """
+  attrs_decorated = map(lambda x: '[%s]' % x, attrs)
+  attrs_str = ' '.join(attrs_decorated)
+  return BASE_USAGE_STR + ' ' + command + ' ' + attrs_str
+
+
+USAGE_RENDER_INDEX_ARGS = [
+    'template',
+    'lessons_dir',
+    'output'
+]
+USAGE_RENDER_INDEX_STR = build_usage_str('index', USAGE_RENDER_INDEX_ARGS)
+USAGE_RENDER_INDEX_ARGS = len(USAGE_RENDER_INDEX_ARGS) + 1
 
 USAGE_RENDER_LESSON_STR = \
     'USAGE: python render.py lesson [template] [lessons_dir] [number] [output]'
