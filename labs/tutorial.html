@@ -71,7 +71,7 @@
             {% for section in sections %}
             <section id="{{ section.name }}">
                 <h2>{{ section.short }}</h2>
-                {{ section.html | safe }}
+                {{ section.body | safe }}
             </section>
             {% endfor %}
 

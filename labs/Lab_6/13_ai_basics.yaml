@@ -8,32 +8,32 @@ sections:
   - name: intro
     short: Introduction
     long: Introduction to AI-assisted visualization
-    html: >
+    body: >
       AI assistants like ChatGPT, Claude, and GitHub Copilot can help with
       visualization tasks. Learn how to use them effectively while maintaining
       critical thinking and design expertise.
   - name: prompting
     short: Effective Prompting
     long: Learn to write effective prompts for AI assistants
-    html: >
+    body: >
       Good prompts are specific, provide context, and clarify expectations.
       Learn techniques for getting better results from AI assistants.
   - name: iteration
     short: Iteration
     long: Iterating on AI-generated visualizations
-    html: >
+    body: >
       AI rarely gets it perfect on the first try. Learn how to iterate
       on AI-generated code and refine visualizations.
   - name: oversight
     short: Human Oversight
     long: The importance of human judgment
-    html: >
+    body: >
       AI can make mistakes and produce misleading visualizations. Learn
       how to critically evaluate AI output and apply design principles.
   - name: next
     short: Next
     long: Continue to advanced AI topics
-    html: >
+    body: >
       Continue on to
       <a href="/labs/ai_advanced.html">Tutorial 14</a>
       to explore advanced AI-assisted visualization techniques.

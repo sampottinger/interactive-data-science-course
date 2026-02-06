@@ -7,25 +7,25 @@ sections:
   - name: intro
     short: Introduction
     long: Introduction to interactive user loops
-    html: >
+    body: >
       Interactive visualizations respond to user input. Learn how to
       create sketches that react to mouse and keyboard events.
   - name: mouse_events
     short: Mouse Events
     long: Handling mouse input
-    html: >
+    body: >
       Learn to detect and respond to mouse movements, clicks, and other
       mouse events in your visualizations.
   - name: keyboard
     short: Keyboard Events
     long: Handling keyboard input
-    html: >
+    body: >
       Learn to detect and respond to keyboard input for interactive
       visualizations.
   - name: next
     short: Next
     long: Continue to the next tutorial
-    html: >
+    body: >
       Continue on to
       <a href="/labs/resources_data.html">Tutorial 11</a>
       to learn about working with data.

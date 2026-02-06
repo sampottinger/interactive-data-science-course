@@ -14,7 +14,7 @@ sections:
   - name: hex
     short: Hex Codes
     long: Learn about hex color codes and color tools
-    html: >
+    body: >
       Our glyphs can actually have multiple potential colors at the
       same time. However, the first step is finding the color we want.
       We discussed some options in class:
@@ -39,7 +39,7 @@ sections:
   - name: fill
     short: Fill
     long: Learn to set fill colors for shapes
-    html: >
+    body: >
       The easiest place to start for styling in
       <a href="https://sketchingpy.org/" target="_blank"
           >Sketchingpy</a
@@ -65,32 +65,32 @@ sections:
   - name: transparency
     short: Transparency
     long: Learn to use transparency and alpha channels
-    html: >
+    body: >
       With our circles overlapping, we notice that what is drawn first
       goes at the bottom. We can control transparency to create layered effects.
       Learn more about transparency and the alpha channel.
   - name: stroke
     short: Stroke
     long: Learn to set stroke (outline) colors for shapes
-    html: >
+    body: >
       In addition to fill, shapes can have a stroke or outline. Learn how to
       control stroke colors and create shapes with just outlines.
   - name: weight
     short: Weight
     long: Learn to control stroke weight and thickness
-    html: >
+    body: >
       The thickness of strokes can be controlled with weight settings.
       This is useful for emphasis and visual hierarchy.
   - name: context
     short: Context
     long: Understand design context and color choices
-    html: >
+    body: >
       Color choices should consider context, accessibility, and cultural meanings.
       Learn about best practices for using color in visualization.
   - name: next
     short: Next
     long: Continue to the next tutorial
-    html: >
+    body: >
       Continue on to
       <a href="/labs/features_position.html">Tutorial 6</a>
       to learn about position as a preattentive feature.

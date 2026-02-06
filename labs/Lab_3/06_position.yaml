@@ -8,25 +8,25 @@ sections:
   - name: intro
     short: Introduction
     long: Introduction to position as a preattentive feature
-    html: >
+    body: >
       Position is arguably the most effective preattentive feature for encoding
       quantitative data. Learn how to use position effectively in your visualizations.
   - name: coordinates
     short: Coordinates
     long: Understanding coordinate systems
-    html: >
+    body: >
       Learn about coordinate systems and how to position elements precisely
       in your visualizations.
   - name: scatter
     short: Scatterplots
     long: Creating scatterplots using position
-    html: >
+    body: >
       Scatterplots use position along two axes to encode two variables.
       Practice creating scatterplots with Sketchingpy.
   - name: next
     short: Next
     long: Continue to the next tutorial
-    html: >
+    body: >
       Continue on to
       <a href="/labs/features_orientation.html">Tutorial 7</a>
       to learn about orientation as a preattentive feature.

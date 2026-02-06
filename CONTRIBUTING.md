@@ -182,7 +182,7 @@ During original teaching of this course as Stat 198 at UC Berkeley, the skills l
 
 Skills labs are organized in the `labs/` directory with the following structure:
  - `Lab_1/`, `Lab_2/`, etc.: Lab-specific directories containing YAML source files
- - Each lab directory contains an `index.yml` with lab metadata (name, lesson) and tutorial YAML files
+ - Each lab directory contains an `index.yml` with lab metadata (name, lesson) and tutorial YAML files named with a numeric prefix followed by a descriptive name (e.g., `01_python_introduction.yaml`, `02_python_graphics.yaml`)
  - Tutorial YAML files define individual tutorials with name, file, header, sections, and citations
  - Templates: `tutorial.html`, `index_template.html`, `tutorial.md` for rendering
  - `render.py` and `render.sh` to generate HTML and Markdown output from YAML sources
@@ -194,7 +194,7 @@ The YAML-based structure allows for consistent formatting and easier maintenance
 | name      | Yes          | Human readable name of the tutorial. | string |
 | file      | Yes          | Base filename for output (e.g., "python_intro" generates python_intro.html and python_intro.md). | string |
 | header    | Yes          | HTML content for the tutorial header/introduction. | html |
-| sections  | Yes          | List of tutorial sections, each with "name" (anchor ID), "short" (heading), "long" (description), and "html" (content). | list |
+| sections  | Yes          | List of tutorial sections, each with "name" (anchor ID), "short" (heading), "long" (description), and "body" (content). | list |
 | citations | No           | List of citations, each with "text" and optional "available" (URL). | list |
 
 HTML fields should use `>` for folded scalars as with lesson YAML files. Generated tutorials include:

@@ -8,19 +8,19 @@ sections:
   - name: intro
     short: Introduction
     long: Introduction to orientation as a preattentive feature
-    html: >
+    body: >
       Orientation refers to the angle or rotation of visual elements.
       It can be used to encode data or create visual variety.
   - name: rotation
     short: Rotation
     long: Learn to rotate shapes
-    html: >
+    body: >
       Learn how to rotate shapes and use orientation to encode information
       in your visualizations.
   - name: next
     short: Next
     long: Continue to the next tutorial
-    html: >
+    body: >
       Continue on to
       <a href="/labs/resources_text.html">Tutorial 8</a>
       to learn about working with text in your visualizations.

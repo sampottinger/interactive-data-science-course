@@ -7,31 +7,31 @@ sections:
   - name: intro
     short: Introduction
     long: Introduction to working with data
-    html: >
+    body: >
       Data is at the heart of visualization. Learn how to load and
       process data for visualization.
   - name: csv
     short: CSV Files
     long: Working with CSV data
-    html: >
+    body: >
       CSV files are a common data format. Learn how to read CSV files
       and use the data in your visualizations.
   - name: processing
     short: Data Processing
     long: Processing and transforming data
-    html: >
+    body: >
       Raw data often needs processing. Learn techniques for cleaning
       and transforming data for visualization.
   - name: visualization
     short: Creating Visualizations
     long: Putting it all together to create data visualizations
-    html: >
+    body: >
       Combine everything you've learned to create complete data
       visualizations from real datasets.
   - name: next
     short: Next
     long: Continue to the next tutorial
-    html: >
+    body: >
       This completes Lab 4! You may continue to
       <a href="/labs/js.html">Tutorial 12</a>
       to explore JavaScript, or return to the lectures.

@@ -11,7 +11,7 @@
 {% for section in sections %}
 ## {{ section.short }}
 
-{{ section.html | striptags }}
+{{ section.body | striptags }}
 
 {% endfor %}
 
