@@ -61,7 +61,7 @@ def load_labs_from_directory(labs_dir):
         tutorials = []
         yaml_files = sorted([
             f for f in os.listdir(lab_path)
-            if f.startswith('tutorial_') and f.endswith('.yaml')
+            if f.endswith('.yaml') and f[0:2].isdigit()
         ])
 
         for yaml_file in yaml_files:
@@ -69,7 +69,7 @@ def load_labs_from_directory(labs_dir):
             with open(yaml_path, 'r') as f:
                 tutorial = yaml.load(f, Loader=yaml.Loader)
                 # Extract tutorial number from filename
-                tutorial_num = int(yaml_file.split('_')[1].split('.')[0])
+                tutorial_num = int(yaml_file.split('_')[0])
                 tutorial['number'] = tutorial_num
                 tutorials.append(tutorial)
 

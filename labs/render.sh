@@ -21,9 +21,9 @@ labs_dir = '.'
 lab_dirs = sorted([d for d in os.listdir(labs_dir) if d.startswith('Lab_') and os.path.isdir(os.path.join(labs_dir, d))])
 for lab_dir in lab_dirs:
     lab_path = os.path.join(labs_dir, lab_dir)
-    yaml_files = sorted([f for f in os.listdir(lab_path) if f.startswith('tutorial_') and f.endswith('.yaml')])
+    yaml_files = sorted([f for f in os.listdir(lab_path) if f.endswith('.yaml') and f[0:2].isdigit()])
     for yaml_file in yaml_files:
-        tutorial_num = int(yaml_file.split('_')[1].split('.')[0])
+        tutorial_num = int(yaml_file.split('_')[0])
         if tutorial_num == $i:
             yaml_path = os.path.join(lab_path, yaml_file)
             with open(yaml_path, 'r') as f:
