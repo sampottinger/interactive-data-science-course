@@ -72,7 +72,7 @@ Each lesson may have:
 | materials_pdf  | Recommended  | Flag indicating if a PDF version of the lesson is available.                                             | bool     |
 | materials_pptx | Recommended  | Flag indicating if a PowerPoint (PPTX) version of the lesson is available.                               | bool     |
 | materials_md   | Recommended  | Flag indicating if a markdown version of the lesson is available.                                        | bool     |
-| citations      | Recommended  | Flag indicating if there are citations for the lecture.                                                  | bool     |
+| citations      | Recommended  | Either a boolean (deprecated) indicating citation file presence or a list of citation strings (preferred). | bool or list |
 | assignment     | No           | Long-form description of the out of lesson (like homework) exercise associated with the lesson (if any). | html     |
 | reading        | No           | Long-form description of the out of lesson (like homework) reading associated with the lesson (if any).  | html     |
 | links          | No           | List of links (with `text` and `url` fields) which are mentioned in the lesson.                          | list     |
@@ -148,7 +148,32 @@ Here is a well implemented entry:
 ```
 
 #### Citations
-Each lesson with citations should have a file in the form of `lesson00.txt` within `lecture/citations`. Each line should contain a single citation. Empty lines (including those containing only whitespace) are ignored. These files should end with a single empty line.
+Citations can be provided in two formats: inline YAML lists (preferred) or separate text files (deprecated).
+
+##### Preferred format: Inline YAML lists
+The recommended approach is to embed citations directly in the lesson YAML file as a list of plain citation strings. Each string should be an IEEE-derivative citation. URLs and DOIs should be left as plain text within the citation string; they will be automatically linkified at render time by the `process_citation()` function in `lecture/render.py`.
+
+For citations exceeding 100 characters, use the `>` folded scalar syntax to improve readability. Do not break URLs across lines.
+
+Example:
+```yaml
+citations:
+  - >
+    J. Snow, On the mode of communication of cholera. London: John
+    Churchill, 1855. Available:
+    https://archive.org/details/b28985266/page/n57/mode/2up
+  - >
+    A. Kirk, DATA VISUALISATION: a handbook for data driven design.
+    S.l.: SAGE PUBLICATIONS, 2024.
+  - W. Playfair, Commercial and Political Atlas. London, 1786.
+```
+
+Short citations (under 100 characters) may be plain strings without `>`.
+
+##### Deprecated format: Separate text files
+The older format uses `citations: true` in the lesson YAML along with a corresponding text file in the form of `lesson00.txt` within `lecture/citations`. Each line contains a single citation. Empty lines (including those containing only whitespace) are ignored. These files end with a single empty line.
+
+This format is being phased out in favor of inline YAML lists. New lessons should use the inline format, and existing lessons will be gradually migrated.
 
 #### Markdown
 It is strongly recommended that all lessons contain a markdown version as it is the most accessible format where possible. The intention is provide a self-contained text version of the lesson.
