@@ -1,9 +1,0 @@
-Tableau, "Tableau Logo," Salesforce, 2024. Available: https://www.salesforce.com/news/tableau-from-salesforce-logo-color-1/
-H. Wickham, "Tidy Data," Journal of Statistical Software, 2014. Available: https://www.jstatsoft.org/article/view/v059i10
-Tableau, "Dimensions and Measures, Blue and Green," Salesforce, Available: https://help.tableau.com/current/pro/desktop/en-us/datafields_typesandroles.htm
-S. Carmody, "Mosaic Big," Wikimedia Foundation, 2009. Available: https://en.wikipedia.org/wiki/Mosaic_plot#/media/File:Mosaic-big.png
-G. Silvermanaz, "2012 Singapore Products Export Treemap," Wikimedia Foundation, 2014. Available: https://en.wikipedia.org/wiki/Treemapping#/media/File:2012_Singapore_Products_Export_Treemap.png
-S. Maskey, "Zoomable Sunburst with Labels Issue," StackOverflow, 2014. Available: https://stackoverflow.com/questions/24547620/zoomable-sunburst-with-labels-issue
-T. Munzner, "A Nested Model for Visualization Design and Validation," in IEEE Transactions on Visualization and Computer Graphics, vol. 15, no. 6, pp. 921-928, Nov.-Dec. 2009, doi: 10.1109/TVCG.2009.111
-S. Zhang, "Canyon," OpenProcessing. Available: https://openprocessing.org/sketch/2552991
-Y. Holtz and C. Healy, "From Data to Viz," 2018. Available: https://www.data-to-viz.com

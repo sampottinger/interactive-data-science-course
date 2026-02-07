@@ -1,0 +1,50 @@
+name: AI Advanced
+file: ai_advanced.html
+header: >
+  In this advanced tutorial, we explore more sophisticated uses of AI
+  for data visualization, including custom visualizations, debugging,
+  and integrating multiple data sources.
+sections:
+  - name: intro
+    short: Introduction
+    long: Introduction to advanced AI techniques
+    html: >
+      Build on your AI basics to tackle more complex visualization challenges.
+      Learn to use AI for custom chart types, debugging, and data analysis.
+  - name: custom_viz
+    short: Custom Visualizations
+    long: Creating custom visualizations with AI assistance
+    html: >
+      Go beyond standard chart types. Learn how to describe and create
+      custom visualizations tailored to your specific data and goals.
+  - name: debugging
+    short: Debugging with AI
+    long: Using AI to debug visualization code
+    html: >
+      AI can help identify and fix errors in your code. Learn effective
+      strategies for using AI as a debugging assistant.
+  - name: integration
+    short: Data Integration
+    long: Integrating multiple data sources
+    html: >
+      Real projects often involve multiple datasets. Learn how AI can help
+      merge and analyze data from different sources.
+  - name: ethics
+    short: Ethics and Limitations
+    long: Ethical considerations and AI limitations
+    html: >
+      Understand the ethical implications of AI-generated visualizations
+      and the limitations of current AI systems.
+  - name: next
+    short: Next
+    long: Completing the skills labs
+    html: >
+      Congratulations on completing all the skills labs! Return to the
+      <a href="/labs">labs index</a> or continue with the course lectures.
+citations:
+  - text: OpenAI, "ChatGPT." [Online].
+    available: https://chat.openai.com/
+  - text: Anthropic, "Claude." [Online].
+    available: https://claude.ai/
+  - text: E. Horvitz, "AI and Ethics." Microsoft Research. [Online].
+    available: https://www.microsoft.com/en-us/research/

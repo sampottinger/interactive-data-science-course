@@ -1,0 +1,42 @@
+number: 24
+name: Inquiry-Based Design
+video: 1077646004
+materials_pdf: true
+materials_pptx: true
+materials_md: true
+text: >
+  Consider inquiry-based design which this class is using to refer to
+  a wide range of viewpoints in data visualization that approach
+  visualization through a series of questions. Also, take a look
+  towards the final. Finally, a goodbye from Sam with concluding
+  remarks for the class ahead of the skills labs.
+reading: >
+  <a
+  href="https://stamen.com/data-visualization-for-education-when-asking-questions-is-the-answer/">
+    Data Visualization for Education
+  </a> from Stamen.
+citations:
+- text: >
+    N. Hayes, "Data Visualization for Education: When Asking Questions is
+    the Answer," Stamen, 2023.
+  available: https://stamen.com/data-visualization-for-education-when-asking-questions-is-the-answer/
+- text: >
+    S. Lourterwasser and Crash Course, "Crash Course Sociology," Crash
+    Course, 2017.
+  available: https://thecrashcourse.com/topic/sociology/
+- text: A. Thorn, "Philosophy Tube," Philosophy Tube.
+  available: https://www.youtube.com/@philosophytube
+- text: D. Shiffman, The Nature of Code, No Starch Press, 2024.
+  available: https://natureofcode.com/
+- text: Eyeo Festival, "Eyeo Festival," Eyeo Festival.
+  available: https://eyeofestival.com/
+- text: M. Brown, "Game Maker's Toolkit," Game Maker's Toolkit.
+  available: https://gamemakerstoolkit.com/
+- text: >
+    J-M8, "Design Delve," Second Wind.
+  available: https://www.youtube.com/watch?v=LR2vQO_BHC0&list=PLUBKwq0XD0uc3-bC1m0IYvbdu8dEX4rd2
+- text: Extra Credits, "Extra Credits," Extra Credits.
+  available: https://www.youtube.com/@extracredits
+- text: H. Horst and D. Miller, Digital Anthropology, Routledge, 2012.
+- text: A. Shvets, "Refactoring Guru," Refactoring Guru.
+  available: https://refactoring.guru/

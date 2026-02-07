@@ -1,0 +1,44 @@
+name: JS
+file: js.html
+header: >
+  While we have focused on Python throughout this course, JavaScript is
+  another powerful language for creating web-based visualizations. This
+  optional tutorial introduces JavaScript basics.
+sections:
+  - name: intro
+    short: Introduction
+    long: Introduction to JavaScript for visualization
+    html: >
+      JavaScript runs in web browsers and is essential for creating
+      interactive web-based visualizations. Learn the basics of JavaScript
+      and how it differs from Python.
+  - name: basics
+    short: JavaScript Basics
+    long: Core JavaScript concepts
+    html: >
+      Learn JavaScript syntax, variables, functions, and control flow.
+      See how these concepts compare to Python.
+  - name: dom
+    short: DOM Manipulation
+    long: Working with the Document Object Model
+    html: >
+      Learn how to use JavaScript to manipulate web page elements
+      for interactive visualizations.
+  - name: libraries
+    short: Visualization Libraries
+    long: JavaScript visualization libraries
+    html: >
+      Explore popular JavaScript visualization libraries like D3.js,
+      Chart.js, and others.
+  - name: next
+    short: Next
+    long: Continue your learning journey
+    html: >
+      This completes the JavaScript tutorial! You may continue to
+      <a href="/labs/ai_basics.html">Tutorial 13</a>
+      to explore AI-assisted visualization, or return to the lectures.
+citations:
+  - text: Mozilla Developer Network, "JavaScript." [Online].
+    available: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  - text: D3.js, "Data-Driven Documents." [Online].
+    available: https://d3js.org/

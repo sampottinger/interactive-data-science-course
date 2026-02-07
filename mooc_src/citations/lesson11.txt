@@ -1,6 +1,0 @@
-A. Pottinger, "TED Visualization," Gleap.org. Available: https://gleap.org/content/ted_visualization
-W. Cleveland and R. McGill, "Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods," Journal of the American Statistical Association, 1984. Available: https://www.jstor.org/stable/2288400
-"Stack Overflow Annual Developer Survey 2024," Stack Exchange Inc, 2024. Available: https://survey.stackoverflow.co/
-C. Ware, "Information Visualization: Perception for Design (Interactive Technologies)," Morgan Kaufmann, 2012.
-A. Cairo, "The Truthful Art," New Riders, 2016.
-NYT Opinion, "10 Columnists and Writers Rate What Mattered in Trump’s First Full Month," New York Times Company, 2025. Available: https://www.nytimes.com/interactive/2025/03/01/opinion/trump-administration-first-month.html.

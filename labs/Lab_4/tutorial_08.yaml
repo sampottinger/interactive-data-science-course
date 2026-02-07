@@ -1,0 +1,34 @@
+name: Text
+file: resources_text.html
+header: >
+  Now that we have explored preattentive features, we will look at bringing
+  resources from the outside world into our visualizations. We start with text.
+sections:
+  - name: intro
+    short: Introduction
+    long: Introduction to working with text in visualizations
+    html: >
+      Text is an essential component of data visualization, providing labels,
+      annotations, and context. Learn how to work with text in Sketchingpy.
+  - name: drawing_text
+    short: Drawing Text
+    long: Learn to draw text on the canvas
+    html: >
+      Learn how to position and style text in your visualizations using
+      Sketchingpy's text drawing capabilities.
+  - name: fonts
+    short: Fonts
+    long: Working with fonts and typography
+    html: >
+      Typography choices impact readability and aesthetics. Learn about
+      font selection and text styling.
+  - name: next
+    short: Next
+    long: Continue to the next tutorial
+    html: >
+      Continue on to
+      <a href="/labs/resources_images.html">Tutorial 9</a>
+      to learn about working with images.
+citations:
+  - text: A. Pottinger, "Sketchingpy." Sketchingpy Project, 2024. [Online].
+    available: https://sketchingpy.org/

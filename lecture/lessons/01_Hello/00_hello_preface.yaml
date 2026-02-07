@@ -1,0 +1,39 @@
+number: 0
+name: Hello (Preface)
+video: 1154435218
+materials_pdf: true
+materials_pptx: true
+materials_md: true
+text: >
+  Short pre-course primer providing a quick preview of the class's
+  structure and purpose before offering some background and direction
+  on how best to use the online open source resources.
+reading: >
+  Be sure to briefly skim the <a href="/#materials">overall course
+  materials</a> which include the course syllabus, manual, and coding
+  exercise rubric.
+citations:
+- text: A. Pottinger, "TED Visualization," Gleap.org.
+  available: https://gleap.org/content/ted_visualization
+- text: >
+    Wikipedia Contributors, "Snow-cholera-map-1.jpg." Wikimedia
+    Foundation, Inc., 2020.
+  available: https://en.wikipedia.org/wiki/File:Snow-cholera-map-1.jpg
+- text: >
+    A. Pottinger, L. Connor, B. Guzder-Williams, M. Weltman-Fahs, N.
+    Gondek, and T. Bowles, "Climate-driven doubling of U.S. maize loss
+    probability: Interactive simulation with neural network Monte
+    Carlo," JDSSV, 2025.
+  doi: 10.52933/jdssv.v5i3.134
+- text: >
+    A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse,
+    M. de Bruyn, C. Boettiger, E. Baker, K. Koy, and D. McCauley,
+    "Global Plastics AI Policy Tool," University of California, 2024.
+  available: https://global-plastics-tool.org/
+- text: A. Pottinger, "Food Sim SF," Gleap, 2024.
+  available: https://foodsimsf.com/
+- text: >
+    A. S. Pottinger and G. Zarpellon, "Pyafscgap.org: Open source
+    multi-modal Python-based tools for NOAA AFSC RACE GAP," JOSS,
+    vol. 8, no. 86, p. 5593, Jun. 2023.
+  doi: 10.21105/joss.05593

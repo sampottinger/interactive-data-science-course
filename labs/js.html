@@ -4,18 +4,21 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Lab: JavaScript for Interactive Visualization (Interactive Data Sci / Viz)</title>
-        <meta name="description" content="Explore JavaScript, P5, and D3 for building interactive data visualizations. Learn browser-based graphics and discover how these tools extend your visualization skillset." />
+        <title>Lab: JS (Interactive Data Sci / Viz)</title>
+        <meta
+            name="description"
+            content="While we have focused on Python throughout this course, JavaScript is another powerful language for creating web-based visualizations. This optional..."
+        />
         <link href="/support/web/supplemental.css" rel="stylesheet" type="text/css" />
 
         <meta
             property="og:title"
-            content="Lab: JavaScript for Interactive Visualization (Interactive Data Sci / Viz)"
+            content="Lab: JS (Interactive Data Sci / Viz)"
         />
         <meta property="og:type" content="article" />
         <meta
             property="og:description"
-            content="Explore JavaScript, P5, and D3 for building interactive data visualizations. Learn browser-based graphics and discover how these tools extend your visualization skillset."
+            content="While we have focused on Python throughout this course, JavaScript is another powerful language for creating web-based visualizations. This optional..."
         />
         <meta
             property="og:url"
@@ -28,11 +31,11 @@
 
         <meta
             name="twitter:title"
-            content="Lab: JavaScript for Interactive Visualization (Interactive Data Sci / Viz)"
+            content="Lab: JS (Interactive Data Sci / Viz)"
         />
         <meta
             name="twitter:description"
-            content="Explore JavaScript, P5, and D3 for building interactive data visualizations. Learn browser-based graphics and discover how these tools extend your visualization skillset."
+            content="While we have focused on Python throughout this course, JavaScript is another powerful language for creating web-based visualizations. This optional..."
         />
         <meta
             name="twitter:image"
@@ -45,152 +48,79 @@
             <a href="#main">Skip to content</a>
         </div>
         <header>
-            This tutorial is part of the <a href="/labs">skills labs</a> within
-            <a href="/">Interactive Data Science and Visualization</a>.
+            This tutorial is part of the <a href="/labs">skills labs</a> within <a href="/">Interactive Data Science and Visualization</a>.
         </header>
         <main id="main">
-            <h1>JavaScript</h1>
+            <h1>JS</h1>
 
-            We've explored data visualization concepts in the general sense so
-            the lessons learned from this class can go with you regardless of
-            what technology (including pen and paper!) you use to realize your
-            ideas. Today we will explore JavaScript (sometimes called ECMAScript
-            or just JS) as another option. Note that this skills lab is
-            optional.
+            <p>
+                <strong>Other formats:</strong> <a href="/labs/js.md">Markdown version</a>
+            </p>
+
+            While we have focused on Python throughout this course, JavaScript is another powerful language for creating web-based visualizations. This optional tutorial introduces JavaScript basics.
+
 
             <details>
                 <summary>Contents</summary>
                 <ul>
-                    <li><a href="#motivation">Motivation</a></li>
-                    <li><a href="#p5">P5</a></li>
-                    <li><a href="#javascript-itself">JavaScript Itself</a></li>
-                    <li><a href="#d3">D3</a></li>
+                    
+                    <li><a href="#intro">Introduction</a></li>
+                    
+                    <li><a href="#basics">JavaScript Basics</a></li>
+                    
+                    <li><a href="#dom">DOM Manipulation</a></li>
+                    
+                    <li><a href="#libraries">Visualization Libraries</a></li>
+                    
                     <li><a href="#next">Next</a></li>
+                    
                 </ul>
             </details>
 
-            <section id="motivation">
-                <h2>Motivation</h2>
+            
+            <section id="intro">
+                <h2>Introduction</h2>
+                JavaScript runs in web browsers and is essential for creating interactive web-based visualizations. Learn the basics of JavaScript and how it differs from Python.
 
-                <p>
-                    There are a lot of technologies out there to make data
-                    visualizations. Some like
-                    <a href="https://www.tableau.com/" target="_blank"
-                        >Tableau</a
-                    >
-                    don't require code. Others like
-                    <a href="https://vega.github.io/vega-lite/">Vega</a> are
-                    programming languages just for data visualization. The
-                    concepts we've explored in this class translate across all
-                    of these different options and, indeed, many use similar
-                    teminology to that which we've explored together in class.
-                    This means that, even if you are moving into a new
-                    technology, you should see some familiar ideas.
-                </p>
-
-                <p>
-                    Even so, note that we've often centered our discussion on
-                    Sketchingpy which has given us an opportunity to program for
-                    the web through Python. This language was used as this
-                    technology is more commonly known amoung the students
-                    participating this semester. It is also one of the more
-                    frequently used languages in the scientific computing space.
-                </p>
-                <p>
-                    While professional data visualization designers use Python,
-                    our community also uses other languages as well. In
-                    particular, JavaScript is a popular option as it also runs
-                    within the browser. We will explore JavaScript here. The
-                    good news is Skechingpy is similar to some JavaScript
-                    libraries leveraged for interactive data graphics so the
-                    transition isn't too hard.
-                </p>
             </section>
+            
+            <section id="basics">
+                <h2>JavaScript Basics</h2>
+                Learn JavaScript syntax, variables, functions, and control flow. See how these concepts compare to Python.
 
-            <section id="p5">
-                <h2>P5</h2>
-
-                <div>
-                    <a href="https://p5js.org/" target="_blank">P5</a> is the
-                    JavaScript equivalent to
-                    <a href="https://processing.org/">Processing</a>, one of the
-                    libraries that really blew open the doors to interactive
-                    data graphics. Also, working with P5 isn't too dissimilar to
-                    working with Sketchingpy. Go ahead and give P5 a shot at the
-                    <a
-                        href="https://p5js.org/tutorials/get-started/"
-                        target="_blank"
-                        >P5 Getting Started Guide</a
-                    >. The tutorials are excellent and, like Sketchingpy, there
-                    is a web editor available.
-                </div>
             </section>
+            
+            <section id="dom">
+                <h2>DOM Manipulation</h2>
+                Learn how to use JavaScript to manipulate web page elements for interactive visualizations.
 
-            <section id="javascript-itself">
-                <h2>JavaScript Itself</h2>
-
-                <div>
-                    P5 offers a great introduction into JavaScript because the
-                    "way of thinking" about computation can translate well
-                    between P5, Processing, Sketchingpy, and many other similar
-                    libraries. Let's next compare some of the language features
-                    of Python and JavaScript by reviewing
-                    <a
-                        href="https://dev.to/kachiic/learning-javascript-as-a-python-developer-126g"
-                        target="_blank"
-                        >Learning Javascript as a Python Developer</a
-                    >. This just runs through some of the things you might
-                    notice as different when you get started using JS in your
-                    work.
-                </div>
             </section>
+            
+            <section id="libraries">
+                <h2>Visualization Libraries</h2>
+                Explore popular JavaScript visualization libraries like D3.js, Chart.js, and others.
 
-            <section id="d3">
-                <h2>D3</h2>
-
-                <div>
-                    P5 can do some incredible stuff but
-                    <a href="https://d3js.org/" target="_blank">D3</a> is also
-                    commonly used for data visualization in JavaScript. The way
-                    that D3 thinks about data and drawing is a bit different
-                    than P5. Specifically, while P5 fits into a procedural or
-                    object oriented paradigm, D3 focuses quite a bit on a
-                    "functional programming" perspective. For this next section,
-                    you may consider using
-                    <a href="https://observablehq.com/" target="_blank"
-                        >Observable</a
-                    >
-                    or
-                    <a href="https://codepen.io/" target="_blank">Codepen</a> if
-                    you have not done much web development before. Regardless,
-                    make your way through a
-                    <a
-                        href="https://www.freecodecamp.org/news/d3js-tutorial-data-visualization-for-beginners/"
-                        target="_blank"
-                        >D3 tutorial</a
-                    >. If you can master D3, P5, and Sketchingpy, you really can
-                    take your data visualizations anywhere.
-                </div>
             </section>
-
+            
             <section id="next">
                 <h2>Next</h2>
-                That's it! In general, I still recommend most students use
-                Python (and possibly Sketchingpy) for the last part of the
-                class. This skills lab just gives you a sense of what the JS
-                avenue looks like so that you are better positioned to make that
-                jump into JS later. However, if you feel comfortable with web
-                development maybe because you have had prior experience in HTML
-                / CSS / JS, feel free to give that a shot for this class'
-                concluding project. Regardless, thank you for being such an
-                excellent group of students. Thanks so much for a fantastic
-                class. I can't wait to see you for your final projects.
+                This completes the JavaScript tutorial! You may continue to <a href="/labs/ai_basics.html">Tutorial 13</a> to explore AI-assisted visualization, or return to the lectures.
 
-                <details>
-                    <summary>Citations</summary>
-                    <ul></ul>
-                </details>
             </section>
+            
+
+            
+            <details>
+                <summary>Citations</summary>
+                <ul>
+                    
+                    <li>Mozilla Developer Network, "JavaScript." [Online]. Available: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">https://developer.mozilla.org/en-US/docs/Web/JavaScript</a></li>
+                    
+                    <li>D3.js, "Data-Driven Documents." [Online]. Available: <a href="https://d3js.org/" target="_blank">https://d3js.org/</a></li>
+                    
+                </ul>
+            </details>
+            
         </main>
         <footer>
             Materials on this page are available under
