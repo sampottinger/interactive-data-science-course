@@ -1,0 +1,62 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="description" content="{% block description %}{% endblock %}" />
+        <link href="/support/web/supplemental.css" rel="stylesheet" type="text/css" />
+
+        <meta
+            property="og:title"
+            content="{% block og_title %}{% endblock %}"
+        />
+        <meta property="og:type" content="article" />
+        <meta
+            property="og:description"
+            content="{% block og_description %}{% endblock %}"
+        />
+        <meta
+            property="og:url"
+            content="{% block og_url %}{% endblock %}"
+        />
+        <meta
+            property="og:image"
+            content="https://mooc.interactivedatascience.courses/support/web/card.jpg"
+        />
+
+        <meta
+            name="twitter:title"
+            content="{% block twitter_title %}{% endblock %}"
+        />
+        <meta
+            name="twitter:description"
+            content="{% block twitter_description %}{% endblock %}"
+        />
+        <meta
+            name="twitter:image"
+            content="https://mooc.interactivedatascience.courses/support/web/card.jpg"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+    </head>
+    <body>
+        <div class="skip-link">
+            <a href="#main">Skip to content</a>
+        </div>
+        <header>
+            This {% block doc_type %}document{% endblock %} is part of
+            <a href="/">Interactive Data Science and Visualization</a>.
+        </header>
+        <main id="main">
+            {% block content %}{% endblock %}
+        </main>
+        <footer>
+            {% block footer_license %}{% endblock %}. Thank you to
+            <a href="https://public-sans.digital.gov">PublicSans</a> under the
+            Open Font License. No cookies are used. Analytics limited to
+            standard server logging which may collect IP addresses. These logs
+            are deleted or anonymized within 30 days.
+        </footer>
+    </body>
+</html>

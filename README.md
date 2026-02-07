@@ -27,6 +27,13 @@ html and typically **PDF**, **PPTX**, and **video** accompanying materials.
 ### Course-wide materials
 Found in `/course_wide`, these are resources which apply across many or all lessons of the course and are wide-ranging documents such as the course manual and syllabus as well as grading rubric. In general, these are available in **markdown** with **html** and **PDF** options.
 
+Course-wide materials are rendered from Jinja2 templates using `course_wide/render.py`:
+ - `base.html` and `base.md`: Shared structure across all course-wide pages
+ - `syllabus_template.html` and `syllabus_template.md`: Syllabus templates
+ - `manual_template.html` and `manual_template.md`: Course manual templates
+ - `rubric_template.html` and `rubric_template.md`: Grading rubric templates
+ - `syllabus.yml`: Structured data for course sections, lessons, and rubric criteria
+
 ### Skills labs
 Found in `/labs`, hands-on tutorials and focused instruction on implementation skills. These are often recommended for a flipped classroom structure. They are provided in **html** and **Python** with supplemental materials.
 
@@ -75,6 +82,13 @@ $ cd mooc_src
 $ bash render.sh
 ```
 
+Build course-wide materials through `course_wide`:
+
+```bash
+$ cd course_wide
+$ bash render.sh
+```
+
 Alternatively, build the full course by using `build.sh` in the root of the repository:
 
 ```bash
@@ -90,8 +104,8 @@ If desired, subagents can help with development activities. These are available 
 For those interested in contributing to this open source project, thank you! In addition to additional logistical instructions in this README for building the course website, please see also our [contributing guide](https://github.com/sampottinger/interactive-data-science-course/blob/aa4f19e55f90a5574fac67c92b490fbc830b0f72/CONTRIBUTING.md). That said, it is recommended that the following pass prior to commit:
 
 ```bash
-$ pyflakes mooc_src/*.py
-$ pycodestyle mooc_src/*.py
+$ pyflakes mooc_src/*.py course_wide/*.py
+$ pycodestyle mooc_src/*.py course_wide/*.py
 $ npx eslint 'mooc_src/**/*.js'
 ```
 

@@ -16,9 +16,9 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Run pyflakes
-        run: pyflakes mooc_src/*.py
+        run: pyflakes mooc_src/*.py course_wide/*.py
       - name: Run pycodestyle
-        run: pycodestyle mooc_src/*.py
+        run: pycodestyle mooc_src/*.py course_wide/*.py
   check_js:
     runs-on: ubuntu-latest
     name: Check JS
@@ -88,4 +88,4 @@ jobs:
           sshpass -p "${{ secrets.SFTP_PASSWORD }}" scp -o StrictHostKeyChecking=no -r ./labs/* ${{ secrets.SFTP_USER }}@${{ secrets.SFTP_HOST }}:./mooc.interactivedatascience.courses/labs/
       - name: Upload course wide
         run: |
-          sshpass -p "${{ secrets.SFTP_PASSWORD }}" scp -o StrictHostKeyChecking=no -r ./course_wide/* ${{ secrets.SFTP_USER }}@${{ secrets.SFTP_HOST }}:./mooc.interactivedatascience.courses/course_wide/
+          sshpass -p "${{ secrets.SFTP_PASSWORD }}" scp -o StrictHostKeyChecking=no -r ./mooc/course_wide/* ${{ secrets.SFTP_USER }}@${{ secrets.SFTP_HOST }}:./mooc.interactivedatascience.courses/course_wide/

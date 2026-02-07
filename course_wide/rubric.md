@@ -2,6 +2,7 @@
 
 Across the course, you will be asked to submit code for 7 regular assignments and the final project. This rubric describes how these exercises are scored. Specifically, as we gain more skills, we can add more criteria to our rubric until reaching the final!
 
+
 **Other formats:** [HTML version](rubric.html) | [Markdown version](rubric.md) (you are here) | [PDF version](rubric.pdf) (from UC Berkeley Spring 2025 teaching)
 
 ## Category Weights
@@ -14,6 +15,7 @@ There are 4 categories of criteria with the weighting below. This weighting is m
 | Materials / Concepts   | 30%        |
 | Tech / Program Correct | 20%        |
 | Explore / Express      | 20%        |
+
 
 ## Rubric Criteria by Assignment
 
@@ -42,6 +44,7 @@ The goal of this rubric really is to help structure feedback, provide ideas to k
 | Explore       | Clear user loop.                                                   | Assignment 18 (AFSC GAP or BART 2)    |
 | Explore       | Ethical representation.                                            | Final                                 |
 
+
 ## Notes
 
 Some take-aways:
@@ -54,5 +57,10 @@ Some take-aways:
 
 For additional course materials, please see:
 
+
 - [Course Manual](/course_wide/manual.html) - Detailed guidance for students and instructors
 - [Course Syllabus](/course_wide/syllabus.html) - Formal curriculum and weekly schedule
+
+
+## Works Cited
+

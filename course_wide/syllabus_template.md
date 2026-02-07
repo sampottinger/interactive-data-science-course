@@ -1,8 +1,14 @@
-# Interactive Data Science and Visualization
-Formal curriculum and syllabus which is completed by the [course manual](/course_wide/manual.html) with practical guidance on either taking the course as a learner or providing / adapting it as an instructor.
+{% extends "base.md" %}
 
-**Other formats:** [HTML version](syllabus.html) | [Markdown version](syllabus.md) (you are here) | [PDF version](syllabus.pdf) (from UC Berkeley Spring 2025 teaching)
+{% set license_text = "Provided under the [CC-BY International 4.0 License](https://creativecommons.org/licenses/by/4.0/)." %}
 
+{% block title %}Interactive Data Science and Visualization{% endblock %}
+
+{% block description %}Formal curriculum and syllabus which is completed by the [course manual](/course_wide/manual.html) with practical guidance on either taking the course as a learner or providing / adapting it as an instructor.{% endblock %}
+
+{% block other_formats %}[HTML version](syllabus.html) | [Markdown version](syllabus.md) (you are here) | [PDF version](syllabus.pdf) (from UC Berkeley Spring 2025 teaching){% endblock %}
+
+{% block content %}
 ## Motivation
 Before getting into a detailed breakdown of the material, let's explore how this course can help.
 
@@ -54,104 +60,21 @@ Includes complementary short reading / videos and supportive technology skills l
 
 ## Course sections
 The course is designed across 7 major sections expected to be taken in order.
+{% for section in sections %}
 
+### {{ section.number }}. {{ section.name }}
+{{ section.tagline }}
 
-### 1. Hello
-Begin with an initial exploration of key ideas.
-
-We start our journey together by motivating why data visualization is useful, what interactive science can offer, and take an early look at some of the foundational ideas that we will explore together throughout the rest of the course. We will also make sure everyone has what they need to do some upcoming activities with two optional skills labs.
-
-
-| Day | Reading / Watching | Classroom Material | Activity |
-|-----|-------------------|-------------------|----------|
-| [1](/lesson1.html) | None | 4 perspectives on data visualization. | Async introductions. |
-| [2](/lesson2.html) | [Media for Thinking the Unthinkable (Victor 2013)](https://vimeo.com/67076984) | Trying out the 4 perspectives on 4 examples. | Example visualization 1 |
-| [3](/lesson3.html) | [Dealing with Open Source Licenses (Winslow 2019)](https://docs.google.com/presentation/d/1qF9MHkp0p6THLU1bXPV7snaKTMYwYWH0RqxL7v0bJ8Y/edit?usp=sharing) | Skills lab on creative coding in Python with basic concepts introduced. | Revisit example from the 4 perspectives lens. |
-| [4](/lesson4.html) | [A Byte of Python (Swaroop 2023)](https://python.swaroopch.com) | Skills lab on software architecture for creative coding in Python. | None. |
-
-
-### 2. Primitives
-Study of the essential building blocks for data visualization.
-
-We transition to the foundational building blocks of data visualization and explore the cognitive science underpinnings behind effective information design. Using what many call the grammar of graphics, we will also have our first small projects that begin to offer hands-on experiences to build custom graphics with code.
-
+{{ section.detailed }}
 
 | Day | Reading / Watching | Classroom Material | Activity |
 |-----|-------------------|-------------------|----------|
-| [5](/lesson5.html) | [Review of Tufte's "The Visual Display of Quantitative Information" (LeRoy 2018)](https://benjaminleroy.github.io/pages/blog/public/post/2018/05/16/review-of-tufte-s-the-visual-display-of-quantitative-information/) | Examples of problematic graphs (<a href="https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/" target="_blank">Tufte 2001</a>), Chart junk (<a href="https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/" target="_blank">Tufte 2001</a>), Tuftean axes (<a href="https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/" target="_blank">Tufte 2001</a>), <a href="https://medium.com/@kennelliott/39-studies-about-human-perception-in-30-minutes-4728f9e31a73" target="_blank">After Tufte (Elliot 2016)</a> | Example visualization 2. |
-| [6](/lesson6.html) | [Preattentive Attributes in Visualization (Kesavan 2016)](https://daydreamingnumbers.com/blog/preattentive-attributes-example/) | Visual processing stages, working memory, pre-attention features (<a href="https://shop.elsevier.com/books/visual-thinking-for-information-design/ware/978-0-12-823567-6" target="_blank">Ware 2021</a>). Gestalt / neg space (<a href="https://youtu.be/c1qdyszaeTU" target="_blank">Portnow et al 2018</a>) | Job satisfaction. |
-| [7](/lesson7.html) | [Inventing on Principle (Victor 2012)](https://www.youtube.com/watch?v=PUv66718DII) | Color (<a href="https://shop.elsevier.com/books/visual-thinking-for-information-design/ware/978-0-12-823567-6" target="_blank">Ware 2021</a>), Gestalt / neg space (<a href="https://youtu.be/c1qdyszaeTU" target="_blank">Portnow et al 2018</a>) | Job satisfaction remix. |
-| [8/9](/lesson8.html) | [Genuary](https://genuary.art/) | Stroke, fill, primitive shapes, options for input, fonts. | Responsive art 1. |
-| [10](/lesson10.html) | [All Maps are Wrong (Harris 2016)](https://www.youtube.com/watch?v=kIID5FDi2JQ) | Events, user loops, and data manipulation. | Responsive art 2. |
-| [11](/lesson11.html) | [How William Cleveland Turned Data Visualization Into a Science (Pricenomics 2016)](https://priceonomics.com/how-william-cleveland-turned-data-visualization/) | <a href="https://www.jstor.org/stable/2288400" target="_blank">Cleveland and McGill (1984)</a>, grammar (<a href="https://link.springer.com/book/10.1007/0-387-28695-0" target="_blank">Wilkinson 2005</a>), shared axes / direct label (<a href="https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/" target="_blank">Tufte 2001</a>). Chartjunk 2. | Census 1 / Income inequality with 4 variables. |
-
-
-### 3. Combination
-Understand common patterns and methods for making new ones.
-
-Having built up the primitives used in data visualization, we pick up the pace to build sophisticated data graphics. After using existing chart types, we venture into the great unknown by looking at how these lego pieces enable us to build completely new visual representations and how to test if novel approaches are successful.
-
-
-| Day | Reading / Watching | Classroom Material | Activity |
-|-----|-------------------|-------------------|----------|
-| [12](/lesson12.html) | [From Data to Viz (Holtz 2018)](https://www.data-to-viz.com/) | Taxonomy of common graphs (<a href="https://www.datylon.com/blog/types-of-charts-graphs-examples-data-visualization" target="_blank">Hess 2022</a>). <a href="https://towardsdatascience.com/what-are-the-happiest-jobs-in-tech-4c4d33e065f0" target="_blank">Developer happiness (Pottinger 2019)</a>, task / domain (<a href="https://www.cs.ubc.ca/~tmm/vadbook/" target="_blank">Munzner 2014</a>). | Census 2 / Income inequality with 6 variables. |
-| [13](/lesson13.html) | [Lupi and Posavec (2015)](https://vimeo.com/channels/eyeo2015/133608605) | Movements (<a href="http://www.wefeelfine.org" target="_blank">Harris and Kamvar 2015</a>; <a href="https://gleap.org/content/ted_visualization" target="_blank">Pottinger 2015</a>). Levels (<a href="https://vimeo.com/133608686" target="_blank">Fry 2015</a>). Networks. Geographic data formats, projections. A look at <a href="https://gephi.org/" target="_blank">Gephi</a> and <a href="https://qgis.org/" target="_blank">QGIS</a>. | Draw your last 5 years and your next 5 years by hand. |
-| [14](/lesson14.html) | [15 Views on a Node Link Graph (Munzner 2007)](https://www.youtube.com/watch?v=WOBKnRlOAes) | Task / domain (<a href="https://www.cs.ubc.ca/~tmm/vadbook/" target="_blank">Munzner 2014</a>). | BART 1 |
-| [15](/lesson15.html) | [Designing for Realtime Spacecraft Operations (Binx 2016)](https://www.youtube.com/watch?v=HiGd-JJ94QA) | Inquiry (<a href="https://www.cs.ubc.ca/~tmm/vadbook/" target="_blank">Munzner 2014</a>), thinking-aloud (<a href="https://research.ibm.com/publications/learning-to-use-a-text-processing-system-evidence-from-thinking-aloud-protocols" target="_blank">Lewis 1982</a>), diary studies (<a href="https://dl.acm.org/doi/10.1145/1168149.1168158" target="_blank">Shneiderman and Plaisant 2006</a>), participatory design (<a href="https://www.interaction-design.org/literature/topics/participatory-design" target="_blank">IxDF 2023</a>), generalizable knowledge vs quality assurance. | Think-Aloud of <a href="https://pyafscgap.org/" target="_blank">Pyafscgap</a> (<a href="https://joss.theoj.org/papers/10.21105/joss.05593" target="_blank">Pottinger and Zarpellon 2023</a>). |
-
-
-### 4. Conversation
-Consider and design for the reader's dialogue with your work.
-
-Just short of half way through the course, you are already an expert at choosing from existing chart types and constructing your own novel visual representations. Next we look critically at the role of the reader to construct media which enable the reader to explore more freely and become a co-creator of knowledge.
-
-
-| Day | Reading / Watching | Classroom Material | Activity |
-|-----|-------------------|-------------------|----------|
-| [16](/lesson16.html) | [It's Not You, Bad Doors are Everywhere (Posner et al 2016)](https://www.youtube.com/watch?v=yY96hTb8WgI) | History of HCI (<a href="https://dl.acm.org/doi/10.1145/3033701.3033740" target="_blank">Duarte and Baranauskas 2016</a>). Affordances (<a href="https://www.nngroup.com/books/design-everyday-things-revised/" target="_blank">Norman 2013</a>), working memory (<a href="https://shop.elsevier.com/books/visual-thinking-for-information-design/ware/978-0-12-823567-6" target="_blank">Ware 2021</a>), social actors (<a href="https://dl.acm.org/doi/10.1145/191666.191703" target="_blank">Nass et al 1994</a>) | BART 2 |
-| [17](/lesson17.html) | [The Role of the Player (Portnow 2011)](https://www.youtube.com/watch?v=ulm7bcB2xvY), [Explorable Explanations (Victor 2011)](https://worrydream.com/ExplorableExplanations/) | Why game design and its role, thinking and play, PLATO system (<a href="https://ieeexplore.ieee.org/document/4322215" target="_blank">Bitzer et al 1961</a>). Ethos, pathos, logos. | Game or interactive viz analysis part 1. |
-| [18](/lesson18.html) | [The Last Guardian and the Language of Games (Brown 2017)](https://www.youtube.com/watch?v=Qot5_rMB8Jc) | <a href="https://www.theguardian.com/us-news/ng-interactive/2017/dec/20/bussed-out-america-moves-homeless-people-country-study" target="_blank">Bussed out visualization (Bremer and Wu 2017)</a>, <a href="https://guns.periscopic.com/" target="_blank">Gun Deaths (Rees 2013)</a>, <a href="https://ncase.me/polygons/" target="_blank">Parable of the Polygons (Hart and Case 2014)</a>. | Game or interactive viz analysis part 2. |
-| [19](/lesson19.html) | [Super Mario Bros: Level 1-1 (Edmonds and Portnow 2014)](https://www.youtube.com/watch?v=ZH2wGpEZVgE), [Triangle Design (Brown 2023)](https://www.youtube.com/watch?v=CZzcVs8tNfE&themeRefresh=1). | <a href="https://gamedesignskills.com/game-design/core-loops-in-gameplay/" target="_blank">Loops (Brazie 2024)</a>, <a href="https://youtu.be/dBmIkEvEBtA" target="_blank">Hayashida level design</a> (<a href="https://joss.theoj.org/papers/10.21105/joss.05593" target="_blank">Pottinger and Zarpellon 2023</a>), <a href="https://doi.org/10.48550/ARXIV.2312.11359" target="_blank">Plastics (Pottinger et al 2024)</a> | Game or interactive viz analysis part 3*. |
-
-
-### 5. Context
-Expand our understanding of the reader.
-
-Now that we have a deeper understanding of how to think about the reader within our designs, we next zoom out to understand users as within a broader social and physical context. We will also consider visualization in a broader sense-making context.
-
-
-| Day | Reading / Watching | Classroom Material | Activity |
-|-----|-------------------|-------------------|----------|
-| [20](/lesson20.html) | None | Interactive Experience graded activity. | Interactive Visualization |
-| [21](/lesson21.html) | [Storytelling with Verbs (Tremblay 2020)](https://www.youtube.com/watch?v=ontNUxSLhb8). [Spore, birth of a game (Wright 2007)](https://www.ted.com/talks/will_wright_spore_birth_of_a_game?language=en) | <a href="https://www.computerhistory.org/revolution/computer-games/16/201/2309" target="_blank">Possibility space (Wright 2003)</a>. <a href="https://www.youtube.com/watch?v=-auyB19Mc6U" target="_blank">Diegesis (Dassler and Portnow 2019)</a>. <a href="https://doi.org/10.52933/jdssv.v5i3.134" target="_blank">APH visualization (Pottinger et al 2025)</a>. | None |
-| [22](/lesson22.html) | [Games are for Everyone (Brown 2018)](https://www.youtube.com/watch?v=xrqdU4cZaLw) | <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG" target="_blank">WCAG (MDN 2024)</a>, common patterns, non-visual strategies. | [Final] Choose topic. |
-| [23](/lesson23.html) | [Here's What Ethical AI Really Means (Thorne 2023)](https://www.youtube.com/watch?v=AaU6tI2pb3M) or [Sasha Costanza-Chock (2019)](https://vimeo.com/354276956) | <a href="https://www.slideshare.net/Samnsparky/user-centered-data-science-135680883" target="_blank">User Centered Machine Learning (Pottinger 2019)</a>. | [Final] Initial designs. |
-| [24](/lesson24.html) | [The World Design of Metroid 1 and Zero Mission (Brown 2018)](https://www.youtube.com/watch?v=kUT60DKaEGc) | <a href="https://stamen.com/data-visualization-for-education-when-asking-questions-is-the-answer/" target="_blank">Inquiry-based design (Hayes 2023)</a>, overview of datasets, journey mapping. | [Final] Initial design ideas. |
-
-
-### 6. Skills
-Grow your implementation tool chest.
-
-You have gotten through some of the most important concepts in data visualization and interactive science. Now, we will explore different technical skills as you work on your final project. Note that guest lectures may move.
-
-
-| Day | Reading / Watching | Classroom Material | Activity |
-|-----|-------------------|-------------------|----------|
-| [25](/lesson25.html) | None | Logistics for the final, preparing for larger or non-notebook code. Git, architecture patterns, iterative process. | [Final] Sketch in code. |
-| [26.1](/lesson26.html) | None | P5 introduction. | [Final] Iterate for final. |
-| [26.2](/lesson26.html) | Lecture 25.2 is reading for Lecture 26. | D3 introduction. | [Final] Iterate for final. |
-
-
-### 7. Build
-Contribute to your portfolio.
-
-The course ends with sharing final projects and a celebration of our time together.
-
-
-| Day | Reading / Watching | Classroom Material | Activity |
-|-----|-------------------|-------------------|----------|
-| [27](/lesson27.html) | Final reading (see appendix) | Final projects and celebration. | [Final] Feedback |
-
+{%- for lesson in lessons %}
+{%- if lesson.section == section.name %}
+| [{{ lesson.lesson }}](/lesson{% if lesson.lesson is string %}{{ lesson.lesson.split('/')[0].split('.')[0] }}{% else %}{{ lesson.lesson }}{% endif %}.html) | {% if lesson.reading %}{% for item in lesson.reading %}{% if item.url %}[{{ item.text }}]({{ item.url }}){% else %}{{ item.text }}{% endif %}{% if not loop.last %}{{ item.separator if item.separator else ', ' }}{% elif item.separator %}{{ item.separator }}{% endif %}{% endfor %}{% else %}None{% endif %} | {% if lesson.class %}{% for item in lesson.class %}{{ item.text }}{% if not loop.last %} {% endif %}{% endfor %}{% endif %} | {% if lesson.activity %}{% for item in lesson.activity %}{{ item.text }}{% if not loop.last %} {% endif %}{% endfor %}{% endif %} |
+{%- endif %}
+{%- endfor %}
+{% endfor %}
 
 ## Details
 Ready to take or teach the class? Here's some additional information that might help.
@@ -176,20 +99,18 @@ To fit the 2 credit hour format, labs will take place during course instruction 
 
 ### Paid resources
 Reading to be provided. Students encouraged to purchase the interactive experience but alternatives provided. Otherwise, all materials are intended to be free to access.
-
+{% endblock %}
+{% block separator %}
 
 ---
+{% endblock %}
 
-## See Also
-
-For additional course materials, please see:
-
-
+{% block see_also_links %}
 - [Course Manual](/course_wide/manual.html) - Detailed guidance for students and instructors
 - [Grading Rubric](/course_wide/rubric.html) - Detailed grading criteria for code projects
+{% endblock %}
 
-
-## Works Cited
+{% block works_cited_section %}## Works Cited
 
 Bitzer, D., P. Braunfeld, and W. Lichtenberger. "PLATO: An Automatic Teaching Device." IRE Transactions on Education 4, no. 4 (December 1961): 157–61. https://doi.org/10.1109/TE.1961.4322215.
 
@@ -324,9 +245,11 @@ Ma, Justin, and Matthew Davis. "FTL: Faster Than Light," September 14, 2012. htt
 "Papers, Please," February 12, 2014. https://papersplea.se.
 
 Thunder Lotus Games. "Spiritfarer," August 18, 2020. https://thunderlotusgames.com/spiritfarer/.
+{% endblock %}
 
+{% block license_section %}
 
 ---
 
-## License
-Provided under the [CC-BY International 4.0 License](https://creativecommons.org/licenses/by/4.0/).
+{% block license_heading %}## License{% endblock %}
+{{ license_text }}{% endblock %}
