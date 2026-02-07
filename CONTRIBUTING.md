@@ -38,7 +38,6 @@ This includes the "lecture" class materials. All lessons must have, at minimum, 
 The MOOC source is organized in `lecture/` with the following structure:
  - `lessons/`: Section directories containing per-lesson YAML files and section metadata
  - `support/`: Supporting materials organized by type (md, pdf, pptx, web, misc)
- - `citations/`: Citation files for lessons
 
 #### YAML
 Course lessons are organized in the `lecture/lessons/` directory. This
@@ -72,7 +71,7 @@ Each lesson may have:
 | materials_pdf  | Recommended  | Flag indicating if a PDF version of the lesson is available.                                             | bool     |
 | materials_pptx | Recommended  | Flag indicating if a PowerPoint (PPTX) version of the lesson is available.                               | bool     |
 | materials_md   | Recommended  | Flag indicating if a markdown version of the lesson is available.                                        | bool     |
-| citations      | Recommended  | Either a boolean (deprecated) indicating citation file presence or a list of citation strings (preferred). | bool or list |
+| citations      | Recommended  | A list of structured citation objects with text, optional doi, and optional available fields.            | list     |
 | assignment     | No           | Long-form description of the out of lesson (like homework) exercise associated with the lesson (if any). | html     |
 | reading        | No           | Long-form description of the out of lesson (like homework) reading associated with the lesson (if any).  | html     |
 | links          | No           | List of links (with `text` and `url` fields) which are mentioned in the lesson.                          | list     |
@@ -111,7 +110,7 @@ Here is an example of a poorly implemented entry:
       \ the reader to reach new their own conclusions about the data and, if so, how?</li>\n</ul>\nPlease write 4 - 8 sentences.\n"
     reading: Optionally review <a href="https://python.swaroopch.com">A Byte of Python</a> if you want to brush up on (or
       learn) the fundamentals of Python.
-    citations: true
+    citations: [{"text": "Example citation here.", "available": "https://example.com"}]
     links: [{"text": "Skills Labs", "url": "/labs"}, {"text": "Sketchingpy Online Sketchbook", "url": https://editor.sketchingpy.org/}]
 ```
 
@@ -139,7 +138,9 @@ Here is a well implemented entry:
       Please write 4 - 8 sentences.
     reading: >
       Optionally review <a href="https://python.swaroopch.com">A Byte of Python</a> if you want to brush up on (or learn) the fundamentals of Python.
-    citations: true
+    citations:
+    - text: Example citation here.
+      available: https://example.com
     links:
     - text: Skills Labs
       url: /labs
@@ -148,10 +149,7 @@ Here is a well implemented entry:
 ```
 
 #### Citations
-Citations can be provided in two formats: inline YAML lists (preferred) or separate text files (deprecated).
-
-##### Preferred format: Inline YAML lists
-The recommended approach is to embed citations directly in the lesson YAML file as a list of structured citation objects. This format matches the skills labs citation structure. Each citation is a YAML mapping with a `text` field, an optional `doi` field, and an optional `available` field for URLs.
+Citations are provided as inline YAML lists. Each citation is a YAML mapping with a `text` field, an optional `doi` field, and an optional `available` field for URLs. This format matches the skills labs citation structure.
 
 Key points:
 - `text` contains the citation body (IEEE-derivative format recommended). Do NOT include "Available:" or "doi:" prefix in text — these are generated from their respective fields at render time.
@@ -179,11 +177,6 @@ citations:
 ```
 
 Short `text` values (under 100 characters) may be plain strings without `>`.
-
-##### Deprecated format: Separate text files
-The older format uses `citations: true` in the lesson YAML along with a corresponding text file in the form of `lesson00.txt` within `lecture/citations`. Each line contains a single citation. Empty lines (including those containing only whitespace) are ignored. These files end with a single empty line.
-
-This format is being phased out in favor of inline YAML lists. New lessons should use the inline format, and existing lessons will be gradually migrated.
 
 #### Markdown
 It is strongly recommended that all lessons contain a markdown version as it is the most accessible format where possible. The intention is provide a self-contained text version of the lesson.

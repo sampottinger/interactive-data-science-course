@@ -8,7 +8,6 @@ License: BSD-3-Clause
 """
 import itertools
 import os
-import re
 import sys
 
 import jinja2
@@ -196,14 +195,9 @@ def main_lesson():
 
   lesson = lessons_by_number[lesson_number]
 
-  citations_field = lesson.get('citations', False)
-  if isinstance(citations_field, list):
-    citations_raw = citations_field
-  elif citations_field:
-    citations_raw = load_citations_from_file(lesson_number)
-  else:
-    citations_raw = []
-
+  citations_field = lesson.get('citations', [])
+  # Handle citations: false as empty list
+  citations_raw = citations_field if isinstance(citations_field, list) else []
   citations = map(process_citation, citations_raw)
 
   template_vals = {
@@ -228,87 +222,38 @@ def main_lesson():
     f.write(result)
 
 
-def load_citations_from_file(lesson_number: int) -> list:
-  """Load citations from a text file for a given lesson.
-
-  Load citations from text file if available. If file doesn't exist, returns
-  an empty list. Skip empty lines and whitespace-only lines.
-
-  Args:
-    lesson_number: The 0-indexed lesson number.
-
-  Returns:
-    list: A list of citation strings, or an empty list if the file doesn't exist.
-  """
-  citations_file = f'citations/lesson{lesson_number:02d}.txt'
-  try:
-    with open(citations_file, 'r') as f:
-      stripped = map(str.strip, f)
-      no_empty = filter(None, stripped)
-      realized = list(no_empty)
-      return realized
-  except FileNotFoundError:
-    return []
-
-
 def process_citation(citation) -> str:
   """Prepare a citation to be rendered in HTML.
 
-  Accepts both structured (dict) and plain string citations. For structured
-  citations, extracts text, optional doi, and optional available fields.
-  For plain strings, applies direct linkification.
-
-  Insert links into citation text to be rendered as HTML where:
-
-   - For structured citations (dict), DOI values from the 'doi' field expand
-     to https://doi.org/IDENTIFIER.
-   - For plain string citations (legacy), DOI mentions like
-     "doi: 10.1080/01621459.1984.10478080" expand to
-     https://www.doi.org/10.1080/01621459.1984.10478080.
-   - Text which starts with http:// or https:// will become a link to the URL
-     (plain strings only).
+  Accepts structured citation dictionaries with text, optional doi, and
+  optional available fields. Inserts links into citation text to be rendered
+  as HTML where DOI values from the 'doi' field expand to https://doi.org/IDENTIFIER.
 
   Args:
-    citation: Either a dict with 'text', optional 'doi', and optional
-      'available' keys, or a plain citation string.
+    citation: A dict with 'text', optional 'doi', and optional 'available' keys.
 
   Returns:
     str: The citation text with links added to be displayed as HTML.
   """
-  if isinstance(citation, dict):
-    # Structured format: dict with text, optional doi, and optional available
-    text = citation.get('text', '')
-    doi = citation.get('doi', '')
-    available = citation.get('available', '')
+  # Structured format: dict with text, optional doi, and optional available
+  text = citation.get('text', '')
+  doi = citation.get('doi', '')
+  available = citation.get('available', '')
 
-    # Build the output starting with text
-    result = text
+  # Build the output starting with text
+  result = text
 
-    # Append DOI link if present
-    if doi:
-      result += f' doi: <a href="https://doi.org/{doi}">{doi}</a>.'
+  # Append DOI link if present
+  if doi:
+    result += f' doi: <a href="https://doi.org/{doi}">{doi}</a>.'
 
-    # Append available URL if present
-    if available:
-      if not available.startswith('http://') and not available.startswith('https://'):
-        available = 'https://' + available
-      result += f' Available: <a href="{available}" target="_blank">{available}</a>'
+  # Append available URL if present
+  if available:
+    if not available.startswith('http://') and not available.startswith('https://'):
+      available = 'https://' + available
+    result += f' Available: <a href="{available}" target="_blank">{available}</a>'
 
-    return result
-  else:
-    # Legacy plain string format
-    url_pattern = r'(https?://[^\s]+)'
-    citation = re.sub(url_pattern,
-                      lambda m: f'<a href="{m.group(1)}">{m.group(1)}</a>',
-                      citation)
-
-    doi_pattern = r'doi:\s*([\d\.]+/[\w\d\.\-\/]+)'
-    citation = re.sub(
-        doi_pattern, lambda m:
-        f'doi: <a href="https://www.doi.org/{m.group(1)}">{m.group(1)}</a>',
-        citation)
-
-    return citation
+  return result
 
 
 def main_list():
