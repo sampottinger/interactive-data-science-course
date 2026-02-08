@@ -11,17 +11,48 @@ import sys
 import jinja2
 import yaml
 
-USAGE_RENDER_INDEX_STR = \
-    'USAGE: python render.py index [template] [labs_dir] [output]'
-USAGE_RENDER_INDEX_ARGS = 4
+BASE_USAGE_STR = 'USAGE: python render.py'
 
-USAGE_RENDER_TUTORIAL_STR = \
-    'USAGE: python render.py tutorial [template] [md_template] ' + \
-    '[labs_dir] [number] [html_output] [md_output]'
-USAGE_RENDER_TUTORIAL_ARGS = 7
 
-USAGE_RENDER_LIST_STR = 'USAGE: python render.py list [labs_dir]'
-USAGE_RENDER_LIST_ARGS = 2
+def build_usage_str(command, attrs):
+  """Build a usage string for a command with its arguments.
+
+  Args:
+    command: The command name to build usage string for.
+    attrs: List of argument names for the command.
+
+  Returns:
+    str: The formatted usage string with bracketed arguments.
+  """
+  attrs_decorated = map(lambda x: '[%s]' % x, attrs)
+  attrs_str = ' '.join(attrs_decorated)
+  return BASE_USAGE_STR + ' ' + command + ' ' + attrs_str
+
+
+USAGE_RENDER_INDEX_ARGS = [
+    'template',
+    'labs_dir',
+    'output'
+]
+USAGE_RENDER_INDEX_STR = build_usage_str('index', USAGE_RENDER_INDEX_ARGS)
+USAGE_RENDER_INDEX_ARGS = len(USAGE_RENDER_INDEX_ARGS) + 1
+
+USAGE_RENDER_TUTORIAL_ARGS = [
+    'template',
+    'md_template',
+    'labs_dir',
+    'number',
+    'html_output',
+    'md_output'
+]
+USAGE_RENDER_TUTORIAL_STR = build_usage_str('tutorial', USAGE_RENDER_TUTORIAL_ARGS)
+USAGE_RENDER_TUTORIAL_ARGS = len(USAGE_RENDER_TUTORIAL_ARGS) + 1
+
+USAGE_RENDER_LIST_ARGS = [
+    'labs_dir'
+]
+USAGE_RENDER_LIST_STR = build_usage_str('list', USAGE_RENDER_LIST_ARGS)
+USAGE_RENDER_LIST_ARGS = len(USAGE_RENDER_LIST_ARGS) + 1
 
 USAGE_STR = 'USAGE: python render.py [index | tutorial | list]'
 MIN_ARGS = 1
