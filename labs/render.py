@@ -5,6 +5,7 @@ into static HTML and Markdown pages using Jinja2 templates and YAML data files.
 
 License: BSD-3-Clause
 """
+import itertools
 import os
 import sys
 
@@ -157,19 +158,19 @@ def main_tutorial():
 
     data = load_labs_from_directory(labs_dir)
 
-    # Find the tutorial with the given number
-    tutorial = None
-    for lab in data['labs']:
-        for tut in lab['tutorials']:
-            if tut['number'] == tutorial_number:
-                tutorial = tut
-                break
-        if tutorial:
-            break
+    # Build tutorials-by-number dictionary for O(1) lookup
+    labs = data['labs']
+    tutorials_nested = map(lambda x: x['tutorials'], labs)
+    tutorials = itertools.chain(*tutorials_nested)
+    tutorials_by_number_tuple = map(lambda x: (x['number'], x), tutorials)
+    tutorials_by_number = dict(tutorials_by_number_tuple)
 
-    if not tutorial:
+    # Direct lookup instead of nested loop
+    if tutorial_number not in tutorials_by_number:
         print(f'Tutorial {tutorial_number} not found')
         sys.exit(1)
+
+    tutorial = tutorials_by_number[tutorial_number]
 
     # Process citations if they exist
     citations_raw = tutorial.get('citations', [])
