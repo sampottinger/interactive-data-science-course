@@ -137,6 +137,38 @@ def main_index():
         f.write(result)
 
 
+def render_html(template_path, template_vals, output_path):
+    """Render HTML output from template and write to file.
+
+    Args:
+        template_path: Path to the Jinja2 HTML template file.
+        template_vals: Dictionary of values to pass to the template.
+        output_path: Path where the rendered HTML should be written.
+    """
+    with open(template_path) as f:
+        template = jinja2.Template(f.read())
+
+    result = template.render(**template_vals)
+    with open(output_path, 'w') as f:
+        f.write(result)
+
+
+def render_markdown(template_path, template_vals, output_path):
+    """Render Markdown output from template and write to file.
+
+    Args:
+        template_path: Path to the Jinja2 Markdown template file.
+        template_vals: Dictionary of values to pass to the template.
+        output_path: Path where the rendered Markdown should be written.
+    """
+    with open(template_path) as f:
+        template = jinja2.Template(f.read())
+
+    result = template.render(**template_vals)
+    with open(output_path, 'w') as f:
+        f.write(result)
+
+
 def main_tutorial():
     """Command to render a tutorial page in HTML and Markdown."""
     if len(sys.argv) != USAGE_RENDER_TUTORIAL_ARGS + 1:
@@ -149,12 +181,6 @@ def main_tutorial():
     tutorial_number = int(sys.argv[5])
     html_output_path = sys.argv[6]
     md_output_path = sys.argv[7]
-
-    with open(template_path) as f:
-        html_template = jinja2.Template(f.read())
-
-    with open(md_template_path) as f:
-        md_template = jinja2.Template(f.read())
 
     data = load_labs_from_directory(labs_dir)
 
@@ -185,15 +211,9 @@ def main_tutorial():
         'citations': citations
     }
 
-    # Render HTML
-    html_result = html_template.render(**template_vals)
-    with open(html_output_path, 'w') as f:
-        f.write(html_result)
-
-    # Render Markdown
-    md_result = md_template.render(**template_vals)
-    with open(md_output_path, 'w') as f:
-        f.write(md_result)
+    # Render HTML and Markdown
+    render_html(template_path, template_vals, html_output_path)
+    render_markdown(md_template_path, template_vals, md_output_path)
 
 
 def process_citation(citation):
