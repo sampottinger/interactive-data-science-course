@@ -151,14 +151,16 @@ Here is a well implemented entry:
 #### Citations
 Citations are provided as inline YAML lists. Each citation is a YAML mapping with a `text` field, an optional `doi` field, and an optional `available` field for URLs. This format matches the skills labs citation structure.
 
-Key points:
+**Fields:**
+
 - `text` contains the citation body (IEEE-derivative format recommended). Do NOT include "Available:" or "doi:" prefix in text — these are generated from their respective fields at render time.
 - `doi` is optional and contains just the DOI identifier (e.g., `10.1080/01621459.1984.10478080`). This is rendered as `doi: <link to doi.org>`.
 - `available` is optional and contains a URL where the resource can be accessed. Citations without a URL (e.g., books) omit this field.
 - A citation may have `doi`, `available`, both, or neither.
 - For `text` values exceeding 100 characters, use the `>` folded scalar syntax. Keep lines under 100 characters. Do not break URLs across lines.
 
-Example:
+**Example:**
+
 ```yaml
 citations:
   - text: >
