@@ -219,25 +219,35 @@ def main_tutorial():
 def process_citation(citation):
     """Prepare a citation to be rendered in HTML.
 
-    Convert citation from YAML format (with 'text' and 'available' fields)
-    to HTML format with links.
+    Accepts structured citation dictionaries with text, optional doi, and
+    optional available fields. Inserts links into citation text to be rendered
+    as HTML where DOI values from the 'doi' field expand to https://doi.org/IDENTIFIER.
 
     Args:
-        citation: Dictionary with 'text' and 'available' keys.
+        citation: A dict with 'text', optional 'doi', and optional 'available' keys.
 
     Returns:
-        str: The citation text with link added to be displayed as HTML.
+        str: The citation text with links added to be displayed as HTML.
     """
+    # Structured format: dict with text, optional doi, and optional available
     text = citation.get('text', '')
-    url = citation.get('available', '')
+    doi = citation.get('doi', '')
+    available = citation.get('available', '')
 
-    if url:
-        # Make sure URL has protocol
-        if not url.startswith('http://') and not url.startswith('https://'):
-            url = 'https://' + url
-        return f'{text} Available: <a href="{url}" target="_blank">{url}</a>'
-    else:
-        return text
+    # Build the output starting with text
+    result = text
+
+    # Append DOI link if present
+    if doi:
+        result += f' doi: <a href="https://doi.org/{doi}">{doi}</a>.'
+
+    # Append available URL if present
+    if available:
+        if not available.startswith('http://') and not available.startswith('https://'):
+            available = 'https://' + available
+        result += f' Available: <a href="{available}" target="_blank">{available}</a>'
+
+    return result
 
 
 def main_list():
