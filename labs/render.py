@@ -76,13 +76,14 @@ def load_labs_from_directory(labs_dir):
     """
     labs = []
 
-    lab_dirs = sorted([
-        d for d in os.listdir(labs_dir)
-        if d.startswith('Lab_') and os.path.isdir(os.path.join(labs_dir, d))
-    ])
+    members = os.listdir(labs_dir)
+    full_paths = map(lambda x: os.path.join(labs_dir, x), members)
+    is_lab_dir = lambda x: os.path.basename(x).startswith('Lab_') and os.path.isdir(x)
+    unsorted_lab_dirs = filter(is_lab_dir, full_paths)
+    lab_dirs = sorted(unsorted_lab_dirs)
 
     for lab_dir in lab_dirs:
-        lab_path = os.path.join(labs_dir, lab_dir)
+        lab_path = lab_dir
 
         # Load index.yml from each lab directory
         index_path = os.path.join(lab_path, 'index.yml')
@@ -90,10 +91,10 @@ def load_labs_from_directory(labs_dir):
             lab_meta = yaml.load(f, Loader=yaml.Loader)
 
         tutorials = []
-        yaml_files = sorted([
-            f for f in os.listdir(lab_path)
-            if f.endswith('.yaml') and f[0:2].isdigit()
-        ])
+        lab_members = os.listdir(lab_path)
+        is_tutorial_yaml = lambda x: x.endswith('.yaml') and x[0:2].isdigit()
+        tutorial_yamls = filter(is_tutorial_yaml, lab_members)
+        yaml_files = sorted(tutorial_yamls)
 
         for yaml_file in yaml_files:
             yaml_path = os.path.join(lab_path, yaml_file)
