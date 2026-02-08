@@ -52,4 +52,38 @@ links:
 - text: Example linked in slides
   url: >
     https://www.theguardian.com/us-news/2022/mar/13/how-covid-shook-the-us-charts-graphs
-citations: true
+citations:
+- text: M. Hoekstra, "MacPaint," Geek Technique, 2007.
+  available: https://www.geektechnique.org/blog/786/mac-paint.html
+- text: >
+    "Reception Theory," Revision World.
+  available: https://revisionworld.com/a2-level-level-revision/media-studies-level-revision/reception-theory#google_vignette
+- text: >
+    J. Tong, "Diagrammatic thinking and audience reading of COVID-19 data
+    visualisations: A UK case study," Convergence, 2024.
+  doi: 10.1177/13548565241309886
+- text: >
+    "Stuart Hall," Wikimedia Foundation, 2025.
+  available: https://en.wikipedia.org/wiki/Stuart_Hall_(cultural_theorist)
+- text: >
+    E. Berger and A. Witherspoon, "How Covid shook the US: eight charts
+    that capture the last two years," The Guardian, 2022.
+  available: https://www.theguardian.com/us-news/2022/mar/13/how-covid-shook-the-us-charts-graphs
+- text: >
+    S. Harrison, P. Sengers, and D. Tatar, "The Three Paradigms of HCI,"
+    CHI 2007, 2007.
+- text: >
+    "Understanding Projects," Asana.
+  available: https://help.asana.com/s/article/understanding-projects?language=en_US
+- text: >
+    Schell, Jesse. The Art of Game Design: A Book of Lenses. CRC Press,
+    Taylor & Francis Group, 2020.
+- text: >
+    Wright, Will. "Spore, Birth of a Game." TED, Ted Conferences, 2007.
+  available: https://www.ted.com/talks/will_wright_spore_birth_of_a_game
+- text: S. Dale. "Back wooden 4-Panel Door Closed," Unsplash, 2018.
+  available: https://unsplash.com/photos/black-wooden-4-panel-door-closed-dJycgkec2p0
+- text: L. Parren, "Pilot Driving Plane During Daytime," Unsplash, 2018.
+  available: https://unsplash.com/photos/pilot-driving-plane-during-daytime-S3xxiedz0hE
+- text: F Bezies, "Installation MS-Windows 98," Flickr, 2013.
+  available: https://www.flickr.com/photos/fredbezies/9136730422/

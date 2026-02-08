@@ -21,4 +21,35 @@ links:
   url: https://app.pyafscgap.org/
 - text: Mario Level 1-1
   url: https://youtu.be/ZH2wGpEZVgE
-citations: true
+citations:
+- text: >
+    G. Nicoli, "Spiritfarer: la morte felice," Ludica, 2020.
+  available: https://www.ludicamag.com/spiritfarer-la-morte-felice/
+- text: >
+    M. Brown, "Super Mario 3D World's 4 Step Level Design," Game Maker's
+    Toolkit, 2015.
+  available: https://www.youtube.com/watch?v=dBmIkEvEBtA
+- text: >
+    A. Pottinger and G. Zarpellon, "Pyafscgap.org: Open source multi-modal
+    Python-based tools for NOAA AFSC RACE GAP," JOSS, 2023.
+  doi: 10.21105/joss.05593
+- text: >
+    D. Emmons and J. Portnow, "Design Club - Super Mario Bros: Level 1-1,"
+    Extra Credits, 2014.
+  available: https://www.youtube.com/watch?v=ZH2wGpEZVgE
+- text: >
+    "Illinois Soil Health," University of California, 2023.
+  available: https://illinois-soil-health-tool.org/
+- text: >
+    E. Meeks, "Designing a Data Visualization Dashboard Like It was a Game,"
+    Nightingale, 2018.
+  available: https://medium.com/nightingale/designing-a-data-visualization-dashboard-like-it-was-a-game-b347858c1bce
+- text: >
+    A. Pottinger, N. Biyani, R. Geyer, D. J. McCauley, M. de Bruyn, M. R.
+    Morse, N. Nathan, K. Koy, and C. Martinez, "Combining Game Design and Data
+    Visualization to Inform Plastics Policy: Fostering Collaboration between
+    Science, Decision-Makers, and Artificial Intelligence," Arxiv, 2023.
+  available: https://arxiv.org/abs/2312.11359
+- text: >
+    Fathom Information Design, "No Ceilings," The Clinton Foundation, 2015.
+  available: http://www.noceilings.org/

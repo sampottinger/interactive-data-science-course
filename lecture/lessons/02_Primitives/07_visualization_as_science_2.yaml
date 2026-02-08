@@ -25,4 +25,48 @@ assignment: >
 links:
 - text: Activity as a PowerPoint file
   url: /support/misc/lecture7.pptx
-citations: true
+citations:
+- text: >
+    B. Adhikari, "Marey's train schedule," University of Missouri Saint
+    Louis, 2021.
+  available: https://badriadhikari.github.io/data-viz-workshop-2021/minards/
+- text: >
+    C. Ware, "Information Visualization: Perception for Design," MK
+    Press.
+- text: C. Ware, "Visual Thinking for Design," MK Press.
+- text: >
+    Interaction Design Foundation - IxDF, "What are the Gestalt
+    Principles?" Interaction Design Foundation - IxDF.
+  available: https://www.interaction-design.org/literature/topics/gestalt-principles
+- text: >
+    MRMW, "Reification," Wikimedia, 2020.
+  available: https://en.wikipedia.org/wiki/Gestalt_psychology#/media/File:Reification.svg
+- text: >
+    B. Young, "Cross Keys," Wikimedia, 2011.
+  available: https://en.wikipedia.org/wiki/Gestalt_psychology#/media/File:CrossKeys.png
+- text: >
+    "Vision," CourseHero.
+  available: https://www.coursehero.com/study-guides/wmopen-psychology/outcome-vision/
+- text: >
+    R. Madsen, "Perceptually uniform color spaces," Programming Design
+    Systems, 2020.
+  available: https://programmingdesignsystems.com/color/perceptually-uniform-color-spaces/
+- text: >
+    SharkD, "RGB Cube," Wikimedia, 2010.
+  available: https://en.wikipedia.org/wiki/RGB_color_spaces#/media/File:RGB_Cube_Show_lowgamma_cutout_b.png
+- text: >
+    J. Rus, "HSL and HSV Models," Wikimedia, 2010.
+  available: https://en.wikipedia.org/wiki/RGB_color_spaces#/media/File:RGB_Cube_Show_lowgamma_cutout_b.png
+- text: >
+    K. Cherry, "Figure / Ground Perception in Psychology," Verywell Mind,
+    2023.
+  available: https://www.verywellmind.com/what-is-figure-ground-perception-2795195
+- text: >
+    C. Brewer, M. Harrower, and The Pennsylvania State University,
+    "Colorbrewer 2.0," The Pennsylvania State University, 2013.
+  available: https://colorbrewer2.org/
+- text: >
+    M. Jacomy, "I Want Hue," Sciences-Po Medialab, 2024.
+  available: https://medialab.github.io/iwanthue/
+- text: B. Mathis, "HSL Color Picker," 2024.
+  available: https://hslpicker.com/#ffd900

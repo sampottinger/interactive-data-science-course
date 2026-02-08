@@ -35,4 +35,22 @@ links:
     Game-specific questions. Also, write 3 sentences on the player
     loops within your games.
   url: /support/misc/games.pdf
-citations: true
+citations:
+- text: >
+    G. Nicoli, "Spiritfarer: la morte felice," Ludica, 2020.
+  available: https://www.ludicamag.com/spiritfarer-la-morte-felice/
+- text: >
+    A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse,
+    M. de Bruyn, C. Boettiger, E. Baker, K. Koy, and D. McCauley, "Global
+    Plastics AI Policy Tool," University of California, 2024.
+  available: https://global-plastics-tool.org/
+- text: >
+    A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse,
+    C. Liu, S. Hu, M. de Bruyn, C. Boettiger, E. Baker, and D. McCauley,
+    "Pathways to reduce global plastic waste mismanagement and greenhouse
+    gas emissions by 2050," Science, 2024.
+  doi: 10.1126/science.adr3837
+- text: >
+    Strategy Wiki Contributors, "Super Mario Bros. / World 1," Strategy
+    Wiki.
+  available: https://strategywiki.org/wiki/Super_Mario_Bros./World_1

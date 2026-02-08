@@ -28,4 +28,86 @@ links:
   url: https://mdsr-book.github.io/mdsr2e/ch-ethics.html
 - text: Parable of the Polygons
   url: https://ncase.me/polygons/
-citations: true
+citations:
+- text: >
+    A. Shatov, "White Digital Device at 12 00," Unsplash, 2021.
+  available: https://unsplash.com/photos/white-digital-device-at-12-00-DHl49oyrn7Y
+- text: >
+    J. Berger, Ways of Seeing, Penguin Books, 1972.
+  available: https://en.wikipedia.org/wiki/Ways_of_Seeing#/media/File:Waysofseeingcvr.jpg
+- text: >
+    R. Jones, "Deceptive by Design: Data Visualization and The Ethics of
+    Representation," MIT.
+  available: https://technologist.mit.edu/deceptive-by-design-data-visualization-and-the-ethics-of-representation/
+- text: >
+    Wikipedia Contributors, "Ciclo de conferências do filósofo francês
+    Michel Foucault, no Hospital das Clínicas da Universidade do Estado
+    da Guanabara (UEG)," Wikimedia Foundation.
+  available: https://en.wikipedia.org/wiki/Michel_Foucault#/media/File:Michel_Foucault_1974_Brasil.jpg
+- text: >
+    W. Pragher, "Photograph of Martin Heidegger," Wikimedia Foundation.
+  available: https://en.wikipedia.org/wiki/Martin_Heidegger#/media/File:Heidegger_2_(1960).jpg
+- text: >
+    R. Adams, "Michel Foucault: Discourse," Critical Legal Thinking, 2017.
+  available: https://criticallegalthinking.com/2017/11/17/michel-foucault-discourse/
+- text: >
+    Wikipedia Contributors, "Bret Victor." Wikimedia Foundation, Inc., Jun.
+    22, 2023.
+  available: https://en.wikipedia.org/wiki/Bret_Victor
+- text: >
+    B. Victor, "Media for Thinking The Unthinkable," MIT Media Lab, 2013.
+  available: https://vimeo.com/67076984
+- text: >
+    CDC, "Marian Write Edelman," Wikimedia Foundation.
+  available: https://en.wikipedia.org/wiki/Marian_Wright_Edelman#/media/File:Marian_Wright_Edelman_01.jpg
+- text: >
+    M. Edelman, "You can't be what you can't see," Goodreads.
+  available: https://www.goodreads.com/quotes/536048-you-can-t-be-what-you-can-t-see
+- text: >
+    A. Thorn, "AI is an Ethical Nightmare," Philosophy Tube, 2023.
+  available: https://www.youtube.com/watch?v=AaU6tI2pb3M
+- text: >
+    W. S. Cleveland and R. McGill, "Graphical Perception: Theory,
+    Experimentation, and Application to the Development of Graphical
+    Methods," Journal of the American Statistical Association, vol. 79,
+    no. 387, pp. 531–554, Sep. 1984.
+  doi: 10.1080/01621459.1984.10478080
+- text: >
+    A. Pottinger, "Income Gaps." 2023.
+  available: https://incomegaps.com/
+- text: >
+    A. Tierney, "Median annual earnings of full-time workers in the United
+    States in 2023, by gender," Statista, 2024.
+  available: https://www.statista.com/statistics/1186135/us-median-annual-worker-earnings-by-gender/
+- text: >
+    B. Baumer, D. Kaplan, and N. Horton, Modern Data Science with R, 2nd
+    Ed, CRC Press, 2021.
+- text: >
+    K. Rees and Periscopic, "U.S. Gun Deaths." Periscopic, 2018.
+  available: https://guns.periscopic.com/
+- text: >
+    K. Sumah, L. Floyd, and H. McCracken, "Changes in State Firearm
+    Mortality," Rand Corporation, 2024.
+  available: https://www.rand.org/research/gun-policy/longitudinal-firearm-mortality.html
+- text: >
+    A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse, M.
+    de Bruyn, C. Boettiger, E. Baker, K. Koy, and D. McCauley, "Global
+    Plastics AI Policy Tool," University of California, 2024.
+  available: https://global-plastics-tool.org/
+- text: >
+    A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M, Morse, C.
+    Liu, S. Hu, M. de Bruyn, C. Boettiger, E. Baker, and D. McCauley,
+    "Pathways to reduce global plastic waste mismanagement and greenhouse
+    gas emissions by 2050," Science, 2024.
+  doi: 10.1126/science.adr3837
+- text: >
+    J. Portnow, "Propaganda Games - Ethical Game Design," Extra Credits,
+    2012.
+  available: https://www.youtube.com/watch?v=UP4_bMhZ4gA
+- text: >
+    V. Hart and N. Case, "Parable of the Polygons," Nicky Case, 2022.
+  available: https://ncase.me/polygons/
+- text: >
+    Design Justice Networ, "Design Justice Network Principles," Design
+    Justice Network, 2018.
+  available: https://designjustice.org/read-the-principles

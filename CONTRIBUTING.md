@@ -38,7 +38,6 @@ This includes the "lecture" class materials. All lessons must have, at minimum, 
 The MOOC source is organized in `lecture/` with the following structure:
  - `lessons/`: Section directories containing per-lesson YAML files and section metadata
  - `support/`: Supporting materials organized by type (md, pdf, pptx, web, misc)
- - `citations/`: Citation files for lessons
 
 #### YAML
 Course lessons are organized in the `lecture/lessons/` directory. This
@@ -72,7 +71,7 @@ Each lesson may have:
 | materials_pdf  | Recommended  | Flag indicating if a PDF version of the lesson is available.                                             | bool     |
 | materials_pptx | Recommended  | Flag indicating if a PowerPoint (PPTX) version of the lesson is available.                               | bool     |
 | materials_md   | Recommended  | Flag indicating if a markdown version of the lesson is available.                                        | bool     |
-| citations      | Recommended  | Flag indicating if there are citations for the lecture.                                                  | bool     |
+| citations      | Recommended  | A list of structured citation objects with text, optional doi, and optional available fields.            | list     |
 | assignment     | No           | Long-form description of the out of lesson (like homework) exercise associated with the lesson (if any). | html     |
 | reading        | No           | Long-form description of the out of lesson (like homework) reading associated with the lesson (if any).  | html     |
 | links          | No           | List of links (with `text` and `url` fields) which are mentioned in the lesson.                          | list     |
@@ -111,7 +110,7 @@ Here is an example of a poorly implemented entry:
       \ the reader to reach new their own conclusions about the data and, if so, how?</li>\n</ul>\nPlease write 4 - 8 sentences.\n"
     reading: Optionally review <a href="https://python.swaroopch.com">A Byte of Python</a> if you want to brush up on (or
       learn) the fundamentals of Python.
-    citations: true
+    citations: [{"text": "Example citation here.", "available": "https://example.com"}]
     links: [{"text": "Skills Labs", "url": "/labs"}, {"text": "Sketchingpy Online Sketchbook", "url": https://editor.sketchingpy.org/}]
 ```
 
@@ -139,7 +138,9 @@ Here is a well implemented entry:
       Please write 4 - 8 sentences.
     reading: >
       Optionally review <a href="https://python.swaroopch.com">A Byte of Python</a> if you want to brush up on (or learn) the fundamentals of Python.
-    citations: true
+    citations:
+    - text: Example citation here.
+      available: https://example.com
     links:
     - text: Skills Labs
       url: /labs
@@ -148,7 +149,36 @@ Here is a well implemented entry:
 ```
 
 #### Citations
-Each lesson with citations should have a file in the form of `lesson00.txt` within `lecture/citations`. Each line should contain a single citation. Empty lines (including those containing only whitespace) are ignored. These files should end with a single empty line.
+Citations are provided as inline YAML lists. Each citation is a YAML mapping with a `text` field, an optional `doi` field, and an optional `available` field for URLs. This format matches the skills labs citation structure.
+
+**Fields:**
+
+- `text` contains the citation body (IEEE-derivative format recommended). Do NOT include "Available:" or "doi:" prefix in text — these are generated from their respective fields at render time.
+- `doi` is optional and contains just the DOI identifier (e.g., `10.1080/01621459.1984.10478080`). This is rendered as `doi: <link to doi.org>`.
+- `available` is optional and contains a URL where the resource can be accessed. Citations without a URL (e.g., books) omit this field.
+- A citation may have `doi`, `available`, both, or neither.
+- For `text` values exceeding 100 characters, use the `>` folded scalar syntax. Keep lines under 100 characters. Do not break URLs across lines.
+
+**Example:**
+
+```yaml
+citations:
+  - text: >
+      J. Snow, On the mode of communication of cholera. London: John
+      Churchill, 1855.
+    available: https://archive.org/details/b28985266/page/n57/mode/2up
+  - text: >
+      A. Kirk, DATA VISUALISATION: a handbook for data driven design.
+      S.l.: SAGE PUBLICATIONS, 2024.
+  - text: >
+      W. S. Cleveland and R. McGill, "Graphical Perception: Theory,
+      Experimentation, and Application to the Development of Graphical
+      Methods," Journal of the American Statistical Association, vol. 79,
+      no. 387, pp. 531-554, Sep. 1984.
+    doi: 10.1080/01621459.1984.10478080
+```
+
+Short `text` values (under 100 characters) may be plain strings without `>`.
 
 #### Markdown
 It is strongly recommended that all lessons contain a markdown version as it is the most accessible format where possible. The intention is provide a self-contained text version of the lesson.

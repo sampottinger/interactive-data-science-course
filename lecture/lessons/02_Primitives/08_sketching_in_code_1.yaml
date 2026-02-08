@@ -51,4 +51,6 @@ links:
   url: /labs
 - text: Sketchingpy Online Sketchbook
   url: https://editor.sketchingpy.org/
-citations: true
+citations:
+- text: Thanks for imagery.
+  available: https://badriadhikari.github.io/data-viz-workshop-2021/minards/

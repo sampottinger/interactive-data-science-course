@@ -33,4 +33,40 @@ reading: >
 links:
 - text: The evolution of the human eye (shown in class)
   url: https://www.youtube.com/watch?v=qrKZBh8BL_U
-citations: true
+citations:
+- text: >
+    B. Adhikari, "Marey's train schedule," University of Missouri Saint
+    Louis, 2021.
+  available: https://badriadhikari.github.io/data-viz-workshop-2021/minards/
+- text: >
+    S. Bell, "Introduction and Perceptual Elements of Colour," University
+    of Saskatchewan.
+  available: https://openpress.usask.ca/introgeomatics/chapter/introduction-and-perceptual-elements-of-colour/
+- text: >
+    J. Harvey, "The evolution of the human eye," TED Ed, 2015.
+  available: https://www.youtube.com/watch?v=qrKZBh8BL_U
+- text: >
+    D. Camors, Y. Trotter, P. Pouget, S. Gilardeau & J. Durand, "Visual
+    straight-ahead preference in saccadic eye movements," Nature
+    Communications, 2016.
+  available: https://www.nature.com/articles/srep23124
+- text: >
+    OSC Rice, "Vision," Washington State University.
+  available: https://opentext.wsu.edu/psych105nusbaum/chapter/vision/
+- text: '"Vision," CourseHero.'
+  available: https://www.coursehero.com/study-guides/wmopen-psychology/outcome-vision/
+- text: >
+    E. Adelson, "Checker shadow illusion," Wikimedia, 2018.
+  available: https://en.wikipedia.org/wiki/Checker_shadow_illusion#/media/File:Checker_shadow_illusion.svg
+- text: >
+    DancingPhilosopher, "Mach Bands," Wikimedia, 2012.
+  available: https://en.wikipedia.org/wiki/Optical_illusion#/media/File:Mach_bands_-_animation.gif
+- text: >
+    US Department of Education, "College Scorecard," US Department of
+    Education.
+  available: https://collegescorecard.ed.gov/search/?sort=salary:desc&page=0&state=CA
+- text: >
+    C. Ware, "Information Visualization: Perception for Design," MK
+    Press.
+- text: >
+    C. Ware, "Visual Thinking for Design," MK Press.

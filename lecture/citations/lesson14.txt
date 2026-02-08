@@ -1,4 +1,0 @@
-T. Munzner, "Visualization Analysis & Design," University of British Columbia, 2021. Available: https://www.youtube.com/watch?v=pHljd-cgICY
-T. Romanowski, "Visualisation Analysis & Design by Tamara Munzner or the What-Why-How of data viz," Datarocks, 2023. Available: https://www.datarocks.co.nz/post/data-viz-bookshelf_visualization-analysis-design-tamara-munzner
-J. Stasko, C. Gorg, Z. Liu, and K. Singhal, "Jigsaw – Visual Analytics," Georgia Institute of Technology, 2009. Available at: https://youtu.be/2CMw4i9DiaM?feature=shared
-R. Binx, "Designing for Realtime Spacecraft Operations," OpenVisConf, 2016. Available at: https://youtu.be/HuYKhSHcRSQ?feature=shared

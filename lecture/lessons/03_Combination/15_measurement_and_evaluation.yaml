@@ -49,4 +49,40 @@ reading: >
   available of it. The hospital example involved a camera basically
   fixed to a patient's head which revealed that their day is spent
   looking up at the ceiling with people looking down at them.
-citations: true
+citations:
+- text: "\"The Deep Dive: One Company's Secret Weapon for Innovation,\" ABC News, 1999."
+- text: >
+    "The Art of the Insight: Learnings from 30 Years of Curiosity and
+    Empathy," IDEO U, 2019.
+  available: https://www.ideou.com/blogs/inspiration/the-art-of-the-insight-learnings-from-30-years-of-curiosity-and-empathy
+- text: >
+    C. Nickerson, "Symbolic Interactionism Theory & Examples," Simply
+    Pscyhology, 2025.
+  available: https://www.simplypsychology.org/symbolic-interaction-theory.html
+- text: >
+    J. Tong, "Diagrammatic thinking and audience reading of COVID-19 data
+    visualisations: A UK case study," Convergence, 2024.
+  doi: 10.1177/13548565241309886
+- text: >
+    B. Hanington and B. Martin, "Universal Methods of Design," Rockport
+    Publishers, 2012.
+- text: "\"User Interview Example Questions,\" Yale University."
+  available: https://usability.yale.edu/understanding-your-user/user-interviews/user-interview-example-questions
+- text: >
+    J. Gallegos, "50 Powerful User Interview Questions You Should Consider
+    Asking," Respondent, 2022.
+  available: https://blog.respondent.io/best-user-interview-question
+- text: >
+    B. Shneiderman and C. Plaisant, "Strategies for Evaluating Information
+    Visualization Tools: Multi-dimensional In-depth Long-term Case Studies,"
+    BELIV '06, 2006.
+  doi: 10.1145/1168149.1168158
+- text: >
+    C. Lewis and J. Rieman, "Task-Centered User Interface Design: A
+    Practical Introduction," HCI Bibliography / IBM Research, 1993.
+  available: https://www.hcibib.org/tcuid/
+- text: C. Lewis, "Clayton Lewis"
+  available: https://sites.google.com/view/clayton-lewis
+- text: >
+    "What is Deign Thinking? An Overview," AJ&Smart, 2020.
+  available: https://www.youtube.com/watch?v=gHGN6hs2gZY
