@@ -195,9 +195,7 @@ def main_lesson():
 
   lesson = lessons_by_number[lesson_number]
 
-  citations_field = lesson.get('citations', [])
-  # Handle citations: false as empty list
-  citations_raw = citations_field if isinstance(citations_field, list) else []
+  citations_raw = lesson.get('citations', [])
   citations = map(process_citation, citations_raw)
 
   template_vals = {
