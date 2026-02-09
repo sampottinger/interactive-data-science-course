@@ -169,6 +169,22 @@ def render_markdown(template_path, template_vals, output_path):
         f.write(result)
 
 
+def build_tutorials_by_number(data):
+    """Build a dictionary mapping tutorial numbers to tutorial data.
+
+    Args:
+        data: Course data dictionary with 'labs' key containing lab information.
+
+    Returns:
+        dict: Dictionary mapping tutorial numbers to tutorial dictionaries.
+    """
+    labs = data['labs']
+    tutorials_nested = map(lambda x: x['tutorials'], labs)
+    tutorials = itertools.chain(*tutorials_nested)
+    tutorials_by_number_tuple = map(lambda x: (x['number'], x), tutorials)
+    return dict(tutorials_by_number_tuple)
+
+
 def main_tutorial():
     """Command to render a tutorial page in HTML and Markdown."""
     if len(sys.argv) != USAGE_RENDER_TUTORIAL_ARGS + 1:
@@ -183,24 +199,17 @@ def main_tutorial():
     md_output_path = sys.argv[7]
 
     data = load_labs_from_directory(labs_dir)
+    tutorials_by_number = build_tutorials_by_number(data)
 
-    # Build tutorials-by-number dictionary for O(1) lookup
-    labs = data['labs']
-    tutorials_nested = map(lambda x: x['tutorials'], labs)
-    tutorials = itertools.chain(*tutorials_nested)
-    tutorials_by_number_tuple = map(lambda x: (x['number'], x), tutorials)
-    tutorials_by_number = dict(tutorials_by_number_tuple)
-
-    # Direct lookup instead of nested loop
     if tutorial_number not in tutorials_by_number:
         print(f'Tutorial {tutorial_number} not found')
         sys.exit(1)
 
     tutorial = tutorials_by_number[tutorial_number]
 
-    # Process citations if they exist
     citations_raw = tutorial.get('citations', [])
-    citations = [process_citation(c) for c in citations_raw]
+    processed_citations = map(process_citation, citations_raw)
+    citations_realized = list(processed_citations)
 
     template_vals = {
         'number': tutorial_number,
@@ -208,10 +217,9 @@ def main_tutorial():
         'file': tutorial['file'],
         'header': tutorial.get('header', ''),
         'sections': tutorial.get('sections', []),
-        'citations': citations
+        'citations': citations_realized
     }
 
-    # Render HTML and Markdown
     render_html(template_path, template_vals, html_output_path)
     render_markdown(md_template_path, template_vals, md_output_path)
 
