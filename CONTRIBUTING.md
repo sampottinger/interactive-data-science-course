@@ -237,6 +237,7 @@ Please follow conventions of existing code and materials where possible. Please 
  - Checks from `eslint` pass.
  - Only `pnpm` and not `npm` are used for security purposes.
  - Use virtualenv where possible but ensure venv and node modules are excluded from git (are present in gitignore).
+ - Task files in the `tasks/` directory are for local development use only and should not be committed to git. The tasks directory is excluded in .gitignore.
 
 Refrain from using webpack or typescript (JS resources should be deployed directly). Please use vanilla JS where possible.
 
