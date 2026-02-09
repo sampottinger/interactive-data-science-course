@@ -32,7 +32,7 @@ Course-wide materials are rendered from Jinja2 templates using `course_wide/rend
  - `syllabus_template.html` and `syllabus_template.md`: Syllabus templates
  - `manual_template.html` and `manual_template.md`: Course manual templates
  - `rubric_template.html` and `rubric_template.md`: Grading rubric templates
- - `syllabus.yml`: Structured data for course sections, lessons, and rubric criteria
+ - `course_wide.yml`: Structured data for course sections, lessons, and rubric criteria
 
 ### Skills labs
 Found in `/labs`, hands-on tutorials and focused instruction on implementation skills. These are often recommended for a flipped classroom structure. They are provided in **html** and **Python** with supplemental materials.

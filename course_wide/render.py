@@ -30,16 +30,16 @@ def get_template_loader():
     return jinja2.Environment(loader=loader)
 
 
-def load_syllabus_data():
-    """Load syllabus data from syllabus.yml.
+def load_course_data():
+    """Load course data from course_wide.yml.
 
     Returns:
-        dict: Syllabus data containing sections and lessons.
+        dict: Course data containing sections, lessons, and rubric information.
     """
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    syllabus_path = os.path.join(script_dir, 'syllabus.yml')
+    course_wide_path = os.path.join(script_dir, 'course_wide.yml')
 
-    with open(syllabus_path, 'r') as f:
+    with open(course_wide_path, 'r') as f:
         data = yaml.safe_load(f)
 
     return data
@@ -50,9 +50,9 @@ def render_syllabus():
     env = get_template_loader()
     template = env.get_template('syllabus_template.html')
 
-    syllabus_data = load_syllabus_data()
+    course_data = load_course_data()
 
-    meta = syllabus_data['meta']['syllabus']
+    meta = course_data['meta']['syllabus']
     context = {
         'title': meta['title'].strip(),
         'description': meta['description'].strip(),
@@ -61,8 +61,8 @@ def render_syllabus():
         'og_url': meta['og_url'].strip(),
         'twitter_title': meta['twitter_title'].strip(),
         'twitter_description': meta['twitter_description'].strip(),
-        'sections': syllabus_data['sections'],
-        'lessons': syllabus_data['lessons']
+        'sections': course_data['sections'],
+        'lessons': course_data['lessons']
     }
 
     result = template.render(**context)
@@ -82,9 +82,9 @@ def render_manual():
     env = get_template_loader()
     template = env.get_template('manual_template.html')
 
-    syllabus_data = load_syllabus_data()
+    course_data = load_course_data()
 
-    meta = syllabus_data['meta']['manual']
+    meta = course_data['meta']['manual']
     context = {
         'title': meta['title'].strip(),
         'description': meta['description'].strip(),
@@ -93,7 +93,7 @@ def render_manual():
         'og_url': meta['og_url'].strip(),
         'twitter_title': meta['twitter_title'].strip(),
         'twitter_description': meta['twitter_description'].strip(),
-        'lessons': syllabus_data['lessons']
+        'lessons': course_data['lessons']
     }
 
     result = template.render(**context)
@@ -113,9 +113,9 @@ def render_rubric():
     env = get_template_loader()
     template = env.get_template('rubric_template.html')
 
-    syllabus_data = load_syllabus_data()
+    course_data = load_course_data()
 
-    meta = syllabus_data['meta']['rubric']
+    meta = course_data['meta']['rubric']
     context = {
         'title': meta['title'].strip(),
         'description': meta['description'].strip(),
@@ -124,8 +124,8 @@ def render_rubric():
         'og_url': meta['og_url'].strip(),
         'twitter_title': meta['twitter_title'].strip(),
         'twitter_description': meta['twitter_description'].strip(),
-        'rubric_sections': syllabus_data['rubric']['sections'],
-        'rubric_items': syllabus_data['rubric']['items']
+        'rubric_sections': course_data['rubric']['sections'],
+        'rubric_items': course_data['rubric']['items']
     }
 
     result = template.render(**context)
@@ -145,11 +145,11 @@ def render_syllabus_md():
     env = get_template_loader()
     template = env.get_template('syllabus_template.md')
 
-    syllabus_data = load_syllabus_data()
+    course_data = load_course_data()
 
     context = {
-        'sections': syllabus_data['sections'],
-        'lessons': syllabus_data['lessons']
+        'sections': course_data['sections'],
+        'lessons': course_data['lessons']
     }
 
     result = template.render(**context)
@@ -169,10 +169,10 @@ def render_manual_md():
     env = get_template_loader()
     template = env.get_template('manual_template.md')
 
-    syllabus_data = load_syllabus_data()
+    course_data = load_course_data()
 
     context = {
-        'lessons': syllabus_data['lessons']
+        'lessons': course_data['lessons']
     }
 
     result = template.render(**context)
@@ -192,11 +192,11 @@ def render_rubric_md():
     env = get_template_loader()
     template = env.get_template('rubric_template.md')
 
-    syllabus_data = load_syllabus_data()
+    course_data = load_course_data()
 
     context = {
-        'rubric_sections': syllabus_data['rubric']['sections'],
-        'rubric_items': syllabus_data['rubric']['items']
+        'rubric_sections': course_data['rubric']['sections'],
+        'rubric_items': course_data['rubric']['items']
     }
 
     result = template.render(**context)

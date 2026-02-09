@@ -184,7 +184,7 @@ Course-wide materials (syllabus, manual, rubric) are found in `course_wide/` and
 The course_wide directory contains:
  - `render.py`: Python script that renders templates into HTML and Markdown
  - `render.sh`: Bash script wrapper that calls render.py
- - `syllabus.yml`: Structured data for sections, lessons, and rubric criteria
+ - `course_wide.yml`: Structured data for sections, lessons, and rubric criteria
  - `base.html` and `base.md`: Base templates with shared structure
  - `*_template.html` and `*_template.md`: Page-specific templates (syllabus, manual, rubric)
  - `*.html`, `*.md`, `*.pdf`: Rendered output files
@@ -192,15 +192,15 @@ The course_wide directory contains:
 #### Modifying course-wide content
 To modify course-wide materials:
 
-1. **Edit structured data**: Update `syllabus.yml` to change course sections, lessons, or rubric criteria
+1. **Edit structured data**: Update `course_wide.yml` to change course sections, lessons, or rubric criteria
 2. **Edit templates**: Modify `*_template.html` or `*_template.md` files to change page structure or content
 3. **Edit base templates**: Update `base.html` or `base.md` to change shared elements across all pages
 4. **Rebuild**: Run `bash render.sh` from the `course_wide` directory to regenerate output files
 
-Template files use Jinja2 syntax with template inheritance. Page templates extend base templates and override specific blocks. The render script loads data from `syllabus.yml` and passes it to templates for dynamic rendering.
+Template files use Jinja2 syntax with template inheritance. Page templates extend base templates and override specific blocks. The render script loads data from `course_wide.yml` and passes it to templates for dynamic rendering.
 
 #### YAML structure
-The `syllabus.yml` file contains:
+The `course_wide.yml` file contains:
  - `sections`: List of course sections with name, number, tagline, and detailed description
  - `lessons`: Nested under sections, containing day number, title, readings, and activities
  - `rubric`: List of grading criteria with category, criterion, and percentage fields
