@@ -52,27 +52,15 @@ def render_syllabus():
 
     syllabus_data = load_syllabus_data()
 
+    meta = syllabus_data['meta']['syllabus']
     context = {
-        'title': 'Course Syllabus (Interactive Data Sci / Viz)',
-        'description': (
-            'Complete curriculum and learning outcomes for building interactive '
-            'data visualizations and storytelling tools. Explore 7 modules '
-            'covering design theory, Python, D3, P5, and ethical data practices.'
-        ),
-        'og_title': 'Course Syllabus (Interactive Data Sci / Viz)',
-        'og_description': (
-            'Complete curriculum: data visualization fundamentals, interactive '
-            'storytelling, Python graphics, D3, P5, game design principles, '
-            'accessibility, and ethical AI. 7 modules, hands-on projects, '
-            'portfolio building.'
-        ),
-        'og_url': 'https://mooc.interactivedatascience.courses/course_wide/syllabus.html',
-        'twitter_title': 'Course Syllabus (Interactive Data Sci / Viz)',
-        'twitter_description': (
-            'Learn the complete curriculum: data visualization fundamentals, '
-            'interactive storytelling, Python graphics, D3, P5, game design, '
-            'accessibility, ethical AI. Free, hands-on course modules.'
-        ),
+        'title': meta['title'].strip(),
+        'description': meta['description'].strip(),
+        'og_title': meta['og_title'].strip(),
+        'og_description': meta['og_description'].strip(),
+        'og_url': meta['og_url'].strip(),
+        'twitter_title': meta['twitter_title'].strip(),
+        'twitter_description': meta['twitter_description'].strip(),
         'sections': syllabus_data['sections'],
         'lessons': syllabus_data['lessons']
     }
@@ -96,26 +84,15 @@ def render_manual():
 
     syllabus_data = load_syllabus_data()
 
+    meta = syllabus_data['meta']['manual']
     context = {
-        'title': 'Course Manual (Interactive Data Sci / Viz)',
-        'description': (
-            'Complete course manual with readings, interactive labs, exercises, '
-            'and capstone guidance. Navigate assignments, time expectations, '
-            'collaboration guidelines, and data science projects.'
-        ),
-        'og_title': 'Course Manual (Interactive Data Sci / Viz)',
-        'og_description': (
-            'Complete course manual with readings, interactive labs, exercises, '
-            'and capstone guidance. Navigate assignments, time expectations, '
-            'collaboration guidelines, and data science projects.'
-        ),
-        'og_url': 'https://mooc.interactivedatascience.courses/course_wide/manual.html',
-        'twitter_title': 'Course Manual (Interactive Data Sci / Viz)',
-        'twitter_description': (
-            'Complete course manual with readings, interactive labs, exercises, '
-            'and capstone guidance. Navigate assignments, time expectations, '
-            'collaboration guidelines, and data science projects.'
-        ),
+        'title': meta['title'].strip(),
+        'description': meta['description'].strip(),
+        'og_title': meta['og_title'].strip(),
+        'og_description': meta['og_description'].strip(),
+        'og_url': meta['og_url'].strip(),
+        'twitter_title': meta['twitter_title'].strip(),
+        'twitter_description': meta['twitter_description'].strip(),
         'lessons': syllabus_data['lessons']
     }
 
@@ -138,26 +115,15 @@ def render_rubric():
 
     syllabus_data = load_syllabus_data()
 
+    meta = syllabus_data['meta']['rubric']
     context = {
-        'title': 'Project Grading Rubric (Interactive Data Sci / Viz)',
-        'description': (
-            'Understand grading criteria for your code projects: completeness, '
-            'materials, technical execution, and exploration. Clear standards '
-            'for all assignments and final project.'
-        ),
-        'og_title': 'Project Grading Rubric (Interactive Data Sci / Viz)',
-        'og_description': (
-            'Grading criteria for your coding projects across completeness, '
-            'visualization concepts, technical execution, and exploration. '
-            'Understand what instructors evaluate.'
-        ),
-        'og_url': 'https://mooc.interactivedatascience.courses/course_wide/rubric.html',
-        'twitter_title': 'Project Grading Rubric (Interactive Data Sci / Viz)',
-        'twitter_description': (
-            'Grading criteria for your coding projects across completeness, '
-            'visualization concepts, technical execution, and exploration. '
-            'Understand what instructors evaluate.'
-        ),
+        'title': meta['title'].strip(),
+        'description': meta['description'].strip(),
+        'og_title': meta['og_title'].strip(),
+        'og_description': meta['og_description'].strip(),
+        'og_url': meta['og_url'].strip(),
+        'twitter_title': meta['twitter_title'].strip(),
+        'twitter_description': meta['twitter_description'].strip(),
         'rubric_sections': syllabus_data['rubric']['sections'],
         'rubric_items': syllabus_data['rubric']['items']
     }

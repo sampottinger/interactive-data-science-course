@@ -2,6 +2,58 @@
 # This file contains structured data for all course sections and daily lessons.
 # Days 0 and 26 (optional fully online) are excluded from this data.
 
+meta:
+  syllabus:
+    title: Course Syllabus (Interactive Data Sci / Viz)
+    description: >
+      Complete curriculum and learning outcomes for building interactive data visualizations and
+      storytelling tools. Explore 7 modules covering design theory, Python, D3, P5, and ethical
+      data practices.
+    og_title: Course Syllabus (Interactive Data Sci / Viz)
+    og_description: >
+      Complete curriculum: data visualization fundamentals, interactive storytelling, Python
+      graphics, D3, P5, game design principles, accessibility, and ethical AI. 7 modules,
+      hands-on projects, portfolio building.
+    og_url: https://mooc.interactivedatascience.courses/course_wide/syllabus.html
+    twitter_title: Course Syllabus (Interactive Data Sci / Viz)
+    twitter_description: >
+      Learn the complete curriculum: data visualization fundamentals, interactive storytelling,
+      Python graphics, D3, P5, game design, accessibility, ethical AI. Free, hands-on course
+      modules.
+
+  manual:
+    title: Course Manual (Interactive Data Sci / Viz)
+    description: >
+      Complete course manual with readings, interactive labs, exercises, and capstone guidance.
+      Navigate assignments, time expectations, collaboration guidelines, and data science
+      projects.
+    og_title: Course Manual (Interactive Data Sci / Viz)
+    og_description: >
+      Complete course manual with readings, interactive labs, exercises, and capstone guidance.
+      Navigate assignments, time expectations, collaboration guidelines, and data science
+      projects.
+    og_url: https://mooc.interactivedatascience.courses/course_wide/manual.html
+    twitter_title: Course Manual (Interactive Data Sci / Viz)
+    twitter_description: >
+      Complete course manual with readings, interactive labs, exercises, and capstone guidance.
+      Navigate assignments, time expectations, collaboration guidelines, and data science
+      projects.
+
+  rubric:
+    title: Project Grading Rubric (Interactive Data Sci / Viz)
+    description: >
+      Understand grading criteria for your code projects: completeness, materials, technical
+      execution, and exploration. Clear standards for all assignments and final project.
+    og_title: Project Grading Rubric (Interactive Data Sci / Viz)
+    og_description: >
+      Grading criteria for your coding projects across completeness, visualization concepts,
+      technical execution, and exploration. Understand what instructors evaluate.
+    og_url: https://mooc.interactivedatascience.courses/course_wide/rubric.html
+    twitter_title: Project Grading Rubric (Interactive Data Sci / Viz)
+    twitter_description: >
+      Grading criteria for your coding projects across completeness, visualization concepts,
+      technical execution, and exploration. Understand what instructors evaluate.
+
 sections:
   - name: Hello
     number: 1
