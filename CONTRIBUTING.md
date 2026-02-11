@@ -279,6 +279,7 @@ Please follow conventions of existing code and materials where possible. Please 
 
  - MOOC source materials and course-wide materials build successfully before opening pull requests.
  - All public or top level members in JS / Python have docstring or JSDoc.
+ - All Python files use 2-space indentation for consistency across the project.
  - Checks from `pycodestyle` pass for `lecture/*.py`, `course_wide/*.py`, and `labs/*.py`.
  - Checks from `eslint` pass.
  - Only `pnpm` and not `npm` are used for security purposes.

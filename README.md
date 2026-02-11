@@ -116,6 +116,8 @@ $ pycodestyle lecture/*.py course_wide/*.py labs/*.py
 $ npx eslint 'lecture/**/*.js'
 ```
 
+**Code Style**: All Python files should use 2-space indentation for consistency across the project.
+
 ## Deploying
 You can either make a deployment to your own server or the official website.
 
