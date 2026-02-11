@@ -263,6 +263,22 @@ def process_citation(citation) -> str:
   return result
 
 
+def shift_header(contents, level, target_level):
+  """Shift a specific header level to a target level.
+
+  Args:
+    contents: HTML string containing header tags.
+    level: The header level to shift from (e.g., 1 for h1).
+    target_level: The header level to shift to (e.g., 3 for h3).
+
+  Returns:
+    str: HTML string with the specified header level shifted.
+  """
+  contents = contents.replace('<h%d>' % level, '<h%d>' % target_level)
+  contents = contents.replace('</h%d>' % level, '</h%d>' % target_level)
+  return contents
+
+
 def shift_headers(html_content):
   """Shift HTML headers down by 2 levels.
 
@@ -277,13 +293,14 @@ def shift_headers(html_content):
   """
   # Shift headers down by 2 levels, capping at h6
   # Do this in reverse order to avoid double-shifting
-  html_content = html_content.replace('<h6>', '<h6temp>').replace('</h6>', '</h6temp>')
-  html_content = html_content.replace('<h5>', '<h6>').replace('</h5>', '</h6>')
-  html_content = html_content.replace('<h4>', '<h6>').replace('</h4>', '</h6>')
-  html_content = html_content.replace('<h3>', '<h5>').replace('</h3>', '</h5>')
-  html_content = html_content.replace('<h2>', '<h4>').replace('</h2>', '</h4>')
-  html_content = html_content.replace('<h1>', '<h3>').replace('</h1>', '</h3>')
-  html_content = html_content.replace('<h6temp>', '<h6>').replace('</h6temp>', '</h6>')
+  # Use h7 as temporary storage for h6
+  html_content = shift_header(html_content, 6, 7)
+  html_content = shift_header(html_content, 5, 6)
+  html_content = shift_header(html_content, 4, 6)
+  html_content = shift_header(html_content, 3, 5)
+  html_content = shift_header(html_content, 2, 4)
+  html_content = shift_header(html_content, 1, 3)
+  html_content = shift_header(html_content, 7, 6)
   return html_content
 
 
