@@ -263,10 +263,35 @@ def process_citation(citation) -> str:
   return result
 
 
+def shift_headers(html_content):
+  """Shift HTML headers down by 2 levels.
+
+  Shifts all header tags down by 2 levels (h1->h3, h2->h4, etc.)
+  to maintain proper document structure. Headers h5 and h6 are capped at h6.
+
+  Args:
+    html_content: HTML string containing header tags.
+
+  Returns:
+    str: HTML string with shifted header tags.
+  """
+  # Shift headers down by 2 levels, capping at h6
+  # Do this in reverse order to avoid double-shifting
+  html_content = html_content.replace('<h6>', '<h6temp>').replace('</h6>', '</h6temp>')
+  html_content = html_content.replace('<h5>', '<h6>').replace('</h5>', '</h6>')
+  html_content = html_content.replace('<h4>', '<h6>').replace('</h4>', '</h6>')
+  html_content = html_content.replace('<h3>', '<h5>').replace('</h3>', '</h5>')
+  html_content = html_content.replace('<h2>', '<h4>').replace('</h2>', '</h4>')
+  html_content = html_content.replace('<h1>', '<h3>').replace('</h1>', '</h3>')
+  html_content = html_content.replace('<h6temp>', '<h6>').replace('</h6temp>', '</h6>')
+  return html_content
+
+
 def convert_markdown_to_html(md_file_path):
   """Convert a markdown file to HTML.
 
   Reads a markdown file and converts it to HTML using Python-Markdown.
+  Headers are shifted down by 2 levels to maintain document structure.
 
   Args:
     md_file_path: Path to the markdown file to convert.
@@ -281,6 +306,7 @@ def convert_markdown_to_html(md_file_path):
     md_content = f.read()
 
   html_content = markdown.markdown(md_content)
+  html_content = shift_headers(html_content)
   return html_content
 
 
