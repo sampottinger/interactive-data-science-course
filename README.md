@@ -8,18 +8,18 @@ This self-paced massive open online course (MOOC) is a thoughtful upgrade to Sta
 
 ## Structure / Format
 The source materials for these resources are divided into three directories.
-Lesson definitions are organized in `mooc_src/lessons/` as individual **YAML**
+Lesson definitions are organized in `lecture/lessons/` as individual **YAML**
 files within numbered section subdirectories (e.g., `01_Hello`, `02_Primitives`).
 Each section directory contains per-lesson YAML files and an `index.yml` file
 with section metadata (name, tagline, detailed description). These are rendered
 into the overall MOOC website.
 
 ### Individual lessons
-Found in `/mooc_src`, traditional lectures that mix classic instruction and
+Found in `/lecture`, traditional lectures that mix classic instruction and
 shorter hands-on activities intended for a traditional classroom structure.
-Lesson YAML files are organized in `mooc_src/lessons/` within numbered section
+Lesson YAML files are organized in `lecture/lessons/` within numbered section
 subdirectories (e.g., `01_Hello/00_hello_preface.yaml`), while lesson materials
-(markdown, PDF, and PPTX files) are organized under `mooc_src/support/` in
+(markdown, PDF, and PPTX files) are organized under `lecture/support/` in
 `md/`, `pdf/`, and `pptx/` subdirectories. Additional supporting files are in
 `support/web/` and `support/misc/`. These are available in **markdown** with
 html and typically **PDF**, **PPTX**, and **video** accompanying materials.
@@ -28,7 +28,7 @@ html and typically **PDF**, **PPTX**, and **video** accompanying materials.
 Found in `/course_wide`, these are resources which apply across many or all lessons of the course and are wide-ranging documents such as the course manual and syllabus as well as grading rubric. In general, these are available in **markdown** with **html** and **PDF** options.
 
 ### Skills labs
-Found in `/labs`, hands-on tutorials and focused instruction on implementation skills. These are often recommended for a flipped classroom structure. They are provided in **html** and **Python** with supplemental materials.
+Found in `/labs`, hands-on tutorials and focused instruction on implementation skills. These are often recommended for a flipped classroom structure. Lab YAML source files are organized in `labs/Lab_1/` through `labs/Lab_6/` subdirectories, each containing an `index.yml` and tutorial YAML files. These are rendered into **HTML** and **Markdown** formats with supplemental materials.
 
 ## Using
 The course materials are available online for free at [https://mooc.interactivedatascience.courses](https://mooc.interactivedatascience.courses/). This includes:
@@ -64,18 +64,25 @@ $ pip install -r requirements.txt
 For some operations like linting, [eslint](https://eslint.org/) is recommended as it is used by CI / CD. We recommend installing [pnpm](https://pnpm.io/) and then getting requirements:
 
 ```bash
-$ npx eslint 'mooc_src/**/*.js'
+$ npx eslint 'lecture/**/*.js'
 ```
 
 ### Building
-Build the lessons through `mooc_src`:
+Build the lessons through `lecture`:
 
 ```bash
-$ cd mooc_src
+$ cd lecture
 $ bash render.sh
 ```
 
-Alternatively, build the full course by using `build.sh` in the root of the repository:
+Build the labs through `labs`:
+
+```bash
+$ cd labs
+$ bash render.sh
+```
+
+Alternatively, build the full course (lessons and labs) by using `build.sh` in the root of the repository:
 
 ```bash
 $ bash build.sh
@@ -90,9 +97,9 @@ If desired, subagents can help with development activities. These are available 
 For those interested in contributing to this open source project, thank you! In addition to additional logistical instructions in this README for building the course website, please see also our [contributing guide](https://github.com/sampottinger/interactive-data-science-course/blob/aa4f19e55f90a5574fac67c92b490fbc830b0f72/CONTRIBUTING.md). That said, it is recommended that the following pass prior to commit:
 
 ```bash
-$ pyflakes mooc_src/*.py
-$ pycodestyle mooc_src/*.py
-$ npx eslint 'mooc_src/**/*.js'
+$ pyflakes lecture/*.py labs/*.py
+$ pycodestyle lecture/*.py labs/*.py
+$ npx eslint 'lecture/**/*.js'
 ```
 
 ## Deploying

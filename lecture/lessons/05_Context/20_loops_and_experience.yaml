@@ -1,0 +1,56 @@
+number: 20
+name: Loops and Experience
+video: 1073391515
+materials_pdf: true
+materials_pptx: true
+materials_md: true
+text: >
+  A short lecture on player loops followed by exploring
+
+  <a href="/support/misc/games.pdf">
+    questions specific to your game
+  </a>.
+
+  In addition to the game-specific questions, please also write 3
+  sentences on what the player loops are within your game.
+assignment: >
+  <p>
+    You did it - you made it to the last regular assignment before the
+    final!
+  </p>
+
+  <p>
+    The goal for this exercise is to take one of your prior
+    visualizations from the class (Stack Overflow Developer Survey,
+    Census, or BART) and make it interactive with at least one user
+    action.
+  </p>
+
+  <p>
+    Need help? Explore an optional <a href="/lesson26.html">Lesson
+    26</a> looking at using AI assistants.
+  </p>
+links:
+- text: >
+    Game-specific questions. Also, write 3 sentences on the player
+    loops within your games.
+  url: /support/misc/games.pdf
+citations:
+- text: >
+    G. Nicoli, "Spiritfarer: la morte felice," Ludica, 2020.
+  available: https://www.ludicamag.com/spiritfarer-la-morte-felice/
+- text: >
+    A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse,
+    M. de Bruyn, C. Boettiger, E. Baker, K. Koy, and D. McCauley, "Global
+    Plastics AI Policy Tool," University of California, 2024.
+  available: https://global-plastics-tool.org/
+- text: >
+    A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse,
+    C. Liu, S. Hu, M. de Bruyn, C. Boettiger, E. Baker, and D. McCauley,
+    "Pathways to reduce global plastic waste mismanagement and greenhouse
+    gas emissions by 2050," Science, 2024.
+  doi: 10.1126/science.adr3837
+- text: >
+    Strategy Wiki Contributors, "Super Mario Bros. / World 1," Strategy
+    Wiki.
+  available: https://strategywiki.org/wiki/Super_Mario_Bros./World_1

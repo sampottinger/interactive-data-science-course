@@ -1,0 +1,34 @@
+name: User Loops
+file: resources_loops.html
+header: >
+  In this tutorial, we explore creating interactive visualizations that
+  respond to user input through event loops.
+sections:
+  - name: intro
+    short: Introduction
+    long: Introduction to interactive user loops
+    body: >
+      Interactive visualizations respond to user input. Learn how to
+      create sketches that react to mouse and keyboard events.
+  - name: mouse_events
+    short: Mouse Events
+    long: Handling mouse input
+    body: >
+      Learn to detect and respond to mouse movements, clicks, and other
+      mouse events in your visualizations.
+  - name: keyboard
+    short: Keyboard Events
+    long: Handling keyboard input
+    body: >
+      Learn to detect and respond to keyboard input for interactive
+      visualizations.
+  - name: next
+    short: Next
+    long: Continue to the next tutorial
+    body: >
+      Continue on to
+      <a href="/labs/resources_data.html">Tutorial 11</a>
+      to learn about working with data.
+citations:
+  - text: A. Pottinger, "Sketchingpy." Sketchingpy Project, 2024. [Online].
+    available: https://sketchingpy.org/

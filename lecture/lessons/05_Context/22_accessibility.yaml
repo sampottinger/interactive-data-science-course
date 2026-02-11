@@ -1,0 +1,75 @@
+number: 22
+name: Accessibility
+video: 1075913765
+materials_pdf: true
+materials_pptx: true
+materials_md: true
+text: >
+  Learn about the Web Content Accessibility Guidelines. Explore some
+  common steps which you can take within your interactive data
+  visualizations that can help improve access.
+assignment: >
+  Though there is still some material left, this is a good opportunity
+  to start on your final project to be refined over the next few
+  lessons. See the <a href="/course_wide/manual.html">course
+  manual</a> for recommended project ideas / datasets.
+reading: >
+  Please continue with our discussion by considering
+
+  <a href="https://youtu.be/Ufe0i26DGiA">motor accessibility</a>
+
+  and <a href="https://www.youtube.com/watch?v=ObhvacfIOg0">cognitive
+  disability</a>
+
+  over at Game Makers Toolkit.
+links:
+- text: Video from slides
+  url: https://youtu.be/xrqdU4cZaLw
+citations:
+- text: A. Shatov, "White Digital Device at 12 00," Unsplash, 2021.
+  available: https://unsplash.com/photos/white-digital-device-at-12-00-DHl49oyrn7Y
+- text: M. Brown, "Making Games Better for Gamers with Colourblindness & Low Vision | Designing for Disability," Game Maker's Toolkit, 2018.
+  available: https://www.youtube.com/watch?v=xrqdU4cZaLw
+- text: WAI, "WCAG 2 Overview," W3C, 2025.
+  available: https://www.w3.org/WAI/standards-guidelines/wcag/
+- text: A. Blackwell, "The Curb-Cut Effect," SSIR, 2017.
+  available: https://ssir.org/articles/entry/the_curb_cut_effect
+- text: Larea, "Color," The Noun Project, 2024.
+  available: https://thenounproject.com/icon/color-7309833/
+- text: Alvida, "Glasses," The Noun Project, 2025.
+  available: https://thenounproject.com/icon/glasses-7656753/
+- text: R. Romadoni, "Blind," The Noun Project, 2025.
+  available: https://thenounproject.com/icon/blind-7616838/
+- text: A. Pottinger, "Income Gaps." 2023.
+  available: https://incomegaps.com/
+- text: >
+    A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse,
+    M. de Bruyn, C. Boettiger, E. Baker, K. Koy, and D. McCauley,
+    "Global Plastics AI Policy Tool," University of California, 2024.
+  available: https://global-plastics-tool.org/
+- text: >
+    A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse,
+    C. Liu, S. Hu, M. de Bruyn, C. Boettiger, E. Baker, and D. McCauley,
+    "Pathways to reduce global plastic waste mismanagement and greenhouse
+    gas emissions by 2050," Science, 2024.
+  doi: 10.1126/science.adr3837
+- text: WebAIM, "Contrast Checker," Utah State University.
+  available: https://webaim.org/resources/contrastchecker/
+- text: >
+    A. Pottinger, L. Connor, B. Guzder-Williams, M. Weltman-Fahs, N.
+    Gondek, and T. Bowles, "Climate-driven doubling of U.S. maize loss
+    probability: Interactive simulation with neural network Monte Carlo,"
+    JDSSV, 2025.
+  doi: 10.52933/jdssv.v5i3.134
+- text: E. Purnomo, "Target," The Noun Project, 2022.
+  available: https://thenounproject.com/icon/target-4642615/
+- text: P. Octaviani, "Keyboard," The Noun Project, 2023.
+  available: https://thenounproject.com/icon/keyboard-5600882/
+- text: Alzam, "Speed," The Noun Project, 2022.
+  available: https://thenounproject.com/icon/speed-4573076/
+- text: >
+    A. Pottinger and Sketchingpy Contributors, "Sketchingpy,"
+    Sketchingpy Project, 2025.
+  available: https://sketchingpy.org/
+- text: WebAIM, "WebAIM's WCAG 2 Checklist," Utah State University.
+  available: https://webaim.org/resources/contrastchecker/

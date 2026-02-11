@@ -1,0 +1,74 @@
+number: 17
+name: The Reader as Player
+video: 1071192794
+materials_pdf: true
+materials_pptx: true
+materials_md: true
+text: >
+  Go deep into interactivity with affordances, kinesthetic projection,
+  and common patterns in data visualization. This is setting up our
+  final ingredient for data visualizations that you need for the
+  final!
+assignment: >
+  <p>
+    We will start our interactive experience. There are different
+    video games for you to choose from within the <a
+    href="/course_wide/manual.html">course manual</a>. See
+    "experience" section. After you have selected your choice, lookup
+    the <a href="/support/misc/games.pdf">game specific
+    instructions</a>. You can space out your game play over the next
+    few lectures. There will be an additional question asked of all
+    games later in <a href="/lesson20.html">lesson 20</a> when it
+    would be good to be done.
+  </p>
+reading: >
+  Please watch a <a
+  href="https://www.youtube.com/watch?v=1XlfeXpiSuQ">fantastic
+  discussion regarding the role of the player</a> from Extra Credits.
+links:
+- text: >
+    First video from slides (we are less interested in Kinect and more
+    in the discussion of Kinesthetic Projection in the middle).
+    Specifically, watch 1:30 to 3:10.
+  url: https://www.youtube.com/watch?v=ijcezUy3ZzY
+- text: Second video from slides
+  url: https://www.youtube.com/watch?v=QCSXEKHL6fc
+citations:
+- text: M. Hoekstra, "MacPaint," Geek Technique, 2007.
+  available: https://www.geektechnique.org/blog/786/mac-paint.html
+- text: >
+    J. Portnow, "Kinect Disconnect - How NOT to do Motion Control,"
+    Extra Credits, 2012.
+  available: https://www.youtube.com/watch?v=ijcezUy3ZzY
+- text: A. Pottinger, "Podcast Anthropology," Gleap, 2015.
+  available: https://gleap.org/static/special/podcast_viz/index.html
+- text: A. Pottinger, "Ted Viz 2," Gleap, 2013.
+  available: https://gleap.org/content/ted_visualization_2
+- text: >
+    A. Pottinger, "Montreal Policy Simulator," University of California,
+    2025.
+  available: https://mlf-policy-explorer.org/
+- text: >
+    A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M. Morse,
+    M. de Bruyn, C. Boettiger, E. Baker, K. Koy, and D. McCauley, "Global
+    Plastics AI Policy Tool," University of California, 2024.
+  available: https://global-plastics-tool.org/
+- text: >
+    A. Pottinger, R. Geyer, N. Biyani, C. Martinez, N. Nathan, M, Morse,
+    C. Liu, S. Hu, M. de Bruyn, C. Boettiger, E. Baker, and D. McCauley,
+    "Pathways to reduce global plastic waste mismanagement and greenhouse
+    gas emissions by 2050," Science, 2024.
+  doi: 10.1126/science.adr3837
+- text: >
+    A. Pottinger, "FoodSim: San Francisco." 2023.
+  available: https://foodsimsf.com/
+- text: >
+    J. Portnow, "Affordances - How Design Teaches Us Without Words," Extra
+    Credits, 2014.
+  available: https://www.youtube.com/watch?v=QCSXEKHL6fc
+- text: >
+    A. Pottinger, L. Connor, B. Guzder-Williams, M. Weltman-Fahs, N.
+    Gondek, and T. Bowles, "Climate-driven doubling of U.S. maize loss
+    probability: Interactive simulation with neural network Monte Carlo,"
+    JDSSV, 2025.
+  doi: 10.52933/jdssv.v5i3.134
