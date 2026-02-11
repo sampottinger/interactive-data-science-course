@@ -220,25 +220,21 @@ def main():
 
     command = sys.argv[1]
 
-    if command == 'syllabus':
-        render_syllabus()
-    elif command == 'manual':
-        render_manual()
-    elif command == 'rubric':
-        render_rubric()
-    elif command == 'syllabus_md':
-        render_syllabus_md()
-    elif command == 'manual_md':
-        render_manual_md()
-    elif command == 'rubric_md':
-        render_rubric_md()
-    elif command == 'all':
-        render_syllabus()
-        render_manual()
-        render_rubric()
-        render_syllabus_md()
-        render_manual_md()
-        render_rubric_md()
+    command_strategies = {
+        'syllabus': [render_syllabus],
+        'manual': [render_manual],
+        'rubric': [render_rubric],
+        'syllabus_md': [render_syllabus_md],
+        'manual_md': [render_manual_md],
+        'rubric_md': [render_rubric_md],
+        'all': [render_syllabus, render_manual, render_rubric,
+                render_syllabus_md, render_manual_md, render_rubric_md]
+    }
+
+    strategies = command_strategies.get(command)
+    if strategies:
+        for strategy in strategies:
+            strategy()
     else:
         print(f'Unknown command: {command}')
         print(USAGE_STR)
