@@ -12,8 +12,10 @@ import sys
 import jinja2
 import yaml
 
-USAGE_STR = ('USAGE: python render.py '
-             '[syllabus | manual | rubric | syllabus_md | manual_md | rubric_md | all]')
+USAGE_ARGS = ['syllabus', 'manual', 'rubric', 'syllabus_md', 'manual_md',
+              'rubric_md', 'all']
+USAGE_ARGS_STR = ' | '.join(USAGE_ARGS)
+USAGE_STR = f'USAGE: python render.py [{USAGE_ARGS_STR}]'
 MIN_ARGS = 1
 
 
@@ -28,16 +30,16 @@ def get_template_loader():
     return jinja2.Environment(loader=loader)
 
 
-def load_syllabus_data():
-    """Load syllabus data from syllabus.yml.
+def load_course_data():
+    """Load course data from course_wide.yml.
 
     Returns:
-        dict: Syllabus data containing sections and lessons.
+        dict: Course data containing sections, lessons, and rubric information.
     """
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    syllabus_path = os.path.join(script_dir, 'syllabus.yml')
+    course_wide_path = os.path.join(script_dir, 'course_wide.yml')
 
-    with open(syllabus_path, 'r') as f:
+    with open(course_wide_path, 'r') as f:
         data = yaml.safe_load(f)
 
     return data
@@ -48,31 +50,19 @@ def render_syllabus():
     env = get_template_loader()
     template = env.get_template('syllabus_template.html')
 
-    syllabus_data = load_syllabus_data()
+    course_data = load_course_data()
 
+    meta = course_data['meta']['syllabus']
     context = {
-        'title': 'Course Syllabus (Interactive Data Sci / Viz)',
-        'description': (
-            'Complete curriculum and learning outcomes for building interactive '
-            'data visualizations and storytelling tools. Explore 7 modules '
-            'covering design theory, Python, D3, P5, and ethical data practices.'
-        ),
-        'og_title': 'Course Syllabus (Interactive Data Sci / Viz)',
-        'og_description': (
-            'Complete curriculum: data visualization fundamentals, interactive '
-            'storytelling, Python graphics, D3, P5, game design principles, '
-            'accessibility, and ethical AI. 7 modules, hands-on projects, '
-            'portfolio building.'
-        ),
-        'og_url': 'https://mooc.interactivedatascience.courses/course_wide/syllabus.html',
-        'twitter_title': 'Course Syllabus (Interactive Data Sci / Viz)',
-        'twitter_description': (
-            'Learn the complete curriculum: data visualization fundamentals, '
-            'interactive storytelling, Python graphics, D3, P5, game design, '
-            'accessibility, ethical AI. Free, hands-on course modules.'
-        ),
-        'sections': syllabus_data['sections'],
-        'lessons': syllabus_data['lessons']
+        'title': meta['title'].strip(),
+        'description': meta['description'].strip(),
+        'og_title': meta['og_title'].strip(),
+        'og_description': meta['og_description'].strip(),
+        'og_url': meta['og_url'].strip(),
+        'twitter_title': meta['twitter_title'].strip(),
+        'twitter_description': meta['twitter_description'].strip(),
+        'sections': course_data['sections'],
+        'lessons': course_data['lessons']
     }
 
     result = template.render(**context)
@@ -92,29 +82,18 @@ def render_manual():
     env = get_template_loader()
     template = env.get_template('manual_template.html')
 
-    syllabus_data = load_syllabus_data()
+    course_data = load_course_data()
 
+    meta = course_data['meta']['manual']
     context = {
-        'title': 'Course Manual (Interactive Data Sci / Viz)',
-        'description': (
-            'Complete course manual with readings, interactive labs, exercises, '
-            'and capstone guidance. Navigate assignments, time expectations, '
-            'collaboration guidelines, and data science projects.'
-        ),
-        'og_title': 'Course Manual (Interactive Data Sci / Viz)',
-        'og_description': (
-            'Complete course manual with readings, interactive labs, exercises, '
-            'and capstone guidance. Navigate assignments, time expectations, '
-            'collaboration guidelines, and data science projects.'
-        ),
-        'og_url': 'https://mooc.interactivedatascience.courses/course_wide/manual.html',
-        'twitter_title': 'Course Manual (Interactive Data Sci / Viz)',
-        'twitter_description': (
-            'Complete course manual with readings, interactive labs, exercises, '
-            'and capstone guidance. Navigate assignments, time expectations, '
-            'collaboration guidelines, and data science projects.'
-        ),
-        'lessons': syllabus_data['lessons']
+        'title': meta['title'].strip(),
+        'description': meta['description'].strip(),
+        'og_title': meta['og_title'].strip(),
+        'og_description': meta['og_description'].strip(),
+        'og_url': meta['og_url'].strip(),
+        'twitter_title': meta['twitter_title'].strip(),
+        'twitter_description': meta['twitter_description'].strip(),
+        'lessons': course_data['lessons']
     }
 
     result = template.render(**context)
@@ -134,30 +113,19 @@ def render_rubric():
     env = get_template_loader()
     template = env.get_template('rubric_template.html')
 
-    syllabus_data = load_syllabus_data()
+    course_data = load_course_data()
 
+    meta = course_data['meta']['rubric']
     context = {
-        'title': 'Project Grading Rubric (Interactive Data Sci / Viz)',
-        'description': (
-            'Understand grading criteria for your code projects: completeness, '
-            'materials, technical execution, and exploration. Clear standards '
-            'for all assignments and final project.'
-        ),
-        'og_title': 'Project Grading Rubric (Interactive Data Sci / Viz)',
-        'og_description': (
-            'Grading criteria for your coding projects across completeness, '
-            'visualization concepts, technical execution, and exploration. '
-            'Understand what instructors evaluate.'
-        ),
-        'og_url': 'https://mooc.interactivedatascience.courses/course_wide/rubric.html',
-        'twitter_title': 'Project Grading Rubric (Interactive Data Sci / Viz)',
-        'twitter_description': (
-            'Grading criteria for your coding projects across completeness, '
-            'visualization concepts, technical execution, and exploration. '
-            'Understand what instructors evaluate.'
-        ),
-        'rubric_sections': syllabus_data['rubric']['sections'],
-        'rubric_items': syllabus_data['rubric']['items']
+        'title': meta['title'].strip(),
+        'description': meta['description'].strip(),
+        'og_title': meta['og_title'].strip(),
+        'og_description': meta['og_description'].strip(),
+        'og_url': meta['og_url'].strip(),
+        'twitter_title': meta['twitter_title'].strip(),
+        'twitter_description': meta['twitter_description'].strip(),
+        'rubric_sections': course_data['rubric']['sections'],
+        'rubric_items': course_data['rubric']['items']
     }
 
     result = template.render(**context)
@@ -177,11 +145,11 @@ def render_syllabus_md():
     env = get_template_loader()
     template = env.get_template('syllabus_template.md')
 
-    syllabus_data = load_syllabus_data()
+    course_data = load_course_data()
 
     context = {
-        'sections': syllabus_data['sections'],
-        'lessons': syllabus_data['lessons']
+        'sections': course_data['sections'],
+        'lessons': course_data['lessons']
     }
 
     result = template.render(**context)
@@ -201,10 +169,10 @@ def render_manual_md():
     env = get_template_loader()
     template = env.get_template('manual_template.md')
 
-    syllabus_data = load_syllabus_data()
+    course_data = load_course_data()
 
     context = {
-        'lessons': syllabus_data['lessons']
+        'lessons': course_data['lessons']
     }
 
     result = template.render(**context)
@@ -224,11 +192,11 @@ def render_rubric_md():
     env = get_template_loader()
     template = env.get_template('rubric_template.md')
 
-    syllabus_data = load_syllabus_data()
+    course_data = load_course_data()
 
     context = {
-        'rubric_sections': syllabus_data['rubric']['sections'],
-        'rubric_items': syllabus_data['rubric']['items']
+        'rubric_sections': course_data['rubric']['sections'],
+        'rubric_items': course_data['rubric']['items']
     }
 
     result = template.render(**context)
