@@ -1,0 +1,29 @@
+number: 4
+name: Hello Creative Objects
+video: 1049130582
+materials_pdf: true
+materials_pptx: true
+materials_md: true
+text: >
+  <p>
+    Using object-oriented programming for interactive graphical
+    simulation. See tutorials at <a href="/labs">Skills Labs</a>.
+  </p>
+  <p>
+    If you are new to programming, you may optionally elect to engage
+    AI assistants. If that is of interest, check out the bonus <a
+    href="/lesson26.html">Lesson 26</a> on using AI.
+  </p>
+reading: >
+  We will take a look at some of the ideas of Edward Tufte that
+  continue to shape data visualization today. Please read <a
+  href="https://benjaminleroy.github.io/pages/blog/public/post/2018/05/16/review-of-tufte-s-the-visual-display-of-quantitative-information/">
+  this review of Tufte from LeRoy</a>.
+citations:
+- text: Thanks for imagery.
+  available: https://badriadhikari.github.io/data-viz-workshop-2021/minards/
+links:
+- text: Skills Labs
+  url: /labs
+- text: Sketchingpy Online Sketchbook
+  url: https://editor.sketchingpy.org/

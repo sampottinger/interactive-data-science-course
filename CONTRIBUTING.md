@@ -35,18 +35,16 @@ There are three major areas of the course materials: the MOOC source, course-wid
 ### MOOC Source
 This includes the "lecture" class materials. All lessons must have, at minimum, a yaml entry. However, other materials may appear as well. These materials are rendered into a content management system with formalized / standardized templates.
 
-The MOOC source is organized in `mooc_src/` with the following structure:
+The MOOC source is organized in `lecture/` with the following structure:
  - `lessons/`: Section directories containing per-lesson YAML files and section metadata
  - `support/`: Supporting materials organized by type (md, pdf, pptx, web, misc)
- - `citations/`: Citation files for lessons
 
 #### YAML
-Course lessons are organized in the `mooc_src/lessons/` directory. This
+Course lessons are organized in the `lecture/lessons/` directory. This
 directory contains numbered section subdirectories (e.g., `01_Hello`,
 `02_Primitives`), each containing individual YAML files for each lesson
 and an `index.yml` file with section metadata. Each lesson YAML file
-represents a single lesson as a top-level mapping (not wrapped in a
-`sections` key or list). Lesson files are named with a numeric prefix
+represents a single lesson as a top-level mapping. Lesson files are named with a numeric prefix
 followed by a descriptive name (e.g., `00_hello_preface.yaml`,
 `01_hello_visualization.yaml`).
 
@@ -73,7 +71,7 @@ Each lesson may have:
 | materials_pdf  | Recommended  | Flag indicating if a PDF version of the lesson is available.                                             | bool     |
 | materials_pptx | Recommended  | Flag indicating if a PowerPoint (PPTX) version of the lesson is available.                               | bool     |
 | materials_md   | Recommended  | Flag indicating if a markdown version of the lesson is available.                                        | bool     |
-| citations      | Recommended  | Flag indicating if there are citations for the lecture.                                                  | bool     |
+| citations      | Recommended  | A list of structured citation objects with text, optional doi, and optional available fields.            | list     |
 | assignment     | No           | Long-form description of the out of lesson (like homework) exercise associated with the lesson (if any). | html     |
 | reading        | No           | Long-form description of the out of lesson (like homework) reading associated with the lesson (if any).  | html     |
 | links          | No           | List of links (with `text` and `url` fields) which are mentioned in the lesson.                          | list     |
@@ -112,7 +110,7 @@ Here is an example of a poorly implemented entry:
       \ the reader to reach new their own conclusions about the data and, if so, how?</li>\n</ul>\nPlease write 4 - 8 sentences.\n"
     reading: Optionally review <a href="https://python.swaroopch.com">A Byte of Python</a> if you want to brush up on (or
       learn) the fundamentals of Python.
-    citations: true
+    citations: [{"text": "Example citation here.", "available": "https://example.com"}]
     links: [{"text": "Skills Labs", "url": "/labs"}, {"text": "Sketchingpy Online Sketchbook", "url": https://editor.sketchingpy.org/}]
 ```
 
@@ -140,7 +138,9 @@ Here is a well implemented entry:
       Please write 4 - 8 sentences.
     reading: >
       Optionally review <a href="https://python.swaroopch.com">A Byte of Python</a> if you want to brush up on (or learn) the fundamentals of Python.
-    citations: true
+    citations:
+    - text: Example citation here.
+      available: https://example.com
     links:
     - text: Skills Labs
       url: /labs
@@ -149,7 +149,36 @@ Here is a well implemented entry:
 ```
 
 #### Citations
-Each lesson with citations should have a file in the form of `lesson00.txt` within `mooc_src/citations`. Each line should contain a single citation. Empty lines (including those containing only whitespace) are ignored. These files should end with a single empty line.
+Citations are provided as inline YAML lists. Each citation is a YAML mapping with a `text` field, an optional `doi` field, and an optional `available` field for URLs. This format matches the skills labs citation structure.
+
+**Fields:**
+
+- `text` contains the citation body (IEEE-derivative format recommended). Do NOT include "Available:" or "doi:" prefix in text — these are generated from their respective fields at render time.
+- `doi` is optional and contains just the DOI identifier (e.g., `10.1080/01621459.1984.10478080`). This is rendered as `doi: <link to doi.org>`.
+- `available` is optional and contains a URL where the resource can be accessed. Citations without a URL (e.g., books) omit this field.
+- A citation may have `doi`, `available`, both, or neither.
+- For `text` values exceeding 100 characters, use the `>` folded scalar syntax. Keep lines under 100 characters. Do not break URLs across lines.
+
+**Example:**
+
+```yaml
+citations:
+  - text: >
+      J. Snow, On the mode of communication of cholera. London: John
+      Churchill, 1855.
+    available: https://archive.org/details/b28985266/page/n57/mode/2up
+  - text: >
+      A. Kirk, DATA VISUALISATION: a handbook for data driven design.
+      S.l.: SAGE PUBLICATIONS, 2024.
+  - text: >
+      W. S. Cleveland and R. McGill, "Graphical Perception: Theory,
+      Experimentation, and Application to the Development of Graphical
+      Methods," Journal of the American Statistical Association, vol. 79,
+      no. 387, pp. 531-554, Sep. 1984.
+    doi: 10.1080/01621459.1984.10478080
+```
+
+Short `text` values (under 100 characters) may be plain strings without `>`.
 
 #### Markdown
 It is strongly recommended that all lessons contain a markdown version as it is the most accessible format where possible. The intention is provide a self-contained text version of the lesson.
@@ -168,7 +197,7 @@ Citations from the markdown may differ from the txt citations file where require
 Slides should be provided as PDF files with optional but encouraged PPTX versions. There should be a title slide and a slide indicating creative commons license.
 
 #### Support
-All lesson materials (markdown, PDF, and PPTX files) are stored under `mooc_src/support/` to organize supporting materials in a central location. The support directory contains:
+All lesson materials (markdown, PDF, and PPTX files) are stored under `lecture/support/` to organize supporting materials in a central location. The support directory contains:
 
  - `md/`: Markdown versions of all lessons
  - `pdf/`: PDF slide decks for all lessons
@@ -179,7 +208,7 @@ All lesson materials (markdown, PDF, and PPTX files) are stored under `mooc_src/
 Files beyond the standard lesson materials are also allowed in the `misc/` subdirectory. In general, these are files used across multiple lessons or special files supporting specific lesson activities.
 
 ### Course-Wide Materials
-Course-wide materials (syllabus, manual, rubric) are found in `course_wide/` and are rendered from Jinja2 templates using a structure similar to `mooc_src`. These materials apply across the entire course rather than individual lessons.
+Course-wide materials (syllabus, manual, rubric) are found in `course_wide/` and are rendered from Jinja2 templates using a structure similar to `lecture`. These materials apply across the entire course rather than individual lessons.
 
 The course_wide directory contains:
  - `render.py`: Python script that renders templates into HTML and Markdown
@@ -214,7 +243,24 @@ Follow YAML best practices similar to lesson YAML files:
 ### Skills Labs
 During original teaching of this course as Stat 198 at UC Berkeley, the skills labs were taught using a flipped classroom structure. These are distinct to regular lessons in that there is minimal to no lecture component. Instead, time is spent on one or more directly interactive activities.
 
-Due to the nature of skills labs, the `labs` directory is published directly as static content. This affords maximal flexibility in crafting the lab experience outside of a formalized template like normal lessons. That said, we ask that new labs follow the structure of existing labs as, for example, seen in `python_graphics.html`. Please ensure the following at minimum:
+Skills labs are organized in the `labs/` directory with the following structure:
+ - `Lab_1/`, `Lab_2/`, etc.: Lab-specific directories containing YAML source files
+ - Each lab directory contains an `index.yml` with lab metadata (name, lesson) and tutorial YAML files named with a numeric prefix followed by a descriptive name (e.g., `01_python_introduction.yaml`, `02_python_graphics.yaml`)
+ - Tutorial YAML files define individual tutorials with name, file, header, sections, and citations
+ - Templates: `tutorial.html`, `index_template.html`, `tutorial.md` for rendering
+ - `render.py` and `render.sh` to generate HTML and Markdown output from YAML sources
+
+The YAML-based structure allows for consistent formatting and easier maintenance. Tutorial YAML files follow this structure:
+
+| **Field** | **Required** | **Purpose** | **Type** |
+| --------- | ------------ | ----------- | -------- |
+| name      | Yes          | Human readable name of the tutorial. | string |
+| file      | Yes          | Base filename for output (e.g., "python_intro" generates python_intro.html and python_intro.md). | string |
+| header    | Yes          | HTML content for the tutorial header/introduction. | html |
+| sections  | Yes          | List of tutorial sections, each with "name" (anchor ID), "short" (heading), "long" (description), and "body" (content). | list |
+| citations | No           | List of citations, each with "text" and optional "available" (URL). | list |
+
+HTML fields should use `>` for folded scalars as with lesson YAML files. Generated tutorials include:
 
  - A contents `details` tag.
  - Use of header, main, and sections for accessibility including skip link.
@@ -226,14 +272,14 @@ Due to the nature of skills labs, the `labs` directory is published directly as 
 These should be fully static pages (HTML, CSS, JS) and automated use of server-side components is currently disallowed.
 
 ## Content management
-Skills labs are posted directly as static materials but the regular lessons (MOOC source) and course-wide materials compile to a static website using `render.py` scripts. This takes advantage of very limited open source libraries. At this time, only jinja2 and pyyaml are allowed in this process. Please keep `render.sh` up to date such that it builds all lessons and course-wide materials. The only external service currently allowed is Vimeo.
+Skills labs, regular lessons (MOOC source), and course-wide materials compile to a static website using `render.py` scripts. This takes advantage of very limited open source libraries. At this time, only jinja2 and pyyaml are allowed in this process. Please keep `render.sh` scripts up to date such that they build all lessons, labs, and course-wide materials. The only external service currently allowed is Vimeo.
 
 ## Standards
 Please follow conventions of existing code and materials where possible. Please also ensure:
 
  - MOOC source materials and course-wide materials build successfully before opening pull requests.
  - All public or top level members in JS / Python have docstring or JSDoc.
- - Checks from `pycodestyle` pass for both `mooc_src/*.py` and `course_wide/*.py`.
+ - Checks from `pycodestyle` pass for `lecture/*.py`, `course_wide/*.py`, and `labs/*.py`.
  - Checks from `eslint` pass.
  - Only `pnpm` and not `npm` are used for security purposes.
  - Use virtualenv where possible but ensure venv and node modules are excluded from git (are present in gitignore).

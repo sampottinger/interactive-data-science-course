@@ -16,9 +16,9 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Run pyflakes
-        run: pyflakes mooc_src/*.py course_wide/*.py
+        run: pyflakes lecture/*.py course_wide/*.py labs/*.py
       - name: Run pycodestyle
-        run: pycodestyle mooc_src/*.py course_wide/*.py
+        run: pycodestyle lecture/*.py course_wide/*.py labs/*.py
   check_js:
     runs-on: ubuntu-latest
     name: Check JS
@@ -37,7 +37,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Run lint
-        run: npx eslint 'mooc_src/**/*.js'
+        run: npx eslint 'lecture/**/*.js'
   build:
     runs-on: ubuntu-latest
     name: Build
@@ -71,8 +71,8 @@ jobs:
         run: rm -r .git
       - name: Remove workflow directory
         run: rm -r .github
-      - name: Remove mooc_src
-        run: rm -r mooc_src
+      - name: Remove lecture
+        run: rm -r lecture
       - name: Download mooc artifact
         uses: actions/download-artifact@v4
         with:
@@ -85,7 +85,7 @@ jobs:
           sshpass -p "${{ secrets.SFTP_PASSWORD }}" scp -o StrictHostKeyChecking=no -r ./mooc/* ${{ secrets.SFTP_USER }}@${{ secrets.SFTP_HOST }}:./mooc.interactivedatascience.courses/
       - name: Upload labs
         run: |
-          sshpass -p "${{ secrets.SFTP_PASSWORD }}" scp -o StrictHostKeyChecking=no -r ./labs/* ${{ secrets.SFTP_USER }}@${{ secrets.SFTP_HOST }}:./mooc.interactivedatascience.courses/labs/
+          sshpass -p "${{ secrets.SFTP_PASSWORD }}" scp -o StrictHostKeyChecking=no -r ./mooc/labs/* ${{ secrets.SFTP_USER }}@${{ secrets.SFTP_HOST }}:./mooc.interactivedatascience.courses/labs/
       - name: Upload course wide
         run: |
           sshpass -p "${{ secrets.SFTP_PASSWORD }}" scp -o StrictHostKeyChecking=no -r ./mooc/course_wide/* ${{ secrets.SFTP_USER }}@${{ secrets.SFTP_HOST }}:./mooc.interactivedatascience.courses/course_wide/
