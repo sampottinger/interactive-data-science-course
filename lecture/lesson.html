@@ -157,6 +157,14 @@
             <section id="outline">
                 <h2>Lesson outline</h2>
                 <div>
+                    {% if markdown_html %}
+                    <details>
+                        <summary>View lesson outline</summary>
+                        <div>
+                            {{ markdown_html | safe }}
+                        </div>
+                    </details>
+                    {% endif %}
                     <a href="/md/lesson{{ '%02d' % number }}.md">Download outline as markdown</a>
                 </div>
             </section>
