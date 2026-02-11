@@ -157,6 +157,10 @@ section {
   color: white;
 }
 
+.bottom-pad-table {
+  margin-bottom: 20px;
+}
+
 .citation-list {
   font-size: 11px;
 }
