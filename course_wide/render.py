@@ -1,8 +1,9 @@
 """Render script for course_wide HTML and Markdown files.
 
-This module renders Jinja2 templates for course-wide documents (syllabus, manual, rubric)
-into static HTML and Markdown files. It follows a similar structure to lecture/render.py
-but is specifically tailored for the course_wide directory structure.
+This module renders Jinja2 templates for course-wide documents
+(syllabus, manual, rubric) into static HTML and Markdown files.
+It follows a similar structure to lecture/render.py but is
+specifically tailored for the course_wide directory structure.
 
 License: BSD-3-Clause
 """
@@ -219,25 +220,27 @@ def main():
 
     command = sys.argv[1]
 
-    if command == 'syllabus':
-        render_syllabus()
-    elif command == 'manual':
-        render_manual()
-    elif command == 'rubric':
-        render_rubric()
-    elif command == 'syllabus_md':
-        render_syllabus_md()
-    elif command == 'manual_md':
-        render_manual_md()
-    elif command == 'rubric_md':
-        render_rubric_md()
-    elif command == 'all':
-        render_syllabus()
-        render_manual()
-        render_rubric()
-        render_syllabus_md()
-        render_manual_md()
-        render_rubric_md()
+    command_strategies = {
+        'syllabus': [render_syllabus],
+        'manual': [render_manual],
+        'rubric': [render_rubric],
+        'syllabus_md': [render_syllabus_md],
+        'manual_md': [render_manual_md],
+        'rubric_md': [render_rubric_md],
+        'all': [
+            render_syllabus,
+            render_manual,
+            render_rubric,
+            render_syllabus_md,
+            render_manual_md,
+            render_rubric_md
+        ]
+    }
+
+    strategies = command_strategies.get(command)
+    if strategies:
+        for strategy in strategies:
+            strategy()
     else:
         print(f'Unknown command: {command}')
         print(USAGE_STR)

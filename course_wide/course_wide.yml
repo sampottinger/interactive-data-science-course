@@ -1,6 +1,5 @@
 # Course sections and lessons data for Interactive Data Science and Visualization
 # This file contains structured data for all course sections and daily lessons.
-# Days 0 and 26 (optional fully online) are excluded from this data.
 
 meta:
   syllabus:
@@ -114,6 +113,15 @@ sections:
       The course ends with sharing final projects and a celebration of our time together.
 
 lessons:
+  - lesson: 0
+    section: Hello
+    reading:
+      - text: Skim the <a href="/#materials">overall course materials</a>
+    class:
+      - text: Short pre-course primer on class structure, purpose, and how to use the resources.
+    activity:
+      - text: None.
+
   - lesson: 1
     section: Hello
     class:
@@ -357,6 +365,19 @@ lessons:
       - text: Logistics for the final, preparing for larger or non-notebook code. Git, architecture patterns, iterative process.
     activity:
       - text: '[Final] Sketch in code.'
+
+  - lesson: 26
+    section: Skills
+    reading:
+      - text: >
+          Learn more about ethical considerations by watching
+          <a href="https://satml.org/2023/videos/">Timnit Gebru's talk on Eugenics and the Promise of Utopia through AGI</a>.
+    class:
+      - text: >
+          Explore using AI in implementing data visualizations. Optional extra lesson on using
+          generative AI. Complete <a href="/labs">Skills Lab 6</a> to get hands on!
+    activity:
+      - text: None.
 
   - lesson: "26.1"
     section: Skills
