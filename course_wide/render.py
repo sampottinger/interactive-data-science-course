@@ -227,8 +227,14 @@ def main():
         'syllabus_md': [render_syllabus_md],
         'manual_md': [render_manual_md],
         'rubric_md': [render_rubric_md],
-        'all': [render_syllabus, render_manual, render_rubric,
-                render_syllabus_md, render_manual_md, render_rubric_md]
+        'all': [
+            render_syllabus,
+            render_manual,
+            render_rubric,
+            render_syllabus_md,
+            render_manual_md,
+            render_rubric_md
+        ]
     }
 
     strategies = command_strategies.get(command)
