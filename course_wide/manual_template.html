@@ -1,55 +1,15 @@
-<!doctype html>
+{% extends "base.html" %}
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Course Manual (Interactive Data Sci / Viz)</title>
-        <meta name="description" content="Complete course manual with readings, interactive labs, exercises, and capstone guidance. Navigate assignments, time expectations, collaboration guidelines, and data science projects." />
-        <link href="/support/web/supplemental.css" rel="stylesheet" type="text/css" />
+{% block title %}{{ title }}{% endblock %}
+{% block description %}{{ description }}{% endblock %}
+{% block og_title %}{{ og_title }}{% endblock %}
+{% block og_description %}{{ og_description }}{% endblock %}
+{% block og_url %}{{ og_url }}{% endblock %}
+{% block twitter_title %}{{ twitter_title }}{% endblock %}
+{% block twitter_description %}{{ twitter_description }}{% endblock %}
+{% block doc_type %}manual{% endblock %}
 
-        <meta
-            property="og:title"
-            content="Course Manual (Interactive Data Sci / Viz)"
-        />
-        <meta property="og:type" content="article" />
-        <meta
-            property="og:description"
-            content="Complete course manual with readings, interactive labs, exercises, and capstone guidance. Navigate assignments, time expectations, collaboration guidelines, and data science projects."
-        />
-        <meta
-            property="og:url"
-            content="https://mooc.interactivedatascience.courses/course_wide/manual.html"
-        />
-        <meta
-            property="og:image"
-            content="https://mooc.interactivedatascience.courses/support/web/card.jpg"
-        />
-
-        <meta
-            name="twitter:title"
-            content="Course Manual (Interactive Data Sci / Viz)"
-        />
-        <meta
-            name="twitter:description"
-            content="Complete course manual with readings, interactive labs, exercises, and capstone guidance. Navigate assignments, time expectations, collaboration guidelines, and data science projects."
-        />
-        <meta
-            name="twitter:image"
-            content="https://mooc.interactivedatascience.courses/support/web/card.jpg"
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-    </head>
-    <body>
-        <div class="skip-link">
-            <a href="#main">Skip to content</a>
-        </div>
-        <header>
-            This manual is part of
-            <a href="/">Interactive Data Science and Visualization</a>.
-        </header>
-        <main id="main">
-            <h1>Interactive Data Science and Visualization Manual</h1>
+{% block content %}<h1>Interactive Data Science and Visualization Manual</h1>
 
             <p>
                 Document which helps students engage with or instructors teach IDSV.
@@ -143,75 +103,17 @@
 
                 <table>
                     <tr>
-                        <th>Week</th>
-                        <th>Day 1</th>
-                        <th>Day 2</th>
+                        <th>Day</th>
+                        <th>Reading</th>
                     </tr>
+{%- for lesson in lessons %}
+{%- if lesson.reading %}
                     <tr>
-                        <td>1</td>
-                        <td></td>
-                        <td></td>
+                        <td>{{ lesson.lesson }}</td>
+                        <td>{% for item in lesson.reading %}{% if item.url %}<a href="{{ item.url }}" target="_blank">{{ item.text }}</a>{% else %}{{ item.text }}{% endif %}{% if not loop.last %}{{ item.separator if item.separator else ', ' }}{% elif item.separator %}{{ item.separator }}{% endif %}{% endfor %}</td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td><a href="https://vimeo.com/67076984">Media for Thinking the Unthinkable (Victor 2013)</a></td>
-                        <td><a href="https://docs.google.com/presentation/d/1qF9MHkp0p6THLU1bXPV7snaKTMYwYWH0RqxL7v0bJ8Y/edit?usp=sharing">Dealing with Open Source Licenses (Winslow 2019)</a></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td></td>
-                        <td><a href="https://benjaminleroy.github.io/pages/blog/public/post/2018/05/16/review-of-tufte-s-the-visual-display-of-quantitative-information/">Review of Tufte (LeRoy 2018)</a></td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td><a href="https://daydreamingnumbers.com/blog/preattentive-attributes-example/">Preattentive Attributes in Visualization (Kesavan 2016)</a></td>
-                        <td><a href="https://www.youtube.com/watch?v=PUv66718DII">Inventing on Principle (Victor 2012)</a></td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td></td>
-                        <td><a href="https://openprocessing.org/browse?q=genuary&time=thisYear&type=all&offset=0">OpenProcessing Genuary</a></td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td><a href="https://genuary.art/">Genuary</a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td><a href="https://priceonomics.com/how-william-cleveland-turned-data-visualization/">William Cleveland (Pricenomics 2016)</a></td>
-                        <td><a href="https://www.data-to-viz.com/">From Data to Viz (Holtz 2018)</a></td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td><a href="https://www.youtube.com/watch?v=WOBKnRlOAes">15 View on a Node Link Graph (Munzner 2007)</a></td>
-                        <td><a href="https://vimeo.com/channels/eyeo2015/133608605">Dear Data (Luipi and Posavec 2015)</a></td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td><a href="https://www.youtube.com/watch?v=HiGd-JJ94QA">Designing for Realtime Spacecraft (Binx 2016)</a></td>
-                        <td><a href="https://www.youtube.com/watch?v=yY96hTb8WgI">Bad Doors (Posner et al 2016)</a></td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td><a href="https://vimeo.com/115154289">Explorable Explanations (Victor 2011)</a>, <a href="https://www.youtube.com/watch?v=ulm7bcB2xvY">Role of the Player (Portnow 2011)</a></td>
-                        <td><a href="https://www.youtube.com/watch?v=Qot5_rMB8Jc">Last Guardian: Language of Games (Brown 2017)</a></td>
-                    </tr>
-                    <tr>
-                        <td>11</td>
-                        <td><a href="https://www.youtube.com/watch?v=ZH2wGpEZVgE">Super Mario Level 1-1 (Emmons and Portnow 2014)</a>, <a href="https://www.youtube.com/watch?v=CZzcVs8tNfE&themeRefresh=1">Zelda Open World (Brown 2023)</a></td>
-                        <td><a href="https://www.youtube.com/watch?v=ontNUxSLhb8">Storytelling with Verbs (Tremblay 2020)</a>, <a href="https://www.ted.com/talks/will_wright_spore_birth_of_a_game?language=en">Birth of a Game (Wright 2007)</a></td>
-                    </tr>
-                    <tr>
-                        <td>12</td>
-                        <td><a href="https://www.youtube.com/watch?v=xrqdU4cZaLw">Games are for Everyone (Brown 2018)</a></td>
-                        <td><a href="https://www.youtube.com/watch?v=AaU6tI2pb3M">What Ethical AI Really Means (Thorne 2023)</a>, <a href="https://vimeo.com/354276956">Eyeo 2019 (Costanza-Chock 2019)</a></td>
-                    </tr>
-                    <tr>
-                        <td>13</td>
-                        <td><a href="https://www.youtube.com/watch?v=kUT60DKaEGc">World Design of Metroid (Brown 2018)</a></td>
-                        <td></td>
-                    </tr>
+{%- endif %}
+{%- endfor %}
                 </table>
 
                 <p><strong>Remainder:</strong> Readings for Final and Interactive Experience</p>
@@ -646,17 +548,6 @@
                     <li><a href="/course_wide/syllabus.html">Course Syllabus</a> - Formal curriculum and weekly schedule</li>
                     <li><a href="/course_wide/rubric.html">Grading Rubric</a> - Detailed grading criteria for code projects</li>
                 </ul>
-            </section>
-        </main>
-        <footer>
-            This resource is released under the
-            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.en"
-                >CC-BY-NC 4.0 License</a
-            >. Thank you to
-            <a href="https://public-sans.digital.gov">PublicSans</a> under the
-            Open Font License. No cookies are used. Analytics limited to
-            standard server logging which may collect IP addresses. These logs
-            are deleted or anonymized within 30 days.
-        </footer>
-    </body>
-</html>
+            </section>{% endblock %}
+
+{% block footer_license %}This resource is released under the <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.en">CC-BY-NC 4.0 License</a>{% endblock %}

@@ -3,3 +3,9 @@ venv/
 node_modules/
 tasks/
 *.pyc
+course_wide/manual.html
+course_wide/manual.md
+course_wide/rubric.html
+course_wide/rubric.md
+course_wide/syllabus.html
+course_wide/syllabus.md

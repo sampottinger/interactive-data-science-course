@@ -30,7 +30,7 @@ We will continue to strive towards our objectives above. However, we recognize t
 These limitations are largely driven by resource constraints and we welcome new volunteers via GitHub issue to help us further improve! However, please understand that we may keep these scope constraints depending on current community capacity.
 
 ## Structure
-There are two major areas of the course materials: the MOOC source and the skills labs.
+There are three major areas of the course materials: the MOOC source, course-wide materials, and the skills labs.
 
 ### MOOC Source
 This includes the "lecture" class materials. All lessons must have, at minimum, a yaml entry. However, other materials may appear as well. These materials are rendered into a content management system with formalized / standardized templates.
@@ -207,6 +207,39 @@ All lesson materials (markdown, PDF, and PPTX files) are stored under `lecture/s
 
 Files beyond the standard lesson materials are also allowed in the `misc/` subdirectory. In general, these are files used across multiple lessons or special files supporting specific lesson activities.
 
+### Course-Wide Materials
+Course-wide materials (syllabus, manual, rubric) are found in `course_wide/` and are rendered from Jinja2 templates using a structure similar to `lecture`. These materials apply across the entire course rather than individual lessons.
+
+The course_wide directory contains:
+ - `render.py`: Python script that renders templates into HTML and Markdown
+ - `render.sh`: Bash script wrapper that calls render.py
+ - `course_wide.yml`: Structured data for sections, lessons, and rubric criteria
+ - `base.html` and `base.md`: Base templates with shared structure
+ - `*_template.html` and `*_template.md`: Page-specific templates (syllabus, manual, rubric)
+ - `*.html`, `*.md`, `*.pdf`: Rendered output files
+
+#### Modifying course-wide content
+To modify course-wide materials:
+
+1. **Edit structured data**: Update `course_wide.yml` to change course sections, lessons, or rubric criteria
+2. **Edit templates**: Modify `*_template.html` or `*_template.md` files to change page structure or content
+3. **Edit base templates**: Update `base.html` or `base.md` to change shared elements across all pages
+4. **Rebuild**: Run `bash render.sh` from the `course_wide` directory to regenerate output files
+
+Template files use Jinja2 syntax with template inheritance. Page templates extend base templates and override specific blocks. The render script loads data from `course_wide.yml` and passes it to templates for dynamic rendering.
+
+#### YAML structure
+The `course_wide.yml` file contains:
+ - `sections`: List of course sections with name, number, tagline, and detailed description
+ - `lessons`: Nested under sections, containing day number, title, readings, and activities
+ - `rubric`: List of grading criteria with category, criterion, and percentage fields
+
+Follow YAML best practices similar to lesson YAML files:
+ - Use `>` for multi-line strings
+ - Keep lines to 100 characters or fewer (exceptions for long URLs)
+ - Avoid trailing whitespace
+ - Use consistent indentation (2 spaces)
+
 ### Skills Labs
 During original teaching of this course as Stat 198 at UC Berkeley, the skills labs were taught using a flipped classroom structure. These are distinct to regular lessons in that there is minimal to no lecture component. Instead, time is spent on one or more directly interactive activities.
 
@@ -239,17 +272,18 @@ HTML fields should use `>` for folded scalars as with lesson YAML files. Generat
 These should be fully static pages (HTML, CSS, JS) and automated use of server-side components is currently disallowed.
 
 ## Content management
-Both skills labs and regular lessons (MOOC source) compile materials to a static website using `render.py` scripts. This takes advantage of very limited open source libraries. At this time, only jinja2 and pyyaml are allowed in this process. Please keep `render.sh` scripts up to date such that they build all lessons and labs. The only external service currently allowed is Vimeo.
+Skills labs, regular lessons (MOOC source), and course-wide materials compile to a static website using `render.py` scripts. This takes advantage of very limited open source libraries. At this time, only jinja2 and pyyaml are allowed in this process. Please keep `render.sh` scripts up to date such that they build all lessons, labs, and course-wide materials. The only external service currently allowed is Vimeo.
 
 ## Standards
 Please follow conventions of existing code and materials where possible. Please also ensure:
 
- - MOOC source materials build successfully before opening pull requests.
- - All public or top level members in JS / Python have docstring or JSDoc. 
- - Checks from `pycodestyle` pass.
+ - MOOC source materials and course-wide materials build successfully before opening pull requests.
+ - All public or top level members in JS / Python have docstring or JSDoc.
+ - Checks from `pycodestyle` pass for `lecture/*.py`, `course_wide/*.py`, and `labs/*.py`.
  - Checks from `eslint` pass.
  - Only `pnpm` and not `npm` are used for security purposes.
  - Use virtualenv where possible but ensure venv and node modules are excluded from git (are present in gitignore).
+ - Task files in the `tasks/` directory are for local development use only and should not be committed to git. The tasks directory is excluded in .gitignore.
 
 Refrain from using webpack or typescript (JS resources should be deployed directly). Please use vanilla JS where possible.
 
