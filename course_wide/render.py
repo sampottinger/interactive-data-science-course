@@ -1,8 +1,9 @@
 """Render script for course_wide HTML and Markdown files.
 
-This module renders Jinja2 templates for course-wide documents (syllabus, manual, rubric)
-into static HTML and Markdown files. It follows a similar structure to lecture/render.py
-but is specifically tailored for the course_wide directory structure.
+This module renders Jinja2 templates for course-wide documents
+(syllabus, manual, rubric) into static HTML and Markdown files.
+It follows a similar structure to lecture/render.py but is
+specifically tailored for the course_wide directory structure.
 
 License: BSD-3-Clause
 """
