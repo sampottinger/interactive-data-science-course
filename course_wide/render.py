@@ -13,8 +13,15 @@ import sys
 import jinja2
 import yaml
 
-USAGE_ARGS = ['syllabus', 'manual', 'rubric', 'syllabus_md', 'manual_md',
-              'rubric_md', 'all']
+USAGE_ARGS = [
+    'syllabus',
+    'manual',
+    'rubric',
+    'syllabus_md',
+    'manual_md',
+    'rubric_md',
+    'all'
+]
 USAGE_ARGS_STR = ' | '.join(USAGE_ARGS)
 USAGE_STR = f'USAGE: python render.py [{USAGE_ARGS_STR}]'
 MIN_ARGS = 1
