@@ -282,7 +282,7 @@ def shift_header(contents, level, target_level):
 def shift_headers(html_content):
   """Shift HTML headers down by 2 levels.
 
-  Shifts all header tags down by 2 levels (h1->h3, h2->h4, etc.)
+  Shifts all header tags down by 2 levels (h1 to h3, h2 to h4, etc.)
   to maintain proper document structure. Headers h5 and h6 are capped at h6.
 
   Args:
@@ -291,9 +291,6 @@ def shift_headers(html_content):
   Returns:
     str: HTML string with shifted header tags.
   """
-  # Shift headers down by 2 levels, capping at h6
-  # Do this in reverse order to avoid double-shifting
-  # Use h7 as temporary storage for h6
   html_content = shift_header(html_content, 6, 7)
   html_content = shift_header(html_content, 5, 6)
   html_content = shift_header(html_content, 4, 6)
