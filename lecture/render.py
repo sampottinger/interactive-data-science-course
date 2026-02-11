@@ -196,7 +196,7 @@ def main_lesson():
   lesson = lessons_by_number[lesson_number]
 
   citations_raw = lesson.get('citations', [])
-  citations = map(process_citation, citations_raw)
+  citations = map(process_citation, citations_raw) if isinstance(citations_raw, list) else []
 
   template_vals = {
       'number': lesson_number,
