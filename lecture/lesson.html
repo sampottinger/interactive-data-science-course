@@ -68,7 +68,9 @@
                     <ul>
                         {% if video %}
                         <li><a href="#video">Video</a></li>
-                        {% endif %} {% if slides %}
+                        {% endif %} {% if materials_md %}
+                        <li><a href="#outline">Lesson outline</a></li>
+                        {% endif %} {% if materials_pdf or materials_pptx %}
                         <li><a href="#written">Written materials</a></li>
                         {% endif %} {% if links %}
                         <li><a href="#links">Links</a></li>
@@ -151,22 +153,35 @@
                     </ul>
                 </div>
             </section>
-            {% endif %} {% if slides or materials_pdf or materials_pptx or materials_md %}
+            {% endif %} {% if materials_md %}
+            <section id="outline">
+                <h2>Lesson outline</h2>
+                <div>
+                    {% if markdown_html %}
+                    <details>
+                        <summary>View lesson outline</summary>
+                        <div>
+                            {{ markdown_html | safe }}
+                        </div>
+                    </details>
+                    {% endif %}
+                    <a href="/md/lesson{{ '%02d' % number }}.md">Download outline as markdown</a>
+                </div>
+            </section>
+            {% endif %} {% if materials_pdf or materials_pptx %}
             <section id="written">
                 <h2>Written materials</h2>
                 <div>
-                    {% set material_count = (materials_pdf|default(false) and 1 or 0) + (materials_pptx|default(false) and 1 or 0) + (materials_md|default(false) and 1 or 0) %}
+                    {% set material_count = (materials_pdf|default(false) and 1 or 0) + (materials_pptx|default(false) and 1 or 0) %}
                     {% if material_count == 1 %}
                         {% if video %}In addition to the video, you may also{% else %}You may{% endif %}
                         {% if materials_pdf %}<a href="/pdf/lesson{{ '%02d' % number }}.pdf">download slides as PDF</a>.{% endif %}
                         {% if materials_pptx %}<a href="/pptx/lesson{{ '%02d' % number }}.pptx">download slides as PPTX</a>.{% endif %}
-                        {% if materials_md %}<a href="/md/lesson{{ '%02d' % number }}.md">download outline as Markdown</a>.{% endif %}
                     {% elif material_count > 1 %}
                         {% if video %}In addition to the video, you may also:{% else %}You may:{% endif %}
                         <ul>
                             {% if materials_pdf %}<li><a href="/pdf/lesson{{ '%02d' % number }}.pdf">Download Slides as PDF</a></li>{% endif %}
                             {% if materials_pptx %}<li><a href="/pptx/lesson{{ '%02d' % number }}.pptx">Download Slides as PPTX</a></li>{% endif %}
-                            {% if materials_md %}<li><a href="/md/lesson{{ '%02d' % number }}.md">Download Outline as Markdown</a></li>{% endif %}
                         </ul>
                     {% endif %}
                 </div>

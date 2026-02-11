@@ -11,6 +11,7 @@ import os
 import sys
 
 import jinja2
+import markdown
 import yaml
 
 BASE_USAGE_STR = 'USAGE: python render.py'
@@ -196,7 +197,14 @@ def main_lesson():
   lesson = lessons_by_number[lesson_number]
 
   citations_raw = lesson.get('citations', [])
-  citations = map(process_citation, citations_raw)
+  citations = map(process_citation, citations_raw) if isinstance(citations_raw, list) else []
+
+  # Convert markdown to HTML if available
+  markdown_html = None
+  if lesson.get('materials_md', None):
+    md_filename = 'lesson%02d.md' % lesson_number
+    md_path = os.path.join(lessons_dir, '..', 'support', 'md', md_filename)
+    markdown_html = convert_markdown_to_html(md_path)
 
   template_vals = {
       'number': lesson_number,
@@ -208,6 +216,7 @@ def main_lesson():
       'materials_pdf': lesson.get('materials_pdf', None),
       'materials_pptx': lesson.get('materials_pptx', None),
       'materials_md': lesson.get('materials_md', None),
+      'markdown_html': markdown_html,
       'links': lesson.get('links', []),
       'assignment': lesson.get('assignment', None),
       'reading': lesson.get('reading', None),
@@ -252,6 +261,67 @@ def process_citation(citation) -> str:
     result += f' Available: <a href="{available}" target="_blank">{available}</a>'
 
   return result
+
+
+def shift_header(contents, level, target_level):
+  """Shift a specific header level to a target level.
+
+  Args:
+    contents: HTML string containing header tags.
+    level: The header level to shift from (e.g., 1 for h1).
+    target_level: The header level to shift to (e.g., 3 for h3).
+
+  Returns:
+    str: HTML string with the specified header level shifted.
+  """
+  contents = contents.replace('<h%d>' % level, '<h%d>' % target_level)
+  contents = contents.replace('</h%d>' % level, '</h%d>' % target_level)
+  return contents
+
+
+def shift_headers(html_content):
+  """Shift HTML headers down by 2 levels.
+
+  Shifts all header tags down by 2 levels (h1 to h3, h2 to h4, etc.)
+  to maintain proper document structure. Headers h5 and h6 are capped at h6.
+
+  Args:
+    html_content: HTML string containing header tags.
+
+  Returns:
+    str: HTML string with shifted header tags.
+  """
+  html_content = shift_header(html_content, 6, 7)
+  html_content = shift_header(html_content, 5, 6)
+  html_content = shift_header(html_content, 4, 6)
+  html_content = shift_header(html_content, 3, 5)
+  html_content = shift_header(html_content, 2, 4)
+  html_content = shift_header(html_content, 1, 3)
+  html_content = shift_header(html_content, 7, 6)
+  return html_content
+
+
+def convert_markdown_to_html(md_file_path):
+  """Convert a markdown file to HTML.
+
+  Reads a markdown file and converts it to HTML using Python-Markdown.
+  Headers are shifted down by 2 levels to maintain document structure.
+
+  Args:
+    md_file_path: Path to the markdown file to convert.
+
+  Returns:
+    str: The HTML content or None if file doesn't exist.
+  """
+  if not os.path.exists(md_file_path):
+    return None
+
+  with open(md_file_path, 'r', encoding='utf-8') as f:
+    md_content = f.read()
+
+  html_content = markdown.markdown(md_content)
+  html_content = shift_headers(html_content)
+  return html_content
 
 
 def main_list():
