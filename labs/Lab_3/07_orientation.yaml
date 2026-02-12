@@ -1,29 +1,121 @@
 name: Orientation
 file: features_orientation.html
 header: >
-  In our previous tutorials, we explored form, color, and position as preattentive
-  features. In this tutorial, we complete our exploration of basic preattentive
-  features by looking at orientation.
+  In our <a href="/labs/features_position.html">previous tutorial</a>
+  we explored position as a preattentive feature. Specifically, we
+  investigated how to control the location of our shapes through
+  manipulation of the transformation matrix. However, we can do more
+  than just change the origin (0, 0 point) of our coordinate system,
+  we can rotate it as well! In this tutorial, we conclude Skills Lab 3
+  by looking at our final preattentive feature: orientation.
 sections:
-  - name: intro
-    short: Introduction
-    long: Introduction to orientation as a preattentive feature
+  - name: rotate
+    short: Rotate
+    long: Rotate
     body: >
-      Orientation refers to the angle or rotation of visual elements.
-      It can be used to encode data or create visual variety.
-  - name: rotation
-    short: Rotation
-    long: Learn to rotate shapes
+      We will start by doing a global rotation. This also changes the
+      transformation matrix. However, give this a run and you might
+      notice a problem.
+
+
+      <pre>
+      import sketchingpy
+
+      sketch = sketchingpy.Sketch2D(500, 500)
+
+      sketch.set_rect_mode('radius')
+      sketch.set_angle_mode('degrees')
+
+      size = 5
+      for rotation in range(0, 12):
+          sketch.draw_rect(200, 0, size, size)
+          sketch.rotate(30)
+          size += 5
+
+      sketch.show()</pre>
+
+
+      Our work is off the screen! Try changing the position of the
+      squares.
+  - name: rotate-and-translate
+    short: Rotate and Translate
+    long: Rotate and Translate
     body: >
-      Learn how to rotate shapes and use orientation to encode information
-      in your visualizations.
+      Using that first sketch as motiviation, it is common to
+      translate prior to rotation to indicate the point around which
+      the rotation should occur.
+
+
+      <pre>
+      import sketchingpy
+
+      sketch = sketchingpy.Sketch2D(500, 500)
+
+      sketch.set_rect_mode('radius')
+      sketch.set_angle_mode('degrees')
+
+      def draw_at(x, y, color):
+          sketch.push_transform()
+          sketch.push_style()
+
+          sketch.translate(x, y)
+
+          sketch.set_fill(color)
+
+          size = 5
+          for rotation in range(0, 12):
+              sketch.draw_rect(100, 0, size, size)
+              sketch.rotate(30)
+              size += 2
+
+          sketch.pop_style()
+          sketch.pop_transform()
+
+      sketch.translate(250, 250)
+
+      draw_at(0, -100, "#1b9e7750")
+      draw_at(-100, 100, "#d95f0250")
+      draw_at(100, 100, "#7570b350")
+
+      sketch.show()</pre>
+
+
+      It is also common to push and pop within a function so that you
+      can keep track of what transforms have occurred.
   - name: next
     short: Next
-    long: Continue to the next tutorial
+    long: Next
     body: >
-      Continue on to
-      <a href="/labs/resources_text.html">Tutorial 8</a>
-      to learn about working with text in your visualizations.
+      You've reached the end of Skills Lab 3! Continue on to
+      <a href="/labs/resources_text.html">Tutorial 8</a> which starts
+      Skills Lab 4 to learn about text.
+
+
+      <details>
+          <summary>Citations</summary>
+          <ul>
+              <li>
+                  A. Pottinger, "Sketchingpy." Sketchingpy Project,
+                  2024. [Online]. Available:
+                  <a href="https://sketchingpy.org/" target="_blank"
+                      >https://sketchingpy.org/</a
+                  >
+              </li>
+              <li>
+                  C. Brewer, M Harrower, and The Pennsylvania State
+                  University, "Colorbrewer 2.0," The Pennsylvania
+                  State University, 2013. [Online]. Available:
+                  <a href="https://colorbrewer2.org/" target="_blank"
+                      >https://colorbrewer2.org/</a
+                  >
+              </li>
+          </ul>
+      </details>
 citations:
   - text: A. Pottinger, "Sketchingpy." Sketchingpy Project, 2024. [Online].
     available: https://sketchingpy.org/
+  - text: >
+      C. Brewer, M Harrower, and The Pennsylvania State
+      University, "Colorbrewer 2.0," The Pennsylvania State University,
+      2013. [Online].
+    available: https://colorbrewer2.org/

@@ -1,34 +1,146 @@
 name: User Loops
 file: resources_loops.html
 header: >
-  In this tutorial, we explore creating interactive visualizations that
-  respond to user input through event loops.
+  We will next dip our toes back into interactivity through the
+  concept of user loops. This is an essential idea that originally
+  comes from game design that we can apply in order to structure our
+  users' interactions with our pieces. Note that there aren't any new
+  code constructs in this tutorial. Instead, we will look at
+  structural concepts in some code snippets I have for you to read
+  which demonstrate some common patterns used for interactivity. You
+  should recognize some pieces from earlier!
 sections:
-  - name: intro
-    short: Introduction
-    long: Introduction to interactive user loops
+  - name: about-loops
+    short: About Loops
+    long: Introduction to user loops from game design
     body: >
-      Interactive visualizations respond to user input. Learn how to
-      create sketches that react to mouse and keyboard events.
-  - name: mouse_events
-    short: Mouse Events
-    long: Handling mouse input
+      To build up these ideas, we will create a simulation which
+      involves spinning three wheels of color to combine red, green,
+      and blue together. We will use the concept of gameplay loops
+      from video game design to create a three loop structure:
+
+      <ul>
+        <li>
+          We start with the idea that there some repeated action a
+          user is doing moment to moment. This is called the core
+          loop. Our core loop will be spinning a wheel to get to a
+          desired color within that wheel (certain amount of red,
+          for example).
+        </li>
+        <li>
+          However, the core loop can be placed within larger
+          loops. For example, while our core loop is changing one
+          individual color component (how much red, green, blue),
+          our "secondary loop" is trying to achieve a specific
+          combined color across all three color components.
+        </li>
+        <li>
+          Finally, our "tertiary loop" may be comparing different
+          colors: the current color selected against the memory of
+          past colors.
+        </li>
+      </ul>
+
+      Note that the loops sometimes exist as explicit pieces of the
+      code: specific functions supporting one loop or the other.
+      However, sometimes the loops emerge from the user's experience
+      of a piece.
+  - name: simulation
+    short: Simulation
+    long: Building the simulation without interactivity
     body: >
-      Learn to detect and respond to mouse movements, clicks, and other
-      mouse events in your visualizations.
-  - name: keyboard
-    short: Keyboard Events
-    long: Handling keyboard input
+      With that outline in mind, let's go ahead and build this
+      simulation without interactivity first. Try to read my
+      <a
+        href="https://gist.github.com/sampottinger/cedbc6fa9c4579d381b6d22b687da7a7"
+        target="_blank"
+      >first static version of this code</a>
+      given what you learned from the other skills labs. These colors
+      come from
+      <a
+        href="https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3"
+        target="_blank"
+      >ColorBrewer</a>. Give that a run and see what you think. Before
+      continuing, try changing the radius.
+  - name: loops
+    short: Loops
+    long: Adding interactivity to the simulation
     body: >
-      Learn to detect and respond to keyboard input for interactive
-      visualizations.
+      Next, let's add in the interactivity! Take a look at my
+      <a
+        href="https://gist.github.com/sampottinger/34d0b9bd0200abae03408587974deff3"
+        target="_blank"
+      >second interactive version of this code</a>. After reading it,
+      give it a run. Try making the lightest and darkest color you can.
+      Can you feel the different loops? How does the experience feel if
+      you change the rotation speed?
+  - name: terminology
+    short: Terminology
+    long: Understanding verbs and actions in game design
+    body: >
+      Finally, a quick note about terminology. Some game designers
+      would say that:
+
+      <ul>
+        <li>
+          There are three loops: a core, secondary, and tertiary
+          loop.
+        </li>
+        <li>
+          There is one "verb" or one "action" which is "hover"
+          using the mouse.
+        </li>
+      </ul>
+
+      Indeed, those designers would say there is only one verb by
+      which the user can interact with the simulation even if they can
+      use that action in diffrent contexts (different wheels) which
+      make it feel like three verbs.
   - name: next
     short: Next
     long: Continue to the next tutorial
     body: >
-      Continue on to
-      <a href="/labs/resources_data.html">Tutorial 11</a>
-      to learn about working with data.
+      We've brought the idea of the user back into our sketches. Let's
+      finish up this Skills Lab in
+      <a href="/labs/resources_data.html">Tutorial 11</a> to learn
+      about adding data.
+
+      <details>
+        <summary>Citations</summary>
+        <ul>
+          <li>
+            A. Pottinger, "Sketchingpy." Sketchingpy Project,
+            2024. [Online]. Available:
+            <a href="https://sketchingpy.org/" target="_blank"
+              >https://sketchingpy.org/</a>
+          </li>
+          <li>
+            C. Brewer, M Harrower, and The Pennsylvania State
+            University, "Colorbrewer 2.0," The Pennsylvania
+            State University, 2013. [Online]. Available:
+            <a href="https://colorbrewer2.org/" target="_blank"
+              >https://colorbrewer2.org/</a>
+          </li>
+          <li>
+            E. Guardiola, "The Gameplay Loop: a Player Activity
+            Model for Game Design and Analyis," ACE Conference,
+            2016. [Online]. Available:
+            <a
+              href="https://dl.acm.org/doi/10.1145/3001773.3001791"
+              target="_blank"
+              >https://dl.acm.org/doi/10.1145/3001773.3001791</a>
+          </li>
+        </ul>
+      </details>
 citations:
   - text: A. Pottinger, "Sketchingpy." Sketchingpy Project, 2024. [Online].
     available: https://sketchingpy.org/
+  - text: >
+      C. Brewer, M Harrower, and The Pennsylvania State University,
+      "Colorbrewer 2.0," The Pennsylvania State University, 2013.
+      [Online].
+    available: https://colorbrewer2.org/
+  - text: >
+      E. Guardiola, "The Gameplay Loop: a Player Activity Model for
+      Game Design and Analyis," ACE Conference, 2016. [Online].
+    available: https://dl.acm.org/doi/10.1145/3001773.3001791

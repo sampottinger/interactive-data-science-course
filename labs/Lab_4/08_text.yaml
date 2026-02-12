@@ -1,34 +1,192 @@
 name: Text
 file: resources_text.html
 header: >
-  Now that we have explored preattentive features, we will look at bringing
-  resources from the outside world into our visualizations. We start with text.
+  We've built up the tools we need to draw glyphs, the foundational building
+  blocks of our graphics. However, there are a few more elements we need to add
+  in order to build data visualizations. We start the next leg of our journey by
+  looking at how we can draw text which will be useful for axes, titles, direct
+  labeling, and more! This is the first element of Skills Lab 4 which focuses on
+  how to bring in external resources to aid our drawing code. In this case, we
+  will bring in outside fonts.
 sections:
-  - name: intro
-    short: Introduction
-    long: Introduction to working with text in visualizations
+  - name: font
+    short: Font
+    long: Understanding fonts and typography basics
     body: >
-      Text is an essential component of data visualization, providing labels,
-      annotations, and context. Learn how to work with text in Sketchingpy.
-  - name: drawing_text
-    short: Drawing Text
-    long: Learn to draw text on the canvas
+      Before we can draw text, we need a font. Your machine has a number of
+      fonts pre-installed that you can use. Maybe you've installed some of your
+      own! All that said, different machines may have different default fonts so
+      it is often wise to keep a copy of the fonts with a visualization. This is
+      especially important for interactive visualizations you are sending to
+      others. That in mind, some terminology that you might encounter when
+      working with fonts:
+
+
+      <ul>
+        <li>
+          A type has different typefaces like bold or italic. We will be working
+          with "regular" for this tutorial.
+        </li>
+        <li>
+          A type is a collection of related fonts. For example, each typeface
+          would be a font within the type.
+        </li>
+        <li>
+          Each letter in a font is a glyph and each shape within is typically
+          called a stroke.
+        </li>
+        <li>
+          Some fonts have serifs which are small lines at the end of characters.
+          Fonts without serifs are called sans-serif fonts.
+        </li>
+        <li>
+          The font can be set to a different size. This size can be specified
+          using a few different units but we will use pixels which is often just
+          called px.
+        </li>
+        <li>
+          Font glyphs have ascendors and descenders which are parts of the
+          letter that extend outside the body of the character. For example, a
+          descender can be the bottom part of a "g" character.
+        </li>
+        <li>
+          The width of each character or space is often not the same. This is
+          called a "variable-width" font. However, for showing code, it is
+          common to use a "fixed-width" or "monospace" font which ensures that
+          any two lines of text with the same number of characters and spaces is
+          the same visual length.
+        </li>
+      </ul>
+
+
+      We will use an open variable-width sans-serif type called
+      <a href="https://github.com/uswds/public-sans">Public Sans</a>
+      which is under the
+      <a href="https://github.com/uswds/public-sans/blob/develop/LICENSE.md">
+      SIL Open Font License</a>. These fonts come in different file formats but
+      we will generally work with Open Type Format or OTF.
+  - name: text
+    short: Text
+    long: Drawing text with Sketchingpy
     body: >
-      Learn how to position and style text in your visualizations using
-      Sketchingpy's text drawing capabilities.
-  - name: fonts
-    short: Fonts
-    long: Working with fonts and typography
+      Go ahead and
+      <a href="/support/web/PublicSans-Regular.otf">
+      download Public Sans' regular font in OTF format</a>
+      and add it to your
+      <a href="https://editor.sketchingpy.org/">sketchbook</a> by clicking on
+      upload file. Next, let's draw a first piece of 14 px sized text.
+
+
+      <pre>
+      import sketchingpy
+
+      sketch = sketchingpy.Sketch2D(500, 500)
+      sketch.clear("#FFFFFF")
+
+      sketch.set_text_font("PublicSans-Regular", 14)
+      sketch.set_fill("#333333")
+      sketch.clear_stroke()
+      sketch.draw_text(10, 240, "Interactive Data Science and Visualization")
+
+      sketch.show()
+      </pre>
+
+
+      If you are using Sketchingpy outside the browser, you may need to say
+      "PublicSans-Regular.otf" instead. Anyway, try switching the text to say
+      "Stat 198" and change the font size.
+
+
+      <details>
+        <summary>Troubleshooting</summary>
+        <p>
+          First, make sure that the filename is PublicSans-Regular.otf as the
+          font name must match what you write in your code. Second, if the font
+          still isn't displaying, there was a bug fix recently. Try going to the
+          sketchbook and refreshing twice. Specifically, try doing a hard
+          refresh through ctrl + shift + r or cmd + shift + r depending on your
+          operating system.
+        </p>
+      </details>
+  - name: horizontal-align
+    short: Horizontal Align
+    long: Controlling horizontal text alignment
     body: >
-      Typography choices impact readability and aesthetics. Learn about
-      font selection and text styling.
+      Like other types of drawing, we can specify alignment for text. We will
+      start with horizontal alignment as it is a bit simplier.
+
+
+      <pre>
+      import sketchingpy
+
+      sketch = sketchingpy.Sketch2D(500, 500)
+      sketch.clear("#FFFFFF")
+
+      sketch.set_text_font("PublicSans-Regular", 14)
+      sketch.set_fill("#333333")
+      sketch.clear_stroke()
+
+      sketch.set_text_align('left')
+      sketch.draw_text(10, 150, 'Interactive Data Science and Visualization')
+
+      sketch.set_text_align('right')
+      sketch.draw_text(490, 350, 'Interactive Data Science and Visualization')
+
+      sketch.show()
+      </pre>
+
+
+      There is another option for horizontal alignment called "center" which
+      draws the text such that its geometric center is at the x position
+      specified. Try changing the text above to use center instead.
+  - name: vertical-align
+    short: Vertical Align
+    long: Controlling vertical text alignment
+    body: >
+      Vertical alignment has a few options: top, bottom, center, and baseline.
+      To see what the each does, let's play with some text which as descenders.
+
+
+      <pre>
+      import sketchingpy
+
+      sketch = sketchingpy.Sketch2D(500, 500)
+      sketch.clear("#FFFFFF")
+
+      sketch.set_stroke("#333333")
+      sketch.draw_line(10, 250, 490, 250)
+
+      sketch.set_text_font("PublicSans-Regular", 14)
+      sketch.set_fill("#333333")
+      sketch.clear_stroke()
+
+      sketch.set_text_align('left', 'top')
+      sketch.draw_text(10, 250, 'Going on a journey.')
+
+      sketch.show()
+      </pre>
+
+
+      Try changing top to bottom, center, and baseline to see how the alignment
+      changes. In particular, compare bottom to baseline: the descenders fall
+      below the y position in baseline but the text moves up such that the
+      descenders end at the y position in bottom.
   - name: next
     short: Next
     long: Continue to the next tutorial
     body: >
-      Continue on to
-      <a href="/labs/resources_images.html">Tutorial 9</a>
-      to learn about working with images.
+      There's a lot to say about type that we won't get to in this course.
+      However, if you want to learn more, I strongly recommend
+      <a href="https://papress.com/products/thinking-with-type-3-edition"
+      target="_blank">Thinking in Type</a>
+      as a short and approachable introduction. When you are ready, continue on
+      to <a href="/labs/resources_images.html">Tutorial 9</a> to learn about
+      images and buffers.
 citations:
-  - text: A. Pottinger, "Sketchingpy." Sketchingpy Project, 2024. [Online].
+  - text: >
+      A. Pottinger, "Sketchingpy." Sketchingpy Project, 2024. [Online].
     available: https://sketchingpy.org/
+  - text: E. Lupton, "Thinking in Type," PA Press, 2024.
+  - text: >
+      USWDS, "Public Sans," General Services Administration, 2026. [Online].
+    available: https://public-sans.digital.gov
