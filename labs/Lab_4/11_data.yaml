@@ -4,37 +4,958 @@ header: >
   In this tutorial, we bring it all together by learning how to load,
   process, and visualize real data in Python.
 sections:
-  - name: intro
-    short: Introduction
-    long: Introduction to working with data
+  - name: motivation
+    short: Motivation
+    long: Why create custom data visualizations
     body: >
-      Data is at the heart of visualization. Learn how to load and
-      process data for visualization.
-  - name: csv
-    short: CSV Files
-    long: Working with CSV data
+      If we think back to
+      <a
+        href="https://docs.google.com/presentation/d/1fAi9TubmOFKHOU-aYFXHspW0Ws_TUYDgECD_JEv1zcc/edit"
+        target="_blank">Lecture 5</a>, we used fuel economy standards as a
+      way to re-do an
+      <a
+        href="https://www.nytimes.com/1978/08/09/archives/economic-scene-a-collision-course-on-energy-policy.html">example
+      3D visualization</a> a few different ways. One option focused on
+      reducing chartjunk and increasing data/ink ratio. This involved making
+      a scatterplot with a twist: we used text instead of circles as a form
+      of direct labeling. In this tutorial, we are going to explore building
+      that graphic again in Sketchingpy. This will help demomnstrate not just
+      how to bring data into our work but also gives us an opportunity to
+      explore what is gained by taking control of the drawing as opposed to
+      using a pre-built chart.
+  - name: prepare
+    short: Prepare
+    long: Setting up resources for the tutorial
     body: >
-      CSV files are a common data format. Learn how to read CSV files
-      and use the data in your visualizations.
-  - name: processing
-    short: Data Processing
-    long: Processing and transforming data
+      We need a few resources to make this work:
+
+      <ul>
+        <li>
+          We will again use
+          <a href="/support/web/PublicSans-Regular.otf" target="_blank"
+            >PublicSans-Regular as an OTF file</a>.
+        </li>
+        <li>
+          We will add in
+          <a href="/labs/fuel_standards.csv" target="_blank"
+            >fuel economy standards targets as a CSV file</a>.
+        </li>
+      </ul>
+
+      A CSV or "comma separated values" file is simply a way to represent
+      tables of data. These text files are easy for machines to read using
+      many different software packages and programming languages. Add those
+      files to your sketchbook. Afterwards, try running
+      <a
+        href="https://gist.github.com/sampottinger/6d152acd307a5a5b7caa4f075b71f116"
+        target="_blank">my sketch</a>. We will look at pieces of that code
+      throughout the rest of the tutorial.
+
+      <details>
+        <summary>Alternatives to CSV</summary>
+        <p>
+          There's no shortage of file formats out there. We are going to stay
+          focused on CSV as it is likely the most common type you will run
+          into. However, we will explore data which doesn't fit into a table
+          easily later in this course. In particular, we will spend some time
+          with JSON with complex nested data as well as geospatial
+          information for making maps.
+        </p>
+      </details>
+  - name: load-data
+    short: Load Data
+    long: Loading CSV data with Sketchingpy
     body: >
-      Raw data often needs processing. Learn techniques for cleaning
-      and transforming data for visualization.
-  - name: visualization
-    short: Creating Visualizations
-    long: Putting it all together to create data visualizations
+      This tutorial will use Sketchingpy for file access. Let's take a look
+      at how my sketch does it.
+
+      <pre>
+      data_layer = sketch.get_data_layer()
+      data_raw = data_layer.get_csv('fuel_standards.csv')
+      changes = [parse_fuel_standard_change(x) for x in data_raw]
+      </pre>
+
+      We open a CSV file by providing its name before calling
+      parse_fuel_standard_change to make sure the data I'm expecting to see
+      are there with the right attributes and type (number, string, etc). We
+      will take a closer look at that in a moment but, in case this notation
+      is unfamiliar, I could have rewritten the last line which is a list
+      comprehension like so:
+
+      <pre>
+      changes = []
+
+      for datum in data_raw:
+          parsed_datum = parse_fuel_standard_change(datum)
+          changes.append(parsed_datum)</pre>
+
+      Both
+      <a
+        href="https://www.freecodecamp.org/news/list-comprehension-in-python/"
+        target="_blank">list comprehensions</a> as well as
+      <a
+        href="https://book.pythontips.com/en/latest/map_filter.html"
+        target="_blank">map, filter, and reduce</a> might be worth exploring.
+      They are commonly used tools for data manipulation operations in
+      visualizations. These patterns are also often available across many
+      different programming languages.
+
+      <details>
+        <summary>Alternatives to Sketchingpy for data access</summary>
+        <div>
+          <p>
+            If you have worked with Python prior to this course, you probably
+            have loaded data from files before. Perhaps you used
+            <a href="https://docs.python.org/3/library/csv.html"
+              target="_blank">csv from the standard library</a> or maybe you
+            used an external library like
+            <a href="https://pandas.pydata.org" target="_blank">Pandas</a>.
+            You are welcome to use those tools in this course but there is a
+            catch.
+          </p>
+          <p>
+            One challenge for interactive data visualization is that your work
+            might run across multiple platforms. While this might be different
+            operating systems like Linux, it also includes running as a
+            component inside the sketchbook versus embedded within a web page
+            or outside the browser altogether as a stand alone app. Accessing
+            files can be a little different in each case. For example, when
+            running embedded within a webpage outside the sketchbook, you
+            might have to make requests through the network to access
+            resources instead of just calling
+            <a href="https://python.swaroopch.com/io.html"
+              target="_blank">with open</a> or
+            <a
+              href="https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html"
+              target="_blank">pandas.read_csv</a>.
+          </p>
+
+          <p>
+            Sketchingpy takes care of all of this complexity by determining
+            where the sketch is running and accessing files accordingly. This
+            means that the same code which runs as a stand alone "desktop
+            application" can also run from inside a browser without
+            modification. You certainly don't need to use Sketchingpy to open
+            files but it is still recommended.
+          </p>
+
+          <p>
+            Within the context of this class, this Sketchingpy approach means
+            that your final project can be run from a web browser more easily.
+            This can help you send your work to your friends or include it on
+            your own personal website for prospective employers! If you use
+            something else, you may have to add a little extra code to handle
+            network stuff when your code either leaves the sketchbook (which
+            emulates a local file system for you) or when your sketch departs
+            a desktop application for the web. However, we can worry about all
+            of those details when we get to the final.
+          </p>
+        </div>
+      </details>
+  - name: holding-data
+    short: Holding Data
+    long: Data structures for storing and processing data
     body: >
-      Combine everything you've learned to create complete data
-      visualizations from real datasets.
+      Let's next look at how I parse each data point:
+
+      <pre>
+      def parse_fuel_standard_change(raw_datum):
+          """Parse a raw CSV row as a FuelStandardChange.
+
+          Args:
+              raw_datum: Raw CSV row to parse.
+
+          Returns:
+              The row represented as a FuelStandardChange.
+          """
+          year = int(raw_datum['year'])
+          standard = float(raw_datum['fuelStandardMpg'])
+          return FuelStandardChange(year, standard)</pre>
+
+      Each row of the table inside the CSV file is represented as a
+      dictionary mapping from string keys to string values. We do a "cast"
+      here ("int" and "float") which converts from a string to a number
+      because we want our years like 1985 to be integers and our fuel
+      standards like 27.5 mpg to be floating point values with decimal
+      components. Finally, let's look at that class I'm using to hold each
+      data point:
+
+      <pre>
+      class FuelStandardChange:
+          """Object representing a change in fuel standards.
+
+          Record of a change in fuel standards with a year in which that
+          standard came into force and the standard level.
+          """
+
+          def __init__(self, year, standard):
+              """Make a new record of a standard change.
+
+              Args:
+                  year: The year like 1985 in which the standard came into
+                    force.
+                  standard: The standard starting in the year as miles per
+                    gallon.
+              """
+              self._year = year
+              self._standard = standard
+
+          def get_year(self):
+              """Get the year in which the standard came into force.
+
+              Returns:
+                  The year like 1985 in which the standard came into force.
+              """
+              return self._year
+
+          def get_standard(self):
+              """Get the new fuel economy standard.
+
+              Returns:
+                  The standard starting in this year as miles per gallon.
+              """
+              return self._standard</pre>
+
+      I should mention that some developers wouldn't add this class in and
+      instead draw from the dictionaries directly. While the choice in your
+      own code is up to you, I personally like having custom classes because:
+
+      <ul>
+        <li>
+          I can add docstrings describing what each attribute of the data is.
+        </li>
+        <li>
+          This can check that all of the expected attributes are found on the
+          file.
+        </li>
+        <li>
+          I can signal how the data should be used. For example, as I only
+          have get methods (and not set methods), I can help ensure that
+          those data are accidentially changed somewhere in my code.
+        </li>
+        <li>
+          I can preform calculations on data (like unit conversions) if
+          needed.
+        </li>
+      </ul>
+
+      See "more on software architectrue" but these different approaches
+      (read right from the dict, use custom object, etc) are all commonly
+      used in Python.
+
+      <details>
+        <summary>More on software architecture</summary>
+        <div>
+          <p>
+            If you have taken software architecture coursework, you may
+            recognize FuelStandardChange as a "data model object" or the
+            Model (M) in
+            <a
+              href="https://dev.to/binoy123/architectural-pattern-model-view-presenter-mvp-28hl"
+              target="_blank">the Model-View-Presenter (MVP) pattern</a>. In
+            this context, the name I use for the FuelStandardVizPresenter
+            class might make more sense. The "view" would actually be the
+            Sketchingpy Sketch2D itself.
+          </p>
+          <p>
+            Separately, you may have seen
+            <a
+              href="https://docs.python.org/3/library/collections.html#collections.namedtuple">namedtuple</a>
+            or
+            <a
+              href="https://docs.python.org/3/library/dataclasses.html">data
+            classes</a> in other resources. These can also be great options
+            though I still prefer having custom objects for three reasons:
+          </p>
+
+          <ul>
+            <li>
+              Through the methods on my class, I can tell those using my
+              objects (like other developers on my project) that they can get
+              values but can't set or change them.
+            </li>
+            <li>
+              I can provide docstrings for each variable through the method
+              used to get it. Though there are options to attach annotation to
+              instance variables, they aren't as common and there's some
+              systems that won't support them.
+            </li>
+            <li>
+              I can build in calculations that need to be done on values when
+              someone calls a getter. For example, we could have a get_as_mpg
+              for miles per gallon and get_as_kml for kilometers per litre
+              with one performing the units conversion before returning a
+              value. We will see an example of this later in the course.
+            </li>
+          </ul>
+
+          <p>
+            These three objectives are sometimes more difficult using these
+            other tools. All that said, these are just ideas for you to
+            consider. For our homework, any of these approache are welcome!
+          </p>
+        </div>
+      </details>
+  - name: position
+    short: Position
+    long: Positioning data on the canvas with linear scales
+    body: >
+      Now that we have our data, we need to position it graphically on the
+      page. We have two scales:
+
+      <ul>
+        <li>The horizontal scale represents different years.</li>
+        <li>The vertical scale represents miles per gallon.</li>
+      </ul>
+
+      This brings us to a little snippet of code which does the most common
+      type of placement: a linear scale. Let's start with the horizontal
+      scale:
+
+      <pre>
+      def _get_x(self, year):
+          """Get horizontal position at which a year's results should be
+          drawn.
+
+          Get horizontal position at which a year's results should be drawn
+          where the minimum year is at the left side (LEFT_PAD) and the
+          maximum year is at the right side (WIDTH - RIGHT) which
+          corresponds to the minimum and maximum x coordinate of the chart
+          body respectively.
+
+          Args:
+              year: The integer year for which an x position is requested.
+
+          Returns:
+              The x position in pixels at which the year should be drawn.
+          """
+          year_range = END_YEAR - START_YEAR
+          percent_offset = (year - START_YEAR) / year_range
+          working_width = WIDTH - LEFT_PAD - RIGHT_PAD
+          pixel_offset = percent_offset * working_width
+          return LEFT_PAD + pixel_offset</pre>
+
+      The logic for both the x and y positioning is similar.
+
+      <ul>
+        <li>
+          First, we figure out how far into the scale a value is in terms of
+          a percentage. In other words, how far between the minimum value for
+          a scale and a maximum value for a scale is the value we are trying
+          to place?
+        </li>
+        <li>
+          Then, we convert that percentage back to pixels. In other words, if
+          a value we are placing is 75% the way from the minimum value to the
+          maximum value, we place at 75% between the minimum pixel coordinate
+          and the maximum pixel coordinate.
+        </li>
+        <li>
+          Finally, we offset depending on where the scale starts (see
+          LEFT_PAD).
+        </li>
+      </ul>
+
+      However, there is one last detail we have to manage. Let's quickly look
+      at the vertical scale.
+
+      <pre>
+      def _get_y(self, standard):
+          """Get vertical position at which a year's results should be drawn.
+
+          Get vertical position at which standard's results should be drawn
+          where the minimum standard is at the bottom side (HEIGHT -
+          BOTTOM_PAD) and the maximum standard is at the top side (TOP_PAD)
+          which corresponds to the maximum and minimum y coordinate of the
+          chart body respectively. Note that, to have larger values at higher
+          positions, the smallest standards in mpg are at the largest y
+          coordinates.
+
+          Args:
+              year: The float standard (mpg) for which a y position is
+                requested.
+
+          Returns:
+              The y position in pixels at which the standard should be drawn.
+          """
+          standard_range = MAX_STANDARD - MIN_STANDARD
+          percent_offset = (standard - MIN_STANDARD) / standard_range
+          percent_offset_reverse = 1 - percent_offset
+          working_height = HEIGHT - TOP_PAD - BOTTOM_PAD
+          pixel_offset = percent_offset_reverse * working_height
+          return TOP_PAD + pixel_offset</pre>
+
+      The complication here is that coordinates go up as you from top to
+      bottom of the sketch's canvas. So, we reverse the percentage for the
+      miles per gallon: instead of going from 0% to 100%, it goes from 100%
+      to 0%. In other words, if a value we are placing is 75% from the
+      minimum value to the maximum value, we place at 25% (100% - 75%)
+      between the minimum pixel coordinate and the maximum pixel coordinate.
+  - name: axes-title
+    short: Axes and Title
+    long: Drawing axes and title for context
+    body: >
+      Since we are direct labeling, we don't have too much "chrome" to draw
+      for our visualization. This helps us improve our data-ink ratio!
+      However, it is important that we tell the user where our y scale starts
+      and ends so that they know we aren't doing anything funny.
+
+      <pre>
+      def _draw_axis(self, sketch):
+          """Draw the left side axis which clarifies start / end standards.
+
+          Args:
+              sketch: The sketch in which to draw the axis.
+          """
+          sketch.push_style()
+
+          sketch.set_text_font(FONT, SMALL_SIZE)
+
+          min_y = self._get_y(MIN_STANDARD)
+
+          sketch.clear_stroke()
+          sketch.set_fill(LIGHT_COLOR)
+          sketch.set_text_align('left', 'top')
+          min_str = MIN_ANNOTATION % MIN_STANDARD
+          sketch.draw_text(LEFT_PAD, min_y, min_str)
+
+          sketch.set_stroke(LIGHT_COLOR)
+          sketch.clear_fill()
+          sketch.draw_line(LEFT_PAD, min_y, LEFT_PAD + 20, min_y)
+
+          max_y = self._get_y(MAX_STANDARD)
+
+          sketch.clear_stroke()
+          sketch.set_fill(LIGHT_COLOR)
+          sketch.set_text_align('left', 'bottom')
+          goal_str = GOAL_ANNOTATION % MAX_STANDARD
+          sketch.draw_text(LEFT_PAD, max_y - 1, goal_str)
+
+          sketch.set_stroke(LIGHT_COLOR)
+          sketch.clear_fill()
+          sketch.draw_line(LEFT_PAD, max_y, LEFT_PAD + 20, max_y)
+
+          sketch.pop_style()</pre>
+
+      We are doing a push / pop at the start and end of the method to make
+      sure that our changes to style only apply within this method.
+      Furthermore, note that we are also taking advantage of this opportunity
+      to additionally contextualize the data by describing why we end at 27.5
+      mpg. Specifically, we identify it as the legislative target for the
+      ECA. Finally, we can put a chart title up at the top.
+
+      <pre>
+      def _draw_title(self, sketch):
+          """Draw the visualization title.
+
+          Args:
+              sketch: The sketch in which the title should be drawn.
+          """
+          sketch.push_style()
+
+          sketch.clear_stroke()
+          sketch.set_fill(DARK_COLOR)
+          sketch.set_text_align('left', 'bottom')
+          sketch.set_text_font(FONT, HUGE_SIZE)
+          sketch.draw_text(LEFT_PAD, TOP_PAD - 18, TITLE)
+
+          sketch.pop_style()</pre>
+
+      The use of the title contextualizes the chart. It is pretty neutral
+      right now but, depending on the purpose of the graphic, we could use
+      this offer additional insight like "Pathway to 27.5 mpg" or something
+      similar.
+
+      <details>
+        <summary>Other technologies beyond Sketchingpy</summary>
+        <p>
+          The patterns you see here with Sketchingpy are common to other
+          similar technologies like
+          <a href="https://processing.org" target="_blank">Processing</a>,
+          <a href="https://p5js.org" target="_blank">P5</a>, or
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API"
+            target="_blank">HTML5 Canvas</a>. These other technologies also
+          have set_fill, set_stroke, draw_line, draw_text or equivalents.
+          Therefore, the push at the start of function and pop at the end is
+          something you'll find in other code outside Python too. I also want
+          to mention that this example is not using translate and rotate but
+          those are common as well in other libraries.
+        </p>
+      </details>
+  - name: data-glyphs
+    short: Data Glyphs
+    long: Drawing individual data points
+    body: >
+      We are finally ready to draw the actual data points themselves.
+
+      <pre>
+      def _draw_change(self, sketch, change, align, highlight, annotation):
+          """Draw an individual change in fuel economy standards.
+
+          Args:
+              sketch: The sketch in which the change should be drawn.
+              change: The FuelStandardChange to draw.
+              align: String describing the horizontal alignment to use when
+                  drawing this change.
+              highlight: Flag that indicates if this year should be drawn in
+                  high contrast "highlight" styling. True if highlight should
+                  be used and false otherwise.
+              annotation: The annotation to display next to this year's
+                  results or None if no annotation should be added.
+          """
+          sketch.push_style()
+
+          sketch.clear_stroke()
+          if highlight:
+              sketch.set_fill(DARK_COLOR)
+          else:
+              sketch.set_fill(LIGHT_COLOR)
+
+          year = change.get_year()
+          standard = change.get_standard()
+          x = self._get_x(year)
+          y = self._get_y(standard)
+
+          sketch.set_text_font(FONT, SMALL_SIZE)
+          sketch.set_text_align(align, 'bottom')
+          sketch.draw_text(x, y - LARGE_SIZE / 2 - 2, year)
+
+          sketch.set_text_font(FONT, LARGE_SIZE)
+          sketch.set_text_align(align, 'center')
+          sketch.draw_text(x, y, '%.1f' % standard)
+
+          if annotation:
+              sketch.set_text_font(FONT, SMALL_SIZE)
+              sketch.set_text_align(align, 'top')
+              sketch.draw_text(x, y + SMALL_SIZE / 2 + 2, annotation)
+
+          sketch.pop_style()</pre>
+
+      There are a lot of different options available for drawing these
+      different data points: align, highlight, and annotation. However, this
+      is also where we see the power of building these graphs from the ground
+      up through something like Sketchingpy. We can configure each piece of
+      the graphic very precisely.
+
+      <details>
+        <summary>Using transformation instead</summary>
+        <div>
+          <p>
+            Note that is common for some designers to use translate so, for
+            example, instead of this:
+          </p>
+          <pre>
+      sketch.draw_ellipse(
+          get_x(year) - 5,
+          get_y(val) - 5,
+          5,
+          5
+      )
+
+      sketch.draw_ellipse(
+          get_x(year) + 5,
+          get_y(val) + 5,
+          5,
+          5
+      )
+      </pre>
+          <p>You might instead see this:</p>
+          <pre>
+      sketch.push_transform()
+      sketch.translate(get_x(year), get_y(val))
+
+      sketch.draw_ellipse(-5, -5, 5, 5)
+      sketch.draw_ellipse(5, 5, 5,5)
+
+      sketch.pop_transform()</pre>
+
+          This can really simplify code where you have to do a lot of drawing
+          relative to a particular coordinate.
+        </div>
+      </details>
+
+      Finally, note that we are using formatting strings like "%.1f" which
+      means convert a float to a string such that one decimal value is
+      retained. So, 1.23 would become 1.2. These are used in various strings
+      that are selected depending on the attributes of the data point being
+      drawn. We will look at that formatting logic in the
+      <a href="#conditional-formatting">next section</a>.
+
+      <details>
+        <summary>Putting numbers into text</summary>
+        <p>
+          One thing I want to point out here is the use of formatting strings
+          like %.2f. I am using the "old style" becuase, for those with prior
+          programming background, it's more likely you will have seen
+          something like %.2f as it exists in many different programming
+          languages. That will do great for this course! However, I encourage
+          you to look at
+          <a href="https://pyformat.info">additional information about string
+          formatting in Python</a>. There are other alternatives available!
+        </p>
+      </details>
+  - name: conditional-formatting
+    short: Conditional Formatting
+    long: Applying different styles based on data attributes
+    body: >
+      Our _draw_change method takes quite a few parrameters for highlighting
+      and annotation that change based on the attributes of the data being
+      drawn. This is sometimes called conditional formatting. Let's take a
+      closer look at how those are determined.
+
+      <pre>
+      def draw(self, sketch):
+          """Draw the visualization.
+          Args:
+              sketch: The sketch in which to draw the visualization.
+          """
+          self._draw_title(sketch)
+          self._draw_axis(sketch)
+
+          for change in self._changes:
+              year = change.get_year()
+
+              align = self._determine_align(year)
+              highlight = self._determine_highlight(year)
+              annotation = self._determine_annotation(year)
+
+              self._draw_change(sketch, change, align, highlight,
+                annotation)</pre>
+
+      For our purposes, all of this conditional formatting and labeling is
+      all based on the year where, specifically, we want to show additional
+      information on the start and end year specifically. Admitedly, it might
+      be a little excessive to have this logic outside of _draw_change
+      itself. However, I find that pulling this logic out can improve
+      readability even if the resulting methods are small. Furthermore, if
+      the logic for annotation gets more complicated later, it may be helpful
+      to have it in its own space as to avoid cluttering the main draw
+      methods too much.
+
+      <details>
+        <summary>Using dictionaries for conditional formatting</summary>
+        <div>
+          <p>
+            Let's take a closer look at one of these determine methods:
+          </p>
+
+          <pre>
+      def _determine_annotation(self, year):
+          """Determine what annotation if any should be added for the given
+          year.
+
+          Args:
+              year: The year for which an annotation should be returned.
+
+          Returns:
+              Annotation text to display next to results for the given year
+              or None if no annotation should be added.
+          """
+          if year == START_YEAR:
+              return START_YEAR_ANNOTATION
+          elif year == END_YEAR:
+              return END_YEAR_ANNOTATION
+          else:
+              return None</pre>
+
+          <p>
+            One pattern you may encounter is changing this to a dictionary
+            which can help condense the code:
+          </p>
+
+          <pre>
+      def _determine_annotation(self, year):
+          """Determine what annotation if any should be added for the given
+          year.
+
+          Args:
+              year: The year for which an annotation should be returned.
+
+          Returns:
+              Annotation text to display next to results for the given year
+              or None if no annotation should be added.
+          """
+          options = {
+              START_YEAR: START_YEAR_ANNOTATION,
+              END_YEAR: END_YEAR_ANNOTATION
+          }
+
+          return options.get(year, None)</pre>
+
+          <p>
+            Here, the second parameter to get is the default value to use if
+            the key is not found.
+          </p>
+        </div>
+      </details>
+  - name: constants
+    short: Constants
+    long: Using constants to configure visualizations
+    body: >
+      We use constants throughout the code. While these variables in all caps
+      are the same as any other variable as far as Python is concerned,
+      developers understand by convention that all caps means that the value
+      of these variables is not expected to change throughout the execution
+      of a program. I like getting a big list of constants so that I can
+      quickly tweak values and see how different options feel. That said,
+      sometimes it can be a good idea to read these from the data themselves.
+      For example:
+
+      <pre>
+      years = [change.get_year() for change in fuel_standard_changes]
+      start_year = min(years)
+      end_year = max(years)</pre>
+
+      If you go this route, you might consider doing something similar for
+      min_standard and max_standard.
+
+      <details>
+        <summary>Personal advice for constants</summary>
+        <p>
+          I tend to go through a few visualizations before I find one that
+          fits well. That in mind, I will often leave a lot in constants at
+          first as I explore lots of different forms and then I make it
+          responsive to the data after I know there's a need. After all,
+          sometimes the graphic won't be redrawn with new data! However, this
+          isn't universally accepted advice.
+        </p>
+      </details>
+  - name: reflection
+    short: Reflection
+    long: When to use custom visualizations vs pre-built charts
+    body: >
+      Go ahead and run the sketch if you haven't already. There is a question
+      worth asking as we finish up: when is taking this more manual approach
+      to drawing visualizations the right choice? The answer depends a bit on
+      the context:
+
+      <ul>
+        <li>
+          How you would produce the chart in something like your spreadsheet
+          software?
+        </li>
+        <li>
+          Would using a pre-built chart be be faster or, alternatively, at
+          what point of overriding defaults is it easier to build it from the
+          ground up?
+        </li>
+        <li>
+          Does the pre-built chart force you to make a certain design choice
+          that you don't think is right?
+        </li>
+      </ul>
+
+      All of this depends on the visualization and the purpose of your work.
+      Even so, here's a few points to consider:
+
+      <ul>
+        <li>
+          <strong>Common charts:</strong> Some charts you will make are very
+          common. While the default settings might not always be the best,
+          often going beyond the pre-built graphic isn't worth the extra time
+          when you just need something like a simple scatterplot. Instead,
+          you can use your knowledge from this course to decide on the right
+          representations and to make key tweaks to the pre-built graphics.
+        </li>
+        <li>
+          <strong>Uncommon charts:</strong> Still, some charts you build
+          won't have been made before so there won't be a pre-built option!
+          Alternatively, some graphics like a
+          <a
+            href="https://www.storytellingwithdata.com/blog/2020/7/27/what-is-a-slopegraph"
+            target="_blank">slopegraph</a> might not be well supported in the
+          graphing software you are using so might require custom drawing
+          regardless.
+        </li>
+        <li>
+          <strong>High value visualizations:</strong> Even if there is a
+          pre-built chart, this manual approach might give you the control
+          you need to both consider and tailor each part of the graphic to
+          just the perfect configuration. This could be necessary for some
+          graphics that really matter. In particular, I find myself having to
+          override too many things for these "high value charts" to reduce
+          chartjunk or improve data-ink ratio when using pre-built graphics
+          such that I have to go to Sketchingpy to get it how I want it.
+        </li>
+        <li>
+          <strong>Customization labor:</strong> Some of the tricks we explore
+          around direct labeling or performing certain annotations might be
+          difficult to configure in some packages. We will see some more
+          tricks soon that, while possible, can sometimes require more work
+          to achieve in pre-built graphics than it is to do it on our own.
+          This can change how much data density you can achieve or if the
+          chart is easy to read.
+        </li>
+        <li>
+          <strong>Interactivity:</strong> When we get into interactive
+          visualizations in particular, you might find that creating specific
+          user actions might be difficult in pre-built charts. What should
+          happen when a user hovers on a data point in scatterplot depends a
+          lot on the context of the chart and what other charts are nearby.
+          The original developer of the pre-built graphic might have had a
+          different use case in mind when they developed the default
+          interactivity.
+        </li>
+      </ul>
+
+      Before moving on, think back to some of the best visualizations we
+      examined from earlier in the course from the likes of
+      <a href="https://periscopic.com/" target="_blank">Periscopic</a>,
+      <a href="https://fathom.info" target="_blank">Fathom</a>,
+      <a href="https://stamen.com" target="_blank">Stamen</a>,
+      <a href="http://feltron.com" target="_blank">Feltron</a>, or
+      <a href="https://jjh.org" target="_blank">Johnathan Harris</a>. Many
+      of those pieces involve some custom drawing beyond a pre-built chart
+      that would require something like Sketchingpy. There's a reason that
+      they choose this route. However, it's also true that not all data
+      visualizaions require that degree of control. Even so, I'd encourage
+      you to take advantage of the class to explore custom drawing to get
+      that opportunity to explore each pixel of your graphic in detail.
+
+      <details>
+        <summary>Other graphics and creative programming</summary>
+        <p>
+          We've are focused on data visualizations in this course. However, a
+          lot of what you learn could translate to other forms of creative
+          coding from video games to visual art. In particular, some of the
+          patterns we are using in our code are common to other forms of
+          graphical programming including different libraries and programming
+          languages. The ideas and structures of Sketchingpy are commonly
+          seen elsewhere. Furthermore, some of our techniques can cross over
+          into other design disciplines. These skills may be relevant in your
+          other endavors!
+        </p>
+      </details>
   - name: next
     short: Next
     long: Continue to the next tutorial
     body: >
-      This completes Lab 4! You may continue to
-      <a href="/labs/js.html">Tutorial 12</a>
-      to explore JavaScript, or return to the lectures.
+      This concludes Skills Lab 4. We will return to regular in-person
+      instruction for Lecture 11. See you then for a favorite: Clevland and
+      McGill!
+
+      <details>
+        <summary>Citations</summary>
+        <ul>
+          <li>
+            A. Pottinger, "Sketchingpy." Sketchingpy Project, 2024. [Online].
+            Available:
+            <a href="https://sketchingpy.org/" target="_blank"
+              >https://sketchingpy.org/</a>
+          </li>
+          <li>
+            New York Times, "Economic Scene," New York Times Corporation, Aug
+            8, 1978. [Online]. Available:
+            <a
+              href="https://www.nytimes.com/1978/08/09/archives/economic-scene-a-collision-course-on-energy-policy.html"
+              target="_blank"
+              >https://www.nytimes.com/1978/08/09/archives/economic-scene-a-collision-course-on-energy-policy.html</a>
+          </li>
+          <li>
+            USWDS, "Public Sans," General Services Administration, 2026.
+            [Online]. Available:
+            <a href="https://public-sans.digital.gov" target="_blank"
+              >https://public-sans.digital.gov</a>
+          </li>
+          <li>
+            E. Tufte, "The Visual Display of Quantitative Information,"
+            Graphical Press, 2001.
+          </li>
+          <li>
+            Buggy Programmer, "List Comprehension in Python Explained for
+            Beginners," Free Code Camp, 2021. [Online]. Available:
+            <a
+              href="https://www.freecodecamp.org/news/list-comprehension-in-python/"
+              target="_blank"
+              >https://www.freecodecamp.org/news/list-comprehension-in-python/</a>
+          </li>
+          <li>
+            M. Khalid, "Map, Filter and Reduce," Python Tips, 2017. [Online].
+            Available:
+            <a
+              href="https://book.pythontips.com/en/latest/map_filter.html"
+              target="_blank"
+              >https://book.pythontips.com/en/latest/map_filter.html</a>
+          </li>
+          <li>
+            Python Software Foundation and Python Contributors, "Python,"
+            Python Software Foundation, 2026. [Online]. Available:
+            <a href="https://python.org" target="_blank">https://python.org</a>
+          </li>
+          <li>
+            Pandas Contributors, "Pandas," Pydata, 2026. [Online]. Available:
+            <a href="https://pandas.pydata.org" target="_blank"
+              >https://pandas.pydata.org</a>
+          </li>
+          <li>
+            Processing Contributors, "Processing," Processing Foundation,
+            2026. [Online]. Available:
+            <a href="https://processing.org" target="_blank"
+              >https://processing.org</a>
+          </li>
+          <li>
+            P5js Contributors, "P5js," Processing Foundation, 2026. [Online].
+            Available:
+            <a href="https://p5js.org" target="_blank">https://p5js.org</a>
+          </li>
+          <li>
+            MDN Contributors, "Canvas API," Mozilla, 2024. [Online]. Available:
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API"
+              target="_blank"
+              >https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API</a>
+          </li>
+          <li>
+            U. Petri and H. Gutmann, "PyFormat," PyFormat, 2016. [Online].
+            Available:
+            <a href="https://pyformat.info" target="_blank"
+              >https://pyformat.info</a>
+          </li>
+          <li>
+            B. Vijayan, "Architectural Pattern - Model–view–presenter (MVP),"
+            DEV Community, 2024. [Online]. Available:
+            <a
+              href="https://dev.to/binoy123/architectural-pattern-model-view-presenter-mvp-28hl"
+              target="_blank"
+              >https://dev.to/binoy123/architectural-pattern-model-view-presenter-mvp-28hl</a>
+          </li>
+          <li>
+            M. Cisneros, "What is a slopegraph?" Storytelling with Data, 2025.
+            [Online]. Available:
+            <a
+              href="https://www.storytellingwithdata.com/blog/2020/7/27/what-is-a-slopegraph"
+              target="_blank"
+              >https://www.storytellingwithdata.com/blog/2020/7/27/what-is-a-slopegraph</a>
+          </li>
+          <li>
+            Periscopic, "Periscopic: Do good with data," Periscopic, 2025.
+            [Online]. Available:
+            <a href="https://periscopic.com/" target="_blank"
+              >https://periscopic.com/</a>
+          </li>
+          <li>
+            Fathom Information Design, "Fathom Information Design," Fathom
+            Information Design. [Online]. Available:
+            <a href="https://fathom.info" target="_blank"
+              >https://fathom.info</a>
+          </li>
+          <li>
+            Stamen, "Stamen," Stamen. [Online]. Available:
+            <a href="https://stamen.com">https://stamen.com</a>
+          </li>
+          <li>
+            N. Felton, "Feltron," The Office of Feltron. [Online]. Available:
+            <a href="http://feltron.com" target="_blank"
+              >http://feltron.com</a>
+          </li>
+          <li>
+            J. Harris, "Jonathan Jennings Harris," Johnathan Jennings Harris.
+            [Online]. Available:
+            <a href="https://jjh.org">https://jjh.org</a>
+          </li>
+        </ul>
+      </details>
 citations:
   - text: A. Pottinger, "Sketchingpy." Sketchingpy Project, 2024. [Online].
     available: https://sketchingpy.org/
