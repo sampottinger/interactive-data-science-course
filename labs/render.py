@@ -10,6 +10,7 @@ import os
 import sys
 
 import jinja2
+import markdown
 import yaml
 
 BASE_USAGE_STR = 'USAGE: python render.py'
@@ -211,12 +212,17 @@ def main_tutorial():
   processed_citations = map(process_citation, citations_raw)
   citations_realized = list(processed_citations)
 
+  # Process section content
+  sections_raw = tutorial.get('sections', [])
+  processed_sections = map(process_section_content, sections_raw)
+  sections_realized = list(processed_sections)
+
   template_vals = {
       'number': tutorial_number,
       'name': tutorial['name'],
       'file': tutorial['file'],
       'header': tutorial.get('header', ''),
-      'sections': tutorial.get('sections', []),
+      'sections': sections_realized,
       'citations': citations_realized
   }
 
@@ -256,6 +262,67 @@ def process_citation(citation):
     result += f' Available: <a href="{available}" target="_blank">{available}</a>'
 
   return result
+
+
+def process_section_content(section):
+  """Process section content from body, html, or markdown attributes.
+
+  Checks for mutually exclusive content attributes (body, html, markdown).
+  Converts markdown to HTML if needed. Applies blockstyle transformation
+  if specified.
+
+  Args:
+    section: A dict with section data. May contain 'body', 'html', or 'markdown'
+      keys for content, and optional 'blockstyle' key.
+
+  Returns:
+    dict: The section dict with processed content in 'body' field.
+
+  Raises:
+    ValueError: If more than one content attribute is present, or if
+      blockstyle value is invalid.
+  """
+  # Check for mutually exclusive content attributes
+  content_attrs = []
+  if 'body' in section:
+    content_attrs.append('body')
+  if 'html' in section:
+    content_attrs.append('html')
+  if 'markdown' in section:
+    content_attrs.append('markdown')
+
+  if len(content_attrs) > 1:
+    raise ValueError(
+        f'Section "{section.get("short", "unknown")}" has multiple content '
+        f'attributes: {", ".join(content_attrs)}. Only one of body, html, or '
+        f'markdown is allowed.'
+    )
+
+  # Get the content
+  content = None
+  if 'body' in section:
+    content = section['body']
+  elif 'html' in section:
+    content = section['html']
+  elif 'markdown' in section:
+    content = markdown.markdown(section['markdown'])
+
+  # Validate and apply blockstyle
+  blockstyle = section.get('blockstyle', 'pre')
+  if blockstyle not in ['pre', 'blockquote']:
+    raise ValueError(
+        f'Section "{section.get("short", "unknown")}" has invalid blockstyle '
+        f'"{blockstyle}". Only "pre" and "blockquote" are allowed.'
+    )
+
+  if blockstyle == 'blockquote' and content:
+    content = content.replace('<pre>', '<blockquote>')
+    content = content.replace('</pre>', '</blockquote>')
+
+  # Store processed content in body field for template compatibility
+  section['body'] = content
+
+  return section
 
 
 def main_list():
