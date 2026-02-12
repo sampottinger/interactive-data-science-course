@@ -183,10 +183,7 @@ sections:
         assistant to pull in that information:
       </p>
 
-      <blockquote class="prompt">Hello! We will complete a series of
-      tasks together using Sketchingpy. Please read
-      https://sketchingpy.org/llms-full.txt?v=20250915 before we start so
-      that you know how to use the library.</blockquote>
+      <blockquote class="prompt">Hello! We will complete a series of tasks together using Sketchingpy. Please read https://sketchingpy.org/llms-full.txt?v=20250915 before we start so that you know how to use the library.</blockquote>
 
       <p>
         Note that some assistants might have limited internet access. If
@@ -210,19 +207,7 @@ sections:
         the comment about using venv):
       </p>
 
-      <blockquote class="prompt">This implementer agent should be given
-      the path to a markdown file describing a task to complete. It
-      should read that file and complete the task using Sketchingpy. In
-      order to prepare to do its work, it should also then read
-      https://sketchingpy.org/llms-full.txt?v=20250915. After it has
-      gathered all of the necessary information, it should make a
-      detailed todo list to complete the task assigned. Finally, when
-      done, it should update the task markdown file with a description of
-      what it did and if it encountered any issues. It should run the
-      script before concluding work but it does not need to worry about
-      any style issues which will be addressed by a later agent. Please
-      call this agent `implementer`. Please ask it to use the venv.
-      </blockquote>
+      <blockquote class="prompt">This implementer agent should be given the path to a markdown file describing a task to complete. It should read that file and complete the task using Sketchingpy. In order to prepare to do its work, it should also then read https://sketchingpy.org/llms-full.txt?v=20250915. After it has gathered all of the necessary information, it should make a detailed todo list to complete the task assigned. Finally, when done, it should update the task markdown file with a description of what it did and if it encountered any issues. It should run the script before concluding work but it does not need to worry about any style issues which will be addressed by a later agent. Please call this agent `implementer`. Please ask it to use the venv.</blockquote>
 
       <p>
         You can use the recommended agent settings including to put this
@@ -231,21 +216,7 @@ sections:
         add a second agent:
       </p>
 
-      <blockquote class="prompt">This checker agent should be given the
-      path to a markdown file describing a task that was just worked on
-      by another agent. It should read that file and investigate the
-      specific changes made to complete that task which should have been
-      done using Sketchingpy. In order to prepare to do its work, it
-      should also then read
-      https://sketchingpy.org/llms-full.txt?v=20250915. After it has
-      gathered all of the necessary information, it should double check
-      and, where appropriate, improve that work. In addition to running
-      the script to ensure it executes successfully, it should also run
-      pyflakes followed by pycodestyle to resolve any problems
-      identified. Please have it update the task file with any issues
-      encountered and report overall status to the agent which called it.
-      Please call this agent `checker`. Please ask it to use the venv.
-      </blockquote>
+      <blockquote class="prompt">This checker agent should be given the path to a markdown file describing a task that was just worked on by another agent. It should read that file and investigate the specific changes made to complete that task which should have been done using Sketchingpy. In order to prepare to do its work, it should also then read https://sketchingpy.org/llms-full.txt?v=20250915. After it has gathered all of the necessary information, it should double check and, where appropriate, improve that work. In addition to running the script to ensure it executes successfully, it should also run pyflakes followed by pycodestyle to resolve any problems identified. Please have it update the task file with any issues encountered and report overall status to the agent which called it. Please call this agent `checker`. Please ask it to use the venv.</blockquote>
 
       <p>
         Having added these two agents, we now have kinda a "special
@@ -286,62 +257,7 @@ sections:
         inside:
       </p>
 
-      <blockquote class="prompt"># Table presenter
-      Please create a class TablePresenter which takes in a sketch and
-      which has stubbed methods and make docstrings for the given
-      description (please use Google-style docstrings). Please have these
-      simply throw NotImplementedError as we will fill them in as we go
-      along. Please wrap at 80 characters.
-
-      `__init__(self, sketch: sketchingpy.Sketch2D, data: list[dict])`
-
-      Create a presenter to draw a visualization of the given data into
-      the given sketch where records in the data look like {"year": 1980,
-      "wolves": 50, "moose": 664}.
-
-      `draw(self)`
-
-      Draw the table with inline numbers with bars below that text. This
-      will make a "tornado" chart which has one series (wolves) going
-      left and the other (moose) going right.
-
-      `_draw_top(self)`
-
-      Draw the top row in black text for Year, Wolves, and Moose.
-
-      `_draw_bottom(self)`
-
-      Draw the bottom scale showing 0 to 500 for wolves and 0 to 1800 for
-      moose.
-
-      `_draw_body(self)`
-
-      Draw year, wolves, and moose:
-
-       - Year is on the left-most column centered.
-       - Wolves is on the next column right aligned with bars going left.
-       - Moose is on the far right column with left aligned but bars
-         going right.
-
-      `_get_y_pos(self, year: int) -> float`
-
-      Get the y position corresponding to a year which is to be used in
-      all series.
-
-      `_get_length(self, series: str, count: int) -> float`
-
-      Get the length of the bar to show for a series (wolves, moose) in
-      pixels. Error thrown if the series is unknown or unsupported.
-
-      `_get_color(self, series: str) -> str`
-
-      Get the hex code to use for a given series (wolves, moose, year).
-      Error thrown if the series is unknown or unsupported.
-
-      `_get_max(self, series: str) -> float`
-
-      Get the maximum count for a series (wolves, moose, year). Error
-      thrown if the series is unknown or unsupported.</blockquote>
+      <blockquote class="prompt"># Table presenter Please create a class TablePresenter which takes in a sketch and which has stubbed methods and make docstrings for the given description (please use Google-style docstrings). Please have these simply throw NotImplementedError as we will fill them in as we go along. Please wrap at 80 characters. `__init__(self, sketch: sketchingpy.Sketch2D, data: list[dict])` Create a presenter to draw a visualization of the given data into the given sketch where records in the data look like {"year": 1980, "wolves": 50, "moose": 664}. `draw(self)` Draw the table with inline numbers with bars below that text. This will make a "tornado" chart which has one series (wolves) going left and the other (moose) going right. `_draw_top(self)` Draw the top row in black text for Year, Wolves, and Moose. `_draw_bottom(self)` Draw the bottom scale showing 0 to 500 for wolves and 0 to 1800 for moose. `_draw_body(self)` Draw year, wolves, and moose: - Year is on the left-most column centered. - Wolves is on the next column right aligned with bars going left. - Moose is on the far right column with left aligned but bars going right. `_get_y_pos(self, year: int) -> float` Get the y position corresponding to a year which is to be used in all series. `_get_length(self, series: str, count: int) -> float` Get the length of the bar to show for a series (wolves, moose) in pixels. Error thrown if the series is unknown or unsupported. `_get_color(self, series: str) -> str` Get the hex code to use for a given series (wolves, moose, year). Error thrown if the series is unknown or unsupported. `_get_max(self, series: str) -> float` Get the maximum count for a series (wolves, moose, year). Error thrown if the series is unknown or unsupported.</blockquote>
 
       <h3>Scaffolding without agents</h3>
 
@@ -350,8 +266,7 @@ sections:
         to your chat and ask your assistant to complete that task.
       </p>
 
-      <blockquote class="prompt">Great! Next, please read and complete
-      the attached task file. Please prepare a Python script.</blockquote>
+      <blockquote class="prompt">Great! Next, please read and complete the attached task file. Please prepare a Python script.</blockquote>
 
       <p>
         When done, take the Python code generated and double check it!
@@ -368,10 +283,7 @@ sections:
         a new chat and ask it something like the following:
       </p>
 
-      <blockquote class="prompt">Hello! Please have the implementer agent
-      followed by the checker agent complete `01_scaffold.md`. However,
-      please first learn more about Sketchingpy by reading
-      https://sketchingpy.org/llms-full.txt?v=20250915.</blockquote>
+      <blockquote class="prompt">Hello! Please have the implementer agent followed by the checker agent complete `01_scaffold.md`. However, please first learn more about Sketchingpy by reading https://sketchingpy.org/llms-full.txt?v=20250915.</blockquote>
 
       <p>
         This should have the AI assistant (the "coordinating agent")
@@ -390,32 +302,7 @@ sections:
         Following the same flow, let's make a <code>02_data.md</code>:
       </p>
 
-      <blockquote class="prompt"># Load data
-      In this next step, we should gather the required data and give our
-      sketch access to that file.
-
-      ## Gather data
-      Please write a `wolvesMoose.csv` which contains the table at
-      https://www.nps.gov/isro/learn/nature/wolf-moose-populations.htm
-      with the columns year, wolves, and moose.
-
-      ## Add to script
-      Next, I would like to update our script to create a sketch that is
-      400 pixels wide by 650 pixels tall. Let's have this cleared with a
-      background of color #FFFFFF. Let's then use the data layer to load
-      the file `wolvesMoose.csv` which we will plan to pass into the
-      class we just constructed along with the sketch. Please initialize
-      an instance of our presenter and call its draw method before
-      calling show on the sketch. We do not need interactivity on this
-      sketch, it should just write to a `wolvesMoose.png` file.
-
-      Please leave our class stubbed except in the constructor where we
-      should save data and sketch as private instance variables. Please
-      leave all of this in one script file.
-
-      ## Notes
-      If needed, prior task markdown files are present in this directory
-      like `01_scaffold.md`.</blockquote>
+      <blockquote class="prompt"># Load data In this next step, we should gather the required data and give our sketch access to that file. ## Gather data Please write a `wolvesMoose.csv` which contains the table at https://www.nps.gov/isro/learn/nature/wolf-moose-populations.htm with the columns year, wolves, and moose. ## Add to script Next, I would like to update our script to create a sketch that is 400 pixels wide by 650 pixels tall. Let's have this cleared with a background of color #FFFFFF. Let's then use the data layer to load the file `wolvesMoose.csv` which we will plan to pass into the class we just constructed along with the sketch. Please initialize an instance of our presenter and call its draw method before calling show on the sketch. We do not need interactivity on this sketch, it should just write to a `wolvesMoose.png` file. Please leave our class stubbed except in the constructor where we should save data and sketch as private instance variables. Please leave all of this in one script file. ## Notes If needed, prior task markdown files are present in this directory like `01_scaffold.md`.</blockquote>
 
       <p>
         As before, make sure to review the output and run the script.
@@ -435,83 +322,7 @@ sections:
         <code>03_draw_outline.md</code>:
       </p>
 
-      <blockquote class="prompt"># Draw outline
-      Let's draw the axes for our sketch. Let's not use push / pop style
-      or transform. This should be able to run just to draw the top and
-      bottom of the sketch.
-
-      ## Define constants
-
-      At the top of the file after imports, let's define some constants:
-
-       - Let's move our min and max values for wolves and moose to
-         constants `MIN_WOLVES` (0), `MAX_WOLVES` (50), `MIN_MOOSE` (0),
-         and `MAX_MOOSE` (2400).
-       - Let's also define the colors we want to use as
-         `BACKGROUND_COLOR` (#F0F0F0), `AXIS_COLOR` (#333333),
-         `WOLVES_COLOR` (#D95F02), and `MOOSE_COLOR` (#7570B3).
-       - Let's also use the `Public Sans` font (`FONT`) with `AXIS_SIZE`
-         as 15px (15) and `BODY_SIZE` as 13px (13).
-       - Let's also create some common spacing where the center of the
-         first column for year is at x coordinate of 55px (`YEAR_X =
-         55`), the right align target for wolves is x coordinate of 245px
-         (`WOLVES_X = 245`) and the align target for moose is 255px
-         (`MOOSE_X = 255`). The width of the year column should be 50px
-         (`YEAR_WIDTH`) and columns for wolves and moose should be 140px
-         wide (but no constant needed since we will use the value
-         inline).
-       - Let's also use `WIDTH` and `HEIGHT` for sketch dimensions.
-       - Let's say that the header and footer height (`AXIS_HEIGHT`) is
-         30px.
-
-      Please group the constants together by similar function and sort
-      alphabetically within the groups.
-
-      ## Draw
-
-      Next, let's go ahead and have `draw` start with calling
-      `_draw_top` and `_draw_bottom`. Let's then take care of drawing
-      both the top and bottom.
-
-      ## Draw Top
-
-      Let's then implement `_draw_top` to use axis color and to draw the
-      text Year, Wolves, Moose at the center, right, and left coordinate
-      for those three columns at 50px y coordinate from the top (with
-      20px reserved for title). Let's set those back vertically by 5px
-      and have a horizontal line in axis color drawn spanning the extent
-      of the column for each. Please use `AXIS_SIZE` for all text in this
-      section. Text should use fill and no stroke while line should use
-      no fill and stroke.
-
-      _Note_: We should have text aligned to bottom 45px from the top and
-      the line at 50px from the top of the sketch.
-
-      ## Draw Bottom
-
-      Let's then implement `_draw_bottom` to use axis color to draw a
-      horizontal line 30px y from the bottom spanning the length of each
-      of the three columns. Below the wolves and moose columns let's draw
-      the min and max for each with:
-
-       - 0 at the far right for wolves and max at the far left of the
-         column span
-       - 0 at the far left for moose and max at the far right of the
-         column span
-
-      Please use `BODY_SIZE` for text in the bottom. Text should use fill
-      and no stroke (clear_stroke) while line should use no fill and
-      stroke. Please draw the text color using the series specific color
-      but use `AXIS_COLOR` for year. To do this, please implement
-      `_get_color` and use the series name to get the color to use.
-
-      ## Notes
-
-      Please use `AXIS_HEIGHT` in both draw bottom and draw top. Also, if
-      needed, prior task markdown files are present in this directory
-      like `01_scaffold.md`. Please use the font at
-      http://mooc.interactivedatascience.courses/support/web/PublicSans-
-      Regular.otf.</blockquote>
+      <blockquote class="prompt"># Draw outline Let's draw the axes for our sketch. Let's not use push / pop style or transform. This should be able to run just to draw the top and bottom of the sketch. ## Define constants At the top of the file after imports, let's define some constants: - Let's move our min and max values for wolves and moose to constants `MIN_WOLVES` (0), `MAX_WOLVES` (50), `MIN_MOOSE` (0), and `MAX_MOOSE` (2400). - Let's also define the colors we want to use as `BACKGROUND_COLOR` (#F0F0F0), `AXIS_COLOR` (#333333), `WOLVES_COLOR` (#D95F02), and `MOOSE_COLOR` (#7570B3). - Let's also use the `Public Sans` font (`FONT`) with `AXIS_SIZE` as 15px (15) and `BODY_SIZE` as 13px (13). - Let's also create some common spacing where the center of the first column for year is at x coordinate of 55px (`YEAR_X = 55`), the right align target for wolves is x coordinate of 245px (`WOLVES_X = 245`) and the align target for moose is 255px (`MOOSE_X = 255`). The width of the year column should be 50px (`YEAR_WIDTH`) and columns for wolves and moose should be 140px wide (but no constant needed since we will use the value inline). - Let's also use `WIDTH` and `HEIGHT` for sketch dimensions. - Let's say that the header and footer height (`AXIS_HEIGHT`) is 30px. Please group the constants together by similar function and sort alphabetically within the groups. ## Draw Next, let's go ahead and have `draw` start with calling `_draw_top` and `_draw_bottom`. Let's then take care of drawing both the top and bottom. ## Draw Top Let's then implement `_draw_top` to use axis color and to draw the text Year, Wolves, Moose at the center, right, and left coordinate for those three columns at 50px y coordinate from the top (with 20px reserved for title). Let's set those back vertically by 5px and have a horizontal line in axis color drawn spanning the extent of the column for each. Please use `AXIS_SIZE` for all text in this section. Text should use fill and no stroke while line should use no fill and stroke. _Note_: We should have text aligned to bottom 45px from the top and the line at 50px from the top of the sketch. ## Draw Bottom Let's then implement `_draw_bottom` to use axis color to draw a horizontal line 30px y from the bottom spanning the length of each of the three columns. Below the wolves and moose columns let's draw the min and max for each with: - 0 at the far right for wolves and max at the far left of the column span - 0 at the far left for moose and max at the far right of the column span Please use `BODY_SIZE` for text in the bottom. Text should use fill and no stroke (clear_stroke) while line should use no fill and stroke. Please draw the text color using the series specific color but use `AXIS_COLOR` for year. To do this, please implement `_get_color` and use the series name to get the color to use. ## Notes Please use `AXIS_HEIGHT` in both draw bottom and draw top. Also, if needed, prior task markdown files are present in this directory like `01_scaffold.md`. Please use the font at http://mooc.interactivedatascience.courses/support/web/PublicSans- Regular.otf.</blockquote>
 
       <p>
         Please execute this using the agent or manual flow from before
@@ -520,8 +331,7 @@ sections:
         something feels too cramped or not quite right! For example:
       </p>
 
-      <blockquote class="prompt">The 1980 seems to start too far down.
-      Can you have the years start maybe 15 pixels higher?</blockquote>
+      <blockquote class="prompt">The 1980 seems to start too far down. Can you have the years start maybe 15 pixels higher?</blockquote>
   - name: draw-years
     short: Draw Years
     long: Drawing the year labels
@@ -532,23 +342,7 @@ sections:
         <code>04_draw_years.md</code>:
       </p>
 
-      <blockquote class="prompt"># Draw years
-      Next I would like to draw the years as the first part of
-      _draw_series.
-
-      ## Method
-      Let's loop through the data we saved and get that year's y
-      coordinate can be found by using _get_y_pos which should do a
-      linear scaling from the top of the sketch to the bottom: `top_line
-      + padding + (year - MIN_YEAR) / (MAX_YEAR - MIN_YEAR) *
-      (bottom_line - top_line - 2 * padding)` where `top_line = 50`,
-      `bottom_line = HEIGHT - AXIS_HEIGHT`, and `padding = 15`. Let's add
-      MIN_YEAR and MAX_YEAR to represent that we are going from 1979 to
-      2019.
-
-      ## Notes
-      If needed, prior task markdown files are present in this directory
-      like `01_scaffold.md`.</blockquote>
+      <blockquote class="prompt"># Draw years Next I would like to draw the years as the first part of _draw_series. ## Method Let's loop through the data we saved and get that year's y coordinate can be found by using _get_y_pos which should do a linear scaling from the top of the sketch to the bottom: `top_line + padding + (year - MIN_YEAR) / (MAX_YEAR - MIN_YEAR) * (bottom_line - top_line - 2 * padding)` where `top_line = 50`, `bottom_line = HEIGHT - AXIS_HEIGHT`, and `padding = 15`. Let's add MIN_YEAR and MAX_YEAR to represent that we are going from 1979 to 2019. ## Notes If needed, prior task markdown files are present in this directory like `01_scaffold.md`.</blockquote>
 
       <p>
         As before, give this a shot with your agents or by continuing
@@ -563,28 +357,7 @@ sections:
         <code>05_draw_body.md</code>:
       </p>
 
-      <blockquote class="prompt"># Draw body
-      Next, I would like to implement `_get_length` and support drawing
-      the labels and bars for the other two columns in `draw`.
-
-      ## Method
-      Let's start with `_get_length`. This should determine how wide the
-      bar should be in pixels based on if the data point is for wolves or
-      for moose. This should be a linear scale similar to our year scale
-      but without the extra padding.
-
-      Next, let's have the count for the species drawn at the y position
-      for year and right aligned for wolves / left aligned for moose but
-      in the color corresponding to the series. This will create the
-      "tornado" that makes it easier to see one species trading off for
-      the other. This should happen 5 pixels above the y position with
-      bottom alignment. Then, at the y position itself, we should draw
-      the rectangle using rect mode of corner where the rectangle is 3
-      pixels tall.
-
-      ## Notes
-      If needed, prior task markdown files are present in this directory
-      like `01_scaffold.md`.</blockquote>
+      <blockquote class="prompt"># Draw body Next, I would like to implement `_get_length` and support drawing the labels and bars for the other two columns in `draw`. ## Method Let's start with `_get_length`. This should determine how wide the bar should be in pixels based on if the data point is for wolves or for moose. This should be a linear scale similar to our year scale but without the extra padding. Next, let's have the count for the species drawn at the y position for year and right aligned for wolves / left aligned for moose but in the color corresponding to the series. This will create the "tornado" that makes it easier to see one species trading off for the other. This should happen 5 pixels above the y position with bottom alignment. Then, at the y position itself, we should draw the rectangle using rect mode of corner where the rectangle is 3 pixels tall. ## Notes If needed, prior task markdown files are present in this directory like `01_scaffold.md`.</blockquote>
 
       <p>
         Continue and we should have a pretty good visualization! However,
@@ -593,11 +366,7 @@ sections:
         things to improve and you can ask for help like:
       </p>
 
-      <blockquote class="prompt">I think we are almost there... the text
-      is a bit high off of the corresponding bar. Can you bring them
-      closer together and make the text right above the bars like 2px
-      smaller (ensure the year text still uses the original size)? Let's
-      also shift the bar down just maybe 2 pixels.</blockquote>
+      <blockquote class="prompt">I think we are almost there... the text is a bit high off of the corresponding bar. Can you bring them closer together and make the text right above the bars like 2px smaller (ensure the year text still uses the original size)? Let's also shift the bar down just maybe 2 pixels.</blockquote>
   - name: finishing-touches
     short: Finishing Touches
     long: Adding final details and polish
@@ -608,29 +377,7 @@ sections:
         Consider this <code>06_finish.md</code>:
       </p>
 
-      <blockquote class="prompt"># Finish
-      To finish off the visualization, we will add highlighting and clean
-      up on spacing / labels.
-
-      ## Highlighting
-      Let's add a dictionary called `self._observed_maxes` which has
-      entries for wolves and moose. Let's use the `max` function over a
-      `map` to get the max observed value for each:
-      `max(map(lambda x: int(x), map(lambda x: x['Wolves'], data)))`.
-      Let's then, while iterating in `_draw_body` see if the value for
-      the series matches the maximum value for the series and, if it is,
-      let's have the fill for that text for just that data point for just
-      that series alone be `AXIS_COLOR`.
-
-      ## Spacing / labels
-      Let's use 18px `AXIS_COLOR` text at the top of the sketch that says
-      "Isle Royale National Park" as the title, drawn at y position 21
-      with center and bottom alignment. Let's also ensure the year labels
-      are bottom aligned and 5 pixels above the y position for the year.
-
-      ## Notes
-      If needed, prior task markdown files are present in this directory
-      like `01_scaffold.md`.</blockquote>
+      <blockquote class="prompt"># Finish To finish off the visualization, we will add highlighting and clean up on spacing / labels. ## Highlighting Let's add a dictionary called `self._observed_maxes` which has entries for wolves and moose. Let's use the `max` function over a `map` to get the max observed value for each: `max(map(lambda x: int(x), map(lambda x: x['Wolves'], data)))`. Let's then, while iterating in `_draw_body` see if the value for the series matches the maximum value for the series and, if it is, let's have the fill for that text for just that data point for just that series alone be `AXIS_COLOR`. ## Spacing / labels Let's use 18px `AXIS_COLOR` text at the top of the sketch that says "Isle Royale National Park" as the title, drawn at y position 21 with center and bottom alignment. Let's also ensure the year labels are bottom aligned and 5 pixels above the y position for the year. ## Notes If needed, prior task markdown files are present in this directory like `01_scaffold.md`.</blockquote>
 
       <p>
         Take a look at the result and, if anything needs tweaks, be sure
