@@ -75,8 +75,8 @@ sections:
       sketch.set_fill("#b2df8a")
       sketch.draw_ellipse(350, 250, 100, 100)
 
-      sketch.show()</pre
-      >
+      sketch.show()
+      </pre>
 
 
       Try using some of our color tools to specify a different fill
@@ -113,8 +113,8 @@ sections:
       sketch.set_fill("#b2df8a99")
       sketch.draw_ellipse(350, 250, 100, 100)
 
-      sketch.show()</pre
-      >
+      sketch.show()
+      </pre>
 
 
       Try changing the order in which the colors are set and the
@@ -145,8 +145,8 @@ sections:
       sketch.clear_fill()
       sketch.draw_ellipse(350, 250, 100, 100)
 
-      sketch.show()</pre
-      >
+      sketch.show()
+      </pre>
 
 
       Try changing the colors again. When the area is smaller, is the
@@ -178,8 +178,8 @@ sections:
       sketch.clear_fill()
       sketch.draw_ellipse(350, 250, 100, 100)
 
-      sketch.show()</pre
-      >
+      sketch.show()
+      </pre>
 
 
       Try changing the strokes such that the first and last circle
@@ -205,22 +205,22 @@ sections:
       sketch.set_ellipse_mode("radius")
 
       def draw_circles(y):
-          sketch.set_stroke("#000000")
+      sketch.set_stroke("#000000")
 
-          sketch.set_fill("#edf8fb")
-          sketch.draw_ellipse(150, y, 20, 20)
+      sketch.set_fill("#edf8fb")
+      sketch.draw_ellipse(150, y, 20, 20)
 
-          sketch.set_fill("#b2e2e2")
-          sketch.draw_ellipse(200, y, 20, 20)
+      sketch.set_fill("#b2e2e2")
+      sketch.draw_ellipse(200, y, 20, 20)
 
-          sketch.set_fill("#66c2a4")
-          sketch.draw_ellipse(250, y, 20, 20)
+      sketch.set_fill("#66c2a4")
+      sketch.draw_ellipse(250, y, 20, 20)
 
-          sketch.set_fill("#2ca25f")
-          sketch.draw_ellipse(300, y, 20, 20)
+      sketch.set_fill("#2ca25f")
+      sketch.draw_ellipse(300, y, 20, 20)
 
-          sketch.set_fill("#006d2c")
-          sketch.draw_ellipse(350, y, 20, 20)
+      sketch.set_fill("#006d2c")
+      sketch.draw_ellipse(350, y, 20, 20)
 
       draw_circles(125)
 
@@ -231,8 +231,8 @@ sections:
 
       draw_circles(375)
 
-      sketch.show()</pre
-      >
+      sketch.show()
+      </pre>
 
 
       Note that this uses

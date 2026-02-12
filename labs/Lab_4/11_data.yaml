@@ -87,7 +87,8 @@ sections:
 
       for datum in data_raw:
           parsed_datum = parse_fuel_standard_change(datum)
-          changes.append(parsed_datum)</pre>
+          changes.append(parsed_datum)
+      </pre>
 
       Both
       <a
@@ -170,7 +171,8 @@ sections:
           """
           year = int(raw_datum['year'])
           standard = float(raw_datum['fuelStandardMpg'])
-          return FuelStandardChange(year, standard)</pre>
+          return FuelStandardChange(year, standard)
+      </pre>
 
       Each row of the table inside the CSV file is represented as a
       dictionary mapping from string keys to string values. We do a "cast"
@@ -214,7 +216,8 @@ sections:
               Returns:
                   The standard starting in this year as miles per gallon.
               """
-              return self._standard</pre>
+              return self._standard
+      </pre>
 
       I should mention that some developers wouldn't add this class in and
       instead draw from the dictionaries directly. While the choice in your
@@ -333,7 +336,8 @@ sections:
           percent_offset = (year - START_YEAR) / year_range
           working_width = WIDTH - LEFT_PAD - RIGHT_PAD
           pixel_offset = percent_offset * working_width
-          return LEFT_PAD + pixel_offset</pre>
+          return LEFT_PAD + pixel_offset
+      </pre>
 
       The logic for both the x and y positioning is similar.
 
@@ -383,7 +387,8 @@ sections:
           percent_offset_reverse = 1 - percent_offset
           working_height = HEIGHT - TOP_PAD - BOTTOM_PAD
           pixel_offset = percent_offset_reverse * working_height
-          return TOP_PAD + pixel_offset</pre>
+          return TOP_PAD + pixel_offset
+      </pre>
 
       The complication here is that coordinates go up as you from top to
       bottom of the sketch's canvas. So, we reverse the percentage for the
@@ -435,7 +440,8 @@ sections:
           sketch.clear_fill()
           sketch.draw_line(LEFT_PAD, max_y, LEFT_PAD + 20, max_y)
 
-          sketch.pop_style()</pre>
+          sketch.pop_style()
+      </pre>
 
       We are doing a push / pop at the start and end of the method to make
       sure that our changes to style only apply within this method.
@@ -459,7 +465,8 @@ sections:
           sketch.set_text_font(FONT, HUGE_SIZE)
           sketch.draw_text(LEFT_PAD, TOP_PAD - 18, TITLE)
 
-          sketch.pop_style()</pre>
+          sketch.pop_style()
+      </pre>
 
       The use of the title contextualizes the chart. It is pretty neutral
       right now but, depending on the purpose of the graphic, we could use
@@ -530,7 +537,8 @@ sections:
               sketch.set_text_align(align, 'top')
               sketch.draw_text(x, y + SMALL_SIZE / 2 + 2, annotation)
 
-          sketch.pop_style()</pre>
+          sketch.pop_style()
+      </pre>
 
       There are a lot of different options available for drawing these
       different data points: align, highlight, and annotation. However, this
@@ -546,29 +554,30 @@ sections:
             example, instead of this:
           </p>
           <pre>
-      sketch.draw_ellipse(
-          get_x(year) - 5,
-          get_y(val) - 5,
-          5,
-          5
-      )
+          sketch.draw_ellipse(
+              get_x(year) - 5,
+              get_y(val) - 5,
+              5,
+              5
+          )
 
-      sketch.draw_ellipse(
-          get_x(year) + 5,
-          get_y(val) + 5,
-          5,
-          5
-      )
-      </pre>
+          sketch.draw_ellipse(
+              get_x(year) + 5,
+              get_y(val) + 5,
+              5,
+              5
+          )
+          </pre>
           <p>You might instead see this:</p>
           <pre>
-      sketch.push_transform()
-      sketch.translate(get_x(year), get_y(val))
+          sketch.push_transform()
+          sketch.translate(get_x(year), get_y(val))
 
-      sketch.draw_ellipse(-5, -5, 5, 5)
-      sketch.draw_ellipse(5, 5, 5,5)
+          sketch.draw_ellipse(-5, -5, 5, 5)
+          sketch.draw_ellipse(5, 5, 5, 5)
 
-      sketch.pop_transform()</pre>
+          sketch.pop_transform()
+          </pre>
 
           This can really simplify code where you have to do a lot of drawing
           relative to a particular coordinate.
@@ -621,7 +630,8 @@ sections:
               annotation = self._determine_annotation(year)
 
               self._draw_change(sketch, change, align, highlight,
-                annotation)</pre>
+                annotation)
+      </pre>
 
       For our purposes, all of this conditional formatting and labeling is
       all based on the year where, specifically, we want to show additional
@@ -641,23 +651,24 @@ sections:
           </p>
 
           <pre>
-      def _determine_annotation(self, year):
-          """Determine what annotation if any should be added for the given
-          year.
+          def _determine_annotation(self, year):
+              """Determine what annotation if any should be added for the given
+              year.
 
-          Args:
-              year: The year for which an annotation should be returned.
+              Args:
+                  year: The year for which an annotation should be returned.
 
-          Returns:
-              Annotation text to display next to results for the given year
-              or None if no annotation should be added.
-          """
-          if year == START_YEAR:
-              return START_YEAR_ANNOTATION
-          elif year == END_YEAR:
-              return END_YEAR_ANNOTATION
-          else:
-              return None</pre>
+              Returns:
+                  Annotation text to display next to results for the given year
+                  or None if no annotation should be added.
+              """
+              if year == START_YEAR:
+                  return START_YEAR_ANNOTATION
+              elif year == END_YEAR:
+                  return END_YEAR_ANNOTATION
+              else:
+                  return None
+          </pre>
 
           <p>
             One pattern you may encounter is changing this to a dictionary
@@ -665,23 +676,24 @@ sections:
           </p>
 
           <pre>
-      def _determine_annotation(self, year):
-          """Determine what annotation if any should be added for the given
-          year.
+          def _determine_annotation(self, year):
+              """Determine what annotation if any should be added for the given
+              year.
 
-          Args:
-              year: The year for which an annotation should be returned.
+              Args:
+                  year: The year for which an annotation should be returned.
 
-          Returns:
-              Annotation text to display next to results for the given year
-              or None if no annotation should be added.
-          """
-          options = {
-              START_YEAR: START_YEAR_ANNOTATION,
-              END_YEAR: END_YEAR_ANNOTATION
-          }
+              Returns:
+                  Annotation text to display next to results for the given year
+                  or None if no annotation should be added.
+              """
+              options = {
+                  START_YEAR: START_YEAR_ANNOTATION,
+                  END_YEAR: END_YEAR_ANNOTATION
+              }
 
-          return options.get(year, None)</pre>
+              return options.get(year, None)
+          </pre>
 
           <p>
             Here, the second parameter to get is the default value to use if
@@ -705,7 +717,8 @@ sections:
       <pre>
       years = [change.get_year() for change in fuel_standard_changes]
       start_year = min(years)
-      end_year = max(years)</pre>
+      end_year = max(years)
+      </pre>
 
       If you go this route, you might consider doing something similar for
       min_standard and max_standard.

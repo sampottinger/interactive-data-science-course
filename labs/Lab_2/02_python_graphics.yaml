@@ -92,8 +92,9 @@ sections:
 
       <pre>
       import sketchingpy
-      import time</pre
-      >
+
+      import time
+      </pre>
 
       You can learn more in the
       <a href="https://docs.python.org/3/library/time.html"
@@ -140,7 +141,8 @@ sections:
       projects spanning many files of code to produce complex
       graphics. We can create a 2D sketch using the following:
 
-      <pre>sketch = sketchingpy.Sketch2D(500, 400)</pre>
+      <pre>sketch = sketchingpy.Sketch2D(500, 400)
+      </pre>
 
       This code builds a small space 500 pixels wide and 400 pixels
       tall where we can draw.
@@ -162,13 +164,14 @@ sections:
               x and veritical position as y.
           </p>
       </details>
-  - name: lines
-    short: Drawing lines
-    long: Learn how to draw lines on the sketch
-    body: >
+      - name: lines
+      short: Drawing lines
+      long: Learn how to draw lines on the sketch
+      body: >
       Let's draw a line:
 
-      <pre>sketch.draw_line(500 / 2, 400 / 2, 100, 50)</pre>
+      <pre>sketch.draw_line(500 / 2, 400 / 2, 100, 50)
+      </pre>
 
       This will draw a line across the sketch.
 
@@ -195,26 +198,31 @@ sections:
 
       <pre>
       center_x = 500 / 2
+
       center_y = 400 / 2
+
       end_x = 100
+
       end_y = 50
-      sketch.draw_line(center_x, center_y, end_x, end_y)</pre
-      >
+
+      sketch.draw_line(center_x, center_y, end_x, end_y)
+      </pre>
 
       That is a little easier to read maybe. We are drawing a line
       from the center of the screen to the upper left. Finally, we
       need to tell the computer to show the sketch on the screen (as
       opposed to saving it to a file, for example):
 
-      <pre>sketch.show()</pre>
+      <pre>sketch.show()
+      </pre>
 
       Now that we have something interesting, let's run this sketch.
       Try changing the numbers to see what happens to what is shown on
       the screen.
-  - name: life
-    short: Life
-    long: Add animation to make the sketch feel alive
-    body: >
+      - name: life
+      short: Life
+      long: Add animation to make the sketch feel alive
+      body: >
       Our program right now feels a little
       <a href="https://vimeo.com/64895205">dead</a>. It just draws a
       line on the screen and ends. What if it could do things in
@@ -231,8 +239,8 @@ sections:
           offset = seconds * pixels_per_second
           sketch.draw_line(250, 200, 100, 50 + offset)
 
-      sketch.on_step(draw_moving_line)</pre
-      >
+      sketch.on_step(draw_moving_line)
+      </pre>
 
       Need help?
       <a
@@ -334,8 +342,8 @@ sections:
           seconds = time.time() - start_time
           pixels_per_second = 5
           offset = seconds * pixels_per_second
-          self.draw_line(250, 200, 100, 50 + offset)</pre
-      >
+          self.draw_line(250, 200, 100, 50 + offset)
+      </pre>
 
       Go ahead and give it a try! All that said, when programs are
       this small, I understand it feels a little silly to have two
@@ -354,8 +362,9 @@ sections:
       <pre>
       def draw_moving_line(self):
           mouse = sketch.get_mouse()
-          sketch.draw_line(250, 200, mouse.get_pointer_x(), mouse.get_pointer_y())</pre
-      >
+          sketch.draw_line(250, 200, mouse.get_pointer_x(),
+                           mouse.get_pointer_y())
+      </pre>
 
       Need help?
       <a
@@ -393,13 +402,18 @@ sections:
       <a href="/labs/python_objects.html">Tutorial 3</a> as part of
       Lecture 4 / Skills Lab 2.
 citations:
-  - text: B. Victor, "Stop Drawing Dead Fish," in ACM SIGGRAPH, 2012. Accessed Nov. 17, 2013. [Online].
+  - text: >
+      B. Victor, "Stop Drawing Dead Fish," in ACM SIGGRAPH, 2012.
+      Accessed Nov. 17, 2013. [Online].
     available: https://vimeo.com/115154289
   - text: A. Pottinger, "Sketchingpy." Sketchingpy Project, 2024. [Online].
     available: https://sketchingpy.org/
   - text: Meadows School of the Arts, "What is Creative Coding?" SMU, Jan. 05, 2024. [Online].
     available: https://www.smu.edu/meadows/newsandevents/news/2023/what-is-creative-coding
-  - text: Python Software Foundation and Python Contributors, "Time - Time access and conversions." Python Software Foundation, 2025. [Online].
+  - text: >
+      Python Software Foundation and Python Contributors, "Time - Time
+      access and conversions." Python Software Foundation, 2025.
+      [Online].
     available: https://docs.python.org/3/library/time.html
   - text: Abis, "1970 - 2020 50 years since the 'Unix Epoch.'" Abis, Jan. 14, 2020. [Online].
     available: https://www.abis.be/html/en2020-12_UnixEpoch.html
