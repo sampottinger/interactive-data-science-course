@@ -48,8 +48,8 @@ sections:
       sketch.set_ellipse_mode('radius')
       sketch.draw_ellipse(250, 250, 20, 20)
 
-      sketch.show()</pre
-      >
+      sketch.show()
+      </pre>
 
       Go ahead and run this a few times. Each time try changing the
       following:
@@ -89,8 +89,8 @@ sections:
       sketch.set_ellipse_mode('corner')
       sketch.draw_ellipse(250, 250, 20, 20)
 
-      sketch.show()</pre
-      >
+      sketch.show()
+      </pre>
 
       To formalize what you just learned, check out the
       <a
@@ -127,8 +127,8 @@ sections:
       sketch.set_rect_mode('radius')
       sketch.draw_rect(250, 250, 20, 20)
 
-      sketch.show()</pre
-      >
+      sketch.show()
+      </pre>
 
       Let's do the same experiments as before:
 
@@ -164,8 +164,8 @@ sections:
       sketch.set_rect_mode('corner')
       sketch.draw_rect(250, 250, 20, 20)
 
-      sketch.show()</pre
-      >
+      sketch.show()
+      </pre>
 
       Once again, see the reference for
       <a
@@ -219,8 +219,8 @@ sections:
       sketch.set_angle_mode('degrees')
       sketch.draw_arc(250, 250, 40, 40, 0, 90)
 
-      sketch.show()</pre
-      >
+      sketch.show()
+      </pre>
 
       Now, let's do a similar investigation as we did for ellipses and
       rectangles:
@@ -262,8 +262,8 @@ sections:
 
       sketch.draw_line(230, 270, 270, 270)
 
-      sketch.show()</pre
-      >
+      sketch.show()
+      </pre>
 
       However, let's do this another way. We will see why this might
       help in a moment:
@@ -278,8 +278,8 @@ sections:
       shape.end()
       sketch.draw_shape(shape)
 
-      sketch.show()</pre
-      >
+      sketch.show()
+      </pre>
 
       While this seems like extra code to achieve the same result at
       first, let's take this one step further with multiple connected
@@ -308,8 +308,8 @@ sections:
       shape.end()
       sketch.draw_shape(shape)
 
-      sketch.show()</pre
-      >
+      sketch.show()
+      </pre>
 
       Note that Sketchingpy tries to color in the shape to make a
       figure. If you want to stop that, use sketch.clear_fill before
@@ -347,8 +347,8 @@ sections:
       shape.end()
       sketch.draw_shape(shape)
 
-      sketch.show()</pre
-      >
+      sketch.show()
+      </pre>
 
       Try changing the parameters a bit but also see the
       <a
@@ -381,8 +381,8 @@ sections:
       sketch.set_rect_mode('radius')
       sketch.draw_rect(350, 250, 20, 20)
 
-      sketch.show()</pre
-      >
+      sketch.show()
+      </pre>
 
       Note that there are two ways to finish a shape:
       <a

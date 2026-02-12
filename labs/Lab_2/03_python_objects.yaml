@@ -98,8 +98,7 @@ sections:
       HEIGHT = 400  # pixels
 
       sketch = sketchingpy.Sketch2D(WIDTH, HEIGHT)
-      </pre
-      >
+      </pre>
 
       Here, Sketch2D is a class and sketch is an instance.
 
@@ -131,8 +130,8 @@ sections:
               self.position_x = position_x
               self.position_y = position_y
               self.velocity_x = velocity_x
-              self.velocity_y = velocity_y</pre
-      >
+              self.velocity_y = velocity_y
+      </pre>
 
       This snippet creates the concept of a ball. When that ball is
       made, we ask for the position and velocity. Finally, within the
@@ -176,8 +175,8 @@ sections:
               self.velocity_x = self.velocity_x * -1
 
           def reverse_y(self):
-              self.velocity_y = self.velocity_y * -1</pre
-      >
+              self.velocity_y = self.velocity_y * -1
+      </pre>
 
       If we had a ball, we could now call ball.reverse_x() to reverse
       its horizontal direction. Anyway, with that in mind, we now have
@@ -201,8 +200,8 @@ sections:
                   self.reverse_y()
               elif self.position_y < 0:
                   self.position_y = 0
-                  self.reverse_y()</pre
-      >
+                  self.reverse_y()
+      </pre>
 
       We will call update on each ball for each step within our
       simulation.
@@ -243,8 +242,7 @@ sections:
                   Ball(WIDTH / 2, HEIGHT / 2, 10, 0)
               ]
               self.last_time = time.time()
-      </pre
-      >
+      </pre>
 
       Notice how we are making three instances of the Ball class.
       Let's also add an update method to the Simulation class which
@@ -257,8 +255,8 @@ sections:
               self.last_time = new_time
 
               for ball in self.balls:
-                  ball.update(duration)</pre
-      >
+                  ball.update(duration)
+      </pre>
 
       Now, we have everything we need to simulate this system. In the
       next step, we will draw the state of the system after updating
@@ -280,8 +278,8 @@ sections:
               sketch.draw_ellipse(ball.position_x, ball.position_y, 2, 2)
 
       sketch.on_step(update_and_draw_balls)
-      sketch.show()</pre
-      >
+      sketch.show()
+      </pre>
 
       Here's some
       <a href="https://sketchingpy.org/reference/draw_ellipse.html"
@@ -311,8 +309,8 @@ sections:
           simulation.update(mouse_x, mouse_y)
 
           for ball in simulation.balls:
-              sketch.draw_ellipse(ball.position_x, ball.position_y, 2, 2)</pre
-      >
+              sketch.draw_ellipse(ball.position_x, ball.position_y, 2, 2)
+      </pre>
 
       Next, we need to update the simulation (the Simulation class) to
       take that information:
@@ -324,8 +322,8 @@ sections:
               self.last_time = new_time
 
               for ball in self.balls:
-                  ball.update(duration, mouse_x, mouse_y)</pre
-      >
+                  ball.update(duration, mouse_x, mouse_y)
+      </pre>
 
       Finally, we need to have the Ball class understand how to
       respond. This will take a little bit of thinking.
@@ -363,8 +361,8 @@ sections:
                   if self.get_hit_mouse_in_direction(self.position_x, mouse_x, self.velocity_x):
                       self.reverse_x()
                   elif self.get_hit_mouse_in_direction(self.position_y, mouse_y, self.velocity_y):
-                      self.reverse_y()</pre
-      >
+                      self.reverse_y()
+      </pre>
 
       This code provides a translation of our thoughts in English to
       our thoughts in Python. However, there are a few items missing.
@@ -375,8 +373,8 @@ sections:
           def get_is_near_mouse(self, mouse_x, mouse_y):
               x_near = abs(mouse_x - self.position_x) < 10
               y_near = abs(mouse_y - self.position_y) < 10
-              return x_near and y_near</pre
-      >
+              return x_near and y_near
+      </pre>
 
       Here we are using a function that is built into Python called
       abs which returns the absolute value of a number. If the ball is
@@ -393,8 +391,8 @@ sections:
                   distance = mouse - coordinate
                   return distance > -10
               else:
-                  return False</pre
-      >
+                  return False
+      </pre>
 
       This function allows us to check if the mouse was hit along a
       certain axis. Both if statements see if the mouse was moving

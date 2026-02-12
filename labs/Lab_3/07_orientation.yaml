@@ -18,8 +18,7 @@ sections:
       notice a problem.
 
 
-      <pre>
-      import sketchingpy
+      <pre>import sketchingpy
 
       sketch = sketchingpy.Sketch2D(500, 500)
 
@@ -32,7 +31,8 @@ sections:
           sketch.rotate(30)
           size += 5
 
-      sketch.show()</pre>
+      sketch.show()
+      </pre>
 
 
       Our work is off the screen! Try changing the position of the
@@ -46,8 +46,7 @@ sections:
       the rotation should occur.
 
 
-      <pre>
-      import sketchingpy
+      <pre>import sketchingpy
 
       sketch = sketchingpy.Sketch2D(500, 500)
 
@@ -77,7 +76,8 @@ sections:
       draw_at(-100, 100, "#d95f0250")
       draw_at(100, 100, "#7570b350")
 
-      sketch.show()</pre>
+      sketch.show()
+      </pre>
 
 
       It is also common to push and pop within a function so that you

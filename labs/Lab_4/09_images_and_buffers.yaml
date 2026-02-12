@@ -28,7 +28,8 @@ sections:
       sketch.set_image_mode('corner')
       sketch.draw_image(250, 250, image)
 
-      sketch.show()</pre>
+      sketch.show()
+      </pre>
 
       After giving this a run, try changing the resize dimensions. Finally,
       try changing the mode specified in set_image_mode. There are two
@@ -60,12 +61,12 @@ sections:
           sketch.draw_ellipse(250, 250, 100, 100)
 
           sketch.set_image_mode('center')
-          sketch.draw_image(mouse.get_pointer_x(), mouse.get_pointer_y(),
-          image)
+          sketch.draw_image(mouse.get_pointer_x(), mouse.get_pointer_y(), image)
 
       sketch.on_step(draw)
 
-      sketch.show()</pre>
+      sketch.show()
+      </pre>
 
       Try changing reading.png to
       <a href="/labs/reading.jpg" target="_blank">reading.jpg</a> instead.

@@ -145,16 +145,7 @@ sections:
         with your chosen AI:
       </p>
 
-      <blockquote class="prompt">
-        Hello! Can you please use matplotlib to generate a graph of wolves vs
-        moose populations as a split bar plot (one going to the left and the
-        other going to the right) where the axes have different colors to
-        correspond to the bar colors for the two series? Please have the left
-        facing axis for wolves go from 0 to 50 and the right facing axis for
-        moose go from 0 to 2500. See
-        https://www.nps.gov/isro/learn/nature/wolf-moose-populations.htm for
-        data.
-      </blockquote>
+      <blockquote class="prompt">Hello! Can you please use matplotlib to generate a graph of wolves vs moose populations as a split bar plot (one going to the left and the other going to the right) where the axes have different colors to correspond to the bar colors for the two series? Please have the left facing axis for wolves go from 0 to 50 and the right facing axis for moose go from 0 to 2500. See https://www.nps.gov/isro/learn/nature/wolf-moose-populations.htm for data.</blockquote>
 
       <p>
         <strong>Check the work</strong>: Run the code provided by the AI
@@ -199,12 +190,7 @@ sections:
         another prompt:
       </p>
 
-      <blockquote class="prompt">
-        This is great but the wolves are too compressed. Let's have the split
-        at roughly half way across the plot. This means that there is more
-        horizontal space per wolf than per moose. However, this will show the
-        harmonic relationship better.
-      </blockquote>
+      <blockquote class="prompt">This is great but the wolves are too compressed. Let's have the split at roughly half way across the plot. This means that there is more horizontal space per wolf than per moose. However, this will show the harmonic relationship better.</blockquote>
 
       <p>
         <strong>Check the work</strong>: Run the updated code. Now you should
@@ -252,13 +238,7 @@ sections:
         make the supporting elements more clear. Try this prompt:
       </p>
 
-      <blockquote class="prompt">
-        Perfect! We have the colored wolves and moose labels overlapping with
-        the black axis title. Let's set the black axis title to empty and then
-        let's make the colors for both series darker so that it is easy to
-        read wolves and moose. Finally, let's say "Number of Wolves" and
-        "Number of Moose" in that colored text.
-      </blockquote>
+      <blockquote class="prompt">Perfect! We have the colored wolves and moose labels overlapping with the black axis title. Let's set the black axis title to empty and then let's make the colors for both series darker so that it is easy to read wolves and moose. Finally, let's say "Number of Wolves" and "Number of Moose" in that colored text.</blockquote>
 
       <p>
         <strong>Check the work</strong>: Run the code and verify:
@@ -294,12 +274,7 @@ sections:
         final prompt:
       </p>
 
-      <blockquote class="prompt">
-        Doing really well! One last thing. The labels for the count (along the
-        bottom horizontal axis). Can you please make those the same color as
-        the series they describe (so one color on left and a different color
-        on right)?
-      </blockquote>
+      <blockquote class="prompt">Doing really well! One last thing. The labels for the count (along the bottom horizontal axis). Can you please make those the same color as the series they describe (so one color on left and a different color on right)?</blockquote>
 
       <p>
         <strong>Check the work</strong>: Run the final version. You should now
