@@ -8,11 +8,11 @@ This self-paced massive open online course (MOOC) is a thoughtful upgrade to Sta
 
 ## Structure / Format
 The source materials for these resources are divided into three directories.
-Lesson definitions are organized in `lecture/lessons/` as individual **YAML**
-files within numbered section subdirectories (e.g., `01_Hello`, `02_Primitives`).
-Each section directory contains per-lesson YAML files and an `index.yml` file
-with section metadata (name, tagline, detailed description). These are rendered
-into the overall MOOC website.
+Lesson definitions are organized in `lecture/lessons/` as individual YAML
+files (with `.yml` extension) within numbered section subdirectories (e.g.,
+`01_Hello`, `02_Primitives`). Each section directory contains per-lesson YAML
+files and an `index.yml` file with section metadata (name, tagline, detailed
+description). These are rendered into the overall MOOC website.
 
 ### Individual lessons
 Found in `/lecture`, traditional lectures that mix classic instruction and
@@ -35,7 +35,7 @@ Course-wide materials are rendered from Jinja2 templates using `course_wide/rend
  - `course_wide.yml`: Structured data for course sections, lessons, and rubric criteria
 
 ### Skills labs
-Found in `/labs`, hands-on tutorials and focused instruction on implementation skills. These are often recommended for a flipped classroom structure. Lab YAML source files are organized in `labs/Lab_1/` through `labs/Lab_6/` subdirectories, each containing an `index.yml` and tutorial YAML files. These are rendered into **HTML** and **Markdown** formats with supplemental materials.
+Found in `/labs`, hands-on tutorials and focused instruction on implementation skills. These are often recommended for a flipped classroom structure. Lab YAML source files (with `.yml` extension) are organized in `labs/Lab_1/` through `labs/Lab_6/` subdirectories, each containing an `index.yml` and tutorial YAML files. These are rendered into **HTML** and **Markdown** formats with supplemental materials.
 
 ## Using
 The course materials are available online for free at [https://mooc.interactivedatascience.courses](https://mooc.interactivedatascience.courses/). This includes:
@@ -142,6 +142,7 @@ Various lessons and activities within this course may use different technologies
  - [pnpm](https://pnpm.io/) under an [MIT license](https://github.com/pnpm/pnpm/blob/main/LICENSE).
  - [pycodestyle](https://pycodestyle.pycqa.org/) under an [MIT license](https://github.com/PyCQA/pycodestyle/blob/main/LICENSE).
  - [pyflakes](https://github.com/PyCQA/pyflakes) under an [MIT license](https://github.com/PyCQA/pyflakes/blob/main/LICENSE).
+ - [Python-Markdown](https://python-markdown.github.io/) under a [BSD 3 Clause license](https://github.com/Python-Markdown/markdown/blob/master/LICENSE.md).
  - [PyYAML](https://pyyaml.org/) under an [MIT license](https://github.com/yaml/pyyaml/blob/main/LICENSE).
  - [Python](https://www.python.org/) under a [PSF license](https://docs.python.org/3/license.html).
  - [sketchingpy](https://sketchingpy.org/) under a [BSD 3 Clause license](https://codeberg.org/sketchingpy/Sketchingpy/src/branch/main/LICENSE.md).

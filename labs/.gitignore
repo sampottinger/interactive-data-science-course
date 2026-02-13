@@ -3,6 +3,7 @@
 *.html
 
 # Keep template and source files tracked
+!README.md
 !tutorial.md
 !tutorial.html
 !index_template.html

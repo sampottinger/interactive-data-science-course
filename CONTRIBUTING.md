@@ -262,7 +262,7 @@ The YAML-based structure allows for consistent formatting and easier maintenance
 | sections  | Yes          | List of tutorial sections, each with "name" (anchor ID), "short" (heading), "long" (description), and either "html" or "markdown" (content). | list |
 | citations | No           | List of citations, each with "text" and optional "available" (URL). | list |
 
-HTML fields should use `>` for folded scalars as with lesson YAML files. Generated tutorials include:
+HTML fields should use `>` for folded scalars as with lesson YAML files. For content with `<pre>` blocks, use `|` (literal block scalar) to preserve formatting. Generated tutorials include:
 
  - A contents `details` tag.
  - Use of header, main, and sections for accessibility including skip link.
