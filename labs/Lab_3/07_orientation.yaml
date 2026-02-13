@@ -12,7 +12,7 @@ sections:
   - name: rotate
     short: Rotate
     long: Rotate
-    body: >
+    html: >
       We will start by doing a global rotation. This also changes the
       transformation matrix. However, give this a run and you might
       notice a problem.
@@ -40,7 +40,7 @@ sections:
   - name: rotate-and-translate
     short: Rotate and Translate
     long: Rotate and Translate
-    body: >
+    html: >
       Using that first sketch as motiviation, it is common to
       translate prior to rotation to indicate the point around which
       the rotation should occur.
@@ -85,7 +85,7 @@ sections:
   - name: next
     short: Next
     long: Next
-    body: >
+    html: >
       You've reached the end of Skills Lab 3! Continue on to
       <a href="/labs/resources_text.html">Tutorial 8</a> which starts
       Skills Lab 4 to learn about text.
@@ -97,17 +97,13 @@ sections:
               <li>
                   A. Pottinger, "Sketchingpy." Sketchingpy Project,
                   2024. [Online]. Available:
-                  <a href="https://sketchingpy.org/" target="_blank"
-                      >https://sketchingpy.org/</a
-                  >
+                  <a href="https://sketchingpy.org/">https://sketchingpy.org/</a>
               </li>
               <li>
                   C. Brewer, M Harrower, and The Pennsylvania State
                   University, "Colorbrewer 2.0," The Pennsylvania
                   State University, 2013. [Online]. Available:
-                  <a href="https://colorbrewer2.org/" target="_blank"
-                      >https://colorbrewer2.org/</a
-                  >
+                  <a href="https://colorbrewer2.org/">https://colorbrewer2.org/</a>
               </li>
           </ul>
       </details>

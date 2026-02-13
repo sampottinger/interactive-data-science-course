@@ -12,7 +12,7 @@ sections:
   - name: font
     short: Font
     long: Understanding fonts and typography basics
-    body: >
+    html: >
       Before we can draw text, we need a font. Your machine has a number of
       fonts pre-installed that you can use. Maybe you've installed some of your
       own! All that said, different machines may have different default fonts so
@@ -20,7 +20,6 @@ sections:
       especially important for interactive visualizations you are sending to
       others. That in mind, some terminology that you might encounter when
       working with fonts:
-
 
       <ul>
         <li>
@@ -58,7 +57,6 @@ sections:
         </li>
       </ul>
 
-
       We will use an open variable-width sans-serif type called
       <a href="https://github.com/uswds/public-sans">Public Sans</a>
       which is under the
@@ -68,14 +66,13 @@ sections:
   - name: text
     short: Text
     long: Drawing text with Sketchingpy
-    body: >
+    html: >
       Go ahead and
       <a href="/support/web/PublicSans-Regular.otf">
       download Public Sans' regular font in OTF format</a>
       and add it to your
       <a href="https://editor.sketchingpy.org/">sketchbook</a> by clicking on
       upload file. Next, let's draw a first piece of 14 px sized text.
-
 
       <pre>
       import sketchingpy
@@ -91,11 +88,9 @@ sections:
       sketch.show()
       </pre>
 
-
       If you are using Sketchingpy outside the browser, you may need to say
       "PublicSans-Regular.otf" instead. Anyway, try switching the text to say
       "Stat 198" and change the font size.
-
 
       <details>
         <summary>Troubleshooting</summary>
@@ -111,10 +106,9 @@ sections:
   - name: horizontal-align
     short: Horizontal Align
     long: Controlling horizontal text alignment
-    body: >
+    html: >
       Like other types of drawing, we can specify alignment for text. We will
       start with horizontal alignment as it is a bit simplier.
-
 
       <pre>
       import sketchingpy
@@ -135,17 +129,15 @@ sections:
       sketch.show()
       </pre>
 
-
       There is another option for horizontal alignment called "center" which
       draws the text such that its geometric center is at the x position
       specified. Try changing the text above to use center instead.
   - name: vertical-align
     short: Vertical Align
     long: Controlling vertical text alignment
-    body: >
+    html: >
       Vertical alignment has a few options: top, bottom, center, and baseline.
       To see what the each does, let's play with some text which as descenders.
-
 
       <pre>
       import sketchingpy
@@ -166,7 +158,6 @@ sections:
       sketch.show()
       </pre>
 
-
       Try changing top to bottom, center, and baseline to see how the alignment
       changes. In particular, compare bottom to baseline: the descenders fall
       below the y position in baseline but the text moves up such that the
@@ -174,11 +165,11 @@ sections:
   - name: next
     short: Next
     long: Continue to the next tutorial
-    body: >
+    html: >
       There's a lot to say about type that we won't get to in this course.
       However, if you want to learn more, I strongly recommend
-      <a href="https://papress.com/products/thinking-with-type-3-edition"
-      target="_blank">Thinking in Type</a>
+      <a href="https://papress.com/products/thinking-with-type-3-edition">
+      Thinking in Type</a>
       as a short and approachable introduction. When you are ready, continue on
       to <a href="/labs/resources_images.html">Tutorial 9</a> to learn about
       images and buffers.
