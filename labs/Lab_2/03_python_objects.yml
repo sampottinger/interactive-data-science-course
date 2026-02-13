@@ -90,15 +90,13 @@ sections:
     html: |
       Let's start by making a sketch.
 
-      <pre>
-      import sketchingpy
+      <pre>import sketchingpy
       import time
 
       WIDTH = 500  # pixels
       HEIGHT = 400  # pixels
 
-      sketch = sketchingpy.Sketch2D(WIDTH, HEIGHT)
-      </pre>
+      sketch = sketchingpy.Sketch2D(WIDTH, HEIGHT)</pre>
 
       Here, Sketch2D is a class and sketch is an instance.
 
@@ -123,15 +121,13 @@ sections:
       the x and y direction. One important method is called "__init__"
       which is called when an instance is first made.
 
-      <pre>
-      class Ball:
+      <pre>class Ball:
 
-          def __init__(self, position_x, position_y, velocity_x, velocity_y):
-              self.position_x = position_x
-              self.position_y = position_y
-              self.velocity_x = velocity_x
-              self.velocity_y = velocity_y
-      </pre>
+        def __init__(self, position_x, position_y, velocity_x, velocity_y):
+          self.position_x = position_x
+          self.position_y = position_y
+          self.velocity_x = velocity_x
+          self.velocity_y = velocity_y</pre>
 
       This snippet creates the concept of a ball. When that ball is
       made, we ask for the position and velocity. Finally, within the
@@ -162,46 +158,42 @@ sections:
       behaviors. The ball will "bounce" by reversing its x and / or y
       velocities. Starting with that:
 
-      <pre>
-      class Ball:
+      <pre>class Ball:
 
-          def __init__(self, position_x, position_y, velocity_x, velocity_y):
-              self.position_x = position_x
-              self.position_y = position_y
-              self.velocity_x = velocity_x
-              self.velocity_y = velocity_y
+        def __init__(self, position_x, position_y, velocity_x, velocity_y):
+          self.position_x = position_x
+          self.position_y = position_y
+          self.velocity_x = velocity_x
+          self.velocity_y = velocity_y
 
-          def reverse_x(self):
-              self.velocity_x = self.velocity_x * -1
+        def reverse_x(self):
+          self.velocity_x = self.velocity_x * -1
 
-          def reverse_y(self):
-              self.velocity_y = self.velocity_y * -1
-      </pre>
+        def reverse_y(self):
+          self.velocity_y = self.velocity_y * -1</pre>
 
       If we had a ball, we could now call ball.reverse_x() to reverse
       its horizontal direction. Anyway, with that in mind, we now have
       all the pieces needed to make a method which updates the
       position of the ball on each step:
 
-      <pre>
-          def update(self, duration):
-              self.position_x = self.position_x + self.velocity_x * duration
-              self.position_y = self.position_y + self.velocity_y * duration
+      <pre>def update(self, duration):
+        self.position_x = self.position_x + self.velocity_x * duration
+        self.position_y = self.position_y + self.velocity_y * duration
 
-              if self.position_x > WIDTH:
-                  self.position_x = WIDTH
-                  self.reverse_x()
-              elif self.position_x < 0:
-                  self.position_x = 0
-                  self.reverse_x()
+        if self.position_x > WIDTH:
+          self.position_x = WIDTH
+          self.reverse_x()
+        elif self.position_x < 0:
+          self.position_x = 0
+          self.reverse_x()
 
-              if self.position_y > HEIGHT:
-                  self.position_y = HEIGHT
-                  self.reverse_y()
-              elif self.position_y < 0:
-                  self.position_y = 0
-                  self.reverse_y()
-      </pre>
+        if self.position_y > HEIGHT:
+          self.position_y = HEIGHT
+          self.reverse_y()
+        elif self.position_y < 0:
+          self.position_y = 0
+          self.reverse_y()</pre>
 
       We will call update on each ball for each step within our
       simulation.

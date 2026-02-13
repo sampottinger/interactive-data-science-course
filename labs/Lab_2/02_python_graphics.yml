@@ -62,11 +62,8 @@ sections:
       help us. Specifically, we will import the Sketchingpy and time
       libraries into our project.
 
-      <pre>
-      import sketchingpy
-
-      import time
-      </pre>
+      <pre>import sketchingpy
+      import time</pre>
 
       You can learn more in the
       <a href="https://docs.python.org/3/library/time.html"
@@ -113,8 +110,7 @@ sections:
       projects spanning many files of code to produce complex
       graphics. We can create a 2D sketch using the following:
 
-      <pre>sketch = sketchingpy.Sketch2D(500, 400)
-      </pre>
+      <pre>sketch = sketchingpy.Sketch2D(500, 400)</pre>
 
       This code builds a small space 500 pixels wide and 400 pixels
       tall where we can draw.
@@ -142,8 +138,7 @@ sections:
     html: |
       Let's draw a line:
 
-      <pre>sketch.draw_line(500 / 2, 400 / 2, 100, 50)
-      </pre>
+      <pre>sketch.draw_line(500 / 2, 400 / 2, 100, 50)</pre>
 
       This will draw a line across the sketch.
 
@@ -168,25 +163,18 @@ sections:
       Let's actually re-write that previous line as follows (go ahead
       and paste this in):
 
-      <pre>
-      center_x = 500 / 2
-
+      <pre>center_x = 500 / 2
       center_y = 400 / 2
-
       end_x = 100
-
       end_y = 50
-
-      sketch.draw_line(center_x, center_y, end_x, end_y)
-      </pre>
+      sketch.draw_line(center_x, center_y, end_x, end_y)</pre>
 
       That is a little easier to read maybe. We are drawing a line
       from the center of the screen to the upper left. Finally, we
       need to tell the computer to show the sketch on the screen (as
       opposed to saving it to a file, for example):
 
-      <pre>sketch.show()
-      </pre>
+      <pre>sketch.show()</pre>
 
       Now that we have something interesting, let's run this sketch.
       Try changing the numbers to see what happens to what is shown on
@@ -197,17 +185,15 @@ sections:
     html: |
       Our program right now feels a little <a href="https://vimeo.com/64895205">dead</a>. It just draws a line on the screen and ends. What if it could do things in repetition like maybe change the end position where the line is drawn? Try the following (put it before the line that says sketch.show):
 
-      <pre>
-      start_time = time.time()
+      <pre>start_time = time.time()
 
       def draw_moving_line(self):
-          seconds = time.time() - start_time
-          pixels_per_second = 5
-          offset = seconds * pixels_per_second
-          sketch.draw_line(250, 200, 100, 50 + offset)
+        seconds = time.time() - start_time
+        pixels_per_second = 5
+        offset = seconds * pixels_per_second
+        sketch.draw_line(250, 200, 100, 50 + offset)
 
-      sketch.on_step(draw_moving_line)
-      </pre>
+      sketch.on_step(draw_moving_line)</pre>
 
       Need help? <a href="https://gist.github.com/sampottinger/c991bfe174275c89112e466cc0cfa137">Here's what my python file looks like</a>. Go ahead and run this. Afterwards, we will break down what this does step by step.
 
@@ -291,9 +277,9 @@ sections:
 
       ```python
       def draw_moving_line(self):
-          mouse = sketch.get_mouse()
-          sketch.draw_line(250, 200, mouse.get_pointer_x(),
-                           mouse.get_pointer_y())
+        mouse = sketch.get_mouse()
+        sketch.draw_line(250, 200, mouse.get_pointer_x(),
+                         mouse.get_pointer_y())
       ```
 
       Need help? [Here's what my interactive python file looks like](https://gist.github.com/sampottinger/f04ec269d0678fa86d397a82e3b7c0f6). We ask our sketch to give us the position of the mouse. Then, we draw from the center of the sketch to the cursor position on each step.

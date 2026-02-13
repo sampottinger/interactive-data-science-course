@@ -17,23 +17,16 @@ sections:
       transformation matrix. However, give this a run and you might
       notice a problem.
 
-
       <pre>import sketchingpy
-
       sketch = sketchingpy.Sketch2D(500, 500)
-
       sketch.set_rect_mode('radius')
       sketch.set_angle_mode('degrees')
-
       size = 5
       for rotation in range(0, 12):
-          sketch.draw_rect(200, 0, size, size)
-          sketch.rotate(30)
-          size += 5
-
-      sketch.show()
-      </pre>
-
+        sketch.draw_rect(200, 0, size, size)
+        sketch.rotate(30)
+        size += 5
+      sketch.show()</pre>
 
       Our work is off the screen! Try changing the position of the
       squares.
@@ -45,40 +38,27 @@ sections:
       translate prior to rotation to indicate the point around which
       the rotation should occur.
 
-
       <pre>import sketchingpy
-
       sketch = sketchingpy.Sketch2D(500, 500)
-
       sketch.set_rect_mode('radius')
       sketch.set_angle_mode('degrees')
-
       def draw_at(x, y, color):
-          sketch.push_transform()
-          sketch.push_style()
-
-          sketch.translate(x, y)
-
-          sketch.set_fill(color)
-
-          size = 5
-          for rotation in range(0, 12):
-              sketch.draw_rect(100, 0, size, size)
-              sketch.rotate(30)
-              size += 2
-
-          sketch.pop_style()
-          sketch.pop_transform()
-
+        sketch.push_transform()
+        sketch.push_style()
+        sketch.translate(x, y)
+        sketch.set_fill(color)
+        size = 5
+        for rotation in range(0, 12):
+          sketch.draw_rect(100, 0, size, size)
+          sketch.rotate(30)
+          size += 2
+        sketch.pop_style()
+        sketch.pop_transform()
       sketch.translate(250, 250)
-
       draw_at(0, -100, "#1b9e7750")
       draw_at(-100, 100, "#d95f0250")
       draw_at(100, 100, "#7570b350")
-
-      sketch.show()
-      </pre>
-
+      sketch.show()</pre>
 
       It is also common to push and pop within a function so that you
       can keep track of what transforms have occurred.

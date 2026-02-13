@@ -74,8 +74,7 @@ sections:
       <a href="https://editor.sketchingpy.org/">sketchbook</a> by clicking on
       upload file. Next, let's draw a first piece of 14 px sized text.
 
-      <pre>
-      import sketchingpy
+      <pre>import sketchingpy
 
       sketch = sketchingpy.Sketch2D(500, 500)
       sketch.clear("#FFFFFF")
@@ -85,8 +84,7 @@ sections:
       sketch.clear_stroke()
       sketch.draw_text(10, 240, "Interactive Data Science and Visualization")
 
-      sketch.show()
-      </pre>
+      sketch.show()</pre>
 
       If you are using Sketchingpy outside the browser, you may need to say
       "PublicSans-Regular.otf" instead. Anyway, try switching the text to say
@@ -110,8 +108,7 @@ sections:
       Like other types of drawing, we can specify alignment for text. We will
       start with horizontal alignment as it is a bit simplier.
 
-      <pre>
-      import sketchingpy
+      <pre>import sketchingpy
 
       sketch = sketchingpy.Sketch2D(500, 500)
       sketch.clear("#FFFFFF")
@@ -126,8 +123,7 @@ sections:
       sketch.set_text_align('right')
       sketch.draw_text(490, 350, 'Interactive Data Science and Visualization')
 
-      sketch.show()
-      </pre>
+      sketch.show()</pre>
 
       There is another option for horizontal alignment called "center" which
       draws the text such that its geometric center is at the x position
@@ -139,8 +135,7 @@ sections:
       Vertical alignment has a few options: top, bottom, center, and baseline.
       To see what the each does, let's play with some text which as descenders.
 
-      <pre>
-      import sketchingpy
+      <pre>import sketchingpy
 
       sketch = sketchingpy.Sketch2D(500, 500)
       sketch.clear("#FFFFFF")
@@ -155,8 +150,7 @@ sections:
       sketch.set_text_align('left', 'top')
       sketch.draw_text(10, 250, 'Going on a journey.')
 
-      sketch.show()
-      </pre>
+      sketch.show()</pre>
 
       Try changing top to bottom, center, and baseline to see how the alignment
       changes. In particular, compare bottom to baseline: the descenders fall
