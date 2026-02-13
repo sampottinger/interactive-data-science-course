@@ -63,7 +63,7 @@ Carefully check all Python code snippets (in `<pre>` blocks or markdown fenced c
   - A `return` statement inside a function must be indented inside the function body.
   - Nested blocks (e.g., a `for` loop inside a `def`) require additional indentation levels.
 - **Lost indentation**: Watch for lines that should be indented but are flush-left or at the wrong indent level. This is common when content has been through copy-paste or migration. For example, if a function body has two statements and only the first is indented, the second one likely lost its indentation.
-- **Consistent indentation style**: Use 4 spaces per indent level in Python code snippets (standard Python convention).
+- **Consistent indentation style**: Use 2 spaces per indent level in Python code snippets (project convention per CONTRIBUTING.md).
 - **Extra leading whitespace in `<pre>` blocks**: When HTML sections use `<pre>` tags inside YAML literal block scalars (`|`), the YAML indentation is preserved in the output. Ensure code inside `<pre>` blocks is left-aligned (no leading whitespace from YAML indentation). The `<pre>` open tag and the first line of code should be on the same line to avoid leading blank lines. For example:
   ```
   # Bad - extra leading whitespace from YAML indentation:
