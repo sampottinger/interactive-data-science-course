@@ -7,35 +7,9 @@ Interactive Data Science and Visualization takes a multi-disciplinary perspectiv
 This self-paced massive open online course (MOOC) is a thoughtful upgrade to Stat 198 taught at the University of California, Berkeley in 2025. It adds additional resources and optional lessons along with modifications for a fully online experience. That said, it also offers modularity where these re-usable open educational materials can be adapted to other instruction.
 
 ## Structure / Format
-The source materials for these resources are divided into three directories.
-Lesson definitions are organized in `lecture/lessons/` as individual YAML
-files (with `.yml` extension) within numbered section subdirectories (e.g.,
-`01_Hello`, `02_Primitives`). Each section directory contains per-lesson YAML
-files and an `index.yml` file with section metadata (name, tagline, detailed
-description). These are rendered into the overall MOOC website.
+The source materials for these resources are divided into three directories. Lesson definitions are organized in `lecture`. Meanwhile, `course_wide` offers resources which apply across many or all lessons of the course. These are wide-ranging documents such as the course manual and syllabus as well as grading rubric. Finally, `labs` has hands-on tutorials and focused instruction on implementation skills. These are often recommended for a flipped classroom structure.
 
-### Individual lessons
-Found in `/lecture`, traditional lectures that mix classic instruction and
-shorter hands-on activities intended for a traditional classroom structure.
-Lesson YAML files are organized in `lecture/lessons/` within numbered section
-subdirectories (e.g., `01_Hello/00_hello_preface.yml`), while lesson materials
-(markdown, PDF, and PPTX files) are organized under `lecture/support/` in
-`md/`, `pdf/`, and `pptx/` subdirectories. Additional supporting files are in
-`support/web/` and `support/misc/`. These are available in **markdown** with
-html and typically **PDF**, **PPTX**, and **video** accompanying materials.
-
-### Course-wide materials
-Found in `/course_wide`, these are resources which apply across many or all lessons of the course and are wide-ranging documents such as the course manual and syllabus as well as grading rubric. In general, these are available in **markdown** with **html** and **PDF** options.
-
-Course-wide materials are rendered from Jinja2 templates using `course_wide/render.py`:
- - `base.html` and `base.md`: Shared structure across all course-wide pages
- - `syllabus_template.html` and `syllabus_template.md`: Syllabus templates
- - `manual_template.html` and `manual_template.md`: Course manual templates
- - `rubric_template.html` and `rubric_template.md`: Grading rubric templates
- - `course_wide.yml`: Structured data for course sections, lessons, and rubric criteria
-
-### Skills labs
-Found in `/labs`, hands-on tutorials and focused instruction on implementation skills. These are often recommended for a flipped classroom structure. Lab YAML source files (with `.yml` extension) are organized in `labs/Lab_1/` through `labs/Lab_6/` subdirectories, each containing an `index.yml` and tutorial YAML files. These are rendered into **HTML** and **Markdown** formats with supplemental materials.
+In general, resources are converted from Markdown and YAML to HTML-rendered resources. Additional information is available as README files in each of the subdirectories.
 
 ## Using
 The course materials are available online for free at [https://mooc.interactivedatascience.courses](https://mooc.interactivedatascience.courses/). This includes:

@@ -1,38 +1,11 @@
 # Lecture Materials
 
-This directory contains the lesson materials for the Interactive Data Science and Visualization MOOC. These traditional lecture-style lessons mix classic instruction with shorter hands-on activities.
-
-## Directory Structure
-
-```
-lecture/
-├── lessons/              # Lesson YAML files organized by section
-│   ├── 01_Hello/         # Section subdirectory
-│   │   ├── index.yml     # Section metadata
-│   │   ├── 00_hello_preface.yml
-│   │   ├── 01_hello_visualization.yml
-│   │   └── ...
-│   ├── 02_Primitives/
-│   ├── 03_Combination/
-│   ├── 04_Conversation/
-│   ├── 05_Context/
-│   └── 06_Conclusion/
-├── support/              # Supporting materials for all lessons
-│   ├── md/               # Markdown lesson documents
-│   ├── pdf/              # PDF slide decks
-│   ├── pptx/             # PowerPoint source files
-│   ├── web/              # Web assets (images, CSS, JS)
-│   └── misc/             # Miscellaneous files (datasets, supplemental docs)
-├── render.py             # Python script to generate lesson pages
-├── render.sh             # Bash wrapper for render.py
-├── lesson.html           # Template for individual lesson pages
-└── index.html            # Template for course index page
-```
+This directory contains the lesson materials for the Interactive Data Science and Visualization MOOC. These traditional lecture-style lessons mix classic instruction with shorter hands-on activities. Specifically, these correspond to individual lessons originally taught in the classroom.
 
 ## YAML Format
+The course is broken into multiple sections represented as directories containing the individual lessons.
 
 ### Section Index (index.yml)
-
 Each section directory's `index.yml` contains metadata:
 
 | Field    | Required | Description                                      | Type   |
@@ -44,7 +17,6 @@ Each section directory's `index.yml` contains metadata:
 Use `>` (folded scalar) for multi-line `detailed` content. Keep lines to 100 characters or fewer.
 
 ### Lesson Files
-
 Each lesson YAML file (named with numeric prefix like `00_hello_preface.yml`) represents a single lesson:
 
 | Field          | Required    | Description                                                              | Type   |
@@ -61,10 +33,9 @@ Each lesson YAML file (named with numeric prefix like `00_hello_preface.yml`) re
 | links          | No          | List of links mentioned in lesson (with "text" and "url" fields)         | list   |
 | video          | No          | Vimeo ID for lesson video                                                | int    |
 
-**Note:** `assignment` is for exercises without a work product submission, while `reading` is for assigned readings. Both are distinct from `links`, which provide access to materials needed during the lesson itself.
+Note that `assignment` is for exercises without a work product submission, while `reading` is for assigned readings. Both are distinct from `links`, which provide access to materials needed during the lesson itself.
 
 ### Citations
-
 Citations are provided as inline YAML lists. Each citation contains:
 
 | Field     | Required    | Description                                           | Type   |
@@ -73,29 +44,10 @@ Citations are provided as inline YAML lists. Each citation contains:
 | doi       | No          | DOI identifier (e.g., "10.1080/01621459.1984.10478080") | string |
 | available | No          | URL where resource can be accessed                    | string |
 
-**Important:**
-- Do NOT include "Available:" or "doi:" prefix in `text` — these are generated automatically
-- A citation may have `doi`, `available`, both, or neither
-- For `text` values exceeding 100 characters, use `>` (folded scalar) and keep lines under 100 characters
-- Do not break URLs across lines
-
-#### Example
-
-```yaml
-citations:
-  - text: >
-      J. Snow, On the mode of communication of cholera. London: John
-      Churchill, 1855.
-    available: https://archive.org/details/b28985266/page/n57/mode/2up
-  - text: >
-      W. S. Cleveland and R. McGill, "Graphical Perception: Theory,
-      Experimentation, and Application to the Development of Graphical
-      Methods," Journal of the American Statistical Association, vol. 79,
-      no. 387, pp. 531-554, Sep. 1984.
-    doi: 10.1080/01621459.1984.10478080
-```
+Though we use an IEEE-like format, please do not include "Available:" or "doi:" prefix in `text` as these are generated automatically. That said, a citation may have `doi`, `available`, both, or neither. Additionally, for `text` values exceeding 100 characters, use `>` (folded scalar) and keep lines under 100 characters. However, do not break URLs across lines.
 
 ### Best Practices
+Please try to maintain the following general practices:
 
 - HTML fields should use `>` (folded scalar) for multi-line content
 - Keep lines to 100 characters or fewer (except very long URLs)
@@ -105,7 +57,7 @@ citations:
 - Remove leading/trailing whitespace unless it improves readability
 - Avoid JSON object notation
 
-### Example Lesson
+That in mind, here is a complete lesson:
 
 ```yaml
 number: 1
@@ -134,16 +86,13 @@ citations:
 ```
 
 ## Supporting Materials
+In addition to the individual lesson information in the YAML file, supporting materials are stored in `lecture/support/`:
 
-All lesson materials beyond YAML definitions are stored in `lecture/support/`:
-
-- **md/**: Markdown versions of lessons (recommended for all lessons). Files named `lesson00.md`, `lesson01.md`, etc.
-- **pdf/**: PDF slide decks with title slide and CC license slide
-- **pptx/**: PowerPoint source files (optional but encouraged)
+- **md/**: Markdown versions of lessons (required for all lessons). Files named `lesson00.md`, `lesson01.md`, etc.
+- **pdf/**: PDFs like slide decks with title slide and CC license slide
+- **pptx/**: PowerPoint source files (optional)
 - **web/**: Web assets used across multiple lessons (images, CSS, JavaScript)
 - **misc/**: Miscellaneous files for specific lesson activities (datasets, supplemental documents)
-
-### Markdown Structure
 
 Each markdown lesson (`lesson00.md`) should include:
 
@@ -153,8 +102,9 @@ Each markdown lesson (`lesson00.md`) should include:
 4. **Take Aways**: 1 sentence overview followed by bullet points
 5. **Citations**: Citations (may differ from YAML citations if needed for assignments/activities)
 
-## Building
+These markdown files are also rendered in the lesson HTML page in the course website under a `details` tag.
 
+## Building
 To build all lessons, run from the `lecture` directory:
 
 ```bash
@@ -171,5 +121,4 @@ bash render.sh
 The render script processes all lesson YAML files and section index files to generate the course website structure.
 
 ## Additional Information
-
 For detailed contributing guidelines, coding standards, and project structure, see the main [CONTRIBUTING.md](../CONTRIBUTING.md) in the repository root.
