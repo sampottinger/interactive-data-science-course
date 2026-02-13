@@ -264,6 +264,29 @@ def process_citation(citation):
   return result
 
 
+def check_content_attributes(has_html, has_markdown):
+  """Validate that exactly one of html or markdown is present.
+
+  Args:
+    has_html: Whether an 'html' attribute is present.
+    has_markdown: Whether a 'markdown' attribute is present.
+
+  Raises:
+    ValueError: If both 'html' and 'markdown' are present.
+    ValueError: If neither 'html' nor 'markdown' is present.
+  """
+  if has_html and has_markdown:
+    raise ValueError(
+        'Section has both "html" and "markdown" attributes. '
+        'Only one is allowed.'
+    )
+
+  if not has_html and not has_markdown:
+    raise ValueError(
+        'Section must have either "html" or "markdown" attribute.'
+    )
+
+
 def process_section_content(section):
   """Process section content from html or markdown attributes.
 
@@ -279,32 +302,13 @@ def process_section_content(section):
     dict: The section dict with processed content in 'body' field.
 
   Raises:
-    ValueError: If 'body' attribute is used, if both 'html' and 'markdown'
-      are present, if neither is present, or if blockstyle value is invalid.
+    ValueError: If both 'html' and 'markdown' are present, if neither
+      is present, or if blockstyle value is invalid.
   """
-  # Check if deprecated 'body' attribute is used
-  if 'body' in section:
-    raise ValueError(
-        f'Section "{section.get("short", "unknown")}" uses the deprecated '
-        f'"body" attribute. Please use "html" or "markdown" instead.'
-    )
-
-  # Check for both html and markdown
   has_html = 'html' in section
   has_markdown = 'markdown' in section
 
-  if has_html and has_markdown:
-    raise ValueError(
-        f'Section "{section.get("short", "unknown")}" has both "html" and '
-        f'"markdown" attributes. Only one content attribute is allowed.'
-    )
-
-  # Check for neither html nor markdown
-  if not has_html and not has_markdown:
-    raise ValueError(
-        f'Section "{section.get("short", "unknown")}" is missing a content '
-        f'attribute. Please provide either "html" or "markdown".'
-    )
+  check_content_attributes(has_html, has_markdown)
 
   # Get the content
   content = None

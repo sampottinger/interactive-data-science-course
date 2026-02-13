@@ -174,14 +174,14 @@ lessons:
           [Review of Tufte's "The Visual Display of Quantitative Information"
           (LeRoy 2018)](https://benjaminleroy.github.io/pages/blog/public/post/2018/05/16/review-of-tufte-s-the-visual-display-of-quantitative-information/)
     class:
-      - html: >
+      - markdown: >
           Examples of problematic graphs
-          (<a href="https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/">Tufte 2001</a>),
+          ([Tufte 2001](https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/)),
           Chart junk
-          (<a href="https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/">Tufte 2001</a>),
+          ([Tufte 2001](https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/)),
           Tuftean axes
-          (<a href="https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/">Tufte 2001</a>),
-          <a href="https://medium.com/@kennelliott/39-studies-about-human-perception-in-30-minutes-4728f9e31a73">After Tufte (Elliot 2016)</a>
+          ([Tufte 2001](https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/)),
+          [After Tufte (Elliot 2016)](https://medium.com/@kennelliott/39-studies-about-human-perception-in-30-minutes-4728f9e31a73)
     activity:
       - markdown: Example visualization 2.
 
@@ -192,11 +192,11 @@ lessons:
           [Preattentive Attributes in Visualization
           (Kesavan 2016)](https://daydreamingnumbers.com/blog/preattentive-attributes-example/)
     class:
-      - html: >
+      - markdown: >
           Visual processing stages, working memory, pre-attention features
-          (<a href="https://shop.elsevier.com/books/visual-thinking-for-information-design/ware/978-0-12-823567-6">Ware 2021</a>).
+          ([Ware 2021](https://shop.elsevier.com/books/visual-thinking-for-information-design/ware/978-0-12-823567-6)).
           Gestalt / neg space
-          (<a href="https://youtu.be/c1qdyszaeTU">Portnow et al 2018</a>)
+          ([Portnow et al 2018](https://youtu.be/c1qdyszaeTU))
     activity:
       - markdown: Job satisfaction.
 
@@ -207,11 +207,11 @@ lessons:
           [Inventing on Principle
           (Victor 2012)](https://www.youtube.com/watch?v=PUv66718DII)
     class:
-      - html: >
+      - markdown: >
           Color
-          (<a href="https://shop.elsevier.com/books/visual-thinking-for-information-design/ware/978-0-12-823567-6">Ware 2021</a>),
+          ([Ware 2021](https://shop.elsevier.com/books/visual-thinking-for-information-design/ware/978-0-12-823567-6)),
           Gestalt / neg space
-          (<a href="https://youtu.be/c1qdyszaeTU">Portnow et al 2018</a>)
+          ([Portnow et al 2018](https://youtu.be/c1qdyszaeTU))
     activity:
       - markdown: Job satisfaction remix.
 
@@ -242,12 +242,12 @@ lessons:
           [How William Cleveland Turned Data Visualization Into a Science
           (Pricenomics 2016)](https://priceonomics.com/how-william-cleveland-turned-data-visualization/)
     class:
-      - html: >
-          <a href="https://www.jstor.org/stable/2288400">Cleveland and McGill (1984)</a>,
+      - markdown: >
+          [Cleveland and McGill (1984)](https://www.jstor.org/stable/2288400),
           grammar
-          (<a href="https://link.springer.com/book/10.1007/0-387-28695-0">Wilkinson 2005</a>),
+          ([Wilkinson 2005](https://link.springer.com/book/10.1007/0-387-28695-0)),
           shared axes / direct label
-          (<a href="https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/">Tufte 2001</a>).
+          ([Tufte 2001](https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/)).
           Chartjunk 2.
     activity:
       - markdown: Census 1 / Income inequality with 4 variables.
@@ -257,12 +257,12 @@ lessons:
     reading:
       - markdown: "[From Data to Viz (Holtz 2018)](https://www.data-to-viz.com/)"
     class:
-      - html: >
+      - markdown: >
           Taxonomy of common graphs
-          (<a href="https://www.datylon.com/blog/types-of-charts-graphs-examples-data-visualization">Hess 2022</a>).
-          <a href="https://towardsdatascience.com/what-are-the-happiest-jobs-in-tech-4c4d33e065f0">Developer happiness (Pottinger 2019)</a>,
+          ([Hess 2022](https://www.datylon.com/blog/types-of-charts-graphs-examples-data-visualization)).
+          [Developer happiness (Pottinger 2019)](https://towardsdatascience.com/what-are-the-happiest-jobs-in-tech-4c4d33e065f0),
           task / domain
-          (<a href="https://www.cs.ubc.ca/~tmm/vadbook/">Munzner 2014</a>).
+          ([Munzner 2014](https://www.cs.ubc.ca/~tmm/vadbook/)).
     activity:
       - markdown: Census 2 / Income inequality with 6 variables.
 
@@ -273,16 +273,16 @@ lessons:
           [Lupi and Posavec
           (2015)](https://vimeo.com/channels/eyeo2015/133608605)
     class:
-      - html: >
+      - markdown: >
           Movements
-          (<a href="http://www.wefeelfine.org">Harris and Kamvar 2015</a>;
-          <a href="https://gleap.org/content/ted_visualization">Pottinger 2015</a>).
+          ([Harris and Kamvar 2015](http://www.wefeelfine.org);
+          [Pottinger 2015](https://gleap.org/content/ted_visualization)).
           Levels
-          (<a href="https://vimeo.com/133608686">Fry 2015</a>).
+          ([Fry 2015](https://vimeo.com/133608686)).
           Networks. Geographic data formats, projections. A look at
-          <a href="https://gephi.org/">Gephi</a>
+          [Gephi](https://gephi.org/)
           and
-          <a href="https://qgis.org/">QGIS</a>.
+          [QGIS](https://qgis.org/).
     activity:
       - markdown: Draw your last 5 years and your next 5 years by hand.
 
@@ -293,9 +293,9 @@ lessons:
           [15 Views on a Node Link Graph
           (Munzner 2007)](https://www.youtube.com/watch?v=WOBKnRlOAes)
     class:
-      - html: >
+      - markdown: >
           Task / domain
-          (<a href="https://www.cs.ubc.ca/~tmm/vadbook/">Munzner 2014</a>).
+          ([Munzner 2014](https://www.cs.ubc.ca/~tmm/vadbook/)).
     activity:
       - markdown: BART 1
 
@@ -306,21 +306,21 @@ lessons:
           [Designing for Realtime Spacecraft Operations
           (Binx 2016)](https://www.youtube.com/watch?v=HiGd-JJ94QA)
     class:
-      - html: >
+      - markdown: >
           Inquiry
-          (<a href="https://www.cs.ubc.ca/~tmm/vadbook/">Munzner 2014</a>),
+          ([Munzner 2014](https://www.cs.ubc.ca/~tmm/vadbook/)),
           thinking-aloud
-          (<a href="https://research.ibm.com/publications/learning-to-use-a-text-processing-system-evidence-from-thinking-aloud-protocols">Lewis 1982</a>),
+          ([Lewis 1982](https://research.ibm.com/publications/learning-to-use-a-text-processing-system-evidence-from-thinking-aloud-protocols)),
           diary studies
-          (<a href="https://dl.acm.org/doi/10.1145/1168149.1168158">Shneiderman and Plaisant 2006</a>),
+          ([Shneiderman and Plaisant 2006](https://dl.acm.org/doi/10.1145/1168149.1168158)),
           participatory design
-          (<a href="https://www.interaction-design.org/literature/topics/participatory-design">IxDF 2023</a>),
+          ([IxDF 2023](https://www.interaction-design.org/literature/topics/participatory-design)),
           generalizable knowledge vs quality assurance.
     activity:
-      - html: >
+      - markdown: >
           Think-Aloud of
-          <a href="https://pyafscgap.org/">Pyafscgap</a>
-          (<a href="https://joss.theoj.org/papers/10.21105/joss.05593">Pottinger and Zarpellon 2023</a>).
+          [Pyafscgap](https://pyafscgap.org/)
+          ([Pottinger and Zarpellon 2023](https://joss.theoj.org/papers/10.21105/joss.05593)).
 
   - lesson: 16
     section: Conversation
@@ -329,15 +329,15 @@ lessons:
           [It's Not You, Bad Doors are Everywhere
           (Posner et al 2016)](https://www.youtube.com/watch?v=yY96hTb8WgI)
     class:
-      - html: >
+      - markdown: >
           History of HCI
-          (<a href="https://dl.acm.org/doi/10.1145/3033701.3033740">Duarte and Baranauskas 2016</a>).
+          ([Duarte and Baranauskas 2016](https://dl.acm.org/doi/10.1145/3033701.3033740)).
           Affordances
-          (<a href="https://www.nngroup.com/books/design-everyday-things-revised/">Norman 2013</a>),
+          ([Norman 2013](https://www.nngroup.com/books/design-everyday-things-revised/)),
           working memory
-          (<a href="https://shop.elsevier.com/books/visual-thinking-for-information-design/ware/978-0-12-823567-6">Ware 2021</a>),
+          ([Ware 2021](https://shop.elsevier.com/books/visual-thinking-for-information-design/ware/978-0-12-823567-6)),
           social actors
-          (<a href="https://dl.acm.org/doi/10.1145/191666.191703">Nass et al 1994</a>)
+          ([Nass et al 1994](https://dl.acm.org/doi/10.1145/191666.191703))
     activity:
       - markdown: BART 2
 
@@ -352,9 +352,9 @@ lessons:
           [Explorable Explanations
           (Victor 2011)](https://worrydream.com/ExplorableExplanations/)
     class:
-      - html: >
+      - markdown: >
           Why game design and its role, thinking and play, PLATO system
-          (<a href="https://ieeexplore.ieee.org/document/4322215">Bitzer et al 1961</a>).
+          ([Bitzer et al 1961](https://ieeexplore.ieee.org/document/4322215)).
           Ethos, pathos, logos.
     activity:
       - markdown: Game or interactive viz analysis part 1.
@@ -366,10 +366,10 @@ lessons:
           [The Last Guardian and the Language of Games
           (Brown 2017)](https://www.youtube.com/watch?v=Qot5_rMB8Jc)
     class:
-      - html: >
-          <a href="https://www.theguardian.com/us-news/ng-interactive/2017/dec/20/bussed-out-america-moves-homeless-people-country-study">Bussed out visualization (Bremer and Wu 2017)</a>,
-          <a href="https://guns.periscopic.com/">Gun Deaths (Rees 2013)</a>,
-          <a href="https://ncase.me/polygons/">Parable of the Polygons (Hart and Case 2014)</a>.
+      - markdown: >
+          [Bussed out visualization (Bremer and Wu 2017)](https://www.theguardian.com/us-news/ng-interactive/2017/dec/20/bussed-out-america-moves-homeless-people-country-study),
+          [Gun Deaths (Rees 2013)](https://guns.periscopic.com/),
+          [Parable of the Polygons (Hart and Case 2014)](https://ncase.me/polygons/).
     activity:
       - markdown: Game or interactive viz analysis part 2.
 
@@ -385,11 +385,11 @@ lessons:
           (Brown 2023)](https://www.youtube.com/watch?v=CZzcVs8tNfE&themeRefresh=1)
         separator: "."
     class:
-      - html: >
-          <a href="https://gamedesignskills.com/game-design/core-loops-in-gameplay/">Loops (Brazie 2024)</a>,
-          <a href="https://youtu.be/dBmIkEvEBtA">Hayashida level design</a>
-          (<a href="https://joss.theoj.org/papers/10.21105/joss.05593">Pottinger and Zarpellon 2023</a>),
-          <a href="https://doi.org/10.48550/ARXIV.2312.11359">Plastics (Pottinger et al 2024)</a>
+      - markdown: >
+          [Loops (Brazie 2024)](https://gamedesignskills.com/game-design/core-loops-in-gameplay/),
+          [Hayashida level design](https://youtu.be/dBmIkEvEBtA)
+          ([Pottinger and Zarpellon 2023](https://joss.theoj.org/papers/10.21105/joss.05593)),
+          [Plastics (Pottinger et al 2024)](https://doi.org/10.48550/ARXIV.2312.11359)
     activity:
       - markdown: Game or interactive viz analysis part 3*.
 
@@ -411,10 +411,10 @@ lessons:
           [Spore, birth of a game
           (Wright 2007)](https://www.ted.com/talks/will_wright_spore_birth_of_a_game?language=en)
     class:
-      - html: >
-          <a href="https://www.computerhistory.org/revolution/computer-games/16/201/2309">Possibility space (Wright 2003)</a>.
-          <a href="https://www.youtube.com/watch?v=-auyB19Mc6U">Diegesis (Dassler and Portnow 2019)</a>.
-          <a href="https://doi.org/10.52933/jdssv.v5i3.134">APH visualization (Pottinger et al 2025)</a>.
+      - markdown: >
+          [Possibility space (Wright 2003)](https://www.computerhistory.org/revolution/computer-games/16/201/2309).
+          [Diegesis (Dassler and Portnow 2019)](https://www.youtube.com/watch?v=-auyB19Mc6U).
+          [APH visualization (Pottinger et al 2025)](https://doi.org/10.52933/jdssv.v5i3.134).
     activity:
       - markdown: None
 
@@ -425,8 +425,8 @@ lessons:
           [Games are for Everyone
           (Brown 2018)](https://www.youtube.com/watch?v=xrqdU4cZaLw)
     class:
-      - html: >
-          <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG">WCAG (MDN 2024)</a>,
+      - markdown: >
+          [WCAG (MDN 2024)](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG),
           common patterns, non-visual strategies.
     activity:
       - markdown: '[Final] Choose topic.'
@@ -442,8 +442,8 @@ lessons:
           [Sasha Costanza-Chock
           (2019)](https://vimeo.com/354276956)
     class:
-      - html: >
-          <a href="https://www.slideshare.net/Samnsparky/user-centered-data-science-135680883">User Centered Machine Learning (Pottinger 2019)</a>.
+      - markdown: >
+          [User Centered Machine Learning (Pottinger 2019)](https://www.slideshare.net/Samnsparky/user-centered-data-science-135680883).
     activity:
       - markdown: '[Final] Initial designs.'
 
@@ -454,8 +454,8 @@ lessons:
           [The World Design of Metroid 1 and Zero Mission
           (Brown 2018)](https://www.youtube.com/watch?v=kUT60DKaEGc)
     class:
-      - html: >
-          <a href="https://stamen.com/data-visualization-for-education-when-asking-questions-is-the-answer/">Inquiry-based design (Hayes 2023)</a>,
+      - markdown: >
+          [Inquiry-based design (Hayes 2023)](https://stamen.com/data-visualization-for-education-when-asking-questions-is-the-answer/),
           overview of datasets, journey mapping.
     activity:
       - markdown: '[Final] Initial design ideas.'
@@ -472,14 +472,14 @@ lessons:
   - lesson: 26
     section: Skills
     reading:
-      - html: >
+      - markdown: >
           Learn more about ethical considerations by watching
-          <a href="https://satml.org/2023/videos/">Timnit Gebru's talk on Eugenics and the Promise of Utopia through AGI</a>.
+          [Timnit Gebru's talk on Eugenics and the Promise of Utopia through AGI](https://satml.org/2023/videos/).
     class:
-      - html: >
+      - markdown: >
           Explore using AI in implementing data visualizations. Optional extra
           lesson on using generative AI. Complete
-          <a href="/labs">Skills Lab 6</a>
+          [Skills Lab 6](/labs)
           to get hands on!
     activity:
       - markdown: None.

@@ -39,6 +39,29 @@ def get_template_loader():
     return jinja2.Environment(loader=loader)
 
 
+def check_content_attributes(has_html, has_markdown):
+    """Validate that exactly one of html or markdown is present.
+
+    Args:
+        has_html: Whether an 'html' attribute is present.
+        has_markdown: Whether a 'markdown' attribute is present.
+
+    Raises:
+        ValueError: If both 'html' and 'markdown' are present.
+        ValueError: If neither 'html' nor 'markdown' is present.
+    """
+    if has_html and has_markdown:
+        raise ValueError(
+            'Item has both "html" and "markdown" attributes. '
+            'Only one is allowed.'
+        )
+
+    if not has_html and not has_markdown:
+        raise ValueError(
+            'Item must have either "html" or "markdown" attribute.'
+        )
+
+
 def process_item_content(item):
     """Process item content from html or markdown attributes.
 
@@ -54,33 +77,13 @@ def process_item_content(item):
         dict: The item dict with processed content in 'text' field.
 
     Raises:
-        ValueError: If 'text' attribute is used (deprecated).
         ValueError: If both 'html' and 'markdown' are present.
         ValueError: If neither 'html' nor 'markdown' is present.
     """
-    has_text = 'text' in item
     has_html = 'html' in item
     has_markdown = 'markdown' in item
 
-    # Raise error if deprecated 'text' attribute is used
-    if has_text:
-        raise ValueError(
-            'The "text" attribute is no longer supported. '
-            'Please use "html" or "markdown" instead.'
-        )
-
-    # Raise error if both html and markdown are present
-    if has_html and has_markdown:
-        raise ValueError(
-            'Item has both "html" and "markdown" attributes. '
-            'Only one is allowed.'
-        )
-
-    # Raise error if neither html nor markdown is present
-    if not has_html and not has_markdown:
-        raise ValueError(
-            'Item must have either "html" or "markdown" attribute.'
-        )
+    check_content_attributes(has_html, has_markdown)
 
     # Process content based on which attribute is present
     if has_html:
