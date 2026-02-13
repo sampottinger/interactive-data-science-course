@@ -12,12 +12,12 @@ sections:
   - name: load-images
     short: Load Images
     long: Load and display external images
-    body: >
+    markdown: |
       Let's load a simple image and draw it. Go ahead and add
-      <a href="/labs/reading.png" target="_blank">reading.png</a> to your
+      [reading.png](/labs/reading.png) to your
       sketchbook. Then, add the following code:
 
-      <pre>
+      ```python
       import sketchingpy
 
       sketch = sketchingpy.Sketch2DWeb(500, 500)
@@ -29,7 +29,7 @@ sections:
       sketch.draw_image(250, 250, image)
 
       sketch.show()
-      </pre>
+      ```
 
       After giving this a run, try changing the resize dimensions. Finally,
       try changing the mode specified in set_image_mode. There are two
@@ -37,12 +37,12 @@ sections:
   - name: transparency
     short: Transparency
     long: Working with image transparency
-    body: >
+    markdown: |
       Some file formats like png can support transparency. Others always
       have a filled background. To demonstrate how transparency works, try
       this interactive sketch.
 
-      <pre>
+      ```python
       import sketchingpy
 
       sketch = sketchingpy.Sketch2DWeb(500, 500)
@@ -66,65 +66,58 @@ sections:
       sketch.on_step(draw)
 
       sketch.show()
-      </pre>
+      ```
 
       Try changing reading.png to
-      <a href="/labs/reading.jpg" target="_blank">reading.jpg</a> instead.
+      [reading.jpg](/labs/reading.jpg) instead.
       While PNG has a transparency layer, JPEG doesn't support transparency.
   - name: buffers
     short: Buffers
     long: Understanding graphics buffers for performance
-    body: >
-      <p>
-        We won't go too far into buffers but, if you have an "expensive"
-        part of your graphic to draw, it might make sense to save a copy of
-        your work instead of having it recreated from scrach on each step.
-        Buffers are like images that aren't saved to files but, instead, are
-        held on to by the computer in memory for quick re-drawing. For more
-        details, see the
-        <a
-          href="https://sketchingpy.org/examples/web/example.html?sketch=buffer_simple"
-          target="_blank">buffers example</a>.
-      </p>
+    markdown: |
+      We won't go too far into buffers but, if you have an "expensive"
+      part of your graphic to draw, it might make sense to save a copy of
+      your work instead of having it recreated from scrach on each step.
+      Buffers are like images that aren't saved to files but, instead, are
+      held on to by the computer in memory for quick re-drawing. For more
+      details, see the
+      [buffers example](https://sketchingpy.org/examples/web/example.html?sketch=buffer_simple).
 
-      <p>
-        All that said, to motivate why you might take this approach, imagine
-        your are drawing the user's location on a map. Let's say that the
-        map is made up of thousands of points and lines. It can be expensive
-        to draw that each time by calling draw_line. Instead, you might save
-        the results of your work after drawing it once, writing to one of
-        these in-memory images and just drawing glyphs on top of that map
-        like, for example, to indicate where the user currently within that
-        space.
-      </p>
+      All that said, to motivate why you might take this approach, imagine
+      your are drawing the user's location on a map. Let's say that the
+      map is made up of thousands of points and lines. It can be expensive
+      to draw that each time by calling draw_line. Instead, you might save
+      the results of your work after drawing it once, writing to one of
+      these in-memory images and just drawing glyphs on top of that map
+      like, for example, to indicate where the user currently within that
+      space.
   - name: save-images
     short: Save Images
     long: Export images from your sketches
-    body: >
+    markdown: |
       All this in mind, perhaps most important for us is saving from our
       sketches. Let's make a simple image file with an ellipse.
 
-      <pre>
+      ```python
       import sketchingpy
 
       sketch = sketchingpy.Sketch2D(500, 500)
       sketch.draw_ellipse(250, 250, 100, 100)
       sketch.save_image('ellipse.png')
       sketch.show()
-      </pre>
+      ```
 
       By default, this will have a transparent background (for most
       platforms). Note that, if you don't want a transparent background, you
       can specify a background color by calling
-      <a href="https://sketchingpy.org/reference/clear.html"
-      target="_blank">clear</a>.
+      [clear](https://sketchingpy.org/reference/clear.html).
   - name: next
     short: Next
     long: Continue to the next tutorial
-    body: >
+    markdown: >
       I think we have everything we need to make drawings. Let's next take a
       brief look at interactivity. Continue on to
-      <a href="/labs/resources_loops.html">Tutorial 10</a> to learn about
+      [Tutorial 10](/labs/resources_loops.html) to learn about
       user loops.
 citations:
   - text: A. Pottinger, "Sketchingpy." Sketchingpy Project, 2024. [Online].

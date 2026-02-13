@@ -7,52 +7,20 @@ sections:
   - name: motivation
     short: Motivation
     long: Understanding the need for advanced AI techniques
-    body: >
-      <p>
-        We've just seen <a href="/labs/ai_basics.html">how we can chat
-        with an AI assistant in building simple visualizations</a> but
-        let's consider two potential challenges and two solutions.
-      </p>
+    markdown: |
+      We've just seen [how we can chat with an AI assistant in building simple visualizations](/labs/ai_basics.html) but let's consider two potential challenges and two solutions.
 
-      <p>
-        <strong>Knowledge</strong>: What if you ask the AI assistant
-        about a technology it perhaps doesn't know much about or maybe
-        where that technology has changed since when the AI was built?
-        There is a protocol called <a href="https://llmstxt.org/">
-        llms.txt</a> which lets us provide new knowledge to assistants.
-        It is kind of like a library for AI!
-      </p>
+      **Knowledge**: What if you ask the AI assistant about a technology it perhaps doesn't know much about or maybe where that technology has changed since when the AI was built? There is a protocol called [llms.txt](https://llmstxt.org/) which lets us provide new knowledge to assistants. It is kind of like a library for AI!
 
-      <p>
-        <strong>Context</strong>: What about building visualizations with
-        novel representations or lots of customization where there's
-        quite a bit more code or iteration? AI assistants have limited
-        "context" or chat lengths. This can sometimes impair our ability
-        to use them in more complex tasks. That said, some assistants
-        like <a href="https://claude.ai/new">Claude</a> allow for use of
-        "subagents" which you can think of as allowing multiple AI
-        assistants to coordinate with each other, saving any individual
-        from over-burdening their context.
-      </p>
+      **Context**: What about building visualizations with novel representations or lots of customization where there's quite a bit more code or iteration? AI assistants have limited "context" or chat lengths. This can sometimes impair our ability to use them in more complex tasks. That said, some assistants like [Claude](https://claude.ai/new) allow for use of "subagents" which you can think of as allowing multiple AI assistants to coordinate with each other, saving any individual from over-burdening their context.
 
-      <p>
-        <strong>Reproducibility</strong>: If we have a lot of work with
-        an AI, how can we document our work? We will discuss
-        <a href="https://www.markdownguide.org/">markdown</a> and the
-        use of "task files" that allow us to prompt assistants with more
-        structure and documentation.
-      </p>
+      **Reproducibility**: If we have a lot of work with an AI, how can we document our work? We will discuss [markdown](https://www.markdownguide.org/) and the use of "task files" that allow us to prompt assistants with more structure and documentation.
 
-      <p>
-        This tutorial will walk through use of llms.txt and, optionally,
-        use of assistants to build out a more bespoke / tailored version
-        of the wolves and moose visualization from the
-        <a href="/labs/ai_basics.html">previous tutorial</a>.
-      </p>
+      This tutorial will walk through use of llms.txt and, optionally, use of assistants to build out a more bespoke / tailored version of the wolves and moose visualization from the [previous tutorial](/labs/ai_basics.html).
   - name: setup
     short: Setup
     long: Setting up your environment for advanced AI techniques
-    body: >
+    html: >
       <p>
         There are a few ways to pull this off but, if you are interested
         in using agents, going through Claude Code and the command line
@@ -164,7 +132,7 @@ sections:
   - name: importing-knowledge
     short: Importing Knowledge
     long: Using llms.txt to provide new knowledge to AI assistants
-    body: >
+    html: >
       <p>
         First, let's tell our AI assistant about the latest version of
         <a href="https://sketchingpy.org">Sketchingpy</a> which we will
@@ -229,7 +197,7 @@ sections:
   - name: scaffolding
     short: Scaffolding
     long: Creating the initial code structure
-    body: >
+    html: >
       <p>
         Alright we should be ready to take our first step which is just
         to sketch out the outlines of the code we want to have draw this
@@ -296,7 +264,7 @@ sections:
   - name: data
     short: Data
     long: Loading and preparing the data
-    body: >
+    html: >
       <p>
         Alright we have our scaffold here, let's bring in our data.
         Following the same flow, let's make a <code>02_data.md</code>:
@@ -315,7 +283,7 @@ sections:
   - name: draw-outlines
     short: Draw Outlines
     long: Drawing the axes and outline of the visualization
-    body: >
+    html: >
       <p>
         Now that we have gotten through so much of that set up, we are in
         a really good position to start doing some drawing. Let's make a
@@ -335,7 +303,7 @@ sections:
   - name: draw-years
     short: Draw Years
     long: Drawing the year labels
-    body: >
+    html: >
       <p>
         Next, we can start filling in some of the elements from the data
         themselves, starting with the years. Let's make a
@@ -351,7 +319,7 @@ sections:
   - name: draw-body
     short: Draw Body
     long: Drawing the data bars and labels
-    body: >
+    html: >
       <p>
         Alright let's get the rest of the data visible. In
         <code>05_draw_body.md</code>:
@@ -370,7 +338,7 @@ sections:
   - name: finishing-touches
     short: Finishing Touches
     long: Adding final details and polish
-    body: >
+    html: >
       <p>
         Finishing off this iterative process, let's highlight the max
         values from both series and clean up the title / labeling.
@@ -387,42 +355,16 @@ sections:
   - name: reflection
     short: Reflection
     long: Reflecting on advanced AI techniques
-    body: >
-      <p>
-        This tutorial offers some techniques to engage AI on difficult or
-        long tasks where you can break up elements into individual steps
-        and, optionally, then ask subagents to work through those steps
-        using repeatable structured actions all without exhausting
-        context. In any case, this co-iteration with AI remains essential
-        so that you can retain an active hand in ensuring a positive
-        overall outcome, guiding assistants in their work as they go.
-        Indeed, thanks to things like llms.txt, you can also invite
-        assistants into tasks where they can use the latest information
-        available.
-      </p>
+    markdown: |
+      This tutorial offers some techniques to engage AI on difficult or long tasks where you can break up elements into individual steps and, optionally, then ask subagents to work through those steps using repeatable structured actions all without exhausting context. In any case, this co-iteration with AI remains essential so that you can retain an active hand in ensuring a positive overall outcome, guiding assistants in their work as they go. Indeed, thanks to things like llms.txt, you can also invite assistants into tasks where they can use the latest information available.
 
-      <p>
-        Granted, what we discussed today may not necessarily be required
-        for each task:
-      </p>
+      Granted, what we discussed today may not necessarily be required for each task:
 
-      <ul>
-        <li>A markdown document can be helpful when you have a lot to say
-        or want to ensure there is an auditable trail of what you tried
-        within larger projects. However, sometimes we just need a small
-        script or edits.</li>
-        <li>Perhaps llms.txt are more important for libraries which
-        change often, are new, or may be less well known. That said, for
-        well established libraries, this might not be helpful.</li>
-        <li>Subagents really help keep larger efforts manageable. Even
-        so, for smaller edits, this might not be worth the overhead.</li>
-      </ul>
+      - A markdown document can be helpful when you have a lot to say or want to ensure there is an auditable trail of what you tried within larger projects. However, sometimes we just need a small script or edits.
+      - Perhaps llms.txt are more important for libraries which change often, are new, or may be less well known. That said, for well established libraries, this might not be helpful.
+      - Subagents really help keep larger efforts manageable. Even so, for smaller edits, this might not be worth the overhead.
 
-      <p>
-        Consider these as valuable ingredients as you craft your
-        engagement with AI. However, as with all things in engineering,
-        you have to decide what is best for the task at hand.
-      </p>
+      Consider these as valuable ingredients as you craft your engagement with AI. However, as with all things in engineering, you have to decide what is best for the task at hand.
 citations:
   - text: S. Hickey, "llms.txt," llms.txt, 2025. [Online].
     available: https://llmstxt.org/

@@ -10,135 +10,104 @@ sections:
   - name: motivation
     short: Motivation
     long: Why use AI for data visualization
-    body: >
-      <p>
-        So far, we have been building data visualizations through a
-        combination of pre-built charting libraries (like through matplotlib)
-        and custom drawing with technologies like Sketchingpy. However,
-        sometimes it can be a lot of code. Iteration times between one idea to
-        the next can be extensive. What if we could get through those cycles
-        faster? Maybe we could explore more design possibilities!
-      </p>
+    markdown: |
+      So far, we have been building data visualizations through a combination
+      of pre-built charting libraries (like through matplotlib) and custom
+      drawing with technologies like Sketchingpy. However, sometimes it can be
+      a lot of code. Iteration times between one idea to the next can be
+      extensive. What if we could get through those cycles faster? Maybe we
+      could explore more design possibilities!
 
-      <p>
-        That in mind, we next introduce AI assistants which can help you
-        implement faster. That said, these tools are best when used to
-        accelerate that iteration process we've already seen in the class. In
-        other words, as we will see in a moment, there is still value that
-        comes from building a prototype and experiencing it (as a human) to
-        further improve design choices.
-      </p>
+      That in mind, we next introduce AI assistants which can help you
+      implement faster. That said, these tools are best when used to
+      accelerate that iteration process we've already seen in the class. In
+      other words, as we will see in a moment, there is still value that
+      comes from building a prototype and experiencing it (as a human) to
+      further improve design choices.
 
-      <p>
-        Let's try practicing going through this cycle by revisiting the moose
-        and wolves example from the very start of class. However, this time,
-        let's see what it feels like to be accelerated by AI while still
-        applying our critical design perspective.
-      </p>
+      Let's try practicing going through this cycle by revisiting the moose
+      and wolves example from the very start of class. However, this time,
+      let's see what it feels like to be accelerated by AI while still
+      applying our critical design perspective.
   - name: role
     short: Role of AI
     long: Understanding the role of AI in visualization
-    body: >
-      <p>
-        AI assistants like <a href="https://claude.ai/">Claude</a>,
-        <a href="https://chat.openai.com/">ChatGPT</a>, or other language
-        models can help generate visualization code quickly. However, they
-        don't necessarily know about design and can't experience
-        visualizations the same way you (and your human audiences) will. A lot
-        of the heavy lifting still comes from guiding solutions to a good
-        conclusion, taking advantage of the techniques we discussed in class.
-        Put another way, they work best when you bring your visualization
-        expertise to direct the conversation which involves:
-      </p>
+    markdown: |
+      AI assistants like [Claude](https://claude.ai/),
+      [ChatGPT](https://chat.openai.com/), or other language models can help
+      generate visualization code quickly. However, they don't necessarily know
+      about design and can't experience visualizations the same way you (and
+      your human audiences) will. A lot of the heavy lifting still comes from
+      guiding solutions to a good conclusion, taking advantage of the
+      techniques we discussed in class. Put another way, they work best when
+      you bring your visualization expertise to direct the conversation which
+      involves:
 
-      <ul>
-        <li>
-          Knowing what kinds of visualization will best serve your data and
-          purpose or what you might want to explore.
-        </li>
-        <li>
-          Recognizing when a visualization generated has issues with
-          readability, accessibility, or other design considerations like poor
-          gestalt.
-        </li>
-        <li>
-          Providing specific feedback to guide the output in the process of
-          iterating towards a better result.
-        </li>
-      </ul>
+      - Knowing what kinds of visualization will best serve your data and
+        purpose or what you might want to explore.
+      - Recognizing when a visualization generated has issues with
+        readability, accessibility, or other design considerations like poor
+        gestalt.
+      - Providing specific feedback to guide the output in the process of
+        iterating towards a better result.
 
-      <p>
-        All that in mind, think of an AI assistant as an avenue to accelerate
-        implementation quickly but ask if that moving faster is always better.
-        How could it be an issue? Well, this depends on the task at hand but
-        consider that, when writing code yourself, you are confronted in the
-        implementation process with lots of questions and decisions because
-        the code forces you to be explicit about what you want. Instead, when
-        AI helps you move quickly, some of those choices might be made for you
-        possibly without you realizing. In other words, you need to be even
-        more conscientious of all of the concepts from the class in order to
-        ensure your ideas are layered in. Be careful that AI doesn't leave you
-        with less control.
-      </p>
+      All that in mind, think of an AI assistant as an avenue to accelerate
+      implementation quickly but ask if that moving faster is always better.
+      How could it be an issue? Well, this depends on the task at hand but
+      consider that, when writing code yourself, you are confronted in the
+      implementation process with lots of questions and decisions because
+      the code forces you to be explicit about what you want. Instead, when
+      AI helps you move quickly, some of those choices might be made for you
+      possibly without you realizing. In other words, you need to be even
+      more conscientious of all of the concepts from the class in order to
+      ensure your ideas are layered in. Be careful that AI doesn't leave you
+      with less control.
   - name: prepare
     short: Prepare
     long: Setting up for AI-assisted visualization
-    body: >
-      <p>
-        We'll be using <a href="https://matplotlib.org/">matplotlib</a> to
-        create a visualization of predator-prey dynamics between wolves and
-        moose populations at Isle Royale National Park, returning to an
-        example from <a href="/lesson1.html">Lesson 1</a>. This gives us a
-        nice dataset which has some dimensionality but still tame enough that
-        we can take advantage of some pre-built charts. The goal here is to
-        create a split bar plot showing both wolf and moose populations over
-        time, with wolves extending to the left and moose extending to the
-        right.
-      </p>
+    markdown: |
+      We'll be using [matplotlib](https://matplotlib.org/) to create a
+      visualization of predator-prey dynamics between wolves and moose
+      populations at Isle Royale National Park, returning to an example from
+      [Lesson 1](/lesson1.html). This gives us a nice dataset which has some
+      dimensionality but still tame enough that we can take advantage of some
+      pre-built charts. The goal here is to create a split bar plot showing
+      both wolf and moose populations over time, with wolves extending to the
+      left and moose extending to the right.
 
-      <p>
-        Before we can get into it, we do need access to an AI assistant that
-        can generate Python for data visualization. I used Claude which
-        typically offers strong performance in testing but other options
-        include <a href="https://chat.openai.com">ChatGPT</a>,
-        <a href="https://gemini.google.com/">Gemini</a>, and
-        <a href="https://mistral.ai/">Mistral AI</a>. If in need of a free
-        option, Mistral has also performed quite well.
-      </p>
+      Before we can get into it, we do need access to an AI assistant that
+      can generate Python for data visualization. I used Claude which
+      typically offers strong performance in testing but other options
+      include [ChatGPT](https://chat.openai.com),
+      [Gemini](https://gemini.google.com/), and
+      [Mistral AI](https://mistral.ai/). If in need of a free option, Mistral
+      has also performed quite well.
 
-      <p>
-        Next, as in <a href="/labs/python_intro.html">Tutorial 1</a>, you'll
-        also need a Python environment where you can run the generated code.
-        However, this could be
-        <a href="https://jupyter.org/try-jupyter/lab/">Jupyter Lite</a> which
-        does not require installation. That said, if you used something other
-        than Jupyter Lite, make sure you have matplotlib installed in your
-        environment. For example, this could be done with (optionally in a
-        <a href="https://docs.python-guide.org/dev/virtualenvs/">virtual
-        environment</a>):
-      </p>
+      Next, as in [Tutorial 1](/labs/python_intro.html), you'll also need a
+      Python environment where you can run the generated code. However, this
+      could be [Jupyter Lite](https://jupyter.org/try-jupyter/lab/) which does
+      not require installation. That said, if you used something other than
+      Jupyter Lite, make sure you have matplotlib installed in your
+      environment. For example, this could be done with (optionally in a
+      [virtual environment](https://docs.python-guide.org/dev/virtualenvs/)):
 
-      <pre>
+      ```
       pip install matplotlib
-      </pre>
+      ```
 
-      <p>
-        Once you're set up, open your AI assistant in one window and your
-        Python environment in another so you can easily execute the code as
-        you go. This set up can help fuel that essential iteration process.
-      </p>
+      Once you're set up, open your AI assistant in one window and your
+      Python environment in another so you can easily execute the code as
+      you go. This set up can help fuel that essential iteration process.
 
-      <p>
-        <strong>Note</strong>: The exact output you get from an AI assistant
-        may differ slightly from what's shown here. That's completely normal
-        and expected! The key learning objective here is to experience the
-        process of iteration: making a request, reviewing the output,
-        identifying what to improve, and refining your prompts accordingly.
-      </p>
+      **Note**: The exact output you get from an AI assistant may differ
+      slightly from what's shown here. That's completely normal and expected!
+      The key learning objective here is to experience the process of
+      iteration: making a request, reviewing the output, identifying what to
+      improve, and refining your prompts accordingly.
   - name: initial-request
     short: Initial Request
     long: Making the first request to the AI assistant
-    body: >
+    html: >
       <p>
         Let's start by making our first request to the assistant, just to get
         a basic initial plot. Try copying this prompt into your chat window
@@ -180,7 +149,7 @@ sections:
   - name: first-iteration
     short: First Iteration
     long: Improving the visualization through iteration
-    body: >
+    html: >
       <p>
         Let's address this issue where the wolf population changes may be hard
         to see because they're compressed into a narrow space compared to the
@@ -229,7 +198,7 @@ sections:
   - name: refining-labels
     short: Refining Labels
     long: Improving readability through label refinement
-    body: >
+    html: >
       <p>
         The visualization is getting clearer but you may also notice that the
         axis labels might need some work. For instance, there might be
@@ -265,7 +234,7 @@ sections:
   - name: final-polish
     short: Final Polish
     long: Adding final touches for clarity
-    body: >
+    html: >
       <p>
         There's one more improvement we can make. Right now, it's possible
         that the numerical labels along the horizontal axis (the tick marks
@@ -308,42 +277,35 @@ sections:
   - name: reflection
     short: Reflection
     long: Reflecting on the AI-assisted process
-    body: >
-      <p>
-        Let's step back and think about what we just accomplished and what it
-        might tell us about working with AI assistants for data visualization.
-        Specifically, notice that we (likely) didn't get a perfect
-        visualization in the first try. Instead, we went through several
-        rounds as we determined the elements about which we needed to be more
-        precise:
-      </p>
+    markdown: |
+      Let's step back and think about what we just accomplished and what it
+      might tell us about working with AI assistants for data visualization.
+      Specifically, notice that we (likely) didn't get a perfect visualization
+      in the first try. Instead, we went through several rounds as we
+      determined the elements about which we needed to be more precise:
 
-      <ul>
-        <li>Initial request with basic requirements</li>
-        <li>Adjusting the spatial allocation to better show the data</li>
-        <li>Cleaning up labels and improving readability</li>
-        <li>Fine-tuning color coding for consistency</li>
-      </ul>
+      - Initial request with basic requirements
+      - Adjusting the spatial allocation to better show the data
+      - Cleaning up labels and improving readability
+      - Fine-tuning color coding for consistency
 
-      <p>
-        Think back to your regular iterative process when you write code "by
-        hand" and how this might be similar to how it is often best to work
-        with AI assistants. Importantly, at each step, we have an opportunity
-        to incorporate knowledge from this course and from our experience of a
-        prototype. Just as we created early sketches in code and refine for
-        higher fidelity in prior tutorials, we can continue to use the lenses
-        of the class in a cycle of critically evaluating ever improving
-        outputs through ever more specific prompts.
-      </p>
+      Think back to your regular iterative process when you write code "by
+      hand" and how this might be similar to how it is often best to work
+      with AI assistants. Importantly, at each step, we have an opportunity
+      to incorporate knowledge from this course and from our experience of a
+      prototype. Just as we created early sketches in code and refine for
+      higher fidelity in prior tutorials, we can continue to use the lenses
+      of the class in a cycle of critically evaluating ever improving
+      outputs through ever more specific prompts.
   - name: next
     short: Next
     long: Continue to advanced AI topics
-    body: >
+    markdown: |
       This is a first stab at a relatively simple script. However, what
       happens when things get longer or more involved? What if we have a chart
       type for which there isn't already a pre-built implementation? Let's
-      continue onwards to <a href="/labs/ai_advanced.html">Tutorial 14</a> to
-      learn about advanced AI techniques including llms.txt and subagents /
+      continue onwards to [Tutorial 14](/labs/ai_advanced.html) to learn
+      about advanced AI techniques including llms.txt and subagents /
       agentic workflows.
 citations:
   - text: >
