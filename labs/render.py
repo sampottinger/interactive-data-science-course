@@ -10,6 +10,7 @@ import os
 import sys
 
 import jinja2
+import markdown
 import yaml
 
 BASE_USAGE_STR = 'USAGE: python render.py'
@@ -93,7 +94,7 @@ def load_labs_from_directory(labs_dir):
 
     tutorials = []
     lab_members = os.listdir(lab_path)
-    is_tutorial_yaml = lambda x: x.endswith('.yaml') and x[0:2].isdigit()
+    is_tutorial_yaml = lambda x: x.endswith('.yml') and x[0:2].isdigit()
     tutorial_yamls = filter(is_tutorial_yaml, lab_members)
     yaml_files = sorted(tutorial_yamls)
 
@@ -211,12 +212,17 @@ def main_tutorial():
   processed_citations = map(process_citation, citations_raw)
   citations_realized = list(processed_citations)
 
+  # Process section content
+  sections_raw = tutorial.get('sections', [])
+  processed_sections = map(process_section_content, sections_raw)
+  sections_realized = list(processed_sections)
+
   template_vals = {
       'number': tutorial_number,
       'name': tutorial['name'],
       'file': tutorial['file'],
       'header': tutorial.get('header', ''),
-      'sections': tutorial.get('sections', []),
+      'sections': sections_realized,
       'citations': citations_realized
   }
 
@@ -256,6 +262,80 @@ def process_citation(citation):
     result += f' Available: <a href="{available}" target="_blank">{available}</a>'
 
   return result
+
+
+def check_content_attributes(has_html, has_markdown):
+  """Validate that exactly one of html or markdown is present.
+
+  Args:
+    has_html: Whether an 'html' attribute is present.
+    has_markdown: Whether a 'markdown' attribute is present.
+
+  Raises:
+    ValueError: If both 'html' and 'markdown' are present.
+    ValueError: If neither 'html' nor 'markdown' is present.
+  """
+  if has_html and has_markdown:
+    raise ValueError(
+        'Section has both "html" and "markdown" attributes. '
+        'Only one is allowed.'
+    )
+
+  if not has_html and not has_markdown:
+    raise ValueError(
+        'Section must have either "html" or "markdown" attribute.'
+    )
+
+
+def process_section_content(section):
+  """Process section content from html or markdown attributes.
+
+  Checks for mutually exclusive content attributes (html, markdown).
+  Converts markdown to HTML if needed. Applies blockstyle transformation
+  if specified.
+
+  Args:
+    section: A dict with section data. May contain 'html' or 'markdown'
+      keys for content, and optional 'blockstyle' key.
+
+  Returns:
+    dict: The section dict with processed content in 'body' field.
+
+  Raises:
+    ValueError: If both 'html' and 'markdown' are present, if neither
+      is present, or if blockstyle value is invalid.
+  """
+  has_html = 'html' in section
+  has_markdown = 'markdown' in section
+
+  check_content_attributes(has_html, has_markdown)
+
+  # Get the content
+  content = None
+  if has_html:
+    content = section['html']
+  elif has_markdown:
+    content = markdown.markdown(
+        section['markdown'],
+        extensions=['fenced_code']
+    )
+
+  # Validate and apply blockstyle
+  blockstyle = section.get('blockstyle', 'pre')
+  if blockstyle not in ['pre', 'blockquote']:
+    raise ValueError(
+        f'Section "{section.get("short", "unknown")}" has invalid blockstyle '
+        f'"{blockstyle}". Only "pre" and "blockquote" are allowed.'
+    )
+
+  if blockstyle == 'blockquote' and content:
+    content = content.replace('<pre>', '<blockquote>')
+    content = content.replace('</pre>', '</blockquote>')
+
+  # Store processed content in body field for template compatibility
+  section['body'] = content
+
+  return section
 
 
 def main_list():

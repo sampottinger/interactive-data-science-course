@@ -20,7 +20,7 @@ sections:
   - name: exercise
     short: Exercise
     long: Introduction to drawing a simple line and making it interactive
-    body: >
+    html: |
       We will start by drawing a simple line. In the process, we will
       explore the coordinate system and understand how pixels are
       layed out within a sketch. Finally, we will add in the "user" as
@@ -48,44 +48,16 @@ sections:
   - name: setup
     short: Setup
     long: Get started with Sketchingpy for creative coding
-    body: >
-      <p>
-          We are going to build full programs using
-          <a href="https://sketchingpy.org/">Sketchingpy</a>, a
-          technology which supports creative coding in Python across
-          desktop and web. This will give us access to graphics.
-      </p>
+    markdown: |
+      We are going to build full programs using [Sketchingpy](https://sketchingpy.org/), a technology which supports creative coding in Python across desktop and web. This will give us access to graphics.
 
-      <p>
-          We should talk briefly about how we will do this
-          programming. We used a computational notebook in our
-          <a href="/labs/python_intro.html">previous tutorial</a> to
-          try out little snippets of code. While notebooks are
-          excellent for analysis and more traditional programming, I
-          recommend that you start building these interaction-heavy
-          experiences through an
-          <a href="https://editor.sketchingpy.org/"
-              >online sketchbook</a
-          >. The idea of a sketchbook is common in the creative coding
-          community as an equivalent to computational notebooks and,
-          with Sketchingpy, all you need is a web browser! Still, the
-          choice is yours.
-      </p>
+      We should talk briefly about how we will do this programming. We used a computational notebook in our [previous tutorial](/labs/python_intro.html) to try out little snippets of code. While notebooks are excellent for analysis and more traditional programming, I recommend that you start building these interaction-heavy experiences through an [online sketchbook](https://editor.sketchingpy.org/). The idea of a sketchbook is common in the creative coding community as an equivalent to computational notebooks and, with Sketchingpy, all you need is a web browser! Still, the choice is yours.
 
-      <p>
-          If you are using Python locally, you can instead
-          <a href="https://sketchingpy.org/guides/start.html"
-              >install Sketchingpy on your own machine</a
-          >. Otherwise, go ahead and open up the
-          <a href="https://editor.sketchingpy.org/"
-              >online sketchbook</a
-          >
-          before going to the next step.
-      </p>
+      If you are using Python locally, you can instead [install Sketchingpy on your own machine](https://sketchingpy.org/guides/start.html). Otherwise, go ahead and open up the [online sketchbook](https://editor.sketchingpy.org/) before going to the next step.
   - name: libraries
     short: Libraries
     long: Import the Sketchingpy and time libraries
-    body: >
+    html: |
       We are going to reuse some code from some other developers to
       help us. Specifically, we will import the Sketchingpy and time
       libraries into our project.
@@ -133,7 +105,7 @@ sections:
   - name: sketch
     short: Sketch
     long: Create a 2D sketch canvas
-    body: >
+    html: |
       In the creative coding community, we often use the term
       "sketches" to refer to our programs. Sometimes sketches are just
       little doodles or early ideas we want to get onto the screen and
@@ -164,10 +136,10 @@ sections:
               x and veritical position as y.
           </p>
       </details>
-      - name: lines
-      short: Drawing lines
-      long: Learn how to draw lines on the sketch
-      body: >
+  - name: lines
+    short: Drawing lines
+    long: Learn how to draw lines on the sketch
+    html: |
       Let's draw a line:
 
       <pre>sketch.draw_line(500 / 2, 400 / 2, 100, 50)
@@ -219,16 +191,11 @@ sections:
       Now that we have something interesting, let's run this sketch.
       Try changing the numbers to see what happens to what is shown on
       the screen.
-      - name: life
-      short: Life
-      long: Add animation to make the sketch feel alive
-      body: >
-      Our program right now feels a little
-      <a href="https://vimeo.com/64895205">dead</a>. It just draws a
-      line on the screen and ends. What if it could do things in
-      repetition like maybe change the end position where the line is
-      drawn? Try the following (put it before the line that says
-      sketch.show):
+  - name: life
+    short: Life
+    long: Add animation to make the sketch feel alive
+    html: |
+      Our program right now feels a little <a href="https://vimeo.com/64895205">dead</a>. It just draws a line on the screen and ends. What if it could do things in repetition like maybe change the end position where the line is drawn? Try the following (put it before the line that says sketch.show):
 
       <pre>
       start_time = time.time()
@@ -242,12 +209,7 @@ sections:
       sketch.on_step(draw_moving_line)
       </pre>
 
-      Need help?
-      <a
-          href="https://gist.github.com/sampottinger/c991bfe174275c89112e466cc0cfa137"
-          >Here's what my python file looks like</a
-      >. Go ahead and run this. Afterwards, we will break down what
-      this does step by step.
+      Need help? <a href="https://gist.github.com/sampottinger/c991bfe174275c89112e466cc0cfa137">Here's what my python file looks like</a>. Go ahead and run this. Afterwards, we will break down what this does step by step.
 
       <details>
           <summary>About comments</summary>
@@ -263,7 +225,7 @@ sections:
   - name: steps
     short: Steps
     long: Understand how sketches execute in steps
-    body: >
+    html: |
       <a
           href="https://gist.github.com/sampottinger/c991bfe174275c89112e466cc0cfa137"
           >The little snippet of code we just ran</a
@@ -291,7 +253,7 @@ sections:
   - name: time
     short: Time
     long: Learn how to track time in your sketch
-    body: >
+    html: |
       Each time the computer calls draw_moving_line, we see how many
       seconds it has been since start_time to determine by how much to
       change the end position of the line. This is important because
@@ -303,84 +265,43 @@ sections:
       <details>
           <summary>About time</summary>
           <p>
-              For
-              <a
-                  href="https://www.abis.be/html/en2020-12_UnixEpoch.html"
-                  >old reasons</a
-              >,
-              <a href="https://docs.python.org/3/library/time.html"
-                  >time.time</a
-              >
-              is a function that returns the number of seconds since a
-              specific moment in 1970 called the
-              <a
-                  href="https://www.abis.be/html/en2020-12_UnixEpoch.html"
-                  >epoch</a
-              >. This starting point is just an arbitrary reference
-              used by computers around the world to keep track of what
-              time it is. This has been useful for all sorts of stuff,
-              especially networking. All that said, we can use it to
-              keep track of how long our program has been running.
-              When we create the start_time variable, we note down the
-              current number of seconds when that line of code is
-              executed. Afterwards, We can refer back to start_time
-              and new calls to time.time to see how long it has been.
-              Note that "time.time" says use the time function from
-              the developer of time.
+              For <a href="https://www.abis.be/html/en2020-12_UnixEpoch.html">old reasons</a>, <a href="https://docs.python.org/3/library/time.html">time.time</a> is a function that returns the number of seconds since a specific moment in 1970 called the <a href="https://www.abis.be/html/en2020-12_UnixEpoch.html">epoch</a>. This starting point is just an arbitrary reference used by computers around the world to keep track of what time it is. This has been useful for all sorts of stuff, especially networking. All that said, we can use it to keep track of how long our program has been running. When we create the start_time variable, we note down the current number of seconds when that line of code is executed. Afterwards, We can refer back to start_time and new calls to time.time to see how long it has been. Note that "time.time" says use the time function from the developer of time.
           </p>
       </details>
   - name: self
     short: Self
     long: Understand the self parameter in sketch functions
-    body: >
-      What about that function parameter called self? This is actually
-      just another name for our sketch variable. So, you could do this
-      instead and it would have the same result:
+    markdown: |
+      What about that function parameter called self? This is actually just another name for our sketch variable. So, you could do this instead and it would have the same result:
 
-      <pre>
+      ```python
       def draw_moving_line(self):
           seconds = time.time() - start_time
           pixels_per_second = 5
           offset = seconds * pixels_per_second
           self.draw_line(250, 200, 100, 50 + offset)
-      </pre>
+      ```
 
-      Go ahead and give it a try! All that said, when programs are
-      this small, I understand it feels a little silly to have two
-      variables pointing to the same thing. However, we will see in
-      the <a href="/labs/python_objects.html">next tutorial</a> when
-      this becomes useful.
+      Go ahead and give it a try! All that said, when programs are this small, I understand it feels a little silly to have two variables pointing to the same thing. However, we will see in the [next tutorial](/labs/python_objects.html) when this becomes useful.
   - name: conversation
     short: Conversation
     long: Make the sketch interactive with the mouse
-    body: >
-      Now our program feels a little more alive. However, even if it
-      replies in graphics, so far we've only spoken to the computer
-      through text (code). What if we could speak through motion? Go
-      ahead and delete your old implementation and add the following:
+    markdown: |
+      Now our program feels a little more alive. However, even if it replies in graphics, so far we've only spoken to the computer through text (code). What if we could speak through motion? Go ahead and delete your old implementation and add the following:
 
-      <pre>
+      ```python
       def draw_moving_line(self):
           mouse = sketch.get_mouse()
           sketch.draw_line(250, 200, mouse.get_pointer_x(),
                            mouse.get_pointer_y())
-      </pre>
+      ```
 
-      Need help?
-      <a
-          href="https://gist.github.com/sampottinger/f04ec269d0678fa86d397a82e3b7c0f6"
-          >Here's what my interactive python file looks like</a
-      >. We ask our sketch to give us the position of the mouse. Then,
-      we draw from the center of the sketch to the cursor position on
-      each step.
+      Need help? [Here's what my interactive python file looks like](https://gist.github.com/sampottinger/f04ec269d0678fa86d397a82e3b7c0f6). We ask our sketch to give us the position of the mouse. Then, we draw from the center of the sketch to the cursor position on each step.
   - name: conclusion
     short: Wrapping up
     long: Summary and next steps
-    body: >
-      We will branch out into simluations in the
-      <a href="/labs/python_objects.html">next tutorial</a>. We will
-      also take a closer look at some of the Python language features
-      we used here to help build sketches.
+    html: |
+      We will branch out into simluations in the <a href="/labs/python_objects.html">next tutorial</a>. We will also take a closer look at some of the Python language features we used here to help build sketches.
 
       <details>
           <summary>Motivation for the next tutorial</summary>
@@ -390,8 +311,7 @@ sections:
               "sketch." in the code "sketch.draw_line" that we saw
               above? What's the significance of saying draw_line
               happens within sketch? We will explore that deeper in
-              our
-              <a href="/labs/python_objects.html">next tutorial</a> as
+              our <a href="/labs/python_objects.html">next tutorial</a> as
               we look to using creative coding for simulation and
               visualization.
           </p>

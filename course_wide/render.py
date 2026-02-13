@@ -11,6 +11,7 @@ import os
 import sys
 
 import jinja2
+import markdown
 import yaml
 
 USAGE_ARGS = [
@@ -38,6 +39,64 @@ def get_template_loader():
     return jinja2.Environment(loader=loader)
 
 
+def check_content_attributes(has_html, has_markdown):
+    """Validate that exactly one of html or markdown is present.
+
+    Args:
+        has_html: Whether an 'html' attribute is present.
+        has_markdown: Whether a 'markdown' attribute is present.
+
+    Raises:
+        ValueError: If both 'html' and 'markdown' are present.
+        ValueError: If neither 'html' nor 'markdown' is present.
+    """
+    if has_html and has_markdown:
+        raise ValueError(
+            'Item has both "html" and "markdown" attributes. '
+            'Only one is allowed.'
+        )
+
+    if not has_html and not has_markdown:
+        raise ValueError(
+            'Item must have either "html" or "markdown" attribute.'
+        )
+
+
+def process_item_content(item):
+    """Process item content from html or markdown attributes.
+
+    Validates that exactly one of html or markdown is present.
+    Converts markdown to HTML if needed. Stores result in item's 'text' key
+    for template compatibility.
+
+    Args:
+        item: A dict with item data. Must contain either 'html' or 'markdown'
+            key for content.
+
+    Returns:
+        dict: The item dict with processed content in 'text' field.
+
+    Raises:
+        ValueError: If both 'html' and 'markdown' are present.
+        ValueError: If neither 'html' nor 'markdown' is present.
+    """
+    has_html = 'html' in item
+    has_markdown = 'markdown' in item
+
+    check_content_attributes(has_html, has_markdown)
+
+    # Process content based on which attribute is present
+    if has_html:
+        item['text'] = item['html']
+    elif has_markdown:
+        item['text'] = markdown.markdown(
+            item['markdown'],
+            extensions=['fenced_code']
+        )
+
+    return item
+
+
 def load_course_data():
     """Load course data from course_wide.yml.
 
@@ -49,6 +108,13 @@ def load_course_data():
 
     with open(course_wide_path, 'r') as f:
         data = yaml.safe_load(f)
+
+    # Process all lesson items (reading, class, activity)
+    for lesson in data.get('lessons', []):
+        for item_list_key in ['reading', 'class', 'activity']:
+            if item_list_key in lesson and lesson[item_list_key]:
+                for item in lesson[item_list_key]:
+                    process_item_content(item)
 
     return data
 

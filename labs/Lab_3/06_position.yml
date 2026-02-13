@@ -1,0 +1,130 @@
+name: Position
+file: features_position.html
+header: >
+  In our
+  <a href="/labs/features_style.html">previous tutorial</a>
+  which explored style, giving us examples of another preattentive
+  feature. In this tutorial, we continue Skills Lab 3 by looking at
+  our next preattentive feature: position.
+sections:
+  - name: translate
+    short: Translate
+    long: Translate the coordinate system
+    markdown: |
+      So far, we've changed the position of our figures by manipulating the
+      parameters of the draw commands. However, we can also position glyphs by
+      changing the coordinate space itself. Whereas typically the (0, 0) position
+      is in the upper left part of the screen, we can change it. Let's look at an
+      example:
+
+      ```python
+      import sketchingpy
+
+      sketch = sketchingpy.Sketch2D(500, 500)
+
+      sketch.set_ellipse_mode("radius")
+
+      sketch.draw_ellipse(0, 0, 5, 5)
+
+      sketch.translate(100, 100)
+
+      sketch.draw_ellipse(0, 0, 10, 10)
+
+      sketch.translate(50, 50)
+      sketch.translate(50, 50)
+
+      sketch.draw_ellipse(0, 0, 15, 15)
+
+      sketch.translate(100, 100)
+
+      sketch.draw_ellipse(0, 0, 20, 20)
+
+      sketch.show()
+      ```
+
+      We keep drawing the ellipse at the same position but, as the coordinate
+      system changes over time, the actual location on the screen keeps moving.
+      Try changing some of the parameters to see how it influences the drawing!
+      Also, try adding a translate before the first draw. How does that change
+      the rest of the drawing?
+  - name: state
+    short: State
+    long: Managing transformation state with push and pop
+    markdown: |
+      Translate is changing the "transformation matrix" which modifies the default
+      coordinate space. We can save and load previous copies of the coordinate
+      space through push and pop.
+
+      ```python
+      import sketchingpy
+
+      sketch = sketchingpy.Sketch2D(500, 500)
+
+      sketch.set_ellipse_mode("radius")
+
+      sketch.translate(200, 200)
+
+      sketch.draw_ellipse(0, 0, 5, 5)
+
+      sketch.translate(100, 100)
+      sketch.draw_ellipse(0, 0, 10, 10)
+
+      sketch.push_transform()
+      sketch.translate(50, 0)
+      sketch.translate(50, 0)
+      sketch.draw_ellipse(0, 0, 15, 15)
+      sketch.pop_transform()
+
+      sketch.translate(50, 50)
+      sketch.draw_ellipse(0, 0, 20, 20)
+
+      sketch.show()
+      ```
+
+      Try changing the location of the push and pop commands. What's going on?
+      You might recognize this as language for a "stack" and that's indeed what's
+      happening. In other words, you can imagine that each transformation matrix
+      is on a piece of paper and we can change what is on that piece of paper
+      through calls to transform. This piece of paper is called the state. The
+      computer looks at the piece of paper to figure out how to change the
+      coordinate system. Push means that we make a copy of the top piece of
+      paper and put it on top, keeping the original below the copy. Pop means
+      we remove the top piece of paper.
+  - name: style-stack
+    short: Style Stack
+    long: Understanding the style stack
+    markdown: |
+      There's actually two states: one for the transformation matrix and another
+      for style.
+
+      ```python
+      import sketchingpy
+
+      sketch = sketchingpy.Sketch2D(500, 500)
+
+      sketch.clear('#505050')
+      sketch.set_stroke_weight(3)
+
+      sketch.set_fill('#B2DF8A50')
+      sketch.set_stroke('#F0F0F0')
+      sketch.draw_ellipse(150, 250, 20, 20)
+
+      sketch.push_style()
+      sketch.clear_fill()
+      sketch.draw_ellipse(250, 250, 20, 20)
+      sketch.pop_style()
+
+      sketch.draw_ellipse(350, 250, 20, 20)
+
+      sketch.show()
+      ```
+
+      What happens if these statements are re-arranged?
+  - name: next
+    short: Next
+    long: Continue to the next tutorial
+    markdown: |
+      To finish Skills Lab 3, continue on to [Tutorial 7](/labs/features_orientation.html) to learn about orientation.
+citations:
+  - text: A. Pottinger, "Sketchingpy." Sketchingpy Project, 2024. [Online].
+    available: https://sketchingpy.org/

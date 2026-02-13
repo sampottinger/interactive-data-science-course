@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+rm -rf mooc
 mkdir mooc
 cd lecture
 bash render.sh

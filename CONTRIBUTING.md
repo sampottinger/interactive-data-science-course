@@ -45,8 +45,8 @@ directory contains numbered section subdirectories (e.g., `01_Hello`,
 `02_Primitives`), each containing individual YAML files for each lesson
 and an `index.yml` file with section metadata. Each lesson YAML file
 represents a single lesson as a top-level mapping. Lesson files are named with a numeric prefix
-followed by a descriptive name (e.g., `00_hello_preface.yaml`,
-`01_hello_visualization.yaml`).
+followed by a descriptive name (e.g., `00_hello_preface.yml`,
+`01_hello_visualization.yml`).
 
 Each section directory must also contain an `index.yml` file with section
 metadata:
@@ -234,6 +234,8 @@ The `course_wide.yml` file contains:
  - `lessons`: Nested under sections, containing day number, title, readings, and activities
  - `rubric`: List of grading criteria with category, criterion, and percentage fields
 
+Lesson items (reading, class, activity) must use either `html` or `markdown` for content. Only one content attribute is allowed per item. The content will be processed and made available to templates in the `text` field.
+
 Follow YAML best practices similar to lesson YAML files:
  - Use `>` for multi-line strings
  - Keep lines to 100 characters or fewer (exceptions for long URLs)
@@ -245,7 +247,7 @@ During original teaching of this course as Stat 198 at UC Berkeley, the skills l
 
 Skills labs are organized in the `labs/` directory with the following structure:
  - `Lab_1/`, `Lab_2/`, etc.: Lab-specific directories containing YAML source files
- - Each lab directory contains an `index.yml` with lab metadata (name, lesson) and tutorial YAML files named with a numeric prefix followed by a descriptive name (e.g., `01_python_introduction.yaml`, `02_python_graphics.yaml`)
+ - Each lab directory contains an `index.yml` with lab metadata (name, lesson) and tutorial YAML files named with a numeric prefix followed by a descriptive name (e.g., `01_python_introduction.yml`, `02_python_graphics.yml`)
  - Tutorial YAML files define individual tutorials with name, file, header, sections, and citations
  - Templates: `tutorial.html`, `index_template.html`, `tutorial.md` for rendering
  - `render.py` and `render.sh` to generate HTML and Markdown output from YAML sources
@@ -257,10 +259,10 @@ The YAML-based structure allows for consistent formatting and easier maintenance
 | name      | Yes          | Human readable name of the tutorial. | string |
 | file      | Yes          | Base filename for output (e.g., "python_intro" generates python_intro.html and python_intro.md). | string |
 | header    | Yes          | HTML content for the tutorial header/introduction. | html |
-| sections  | Yes          | List of tutorial sections, each with "name" (anchor ID), "short" (heading), "long" (description), and "body" (content). | list |
+| sections  | Yes          | List of tutorial sections, each with "name" (anchor ID), "short" (heading), "long" (description), and either "html" or "markdown" (content). | list |
 | citations | No           | List of citations, each with "text" and optional "available" (URL). | list |
 
-HTML fields should use `>` for folded scalars as with lesson YAML files. Generated tutorials include:
+HTML fields should use `>` for folded scalars as with lesson YAML files. For content with `<pre>` blocks, use `|` (literal block scalar) to preserve formatting. Generated tutorials include:
 
  - A contents `details` tag.
  - Use of header, main, and sections for accessibility including skip link.
