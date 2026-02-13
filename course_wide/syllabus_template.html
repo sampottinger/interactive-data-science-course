@@ -116,12 +116,12 @@
                 </div>
 {% for section in sections %}
                 <h3>{{ section.number }}. {{ section.name }}</h3>
-                <div>
-                    {{ section.tagline }}
+                <div style="padding-bottom: 10px;">
+                    <strong>{{ section.tagline }}</strong>
                 </div>
-                <div>
+                <p>
                     {{ section.detailed }}
-                </div>
+                </p>
 
                 <table class="bottom-pad-table">
                     <tr>
