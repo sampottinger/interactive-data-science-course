@@ -11,13 +11,13 @@
 
 {% block content %}<h1>Interactive Data Science and Visualization</h1>
 
-            <p>
+            <div>
                 Formal curriculum and syllabus which is completed by the <a href="/course_wide/manual.html">course manual</a> with practical guidance on either taking the course as a learner or providing / adapting it as an instructor.
-            </p>
+            </div>
 
-            <p>
+            <div>
                 <strong>Other formats:</strong> <a href="/course_wide/syllabus.md">Markdown version</a> | <a href="/course_wide/syllabus.pdf">PDF version</a> (from UC Berkeley Spring 2025 teaching)
-            </p>
+            </div>
 
             <details>
                 <summary>Contents</summary>
@@ -31,24 +31,24 @@
 
             <section id="motivation">
                 <h2>Motivation</h2>
-                <p>
+                <div>
                     Before getting into a detailed breakdown of the material, let's explore how this course can help.
-                </p>
+                </div>
 
                 <h3>Why take this class?</h3>
-                <p>
-                    Data are essential to how we experience and understand the world. The way we interact with tools, analyses, and simulations all change the insights we learn, the stories we tell, the actions we take, who is included, and what is left out. This course combines traditional user experience and information design with interactive storytelling and video game design. We will emphasize practical techniques and technical skills needed to make both word-class data visualizations and interactive data science tools. More info online at <a href="https://interactivedatascience.courses">https://interactivedatascience.courses</a>.
-                </p>
+                <div>
+                    Data are essential to how we experience and understand the world. The way we interact with tools, analyses, and simulations all change the insights we learn, the stories we tell, the actions we take, who is included, and what is left out. This course combines traditional user experience and information design with interactive storytelling and video game design. We will emphasize practical techniques and technical skills needed to make both world-class data visualizations and interactive data science tools. More info online at <a href="https://interactivedatascience.courses">https://interactivedatascience.courses</a>.
+                </div>
 
                 <h3>Who is this for?</h3>
-                <p>
+                <div>
                     Scientists, engineers, designers, artists, journalists, and anyone else who wants to explore new methods for interactively and visually understanding, experiencing, and communicating data.
-                </p>
+                </div>
 
                 <h3>What we will do together?</h3>
-                <p>
+                <div>
                     We have three pillars of our time together:
-                </p>
+                </div>
                 <ul>
                     <li>Explore data visualization theory and fundamentals before studying cutting edge work in interactive data science.</li>
                     <li>Learn practical career-building technologies for building both static and interactive data experiences through hands-on portfolio-building activities.</li>
@@ -56,9 +56,9 @@
                 </ul>
 
                 <h3>What you will be able to do after?</h3>
-                <p>
+                <div>
                     After completing the course, you should be able to:
-                </p>
+                </div>
                 <ul>
                     <li>Build data visualizations and other interactive experiences to share your data findings with others.</li>
                     <li>Invite your audience in as co-creators to build new meaning alongside you in your work.</li>
@@ -70,58 +70,58 @@
 
             <section id="basics">
                 <h2>Basics</h2>
-                <p>
+                <div>
                     Next, let's explore the logistics and basic information of the class together. This section offers fundamental information about the course as required to consider its place within a personal learning journey or for instructors to consider its role within a broader degree plan.
-                </p>
+                </div>
 
                 <h3>Instructor</h3>
-                <p>
+                <div>
                     Hello! My name is Sam Pottinger. I am a Senior Research Software Engineer / Data Scientist at UC Berkeley's Schmidt Center for Data Science and Environment. I've previously worked at Google, Apple, two start ups, and global design firm IDEO. I offer over a decade of data visualization / interactive science experience. My research at Berkeley blends information design, video game design, and ML / AI, and public policy for environment.
-                </p>
+                </div>
 
                 <h3>Schedule and credit</h3>
-                <p>
+                <div>
                     This course can be adapted to meet different learning criteria and formats. However, in teaching it in person at the University of California Berkeley, we met twice weekly for an hour with an additional hour of office hours online. It was completed in a semester-based schedule. Additionally, this was originally offered for 2 credit hours though conversion of optional aspects of the course to required may meet criteria to teach for 3 credit hours instead. In either case, this was comprised of hands-on activities, final mastery project, original lectures, discussion, hands-on skills labs, and guest lectures over 7 short modules.
-                </p>
+                </div>
 
                 <h3>Prerequisites</h3>
-                <p>
+                <div>
                     Recommended but not required that learners have had prior introduction to Python or JavaScript (course or self-taught). Recommended at the graduate level or for undergrad at sophomore or later.
-                </p>
+                </div>
 
                 <h3>Skills taught</h3>
-                <p>
+                <div>
                     In considering how this course may layer into broader degree requirements or personal learning objectives:
-                </p>
+                </div>
                 <ul>
                     <li><strong>Technical skills taught</strong>: <a href="https://sketchingpy.org/" target="_blank">Sketchingpy (Pottinger 2024)</a>, <a href="https://p5js.org/" target="_blank">P5 (P5js Contributors 2026)</a>, and <a href="https://d3js.org/" target="_blank">D3 (Bostock et al 2011)</a>. Will also provide optional brief Python and JavaScript / HTML / CSS instruction.</li>
                     <li><strong>Theoretical skills taught</strong>: Information design, video game design, evaluative methods, human visual perception, accessibility.</li>
                 </ul>
 
                 <h3>Grading</h3>
-                <p>
+                <div>
                     Given each lecture as described below. 54% small projects, 12% interactive experience reflection, 35% final project intended to build mastery. Originally taught as pass / fail. Scores provided for each small project, final project, and the interactive experience reflection.
-                </p>
+                </div>
 
                 <h3>Additional Resources</h3>
-                <p>
+                <div>
                     Includes complementary short reading / videos and supportive technology skills labs. The interactive experience will be your choice of either a video game or interactive data visualization.
-                </p>
+                </div>
             </section>
 
             <section id="sections">
                 <h2>Course sections</h2>
-                <p>
+                <div>
                     The course is designed across 7 major sections expected to be taken in order.
-                </p>
+                </div>
 {% for section in sections %}
                 <h3>{{ section.number }}. {{ section.name }}</h3>
-                <p>
+                <div>
                     {{ section.tagline }}
-                </p>
-                <p>
+                </div>
+                <div>
                     {{ section.detailed }}
-                </p>
+                </div>
 
                 <table class="bottom-pad-table">
                     <tr>
@@ -146,51 +146,51 @@
 
             <section id="details">
                 <h2>Details</h2>
-                <p>
+                <div>
                     Ready to take or teach the class? Here's some additional information that might help.
-                </p>
+                </div>
 
                 <h3>Welcoming and Supportive Environment</h3>
-                <p>
+                <div>
                     I love this topic and I hope you will love it too! I am dedicated to your success within this course. All activities and projects should be an engaging avenue for collaboration focused on refinement of ideas in a hands-on but low pressure setting. We will be discussing big topics through design and artistic expression. By participating, we collectively promise to generously create a welcoming and supportive environment for exploration. Lectures will be hands-on so laptops and discussion encouraged. Class time ensures successful outcomes in the course and will provide key information about assignments. However, things happen. I trust you to use your time well so attendance will not be taken. There are no textbook or service fees and free options are available for the interactive experience if you do not wish to purchase a copy of a game.
-                </p>
+                </div>
 
                 <h3>How to Succeed and Pass the Course</h3>
-                <p>
+                <div>
                     Except day 1, each instruction day has an outside activity essential to course objectives and complementary to that day's discussion. I am excited to provide written individual feedback to help complement other course resources. Numerical scoring is not a focus of this course. However, for the purposes of pass / fail, each instructional day has an activity worth 10 points with two instruction days per week. 14 days have small projects which are generally short to complete, the interactive experience analysis spans 3 days, and the final project spans 9 days. For each 10 point grading, 3 points are given for completeness, 3 for reflecting course materials, 2 for technical correctness, and 2 for exploration / expression. For those at UC Berkeley, 70% overall grade is required to pass (course is pass / fail).
-                </p>
+                </div>
 
                 <h3>Timely Response and Late Assignments</h3>
-                <p>
+                <div>
                     For those in the UC Berkeley community, being able to share timely feedback on activities enables projects to serve an important role in ensuring you get the most out of your time in the course. Therefore, activities are due at 5pm 2 days after their assignment except the final which is due altogether. Submissions must be made by May 1 if you want to receive pre-final feedback. Please talk to me if personal circumstances arise. Note that, automatically, there are no points deducted for 7 calendar days after assignment. However, 20% will be deducted each calendar day for late assignments starting at 5pm on the 8th day after assignment. All times are given in PT.
-                </p>
+                </div>
 
                 <h3>Student Feedback</h3>
-                <p>
+                <div>
                     At UC Berkeley, student feedback will be solicited at the end of each module to ensure the course is meeting its goals. Grades and submissions through university-provided LMS.
-                </p>
+                </div>
 
                 <h3>Contact</h3>
-                <p>
+                <div>
                     I work at Wellman Hall #201. Contact options available at interactivedatascience.courses. Originally taught as a small course without a TA.
-                </p>
+                </div>
 
                 <h3>Lab / Discussion</h3>
-                <p>
+                <div>
                     To fit the 2 credit hour format, labs will take place during course instruction time as indicated in the schedule. For those attempting a 3 credit version of the course, the lab and discussion sections can expand class time.
-                </p>
+                </div>
 
                 <h3>Paid resources</h3>
-                <p>
+                <div>
                     Reading to be provided. Students encouraged to purchase the interactive experience but alternatives provided. Otherwise, all materials are intended to be free to access.
-                </p>
+                </div>
             </section>
 
             <section id="see-also">
                 <h2>See Also</h2>
-                <p>
+                <div>
                     For additional course materials, please see:
-                </p>
+                </div>
                 <ul>
                     <li><a href="/course_wide/manual.html">Course Manual</a> - Detailed guidance for students and instructors</li>
                     <li><a href="/course_wide/rubric.html">Grading Rubric</a> - Detailed grading criteria for code projects</li>

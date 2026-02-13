@@ -11,13 +11,13 @@
 
 {% block content %}<h1>Interactive Data Science and Visualization Manual</h1>
 
-            <p>
+            <div>
                 Document which helps students engage with or instructors teach IDSV.
-            </p>
+            </div>
 
-            <p>
+            <div>
                 <strong>Other formats:</strong> <a href="/course_wide/manual.md">Markdown version</a> | <a href="/course_wide/manual.pdf">PDF version</a>
-            </p>
+            </div>
 
             <details>
                 <summary>Contents</summary>
@@ -36,70 +36,70 @@
 
             <section id="hello">
                 <h2>Hello</h2>
-                <p>
+                <div>
                     I'm excited that you are joining us as we explore interactive data science and visualization.
-                </p>
-                <p>
+                </div>
+                <div>
                     My name is Sam. Prior to UC Berkeley, I was at Google, Apple, IDEO, and various start ups. Here on campus, I'm a published researcher at the university's Schmidt Center for Data Science and Environment.
-                </p>
-                <p>
+                </div>
+                <div>
                     Most of my current focus is on crafting tools for policy makers to engage science in their work. This course is about building those kinds of digital environments that let us see the world around us in new ways through data. Specifically, we will construct "dialectic" experiences through which users can co-create narrative and build new knowledge in partnership with interactive "media for thought" <a href="https://vimeo.com/67076984">(Victor 2011)</a>. We are going to journey through cognitive science, information design, game design, and more to explore how these ingredients come together within world-class tools for modern sense-making.
-                </p>
-                <p>
+                </div>
+                <div>
                     That's enough about me. Let's talk about you! I'm excited to have you here as story-tellers, designers, scientists, and engineers. This hands-on course will help you build sophisticated interactive tools. Regardless of whether you are making those experiences for others or for yourself, our time together will focus on the ways we see information and construct knowledge. At the end of the course, you will be well versed in information design. We will use readings, short hands-on practice projects, a longer hands-on interactive experience, a capstone, and collaborative in-person discussion to get there.
-                </p>
-                <p>
+                </div>
+                <div>
                     This "student manual" gives you everything you need to navigate the course. While the <a href="/course_wide/syllabus.html">syllabus</a> offers an overview of the schedule with weekly lecture and assignments, this complements those materials with details on each reading and project. Also, to help you set time expectations, it outlines estimated duration for each activity.
-                </p>
-                <p>
+                </div>
+                <div>
                     I'll end this welcome letter with something a mentor told me once: design is an act of hope. When we do this work, we are engaging in optimism and practice of building a brighter, stronger, and more inclusive future.
-                </p>
-                <p>
+                </div>
+                <div>
                     Thank you for joining me!
-                </p>
+                </div>
             </section>
 
             <section id="learn">
                 <h2>Learn</h2>
-                <p>
+                <div>
                     The class offers multiple avenues to explore the course materials but the primary location is our lessons which blend traditional lecture and interactive exploration.
-                </p>
+                </div>
 
                 <h3>Cadence</h3>
-                <p>
-                    For this participating in the class at UC Berkeley, we meet twice weekly. For those online, you can go at your own pace but follow a similar cadence for an experience analogous to the in-person course. These sessions will be a mixture of regular lectures and hands-on group or individual activities.
-                </p>
+                <div>
+                    For those participating in the class at UC Berkeley, we meet twice weekly. For those online, you can go at your own pace but follow a similar cadence for an experience analogous to the in-person course. These sessions will be a mixture of regular lectures and hands-on group or individual activities.
+                </div>
 
                 <h3>Sensitive topics</h3>
-                <p>
+                <div>
                     We will be exploring visualizations and other materials which may deal with some heavy topics like gun violence or sexism. It is important to see how visualizations address these kinds of subjects. The lessons have a content warning.
-                </p>
+                </div>
 
                 <h3>Respectful discussion</h3>
-                <p>
+                <div>
                     The course will be talking about some big stuff from climate change to government. We will be sharing our work with each other and those pieces could include challenging viewpoints. We may disagree with each other sometimes. This space is meant to be respectful and inclusive. Mistakes happen but we will work to reduce bullying, threats, disrespectful language, and other non-constructive dialogue. For all learners at UC Berkeley and beyond, please consider how to contribute to that dialog constructively.
-                </p>
+                </div>
 
                 <h3>Attendance</h3>
-                <p>
+                <div>
                     For online learners using the open source course materials, the lessons are designed to be taken in sequence. However, you are very welcome to mix and match or jump around the course in order to meet your learning goals.
-                </p>
-                <p>
+                </div>
+                <div>
                     For UC Berkeley students, we will not take attendance during these sessions. Sometimes things happen where attending lecture is not the best use of your time and I want to ensure you have the flexibility as needed. However, our in-person meetings will be the space in which projects are discussed, assignments given, etc. If you miss a lecture, please reach out to me to ensure you have everything you need to complete the assignments.
-                </p>
+                </div>
             </section>
 
             <section id="read">
                 <h2>Read</h2>
-                <p>
+                <div>
                     The take-home materials help you come into each session with the right background knowledge to make our time together successful. Sometimes this will be reading and, other times, this will be video or audio. Regardless, these resources are often introductory but typically also point to more material if you want to dig in deeper.
-                </p>
-                <p>
+                </div>
+                <div>
                     There are 17 readings, each taking about an hour. As documented later, there are also 5 supplemental readings for the capstone project. Additionally, some students with less Python familiarity are given access to an open textbook (A Byte of Python) but, for those already comfortable with the programming language, there are 4 optional replacement readings I ask you do instead (in light grey). Finally, 2 hours of "reading time" are allotted to explore articles for your interactive experience. In total, this comes to 28 hours across the semester.
-                </p>
-                <p>
+                </div>
+                <div>
                     Readings do not have submissions but you are welcome to discuss with the rest of the class or through social media as described in the lectures.
-                </p>
+                </div>
 
                 <table>
                     <tr>
@@ -110,50 +110,50 @@
 {%- if lesson.reading %}
                     <tr>
                         <td>{{ lesson.lesson }}</td>
-                        <td>{% for item in lesson.reading %}{% if item.url %}<a href="{{ item.url }}" target="_blank">{{ item.text }}</a>{% else %}{{ item.text }}{% endif %}{% if not loop.last %}{{ item.separator if item.separator else ', ' }}{% elif item.separator %}{{ item.separator }}{% endif %}{% endfor %}</td>
+                        <td>{% for item in lesson.reading %}<div>{% if item.url %}<a href="{{ item.url }}" target="_blank">{{ item.text }}</a>{% else %}{{ item.text }}{% endif %}</div>{% endfor %}</td>
                     </tr>
 {%- endif %}
 {%- endfor %}
                 </table>
 
-                <p><strong>Remainder:</strong> Readings for Final and Interactive Experience</p>
+                <div><strong>Remainder:</strong> Readings for Final and Interactive Experience</div>
             </section>
 
             <section id="experience">
                 <h2>Experience</h2>
-                <p>
-                    We are going to look at a lot of short examples together. However, to learn how to create these interactive tools, it's important that go beyond looking and discussing... we have to actually play.
-                </p>
+                <div>
+                    We are going to look at a lot of short examples together. However, to learn how to create these interactive tools, it's important that we go beyond looking and discussing... we have to actually play.
+                </div>
 
                 <h3>Motivation</h3>
-                <p>
+                <div>
                     In addition to video games having a lot of valuable lessons to share about creating dialectic digital spaces, they also teach us how to critically interrogate interactive designs as we experience them. Therefore, one of our activities ("interactive experience") is to play one of the games below. This will be further discussed in the lessons. Please select one of these games and play with sound on if possible.
-                </p>
+                </div>
 
                 <h3>Options</h3>
-                <p>
+                <div>
                     While going through these games, please identify the primary and secondary loops in addition to reflecting on the game-specific questions. We will plan to do a reflection on our experiences as a group right before the final! For those online, consider using social media as described in the course website.
-                </p>
-                <p>
+                </div>
+                <div>
                     Some of these games have combat and some deal with some heavier topics. Also, many have non-subscription equivalent iOS / Android versions. Some games can (potentially) be completed within the 4 hours of homework time set aside for gameplay. We will also give 2 hours for reading reviews and articles about your game but you may convert those 2 reading hours to additional play time if desired. Regardless, all are chosen because you should be able to pick up on the key lessons (for the course) by the end of those 4 - 6 hours.
-                </p>
-                <p>
+                </div>
+                <div>
                     <strong>Content indicators:</strong> ⚔️ (combat), ❤️ (sensitive topics), 📱 (mobile version available), ⏱️ (completable in ~4 hours)
-                </p>
+                </div>
 
                 <h4>Ludic Elements / Ludonarrative</h4>
 
-                <p>
+                <div>
                     <strong><a href="https://papersplea.se">Papers Please (2014)</a></strong> ❤️ 📱
-                </p>
+                </div>
                 <ul>
                     <li>What message do the ludic elements convey?</li>
                     <li>What is gained by having the player take action to advance the narrative?</li>
                 </ul>
 
-                <p>
+                <div>
                     <strong><a href="https://thunderlotusgames.com/spiritfarer/">Spiritfarer (Thunder Lotus 2020)</a></strong> ❤️
-                </p>
+                </div>
                 <ul>
                     <li>How does the game build the player's investment in the characters?</li>
                     <li>How does food interact with the broader narrative and character building?</li>
@@ -161,17 +161,17 @@
 
                 <h4>Dynamic Narrative / Design</h4>
 
-                <p>
+                <div>
                     <strong><a href="https://cosmicwheel.com/">Cosmic Wheel (Deconstructteam 2023)</a></strong> ⚔️ ❤️ 📱
-                </p>
+                </div>
                 <ul>
                     <li>How do the player and game respond to each other?</li>
                     <li>To what degree does the player have agency over the narrative?</li>
                 </ul>
 
-                <p>
+                <div>
                     <strong><a href="https://subsetgames.com/ftl.html">FTL (Ma and Davis 2012)</a></strong> ⚔️ 📱
-                </p>
+                </div>
                 <ul>
                     <li>How does the game build tension if you can pause?</li>
                     <li>What is the effect of limiting the player to a subset of content?</li>
@@ -179,17 +179,17 @@
 
                 <h4>Environmental / Atmospheric Storytelling</h4>
 
-                <p>
+                <div>
                     <strong><a href="https://www.witchbeam.com.au/unpacking">Unpacking (Brier et al 2021)</a></strong> ⏱️ ❤️ 📱
-                </p>
+                </div>
                 <ul>
                     <li>Would the game be different with dialogue?</li>
                     <li>How does the game use solution validity to build its narrative?</li>
                 </ul>
 
-                <p>
+                <div>
                     <strong><a href="https://afterplace.game/">Afterplace (Kice 2022)</a></strong> ⚔️ ❤️ 📱
-                </p>
+                </div>
                 <ul>
                     <li>How can dialogue / signage serve multiple roles?</li>
                     <li>How does the game build "vibe" of different areas outside of dialogue?</li>
@@ -198,300 +198,300 @@
 
             <section id="exercise">
                 <h2>Exercise</h2>
-                <p>
+                <div>
                     Short assignments foster active exploration of concepts discussed in each lecture. On average, each activity will take 2 hours to complete.
-                </p>
+                </div>
 
                 <h3>Motivation</h3>
-                <p>
+                <div>
                     Some assignments require coding but others may, for example, be drawing or short writings. Though we provide instruction in <a href="https://sketchingpy.org">Sketchingpy (Pottinger 2024)</a>, alternative technologies may be used if desired. The details of each assignment are provided below. These are due 2 days after lecture date below. There are 14 of these short assignments in total for 28 expected hours.
-                </p>
+                </div>
 
                 <h3>Specifics</h3>
-                <p>
+                <div>
                     In addition to the description here, additional details are provided in the corresponding lesson in which the assignment is given.
-                </p>
+                </div>
 
                 <h4>Assignment 1: Async introductions</h4>
-                <p>
+                <div>
                     For getting warmed up, we will exchange short introductions online. Please write about 4 sentences introducing yourself and what you are hoping to gain from the course. Include an image describing yourself that isn't a photograph of yourself.
-                </p>
+                </div>
 
                 <h4>Assignment 2: Example visualization 1</h4>
-                <p>
+                <div>
                     Find a visualization from your daily life. For example, this could include a graphic from the news or a textbook. What do you think the piece's intended message is? How does the author convey this message? Post 4 - 8 sentences with your answers and a link to the piece.
-                </p>
+                </div>
 
                 <h4>Assignment 3: Example visualization 2</h4>
-                <p>
+                <div>
                     <strong>For UC Berkeley students:</strong> Revisit a visualization posted by someone else from Assignment 2. What might the 4 perspectives say about this visualization?
-                </p>
-                <p>
+                </div>
+                <div>
                     <strong>For open source online learners:</strong> Revisit the visualization from Assignment 2. What might the 4 perspectives say about this visualization? Consider the following:
-                </p>
+                </div>
                 <ul>
                     <li>What visual encoding devices are used?</li>
                     <li>What task or user journey is being accomplished through the piece?</li>
                     <li>Does the piece try to also convey an emotion and, if so, how?</li>
                     <li>Does the piece invite the reader to reach their own conclusions about the data and, if so, how?</li>
                 </ul>
-                <p>
+                <div>
                     Please write 4 - 8 sentences. See <a href="/mooc/lesson3.html">Lesson 3</a> for more details.
-                </p>
+                </div>
 
                 <h4>Assignment 4: Example visualization 2</h4>
-                <p>
+                <div>
                     Find another visualization but, this time, limit yourself to just the sources types provided by Sam (see the list in <a href="/mooc/lesson5.html">Lesson 5</a>). What is the intended message? How does the visualization convey this message? What might the 4 perspectives say about this visualization? Please post 4 - 8 sentences with a link.
-                </p>
+                </div>
 
                 <h4>Assignment 5: Job satisfaction</h4>
-                <p>
+                <div>
                     Plot job satisfaction from the Stack Overflow Developer Survey using your preferred software. This can be done in spreadsheet software. Please provide 2 - 4 sentences describing how this representation uses pre-attentive features. May be a heat map but other charts welcome.
-                </p>
+                </div>
 
                 <h4>Assignment 6: Job satisfaction remix</h4>
-                <p>
+                <div>
                     <strong>For UC Berkeley students:</strong> Re-use the variables from someone else's submission but choose a different representation. Describe how your plot uses pre-attentive features.
-                </p>
-                <p>
+                </div>
+                <div>
                     <strong>For open source online learners:</strong> Return to your Job Satisfaction exercise from Assignment 5. Make a new graphic that displays the same variables but use a different visual representation. For example, if you previously chose a scatter plot, try a heatmap or bar chart. It doesn't necessarily need to be better or worse. It just needs to be different. When done, write 3 - 4 sentences about how your plot uses pre-attentive features. Use this as a chance to reflect on how it felt to explore alternative options. See <a href="/mooc/lesson7.html">Lesson 7</a> for more details.
-                </p>
+                </div>
 
                 <h4>Assignment 7: Creative Code 1</h4>
-                <p>
+                <div>
                     Build an art piece that is drawn using code. For this first submission, please do not make it interactive yet. Post your code and a screenshot.
-                </p>
+                </div>
 
                 <h4>Assignment 8: Creative Code 2</h4>
-                <p>
+                <div>
                     In this next step, we will add interactivity. You can do this either by continuing the previous art piece or creating a new one. Post your code and a screenshot. Feel free to take a look around at other submissions for inspiration and remixing.
-                </p>
+                </div>
 
                 <h4>Assignment 9: Census 1 / Income inequality with 4 variables</h4>
-                <p>
+                <div>
                     Visualize 4 variables of the <a href="https://incomegaps.com/" target="_blank">income inequality dataset</a> (<a href="https://incomegaps.com/" target="_blank">Pottinger 2023</a>) with a design guided by the recent course material. Please make this version without interactivity. Post your code and a screenshot!
-                </p>
+                </div>
 
                 <h4>Assignment 10: Census 2 / Income inequality with 6 variables</h4>
-                <p>
+                <div>
                     Visualize 6 variables of the income inequality dataset with a design guided by the recent course material. This can be a continuation of the last assignment or a fresh attempt. Please make this without interactivity. Post your code and a screenshot!
-                </p>
+                </div>
 
                 <h4>Assignment 11: Manual visualizations</h4>
-                <p>
+                <div>
                     Draw your last 5 years and your next 5 years by hand. Take a photo and post.
-                </p>
+                </div>
 
                 <h4>Assignment 12: BART 1</h4>
-                <p>
+                <div>
                     Visualize the <a href="/support/misc/bart.xlsx">BART dataset</a> (<a href="https://www.bart.gov/about/reports/ridership" target="_blank">BART 2025</a>) with a minimum of 3 variables. You do not need to show everything. For example, you may choose to focus on a single station. Please do not make this version with interactivity. Post your code and a screenshot!
-                </p>
+                </div>
 
                 <h4>Assignment 13: Think-Aloud of Pyafscgap</h4>
-                <p>
+                <div>
                     Record yourself on zoom or similar doing a Think Aloud of <a href="https://pyafscgap.org/" target="_blank">Pyafscgap's</a> visualization (<a href="https://joss.theoj.org/papers/10.21105/joss.05593" target="_blank">Pottinger and Zarpellon 2023</a>). Post your walkthrough and listen to someone else's recording. What is this activity good at soliciting? What might this activity be poor at uncovering? Post 2 sentences as a reply.
-                </p>
+                </div>
 
                 <h4>Assignment 14: BART 2</h4>
-                <p>
+                <div>
                     Visualize the <a href="/support/misc/bart.xlsx">BART dataset</a> (<a href="https://www.bart.gov/about/reports/ridership" target="_blank">BART 2025</a>) with a minimum of 4 variables. You do not need to show everything. For example, you may choose to focus on a single station. You may optionally make this with interactivity. Post your code and a screenshot!
-                </p>
+                </div>
 
                 <h4>Assignment 15: Interactive Visualization</h4>
-                <p>
+                <div>
                     Revisit your BART or census visualization and add a single verb / single interaction. Post your code and screenshot.
-                </p>
+                </div>
             </section>
 
             <section id="build">
                 <h2>Build</h2>
-                <p>
+                <div>
                     For the final project, we will build a visualization using what we learned throughout the course. This capstone affords additional time for a deeper exploration. You are welcome to share code and ideas with others as described in the "collaborate" section.
-                </p>
+                </div>
 
                 <h3>Motivation</h3>
-                <p>
+                <div>
                     This visualization should be interactive, multi-dimensional, and reflect our discussion of ethics. You may use any licensed dataset but see below for some possible options which are well documented and formatted. As the "activity" for 9 lectures, we anticipate that this exercise will take about 18 hours. However, if you need more time, you may convert the 5 hours of final reading to additional project time. <a href="https://sketchingpy.org">Sketchingpy (Pottinger 2024)</a> is recommended but use whatever works best for you.
-                </p>
+                </div>
 
                 <h3>Dataset Options</h3>
-                <p>
+                <div>
                     These options are given as a starting point known to have favorable licensing and suitable documentation. However, you may choose to consider a different dataset for your work.
-                </p>
+                </div>
 
                 <h4>StackOverflow Developers Survey</h4>
-                <p>
+                <div>
                     This resource provides an imperfect but multi-faceted look at working experiences within tech, spanning pay to technical preferences and satisfaction. It contains many interesting stories (<a href="https://survey.stackoverflow.co/" target="_blank">Stack Exchange 2024</a>).
-                </p>
+                </div>
 
                 <h4>California State Budget</h4>
-                <p>
+                <div>
                     Explore government through how it allocates its limited resources. The California State Budget provides another lens into our home and our representatives (<a href="https://ebudget.ca.gov/" target="_blank">California Department of Finance 2026</a>).
-                </p>
+                </div>
 
                 <h4>Amtrak Ridership Data</h4>
-                <p>
+                <div>
                     People travel for a lot of reasons. This look into mobility charts the path of those stories across America, winding through big cities and small towns along the way. What can you uncover? (<a href="https://www.bts.gov/browse-statistical-products-and-data/state-transportation-statistics/amtrak-ridership" target="_blank">Bureau of Transportation Statistics 2024</a>).
-                </p>
+                </div>
 
                 <h4>EPI Microdata (US ACS)</h4>
-                <p>
+                <div>
                     With a nearly overwhelming number of variables, the census ACS understands American life through rich socioeconomic data. It paints complex pictures of diverse experiences (<a href="https://microdata.epi.org/" target="_blank">Economic Policy Institute 2025</a>).
-                </p>
+                </div>
 
                 <h4>US State Energy Data System</h4>
-                <p>
+                <div>
                     Electricity underpins our society. What consumes power and from what sources reflects climate priorities, economic forces, and social preferences. Each kilowatt adds to a bigger story (<a href="https://www.eia.gov/state/seds/" target="_blank">U.S. Energy Information Administration 2024</a>).
-                </p>
+                </div>
 
                 <h4>Armed Conflict Location and Event Data</h4>
-                <p>
+                <div>
                     Conflict shapes the course of human history and remains an ongoing force in our world today. What can a data perspective on these conflicts tell us about our species and our future? (<a href="https://acleddata.com/" target="_blank">ACLED 2025</a>).
-                </p>
+                </div>
 
                 <h4>Global Plastics AI Policy Tool</h4>
-                <p>
+                <div>
                     Plastics pollution sits in between ecological destruction and fossil fuels contributing to climate change. What can plastic tell us about our environmental future? (<a href="https://global-plastics-tool.org/" target="_blank">Pottinger et al. 2024</a>).
-                </p>
+                </div>
 
                 <h4>Climate Driven Doubling of Maize Loss</h4>
-                <p>
+                <div>
                     Agriculture is under stress from climate change. What can exploring the future of corn in the US tell us about our challenges and our adaptation opportunities? (<a href="https://doi.org/10.52933/jdssv.v5i3.134" target="_blank">Pottinger et al. 2025</a>).
-                </p>
+                </div>
 
                 <h4>AFSC GAP</h4>
-                <p>
+                <div>
                     Climate change is impacting fisheries. What can fish stocks data tell us about climate and food? (<a href="https://pyafscgap.org/" target="_blank">Pottinger and Zarpellon 2023</a>).
-                </p>
+                </div>
 
                 <h4>GitHut</h4>
-                <p>
+                <div>
                     What can programming language popularity tell us about shifting trends in tech? (<a href="https://madnight.github.io/githut/" target="_blank">GitHut 2024</a>).
-                </p>
+                </div>
             </section>
 
             <section id="collaborate">
                 <h2>Collaborate</h2>
-                <p>
+                <div>
                     The opportunities for collaboration and engagement with other learners vary given how you take the course though there are some shared principles.
-                </p>
+                </div>
 
                 <h3>For everyone</h3>
-                <p>
+                <div>
                     First, a little guidance for all learners.
-                </p>
+                </div>
 
                 <h4>Share your ideas</h4>
-                <p>
+                <div>
                     Collaboration with other students is encouraged! However, to ensure fairness for everyone, please give credit to others if you are borrowing code or ideas. Work that builds on others can be excellent and inspiring. Joint submissions are welcome but please include a description of each person's contribution. This will be used to grade each person individually.
-                </p>
+                </div>
 
                 <h4>Engage open source</h4>
-                <p>
+                <div>
                     Use of external open source resources is welcome. Please respect licenses of any code used. If no license is given, the code or resource should not be used even if public. If you are unsure and in the UC community, please ask for help. Finally, please be sure to mention the libraries used in your submission. Giving credit is often required for meeting license requirements.
-                </p>
+                </div>
 
                 <h3>Open source online learner</h3>
-                <p>
+                <div>
                     For those participating through the open source online course outside of the UC Berkeley community, it is encouraged that you share your work and ideas on social media with <code>#OpenDataVizSciCourse</code>.
-                </p>
+                </div>
 
                 <h3>UC Berkeley For-Credit</h3>
-                <p>
+                <div>
                     For those taking this class for credit, an online community is available to serve as the hub of our activity.
-                </p>
+                </div>
 
                 <h4>How Zulip works</h4>
-                <p>
+                <div>
                     For this semester, we will be using Zulip for our online community. There are different channels for different types of students (<code>#learner-audit</code>, <code>#learner-graded</code>). There are also channels for office hours (<code>#coffee-and-office-hours</code>) as well as for lectures / rehearsal recordings (<code>#lectures</code>) and readings (#reading). Finally, all assignments get their own channel (<code>#assign-*</code>). You can interact with the course bot (<code>CourseBot</code>) to submit assignments, request peer review, and more. Details on how to interact with this software will be provided at the start of the course. Please note that you gain access to the Zulip after completing the welcome survey.
-                </p>
+                </div>
 
                 <h4>How waitlisting works</h4>
-                <p>
+                <div>
                     Unfortunately, to support collaboration between myself and the students, enrollment is capped. I will grade for everyone on the waitlist through lecture 5 (up to 50 students). After lecture 6 (Feb 10), the waitlist will be closed. At that time, students will be given the option to switch to auditing if they wish to continue.
-                </p>
+                </div>
 
                 <h3>UC Berkeley Audit</h3>
-                <p>
+                <div>
                     You are very welcome to join us! Leave and join as you like but please register. Those auditing may participate in online discussions and submit assignments for peer feedback though they will not be graded. Students may use recorded rehearsal lectures or may attend in person. There will be 10 physical seats available to auditors but, if physical room runs out, for credit students will be prioritized. Only open to those in the UC Berkeley community (students, staff, faculty).
-                </p>
+                </div>
 
                 <h4>Auditing motivation</h4>
-                <p>
+                <div>
                     We have a fantastic auditing experience planned. The goal is that those who are taking the course for non-credit ("auditing") can experience instruction and practice their skills like any other student with the exception that auditors will not receive formal grading or credit. This allows students to participate online without needing to attend lectures in person or be physically be present on campus. This means that you do not need to be available during official class hours. Engaging in activities is optional and we invite you to join us in our online class Zulip community. Auditors are subject to UC code of conduct and other policies.
-                </p>
+                </div>
 
                 <h4>Auditing resources</h4>
-                <p>
+                <div>
                     Those auditing are welcome to join in person and online in our Zulip community. However, if space is limited, physical seats will be prioritized for those attending for credit. My apologies!
-                </p>
-                <p>
+                </div>
+                <div>
                     Beyond recordings, other activities are available to those registered within the Zulip community or who have been given an alternative accommodation (for which there may be limited resources). With access given after completing the welcome survey, this is only open to those in the UC Berkeley community (students, staff, faculty).
-                </p>
-                <p>
+                </div>
+                <div>
                     For non-credit students, exercises may optionally be completed online with peer feedback. This allows those participating as auditors to practice their skills and engage with others in the virtual community. Though subject to random spot-checks, please note that this feedback is not moderated. As part of our online community standards, all feedback must be kind, constructive, specific, and empathetic.
-                </p>
-                <p>
+                </div>
+                <div>
                     Auditors are also welcome to participate in the final project and interactive experience. These will be conducted through Zulip and Zoom with online discussion but, for those who are local, you are welcome to present your final project in person. Whether joining our final festival in person or online, it will be a lot of fun!
-                </p>
-                <p>
+                </div>
+                <div>
                     Everyone in the class including non-credit students are welcome to join office hours. These will be held virtually through Zoom with scheduling announced on Zulip. Note that, if you are unable to join during these times, you may still engage in discussion through our online community.
-                </p>
+                </div>
 
                 <h4>Recognition</h4>
-                <p>
+                <div>
                     Those who register through CalCentral may receive some recognition of participation through their transcript but please reach out to me if you have questions. Note that some inquires may require involving academic advisors. I cannot guarantee any formal recognition from the university for your participation.
-                </p>
+                </div>
 
             </section>
 
             <section id="showcase">
                 <h2>Showcase</h2>
-                <p>
+                <div>
                     At the end of the course, we will do a showcase of final projects.
-                </p>
+                </div>
 
                 <h3>Purpose of the final project</h3>
-                <p>
+                <div>
                     The goal is that this time together is a celebration of everything accomplished over the semester and an opportunity to try some skills one more time. You will have a chance to get non-graded feedback prior to the submission deadline. While optional, this is intended to help build confidence and reduce stress going into the final. The best outcome is that you are proud of this work and I hope that this is something you can be comfortable putting into your portfolio and sharing on social media.
-                </p>
+                </div>
 
                 <h3>Final projects for open source online learners</h3>
-                <p>
+                <div>
                     This final project can really be whatever you want it to be as long as it meets the requirements described in the build section above.
-                </p>
+                </div>
 
                 <h3>Guidance for UC Berkeley community</h3>
-                <p>
+                <div>
                     Additionally, some guidance for our UC Berkeley community.
-                </p>
+                </div>
 
                 <h4>Final options for auditors</h4>
-                <p>
+                <div>
                     Those who complete all assignments (with peer sign off for everything but the final) are invited to participate in the showcase. However, this is entirely optional. You may audit the course with any level of engagement so long as you follow university policies.
-                </p>
+                </div>
 
                 <h4>Guests</h4>
-                <p>
+                <div>
                     There will be a survey to students to see about the possibility of inviting guests such as friends and family but this will require consent from those attending. It is completely OK if you would like to skip this.
-                </p>
+                </div>
 
                 <h4>Due dates</h4>
-                <p>
+                <div>
                     An opportunity will be announced in the lessons to pre-submit a draft of the submission. Projects may be refined ahead of final assessment based on that initial feedback. Also, again announced during lessons, auditors must also let me know if they are participating in the in-person showcase. The actual final due date is the assigned day of your presentation. No late assignments will be accepted
-                </p>
+                </div>
 
                 <h4>Format</h4>
-                <p>
+                <div>
                     This will give us one last chance to practice skills taught in the course. We will do a rotation where one set of students will present while others offer thoughts before rotating. For graded students, the final grade is based only on the instructor's evaluation of their final project and the peer feedback they provided to others.
-                </p>
+                </div>
             </section>
 
             <section id="misc">
                 <h2>Misc</h2>
-                <p>
+                <div>
                     Dedicated to my late grandmother, Barbara. Thank you for your wisdom and kindness. I hope I may continue your tradition of teaching creative computing.
-                </p>
+                </div>
 
                 <details>
                     <summary>Works Cited</summary>
@@ -541,9 +541,9 @@
 
             <section id="see-also">
                 <h2>See Also</h2>
-                <p>
+                <div>
                     For additional course materials, please see:
-                </p>
+                </div>
                 <ul>
                     <li><a href="/course_wide/syllabus.html">Course Syllabus</a> - Formal curriculum and weekly schedule</li>
                     <li><a href="/course_wide/rubric.html">Grading Rubric</a> - Detailed grading criteria for code projects</li>
