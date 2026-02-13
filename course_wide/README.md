@@ -53,7 +53,7 @@ List of daily lessons nested under sections:
 | class    | No       | List of class activity items                 | list   |
 | activity | No       | List of homework/out-of-class activity items | list   |
 
-Each item in `reading`, `class`, and `activity` lists must use either `html` or `markdown` for content. Only one content attribute is allowed per item (must use ither html or markdown but not both). Here is a full example:
+Each item in `reading`, `class`, and `activity` lists must use either `html` or `markdown` for content. Only one content attribute is allowed per item (must use either html or markdown but not both). Here is a full example:
 
 ```yaml
 lessons:

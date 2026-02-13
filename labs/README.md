@@ -44,7 +44,7 @@ Each section in the `sections` list contains:
 | markdown   | One of   | Section content in Markdown format               | markdown            |
 | blockstyle | No       | Code block style: "pre" (default) or "blockquote" | string              |
 
-ach section must contain exactly one of `html` or `markdown` for content. However, both cannot be present simultaneously.
+Each section must contain exactly one of `html` or `markdown` for content. However, both cannot be present simultaneously.
 
 #### Best Practices
 When writing YAML, please try to observe the following conventions:
@@ -55,7 +55,7 @@ When writing YAML, please try to observe the following conventions:
 - Markdown content supports fenced code blocks with triple backticks
 - Use `blockstyle: blockquote` to render code blocks as blockquotes instead of `<pre>` tags
 
-Here is an example of these practices in mind:
+Here is an example with these practices in mind:
 
 ```yaml
 name: Python Introduction
