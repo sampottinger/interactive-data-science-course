@@ -18,7 +18,7 @@ into the overall MOOC website.
 Found in `/lecture`, traditional lectures that mix classic instruction and
 shorter hands-on activities intended for a traditional classroom structure.
 Lesson YAML files are organized in `lecture/lessons/` within numbered section
-subdirectories (e.g., `01_Hello/00_hello_preface.yaml`), while lesson materials
+subdirectories (e.g., `01_Hello/00_hello_preface.yml`), while lesson materials
 (markdown, PDF, and PPTX files) are organized under `lecture/support/` in
 `md/`, `pdf/`, and `pptx/` subdirectories. Additional supporting files are in
 `support/web/` and `support/misc/`. These are available in **markdown** with

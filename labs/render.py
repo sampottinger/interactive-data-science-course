@@ -94,7 +94,7 @@ def load_labs_from_directory(labs_dir):
 
     tutorials = []
     lab_members = os.listdir(lab_path)
-    is_tutorial_yaml = lambda x: x.endswith('.yaml') and x[0:2].isdigit()
+    is_tutorial_yaml = lambda x: x.endswith('.yml') and x[0:2].isdigit()
     tutorial_yamls = filter(is_tutorial_yaml, lab_members)
     yaml_files = sorted(tutorial_yamls)
 

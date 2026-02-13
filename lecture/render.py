@@ -96,7 +96,7 @@ def get_section_lessons(section_dir, lessons_dir):
 
   # Load all lesson YAML files
   section_members = os.listdir(section_path)
-  yaml_only = filter(lambda x: x.endswith('.yaml'), section_members)
+  yaml_only = filter(lambda x: x.endswith('.yml') and x != 'index.yml', section_members)
   yaml_files = sorted(yaml_only)
 
   yaml_paths = map(lambda x: os.path.join(section_path, x), yaml_files)

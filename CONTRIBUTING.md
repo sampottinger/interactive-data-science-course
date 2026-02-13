@@ -45,8 +45,8 @@ directory contains numbered section subdirectories (e.g., `01_Hello`,
 `02_Primitives`), each containing individual YAML files for each lesson
 and an `index.yml` file with section metadata. Each lesson YAML file
 represents a single lesson as a top-level mapping. Lesson files are named with a numeric prefix
-followed by a descriptive name (e.g., `00_hello_preface.yaml`,
-`01_hello_visualization.yaml`).
+followed by a descriptive name (e.g., `00_hello_preface.yml`,
+`01_hello_visualization.yml`).
 
 Each section directory must also contain an `index.yml` file with section
 metadata:
@@ -247,7 +247,7 @@ During original teaching of this course as Stat 198 at UC Berkeley, the skills l
 
 Skills labs are organized in the `labs/` directory with the following structure:
  - `Lab_1/`, `Lab_2/`, etc.: Lab-specific directories containing YAML source files
- - Each lab directory contains an `index.yml` with lab metadata (name, lesson) and tutorial YAML files named with a numeric prefix followed by a descriptive name (e.g., `01_python_introduction.yaml`, `02_python_graphics.yaml`)
+ - Each lab directory contains an `index.yml` with lab metadata (name, lesson) and tutorial YAML files named with a numeric prefix followed by a descriptive name (e.g., `01_python_introduction.yml`, `02_python_graphics.yml`)
  - Tutorial YAML files define individual tutorials with name, file, header, sections, and citations
  - Templates: `tutorial.html`, `index_template.html`, `tutorial.md` for rendering
  - `render.py` and `render.sh` to generate HTML and Markdown output from YAML sources
