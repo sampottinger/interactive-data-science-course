@@ -11,6 +11,7 @@ import os
 import sys
 
 import jinja2
+import markdown
 import yaml
 
 USAGE_ARGS = [
@@ -38,6 +39,50 @@ def get_template_loader():
     return jinja2.Environment(loader=loader)
 
 
+def process_item_content(item):
+    """Process item content from text, html, or markdown attributes.
+
+    Checks for mutually exclusive content attributes (text, html, markdown).
+    Converts markdown to HTML if needed. Stores result in item's 'text' key
+    for template compatibility.
+
+    Args:
+        item: A dict with item data. May contain 'text', 'html', or 'markdown'
+            keys for content.
+
+    Returns:
+        dict: The item dict with processed content in 'text' field.
+
+    Raises:
+        ValueError: If more than one of text, html, markdown is present.
+    """
+    has_text = 'text' in item
+    has_html = 'html' in item
+    has_markdown = 'markdown' in item
+
+    # Count how many content attributes are present
+    content_count = sum([has_text, has_html, has_markdown])
+
+    # Raise error if more than one content attribute is present
+    if content_count > 1:
+        raise ValueError(
+            'Item has more than one content attribute. '
+            'Only one of "text", "html", or "markdown" is allowed.'
+        )
+
+    # Process content based on which attribute is present
+    if has_html:
+        item['text'] = item['html']
+    elif has_markdown:
+        item['text'] = markdown.markdown(
+            item['markdown'],
+            extensions=['fenced_code']
+        )
+    # If has_text, it's already in the right place, nothing to do
+
+    return item
+
+
 def load_course_data():
     """Load course data from course_wide.yml.
 
@@ -49,6 +94,13 @@ def load_course_data():
 
     with open(course_wide_path, 'r') as f:
         data = yaml.safe_load(f)
+
+    # Process all lesson items (reading, class, activity)
+    for lesson in data.get('lessons', []):
+        for item_list_key in ['reading', 'class', 'activity']:
+            if item_list_key in lesson and lesson[item_list_key]:
+                for item in lesson[item_list_key]:
+                    process_item_content(item)
 
     return data
 
