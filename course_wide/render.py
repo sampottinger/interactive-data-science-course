@@ -40,34 +40,46 @@ def get_template_loader():
 
 
 def process_item_content(item):
-    """Process item content from text, html, or markdown attributes.
+    """Process item content from html or markdown attributes.
 
-    Checks for mutually exclusive content attributes (text, html, markdown).
+    Validates that exactly one of html or markdown is present.
     Converts markdown to HTML if needed. Stores result in item's 'text' key
     for template compatibility.
 
     Args:
-        item: A dict with item data. May contain 'text', 'html', or 'markdown'
-            keys for content.
+        item: A dict with item data. Must contain either 'html' or 'markdown'
+            key for content.
 
     Returns:
         dict: The item dict with processed content in 'text' field.
 
     Raises:
-        ValueError: If more than one of text, html, markdown is present.
+        ValueError: If 'text' attribute is used (deprecated).
+        ValueError: If both 'html' and 'markdown' are present.
+        ValueError: If neither 'html' nor 'markdown' is present.
     """
     has_text = 'text' in item
     has_html = 'html' in item
     has_markdown = 'markdown' in item
 
-    # Count how many content attributes are present
-    content_count = sum([has_text, has_html, has_markdown])
-
-    # Raise error if more than one content attribute is present
-    if content_count > 1:
+    # Raise error if deprecated 'text' attribute is used
+    if has_text:
         raise ValueError(
-            'Item has more than one content attribute. '
-            'Only one of "text", "html", or "markdown" is allowed.'
+            'The "text" attribute is no longer supported. '
+            'Please use "html" or "markdown" instead.'
+        )
+
+    # Raise error if both html and markdown are present
+    if has_html and has_markdown:
+        raise ValueError(
+            'Item has both "html" and "markdown" attributes. '
+            'Only one is allowed.'
+        )
+
+    # Raise error if neither html nor markdown is present
+    if not has_html and not has_markdown:
+        raise ValueError(
+            'Item must have either "html" or "markdown" attribute.'
         )
 
     # Process content based on which attribute is present
@@ -78,7 +90,6 @@ def process_item_content(item):
             item['markdown'],
             extensions=['fenced_code']
         )
-    # If has_text, it's already in the right place, nothing to do
 
     return item
 

@@ -234,6 +234,8 @@ The `course_wide.yml` file contains:
  - `lessons`: Nested under sections, containing day number, title, readings, and activities
  - `rubric`: List of grading criteria with category, criterion, and percentage fields
 
+Lesson items (reading, class, activity) must use either `html` or `markdown` for content. Only one content attribute is allowed per item. The content will be processed and made available to templates in the `text` field.
+
 Follow YAML best practices similar to lesson YAML files:
  - Use `>` for multi-line strings
  - Keep lines to 100 characters or fewer (exceptions for long URLs)
