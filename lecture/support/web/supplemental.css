@@ -102,6 +102,11 @@ section {
 
 .section-tagline {
     font-weight: bold;
+    padding-bottom: 8px;
+}
+
+.section-tagline-sub {
+    font-weight: bold;
     padding-bottom: 10px;
 }
 
