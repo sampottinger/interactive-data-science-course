@@ -20,26 +20,17 @@ sections:
   - name: ellipse
     short: Ellipse
     long: Learn to draw ellipses and circles with different modes
-    body: >
+    html: |
       We have seen some circles already but we will start our journey
       through forms with ellipses. An ellipse is a circular object
       that is a circle if the width and height are the same. These can
       be useful for structures like
-      <a
-          href="https://www.data-to-viz.com/graph/scatter.html"
-          target="_blank"
-          >scatterplots</a
-      >
+      <a href="https://www.data-to-viz.com/graph/scatter.html">scatterplots</a>
       or
-      <a
-          href="https://www.data-to-viz.com/graph/bubble.html"
-          target="_blank"
-          :
-          >bubble plots</a
-      >. To explore our options, we will look at different "modes" for
+      <a href="https://www.data-to-viz.com/graph/bubble.html">bubble plots</a>.
+      To explore our options, we will look at different "modes" for
       how to indicate the shape of an ellipse. Let's start by drawing
       a simple ellipse sized according to radius:
-
       <pre>
       import sketchingpy
 
@@ -50,10 +41,8 @@ sections:
 
       sketch.show()
       </pre>
-
       Go ahead and run this a few times. Each time try changing the
       following:
-
       <ul>
           <li>
               Change ellipse mode from radius to the following:
@@ -71,7 +60,6 @@ sections:
       are the position and last two parameters are the size. However,
       for corners, all four parameters are positions. Here is a
       comparison of all four modes:
-
       <pre>
       import sketchingpy
 
@@ -91,34 +79,20 @@ sections:
 
       sketch.show()
       </pre>
-
       To formalize what you just learned, check out the
-      <a
-          href="https://sketchingpy.org/reference/set_ellipse_mode.html"
-          target="_blank"
-          >reference for set_ellipse_mode</a
-      >.
+      <a href="https://sketchingpy.org/reference/set_ellipse_mode.html">reference for set_ellipse_mode</a>.
   - name: rectangle
     short: Rectangle
     long: Learn to draw rectangles with different modes
-    body: >
+    html: |
       Let's continue to rectangles. These can be useful for things
       like
-      <a
-          href="https://www.data-to-viz.com/graph/barplot.html"
-          target="_blank"
-          >bar plots</a
-      >,
-      <a
-          href="https://datavizproject.com/data-type/butterfly-chart/"
-          target="_blank"
-          >butterfly plots</a
-      >, or
-      <a href="https://www.data-to-viz.com/graph/treemap.html"
-          >treemaps</a
-      >. This works similarly to ellipses and, even though it seems a
+      <a href="https://www.data-to-viz.com/graph/barplot.html">bar plots</a>,
+      <a href="https://datavizproject.com/data-type/butterfly-chart/">butterfly plots</a>,
+      or
+      <a href="https://www.data-to-viz.com/graph/treemap.html">treemaps</a>.
+      This works similarly to ellipses and, even though it seems a
       little counter-intutitive at first, these can also have radius.
-
       <pre>
       import sketchingpy
 
@@ -129,9 +103,7 @@ sections:
 
       sketch.show()
       </pre>
-
       Let's do the same experiments as before:
-
       <ul>
           <li>
               Change rect mode from radius to the following: radius,
@@ -143,10 +115,8 @@ sections:
               10, 20).
           </li>
       </ul>
-
       Once again, let's try comparing by piling these rectangles on
       top of each other.
-
       <pre>
       import sketchingpy
 
@@ -166,50 +136,26 @@ sections:
 
       sketch.show()
       </pre>
-
       Once again, see the reference for
-      <a
-          href="https://sketchingpy.org/reference/set_rect_mode.html"
-          target="_blank"
-          >set_rect_mode</a
-      >.
+      <a href="https://sketchingpy.org/reference/set_rect_mode.html">set_rect_mode</a>.
   - name: arc
     short: Arc
     long: Learn to draw arcs and partial circles
-    body: >
+    html: |
       I want to get to custom shapes in a moment but there's one last
       element to put into your tool chest. A quick glance at the chart
       wizard in spreadsheet software might make it seem like arcs
       aren't that important but, on the contrary, they can be used for
       many very useful structures even if they are less common outside
       of a
-      <a
-          href="https://www.data-to-viz.com/caveat/pie.html"
-          target="_blank"
-          >pie chart</a
-      >. Indeed, arcs are an essential ingredient in
-      <a
-          href="https://www.data-to-viz.com/graph/arc.html"
-          target="_blank"
-          >arc diagrams</a
-      >,
-      <a
-          href="https://www.data-to-viz.com/graph/sunburst.html"
-          target="_blank"
-          >sunbursts</a
-      >,
-      <a
-          href="https://www.data-to-viz.com/graph/chord.html"
-          target="_blank"
-          >chord diagrams</a
-      >, and
-      <a
-          href="https://www.data-to-viz.com/graph/donut.html"
-          target="_blank"
-          >doughnut charts</a
-      >
+      <a href="https://www.data-to-viz.com/caveat/pie.html">pie chart</a>.
+      Indeed, arcs are an essential ingredient in
+      <a href="https://www.data-to-viz.com/graph/arc.html">arc diagrams</a>,
+      <a href="https://www.data-to-viz.com/graph/sunburst.html">sunbursts</a>,
+      <a href="https://www.data-to-viz.com/graph/chord.html">chord diagrams</a>,
+      and
+      <a href="https://www.data-to-viz.com/graph/donut.html">doughnut charts</a>
       among others. Start with this code which draws a simple arc:
-
       <pre>
       import sketchingpy
 
@@ -221,10 +167,8 @@ sections:
 
       sketch.show()
       </pre>
-
       Now, let's do a similar investigation as we did for ellipses and
       rectangles:
-
       <ul>
           <li>
               Change arc mode from radius to the following: radius,
@@ -232,29 +176,20 @@ sections:
           </li>
           <li>Change the parameters provided to draw_arc.</li>
       </ul>
-
       Learn more at the
-      <a href="https://sketchingpy.org/reference/draw_arc.html"
-          >draw_arc documentation</a
-      >. Note that we are using degrees here to specify angles. You
+      <a href="https://sketchingpy.org/reference/draw_arc.html">draw_arc documentation</a>.
+      Note that we are using degrees here to specify angles. You
       can change to radians using
-      <a href="https://sketchingpy.org/reference/set_angle_mode.html"
-          >set_angle_mode</a
-      >.
+      <a href="https://sketchingpy.org/reference/set_angle_mode.html">set_angle_mode</a>.
   - name: line
     short: Line
     long: Learn to draw lines and connected line segments
-    body: >
+    html: |
       So far, we've worked with pre-defined shapes. However,
       Sketchingpy lets us make new forms as well. To explore how we
       can go about creating these shapes, let's briefly return to
-      <a
-          href="https://sketchingpy.org/reference/draw_line.html"
-          target="_blank"
-          >draw_line</a
-      >
+      <a href="https://sketchingpy.org/reference/draw_line.html">draw_line</a>
       as we saw in previous tutorials. Here's an example:
-
       <pre>
       import sketchingpy
 
@@ -264,10 +199,8 @@ sections:
 
       sketch.show()
       </pre>
-
       However, let's do this another way. We will see why this might
       help in a moment:
-
       <pre>
       import sketchingpy
 
@@ -280,23 +213,13 @@ sections:
 
       sketch.show()
       </pre>
-
       While this seems like extra code to achieve the same result at
       first, let's take this one step further with multiple connected
       line segments which could be useful for things like
-      <a
-          href="https://www.data-to-viz.com/graph/line.html"
-          target="_blank"
-          >line charts</a
-      >
+      <a href="https://www.data-to-viz.com/graph/line.html">line charts</a>
       and
-      <a
-          href="https://www.data-to-viz.com/graph/area.html"
-          target="_blank"
-          >area plots</a
-      >
+      <a href="https://www.data-to-viz.com/graph/area.html">area plots</a>
       or custom forms.
-
       <pre>
       import sketchingpy
 
@@ -310,7 +233,6 @@ sections:
 
       sketch.show()
       </pre>
-
       Note that Sketchingpy tries to color in the shape to make a
       figure. If you want to stop that, use sketch.clear_fill before
       calling sketch.draw_shape but we will investigate that more
@@ -318,24 +240,15 @@ sections:
   - name: curve
     short: Curve
     long: Learn to draw bezier curves
-    body: >
+    html: |
       Some charts like
-      <a
-          href="https://www.data-to-viz.com/graph/sankey.html"
-          target="_blank"
-          >Sankey Diagrams</a
-      >
+      <a href="https://www.data-to-viz.com/graph/sankey.html">Sankey Diagrams</a>
       require non-arc curves which are very often achieved through
-      <a
-          href="https://rfong.github.io/creative-coding/bezier/"
-          target="_blank"
-          >bezier curves</a
-      >
+      <a href="https://rfong.github.io/creative-coding/bezier/">bezier curves</a>
       which have two "control points" which you can think of as
       "pulling" the edge away from a straight path from start to
       finish. We can draw those too! Let's modify our shape just a
       little bit:
-
       <pre>
       import sketchingpy
 
@@ -349,21 +262,15 @@ sections:
 
       sketch.show()
       </pre>
-
       Try changing the parameters a bit but also see the
-      <a
-          href="https://sketchingpy.org/reference/add_bezier_to.html"
-          target="_blank"
-          >documentation for add_bezier_to</a
-      >.
+      <a href="https://sketchingpy.org/reference/add_bezier_to.html">documentation for add_bezier_to</a>.
   - name: shape
     short: Shape
     long: Create custom shapes combining different elements
-    body: >
+    html: |
       Now we can tie it all together. Let's make a custom shape
       (triangle) and put it next to some of the prebuilt shapes
       (circle and square):
-
       <pre>
       import sketchingpy
 
@@ -383,23 +290,15 @@ sections:
 
       sketch.show()
       </pre>
-
       Note that there are two ways to finish a shape:
-      <a
-          href="https://sketchingpy.org/reference/close.html"
-          target="_blank"
-          >end</a
-      >
+      <a href="https://sketchingpy.org/reference/close.html">end</a>
       or
-      <a
-          href="https://sketchingpy.org/reference/close.html"
-          target="_blank"
-          >close</a
-      >. Try changing close to end to learn more.
+      <a href="https://sketchingpy.org/reference/close.html">close</a>.
+      Try changing close to end to learn more.
   - name: next
     short: Next
     long: Continue to the next tutorial
-    body: >
+    html: |
       We have some shapes! Now, continue on to
       <a href="/labs/features_style.html">Tutorial 5</a>
       to learn about our next preattentive feature: color and styling.
