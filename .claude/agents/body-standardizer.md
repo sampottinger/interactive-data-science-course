@@ -54,6 +54,31 @@ Carefully inspect the content of the long-form attribute for these common issues
 - For Markdown content: verify blank lines, code fences, and indentation are correct.
 - Pay special attention to code blocks—each statement should generally be on its own line.
 
+#### Python Snippet Validation
+Carefully check all Python code snippets (in `<pre>` blocks or markdown fenced code blocks) for correctness:
+
+- **Incorrect indentation**: Lines inside `for` loops, `if`/`elif`/`else` blocks, function `def` bodies, `while` loops, and `with` statements MUST be indented relative to their parent. For example:
+  - A statement inside a `for` loop body must be indented (typically 4 spaces) relative to the `for` keyword.
+  - A statement inside a `def` function body must be indented relative to the `def` keyword.
+  - A `return` statement inside a function must be indented inside the function body.
+  - Nested blocks (e.g., a `for` loop inside a `def`) require additional indentation levels.
+- **Lost indentation**: Watch for lines that should be indented but are flush-left or at the wrong indent level. This is common when content has been through copy-paste or migration. For example, if a function body has two statements and only the first is indented, the second one likely lost its indentation.
+- **Consistent indentation style**: Use 4 spaces per indent level in Python code snippets (standard Python convention).
+- **Extra leading whitespace in `<pre>` blocks**: When HTML sections use `<pre>` tags inside YAML literal block scalars (`|`), the YAML indentation is preserved in the output. Ensure code inside `<pre>` blocks is left-aligned (no leading whitespace from YAML indentation). The `<pre>` open tag and the first line of code should be on the same line to avoid leading blank lines. For example:
+  ```
+  # Bad - extra leading whitespace from YAML indentation:
+  <pre>
+      import sketchingpy
+      sketch = sketchingpy.Sketch2D(500, 400)
+  </pre>
+
+  # Good - code is left-aligned within <pre>:
+  <pre>import sketchingpy
+  sketch = sketchingpy.Sketch2D(500, 400)
+  </pre>
+  ```
+- **Logical correctness**: Do NOT change the logic or variable names in code. Only fix structural formatting (indentation, newlines, whitespace). If you suspect a logic bug (e.g., `return balance` instead of `return total_amount`), leave it as-is—only fix formatting.
+
 ### Step 5: Write Changes
 - Write the corrected file back, preserving all attributes and structure except the long-form content attribute you modified.
 - Do **not** rename, move, or delete the file.

@@ -130,8 +130,7 @@ sections:
       total_money = 0
 
       for bank_account in my_bank_accounts:
-
-      total_money = total_money + bank_account
+        total_money = total_money + bank_account
       ```
 
       In the above snippet, we have a "loop" where the indented code below is repeated, once for each bank account in my_bank_accounts. A variable called bank_account exists but only within that indented section. The indent tells the computer to make a small world inside our world (a "room" maybe?) that lasts just for a little while in order to perform some task. After the task is over (in this case, a single bank account is processed), that little world is discarded. There are lots of things you can do with loops, see [more info about loops](https://python.swaroopch.com/control_flow.html).
@@ -180,10 +179,8 @@ sections:
       all_names = ''
 
       for account_name in bank_accounts.keys():
-
-          name_with_space = account_name + ' '
-
-      all_names = all_names + name_with_space
+        name_with_space = account_name + ' '
+        all_names = all_names + name_with_space
       ```
 
       So, we can take a look at all the names:
@@ -198,8 +195,7 @@ sections:
       total_money = 0
 
       for balance in bank_accounts.values():
-
-      total_money = total_money + balance
+        total_money = total_money + balance
       ```
 
       These are just names though and we can add new ones easily.
@@ -217,8 +213,8 @@ sections:
 
       ```python
       def pay_me():
-          bank_accounts['mine'] = bank_accounts['mine'] + 1
-      bank_accounts['yours'] = bank_accounts['yours'] - 1
+        bank_accounts['mine'] = bank_accounts['mine'] + 1
+        bank_accounts['yours'] = bank_accounts['yours'] - 1
       ```
 
       Now, the action "pay_me" exists in this world. You can run that code by using its name and adding parantheses afterwards:
@@ -237,8 +233,8 @@ sections:
 
       ```python
       def transfer(from_account, to_account, amount):
-          bank_accounts[from_account] = bank_accounts[from_account] - amount
-      bank_accounts[to_account] = bank_accounts[to_account] - amount
+        bank_accounts[from_account] = bank_accounts[from_account] - amount
+        bank_accounts[to_account] = bank_accounts[to_account] - amount
       ```
 
       These names like "from_account" only exist within that small world inside a world made. They are re-made each time you run "transfer" like so:
@@ -264,15 +260,15 @@ sections:
 
       ```python
       def pay_interest(name):
-          amount = bank_accounts[name]
+        amount = bank_accounts[name]
 
-          if amount > 2:
-              interest = amount * 0.01
-          else:
-              interest = 0
+        if amount > 2:
+          interest = amount * 0.01
+        else:
+          interest = 0
 
-          new_amount = amount + interest
-      bank_accounts[name] = new_amount
+        new_amount = amount + interest
+        bank_accounts[name] = new_amount
       ```
 
       We can describe conditions like greater than (>), greater than or equal to (>=), less than (<), less than or equal to (<=), not equal (!=), and equal (==). Let's give it a shot:
@@ -287,17 +283,17 @@ sections:
 
       ```python
       def pay_interest(name):
-          amount = bank_accounts[name]
+        amount = bank_accounts[name]
 
-          if amount > 2 and amount < 100:
-              interest = amount * 0.01
-          elif amount >= 100:
-              interest = amount * 0.02
-          else:
-              interest = 0
+        if amount > 2 and amount < 100:
+          interest = amount * 0.01
+        elif amount >= 100:
+          interest = amount * 0.02
+        else:
+          interest = 0
 
-          new_amount = amount + interest
-      bank_accounts[name] = new_amount
+        new_amount = amount + interest
+        bank_accounts[name] = new_amount
       ```
 
       Note that "if" means do something if something else is true. Meanwhile, "elif" stands for "else if" and means if the first condtion wasn't true, try another one. Finally, else means that, if none of the conditions I tried are true, do something as a fallback. [Learn more about conditionals](https://python.swaroopch.com/control_flow.html).
@@ -309,8 +305,8 @@ sections:
 
       ```python
       def pay_interest_to_everyone():
-          for name in bank_accounts.keys():
-      pay_interest(name)
+        for name in bank_accounts.keys():
+          pay_interest(name)
       ```
 
       Let's give it a shot:
@@ -323,10 +319,10 @@ sections:
 
       ```python
       def get_total_in_bank():
-          total_amount = 0
-          for balance in bank_accounts.values():
-              total_amount = total_amount + balance
-      return balance
+        total_amount = 0
+        for balance in bank_accounts.values():
+          total_amount = total_amount + balance
+        return total_amount
       ```
 
       That final return statement is new. This tells the computer that, when this action is taken, it creates a number that is left behind after the function finishes (as that small world within a world is destroyed). Give it a shot:

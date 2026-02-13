@@ -91,6 +91,7 @@ pre {
     border: 1px solid #505050;
     border-radius: 5px;
     padding: 5px;
+    overflow-x: auto;
 }
 
 section {
