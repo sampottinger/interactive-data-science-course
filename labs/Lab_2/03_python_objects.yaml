@@ -87,7 +87,7 @@ sections:
   - name: sketch
     short: Sketch
     long: Create a sketch for the simulation
-    html: >
+    html: |
       Let's start by making a sketch.
 
       <pre>
@@ -116,7 +116,7 @@ sections:
   - name: ball
     short: Defining a Ball
     long: Create a Ball class with position and velocity
-    html: >
+    html: |
       Let's make our first class. Our ball will have an x and y
       position on screen. This ball will also be in motion. We will
       define that movement through velocity as pixels per second in
@@ -157,7 +157,7 @@ sections:
   - name: motion
     short: Moving a Ball
     long: Add methods to update ball position and handle bouncing
-    html: >
+    html: |
       Now that we have created the fields on a ball, let's define its
       behaviors. The ball will "bounce" by reversing its x and / or y
       velocities. Starting with that:

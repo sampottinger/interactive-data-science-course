@@ -12,7 +12,7 @@ sections:
   - name: rotate
     short: Rotate
     long: Rotate
-    html: >
+    html: |
       We will start by doing a global rotation. This also changes the
       transformation matrix. However, give this a run and you might
       notice a problem.
@@ -40,7 +40,7 @@ sections:
   - name: rotate-and-translate
     short: Rotate and Translate
     long: Rotate and Translate
-    html: >
+    html: |
       Using that first sketch as motiviation, it is common to
       translate prior to rotation to indicate the point around which
       the rotation should occur.

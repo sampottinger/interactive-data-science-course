@@ -66,7 +66,7 @@ sections:
   - name: text
     short: Text
     long: Drawing text with Sketchingpy
-    html: >
+    html: |
       Go ahead and
       <a href="/support/web/PublicSans-Regular.otf">
       download Public Sans' regular font in OTF format</a>
@@ -106,7 +106,7 @@ sections:
   - name: horizontal-align
     short: Horizontal Align
     long: Controlling horizontal text alignment
-    html: >
+    html: |
       Like other types of drawing, we can specify alignment for text. We will
       start with horizontal alignment as it is a bit simplier.
 
@@ -135,7 +135,7 @@ sections:
   - name: vertical-align
     short: Vertical Align
     long: Controlling vertical text alignment
-    html: >
+    html: |
       Vertical alignment has a few options: top, bottom, center, and baseline.
       To see what the each does, let's play with some text which as descenders.
 

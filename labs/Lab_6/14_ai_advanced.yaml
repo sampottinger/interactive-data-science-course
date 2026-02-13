@@ -20,7 +20,7 @@ sections:
   - name: setup
     short: Setup
     long: Setting up your environment for advanced AI techniques
-    html: >
+    html: |
       <p>
         There are a few ways to pull this off but, if you are interested
         in using agents, going through Claude Code and the command line
