@@ -136,92 +136,92 @@ sections:
               x and veritical position as y.
           </p>
       </details>
-      - name: lines
-        short: Drawing lines
-        long: Learn how to draw lines on the sketch
-        html: |
-          Let's draw a line:
+  - name: lines
+    short: Drawing lines
+    long: Learn how to draw lines on the sketch
+    html: |
+      Let's draw a line:
 
-          <pre>sketch.draw_line(500 / 2, 400 / 2, 100, 50)
-          </pre>
+      <pre>sketch.draw_line(500 / 2, 400 / 2, 100, 50)
+      </pre>
 
-          This will draw a line across the sketch.
+      This will draw a line across the sketch.
 
-          <details>
-              <summary>About draw_line</summary>
-              <p>
-                  Here we are using a function called "draw_line" and the
-                  first number ("parameter") refers to the x position
-                  where to start the line and the second number refers to
-                  the y position where to start the line. The third and
-                  fourth numbers are the x and y positions of where to
-                  end. We say sketch.draw_line because we are telling the
-                  computer to execute the draw_line function within our
-                  sketch. Learn more about draw_line in the
-                  <a
-                      href="https://sketchingpy.org/reference/draw_line.html"
-                      >Sketchingpy reference</a
-                  >.
-              </p>
-          </details>
+      <details>
+          <summary>About draw_line</summary>
+          <p>
+              Here we are using a function called "draw_line" and the
+              first number ("parameter") refers to the x position
+              where to start the line and the second number refers to
+              the y position where to start the line. The third and
+              fourth numbers are the x and y positions of where to
+              end. We say sketch.draw_line because we are telling the
+              computer to execute the draw_line function within our
+              sketch. Learn more about draw_line in the
+              <a
+                  href="https://sketchingpy.org/reference/draw_line.html"
+                  >Sketchingpy reference</a
+              >.
+          </p>
+      </details>
 
-          Let's actually re-write that previous line as follows (go ahead
-          and paste this in):
+      Let's actually re-write that previous line as follows (go ahead
+      and paste this in):
 
-          <pre>
-          center_x = 500 / 2
+      <pre>
+      center_x = 500 / 2
 
-          center_y = 400 / 2
+      center_y = 400 / 2
 
-          end_x = 100
+      end_x = 100
 
-          end_y = 50
+      end_y = 50
 
-          sketch.draw_line(center_x, center_y, end_x, end_y)
-          </pre>
+      sketch.draw_line(center_x, center_y, end_x, end_y)
+      </pre>
 
-          That is a little easier to read maybe. We are drawing a line
-          from the center of the screen to the upper left. Finally, we
-          need to tell the computer to show the sketch on the screen (as
-          opposed to saving it to a file, for example):
+      That is a little easier to read maybe. We are drawing a line
+      from the center of the screen to the upper left. Finally, we
+      need to tell the computer to show the sketch on the screen (as
+      opposed to saving it to a file, for example):
 
-          <pre>sketch.show()
-          </pre>
+      <pre>sketch.show()
+      </pre>
 
-          Now that we have something interesting, let's run this sketch.
-          Try changing the numbers to see what happens to what is shown on
-          the screen.
-      - name: life
-        short: Life
-        long: Add animation to make the sketch feel alive
-        html: |
-          Our program right now feels a little <a href="https://vimeo.com/64895205">dead</a>. It just draws a line on the screen and ends. What if it could do things in repetition like maybe change the end position where the line is drawn? Try the following (put it before the line that says sketch.show):
+      Now that we have something interesting, let's run this sketch.
+      Try changing the numbers to see what happens to what is shown on
+      the screen.
+  - name: life
+    short: Life
+    long: Add animation to make the sketch feel alive
+    html: |
+      Our program right now feels a little <a href="https://vimeo.com/64895205">dead</a>. It just draws a line on the screen and ends. What if it could do things in repetition like maybe change the end position where the line is drawn? Try the following (put it before the line that says sketch.show):
 
-          <pre>
-          start_time = time.time()
+      <pre>
+      start_time = time.time()
 
-          def draw_moving_line(self):
-              seconds = time.time() - start_time
-              pixels_per_second = 5
-              offset = seconds * pixels_per_second
-              sketch.draw_line(250, 200, 100, 50 + offset)
+      def draw_moving_line(self):
+          seconds = time.time() - start_time
+          pixels_per_second = 5
+          offset = seconds * pixels_per_second
+          sketch.draw_line(250, 200, 100, 50 + offset)
 
-          sketch.on_step(draw_moving_line)
-          </pre>
+      sketch.on_step(draw_moving_line)
+      </pre>
 
-          Need help? <a href="https://gist.github.com/sampottinger/c991bfe174275c89112e466cc0cfa137">Here's what my python file looks like</a>. Go ahead and run this. Afterwards, we will break down what this does step by step.
+      Need help? <a href="https://gist.github.com/sampottinger/c991bfe174275c89112e466cc0cfa137">Here's what my python file looks like</a>. Go ahead and run this. Afterwards, we will break down what this does step by step.
 
-          <details>
-              <summary>About comments</summary>
-              <p>
-                  Note that, if you open my file, the lines starting with
-                  a hash mark are called comments. The computer ignores
-                  everything after the hash until the next line. I'm using
-                  comments here to indicate what the file does and what
-                  license it is under. To learn more about licenses, see
-                  the reading associated with this lecture.
-              </p>
-          </details>
+      <details>
+          <summary>About comments</summary>
+          <p>
+              Note that, if you open my file, the lines starting with
+              a hash mark are called comments. The computer ignores
+              everything after the hash until the next line. I'm using
+              comments here to indicate what the file does and what
+              license it is under. To learn more about licenses, see
+              the reading associated with this lecture.
+          </p>
+      </details>
   - name: steps
     short: Steps
     long: Understand how sketches execute in steps

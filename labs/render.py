@@ -305,7 +305,10 @@ def process_section_content(section):
   elif 'html' in section:
     content = section['html']
   elif 'markdown' in section:
-    content = markdown.markdown(section['markdown'])
+    content = markdown.markdown(
+        section['markdown'],
+        extensions=['fenced_code']
+    )
 
   # Validate and apply blockstyle
   blockstyle = section.get('blockstyle', 'pre')
