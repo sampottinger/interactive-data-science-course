@@ -38,15 +38,15 @@ sections:
   - name: fill
     short: Fill
     long: Learn to set fill colors for shapes
-    html: >
+    markdown: |
       The easiest place to start for styling in
-      <a href="https://sketchingpy.org/">Sketchingpy</a>
+      [Sketchingpy](https://sketchingpy.org/)
       is the fill color for a shape. Let's use circles to demonstrate!
       Here, we can draw circles with different colors as well one
       circle which has no fill (will pass through to any figures drawn
       behind):
 
-      <pre>
+      ```python
       import sketchingpy
 
       sketch = sketchingpy.Sketch2D(500, 500)
@@ -61,28 +61,25 @@ sections:
       sketch.draw_ellipse(350, 250, 100, 100)
 
       sketch.show()
-      </pre>
+      ```
 
       Try using some of our color tools to specify a different fill
       color!
   - name: transparency
     short: Transparency
     long: Learn to use transparency and alpha channels
-    html: >
+    markdown: |
       With our circles overlapping, we notice that what is drawn first
       goes at the bottom and is obsurced by whatever is drawn
       afterwards. This is called the
-      <a
-          href="https://bcalabs.org/subject/painter-algorithm-in-computer-graphics"
-          >Painter's Algorithm</a
-      >
+      [Painter's Algorithm](https://bcalabs.org/subject/painter-algorithm-in-computer-graphics)
       which basically says you should draw your scene from back to
       front. Let's let the user peer through those overlapping shapes
       though by adding transparency to our color. Appending two
       additional numbers to our hex codes specifies opacity where 00
       means fully transparent and FF means fully opaque.
 
-      <pre>
+      ```python
       import sketchingpy
 
       sketch = sketchingpy.Sketch2D(500, 500)
@@ -97,19 +94,19 @@ sections:
       sketch.draw_ellipse(350, 250, 100, 100)
 
       sketch.show()
-      </pre>
+      ```
 
       Try changing the order in which the colors are set and the
       opacity part of the color code.
   - name: stroke
     short: Stroke
     long: Learn to set stroke (outline) colors for shapes
-    html: >
+    markdown: |
       So far, we've been manipulating the insides of our circles.
       Let's change the outsides. Same thing as before, let's have one
       circle that's different.
 
-      <pre>
+      ```python
       import sketchingpy
 
       sketch = sketchingpy.Sketch2D(500, 500)
@@ -127,18 +124,18 @@ sections:
       sketch.draw_ellipse(350, 250, 100, 100)
 
       sketch.show()
-      </pre>
+      ```
 
       Try changing the colors again. When the area is smaller, is the
       contrast needed for readability higher?
   - name: weight
     short: Weight
     long: Learn to control stroke weight and thickness
-    html: >
+    markdown: |
       Let's continue that thought around the size of these areas. We
       change the stroke width through its weight:
 
-      <pre>
+      ```python
       import sketchingpy
 
       sketch = sketchingpy.Sketch2D(500, 500)
@@ -158,21 +155,21 @@ sections:
       sketch.draw_ellipse(350, 250, 100, 100)
 
       sketch.show()
-      </pre>
+      ```
 
       Try changing the strokes such that the first and last circle
       have different weights.
   - name: context
     short: Context
     long: Understand design context and color choices
-    html: >
+    markdown: |
       Before we move on to the transformation matrix, we have a chance
       to play with some of the concepts around relative color
       interpretation and figure / ground as discussed in lectures. Try
       this sketch out for a moment which uses colors which could be
       useful for a quantitative scale:
 
-      <pre>
+      ```python
       import sketchingpy
 
       sketch = sketchingpy.Sketch2D(500, 500)
@@ -182,22 +179,22 @@ sections:
       sketch.set_ellipse_mode("radius")
 
       def draw_circles(y):
-      sketch.set_stroke("#000000")
+          sketch.set_stroke("#000000")
 
-      sketch.set_fill("#edf8fb")
-      sketch.draw_ellipse(150, y, 20, 20)
+          sketch.set_fill("#edf8fb")
+          sketch.draw_ellipse(150, y, 20, 20)
 
-      sketch.set_fill("#b2e2e2")
-      sketch.draw_ellipse(200, y, 20, 20)
+          sketch.set_fill("#b2e2e2")
+          sketch.draw_ellipse(200, y, 20, 20)
 
-      sketch.set_fill("#66c2a4")
-      sketch.draw_ellipse(250, y, 20, 20)
+          sketch.set_fill("#66c2a4")
+          sketch.draw_ellipse(250, y, 20, 20)
 
-      sketch.set_fill("#2ca25f")
-      sketch.draw_ellipse(300, y, 20, 20)
+          sketch.set_fill("#2ca25f")
+          sketch.draw_ellipse(300, y, 20, 20)
 
-      sketch.set_fill("#006d2c")
-      sketch.draw_ellipse(350, y, 20, 20)
+          sketch.set_fill("#006d2c")
+          sketch.draw_ellipse(350, y, 20, 20)
 
       draw_circles(125)
 
@@ -209,12 +206,12 @@ sections:
       draw_circles(375)
 
       sketch.show()
-      </pre>
+      ```
 
       Note that this uses
-      <a href="https://sketchingpy.org/reference/clear.html">clear</a>.
+      [clear](https://sketchingpy.org/reference/clear.html).
       Let's assume for a moment that this is a
-      <a href="https://www.data-to-viz.com/graph/heatmap.html">heatmap</a>.
+      [heatmap](https://www.data-to-viz.com/graph/heatmap.html).
       We don't have a color scale listed. However, based on the
       background, which dot do you think corresponds to the highest
       and lowest number? Does your answer change depending on the
