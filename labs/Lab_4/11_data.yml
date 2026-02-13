@@ -45,21 +45,17 @@ sections:
     html: |
       <p>This tutorial will use Sketchingpy for file access. Let's take a look at how my sketch does it.</p>
 
-      <pre><code class="language-python">
-      data_layer = sketch.get_data_layer()
+      <pre><code class="language-python">data_layer = sketch.get_data_layer()
       data_raw = data_layer.get_csv('fuel_standards.csv')
-      changes = [parse_fuel_standard_change(x) for x in data_raw]
-      </code></pre>
+      changes = [parse_fuel_standard_change(x) for x in data_raw]</code></pre>
 
       <p>We open a CSV file by providing its name before calling parse_fuel_standard_change to make sure the data I'm expecting to see are there with the right attributes and type (number, string, etc). We will take a closer look at that in a moment but, in case this notation is unfamiliar, I could have rewritten the last line which is a list comprehension like so:</p>
 
-      <pre><code class="language-python">
-      changes = []
+      <pre><code class="language-python">changes = []
 
       for datum in data_raw:
-          parsed_datum = parse_fuel_standard_change(datum)
-          changes.append(parsed_datum)
-      </code></pre>
+        parsed_datum = parse_fuel_standard_change(datum)
+        changes.append(parsed_datum)</code></pre>
 
       <p>Both <a href="https://www.freecodecamp.org/news/list-comprehension-in-python/">list comprehensions</a> as well as <a href="https://book.pythontips.com/en/latest/map_filter.html">map, filter, and reduce</a> might be worth exploring. They are commonly used tools for data manipulation operations in visualizations. These patterns are also often available across many different programming languages.</p>
 
@@ -117,59 +113,55 @@ sections:
     html: |
       <p>Let's next look at how I parse each data point:</p>
 
-      <pre><code class="language-python">
-      def parse_fuel_standard_change(raw_datum):
-          """Parse a raw CSV row as a FuelStandardChange.
+      <pre><code class="language-python">def parse_fuel_standard_change(raw_datum):
+        """Parse a raw CSV row as a FuelStandardChange.
 
-          Args:
-              raw_datum: Raw CSV row to parse.
+        Args:
+          raw_datum: Raw CSV row to parse.
 
-          Returns:
-              The row represented as a FuelStandardChange.
-          """
-          year = int(raw_datum['year'])
-          standard = float(raw_datum['fuelStandardMpg'])
-          return FuelStandardChange(year, standard)
-      </code></pre>
+        Returns:
+          The row represented as a FuelStandardChange.
+        """
+        year = int(raw_datum['year'])
+        standard = float(raw_datum['fuelStandardMpg'])
+        return FuelStandardChange(year, standard)</code></pre>
 
       <p>Each row of the table inside the CSV file is represented as a dictionary mapping from string keys to string values. We do a "cast" here ("int" and "float") which converts from a string to a number because we want our years like 1985 to be integers and our fuel standards like 27.5 mpg to be floating point values with decimal components. Finally, let's look at that class I'm using to hold each data point:</p>
 
-      <pre><code class="language-python">
-      class FuelStandardChange:
-          """Object representing a change in fuel standards.
+      <pre><code class="language-python">class FuelStandardChange:
+        """Object representing a change in fuel standards.
 
-          Record of a change in fuel standards with a year in which that
-          standard came into force and the standard level.
+        Record of a change in fuel standards with a year in which that
+        standard came into force and the standard level.
+        """
+
+        def __init__(self, year, standard):
+          """Make a new record of a standard change.
+
+          Args:
+            year: The year like 1985 in which the standard came into
+              force.
+            standard: The standard starting in the year as miles per
+              gallon.
           """
+          self._year = year
+          self._standard = standard
 
-          def __init__(self, year, standard):
-              """Make a new record of a standard change.
+        def get_year(self):
+          """Get the year in which the standard came into force.
 
-              Args:
-                  year: The year like 1985 in which the standard came into
-                    force.
-                  standard: The standard starting in the year as miles per
-                    gallon.
-              """
-              self._year = year
-              self._standard = standard
+          Returns:
+            The year like 1985 in which the standard came into force.
+          """
+          return self._year
 
-          def get_year(self):
-              """Get the year in which the standard came into force.
+        def get_standard(self):
+          """Get the new fuel economy standard.
 
-              Returns:
-                  The year like 1985 in which the standard came into force.
-              """
-              return self._year
-
-          def get_standard(self):
-              """Get the new fuel economy standard.
-
-              Returns:
-                  The standard starting in this year as miles per gallon.
-              """
-              return self._standard
-      </code></pre>
+          Returns:
+            The standard starting in this year as miles per gallon.
+          """
+          return self._standard</code></pre>
 
       <p>I should mention that some developers wouldn't add this class in and instead draw from the dictionaries directly. While the choice in your own code is up to you, I personally like having custom classes because:</p>
 
@@ -255,26 +247,26 @@ sections:
 
       ```python
       def _get_x(self, year):
-          """Get horizontal position at which a year's results should be
-          drawn.
+        """Get horizontal position at which a year's results should be
+        drawn.
 
-          Get horizontal position at which a year's results should be drawn
-          where the minimum year is at the left side (LEFT_PAD) and the
-          maximum year is at the right side (WIDTH - RIGHT) which
-          corresponds to the minimum and maximum x coordinate of the chart
-          body respectively.
+        Get horizontal position at which a year's results should be drawn
+        where the minimum year is at the left side (LEFT_PAD) and the
+        maximum year is at the right side (WIDTH - RIGHT) which
+        corresponds to the minimum and maximum x coordinate of the chart
+        body respectively.
 
-          Args:
-              year: The integer year for which an x position is requested.
+        Args:
+          year: The integer year for which an x position is requested.
 
-          Returns:
-              The x position in pixels at which the year should be drawn.
-          """
-          year_range = END_YEAR - START_YEAR
-          percent_offset = (year - START_YEAR) / year_range
-          working_width = WIDTH - LEFT_PAD - RIGHT_PAD
-          pixel_offset = percent_offset * working_width
-          return LEFT_PAD + pixel_offset
+        Returns:
+          The x position in pixels at which the year should be drawn.
+        """
+        year_range = END_YEAR - START_YEAR
+        percent_offset = (year - START_YEAR) / year_range
+        working_width = WIDTH - LEFT_PAD - RIGHT_PAD
+        pixel_offset = percent_offset * working_width
+        return LEFT_PAD + pixel_offset
       ```
 
       The logic for both the x and y positioning is similar.
@@ -287,29 +279,29 @@ sections:
 
       ```python
       def _get_y(self, standard):
-          """Get vertical position at which a year's results should be drawn.
+        """Get vertical position at which a year's results should be drawn.
 
-          Get vertical position at which standard's results should be drawn
-          where the minimum standard is at the bottom side (HEIGHT -
-          BOTTOM_PAD) and the maximum standard is at the top side (TOP_PAD)
-          which corresponds to the maximum and minimum y coordinate of the
-          chart body respectively. Note that, to have larger values at higher
-          positions, the smallest standards in mpg are at the largest y
-          coordinates.
+        Get vertical position at which standard's results should be drawn
+        where the minimum standard is at the bottom side (HEIGHT -
+        BOTTOM_PAD) and the maximum standard is at the top side (TOP_PAD)
+        which corresponds to the maximum and minimum y coordinate of the
+        chart body respectively. Note that, to have larger values at higher
+        positions, the smallest standards in mpg are at the largest y
+        coordinates.
 
-          Args:
-              year: The float standard (mpg) for which a y position is
-                requested.
+        Args:
+          year: The float standard (mpg) for which a y position is
+            requested.
 
-          Returns:
-              The y position in pixels at which the standard should be drawn.
-          """
-          standard_range = MAX_STANDARD - MIN_STANDARD
-          percent_offset = (standard - MIN_STANDARD) / standard_range
-          percent_offset_reverse = 1 - percent_offset
-          working_height = HEIGHT - TOP_PAD - BOTTOM_PAD
-          pixel_offset = percent_offset_reverse * working_height
-          return TOP_PAD + pixel_offset
+        Returns:
+          The y position in pixels at which the standard should be drawn.
+        """
+        standard_range = MAX_STANDARD - MIN_STANDARD
+        percent_offset = (standard - MIN_STANDARD) / standard_range
+        percent_offset_reverse = 1 - percent_offset
+        working_height = HEIGHT - TOP_PAD - BOTTOM_PAD
+        pixel_offset = percent_offset_reverse * working_height
+        return TOP_PAD + pixel_offset
       ```
 
       The complication here is that coordinates go up as you from top to bottom of the sketch's canvas. So, we reverse the percentage for the miles per gallon: instead of going from 0% to 100%, it goes from 100% to 0%. In other words, if a value we are placing is 75% from the minimum value to the maximum value, we place at 25% (100% - 75%) between the minimum pixel coordinate and the maximum pixel coordinate.
@@ -319,63 +311,59 @@ sections:
     html: |
       <p>Since we are direct labeling, we don't have too much "chrome" to draw for our visualization. This helps us improve our data-ink ratio! However, it is important that we tell the user where our y scale starts and ends so that they know we aren't doing anything funny.</p>
 
-      <pre><code class="language-python">
-      def _draw_axis(self, sketch):
-          """Draw the left side axis which clarifies start / end standards.
+      <pre><code class="language-python">def _draw_axis(self, sketch):
+        """Draw the left side axis which clarifies start / end standards.
 
-          Args:
-              sketch: The sketch in which to draw the axis.
-          """
-          sketch.push_style()
+        Args:
+          sketch: The sketch in which to draw the axis.
+        """
+        sketch.push_style()
 
-          sketch.set_text_font(FONT, SMALL_SIZE)
+        sketch.set_text_font(FONT, SMALL_SIZE)
 
-          min_y = self._get_y(MIN_STANDARD)
+        min_y = self._get_y(MIN_STANDARD)
 
-          sketch.clear_stroke()
-          sketch.set_fill(LIGHT_COLOR)
-          sketch.set_text_align('left', 'top')
-          min_str = MIN_ANNOTATION % MIN_STANDARD
-          sketch.draw_text(LEFT_PAD, min_y, min_str)
+        sketch.clear_stroke()
+        sketch.set_fill(LIGHT_COLOR)
+        sketch.set_text_align('left', 'top')
+        min_str = MIN_ANNOTATION % MIN_STANDARD
+        sketch.draw_text(LEFT_PAD, min_y, min_str)
 
-          sketch.set_stroke(LIGHT_COLOR)
-          sketch.clear_fill()
-          sketch.draw_line(LEFT_PAD, min_y, LEFT_PAD + 20, min_y)
+        sketch.set_stroke(LIGHT_COLOR)
+        sketch.clear_fill()
+        sketch.draw_line(LEFT_PAD, min_y, LEFT_PAD + 20, min_y)
 
-          max_y = self._get_y(MAX_STANDARD)
+        max_y = self._get_y(MAX_STANDARD)
 
-          sketch.clear_stroke()
-          sketch.set_fill(LIGHT_COLOR)
-          sketch.set_text_align('left', 'bottom')
-          goal_str = GOAL_ANNOTATION % MAX_STANDARD
-          sketch.draw_text(LEFT_PAD, max_y - 1, goal_str)
+        sketch.clear_stroke()
+        sketch.set_fill(LIGHT_COLOR)
+        sketch.set_text_align('left', 'bottom')
+        goal_str = GOAL_ANNOTATION % MAX_STANDARD
+        sketch.draw_text(LEFT_PAD, max_y - 1, goal_str)
 
-          sketch.set_stroke(LIGHT_COLOR)
-          sketch.clear_fill()
-          sketch.draw_line(LEFT_PAD, max_y, LEFT_PAD + 20, max_y)
+        sketch.set_stroke(LIGHT_COLOR)
+        sketch.clear_fill()
+        sketch.draw_line(LEFT_PAD, max_y, LEFT_PAD + 20, max_y)
 
-          sketch.pop_style()
-      </code></pre>
+        sketch.pop_style()</code></pre>
 
       <p>We are doing a push / pop at the start and end of the method to make sure that our changes to style only apply within this method. Furthermore, note that we are also taking advantage of this opportunity to additionally contextualize the data by describing why we end at 27.5 mpg. Specifically, we identify it as the legislative target for the ECA. Finally, we can put a chart title up at the top.</p>
 
-      <pre><code class="language-python">
-      def _draw_title(self, sketch):
-          """Draw the visualization title.
+      <pre><code class="language-python">def _draw_title(self, sketch):
+        """Draw the visualization title.
 
-          Args:
-              sketch: The sketch in which the title should be drawn.
-          """
-          sketch.push_style()
+        Args:
+          sketch: The sketch in which the title should be drawn.
+        """
+        sketch.push_style()
 
-          sketch.clear_stroke()
-          sketch.set_fill(DARK_COLOR)
-          sketch.set_text_align('left', 'bottom')
-          sketch.set_text_font(FONT, HUGE_SIZE)
-          sketch.draw_text(LEFT_PAD, TOP_PAD - 18, TITLE)
+        sketch.clear_stroke()
+        sketch.set_fill(DARK_COLOR)
+        sketch.set_text_align('left', 'bottom')
+        sketch.set_text_font(FONT, HUGE_SIZE)
+        sketch.draw_text(LEFT_PAD, TOP_PAD - 18, TITLE)
 
-          sketch.pop_style()
-      </code></pre>
+        sketch.pop_style()</code></pre>
 
       <p>The use of the title contextualizes the chart. It is pretty neutral right now but, depending on the purpose of the graphic, we could use this offer additional insight like "Pathway to 27.5 mpg" or something similar.</p>
 
@@ -400,49 +388,47 @@ sections:
     html: |
       <p>We are finally ready to draw the actual data points themselves.</p>
 
-      <pre><code class="language-python">
-      def _draw_change(self, sketch, change, align, highlight, annotation):
-          """Draw an individual change in fuel economy standards.
+      <pre><code class="language-python">def _draw_change(self, sketch, change, align, highlight, annotation):
+        """Draw an individual change in fuel economy standards.
 
-          Args:
-              sketch: The sketch in which the change should be drawn.
-              change: The FuelStandardChange to draw.
-              align: String describing the horizontal alignment to use when
-                  drawing this change.
-              highlight: Flag that indicates if this year should be drawn in
-                  high contrast "highlight" styling. True if highlight should
-                  be used and false otherwise.
-              annotation: The annotation to display next to this year's
-                  results or None if no annotation should be added.
-          """
-          sketch.push_style()
+        Args:
+          sketch: The sketch in which the change should be drawn.
+          change: The FuelStandardChange to draw.
+          align: String describing the horizontal alignment to use when
+            drawing this change.
+          highlight: Flag that indicates if this year should be drawn in
+            high contrast "highlight" styling. True if highlight should
+            be used and false otherwise.
+          annotation: The annotation to display next to this year's
+            results or None if no annotation should be added.
+        """
+        sketch.push_style()
 
-          sketch.clear_stroke()
-          if highlight:
-              sketch.set_fill(DARK_COLOR)
-          else:
-              sketch.set_fill(LIGHT_COLOR)
+        sketch.clear_stroke()
+        if highlight:
+          sketch.set_fill(DARK_COLOR)
+        else:
+          sketch.set_fill(LIGHT_COLOR)
 
-          year = change.get_year()
-          standard = change.get_standard()
-          x = self._get_x(year)
-          y = self._get_y(standard)
+        year = change.get_year()
+        standard = change.get_standard()
+        x = self._get_x(year)
+        y = self._get_y(standard)
 
+        sketch.set_text_font(FONT, SMALL_SIZE)
+        sketch.set_text_align(align, 'bottom')
+        sketch.draw_text(x, y - LARGE_SIZE / 2 - 2, year)
+
+        sketch.set_text_font(FONT, LARGE_SIZE)
+        sketch.set_text_align(align, 'center')
+        sketch.draw_text(x, y, '%.1f' % standard)
+
+        if annotation:
           sketch.set_text_font(FONT, SMALL_SIZE)
-          sketch.set_text_align(align, 'bottom')
-          sketch.draw_text(x, y - LARGE_SIZE / 2 - 2, year)
+          sketch.set_text_align(align, 'top')
+          sketch.draw_text(x, y + SMALL_SIZE / 2 + 2, annotation)
 
-          sketch.set_text_font(FONT, LARGE_SIZE)
-          sketch.set_text_align(align, 'center')
-          sketch.draw_text(x, y, '%.1f' % standard)
-
-          if annotation:
-              sketch.set_text_font(FONT, SMALL_SIZE)
-              sketch.set_text_align(align, 'top')
-              sketch.draw_text(x, y + SMALL_SIZE / 2 + 2, annotation)
-
-          sketch.pop_style()
-      </code></pre>
+        sketch.pop_style()</code></pre>
 
       <p>There are a lot of different options available for drawing these different data points: align, highlight, and annotation. However, this is also where we see the power of building these graphs from the ground up through something like Sketchingpy. We can configure each piece of the graphic very precisely.</p>
 
@@ -453,31 +439,27 @@ sections:
             Note that is common for some designers to use translate so, for
             example, instead of this:
           </p>
-          <pre><code class="language-python">
-          sketch.draw_ellipse(
-              get_x(year) - 5,
-              get_y(val) - 5,
-              5,
-              5
-          )
+          <pre><code class="language-python">sketch.draw_ellipse(
+        get_x(year) - 5,
+        get_y(val) - 5,
+        5,
+        5
+      )
 
-          sketch.draw_ellipse(
-              get_x(year) + 5,
-              get_y(val) + 5,
-              5,
-              5
-          )
-          </code></pre>
+      sketch.draw_ellipse(
+        get_x(year) + 5,
+        get_y(val) + 5,
+        5,
+        5
+      )</code></pre>
           <p>You might instead see this:</p>
-          <pre><code class="language-python">
-          sketch.push_transform()
-          sketch.translate(get_x(year), get_y(val))
+          <pre><code class="language-python">sketch.push_transform()
+      sketch.translate(get_x(year), get_y(val))
 
-          sketch.draw_ellipse(-5, -5, 5, 5)
-          sketch.draw_ellipse(5, 5, 5, 5)
+      sketch.draw_ellipse(-5, -5, 5, 5)
+      sketch.draw_ellipse(5, 5, 5, 5)
 
-          sketch.pop_transform()
-          </code></pre>
+      sketch.pop_transform()</code></pre>
 
           <p>This can really simplify code where you have to do a lot of drawing relative to a particular coordinate.</p>
         </div>
@@ -503,24 +485,23 @@ sections:
     html: |
       <p>Our _draw_change method takes quite a few parrameters for highlighting and annotation that change based on the attributes of the data being drawn. This is sometimes called conditional formatting. Let's take a closer look at how those are determined.</p>
 
-      <pre><code class="language-python">
-      def draw(self, sketch):
-          """Draw the visualization.
-          Args:
-              sketch: The sketch in which to draw the visualization.
-          """
-          self._draw_title(sketch)
-          self._draw_axis(sketch)
+      <pre><code class="language-python">def draw(self, sketch):
+        """Draw the visualization.
+        Args:
+          sketch: The sketch in which to draw the visualization.
+        """
+        self._draw_title(sketch)
+        self._draw_axis(sketch)
 
-          for change in self._changes:
-              year = change.get_year()
+        for change in self._changes:
+          year = change.get_year()
 
-              align = self._determine_align(year)
-              highlight = self._determine_highlight(year)
-              annotation = self._determine_annotation(year)
+          align = self._determine_align(year)
+          highlight = self._determine_highlight(year)
+          annotation = self._determine_annotation(year)
 
-              self._draw_change(sketch, change, align, highlight,
-                annotation)
+          self._draw_change(sketch, change, align, highlight,
+            annotation)
       </code></pre>
 
       <p>For our purposes, all of this conditional formatting and labeling is all based on the year where, specifically, we want to show additional information on the start and end year specifically. Admitedly, it might be a little excessive to have this logic outside of _draw_change itself. However, I find that pulling this logic out can improve readability even if the resulting methods are small. Furthermore, if the logic for annotation gets more complicated later, it may be helpful to have it in its own space as to avoid cluttering the main draw methods too much.</p>
@@ -532,50 +513,46 @@ sections:
             Let's take a closer look at one of these determine methods:
           </p>
 
-          <pre><code class="language-python">
-          def _determine_annotation(self, year):
-              """Determine what annotation if any should be added for the given
-              year.
+          <pre><code class="language-python">def _determine_annotation(self, year):
+        """Determine what annotation if any should be added for the given
+        year.
 
-              Args:
-                  year: The year for which an annotation should be returned.
+        Args:
+          year: The year for which an annotation should be returned.
 
-              Returns:
-                  Annotation text to display next to results for the given year
-                  or None if no annotation should be added.
-              """
-              if year == START_YEAR:
-                  return START_YEAR_ANNOTATION
-              elif year == END_YEAR:
-                  return END_YEAR_ANNOTATION
-              else:
-                  return None
-          </code></pre>
+        Returns:
+          Annotation text to display next to results for the given year
+          or None if no annotation should be added.
+        """
+        if year == START_YEAR:
+          return START_YEAR_ANNOTATION
+        elif year == END_YEAR:
+          return END_YEAR_ANNOTATION
+        else:
+          return None</code></pre>
 
           <p>
             One pattern you may encounter is changing this to a dictionary
             which can help condense the code:
           </p>
 
-          <pre><code class="language-python">
-          def _determine_annotation(self, year):
-              """Determine what annotation if any should be added for the given
-              year.
+          <pre><code class="language-python">def _determine_annotation(self, year):
+        """Determine what annotation if any should be added for the given
+        year.
 
-              Args:
-                  year: The year for which an annotation should be returned.
+        Args:
+          year: The year for which an annotation should be returned.
 
-              Returns:
-                  Annotation text to display next to results for the given year
-                  or None if no annotation should be added.
-              """
-              options = {
-                  START_YEAR: START_YEAR_ANNOTATION,
-                  END_YEAR: END_YEAR_ANNOTATION
-              }
+        Returns:
+          Annotation text to display next to results for the given year
+          or None if no annotation should be added.
+        """
+        options = {
+          START_YEAR: START_YEAR_ANNOTATION,
+          END_YEAR: END_YEAR_ANNOTATION
+        }
 
-              return options.get(year, None)
-          </code></pre>
+        return options.get(year, None)</code></pre>
 
           <p>
             Here, the second parameter to get is the default value to use if
@@ -589,11 +566,9 @@ sections:
     html: |
       <p>We use constants throughout the code. While these variables in all caps are the same as any other variable as far as Python is concerned, developers understand by convention that all caps means that the value of these variables is not expected to change throughout the execution of a program. I like getting a big list of constants so that I can quickly tweak values and see how different options feel. That said, sometimes it can be a good idea to read these from the data themselves. For example:</p>
 
-      <pre><code class="language-python">
-      years = [change.get_year() for change in fuel_standard_changes]
+      <pre><code class="language-python">years = [change.get_year() for change in fuel_standard_changes]
       start_year = min(years)
-      end_year = max(years)
-      </code></pre>
+      end_year = max(years)</code></pre>
 
       <p>If you go this route, you might consider doing something similar for min_standard and max_standard.</p>
 

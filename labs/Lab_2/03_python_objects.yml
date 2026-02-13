@@ -227,13 +227,13 @@ sections:
       ```python
       class Simulation:
 
-          def __init__(self):
-              self.balls = [
-                  Ball(WIDTH / 2, HEIGHT / 2, -10, -10),
-                  Ball(WIDTH / 2, HEIGHT / 2, -10, 10),
-                  Ball(WIDTH / 2, HEIGHT / 2, 10, 0)
-              ]
-              self.last_time = time.time()
+        def __init__(self):
+          self.balls = [
+            Ball(WIDTH / 2, HEIGHT / 2, -10, -10),
+            Ball(WIDTH / 2, HEIGHT / 2, -10, 10),
+            Ball(WIDTH / 2, HEIGHT / 2, 10, 0)
+          ]
+          self.last_time = time.time()
       ```
 
       Notice how we are making three instances of the Ball class.
@@ -241,13 +241,13 @@ sections:
       updates each of those balls using a loop.
 
       ```python
-          def update(self):
-              new_time = time.time()
-              duration = new_time - self.last_time
-              self.last_time = new_time
+        def update(self):
+          new_time = time.time()
+          duration = new_time - self.last_time
+          self.last_time = new_time
 
-              for ball in self.balls:
-                  ball.update(duration)
+          for ball in self.balls:
+            ball.update(duration)
       ```
 
       Now, we have everything we need to simulate this system. In the
@@ -265,9 +265,9 @@ sections:
       simulation = Simulation()
 
       def update_and_draw_balls(self):
-          simulation.update()
-          for ball in simulation.balls:
-              sketch.draw_ellipse(ball.position_x, ball.position_y, 2, 2)
+        simulation.update()
+        for ball in simulation.balls:
+          sketch.draw_ellipse(ball.position_x, ball.position_y, 2, 2)
 
       sketch.on_step(update_and_draw_balls)
       sketch.show()
@@ -285,27 +285,27 @@ sections:
 
       ```python
       def update_and_draw_balls(self):
-          mouse = sketch.get_mouse()
-          mouse_x = mouse.get_pointer_x()
-          mouse_y = mouse.get_pointer_y()
+        mouse = sketch.get_mouse()
+        mouse_x = mouse.get_pointer_x()
+        mouse_y = mouse.get_pointer_y()
 
-          simulation.update(mouse_x, mouse_y)
+        simulation.update(mouse_x, mouse_y)
 
-          for ball in simulation.balls:
-              sketch.draw_ellipse(ball.position_x, ball.position_y, 2, 2)
+        for ball in simulation.balls:
+          sketch.draw_ellipse(ball.position_x, ball.position_y, 2, 2)
       ```
 
       Next, we need to update the simulation (the Simulation class) to
       take that information:
 
       ```python
-          def update(self, mouse_x, mouse_y):
-              new_time = time.time()
-              duration = new_time - self.last_time
-              self.last_time = new_time
+        def update(self, mouse_x, mouse_y):
+          new_time = time.time()
+          duration = new_time - self.last_time
+          self.last_time = new_time
 
-              for ball in self.balls:
-                  ball.update(duration, mouse_x, mouse_y)
+          for ball in self.balls:
+            ball.update(duration, mouse_x, mouse_y)
       ```
 
       Finally, we need to have the Ball class understand how to
@@ -322,29 +322,29 @@ sections:
       method:
 
       ```python
-          def update(self, duration, mouse_x, mouse_y):
-              self.position_x = self.position_x + self.velocity_x * duration
-              self.position_y = self.position_y + self.velocity_y * duration
+        def update(self, duration, mouse_x, mouse_y):
+          self.position_x = self.position_x + self.velocity_x * duration
+          self.position_y = self.position_y + self.velocity_y * duration
 
-              if self.position_x > WIDTH:
-                  self.position_x = WIDTH
-                  self.reverse_x()
-              elif self.position_x < 0:
-                  self.position_x = 0
-                  self.reverse_x()
+          if self.position_x > WIDTH:
+            self.position_x = WIDTH
+            self.reverse_x()
+          elif self.position_x < 0:
+            self.position_x = 0
+            self.reverse_x()
 
-              if self.position_y > HEIGHT:
-                  self.position_y = HEIGHT
-                  self.reverse_y()
-              elif self.position_y < 0:
-                  self.position_y = 0
-                  self.reverse_y()
+          if self.position_y > HEIGHT:
+            self.position_y = HEIGHT
+            self.reverse_y()
+          elif self.position_y < 0:
+            self.position_y = 0
+            self.reverse_y()
 
-              if self.get_is_near_mouse(mouse_x, mouse_y):
-                  if self.get_hit_mouse_in_direction(self.position_x, mouse_x, self.velocity_x):
-                      self.reverse_x()
-                  elif self.get_hit_mouse_in_direction(self.position_y, mouse_y, self.velocity_y):
-                      self.reverse_y()
+          if self.get_is_near_mouse(mouse_x, mouse_y):
+            if self.get_hit_mouse_in_direction(self.position_x, mouse_x, self.velocity_x):
+              self.reverse_x()
+            elif self.get_hit_mouse_in_direction(self.position_y, mouse_y, self.velocity_y):
+              self.reverse_y()
       ```
 
       This code provides a translation of our thoughts in English to
@@ -353,10 +353,10 @@ sections:
       get_is_near_mouse:
 
       ```python
-          def get_is_near_mouse(self, mouse_x, mouse_y):
-              x_near = abs(mouse_x - self.position_x) < 10
-              y_near = abs(mouse_y - self.position_y) < 10
-              return x_near and y_near
+        def get_is_near_mouse(self, mouse_x, mouse_y):
+          x_near = abs(mouse_x - self.position_x) < 10
+          y_near = abs(mouse_y - self.position_y) < 10
+          return x_near and y_near
       ```
 
       Here we are using a function that is built into Python called
@@ -366,15 +366,15 @@ sections:
       that, let's add a new method called get_hit_mouse_in_direction:
 
       ```python
-          def get_hit_mouse_in_direction(self, coordinate, mouse, velocity):
-              if mouse > coordinate and velocity > 0:
-                  distance = mouse - coordinate
-                  return distance < 10
-              elif mouse < coordinate and velocity < 0:
-                  distance = mouse - coordinate
-                  return distance > -10
-              else:
-                  return False
+        def get_hit_mouse_in_direction(self, coordinate, mouse, velocity):
+          if mouse > coordinate and velocity > 0:
+            distance = mouse - coordinate
+            return distance < 10
+          elif mouse < coordinate and velocity < 0:
+            distance = mouse - coordinate
+            return distance > -10
+          else:
+            return False
       ```
 
       This function allows us to check if the mouse was hit along a

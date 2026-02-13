@@ -191,7 +191,12 @@ sections:
         seconds = time.time() - start_time
         pixels_per_second = 5
         offset = seconds * pixels_per_second
-        sketch.draw_line(250, 200, 100, 50 + offset)
+        sketch.draw_line(
+            250,
+            200,
+            100,
+            50 + offset
+        )
 
       sketch.on_step(draw_moving_line)</pre>
 
@@ -262,10 +267,15 @@ sections:
 
       ```python
       def draw_moving_line(self):
-          seconds = time.time() - start_time
-          pixels_per_second = 5
-          offset = seconds * pixels_per_second
-          self.draw_line(250, 200, 100, 50 + offset)
+        seconds = time.time() - start_time
+        pixels_per_second = 5
+        offset = seconds * pixels_per_second
+        self.draw_line(
+            250,
+            200,
+            100,
+            50 + offset
+        )
       ```
 
       Go ahead and give it a try! All that said, when programs are this small, I understand it feels a little silly to have two variables pointing to the same thing. However, we will see in the [next tutorial](/labs/python_objects.html) when this becomes useful.
@@ -278,8 +288,12 @@ sections:
       ```python
       def draw_moving_line(self):
         mouse = sketch.get_mouse()
-        sketch.draw_line(250, 200, mouse.get_pointer_x(),
-                         mouse.get_pointer_y())
+        sketch.draw_line(
+            250,
+            200,
+            mouse.get_pointer_x(),
+            mouse.get_pointer_y()
+        )
       ```
 
       Need help? [Here's what my interactive python file looks like](https://gist.github.com/sampottinger/f04ec269d0678fa86d397a82e3b7c0f6). We ask our sketch to give us the position of the mouse. Then, we draw from the center of the sketch to the cursor position on each step.
