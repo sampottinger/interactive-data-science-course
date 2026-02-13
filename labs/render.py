@@ -265,46 +265,52 @@ def process_citation(citation):
 
 
 def process_section_content(section):
-  """Process section content from body, html, or markdown attributes.
+  """Process section content from html or markdown attributes.
 
-  Checks for mutually exclusive content attributes (body, html, markdown).
+  Checks for mutually exclusive content attributes (html, markdown).
   Converts markdown to HTML if needed. Applies blockstyle transformation
   if specified.
 
   Args:
-    section: A dict with section data. May contain 'body', 'html', or 'markdown'
+    section: A dict with section data. May contain 'html' or 'markdown'
       keys for content, and optional 'blockstyle' key.
 
   Returns:
     dict: The section dict with processed content in 'body' field.
 
   Raises:
-    ValueError: If more than one content attribute is present, or if
-      blockstyle value is invalid.
+    ValueError: If 'body' attribute is used, if both 'html' and 'markdown'
+      are present, if neither is present, or if blockstyle value is invalid.
   """
-  # Check for mutually exclusive content attributes
-  content_attrs = []
+  # Check if deprecated 'body' attribute is used
   if 'body' in section:
-    content_attrs.append('body')
-  if 'html' in section:
-    content_attrs.append('html')
-  if 'markdown' in section:
-    content_attrs.append('markdown')
-
-  if len(content_attrs) > 1:
     raise ValueError(
-        f'Section "{section.get("short", "unknown")}" has multiple content '
-        f'attributes: {", ".join(content_attrs)}. Only one of body, html, or '
-        f'markdown is allowed.'
+        f'Section "{section.get("short", "unknown")}" uses the deprecated '
+        f'"body" attribute. Please use "html" or "markdown" instead.'
+    )
+
+  # Check for both html and markdown
+  has_html = 'html' in section
+  has_markdown = 'markdown' in section
+
+  if has_html and has_markdown:
+    raise ValueError(
+        f'Section "{section.get("short", "unknown")}" has both "html" and '
+        f'"markdown" attributes. Only one content attribute is allowed.'
+    )
+
+  # Check for neither html nor markdown
+  if not has_html and not has_markdown:
+    raise ValueError(
+        f'Section "{section.get("short", "unknown")}" is missing a content '
+        f'attribute. Please provide either "html" or "markdown".'
     )
 
   # Get the content
   content = None
-  if 'body' in section:
-    content = section['body']
-  elif 'html' in section:
+  if has_html:
     content = section['html']
-  elif 'markdown' in section:
+  elif has_markdown:
     content = markdown.markdown(
         section['markdown'],
         extensions=['fenced_code']

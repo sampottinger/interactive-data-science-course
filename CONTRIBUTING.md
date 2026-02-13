@@ -257,7 +257,7 @@ The YAML-based structure allows for consistent formatting and easier maintenance
 | name      | Yes          | Human readable name of the tutorial. | string |
 | file      | Yes          | Base filename for output (e.g., "python_intro" generates python_intro.html and python_intro.md). | string |
 | header    | Yes          | HTML content for the tutorial header/introduction. | html |
-| sections  | Yes          | List of tutorial sections, each with "name" (anchor ID), "short" (heading), "long" (description), and "body" (content). | list |
+| sections  | Yes          | List of tutorial sections, each with "name" (anchor ID), "short" (heading), "long" (description), and either "html" or "markdown" (content). | list |
 | citations | No           | List of citations, each with "text" and optional "available" (URL). | list |
 
 HTML fields should use `>` for folded scalars as with lesson YAML files. Generated tutorials include:
