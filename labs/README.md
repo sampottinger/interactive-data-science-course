@@ -1,41 +1,24 @@
 # Skills Labs
 
-This directory contains hands-on tutorials and focused instruction on implementation skills for the Interactive Data Science and Visualization course. These labs are designed for a flipped classroom structure with minimal lecture and maximum hands-on interaction.
+This directory contains hands-on tutorials and focused instruction on implementation skills for the Interactive Data Science and Visualization course. These labs may be used for a flipped classroom structure which prioritizes hands-on interaction with instructor support.
 
 ## Directory Structure
+The labs are organized into six lab directories, each containing YAML source files. Specifically, each lab directory contains:
 
-The labs are organized into six lab directories, each containing YAML source files:
-
-```
-labs/
-├── Lab_1/          # Python fundamentals
-├── Lab_2/          # Python graphics and objects
-├── Lab_3/          # Forms, color, style, position, orientation
-├── Lab_4/          # Text, images, buffers, loops, data
-├── Lab_5/          # JavaScript
-├── Lab_6/          # AI basics and advanced topics
-├── render.py       # Python script to generate HTML/Markdown from YAML
-├── render.sh       # Bash wrapper for render.py
-├── tutorial.html   # HTML template for individual tutorials
-├── tutorial.md     # Markdown template for individual tutorials
-└── index_template.html  # Template for labs index page
-```
-
-Each lab directory contains:
 - `index.yml`: Lab metadata (name, lesson number, subheader)
 - Tutorial YAML files: Named with numeric prefix and descriptive name (e.g., `01_python_introduction.yml`)
 
 ## YAML Format
+YAML files both define a lab which contains one or more tutorials and the tutorials themselves.
 
 ### Lab Index (index.yml)
-
 Each lab directory's `index.yml` contains:
 
-| Field     | Required | Description                                    | Type   |
-|-----------|----------|------------------------------------------------|--------|
-| name      | Yes      | Lab name (e.g., "Hello Python")                | string |
-| subheader | Yes      | Brief description of lab focus                 | string |
-| lesson    | Yes      | Associated lesson number from main course      | int    |
+| Field     | Required | Description                                             | Type   |
+|-----------|----------|---------------------------------------------------------|--------|
+| name      | Yes      | Lab name (e.g., "Hello Python")                         | string |
+| subheader | Yes      | Brief markdown description of lab focus                 | string |
+| lesson    | Yes      | Associated lesson number from main course               | int    |
 
 ### Tutorial Files
 
@@ -50,7 +33,6 @@ Each tutorial YAML file defines a single tutorial with the following structure:
 | citations | No       | List of citations with "text" and optional "available" (URL)             | list   |
 
 #### Section Structure
-
 Each section in the `sections` list contains:
 
 | Field      | Required | Description                                      | Type                |
@@ -62,9 +44,10 @@ Each section in the `sections` list contains:
 | markdown   | One of   | Section content in Markdown format               | markdown            |
 | blockstyle | No       | Code block style: "pre" (default) or "blockquote" | string              |
 
-**Important:** Each section must contain exactly one of `html` or `markdown` for content. Both cannot be present.
+ach section must contain exactly one of `html` or `markdown` for content. However, both cannot be present simultaneously.
 
 #### Best Practices
+When writing YAML, please try to observe the following conventions:
 
 - Use `|` (literal block scalar) for `header` and multi-line `html`/`markdown` content
 - Use `>` (folded scalar) for simple multi-line strings like `subheader`
@@ -72,7 +55,7 @@ Each section in the `sections` list contains:
 - Markdown content supports fenced code blocks with triple backticks
 - Use `blockstyle: blockquote` to render code blocks as blockquotes instead of `<pre>` tags
 
-#### Example
+Here is an example of these practices in mind:
 
 ```yaml
 name: Python Introduction
@@ -115,13 +98,14 @@ bash render.sh
 ```
 
 The render script processes all tutorial YAML files and generates:
+
 - HTML files for web viewing
 - Markdown files for accessibility
 - An index.html listing all available labs
 
 ## Generated Output
-
 Generated tutorials include:
+
 - Skip link for accessibility
 - Collapsible table of contents
 - Structured sections with anchors
@@ -129,3 +113,6 @@ Generated tutorials include:
 - Citations section
 - Footer with Creative Commons license information
 - Navigation links back to labs index and MOOC homepage
+
+## Additional Information
+For detailed contributing guidelines, coding standards, and project structure, see the main [CONTRIBUTING.md](../CONTRIBUTING.md) in the repository root.

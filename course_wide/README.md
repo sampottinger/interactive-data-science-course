@@ -1,40 +1,11 @@
 # Course-Wide Materials
-
 This directory contains course-wide materials that apply across all lessons of the Interactive Data Science and Visualization course. These include the syllabus, course manual, and grading rubric.
 
-## Directory Structure
-
-```
-course_wide/
-├── course_wide.yml           # Structured data for all course-wide content
-├── render.py                 # Python script to generate HTML/Markdown from templates
-├── render.sh                 # Bash wrapper for render.py
-├── base.html                 # Shared HTML structure for all pages
-├── base.md                   # Shared Markdown structure for all pages
-├── syllabus_template.html    # Syllabus HTML template
-├── syllabus_template.md      # Syllabus Markdown template
-├── manual_template.html      # Course manual HTML template
-├── manual_template.md        # Course manual Markdown template
-├── rubric_template.html      # Grading rubric HTML template
-├── rubric_template.md        # Grading rubric Markdown template
-├── syllabus.html             # Generated syllabus (HTML)
-├── syllabus.md               # Generated syllabus (Markdown)
-├── syllabus.pdf              # Syllabus PDF
-├── manual.html               # Generated course manual (HTML)
-├── manual.md                 # Generated course manual (Markdown)
-├── manual.pdf                # Course manual PDF
-├── rubric.html               # Generated rubric (HTML)
-├── rubric.md                 # Generated rubric (Markdown)
-└── rubric.pdf                # Rubric PDF
-```
-
 ## YAML Structure
-
 The `course_wide.yml` file contains all structured data for course-wide materials:
 
 ### Meta Section
-
-Contains metadata for SEO and social media sharing:
+Contains information for metadata tags including those for social media. Here is the syllabus:
 
 ```yaml
 meta:
@@ -51,7 +22,6 @@ meta:
 Similar metadata blocks exist for `manual` and `rubric`.
 
 ### Sections
-
 List of course sections:
 
 | Field    | Required | Description                                      | Type   |
@@ -83,7 +53,7 @@ List of daily lessons nested under sections:
 | class    | No       | List of class activity items                 | list   |
 | activity | No       | List of homework/out-of-class activity items | list   |
 
-**Important:** Each item in `reading`, `class`, and `activity` lists must use either `html` or `markdown` for content. Only one content attribute is allowed per item. The content will be processed and made available to templates in the `text` field.
+Each item in `reading`, `class`, and `activity` lists must use either `html` or `markdown` for content. Only one content attribute is allowed per item (must use ither html or markdown but not both). Here is a full example:
 
 ```yaml
 lessons:
@@ -111,7 +81,6 @@ For items requiring HTML (multiple links, complex formatting), use the `html` at
 ```
 
 ### Rubric
-
 List of grading criteria organized by category:
 
 | Field     | Required | Description                                          | Type   |
@@ -130,23 +99,21 @@ rubric:
     starts: Assignment 7 (Creative Code 1)
 ```
 
-Categories include:
+At time of writing, the categories are:
+
 - **Completeness**: Assignment completion and ethical representation
 - **Materials**: Visual design principles (preattentive features, Gestalt, encodings, affordances, etc.)
 - **Tech**: Technical execution (code quality, documentation, accessibility)
 - **Explore**: User experience (interpretability, hierarchy, domain understanding, user agency)
 
 ## Templates
-
 The course-wide materials use Jinja2 templates with template inheritance:
 
 - **Base templates** (`base.html`, `base.md`): Shared structure with blocks for content
 - **Page templates**: Extend base templates and override specific blocks
 - **Variables**: Templates receive data from `course_wide.yml` (sections, lessons, rubric, meta)
 
-### Modifying Content
-
-To modify course-wide materials:
+This in mind, use the following procedure to modify course-wide materials:
 
 1. **Edit structured data**: Update `course_wide.yml` to change sections, lessons, or rubric
 2. **Edit templates**: Modify `*_template.html` or `*_template.md` files to change page structure
@@ -154,8 +121,7 @@ To modify course-wide materials:
 4. **Rebuild**: Run `bash render.sh` to regenerate output files
 
 ## Best Practices
-
-Follow YAML best practices similar to lesson YAML files:
+Please try to observe the following YAML best practices:
 
 - Use `>` (folded scalar) for multi-line strings
 - Keep lines to 100 characters or fewer (exceptions for long URLs)
@@ -165,7 +131,6 @@ Follow YAML best practices similar to lesson YAML files:
 - Use HTML format for items with multiple inline citations or complex formatting
 
 ## Building
-
 To build all course-wide materials, run from the `course_wide` directory:
 
 ```bash
@@ -186,14 +151,13 @@ The render script:
 4. Generates HTML and Markdown output files
 
 ## Generated Output
-
 The build process creates:
+
 - **syllabus.html** and **syllabus.md**: Complete course curriculum with sections and daily lessons
 - **manual.html** and **manual.md**: Detailed course manual with readings, labs, and assignment guidance
 - **rubric.html** and **rubric.md**: Grading criteria for all assignments
 
-PDF versions are maintained separately and updated as needed.
+PDF versions are maintained separately from a teaching of the course at UC Berkeley with graphic design elements and updated as needed.
 
 ## Additional Information
-
 For detailed contributing guidelines, coding standards, and project structure, see the main [CONTRIBUTING.md](../CONTRIBUTING.md) in the repository root.
