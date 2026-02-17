@@ -1,5 +1,5 @@
 ---
-title: Interactive Data Science and Visualization: Multi-disciplinary Open Education Resources for Modern Data Experiences
+title: 'Interactive Data Science and Visualization: Multi-disciplinary Open Education Resources for Modern Data Experiences'
 tags:
   - Python
   - Design
