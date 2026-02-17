@@ -1,5 +1,5 @@
 # Interactive Data Science and Visualization
-An open online course serving both as a stand-alone massive open online course (MOOC) and re-usable open educational resources (OER) which can be adapted to other instructional opportunities.
+An open online course serving both as a stand-alone massive open online course (MOOC) and re-usable open educational resources (OER) which can be adapted to other instructional opportunities. Available at https://mooc.interactivedatascience.courses.
 
 ## Purpose
 Interactive Data Science and Visualization takes a multi-disciplinary perspective on building compelling digital pieces to engage with data. We start with traditional information design with a focus on perception science and data visualization-focused methods adjacent to user-centered design. However, we then extend that using lenses from interaction design, media studies, sociology, anthropology, and game design in order to deeply consider the role of audience with complexity and to understand how to foster co-creation of meaning through interactivity. This allows us to prepare data visualization for a future where computation enables new engaging experiences with data beyond a traditional view of data encoding and task completion. Finally, instruction also considers use of AI.
