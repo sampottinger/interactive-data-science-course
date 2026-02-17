@@ -58,6 +58,22 @@ jobs:
         with:
           name: mooc
           path: ./mooc
+  draft_paper:
+    runs-on: ubuntu-latest
+    name: Draft JOSE Paper
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Build draft PDF
+        uses: openjournals/openjournals-draft-action@master
+        with:
+          journal: jose
+          paper-path: paper/paper.md
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper
+          path: paper/paper.pdf
   upload_files:
     runs-on: ubuntu-latest
     name: Upload
