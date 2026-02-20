@@ -84,11 +84,15 @@ sections:
       has also performed quite well.
 
       Next, as in [Tutorial 1](/labs/python_intro.html), you'll also need a
-      Python environment where you can run the generated code. However, this
-      could be [Jupyter Lite](https://jupyter.org/try-jupyter/lab/) which does
-      not require installation. That said, if you used something other than
-      Jupyter Lite, make sure you have matplotlib installed in your
-      environment. For example, this could be done with (optionally in a
+      Python environment where you can run the generated code. I recommend using
+      [Jupyter Lite](https://jupyter.org/try-jupyter/lab/) which does
+      not require installation. After
+      [opening the software](https://jupyter.org/try-jupyter/lab/),
+      select Pyodide.
+      
+      That said, if you used something other than Jupyter Lite, make sure you have
+      matplotlib installed in your environment. For example, this could be done with
+      (optionally in a
       [virtual environment](https://docs.python-guide.org/dev/virtualenvs/)):
 
       ```
