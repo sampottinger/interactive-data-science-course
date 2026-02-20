@@ -29,6 +29,10 @@ sections:
       and wolves example from the very start of class. However, this time,
       let's see what it feels like to be accelerated by AI while still
       applying our critical design perspective.
+
+      Note that this first tutorial will discuss the use of chat in order to
+      build visualizations. We will expand to dedicated coding assistants
+      and agentic workflows in the [next tutorial](/labs/ai_advanced.html).
   - name: role
     short: Role of AI
     long: Understanding the role of AI in visualization
@@ -81,27 +85,8 @@ sections:
       include [ChatGPT](https://chat.openai.com),
       [Gemini](https://gemini.google.com/), and
       [Mistral AI](https://mistral.ai/). If in need of a free option, Mistral
-      has also performed quite well.
-
-      Next, as in [Tutorial 1](/labs/python_intro.html), you'll also need a
-      Python environment where you can run the generated code. I recommend using
-      [Jupyter Lite](https://jupyter.org/try-jupyter/lab/) which does
-      not require installation. After
-      [opening the software](https://jupyter.org/try-jupyter/lab/),
-      select Pyodide.
-      
-      That said, if you used something other than Jupyter Lite, make sure you have
-      matplotlib installed in your environment. For example, this could be done with
-      (optionally in a
-      [virtual environment](https://docs.python-guide.org/dev/virtualenvs/)):
-
-      ```
-      pip install matplotlib
-      ```
-
-      Once you're set up, open your AI assistant in one window and your
-      Python environment in another so you can easily execute the code as
-      you go. This set up can help fuel that essential iteration process.
+      has also performed quite well if given a [CSV file with the
+      Isle Royale data](/labs/wolf_moose_populations.csv).
 
       **Note**: The exact output you get from an AI assistant may differ
       slightly from what's shown here. That's completely normal and expected!
@@ -150,6 +135,38 @@ sections:
         range of the actual data on one side is much smaller (up to 50) than
         the other (up to 2500). This brings us to our first iteration.
       </p>
+
+      <p>
+        <strong>Troubleshooting</strong>: If your AI assistant cannot generate
+        the CSV file, it may be due to restrictions on its environment. You can
+        still continue by downloading a <a href="/labs/wolf_moose_populations.csv">
+        pre-prepared CSV dataset and adding it to your chat</a>.
+      </p>
+  - name: local-run
+    short: Local Run
+    long: Running the Python code locally
+    markdown: |
+      It is likely that the AI assistant wrote and ran Python code on its own.
+      You may also wish to ask it for that Python code and the CSV file it
+      generated. This allows you to can inspect the work and run it locally.
+      
+      As in [Tutorial 1](/labs/python_intro.html), you'll need a
+      Python environment where you can run the generated code. I recommend using
+      [Jupyter Lite](https://jupyter.org/try-jupyter/lab/) which does
+      not require installation. After
+      [opening the software](https://jupyter.org/try-jupyter/lab/),
+      select Pyodide.
+      
+      That said, if you used something other than Jupyter Lite, make sure you have
+      matplotlib installed in your environment. For example, this could be done with
+      (optionally in a
+      [virtual environment](https://docs.python-guide.org/dev/virtualenvs/)):
+
+      ```
+      pip install matplotlib
+      ```
+
+      Once you're set up, simply ask your AI assistant to provide the code and data.
   - name: first-iteration
     short: First Iteration
     long: Improving the visualization through iteration
@@ -310,7 +327,9 @@ sections:
       type for which there isn't already a pre-built implementation? Let's
       continue onwards to [Tutorial 14](/labs/ai_advanced.html) to learn
       about advanced AI techniques including llms.txt and subagents /
-      agentic workflows.
+      agentic workflows. From there, you can choose between a
+      [browser-based path](/labs/ai_advanced_browser.html) (Tutorial 14a)
+      or an [agents path](/labs/ai_advanced_agents.html) (Tutorial 14b).
 citations:
   - text: >
       National Park Service, "Wolf and Moose Populations," Isle Royale

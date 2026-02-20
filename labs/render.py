@@ -7,6 +7,7 @@ License: BSD-3-Clause
 """
 import itertools
 import os
+import re
 import sys
 
 import jinja2
@@ -14,6 +15,37 @@ import markdown
 import yaml
 
 BASE_USAGE_STR = 'USAGE: python render.py'
+
+
+def try_parse_int(value):
+  """Return value as an integer if it is a digit string, otherwise as-is.
+
+  Args:
+    value: The string value to attempt to parse.
+
+  Returns:
+    int or str: The parsed integer or original string.
+  """
+  if value.isdigit():
+    return int(value)
+  return value
+
+
+def sort_tutorial_order(value):
+  """Generate a sort key for natural ordering of tutorial numbers.
+
+  Lowercases the string, then splits on digit boundaries so that
+  numeric portions are compared as integers and text portions are
+  compared as lowercase strings. For example, '2' < '14' < '14a' < '14b'.
+
+  Args:
+    value: The string value to generate a sort key for.
+
+  Returns:
+    list: A list of alternating string and integer parts for sorting.
+  """
+  parts = re.split(r'(\d+)', str(value).lower())
+  return [try_parse_int(p) for p in parts if p]
 
 
 def build_usage_str(command, attrs):
@@ -56,7 +88,14 @@ USAGE_RENDER_LIST_ARGS = [
 USAGE_RENDER_LIST_STR = build_usage_str('list', USAGE_RENDER_LIST_ARGS)
 USAGE_RENDER_LIST_ARGS = len(USAGE_RENDER_LIST_ARGS) + 1
 
-USAGE_STR = 'USAGE: python render.py [index | tutorial | list]'
+USAGE_RENDER_PLACE_ARGS = [
+    'labs_dir',
+    'number'
+]
+USAGE_RENDER_PLACE_STR = build_usage_str('place', USAGE_RENDER_PLACE_ARGS)
+USAGE_RENDER_PLACE_ARGS = len(USAGE_RENDER_PLACE_ARGS) + 1
+
+USAGE_STR = 'USAGE: python render.py [index | tutorial | list | place]'
 MIN_ARGS = 1
 
 
@@ -103,9 +142,11 @@ def load_labs_from_directory(labs_dir):
       with open(yaml_path, 'r') as f:
         tutorial = yaml.load(f, Loader=yaml.Loader)
         # Extract tutorial number from filename
-        tutorial_num = int(yaml_file.split('_')[0])
+        tutorial_num = yaml_file.split('_')[0].lstrip('0') or '0'
         tutorial['number'] = tutorial_num
         tutorials.append(tutorial)
+
+    tutorials.sort(key=lambda t: sort_tutorial_order(t['number']))
 
     lab_info = {
         'name': lab_meta['name'],
@@ -195,7 +236,7 @@ def main_tutorial():
   template_path = sys.argv[2]
   md_template_path = sys.argv[3]
   labs_dir = sys.argv[4]
-  tutorial_number = int(sys.argv[5])
+  tutorial_number = sys.argv[5]
   html_output_path = sys.argv[6]
   md_output_path = sys.argv[7]
 
@@ -352,10 +393,29 @@ def main_list():
     for tutorial in lab['tutorials']:
       tutorial_numbers.append(tutorial['number'])
 
-  tutorial_numbers.sort()
+  tutorial_numbers.sort(key=sort_tutorial_order)
 
   for number in tutorial_numbers:
     print(number)
+
+
+def main_place():
+  """Command to print the output filename for a tutorial number."""
+  if len(sys.argv) != USAGE_RENDER_PLACE_ARGS + 1:
+    print(USAGE_RENDER_PLACE_STR)
+    sys.exit(1)
+
+  labs_dir = sys.argv[2]
+  tutorial_number = sys.argv[3]
+
+  data = load_labs_from_directory(labs_dir)
+  tutorials_by_number = build_tutorials_by_number(data)
+
+  if tutorial_number not in tutorials_by_number:
+    print(f'Tutorial {tutorial_number} not found')
+    sys.exit(1)
+
+  print(tutorials_by_number[tutorial_number]['file'])
 
 
 def main():
@@ -371,6 +431,8 @@ def main():
     main_tutorial()
   elif command == 'list':
     main_list()
+  elif command == 'place':
+    main_place()
 
 
 if __name__ == '__main__':
