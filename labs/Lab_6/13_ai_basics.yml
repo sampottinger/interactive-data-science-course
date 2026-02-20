@@ -139,8 +139,8 @@ sections:
       <p>
         <strong>Troubleshooting</strong>: If your AI assistant cannot generate
         the CSV file, it may be due to restrictions on its environment. You can
-        still continue by downloading a <a href="/labs/wolf_moose_populations.csv">pre-prepared CSV dataset and
-        adding it to your chat</a>.
+        still continue by downloading a <a href="/labs/wolf_moose_populations.csv">
+        pre-prepared CSV dataset and adding it to your chat</a>.
       </p>
   - name: local-run
     short: Local Run
