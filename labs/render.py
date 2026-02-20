@@ -17,12 +17,26 @@ import yaml
 BASE_USAGE_STR = 'USAGE: python render.py'
 
 
-def natural_sort_key(value):
-  """Generate a sort key for natural ordering of alphanumeric strings.
+def try_parse_int(value):
+  """Return value as an integer if it is a digit string, otherwise as-is.
 
-  Splits the string on digit boundaries so that numeric portions are
-  compared as integers and text portions are compared as lowercase
-  strings. For example, '2' < '14' < '14a' < '14b'.
+  Args:
+    value: The string value to attempt to parse.
+
+  Returns:
+    int or str: The parsed integer or original string.
+  """
+  if value.isdigit():
+    return int(value)
+  return value
+
+
+def sort_tutorial_order(value):
+  """Generate a sort key for natural ordering of tutorial numbers.
+
+  Lowercases the string, then splits on digit boundaries so that
+  numeric portions are compared as integers and text portions are
+  compared as lowercase strings. For example, '2' < '14' < '14a' < '14b'.
 
   Args:
     value: The string value to generate a sort key for.
@@ -30,8 +44,8 @@ def natural_sort_key(value):
   Returns:
     list: A list of alternating string and integer parts for sorting.
   """
-  parts = re.split(r'(\d+)', str(value))
-  return [int(p) if p.isdigit() else p.lower() for p in parts if p]
+  parts = re.split(r'(\d+)', str(value).lower())
+  return [try_parse_int(p) for p in parts if p]
 
 
 def build_usage_str(command, attrs):
@@ -132,7 +146,7 @@ def load_labs_from_directory(labs_dir):
         tutorial['number'] = tutorial_num
         tutorials.append(tutorial)
 
-    tutorials.sort(key=lambda t: natural_sort_key(t['number']))
+    tutorials.sort(key=lambda t: sort_tutorial_order(t['number']))
 
     lab_info = {
         'name': lab_meta['name'],
@@ -379,7 +393,7 @@ def main_list():
     for tutorial in lab['tutorials']:
       tutorial_numbers.append(tutorial['number'])
 
-  tutorial_numbers.sort(key=natural_sort_key)
+  tutorial_numbers.sort(key=sort_tutorial_order)
 
   for number in tutorial_numbers:
     print(number)
