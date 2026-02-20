@@ -327,7 +327,9 @@ sections:
       type for which there isn't already a pre-built implementation? Let's
       continue onwards to [Tutorial 14](/labs/ai_advanced.html) to learn
       about advanced AI techniques including llms.txt and subagents /
-      agentic workflows.
+      agentic workflows. From there, you can choose between a
+      [browser-based path](/labs/ai_advanced_browser.html) (Tutorial 14a)
+      or an [agents path](/labs/ai_advanced_agents.html) (Tutorial 14b).
 citations:
   - text: >
       National Park Service, "Wolf and Moose Populations," Isle Royale
