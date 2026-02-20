@@ -13,24 +13,7 @@
 python3 ./render.py index ./index_template.html . ./index.html
 
 for i in $(python3 ./render.py list .); do
-    # Get the file name for this tutorial from the YAML
-    file=$(python3 -c "
-import os
-import yaml
-labs_dir = '.'
-lab_dirs = sorted([d for d in os.listdir(labs_dir) if d.startswith('Lab_') and os.path.isdir(os.path.join(labs_dir, d))])
-for lab_dir in lab_dirs:
-    lab_path = os.path.join(labs_dir, lab_dir)
-    yaml_files = sorted([f for f in os.listdir(lab_path) if f.endswith('.yml') and f[0:2].isdigit()])
-    for yaml_file in yaml_files:
-        tutorial_num = yaml_file.split('_')[0].lstrip('0') or '0'
-        if tutorial_num == '$i':
-            yaml_path = os.path.join(lab_path, yaml_file)
-            with open(yaml_path, 'r') as f:
-                tutorial = yaml.load(f, Loader=yaml.Loader)
-                print(tutorial['file'])
-                exit(0)
-")
+    file=$(python3 ./render.py place . $i)
 
     html_file="$file"
     md_file="${file%.html}.md"

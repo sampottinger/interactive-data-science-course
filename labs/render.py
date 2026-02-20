@@ -74,7 +74,14 @@ USAGE_RENDER_LIST_ARGS = [
 USAGE_RENDER_LIST_STR = build_usage_str('list', USAGE_RENDER_LIST_ARGS)
 USAGE_RENDER_LIST_ARGS = len(USAGE_RENDER_LIST_ARGS) + 1
 
-USAGE_STR = 'USAGE: python render.py [index | tutorial | list]'
+USAGE_RENDER_PLACE_ARGS = [
+    'labs_dir',
+    'number'
+]
+USAGE_RENDER_PLACE_STR = build_usage_str('place', USAGE_RENDER_PLACE_ARGS)
+USAGE_RENDER_PLACE_ARGS = len(USAGE_RENDER_PLACE_ARGS) + 1
+
+USAGE_STR = 'USAGE: python render.py [index | tutorial | list | place]'
 MIN_ARGS = 1
 
 
@@ -378,6 +385,25 @@ def main_list():
     print(number)
 
 
+def main_place():
+  """Command to print the output filename for a tutorial number."""
+  if len(sys.argv) != USAGE_RENDER_PLACE_ARGS + 1:
+    print(USAGE_RENDER_PLACE_STR)
+    sys.exit(1)
+
+  labs_dir = sys.argv[2]
+  tutorial_number = sys.argv[3]
+
+  data = load_labs_from_directory(labs_dir)
+  tutorials_by_number = build_tutorials_by_number(data)
+
+  if tutorial_number not in tutorials_by_number:
+    print(f'Tutorial {tutorial_number} not found')
+    sys.exit(1)
+
+  print(tutorials_by_number[tutorial_number]['file'])
+
+
 def main():
   """Main entrypoint for the labs static site generator."""
   if len(sys.argv) < MIN_ARGS + 1:
@@ -391,6 +417,8 @@ def main():
     main_tutorial()
   elif command == 'list':
     main_list()
+  elif command == 'place':
+    main_place()
 
 
 if __name__ == '__main__':
