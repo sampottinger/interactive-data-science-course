@@ -23,8 +23,8 @@ for lab_dir in lab_dirs:
     lab_path = os.path.join(labs_dir, lab_dir)
     yaml_files = sorted([f for f in os.listdir(lab_path) if f.endswith('.yml') and f[0:2].isdigit()])
     for yaml_file in yaml_files:
-        tutorial_num = int(yaml_file.split('_')[0])
-        if tutorial_num == $i:
+        tutorial_num = yaml_file.split('_')[0].lstrip('0') or '0'
+        if tutorial_num == '$i':
             yaml_path = os.path.join(lab_path, yaml_file)
             with open(yaml_path, 'r') as f:
                 tutorial = yaml.load(f, Loader=yaml.Loader)
