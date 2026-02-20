@@ -7,6 +7,7 @@ License: BSD-3-Clause
 """
 import itertools
 import os
+import re
 import sys
 
 import jinja2
@@ -14,6 +15,23 @@ import markdown
 import yaml
 
 BASE_USAGE_STR = 'USAGE: python render.py'
+
+
+def natural_sort_key(value):
+  """Generate a sort key for natural ordering of alphanumeric strings.
+
+  Splits the string on digit boundaries so that numeric portions are
+  compared as integers and text portions are compared as lowercase
+  strings. For example, '2' < '14' < '14a' < '14b'.
+
+  Args:
+    value: The string value to generate a sort key for.
+
+  Returns:
+    list: A list of alternating string and integer parts for sorting.
+  """
+  parts = re.split(r'(\d+)', str(value))
+  return [int(p) if p.isdigit() else p.lower() for p in parts if p]
 
 
 def build_usage_str(command, attrs):
@@ -103,9 +121,11 @@ def load_labs_from_directory(labs_dir):
       with open(yaml_path, 'r') as f:
         tutorial = yaml.load(f, Loader=yaml.Loader)
         # Extract tutorial number from filename
-        tutorial_num = int(yaml_file.split('_')[0])
+        tutorial_num = yaml_file.split('_')[0].lstrip('0') or '0'
         tutorial['number'] = tutorial_num
         tutorials.append(tutorial)
+
+    tutorials.sort(key=lambda t: natural_sort_key(t['number']))
 
     lab_info = {
         'name': lab_meta['name'],
@@ -195,7 +215,7 @@ def main_tutorial():
   template_path = sys.argv[2]
   md_template_path = sys.argv[3]
   labs_dir = sys.argv[4]
-  tutorial_number = int(sys.argv[5])
+  tutorial_number = sys.argv[5]
   html_output_path = sys.argv[6]
   md_output_path = sys.argv[7]
 
@@ -352,7 +372,7 @@ def main_list():
     for tutorial in lab['tutorials']:
       tutorial_numbers.append(tutorial['number'])
 
-  tutorial_numbers.sort()
+  tutorial_numbers.sort(key=natural_sort_key)
 
   for number in tutorial_numbers:
     print(number)
