@@ -21,7 +21,7 @@ However, the rules and lessons haven't really changed.
 Lesson 26 goes beyond the original material of Stat 198 as an update to prior instruction. Specifically, new skills lab 6 offers two new tutorials.
 
   - Tutorial 13 looks at Matplotlib and re-generating the graphic we examined early in lecture.
-  - Tutorial 14 expands this to Sketchingpy to provide a similar graphic with an agent-based workflow.
+  - Tutorial 14 introduces advanced techniques and branches to 14a (browser) and 14b (agents) for Sketchingpy workflows.
   - Requires an AI assistant (we demonstrate with Claude).
 
 ### Role of AI
