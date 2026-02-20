@@ -86,7 +86,7 @@ sections:
       [Gemini](https://gemini.google.com/), and
       [Mistral AI](https://mistral.ai/). If in need of a free option, Mistral
       has also performed quite well if given a [CSV file with the
-      Isle Royale data]().
+      Isle Royale data](/labs/wolf_moose_populations.csv).
 
       **Note**: The exact output you get from an AI assistant may differ
       slightly from what's shown here. That's completely normal and expected!
@@ -139,7 +139,7 @@ sections:
       <p>
         <strong>Troubleshooting</strong>: If your AI assistant cannot generate
         the CSV file, it may be due to restrictions on its environment. You can
-        still continue by downloading a <a href="">pre-prepared CSV dataset and
+        still continue by downloading a <a href="/labs/wolf_moose_populations.csv">pre-prepared CSV dataset and
         adding it to your chat</a>.
       </p>
   - name: local-run

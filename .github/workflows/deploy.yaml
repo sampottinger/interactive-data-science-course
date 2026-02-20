@@ -53,6 +53,8 @@ jobs:
         run: pip install -r requirements.txt
       - name: Build MOOC
         run: bash build.sh
+      - name: Promote lab support files
+        run: cp labs/support/* mooc/labs/
       - name: Upload MOOC directory as artifact
         uses: actions/upload-artifact@v4
         with:
