@@ -11,7 +11,7 @@ It is important that the course not only discusses ethics and accessibility but 
 The structure of instruction should consider that folks may be joining for different reasons where some use the full class and others take individual pieces. Sections of the course may build on each other but reasonable steps should be taken to allow for modularity where possible.
 
 ### Open
-The course must be fully open with code released under BSD and non-code materials in CC-BY-NC 4.0. The CC-BY-NC 4.0 is used due to some incorporated educational materials' licensing. All software should be open when possible.
+The course must be fully open with code released under BSD and non-code materials in CC BY-NC-SA 4.0. The CC BY-NC-SA 4.0 is used due to some incorporated educational materials' licensing. All software should be open when possible.
 
 ### Holistic
 Data visualization is science and art. We are committed to multi-disciplinary instruction which pulls from multiple perspectives and which treats this topical area as both a question of implementation (programming / engineering) and design with balanced instruction in both. We believe this necessarily involves instruction which pulls from humanities and social sciences.
@@ -187,7 +187,7 @@ We require files in the form `lesson00.md` where each should have the following 
 
  - **Header**: Lesson number and name with very brief description.
  - **Objective**: 1 - 4 sentences describing the objective and purpose of the lesson.
- - **Outline**: Brief 1 - 4 sentences describing the content of the lcture followed by subsections with the components of the lesson each containing short descriptions and bullet points.
+ - **Outline**: Brief 1 - 4 sentences describing the content of the lecture followed by subsections with the components of the lesson each containing short descriptions and bullet points.
  - **Take Aways**: Ideally 1 sentence overview of what should be remembered from the lesson followed by bullet points.
  - **Citations**: Citations which may match or be close to the citation file for the lesson.
 
@@ -232,7 +232,7 @@ Template files use Jinja2 syntax with template inheritance. Page templates exten
 The `course_wide.yml` file contains:
  - `sections`: List of course sections with name, number, tagline, and detailed description
  - `lessons`: Nested under sections, containing day number, title, readings, and activities
- - `rubric`: List of grading criteria with category, criterion, and percentage fields
+ - `rubric`: Structured grading data with a `sections` list (name and weight) and an `items` list (category, criterion, and starts fields)
 
 Lesson items (reading, class, activity) must use either `html` or `markdown` for content. Only one content attribute is allowed per item. The content will be processed and made available to templates in the `text` field.
 
@@ -247,7 +247,7 @@ During original teaching of this course as Stat 198 at UC Berkeley, the skills l
 
 Skills labs are organized in the `labs/` directory with the following structure:
  - `Lab_1/`, `Lab_2/`, etc.: Lab-specific directories containing YAML source files
- - Each lab directory contains an `index.yml` with lab metadata (name, lesson) and tutorial YAML files named with a numeric prefix followed by a descriptive name (e.g., `01_python_introduction.yml`, `02_python_graphics.yml`)
+ - Each lab directory contains an `index.yml` with lab metadata (name, subheader, lesson) and tutorial YAML files named with a numeric prefix followed by a descriptive name (e.g., `01_python_introduction.yml`, `02_python_graphics.yml`)
  - Tutorial YAML files define individual tutorials with name, file, header, sections, and citations
  - Templates: `tutorial.html`, `index_template.html`, `tutorial.md` for rendering
  - `render.py` and `render.sh` to generate HTML and Markdown output from YAML sources
@@ -262,7 +262,7 @@ The YAML-based structure allows for consistent formatting and easier maintenance
 | sections  | Yes          | List of tutorial sections, each with "name" (anchor ID), "short" (heading), "long" (description), and either "html" or "markdown" (content). | list |
 | citations | No           | List of citations, each with "text" and optional "available" (URL). | list |
 
-HTML fields should use `>` for folded scalars as with lesson YAML files. For content with `<pre>` blocks, use `|` (literal block scalar) to preserve formatting. Generated tutorials include:
+Use `|` (literal block scalar) for `header` and multi-line `html`/`markdown` content to preserve formatting. Use `>` (folded scalar) for simple multi-line strings. Generated tutorials include:
 
  - A contents `details` tag.
  - Use of header, main, and sections for accessibility including skip link.
