@@ -29,9 +29,11 @@ Existing open data visualization instruction often takes a perception science [@
 In response to current open offerings and experience lecturing within existing curricula [@PottingerTeaching], these educational materials instead assume some programming capability enabling the creation of new custom interactive graphical forms. Honoring classical principles [@ClevelandMcGill] but considering them flexibly in novel structures [@PottingerTools], this approach reaches beyond standard charts towards giving students the capacity to build pieces similar to the custom interactive experiences which often light up the classroom but which also often remain out of reach for students to actually construct [@Harris; @Rees]. This embrace of software engineering to augment and reach new design topics enables teachers and learners to update traditional data visualization instruction such as in supporting science-informed policymaking [@Enroads; @PottingerPlasticsTool] and interactive science [@VictorExplorable], meeting new opportunities from computers' ever-growing capacity to react to the user [@VictorDead]. In total, these adaptable modular resources seek to empower learning blending evidence-based design and programming's expressiveness.
 
 # Design
-In addition to discussing ethics and accessibility, modular resources explore different "perspectives" on data visualization.
+In addition to discussing ethics and accessibility, modular resources explore different perspectives within data visualization.
 
 ## Instructional design
+The course is organized into ways of understanding data visualization and interactive data science:
+
  - *Representation*: traditional perception science approach to information design [@Ware].
  - *Task*: modern user-centered design [@Munzner; @Harrison].
  - *Message*: consideration of sociology, anthropology, and media studies [@DiagrammaticCovid; @Hall].
