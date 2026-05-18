@@ -22,7 +22,7 @@ These open educational resources offer hands-on instruction in crafting digital 
 # Statement of Need
 Through hands-on projects, these open source educational materials aim to empower students to critically design interactive digital media for interrogating data. However, going beyond traditional introductory information design instruction, these resources also explore the implementation of these rich bespoke interactive computational experiences as made possible through custom programming^[Taught in Python, adaptable to other languages.]. Altogether, this educational contribution situtates design techniques within engineering instruction as necessary for building media for thought [@VictorMedia].
 
-## State of field
+## State of the field
 Existing open data visualization instruction often takes a perception science [@StahmerReynolds] and user-centered design approach [@MunznerYoutube]. These materials may rely on reusable charts or static drawing [@Cairo]. While these valuable resources offer a robust introduction to traditional information design, many existing options choose not to center creating new bespoke experiences possible only with custom programming [@MarcusWu].
 
 ## Research impact statement
