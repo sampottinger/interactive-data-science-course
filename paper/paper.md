@@ -13,7 +13,7 @@ authors:
 affiliations:
   - name: Eric and Wendy Schmidt Center for Data Science and Environment at the University of California, Berkeley
     index: 1
-date: 2025-02-04
+date: 2026-05-26
 bibliography: paper.bib
 ---
 # Summary
@@ -39,13 +39,20 @@ The course is organized by ways of understanding data visualization and interact
  - *Message*: consideration of sociology, anthropology, and media studies [@DiagrammaticCovid; @Hall].
  - *Dialogue*: unique capabilities of digital interactivity [@VictorDead] with audiences as co-creators of meaning, including through game design [@Portnow; @PottingerAfscgap].
 
+## Content
 This mix of traditional lecture content with hands-on labs and projects^[Each entry includes its own citations which may extend beyond those listed here.] also often include supplementary captioned videos and PDFs. Altogether, these offer the experience of programming to not just learn interactive information design but to feel and understand the role of human iteration. This set of lessons concludes with critical but applied consideration of AI in visualization.
 
 ## Software design
 Supporting blended design and engineering instruction, materials are compiled from markdown and YAML to HTML at https://mooc.interactivedatascience.courses/ via Python. All instructional materials are available under a Creative Commons license with open source code under a BSD-3-Clause license. Using modern technologies like WebAssembly, one may complete all instruction without installing local software beyond a modern web browser.
 
-## Integration
-These materials were taught as a full course^[Original offering was for 2 credit hours upper-division undergraduate or graduate. Use of some optional materials may allow for use in a 3 credit hour setting.] at the University of California, Berkeley in 2025 [@Catalogue] and served different programs and universities as components in other instruction or as workshops [@PottingerTeaching]. Individual lessons may provide topic-specific supplement to other instruction, modules may offer a treatment of a topical area for learning, and the class as a whole may allow for an approximate semester of hybrid hands-on and lecture-based exploration.
+# Background
+These materials were originally developed in a university setting across multiple courses.
+
+## Origin
+These materials were taught as a full course at the University of California, Berkeley in 2025 [@Catalogue] and served different programs and universities as components in other instruction or as workshops [@PottingerTeaching].
+
+## Future use
+Individual lessons may provide topic-specific supplement to other instruction, modules may offer a treatment of a topical area for learning, and the class as a whole may allow for an approximate semester of hybrid hands-on and lecture-based exploration. The original full course was for 2 credit hours upper-division undergraduate or graduate. However, use of some optional materials may allow for use in a 3 credit hour setting.
 
 # Acknowledgements
 Taught under the DeCal program with thanks to Fernando Pérez for guidance / sponsoring Stat 198 and Joanne Chung for the wisdom behind many guest lectures at this course's nucleus. Dedicated to my grandmother who taught me of the unique expressiveness of digital media and a love of teaching.
