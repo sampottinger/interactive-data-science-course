@@ -49,7 +49,7 @@ Supporting blended design and engineering instruction, materials are compiled fr
 These materials were originally developed in a university setting across multiple courses.
 
 ## Origin
-These materials were taught as a full course at the University of California, Berkeley in 2025 [@Catalogue] and served different programs and universities as components in other instruction or as workshops [@PottingerTeaching].
+These materials were taught as a full course at the University of California, Berkeley in 2025 [@Catalogue]. It also served different programs and universities as components in other instruction or as workshops [@PottingerTeaching]. These guest lectures have spanned multiple universities with inclusion in data science, design, and engineering contexts.
 
 ## Future use
 Individual lessons may provide topic-specific supplement to other instruction, modules may offer a treatment of a topical area for learning, and the class as a whole may allow for an approximate semester of hybrid hands-on and lecture-based exploration. The original full course was for 2 credit hours upper-division undergraduate or graduate. However, use of some optional materials may allow for use in a 3 credit hour setting.
