@@ -125,3 +125,5 @@ For those using our CI / CD, note that our automation uses GitHub Actions [as de
 
 ## License
 All code is available under the BSD license. All other materials CC BY-NC-SA 4.0 (some resources used are also under CC or CC BY-NC-SA license). See [full license](https://github.com/sampottinger/interactive-data-science-course/blob/main/LICENSE.md) for more details.
+
+Public version at https://mooc.interactivedatascience.courses.
